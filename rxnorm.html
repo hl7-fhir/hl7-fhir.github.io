@@ -1,0 +1,301 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Rxnorm - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/rxnorm.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="terminology-module.html"><img src="terminology.png"/> Terminology</a></li>
+        <li><a href="terminologies-systems.html">Code Systems</a></li>
+        <li><b>RxNorm</b></li>          <!-- rxnorm.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Using Codes</a></li><li><a href="terminologies-systems.html">Code Systems</a></li><li><a href="terminologies-valuesets.html">Value Sets</a></li><li><a href="terminologies-conceptmaps.html">Concept Maps</a></li><li><a href="identifier-registry.html">Identifier Systems</a></li></ul>
+
+
+<h2 class="self-link-parent"><span class="sectioncount">4.2.2<a name="4.2.2"> </a></span> Using RxNorm with FHIR <a href="rxnorm.html#4.2.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/Vocab/index.cfm" _target="blank">Vocabulary <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.2.1<a name="4.2.2.1"> </a></span> Summary <a href="rxnorm.html#4.2.2.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<table class="grid">
+ <tr><td>Source</td><td>RxNorm is made available by the <a href="http://www.nlm.nih.gov/">US National Library of Medicine <img src="external.png" style="text-align: baseline"/></a> at <a href="http://www.nlm.nih.gov/research/umls/rxnorm">http://www.nlm.nih.gov/research/umls/rxnorm <img src="external.png" style="text-align: baseline"/></a></td></tr>
+ <tr><td>System</td><td>The URI <a href="http://www.nlm.nih.gov/research/umls/rxnorm">http://www.nlm.nih.gov/research/umls/rxnorm <img src="external.png" style="text-align: baseline"/></a> identifies the RxNorm code system</td></tr>
+ <tr><td>Version</td><td>Where a version is used, it should be the date of release, encoded as in the download files, e.g. &quot;07092014&quot;</td></tr>
+ <tr><td>Code</td><td>The code value for an RxNorm code is a Concept Identifier (CUI), and only CUIs for which there is an SAB=RXNORM</td></tr>
+ <tr><td>Display</td><td>The correct display for a CUI is the string description for it associated with the source RXNORM. Display values are not case sensitive</td></tr>
+ <tr><td>Filter Properties</td><td>Several properties are defined as described below</td></tr>
+</table>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.2.2<a name="4.2.2.2"> </a></span> RxNorm MySQL Database <a href="rxnorm.html#4.2.2.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The RxNorm scripts are able to populate a MySQL database that contains the data from RxNorm. 
+This page provides SQL statements that describe how to implement the features of the RxNorm 
+terminology correctly against this database. These are provided for implementer convenience, and 
+do not imply that any particular approach be used in implementations. 
+</p>
+<p>
+For example, the correct display name for a CUI is 'Select STR from rxnconso where RXCUI = :code and SAB = 'RXNORM' and TTY &lt;&gt; 'SY'.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.2.3<a name="4.2.2.3"> </a></span> Copyright/License Issues <a href="rxnorm.html#4.2.2.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Using RxNorm codes of type SAB=RXNORM as this specification describes does not require a UMLS license.  
+Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures 
+and information requires a UMLS license. The use of RxNorm codes and display names in this specification 
+is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to 
+use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in 
+their own right.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.2.4<a name="4.2.2.4"> </a></span> RxNorm Filter Properties <a href="rxnorm.html#4.2.2.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+This section documents the property filters that can be used with the RxNorm 
+code system in value set composition statements.
+</p>
+<p>
+The base SQL statement for returning a list of CUIs that conform to these filters 
+is:
+</p>
+<pre>
+  Select RXCUI from rxnconso where SAB = 'RXNORM' and TTY &lt;&gt; 'SY' 
+</pre>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.2.4.1<a name="4.2.2.4.1"> </a></span> Semantic Type <a href="rxnorm.html#4.2.2.4.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the selection of a set of CUIs based on their Semantic Type</td></tr>
+ <tr><td>Property Name</td><td>STY</td></tr>
+ <tr><td>Operations Allowed</td><td>= / in</td></tr>
+ <tr><td>Values Allowed</td><td>[column:]value</td></tr>
+ <tr><td>Comments</td><td>If not column is specified, the default column is TUI</td></tr>
+ <tr><td>SQL</td><td><pre>and RXCUI in (select RXCUI from rxnsty where [:column] = :value)</pre></td></tr>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.2.4.2<a name="4.2.2.4.2"> </a></span> Source <a href="rxnorm.html#4.2.2.4.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the selection of a set of concepts that have mappings to a particular RxNorm concept</td></tr>
+ <tr><td>Property Name</td><td>SAB</td></tr>
+ <tr><td>Operations Allowed</td><td>= / in</td></tr>
+ <tr><td>Values Allowed</td><td>Values from RxNorm SAB table (e.g. select RSAB from rxnsab) </td></tr>
+ <tr><td>SQL</td><td><pre>and RXCUI in (select RXCUI from rxnconso where SAB = :value)</pre></td></tr>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.2.4.3<a name="4.2.2.4.3"> </a></span> Term Type <a href="rxnorm.html#4.2.2.4.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the selection of a concept based on its designated type</td></tr>
+ <tr><td>Property Name</td><td>TTY</td></tr>
+ <tr><td>Operations Allowed</td><td>= / in</td></tr>
+ <tr><td>Values Allowed</td><td>TTY values from the RxNorm Concept table (e.g. select distinct TTY from rxnconso)</td></tr>
+ <tr><td>SQL</td><td><pre>and TTY = :value</pre></td></tr>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.2.4.4<a name="4.2.2.4.4"> </a></span> Relationship <a href="rxnorm.html#4.2.2.4.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the selection of a concept based on its relationships</td></tr>
+ <tr><td>Property Name</td><td>[REL]</td></tr>
+ <tr><td>Operations Allowed</td><td>= / in</td></tr>
+ <tr><td>Values Allowed</td><td>CUI:[RXCUI] or AUI:[RXAUI] must be a valid CUI or AUI. Note that a CUI does not need to have an SAB=RXNORM entry to be used here</td></tr>
+ <tr><td>Comments</td><td>[REL] (:rel) is one of SY, SIB, RN, PAR, CHD, RB or RO</td></tr>
+ <tr><td>SQL</td><td>
+   for CUI:
+   <pre>and (RXCUI in (select RXCUI from rxnconso where RXCUI in (select RXCUI1 from rxnrel where REL = :rel and RXCUI2 = :value))</pre>
+   for AUI:
+   <pre>and (RXCUI in (select RXCUI from rxnconso where RXAUI in (select RXAUI1 from rxnrel where REL = :rel and RXAUI2 = :value))</pre>
+   </td></tr>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.2.4.5<a name="4.2.2.4.5"> </a></span> Relationship Type <a href="rxnorm.html#4.2.2.4.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the selection of a concept based on the type of its relationships</td></tr>
+ <tr><td>Property Name</td><td>[RELA]</td></tr>
+ <tr><td>Operations Allowed</td><td>= / in</td></tr>
+ <tr><td>Values Allowed</td><td>CUI:[RXCUI] or AUI:[RXAUI] must be a valid CUI or AUI. Note that a CUI does not need to have an SAB=RXNORM entry to be used here</td></tr>
+ <tr><td>Comments</td><td>[RELA] (:rela) is one of the relationship types defined in <a href="https://www.nlm.nih.gov/research/umls/rxnorm/docs/2016/appendix1.html">RxNorm Appendix 1 <img src="external.png" style="text-align: baseline"/></a> (the &quot;RELA&quot; column)</td></tr>
+ <tr><td>SQL</td><td>
+   for CUI:
+   <pre>and (RXCUI in (select RXCUI from rxnconso where RXCUI in (select RXCUI1 from rxnrel where RELA = :rel and RXCUI2 = :value))</pre>
+   for AUI:
+   <pre>and (RXCUI in (select RXCUI from rxnconso where RXAUI in (select RXAUI1 from rxnrel where RELA = :rel and RXAUI2 = :value))</pre>
+   </td></tr>
+</table>
+
+<a name="props"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.2.2.5</span> RxNorm Properties <a href="rxnorm.html#props" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In addition to the <a href="terminology-service.html#standard-props">standard properties</a>, the following properties are defined for RxNorm:
+</p>
+
+<p>
+(Yet to be done).
+</p>
+<a name="implicit"> </a>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.2.6</span> Implicit Value Sets <a href="rxnorm.html#implicit" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Implicit value sets are those whose specification can be predicted based on the grammar of the 
+underlying code system, and the known structure of the URL that refers to them. At the time of this publication, RxNorm
+does not define implicit value sets.
+</p>
+
+<p>
+The identifier http://www.nlm.nih.gov/research/umls/rxnorm/vs represents a value set that contains all RxNorm CUIs.
+</p>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Frxnorm.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Frxnorm.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

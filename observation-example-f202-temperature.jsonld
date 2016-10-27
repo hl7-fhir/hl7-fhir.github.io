@@ -1,0 +1,178 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/f202",
+  "Resource.id": {
+    "id.value": "f202"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>status</b>: entered-in-error</p><p><b>category</b>: Vital Signs <span>(Details : {http://hl7.org/fhir/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: Temperature <span>(Details : {http://acme.lab code 'BT' = 'BT', given as 'Body temperature'}; {LOINC code '8310-5' = 'Body temperature', given as 'Body temperature'}; {LOINC code '8331-1' = 'Oral temperature', given as 'Oral temperature'}; {SNOMED CT code '56342008' = 'Temperature taking (procedure)', given as 'Temperature taking'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>issued</b>: Apr 4, 2013 1:27:00 PM</p><p><b>performer</b>: <a>Practitioner/f201</a></p><p><b>value</b>: 39 degrees C<span> (Details: UCUM code Cel = 'Cel')</span></p><p><b>interpretation</b>: High <span>(Details : {http://hl7.org/fhir/v2/0078 code 'H' = 'High)</span></p><p><b>bodySite</b>: Oral cavity <span>(Details : {SNOMED CT code '74262004' = 'Oral cavity structure (body structure)', given as 'Oral cavity'})</span></p><p><b>method</b>: Oral temperature taking <span>(Details : {SNOMED CT code '89003005' = 'Oral temperature taking (procedure)', given as 'Oral temperature taking'})</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>High</b></td></tr><tr><td>*</td><td>38.2 degrees C</td></tr></table></div>"
+    }
+  },
+  "Observation.status": {
+    "code.value": "entered-in-error"
+  },
+  "Observation.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/observation-category"
+          },
+          "Coding.code": {
+            "code.value": "vital-signs"
+          },
+          "Coding.display": {
+            "string.value": "Vital Signs"
+          }
+        }
+      ]
+    }
+  ],
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://acme.lab"
+        },
+        "Coding.code": {
+          "code.value": "BT"
+        },
+        "Coding.display": {
+          "string.value": "Body temperature"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "8310-5"
+        },
+        "Coding.display": {
+          "string.value": "Body temperature"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "8331-1"
+        },
+        "Coding.display": {
+          "string.value": "Oral temperature"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "56342008"
+        },
+        "Coding.display": {
+          "string.value": "Temperature taking"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Temperature"
+    },
+    "Resource.concept": "http://loinc.org/owl#8310-5",
+    "Resource.concept": "http://loinc.org/owl#8331-1",
+    "Resource.concept": "http://snomed.info/sct#56342008"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f201"
+    },
+    "Reference.display": {
+      "string.value": "Roel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Observation.issued": {
+    "instant.value": "2013-04-04T13:27:00+01:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/f201"
+      }
+    }
+  ],
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "decimal.value": 39
+    },
+    "Quantity.unit": {
+      "string.value": "degrees C"
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "Cel"
+    }
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "code.value": "H"
+        }
+      }
+    ]
+  },
+  "Observation.bodySite": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "74262004"
+        },
+        "Coding.display": {
+          "string.value": "Oral cavity"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#74262004"
+  },
+  "Observation.method": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "89003005"
+        },
+        "Coding.display": {
+          "string.value": "Oral temperature taking"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#89003005"
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "decimal.value": 38.2
+        },
+        "Quantity.unit": {
+          "string.value": "degrees C"
+        }
+      }
+    }
+  ]
+}

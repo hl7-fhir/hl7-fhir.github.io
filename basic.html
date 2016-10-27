@@ -1,0 +1,647 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Basic - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/basic.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><b>Basic</b></li>          <!-- basic.html / resource / Basic -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="basic-examples.html">Examples</a></li><li><a href="basic-definitions.html">Detailed Descriptions</a></li><li><a href="basic-mappings.html">Mappings</a></li><li><a href="basic-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">2.33<a name="2.33"> </a></span> Resource Basic - Content <a href="basic.html#2.33" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 1</td><td><a href="compartmentdefinition.html">Compartments</a>: <a href="compartmentdefinition-patient.html">Patient</a>, <a href="compartmentdefinition-practitioner.html">Practitioner</a>, <a href="compartmentdefinition-relatedperson.html">RelatedPerson</a></td></tr>
+</table>
+
+
+
+<p> 
+Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification. 
+</p>
+
+
+<div>
+<a name="scope"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.1</span> Scope and Usage <a href="basic.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+<b>Basic</b> is a special type of resource. Unlike all other resources, it doesn't correspond to a specific pre-defined HL7 concept. Instead, it's a placeholder for any resource-like concept that isn't already defined in the HL7 specification.
+</p>
+
+<p>
+The Basic resource is intended for use in three circumstances:
+</p>
+<ol>
+<li>When an implementer needs a resource concept that is likely to be defined by HL7 in the future but they have not yet done so (due to bandwidth issues, lack of sufficient requirements, lower prioritization, etc.)</li>
+<li>When there's a need to convey a narrative-only construct that doesn't neatly correspond to one of the other resources, either because it combines aspects of several resources (e.g. Assessment + Plan) or because the allowed content is flexible such that the system can't be totally sure what sort of content might have been included in the narrative text.</li>
+<li>Other than the circumstances above, this resource will see minimal use. To keep the FHIR specification manageable, it cannot incorporate every site-specific requirement that might be needed in some implementation somewhere. This set of resources likely won't ever be officially defined in HL7.</li>
+</ol>
+
+<p>
+There's also a fourth circumstance: An implementer wishes to convey information that could/should be conveyed
+using a standard resource, however they want to represent the information in a custom format that isn't
+aligned with the official resource's elements.  While this resource would be the preferred way of meeting that
+use-case because it will at least be wire-format compatible, such a use would not be conformant because
+making use of the Basic resource would prevent the healthcare-related information from being safely processed,
+queried and analyzed by other conformant systems.
+</p>
+
+<p>
+Implementers don't need to be concerned with which of the three categories their desired resource fits within. If they need a resource and it clearly doesn't fit one of the ones currently defined, they should use Basic.
+</p>
+</div>
+
+<div>
+<a name="bnc"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.2</span> Background and Context <a href="basic.html#bnc" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Basic defines only a minimal set of data elements - those necessary to identify what kind of resource it
+represents and those necessary to support resource <a href="compartmentdefinition.html">compartmenting</a>.  All other data elements
+are represented using the <a href="extensibility.html">extension</a> mechanism.  It's entirely possible to have a
+Basic resource instance with nothing other than narrative, a subject and code.  And, in practice, that's all many systems will understand.
+</p>
+</div>
+
+
+
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.3</span> 
+Resource Content
+ <a href="basic.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="basic"> </a>
+<a name="Basic"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="basic-definitions.html#Basic" title="Basic : Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.">Basic</a><a name="Basic"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Resource for non-supported content</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="basic-definitions.html#Basic.identifier" title="Basic.identifier : Identifier assigned to the resource for business purposes, outside the context of FHIR.">identifier</a><a name="Basic.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Business identifier</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="basic-definitions.html#Basic.code" title="Basic.code : Identifies the 'type' of resource - equivalent to the resource name for other resources.">code</a><a name="Basic.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Kind of Resource<br/><a href="valueset-basic-resource-type.html" title="Codes for identifying types of resources not yet defined by FHIR">Basic Resource Types</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="basic-definitions.html#Basic.subject" title="Basic.subject : Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource.">subject</a><a name="Basic.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Identifies the focus of this resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="basic-definitions.html#Basic.created" title="Basic.created : Identifies when the resource was first created.">created</a><a name="Basic.created"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When created</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="basic-definitions.html#Basic.author" title="Basic.author : Indicates who was responsible for creating the resource instance.">author</a><a name="Basic.author"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="patient.html">Patient</a> | <a href="relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who created</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="381.6" version="1.1" height="116.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="281.6" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="106.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="281.6" style="stroke:dimgrey;stroke-width:1"/><text x="140.8" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Basic<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.identifier"><title>Identifier assigned to the resource for business purposes, outside the context of FHIR</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.code"><title>Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)</title>code</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [1..1] « <a xlink:href="valueset-basic-resource-type.html"><title>Codes for identifying types of resources not yet defined by FHIR (Strength=Example)</title>Basic Resource Types</a>?? »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.subject"><title>Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource</title>subject</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="resourcelist.html#Any">Any</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.created"><title>Identifies when the resource was first created</title>created</a> : <a xlink:href="datatypes.html#date">date</a> [0..1]</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.author"><title>Indicates who was responsible for creating the resource instance</title>author</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="practitioner.html#Practitioner">Practitioner</a>|<a xlink:href="patient.html#Patient">Patient</a>|<a xlink:href="relatedperson.html#RelatedPerson">RelatedPerson</a> »</text></g></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="basic-definitions.html#Basic" title="Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification." class="dict"><b>Basic</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="basic-definitions.html#Basic.identifier" title="Identifier assigned to the resource for business purposes, outside the context of FHIR." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Business identifier</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="basic-definitions.html#Basic.code" title="Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>code</b></span></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-basic-resource-type.html">Kind of Resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/code&gt;
+ &lt;<a href="basic-definitions.html#Basic.subject" title="Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource." class="dict"><b>subject</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Identifies the focus of this resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/subject&gt;
+ &lt;<a href="basic-definitions.html#Basic.created" title="Identifies when the resource was first created." class="dict"><b>created</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When created</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="basic-definitions.html#Basic.author" title="Indicates who was responsible for creating the resource instance." class="dict"><b>author</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="patient.html#Patient">Patient</a>|<a href="relatedperson.html#RelatedPerson">RelatedPerson</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who created</a></span><span style="color: Gray"> --&gt;</span>&lt;/author&gt;
+&lt;/Basic&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="basic-definitions.html#Basic" title="Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification." class="dict"><b>Basic</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="basic-definitions.html#Basic.identifier" title="Identifier assigned to the resource for business purposes, outside the context of FHIR." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Business identifier</a></span>
+  &quot;<a href="basic-definitions.html#Basic.code" title="Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">code</span></a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-basic-resource-type.html">Kind of Resource</a></span>
+  &quot;<a href="basic-definitions.html#Basic.subject" title="Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource." class="dict">subject</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Identifies the focus of this resource</a></span>
+  &quot;<a href="basic-definitions.html#Basic.created" title="Identifies when the resource was first created." class="dict">created</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When created</a></span>
+  &quot;<a href="basic-definitions.html#Basic.author" title="Indicates who was responsible for creating the resource instance." class="dict">author</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="patient.html#Patient">Patient</a>|<a href="relatedperson.html#RelatedPerson">RelatedPerson</a>)</span> } <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who created</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="basic-definitions.html#Basic" title="Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification." class="dict"><b>Basic</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="basic-definitions.html#Basic.identifier" title="Identifier assigned to the resource for business purposes, outside the context of FHIR." class="dict">Basic.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">Business identifier</span>
+  fhir:<a href="basic-definitions.html#Basic.code" title="Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Basic.code</span></a><a name="ttl-code"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 1..1 <span style="color: navy">Kind of Resource</span>
+  fhir:<a href="basic-definitions.html#Basic.subject" title="Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource." class="dict">Basic.subject</a><a name="ttl-subject"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ]; # 0..1 <span style="color: navy">Identifies the focus of this resource</span>
+  fhir:<a href="basic-definitions.html#Basic.created" title="Identifies when the resource was first created." class="dict">Basic.created</a><a name="ttl-created"> </a>[ <a href="datatypes.html#date">date</a> ]; # 0..1 <span style="color: navy">When created</span>
+  fhir:<a href="basic-definitions.html#Basic.author" title="Indicates who was responsible for creating the resource instance." class="dict">Basic.author</a><a name="ttl-author"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="patient.html#Patient">Patient</a>|<a href="relatedperson.html#RelatedPerson">RelatedPerson</a>) ]; # 0..1 <span style="color: navy">Who created</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Basic</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="basic-definitions.html#Basic" title="Basic : Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.">Basic</a><a name="Basic"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Resource for non-supported content</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="basic-definitions.html#Basic.identifier" title="Basic.identifier : Identifier assigned to the resource for business purposes, outside the context of FHIR.">identifier</a><a name="Basic.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Business identifier</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="basic-definitions.html#Basic.code" title="Basic.code : Identifies the 'type' of resource - equivalent to the resource name for other resources.">code</a><a name="Basic.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Kind of Resource<br/><a href="valueset-basic-resource-type.html" title="Codes for identifying types of resources not yet defined by FHIR">Basic Resource Types</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="basic-definitions.html#Basic.subject" title="Basic.subject : Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource.">subject</a><a name="Basic.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Identifies the focus of this resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="basic-definitions.html#Basic.created" title="Basic.created : Identifies when the resource was first created.">created</a><a name="Basic.created"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When created</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="basic-definitions.html#Basic.author" title="Basic.author : Indicates who was responsible for creating the resource instance.">author</a><a name="Basic.author"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="patient.html">Patient</a> | <a href="relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who created</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="381.6" version="1.1" height="116.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="281.6" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="106.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="281.6" style="stroke:dimgrey;stroke-width:1"/><text x="140.8" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Basic<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.identifier"><title>Identifier assigned to the resource for business purposes, outside the context of FHIR</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.code"><title>Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)</title>code</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [1..1] « <a xlink:href="valueset-basic-resource-type.html"><title>Codes for identifying types of resources not yet defined by FHIR (Strength=Example)</title>Basic Resource Types</a>?? »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.subject"><title>Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource</title>subject</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="resourcelist.html#Any">Any</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.created"><title>Identifies when the resource was first created</title>created</a> : <a xlink:href="datatypes.html#date">date</a> [0..1]</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="basic-definitions.html#Basic.author"><title>Indicates who was responsible for creating the resource instance</title>author</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="practitioner.html#Practitioner">Practitioner</a>|<a xlink:href="patient.html#Patient">Patient</a>|<a xlink:href="relatedperson.html#RelatedPerson">RelatedPerson</a> »</text></g></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="basic-definitions.html#Basic" title="Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification." class="dict"><b>Basic</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="basic-definitions.html#Basic.identifier" title="Identifier assigned to the resource for business purposes, outside the context of FHIR." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Business identifier</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="basic-definitions.html#Basic.code" title="Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>code</b></span></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-basic-resource-type.html">Kind of Resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/code&gt;
+ &lt;<a href="basic-definitions.html#Basic.subject" title="Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource." class="dict"><b>subject</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Identifies the focus of this resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/subject&gt;
+ &lt;<a href="basic-definitions.html#Basic.created" title="Identifies when the resource was first created." class="dict"><b>created</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When created</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="basic-definitions.html#Basic.author" title="Indicates who was responsible for creating the resource instance." class="dict"><b>author</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="patient.html#Patient">Patient</a>|<a href="relatedperson.html#RelatedPerson">RelatedPerson</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who created</a></span><span style="color: Gray"> --&gt;</span>&lt;/author&gt;
+&lt;/Basic&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="basic-definitions.html#Basic" title="Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification." class="dict"><b>Basic</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="basic-definitions.html#Basic.identifier" title="Identifier assigned to the resource for business purposes, outside the context of FHIR." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Business identifier</a></span>
+  &quot;<a href="basic-definitions.html#Basic.code" title="Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">code</span></a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-basic-resource-type.html">Kind of Resource</a></span>
+  &quot;<a href="basic-definitions.html#Basic.subject" title="Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource." class="dict">subject</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Identifies the focus of this resource</a></span>
+  &quot;<a href="basic-definitions.html#Basic.created" title="Identifies when the resource was first created." class="dict">created</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When created</a></span>
+  &quot;<a href="basic-definitions.html#Basic.author" title="Indicates who was responsible for creating the resource instance." class="dict">author</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="patient.html#Patient">Patient</a>|<a href="relatedperson.html#RelatedPerson">RelatedPerson</a>)</span> } <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who created</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="basic-definitions.html#Basic" title="Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification." class="dict"><b>Basic</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="basic-definitions.html#Basic.identifier" title="Identifier assigned to the resource for business purposes, outside the context of FHIR." class="dict">Basic.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">Business identifier</span>
+  fhir:<a href="basic-definitions.html#Basic.code" title="Identifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Basic.code</span></a><a name="ttl-code"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 1..1 <span style="color: navy">Kind of Resource</span>
+  fhir:<a href="basic-definitions.html#Basic.subject" title="Identifies the patient, practitioner, device or any other resource that is the &quot;focus&quot; of this resource." class="dict">Basic.subject</a><a name="ttl-subject"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ]; # 0..1 <span style="color: navy">Identifies the focus of this resource</span>
+  fhir:<a href="basic-definitions.html#Basic.created" title="Identifies when the resource was first created." class="dict">Basic.created</a><a name="ttl-created"> </a>[ <a href="datatypes.html#date">date</a> ]; # 0..1 <span style="color: navy">When created</span>
+  fhir:<a href="basic-definitions.html#Basic.author" title="Indicates who was responsible for creating the resource instance." class="dict">Basic.author</a><a name="ttl-author"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="patient.html#Patient">Patient</a>|<a href="relatedperson.html#RelatedPerson">RelatedPerson</a>) ]; # 0..1 <span style="color: navy">Who created</span>
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Basic</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="basic.profile.xml.html">XML</a>, <a href="basic.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="basic.xsd">Schema</a>/<a href="basic.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="Basic.schema.json">Schema</a>, <a href="basic.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.33.3.1</span> 
+Terminology Bindings
+ <a href="basic.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="Basic Resource Types">Basic.code </td><td valign="top">Codes for identifying types of resources not yet defined by FHIR</td><td><a href="terminologies.html#example">Example</a></td><td valign="top"><a href="valueset-basic-resource-type.html">Basic Resource Types</a>  <!-- b --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+<a name="why"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.4</span> Why not custom resources? <a href="basic.html#why" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Technically, nothing prevents implementers from going off and defining their own resources containing
+whatever data elements they wish.  However, doing so causes several issues:
+</p>
+<ul>
+  <li>Custom resources don't have a discoverability mechanism in the same way custom codes and extensions
+  do using the <a href="valueset.html">ValueSet</a> and <a href="structuredefinition.html">StructureDefinition</a> resources.  As a 
+  result, any implementer that receives a custom resource would have no way of looking up what the meaning 
+  of the resource or its elements were.  While they could get some sense of meaning from XML or JSON tag names, this often 
+  isn't sufficient for safe healthcare interoperability.</li>
+  <li>Custom resource names would not be present in the FHIR schemas as allowed elements within the FHIR
+  Bundle schema, would not be present in the enumeration of resources in the Reference type, and would not be supported by any of the autogenerated reference implementations and software interfaces.
+ This would cause issues for any receiving system making use of the schemas directly or via code-generation.</li>
+  <li>There is no means of preventing two implementers from independently coming up with the same name for
+  a resource but defining it differently in terms of meaning as well as allowed elements.  This would also cause
+  interoperability issues.</li>
+</ul>
+<p>
+All of these concerns are mitigated when there's an assumption that the custom resource will only be used
+within a narrow constrained environment where all participants will be aware of the semantics, will be using
+the same custom schemas and there's no chance of collisions.  However, HL7's experience is that closed
+implementation environments rarely remain that way over the long term.  Eventually data will need to be
+shared with others outside the closed environment and all of the above issues will again come into play.
+</p>
+<p>
+Therefore, use of 'custom' resources is <b>NOT</b> considered to be conformant with FHIR.  While the use of
+extensions may make the Basic resource slightly more complex and less visually appealing, it is the only safe
+and approved mechanism for sharing resource concepts not representable using standard HL7-defined resources.
+</p>
+<p>
+It is expected that future versions of the interface tooling will be able to generate object interfaces on the
+basis of profiles.  Where this occurs, the complexity of custom resource elements being expressed as extensions
+should be transparent to the internal code of systems that support that particular variant of the Basic resource.
+This should further reduce the cost of using 'Basic' as opposed to custom resources.
+</p>
+<p>
+NOTE: This position is subject to change based on implementation experience.  Alternative mechanisms for
+handling custom resource requirements in a safe manner may be explored.  Ideas around alternative technical 
+strategies for managing this issue are welcome.
+</p>
+
+<a name="docs"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.5</span> Documents and narrative-only resources <a href="basic.html#docs" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Documents are constructed of sections, where a key part of each section is the narrative.  The narratives
+are stitched together to form the overall text of the document.  Many document sections will correspond neatly to
+resources that are already defined - <a href="list.html">List</a>, <a href="diagnosticreport.html">DiagnosticReport</a>,
+<a href="familymemberhistory.html">FamilyMemberHistory</a>, etc.  However, oddly enough, alignment with FHIR resources isn't
+always in mind when clinicians and others design documents, and some sections won't neatly align with the
+boundaries of resources.  Sometimes there's simply a need for a place where a document author can say &quot;stuff&quot;
+without any particular constraints on what they may choose to talk about.  Basic is intended to provide a
+mechanism to handle those circumstances.
+</p>
+<p>
+Wherever possible, the &quot;standard&quot; FHIR resources should be used, even for narrative-only content.  That's because
+subsequent revisions of the narrative-only content might choose to encode pieces or even all of the narrative content.
+Encoding can occur with &quot;Basic&quot; as well.  Extensions can point to other resources (contained or stand-alone) that
+fully encode pieces of the free-form narrative found in the Basic resource.  If no appropriate other resource exists
+for the meaning of the content, extensions can also be used.
+</p>
+
+<a name="bp"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.6</span> Best practices for using 'Basic' <a href="basic.html#bp" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+There are several good practices to follow when making use of the Basic resource:
+</p>
+<ol>
+  <li>Before using Basic, post a description of the desired resource type on HL7's FHIR list-server or on
+  <a href="http://stackoverflow.com/questions/tagged/hl7_fhir">Stack Overflow <img src="external.png" style="text-align: baseline"/></a> to see whether the
+  use-case can be met by an existing resource.  (Sometimes the intended scope of an existing resource won't 
+  be clear, even if the intent is to cover your space.)  Using an existing resource is usually preferable
+  to using Basic as it significantly increases the likelihood of interoperability.</li>
+  
+  <li>If an existing resource would normally be a good fit for your use-case but can't be used due to
+  overly prescriptive constraints your implementation is unable to meet, again raise the problem on
+  <a href="http://stackoverflow.com/questions/tagged/hl7_fhir">Stack Overflow <img src="external.png" style="text-align: baseline"/></a> so the problem with the
+  specification can be addressed.</li>
+  
+  <li>If it is necessary to make use of the Basic resource, try to use one of the HL7-defined codes for
+  resource type or submit your requirement for a new type for inclusion in the HL7 vocabulary (using the <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a> link), as this will
+  increase the likelihood of interoperability.  Alternate code systems are conformant, but are less likely to
+  be recognized or re-used across the healthcare implementation space.</li>
+  
+  <li>Architect your interface in a way that will make it less painful to swap your use of Basic with an
+  'official' resource in the event that a future release of FHIR formally defines a resource that encompasses
+  your use-case.</li>
+  
+  <li>Use a <a href="structuredefinition.html">StructureDefinition</a> to define the extensions relevant to each type of other resource used.
+  Profile can also be used to define additional search criteria appropriate for the resource.</li>
+  
+  <li>When defining a profile on Basic, include mappings to the w5 categories to allow systems to easily manage 
+  <a href="auditevent.html">AuditEvent</a> and <a href="provenance.html">Provenance</a> uses as well as other potential
+  higher-level abstractions of the data.</li>
+  
+  <li>As well, profiles should consider how best to handle common notions such as &quot;Entered in error&quot; status and alignment
+  with common practices within similar resource families (other request resources, medication-related resources), etc.
+  </li>
+</ol>
+
+<a name="ref"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.7</span> Referencing Basic resources <a href="basic.html#ref" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+None of the standard resources will have direct references to Basic, aside from those that allow linking to
+&quot;Any&quot; resource.  As a result, most references to &quot;Basic&quot; will need to be performed using extensions.
+</p>
+
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.33.8</span> Search Parameters <a href="basic.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>author</td><td><a href="search.html#reference">reference</a></td><td>Who created</td><td>Basic.author<br/>(<a href="practitioner.html">Practitioner</a>, <a href="patient.html">Patient</a>, <a href="relatedperson.html">RelatedPerson</a>)</td></tr>
+<tr><td>code</td><td><a href="search.html#token">token</a></td><td>Kind of Resource</td><td>Basic.code</td></tr>
+<tr><td>created</td><td><a href="search.html#date">date</a></td><td>When created</td><td>Basic.created</td></tr>
+<tr><td>identifier</td><td><a href="search.html#token">token</a></td><td>Business identifier</td><td>Basic.identifier</td></tr>
+<tr><td>patient</td><td><a href="search.html#reference">reference</a></td><td>Identifies the focus of this resource</td><td>Basic.subject<br/>(<a href="patient.html">Patient</a>)</td></tr>
+<tr><td>subject</td><td><a href="search.html#reference">reference</a></td><td>Identifies the focus of this resource</td><td>Basic.subject<br/>(Any)</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fbasic.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fbasic.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

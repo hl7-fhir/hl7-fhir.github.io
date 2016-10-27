@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="medrx0310"/>
+    <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx0310</p><p><b>contained</b>: </p><p><b>identifier</b>: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>stage</b>: original-order <span>(Details : {[not stated] code &#39;original-order&#39; = &#39;original-order)</span></p><p><b>medication</b>: id: med0309; Tylenol PM <span>(Details : {http://hl7.org/fhir/sid/ndc code &#39;50580-506-02&#39; = &#39;50580-506-02&#39;, given as &#39;Tylenol PM&#39;})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>dosageInstruction</b>: </p></div></text><contained>
+        <Medication>
+            <id value="med0309"/>
+            <code>
+                <coding>
+                    <system value="http://hl7.org/fhir/sid/ndc"/>
+                    <code value="50580-506-02"/>
+                    <display value="Tylenol PM"/>
+                </coding>
+            </code>
+        </Medication>
+    </contained>
+    <identifier>
+        <use value="official"/>
+        <system value="http://www.bmc.nl/portal/prescriptions"/>
+        <value value="12345689"/>
+    </identifier>
+    <status value="active"/>
+    <stage>
+        <coding>
+            <code value="original-order"/>
+        </coding>
+    </stage>
+    <medicationReference>
+        <reference value="#med0309"/>
+    </medicationReference>
+    <patient> <!--   Linked to the resource patient who needs the medication   -->
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>        
+    </patient>
+    <encounter> <!--   Linked to a resource Encounter between patient and practitioner  -->
+        <reference value="Encounter/f001"/>
+        <display value="encounter who leads to this prescription"/>
+    </encounter>
+    <dateWritten value="2015-01-15"/>
+    <prescriber> <!--   Linked to the practitioner who treats patient   -->
+        <reference value="Practitioner/f007"/>
+        <display value="Patrick Pump"/>
+    </prescriber>
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="Take 1-2 tablets once daily at bedtime as needed for restless legs"/>
+        <additionalInstructions>
+            <text value="Take at bedtime"/>
+        </additionalInstructions>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <asNeededCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="32914008"/>
+                    <display value="Restless Legs"/>
+                </coding>
+        </asNeededCodeableConcept>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral Route"/>
+            </coding>
+        </route>
+        <doseRange>
+            <low>
+                <value value="1"/>
+                <unit value="TAB"/>
+                <system value="http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </low>
+            <high>
+                <value value="2"/>
+                <unit value="TAB"/>
+                <system value="http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </high>
+        </doseRange>
+    </dosageInstruction>
+</MedicationRequest>

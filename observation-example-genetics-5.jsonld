@@ -1,0 +1,77 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/example-genetics-5",
+  "Resource.id": {
+    "id.value": "example-genetics-5"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-genetics-5</p><p><b>status</b>: final</p><p><b>code</b>: PCR validation <span>(Details )</span></p><p><b>subject</b>: <a>Molecular Lab Patient ID: HOSP-23456</a></p><p><b>issued</b>: Apr 3, 2013 3:30:10 PM</p><p><b>performer</b>: <a>Sequence Analysis Laboratory</a></p><p><b>value</b>: Negative <span>(Details : {SNOMED CT code '260385009' = 'Negative (qualifier value)', given as 'Negative'})</span></p><h3>Relateds</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Target</b></td></tr><tr><td>*</td><td>sequel-to</td><td><a>ObservationForGenetics profile example 1</a></td></tr></table></div>"
+    }
+  },
+  "Observation.status": {
+    "code.value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.text": {
+      "string.value": "PCR validation"
+    }
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Molecular Lab Patient ID: HOSP-23456"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.issued": {
+    "instant.value": "2013-04-03T15:30:10+01:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/example"
+      },
+      "Reference.display": {
+        "string.value": "Sequence Analysis Laboratory"
+      }
+    }
+  ],
+  "Observation.valueCodeableConcept": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "260385009"
+        },
+        "Coding.display": {
+          "string.value": "Negative"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#260385009"
+  },
+  "Observation.related": [
+    {
+      "Observation.related.type": {
+        "code.value": "sequel-to"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "Observation/example-genetics-1"
+        },
+        "Reference.display": {
+          "string.value": "ObservationForGenetics profile example 1"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Observation/example-genetics-1"
+      }
+    }
+  ]
+}

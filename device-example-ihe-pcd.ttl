@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Device/ihe-pcd> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ihe-pcd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Acme Patient Monitor</p>\n    </div>"
+  ];
+  fhir:Device.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+         fhir:Coding.code [ fhir:value "SNO" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Serial Number" ]
+     ];
+     fhir:Identifier.value [ fhir:value "AMID-123-456" ]
+  ];
+  fhir:Device.type [
+     fhir:CodeableConcept.text [ fhir:value "Vital Signs Monitor" ]
+  ];
+  fhir:Device.lotNumber [ fhir:value "12345"];
+  fhir:Device.manufacturer [ fhir:value "Acme Devices, Inc"];
+  fhir:Device.model [ fhir:value "A.1.1"] .
+
+# -------------------------------------------------------------------------------------
+

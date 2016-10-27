@@ -1,0 +1,134 @@
+{
+  "@context": "http://build.fhir.org/Procedure.jsonld",
+  "@context": "http://hl7.org/fhir/Procedure/f002",
+  "Resource.id": {
+    "id.value": "f002"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>status</b>: completed</p><p><b>code</b>: Partial lobectomy of lung <span>(Details : {SNOMED CT code '359615001' = 'Partial lobectomy of lung (procedure)', given as 'Partial lobectomy of lung'})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>encounter</b>: <a>Encounter/f002</a></p><p><b>performed</b>: Mar 8, 2013 9:00:10 AM --&gt; Mar 8, 2013 9:30:10 AM</p><h3>Performers</h3><table><tr><td>-</td><td><b>Actor</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a>M.I.M. Versteegh</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '01.000', given as 'Arts'})</span></td></tr></table><p><b>reasonCode</b>: Malignant tumor of lung <span>(Details )</span></p><p><b>bodySite</b>: Lung structure <span>(Details : {SNOMED CT code '39607008' = 'Lung structure (body structure)', given as 'Lung structure'})</span></p><p><b>outcome</b>: improved blood circulation <span>(Details )</span></p><p><b>report</b>: <a>Lab results blood test</a></p><p><b>followUp</b>: described in care plan <span>(Details )</span></p></div>"
+    }
+  },
+  "Procedure.status": {
+    "code.value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "359615001"
+        },
+        "Coding.display": {
+          "string.value": "Partial lobectomy of lung"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#359615001"
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f001"
+    },
+    "Reference.display": {
+      "string.value": "P. van de Heuvel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Procedure.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/f002"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f002"
+  },
+  "Procedure.performedPeriod": {
+    "Period.start": {
+      "dateTime.value": "2013-03-08T09:00:10+01:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2013-03-08T09:30:10+01:00"
+    }
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "string.value": "Practitioner/f003"
+        },
+        "Reference.display": {
+          "string.value": "M.I.M. Versteegh"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/f003"
+      },
+      "Procedure.performer.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+            },
+            "Coding.code": {
+              "code.value": "01.000"
+            },
+            "Coding.display": {
+              "string.value": "Arts"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Care role"
+        }
+      }
+    }
+  ],
+  "Procedure.reasonCode": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "Malignant tumor of lung"
+      }
+    }
+  ],
+  "Procedure.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "39607008"
+          },
+          "Coding.display": {
+            "string.value": "Lung structure"
+          }
+        }
+      ]
+    }
+  ],
+  "Procedure.outcome": {
+    "CodeableConcept.text": {
+      "string.value": "improved blood circulation"
+    }
+  },
+  "Procedure.report": [
+    {
+      "Reference.reference": {
+        "string.value": "DiagnosticReport/f001"
+      },
+      "Reference.display": {
+        "string.value": "Lab results blood test"
+      }
+    }
+  ],
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "described in care plan"
+      }
+    }
+  ]
+}

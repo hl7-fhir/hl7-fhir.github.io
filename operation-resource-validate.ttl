@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "Resource-validate"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/Resource-validate"];
+  fhir:OperationDefinition.name [ fhir:value "Validate a resource"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The validate operation checks whether the attached content would be acceptable either generally, as a create, an update or as a delete to an existing resource.  The action the server takes depends on the mode parameter:  \n\n* [mode not provided]: The server checks the content of the resource against any schema, constraint rules, and other general terminology rules \n* create: The server checks the content, and then checks that the content would be acceptable as a create (e.g. that the content would not violate any uniqueness constraints) \n* update: The server checks the content, and then checks that it would accept it as an update against the nominated specific resource (e.g. that there are no changes to immutable fields the server does not allow to change, and checking version integrity if appropriate) \n* delete: The server ignores the content, and checks that the nominated resource is allowed to be deleted (e.g. checking referential integrity rules)  \n\nModes update and delete can only be used when the operation is invoked at the resource instance level.   The return from this operation is an [[[OperationOutcome]]]"];
+  fhir:OperationDefinition.code [ fhir:value "validate"];
+  fhir:OperationDefinition.comment [ fhir:value "This operation may be used during design and development to validate application design. It can also be used at run-time. One possible use might be that a client asks the server whether a proposed update is valid as the user is editing a dialog and displays an updated error to the user. The operation can be used as part of a light-weight two phase commit protocol but there is no expectation that the server will hold the content of the resource after this operation is used, or that the server guarantees to successfully perform an actual create, update or delete after the validation operation completes.\n\nThis operation returns a 200 OK whether or not the resource is valid. A 4xx or 5xx error means that the validation itself could not be performed, and it is unknown whether the resource is valid or not."];
+  fhir:OperationDefinition.resource [
+     fhir:value "Resource";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "true"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "resource" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Must be present unless the mode is \"delete\"" ];
+     fhir:OperationDefinition.type [ fhir:value "Resource" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "mode" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Default is 'no action'; (e.g. general validation)" ];
+     fhir:OperationDefinition.type [ fhir:value "code" ];
+     fhir:OperationDefinition.binding [
+       fhir:OperationDefinition.strength [ fhir:value "required" ];
+       fhir:OperationDefinition.valueSet [
+         fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/resource-validation-mode" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "profile" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "If this is nominated, then the resource is validated against this specific profile. If a profile is nominated, and the server cannot validate against the nominated profile, it SHALL return an error" ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "If the operation outcome does not list any errors, and a mode was specified, then this is an indication that the operation would be expected to succeed (excepting for transactional integrity issues, see below)" ];
+     fhir:OperationDefinition.type [ fhir:value "OperationOutcome" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

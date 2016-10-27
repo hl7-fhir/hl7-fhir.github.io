@@ -1,0 +1,72 @@
+{
+  "@context": "http://build.fhir.org/Flag.jsonld",
+  "@context": "http://hl7.org/fhir/Flag/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Large Dog warning for Peter Patient</div>"
+    }
+  },
+  "Flag.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/local"
+        },
+        "Coding.code": {
+          "code.value": "admin"
+        },
+        "Coding.display": {
+          "string.value": "Admin"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "admin"
+    }
+  },
+  "Flag.status": {
+    "code.value": "active"
+  },
+  "Flag.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter Patient"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Flag.author": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "string.value": "Nancy Nurse"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "Flag.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/local"
+        },
+        "Coding.code": {
+          "code.value": "bigdog"
+        },
+        "Coding.display": {
+          "string.value": "Big dog"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Patient has a big dog at his home. Always always wear a suit of armor or take other active counter-measures"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Practitioner/xcda1> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "xcda1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: xcda1</p><p><b>identifier</b>: D234123 (OFFICIAL)</p><p><b>name</b>: Sherry Dopplemeyer </p><p><b>telecom</b>: john.doe@healthcare.example.org</p><h3>Roles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Code</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td>Cleveland Clinic</td><td>Primary Surgon <span>(Details )</span></td><td>Orthopedic <span>(Details )</span></td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://healthcare.example.org/identifiers/staff" ];
+     fhir:Identifier.value [ fhir:value "D234123" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [
+       fhir:value "Dopplemeyer";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Sherry";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "john.doe@healthcare.example.org" ]
+  ];
+  fhir:Practitioner.role [
+     fhir:index 0;
+     fhir:Practitioner.role.organization [
+       fhir:Reference.display [ fhir:value "Cleveland Clinic" ]
+     ];
+     fhir:Practitioner.role.code [
+       fhir:CodeableConcept.text [ fhir:value "Primary Surgon" ]
+     ];
+     fhir:Practitioner.role.specialty [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Orthopedic" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

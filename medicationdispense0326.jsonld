@@ -1,0 +1,171 @@
+{
+  "@context": "http://build.fhir.org/MedicationDispense.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationDispense/meddisp0326",
+  "Resource.id": {
+    "id.value": "meddisp0326"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0326</p><p><b>status</b>: in-progress</p><p><b>medication</b>: Azithromycin 500mg oral tablet (Zithromax) <span>(Details : {RxNorm code '226827' = '226827', given as 'Azithromycin 500mg oral tablet (Zithromax)'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0313</a></p><p><b>type</b>: trial Fill <span>(Details : {http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType code 'TF' = 'TF', given as 'trial Fill'})</span></p><p><b>quantity</b>: 5 TAB<span> (Details: UCUM code TAB = 'TAB')</span></p><p><b>daysSupply</b>: 5 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "MedicationDispense.status": {
+    "code.value": "in-progress"
+  },
+  "MedicationDispense.medicationCodeableConcept": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+        },
+        "Coding.code": {
+          "code.value": "226827"
+        },
+        "Coding.display": {
+          "string.value": "Azithromycin 500mg oral tablet (Zithromax)"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f006"
+    },
+    "Reference.display": {
+      "string.value": "Rob van den Berk"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f006"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "string.value": "MedicationRequest/medrx0313"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType"
+        },
+        "Coding.code": {
+          "code.value": "TF"
+        },
+        "Coding.display": {
+          "string.value": "trial Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "decimal.value": 5
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "TAB"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "decimal.value": 5
+    },
+    "Quantity.unit": {
+      "string.value": "Day"
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "d"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "dateTime.value": "2015-01-15T10:20:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "500mg daily for 5 days"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "421984009"
+              },
+              "Coding.display": {
+                "string.value": "Until finished - dosing instruction fragment (qualifier value)"
+              }
+            }
+          ]
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral Route (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 500
+        },
+        "Quantity.unit": {
+          "string.value": "mg"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mg"
+        }
+      }
+    }
+  ]
+}

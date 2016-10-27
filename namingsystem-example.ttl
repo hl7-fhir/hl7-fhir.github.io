@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/NamingSystem/example> a fhir:NamingSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        <b>SNOMED CT</b>\n      </p>\n      \n      <p> oid: 2.16.840.1.113883.6.96</p>\n      \n      <p> uri: http://snomed.info/sct</p>\n    \n    </div>"
+  ];
+  fhir:NamingSystem.name [ fhir:value "SNOMED CT"];
+  fhir:NamingSystem.status [ fhir:value "active"];
+  fhir:NamingSystem.kind [ fhir:value "codesystem"];
+  fhir:NamingSystem.date [ fhir:value "2014-12-13"^^xsd:date];
+  fhir:NamingSystem.publisher [ fhir:value "HL7 International on behalf of IHTSDO"];
+  fhir:NamingSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "FHIR project team" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ]
+  ];
+  fhir:NamingSystem.responsible [ fhir:value "IHTSDO & affiliates"];
+  fhir:NamingSystem.description [ fhir:value "SNOMED CT is a concept-based, scientifically validated terminology that provides a unique and permanent concept identifier that can be included in multiple HL7 data types including CD and CE.  The concepts are managed to avoid \"semantic drift\" so the meaning remains constant.  If the concept is found to be ambiguous or the meaning changes, the concept is inactivated but still retained and the identifier is never reused.    SNOMED CT's concepts are interrelated hierarchically and using description logic.    SNOMED CT concepts have a unique \"fully-specified name\", a preferred term, and, optionally, synonyms.  The description languages include English and Spanish."];
+  fhir:NamingSystem.uniqueId [
+     fhir:index 0;
+     fhir:NamingSystem.uniqueId.type [ fhir:value "oid" ];
+     fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.6.96" ]
+  ], [
+     fhir:index 1;
+     fhir:NamingSystem.uniqueId.type [ fhir:value "uri" ];
+     fhir:NamingSystem.uniqueId.value [ fhir:value "http://snomed.info/sct" ];
+     fhir:NamingSystem.uniqueId.preferred [ fhir:value "true"^^xsd:boolean ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

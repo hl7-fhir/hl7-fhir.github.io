@@ -1,0 +1,65 @@
+{
+  "@context": "http://build.fhir.org/Device.jsonld",
+  "@context": "http://hl7.org/fhir/Device/example-pacemaker",
+  "Resource.id": {
+    "id.value": "example-pacemaker"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-pacemaker</p><p><b>identifier</b>: 1234-5678-90AB-CDEF</p><p><b>type</b>: Performance pace maker for high octane patients <span>(Details : {http://acme.com/devices code 'octane2014' = 'octane2014', given as 'Performance pace maker for high octane patients'})</span></p><p><b>lotNumber</b>: 1234-5678</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>model</b>: PM/Octane 2014</p><p><b>patient</b>: <a>Patient/example</a></p><p><b>contact</b>: ph: ext 4352</p></div>"
+    }
+  },
+  "Device.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://acme.com/devices/pacemakers/octane/serial"
+      },
+      "Identifier.value": {
+        "string.value": "1234-5678-90AB-CDEF"
+      }
+    }
+  ],
+  "Device.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://acme.com/devices"
+        },
+        "Coding.code": {
+          "code.value": "octane2014"
+        },
+        "Coding.display": {
+          "string.value": "Performance pace maker for high octane patients"
+        }
+      }
+    ]
+  },
+  "Device.lotNumber": {
+    "string.value": "1234-5678"
+  },
+  "Device.manufacturer": {
+    "string.value": "Acme Devices, Inc"
+  },
+  "Device.model": {
+    "string.value": "PM/Octane 2014"
+  },
+  "Device.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Device.contact": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "ext 4352"
+      }
+    }
+  ]
+}

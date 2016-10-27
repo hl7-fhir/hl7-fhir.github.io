@@ -1,0 +1,333 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Patient-example - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/patient-example.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="patient.html">Patient</a></li>        <li><b>Example Instance</b></li>        <!-- patient-example.html / resource-instance:Patient / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Patient-example</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="patient-example.xml.html">XML</a> or <a href="patient-example.json.html">JSON</a> format. This example conforms to the <a href="patient.html">profile Patient</a>.
+</p>
+
+<hr/>
+<div>
+      
+      <table>
+        
+        <tbody>
+          
+          <tr>
+            
+            <td>Name</td>
+            
+            <td>Peter James 
+              <b>Chalmers</b> (&quot;Jim&quot;)
+            </td>
+          
+          </tr>
+          
+          <tr>
+            
+            <td>Address</td>
+            
+            <td>534 Erewhon, Pleasantville, Vic, 3999</td>
+          
+          </tr>
+          
+          <tr>
+            
+            <td>Contacts</td>
+            
+            <td>Home: unknown. Work: (03) 5555 6473</td>
+          
+          </tr>
+          
+          <tr>
+            
+            <td>Id</td>
+            
+            <td>MRN: 12345 (Acme Healthcare)</td>
+          
+          </tr>
+        
+        </tbody>
+      
+      </table>    
+    
+    </div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+<p>
+Other examples that reference this example:</p>
+<li><a href="account-example.html">Account/Example</a></li>
+<li><a href="allergyintolerance-example.html">AllergyIntolerance/Food Allergy</a></li>
+<li><a href="allergyintolerance-fishallergy.html">AllergyIntolerance/Fish Allergy with notes</a></li>
+<li><a href="allergyintolerance-medication.html">AllergyIntolerance/Medication Allergy</a></li>
+<li><a href="appointment-example2doctors.html">Appointment/Example2docs</a></li>
+<li><a href="appointment-example.html">Appointment/Example</a></li>
+<li><a href="appointment-example-request.html">Appointment/ExampleRequest</a></li>
+<li><a href="appointmentresponse-example.html">AppointmentResponse/Example</a></li>
+<li><a href="auditevent-example-disclosure.html">AuditEvent/Disclosure</a></li>
+<li><a href="audit-event-example-vread.html">AuditEvent/RESTful Operation</a></li>
+<li><a href="bodysite-example-fetus.html">BodySite/Fetus</a></li>
+<li><a href="bodysite-example-skin-patch.html">BodySite/Skin Patch</a></li>
+<li><a href="bodysite-example-tumor.html">BodySite/Tumor</a></li>
+<li><a href="careplan-example.html">CarePlan/Weight Loss</a></li>
+<li><a href="careteam-example.html">CareTeam/Care Team</a></li>
+<li><a href="clinicalimpression-example.html">ClinicalImpression/General</a></li>
+<li><a href="communicationrequest-example.html">CommunicationRequest/Alert Message</a></li>
+<li><a href="condition-example.html">Condition/General</a></li>
+<li><a href="condition-example2.html">Condition/2nd Case</a></li>
+<li><a href="condition-example-stroke.html">Condition/Stroke</a></li>
+<li><a href="consent-example-grantor.html">Consent/Consent-Grantor</a></li>
+<li><a href="consent-example-pkb.html">Consent/Consent from Patients Know Best</a></li>
+<li><a href="device-example-pacemaker.html">Device/Pacemaker Example</a></li>
+<li><a href="device-example-udi1.html">Device/UDI Implantable 1</a></li>
+<li><a href="device-example-udi2.html">Device/UDI Implantable 2</a></li>
+<li><a href="device-example-udi3.html">Device/UDI Implantable 3</a></li>
+<li><a href="device-example-udi4.html">Device/UDI Blood Bag</a></li>
+<li><a href="deviceuserequest-example.html">DeviceUseRequest/Wheelchair</a></li>
+<li><a href="deviceusestatement-example.html">DeviceUseStatement/Wheelchair</a></li>
+<li><a href="diagnosticreport-micro1.html">DiagnosticReport/Micro Isolate and Sensitivities</a></li>
+<li><a href="diagnosticreport-example-ultrasound.html">DiagnosticReport/Ultrasound</a></li>
+<li><a href="diagnosticrequest-example-lipid.html">DiagnosticRequest/Lipids</a></li>
+<li><a href="encounter-example.html">Encounter/example</a></li>
+<li><a href="encounter-example-home.html">Encounter/example-home</a></li>
+<li><a href="episodeofcare-example.html">EpisodeOfCare/example</a></li>
+<li><a href="familymemberhistory-example.html">FamilyMemberHistory/Father</a></li>
+<li><a href="flag-example.html">Flag/General</a></li>
+<li><a href="flag-example-encounter.html">Flag/Encounter</a></li>
+<li><a href="goal-example.html">Goal/Weight Loss</a></li>
+<li><a href="immunization-example.html">Immunization/General</a></li>
+<li><a href="immunization-example-refused.html">Immunization/Not Given</a></li>
+<li><a href="immunizationrecommendation-example.html">ImmunizationRecommendation/General</a></li>
+<li><a href="list-example-allergies.html">List/Allergies List</a></li>
+<li><a href="list-example.html">List/General</a></li>
+<li><a href="list-example-empty.html">List/Empty List</a></li>
+<li><a href="list-example-familyhistory-genetics-profile.html">List/Family History - genetic</a></li>
+<li><a href="list-example-medlist.html">List/Med List</a></li>
+<li><a href="media-example-dicom.html">Media/Ultrasound</a></li>
+<li><a href="messageheader-example.html">MessageHeader/General Example</a></li>
+<li><a href="nutritionrequest-example-cardiacdiet.html">NutritionRequest/Low Sodium and Fiber Restricted Diet</a></li>
+<li><a href="nutritionrequest-example-diabeticdiet.html">NutritionRequest/Diabetic Diet</a></li>
+<li><a href="nutritionrequest-example-diabeticsupplement.html">NutritionRequest/Diabetic Supplement</a></li>
+<li><a href="nutritionrequest-example-energysupplement.html">NutritionRequest/Energy Supplement</a></li>
+<li><a href="nutritionrequest-example-enteralbolus.html">NutritionRequest/Enteral Bolus</a></li>
+<li><a href="nutritionrequest-example-enteralcontinuous.html">NutritionRequest/Enteral Continuous Feeding</a></li>
+<li><a href="nutritionrequest-example-fiberrestricteddiet.html">NutritionRequest/Low Fat and Fiber Restricted Diet</a></li>
+<li><a href="nutritionrequest-example-infantenteral.html">NutritionRequest/Infant Enteral</a></li>
+<li><a href="nutritionrequest-example-proteinsupplement.html">NutritionRequest/Protein Supplement</a></li>
+<li><a href="nutritionrequest-example-pureeddiet.html">NutritionRequest/Pureed Diet</a></li>
+<li><a href="nutritionrequest-example-pureeddiet-simple.html">NutritionRequest/Pureed Diet Simple</a></li>
+<li><a href="nutritionrequest-example-renaldiet.html">NutritionRequest/Renal Diet</a></li>
+<li><a href="nutritionrequest-example-texture-modified.html">NutritionRequest/Texture Modified Diet</a></li>
+<li><a href="observation-example-bloodpressure.html">Observation/Blood pressure</a></li>
+<li><a href="observation-example-bloodpressure-cancel.html">Observation/cancelled</a></li>
+<li><a href="observation-example.html">Observation/Example</a></li>
+<li><a href="observation-example-genetics-1.html">Observation/Genetics 1</a></li>
+<li><a href="observation-example-genetics-2.html">Observation/Genetics 2</a></li>
+<li><a href="observation-example-genetics-3.html">Observation/Genetics 3</a></li>
+<li><a href="observation-example-genetics-4.html">Observation/Genetics 4</a></li>
+<li><a href="observation-example-genetics-5.html">Observation/Genetics 5</a></li>
+<li><a href="observation-example-eye-color.html">Observation/Eye Color</a></li>
+<li><a href="observation-example-glasgow-qa.html">Observation/Glasgow Score 2</a></li>
+<li><a href="observation-example-glasgow.html">Observation/Glasgow Score 1</a></li>
+<li><a href="observation-example-satO2.html">Observation/Oxygen Saturation</a></li>
+<li><a href="person-example.html">Person/General</a></li>
+<li><a href="procedure-example-biopsy.html">Procedure/Biopsy</a></li>
+<li><a href="procedure-example.html">Procedure/General</a></li>
+<li><a href="procedure-example-implant.html">Procedure/Device Example</a></li>
+<li><a href="procedurerequest-example.html">ProcedureRequest/Head CT</a></li>
+<li><a href="questionnaireresponse-example-gcs.html">QuestionnaireResponse/Glasgow Coma Score</a></li>
+<li><a href="relatedperson-example.html">RelatedPerson/Benedicte</a></li>
+<li><a href="riskassessment-example-cardiac.html">RiskAssessment/cardiac</a></li>
+<li><a href="sequence-example.html">Sequence/General</a></li>
+<li><a href="specimen-example.html">Specimen/General</a></li>
+<li><a href="specimen-example-isolate.html">Specimen/Isolate</a></li>
+<li><a href="specimen-example-urine.html">Specimen/urine</a></li>
+<li><a href="testscript-example.html">TestScript/General</a></li>
+<li><a href="testscript-example-history.html">TestScript/History Test</a></li>
+<li><a href="testscript-example-rule.html">TestScript/Rule</a></li>
+<li><a href="testscript-example-search.html">TestScript/Search Test</a></li>
+<li><a href="testscript-example-update.html">TestScript/Update Test</a></li>
+<li><a href="visionprescription-example.html">VisionPrescription/Glasses</a></li>
+<li><a href="visionprescription-example-1.html">VisionPrescription/Contacts</a></li>
+</ul>
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fpatient-example.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fpatient-example.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

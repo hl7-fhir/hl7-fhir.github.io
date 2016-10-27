@@ -1,0 +1,181 @@
+{
+  "@context": "http://build.fhir.org/Appointment.jsonld",
+  "@context": "http://hl7.org/fhir/Appointment/examplereq",
+  "Resource.id": {
+    "id.value": "examplereq"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+    }
+  },
+  "Appointment.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://example.org/sampleappointment-identifier"
+      },
+      "Identifier.value": {
+        "string.value": "123"
+      }
+    }
+  ],
+  "Appointment.status": {
+    "code.value": "proposed"
+  },
+  "Appointment.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/service-category"
+        },
+        "Coding.code": {
+          "code.value": "gp"
+        },
+        "Coding.display": {
+          "string.value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Appointment.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://example.org/specialty"
+          },
+          "Coding.code": {
+            "code.value": "gp"
+          },
+          "Coding.display": {
+            "string.value": "General Practice"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.appointmentType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/appointment-type"
+        },
+        "Coding.code": {
+          "code.value": "wi"
+        },
+        "Coding.display": {
+          "string.value": "Walk in"
+        }
+      }
+    ]
+  },
+  "Appointment.reason": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "413095006"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Clinical Review"
+    },
+    "Resource.concept": "http://snomed.info/sct#413095006"
+  },
+  "Appointment.priority": {
+    "unsignedInt.value": 5
+  },
+  "Appointment.description": {
+    "string.value": "Discussion on the results of your recent MRI"
+  },
+  "Appointment.minutesDuration": {
+    "positiveInt.value": 15
+  },
+  "Appointment.slot": [
+    {
+      "Reference.reference": {
+        "string.value": "Slot/example"
+      }
+    }
+  ],
+  "Appointment.created": {
+    "dateTime.value": "2015-12-02"
+  },
+  "Appointment.comment": {
+    "string.value": "Further expand on the results of the MRI and determine the next actions that may be appropriate."
+  },
+  "Appointment.participant": [
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Reference.display": {
+          "string.value": "Peter James Chalmers"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "needs-action"
+      }
+    },
+    {
+      "Appointment.participant.type": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/v3/ParticipationType"
+              },
+              "Coding.code": {
+                "code.value": "ATND"
+              }
+            }
+          ]
+        }
+      ],
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "needs-action"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Location/1"
+        },
+        "Reference.display": {
+          "string.value": "South Wing, second floor"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Location/1"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    }
+  ],
+  "Appointment.requestedPeriod": [
+    {
+      "Period.start": {
+        "dateTime.value": "2016-06-02"
+      },
+      "Period.end": {
+        "dateTime.value": "2016-06-09"
+      }
+    }
+  ]
+}

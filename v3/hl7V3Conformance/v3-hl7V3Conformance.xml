@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v3-hl7V3Conformance"/>
+  <meta>
+    <lastUpdated value="2016-03-23T00:00:00.000+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Release Date: 2016-03-23</p>
+
+      <table class="grid">
+ 
+        <tr>
+          <td>
+            <b>Level</b>
+          </td>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>I
+            <a name="I"> </a>
+          </td>
+          <td>ignored</td>
+          <td>
+                        
+                           Description: Implementers receiving this property must not raise an error if the data is received, but will not perform any useful function with the data.  This conformance level is not used in profiles or other artifacts that are specific to the &quot;sender&quot; or &quot;initiator&quot; of a communication.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>NP
+            <a name="NP"> </a>
+          </td>
+          <td>not permitted</td>
+          <td>
+                        
+                           Description: All implementers are prohibited from transmitting this content, and may raise an error if they receive it.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>R
+            <a name="R"> </a>
+          </td>
+          <td>required</td>
+          <td>
+                        
+                           Description: All implementers must support this property.  I.e. they must be able to transmit, or to receive and usefully handle the concept.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>RC
+            <a name="RC"> </a>
+          </td>
+          <td>required for consumer</td>
+          <td>
+                        
+                           Description: The element is considered &quot;required&quot; (i.e. must be supported) from the perspective of systems that consume  instances, but is &quot;undetermined&quot; for systems that generate instances.  Used only as part of specifications that define both initiator and consumer expectations.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>RI
+            <a name="RI"> </a>
+          </td>
+          <td>required for initiator</td>
+          <td>
+                        
+                           Description: The element is considered &quot;required&quot; (i.e. must be supported) from the perspective of systems that generate instances, but is &quot;undetermined&quot; for systems that consume instances.  Used only as part of specifications that define both initiator and consumer expectations.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>U
+            <a name="U"> </a>
+          </td>
+          <td>undetermined</td>
+          <td>
+                        
+                           Description: The conformance expectations for this element have not yet been determined.
+            <br/>
+
+                     
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v3-hl7V3Conformance"/>
+  <version value="2016-03-23"/>
+  <name value="v3 Code System hl7V3Conformance"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7, Inc"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-03-23"/>
+  <description value="  Description:
+Identifies allowed codes for HL7aTMs v3 conformance property."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/hl7V3Conformance"/>
+    </include>
+  </compose>
+</ValueSet>

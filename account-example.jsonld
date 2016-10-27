@@ -1,0 +1,102 @@
+{
+  "@context": "http://build.fhir.org/Account.jsonld",
+  "@context": "http://hl7.org/fhir/Account/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HACC Funded Billing for Peter James Chalmers</div>"
+    }
+  },
+  "Account.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "urn:oid:0.1.2.3.4.5.6.7"
+      },
+      "Identifier.value": {
+        "string.value": "654321"
+      }
+    }
+  ],
+  "Account.name": {
+    "string.value": "HACC Funded Billing for Peter James Chalmers"
+  },
+  "Account.type": {
+    "CodeableConcept.text": {
+      "string.value": "patient"
+    }
+  },
+  "Account.status": {
+    "code.value": "active"
+  },
+  "Account.active": {
+    "Period.start": {
+      "dateTime.value": "2016-01-01"
+    },
+    "Period.end": {
+      "dateTime.value": "2016-06-30"
+    }
+  },
+  "Account.currency": {
+    "Coding.system": {
+      "uri.value": "urn:iso:std:iso:4217"
+    },
+    "Coding.code": {
+      "code.value": "USD"
+    },
+    "Coding.display": {
+      "string.value": "US Dollar"
+    }
+  },
+  "Account.balance": {
+    "Quantity.value": {
+      "decimal.value": -1200
+    },
+    "Quantity.unit": {
+      "string.value": "USD"
+    },
+    "Quantity.system": {
+      "uri.value": "urn:iso:std:iso:4217"
+    },
+    "Quantity.code": {
+      "code.value": "USD"
+    }
+  },
+  "Account.coverage": [
+    {
+      "Reference.reference": {
+        "string.value": "Coverage/9876B1"
+      }
+    }
+  ],
+  "Account.coveragePeriod": {
+    "Period.start": {
+      "dateTime.value": "2016-01-01"
+    },
+    "Period.end": {
+      "dateTime.value": "2016-06-30"
+    }
+  },
+  "Account.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter James Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Account.owner": {
+    "Reference.reference": {
+      "string.value": "Organization/hl7"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/hl7"
+  },
+  "Account.description": {
+    "string.value": "Hospital charges"
+  }
+}

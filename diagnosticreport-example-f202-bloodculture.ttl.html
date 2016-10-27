@@ -1,0 +1,303 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Diagnosticreport-example-f202-bloodculture.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/diagnosticreport-example-f202-bloodculture.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="diagnostics-module.html"><img src="diagnostics.jpg"/> Diagnostics</a></li>        <li><a href="diagnosticreport.html">DiagnosticReport</a></li>        <li><b>Example Instance</b></li>        <!-- diagnosticreport-example-f202-bloodculture.ttl.html / resource-instance:DiagnosticReport / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Diagnosticreport-example-f202-bloodculture.ttl</h1>
+
+<p>
+<a href="diagnosticreport-example-f202-bloodculture.ttl">Raw Turtle</a>, 
+<a href="diagnosticreport-example-f202-bloodculture.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Real-world patient example</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/DiagnosticReport/f202&gt; a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;f202&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: f202&lt;/p&gt;&lt;p&gt;&lt;b&gt;contained&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Laboratory test &lt;span&gt;(Details : {SNOMED CT code '15220000' = 'Laboratory test (procedure)', given as 'Laboratory test'}; {http://hl7.org/fhir/v2/0074 code 'LAB' = 'Laboratory)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Blood culture for bacteria, including anaerobic screen &lt;span&gt;(Details : {SNOMED CT code '104177005' = 'Blood culture for bacteria, including anaerobic screen (procedure)', given as 'Blood culture for bacteria, including anaerobic screen'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a&gt;Roel&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: Mar 11, 2013 3:45:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;issued&lt;/b&gt;: Mar 11, 2013 10:28:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a&gt;AUMC&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;request&lt;/b&gt;: id: req; Original Order &lt;span&gt;(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)&lt;/span&gt;; Blood culture for bacteria, including anaerobic screen &lt;span&gt;(Details : {SNOMED CT code '104177005' = 'Blood culture for bacteria, including anaerobic screen (procedure)', given as 'Blood culture for bacteria, including anaerobic screen'})&lt;/span&gt;; Roel; Roel's encounter on March eleventh 2013; Dokter Bronsig&lt;/p&gt;&lt;p&gt;&lt;b&gt;result&lt;/b&gt;: &lt;a&gt;Results for staphylococcus analysis on Roel's blood culture&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;conclusion&lt;/b&gt;: Blood culture tested positive on staphylococcus aureus&lt;/p&gt;&lt;p&gt;&lt;b&gt;codedDiagnosis&lt;/b&gt;: Bacteremia due to staphylococcus &lt;span&gt;(Details : {SNOMED CT code '428763004' = 'Bacteremia due to Staphylococcus aureus (finding)', given as 'Bacteremia due to staphylococcus'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  fhir:DomainResource.contained [
+     a fhir:DiagnosticRequest;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value &quot;req&quot; ];
+     fhir:DiagnosticRequest.stage [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/request-stage&quot; ];
+         fhir:Coding.code [ fhir:value &quot;original-order&quot; ]
+       ]
+     ];
+     fhir:DiagnosticRequest.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:104177005;
+         fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+         fhir:Coding.code [ fhir:value &quot;104177005&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Blood culture for bacteria, including anaerobic screen&quot; ]
+       ]
+     ];
+     fhir:DiagnosticRequest.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/f201&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/f201&quot; ];
+       fhir:Reference.display [ fhir:value &quot;Roel&quot; ]
+     ];
+     fhir:DiagnosticRequest.context [
+       fhir:link &lt;http://hl7.org/fhir/Encounter/f203&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Encounter/f203&quot; ];
+       fhir:Reference.display [ fhir:value &quot;Roel's encounter on March eleventh 2013&quot; ]
+     ];
+     fhir:DiagnosticRequest.requester [
+       fhir:link &lt;http://hl7.org/fhir/Practitioner/f201&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Practitioner/f201&quot; ];
+       fhir:Reference.display [ fhir:value &quot;Dokter Bronsig&quot; ]
+     ]
+  ];
+  fhir:DiagnosticReport.status [ fhir:value &quot;final&quot;];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:15220000;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;15220000&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Laboratory test&quot; ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0074&quot; ];
+       fhir:Coding.code [ fhir:value &quot;LAB&quot; ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:104177005;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;104177005&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Blood culture for bacteria, including anaerobic screen&quot; ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link &lt;http://hl7.org/fhir/Patient/f201&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Patient/f201&quot; ];
+     fhir:Reference.display [ fhir:value &quot;Roel&quot; ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value &quot;2013-03-11T03:45:00+01:00&quot;^^xsd:dateTime];
+  fhir:DiagnosticReport.issued [ fhir:value &quot;2013-03-11T10:28:00+01:00&quot;^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link &lt;http://hl7.org/fhir/Organization/f201&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/f201&quot; ];
+     fhir:Reference.display [ fhir:value &quot;AUMC&quot; ]
+  ];
+  fhir:DiagnosticReport.request [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value &quot;#req&quot; ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link &lt;http://hl7.org/fhir/Observation/f206&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Observation/f206&quot; ];
+     fhir:Reference.display [ fhir:value &quot;Results for staphylococcus analysis on Roel's blood culture&quot; ]
+  ];
+  fhir:DiagnosticReport.conclusion [ fhir:value &quot;Blood culture tested positive on staphylococcus aureus&quot;];
+  fhir:DiagnosticReport.codedDiagnosis [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:428763004;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;428763004&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Bacteremia due to staphylococcus&quot; ]
+     ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/f201&gt; a fhir:Patient, fhir:Patient .
+
+&lt;http://hl7.org/fhir/Encounter/f203&gt; a fhir:Encounter .
+
+&lt;http://hl7.org/fhir/Practitioner/f201&gt; a fhir:Practitioner .
+
+&lt;http://hl7.org/fhir/Organization/f201&gt; a fhir:Organization .
+
+&lt;http://hl7.org/fhir/Observation/f206&gt; a fhir:Observation .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdiagnosticreport-example-f202-bloodculture.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdiagnosticreport-example-f202-bloodculture.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

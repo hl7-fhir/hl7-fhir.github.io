@@ -1,0 +1,191 @@
+{
+  "@context": "http://build.fhir.org/Practitioner.jsonld",
+  "@context": "http://hl7.org/fhir/Practitioner/f003",
+  "Resource.id": {
+    "id.value": "f003"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f003</p><p><b>identifier</b>: 846100293 (OFFICIAL), 243HID3RT938 (USUAL)</p><p><b>name</b>: Marc Versteegh (OFFICIAL)</p><p><b>telecom</b>: ph: 0205562431(WORK), m.versteegh@bmc.nl(WORK), fax: 0205662948(WORK)</p><p><b>address</b>: Galapagosweg 91 Amsterdam 1105 AZ NLD (WORK)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Jul 1, 1963</p><h3>Roles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Code</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td><a>BMC</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '01.000', given as 'Arts'})</span></td><td>specialization <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.011' = '01.011', given as 'Cardiothoracal surgery'})</span></td></tr></table><p><b>communication</b>: Dutch <span>(Details : {urn:oid:2.16.840.1.113883.6.121 code 'nl' = 'nl', given as 'Dutch'})</span></p></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:2.16.528.1.1007.3.1"
+      },
+      "Identifier.value": {
+        "string.value": "846100293"
+      }
+    },
+    {
+      "Identifier.use": {
+        "code.value": "usual"
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      },
+      "Identifier.value": {
+        "string.value": "243HID3RT938"
+      }
+    }
+  ],
+  "Practitioner.name": [
+    {
+      "HumanName.use": {
+        "code.value": "official"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "Versteegh"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Marc"
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "string.value": "MD"
+        }
+      ]
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "0205562431"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "code.value": "email"
+      },
+      "ContactPoint.value": {
+        "string.value": "m.versteegh@bmc.nl"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "code.value": "fax"
+      },
+      "ContactPoint.value": {
+        "string.value": "0205662948"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    }
+  ],
+  "Practitioner.address": [
+    {
+      "Address.use": {
+        "code.value": "work"
+      },
+      "Address.line": [
+        {
+          "string.value": "Galapagosweg 91"
+        }
+      ],
+      "Address.city": {
+        "string.value": "Amsterdam"
+      },
+      "Address.postalCode": {
+        "string.value": "1105 AZ"
+      },
+      "Address.country": {
+        "string.value": "NLD"
+      }
+    }
+  ],
+  "Practitioner.gender": {
+    "code.value": "male"
+  },
+  "Practitioner.birthDate": {
+    "date.value": "1963-07-01"
+  },
+  "Practitioner.role": [
+    {
+      "Practitioner.role.organization": {
+        "Reference.reference": {
+          "string.value": "Organization/f001"
+        },
+        "Reference.display": {
+          "string.value": "BMC"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Organization/f001"
+      },
+      "Practitioner.role.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+            },
+            "Coding.code": {
+              "code.value": "01.000"
+            },
+            "Coding.display": {
+              "string.value": "Arts"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Care role"
+        }
+      },
+      "Practitioner.role.specialty": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+              },
+              "Coding.code": {
+                "code.value": "01.011"
+              },
+              "Coding.display": {
+                "string.value": "Cardiothoracal surgery"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "specialization"
+          }
+        }
+      ]
+    }
+  ],
+  "Practitioner.communication": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "urn:oid:2.16.840.1.113883.6.121"
+          },
+          "Coding.code": {
+            "code.value": "nl"
+          },
+          "Coding.display": {
+            "string.value": "Dutch"
+          }
+        }
+      ]
+    }
+  ]
+}

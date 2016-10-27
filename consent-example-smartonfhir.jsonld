@@ -1,0 +1,82 @@
+{
+  "@context": "http://build.fhir.org/Consent.jsonld",
+  "@context": "http://hl7.org/fhir/Consent/consent-example-smartonfhir",
+  "Resource.id": {
+    "id.value": "consent-example-smartonfhir"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: consent-example-smartonfhir</p><p><b>status</b>: active</p><p><b>dateTime</b>: Jun 23, 2016 5:02:33 PM</p><p><b>period</b>: Jun 23, 2016 5:02:33 PM --&gt; Jun 23, 2016 5:32:33 PM</p><p><b>patient</b>: <a>Patient/xcda</a></p><p><b>consentor</b>: <a>RelatedPerson/peter</a></p><p><b>organization</b>: <a>Organization/example</a></p><p><b>policy</b>: <a>http://hl7.org/fhir/ConsentPolicy/opt-in</a></p><h3>Excepts</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Action</b></td><td><b>Class</b></td></tr><tr><td>*</td><td>permit</td><td>Access <span>(Details : {http://hl7.org/fhir/consentaction code 'access' = 'Access)</span></td><td>MedicationRequest (Details: http://hl7.org/fhir/resource-types code MedicationRequest = 'MedicationRequest', stated as 'null')</td></tr></table></div>"
+    }
+  },
+  "Consent.status": {
+    "code.value": "active"
+  },
+  "Consent.dateTime": {
+    "dateTime.value": "2016-06-23T17:02:33+10:00"
+  },
+  "Consent.period": {
+    "Period.start": {
+      "dateTime.value": "2016-06-23T17:02:33+10:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2016-06-23T17:32:33+10:00"
+    }
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/xcda"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/xcda"
+  },
+  "Consent.consentor": [
+    {
+      "Reference.reference": {
+        "string.value": "RelatedPerson/peter"
+      }
+    }
+  ],
+  "Consent.organization": {
+    "Reference.reference": {
+      "string.value": "Organization/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/example"
+  },
+  "Consent.policy": {
+    "uri.value": "http://hl7.org/fhir/ConsentPolicy/opt-in"
+  },
+  "Consent.except": [
+    {
+      "Consent.except.type": {
+        "code.value": "permit"
+      },
+      "Consent.except.action": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/consentaction"
+              },
+              "Coding.code": {
+                "code.value": "access"
+              }
+            }
+          ]
+        }
+      ],
+      "Consent.except.class": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/resource-types"
+          },
+          "Coding.code": {
+            "code.value": "MedicationRequest"
+          }
+        }
+      ]
+    }
+  ]
+}

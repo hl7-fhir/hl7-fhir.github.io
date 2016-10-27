@@ -1,0 +1,29 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:OperationOutcome;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "validationfail"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Error parsing resource XML (Unknown Content &quot;label&quot; @ /Patient/identifier/label)</p>\n    </div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "structure" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.text [ fhir:value "Error parsing resource XML (Unknown Content \"label\"" ]
+     ];
+     fhir:OperationOutcome.issue.location [
+       fhir:value "/f:Patient/f:identifier";
+       fhir:index 0
+     ]
+  ]] .
+
+# -------------------------------------------------------------------------------------
+

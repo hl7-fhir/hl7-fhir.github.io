@@ -1,0 +1,100 @@
+{
+  "@context": "http://build.fhir.org/Encounter.jsonld",
+  "@context": "http://hl7.org/fhir/Encounter/home",
+  "Resource.id": {
+    "id.value": "home"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"
+    }
+  },
+  "Location": [
+    {
+      "Resource.id": {
+        "id.value": "home"
+      },
+      "Location.description": {
+        "string.value": "Client's home"
+      },
+      "Location.mode": {
+        "code.value": "kind"
+      }
+    }
+  ],
+  "Encounter.status": {
+    "code.value": "finished"
+  },
+  "Encounter.class": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/v3/ActCode"
+    },
+    "Coding.code": {
+      "code.value": "HH"
+    },
+    "Coding.display": {
+      "string.value": "home health"
+    }
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Encounter.participant": [
+    {
+      "Encounter.participant.period": {
+        "Period.start": {
+          "dateTime.value": "2015-01-17T16:00:00+10:00"
+        },
+        "Period.end": {
+          "dateTime.value": "2015-01-17T16:30:00+10:00"
+        }
+      },
+      "Encounter.participant.individual": {
+        "Reference.reference": {
+          "string.value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "string.value": "Dr Adam Careful"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "Encounter.period": {
+    "Period.start": {
+      "dateTime.value": "2015-01-17T16:00:00+10:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2015-01-17T16:30:00+10:00"
+    }
+  },
+  "Encounter.location": [
+    {
+      "Encounter.location.location": {
+        "Reference.reference": {
+          "string.value": "#home"
+        },
+        "Reference.display": {
+          "string.value": "Client's home"
+        }
+      },
+      "Encounter.location.status": {
+        "code.value": "completed"
+      },
+      "Encounter.location.period": {
+        "Period.start": {
+          "dateTime.value": "2015-01-17T16:00:00+10:00"
+        },
+        "Period.end": {
+          "dateTime.value": "2015-01-17T16:30:00+10:00"
+        }
+      }
+    }
+  ]
+}

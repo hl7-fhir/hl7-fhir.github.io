@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/EnrollmentRequest/22345> a fhir:EnrollmentRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "22345"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the EnrollmentRequest.</div>"
+  ];
+  fhir:EnrollmentRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://happyvalley.com/enrollmentrequest" ];
+     fhir:Identifier.value [ fhir:value "EN22345" ]
+  ];
+  fhir:EnrollmentRequest.status [ fhir:value "active"];
+  fhir:EnrollmentRequest.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:EnrollmentRequest.organizationReference [
+     fhir:link <http://hl7.org/fhir/Organization/1>;
+     fhir:Reference.reference [ fhir:value "Organization/1" ]
+  ];
+  fhir:EnrollmentRequest.subjectReference [
+     fhir:link <http://hl7.org/fhir/Patient/1>;
+     fhir:Reference.reference [ fhir:value "Patient/1" ]
+  ];
+  fhir:EnrollmentRequest.coverage [
+     fhir:link <http://hl7.org/fhir/Coverage/9876B1>;
+     fhir:Reference.reference [ fhir:value "Coverage/9876B1" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/1> a fhir:Organization .
+
+<http://hl7.org/fhir/Patient/1> a fhir:Patient .
+
+<http://hl7.org/fhir/Coverage/9876B1> a fhir:Coverage .
+
+# -------------------------------------------------------------------------------------
+

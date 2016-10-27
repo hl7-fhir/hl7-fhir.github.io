@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "StructureMap-transform"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/StructureMap-transform"];
+  fhir:OperationDefinition.name [ fhir:value "Model Instance Transformation"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation.   If the operation is not called at the instance level, one of the in parameters identifier, context or valueset must be provided.  An expanded value set will be returned, or an OperationOutcome with an error message."];
+  fhir:OperationDefinition.code [ fhir:value "transform"];
+  fhir:OperationDefinition.resource [
+     fhir:value "StructureMap";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "true"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "source" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A logical value set resource uri" ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "content" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The logical content to transform" ];
+     fhir:OperationDefinition.type [ fhir:value "Resource" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The result of the transform" ];
+     fhir:OperationDefinition.type [ fhir:value "Resource" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

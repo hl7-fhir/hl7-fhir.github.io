@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+  <id value="med0308"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0308</p><p><b>contained</b>: </p><p><b>code</b>: Percocet tablet <span>(Details : {http://hl7.org/fhir/sid/ndc code &#39;16590-619-30&#39; = &#39;16590-619-30&#39;, given as &#39;Percocet tablet&#39;})</span></p><p><b>isBrand</b>: true</p><p><b>manufacturer</b>: id: org1; name: Stat Rx USA LLC</p><blockquote><p><b>product</b></p><p><b>form</b>: Tablet dose form (qualifier value) <span>(Details : {SNOMED CT code &#39;385055001&#39; = &#39;Tablet dose form (qualifier value)&#39;, given as &#39;Tablet dose form (qualifier value)&#39;})</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: Oxycodone HCl <span>(Details : {RxNorm code &#39;82063&#39; = &#39;82063&#39;, given as &#39;Oxycodone HCl&#39;})</span></p><p><b>amount</b>: 5 mg<span> (Details: UCUM code mg = &#39;mg&#39;)</span>/1 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = &#39;TAB&#39;)</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: Acetaminophen <span>(Details : {RxNorm code &#39;161&#39; = &#39;161&#39;, given as &#39;Acetaminophen&#39;})</span></p><p><b>amount</b>: 325 mg<span> (Details: UCUM code mg = &#39;mg&#39;)</span>/1 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = &#39;TAB&#39;)</span></p></blockquote><h3>Batches</h3><table><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>658484</td><td>Jul 31, 2020</td></tr></table></blockquote><blockquote><p><b>package</b></p><p><b>container</b>: Bottle - unit of product usage (qualifier value) <span>(Details : {SNOMED CT code &#39;419672006&#39; = &#39;Bottle - unit of product usage (qualifier value)&#39;, given as &#39;Bottle - unit of product usage (qualifier value)&#39;})</span></p><h3>Contents</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Acetaminophen 325mg/Oxycodone Hydrochloride 5mg Oral Tablet <span>(Details : {RxNorm code &#39;1049221&#39; = &#39;1049221&#39;, given as &#39;Acetaminophen 325mg/Oxycodone Hydrochloride 5mg Oral Tablet&#39;})</span></td><td>100 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = &#39;TAB&#39;)</span></td></tr></table></blockquote></div></text><contained>
+    <Organization>
+      <id value="org1"/>
+      <name value="Stat Rx USA LLC"/>
+    </Organization>
+  </contained>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/ndc"/>
+      <code value="16590-619-30"/>
+      <display value="Percocet tablet"/>
+    </coding>
+  </code>
+  <isBrand value="true"/>
+  <manufacturer>
+    <reference value="#org1"/>
+  </manufacturer>
+  <product>
+    <form>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="385055001"/>
+        <display value="Tablet dose form (qualifier value)"/>
+      </coding>
+    </form>
+    <ingredient>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+          <code value="82063"/>
+          <display value="Oxycodone HCl"/>
+        </coding>
+      </itemCodeableConcept>
+      <amount>
+        <numerator>
+          <value value="5"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"/>
+          <code value="TAB"/>
+        </denominator>
+      </amount>
+    </ingredient>
+    <ingredient>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+          <code value="161"/>
+          <display value="Acetaminophen"/>
+        </coding>
+      </itemCodeableConcept>
+      <amount>
+        <numerator>
+          <value value="325"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"/>
+          <code value="TAB"/>
+        </denominator>
+      </amount>
+    </ingredient>
+    <batch>
+      <lotNumber value="658484"/>
+      <expirationDate value="2020-07-31"/>
+    </batch>
+  </product>
+  <package>
+    <container>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="419672006"/>
+        <display value="Bottle - unit of product usage (qualifier value)"/>
+      </coding>
+    </container>
+    <content>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+          <code value="1049221"/>
+          <display value="Acetaminophen 325mg/Oxycodone Hydrochloride 5mg Oral Tablet"/>
+        </coding>
+      </itemCodeableConcept>
+      <amount>
+        <value value="100"/>
+        <system value="http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+      </amount>
+    </content>
+  </package>
+</Medication>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="meddisp0329"/>
+    <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0329</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0319; </p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0329</a></p><p><b>type</b>: partial Fill <span>(Details : {http://hl7.org/fhir/v3/ActPharmacySupplyType code &#39;PF&#39; = &#39;PF&#39;, given as &#39;partial Fill&#39;})</span></p><p><b>quantity</b>: 30 gm<span> (Details: UCUM code gm = &#39;gm&#39;)</span></p><p><b>daysSupply</b>: 10 Day<span> (Details: UCUM code d = &#39;d&#39;)</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>whenHandedOver</b>: Jan 15, 2015 4:20:00 PM</p><p><b>dosageInstruction</b>: </p></div></text><contained>
+        <Medication>
+            <id value="med0319"/>
+        <isBrand value="false"/>
+        <product>
+            <form>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="385101003"/>
+                    <display value="Ointment"/>
+                </coding>
+                <text value="Ointment"/>
+            </form>
+            <ingredient>
+                <itemCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="387253001"/>
+                        <display value="Salicyclic Acid (substance)"/>
+                    </coding>
+                </itemCodeableConcept>
+                <amount>
+                    <numerator>
+                        <value value="5"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                </amount>
+            </ingredient>
+            <ingredient>
+                <itemCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="396458002"/>
+                        <display value="Hydrocortisone (substance)"/>
+                    </coding>
+                </itemCodeableConcept>
+                <amount>
+                    <numerator>
+                        <value value="1"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                </amount>
+            </ingredient>
+            <ingredient>
+                <itemCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="126066007"/>
+                        <display value="White Petrolatum (substance)"/>
+                    </coding>
+                </itemCodeableConcept>
+                <amount>
+                    <numerator>
+                        <value value="94"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                </amount>
+            </ingredient>
+        </product>
+        </Medication>
+    </contained>
+    <status value="completed"/>
+    <medicationReference>
+        <reference value="#med0319"/>
+    </medicationReference>
+    <patient>
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>
+    </patient>
+    <dispenser>
+        <reference value="Practitioner/f006"/>
+        <display value="Rob van den Berk"/>
+    </dispenser>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/medrx0329"/>
+    </authorizingPrescription>
+    <type>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/ActPharmacySupplyType"/>
+            <code value="PF"/>
+            <display value="partial Fill"/>
+        </coding>
+    </type>
+    <quantity>
+        <value value="30"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="gm"/>
+    </quantity>
+    <daysSupply>
+        <value value="10"/>
+        <unit value="Day"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+    </daysSupply>
+    <whenPrepared value="2015-01-15T10:20:00Z"/>
+    <whenHandedOver value="2015-01-15T16:20:00Z"/>   
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="Apply twice daily to affected area on left arm"/>
+        <additionalInstructions>
+            <text value="Apply sparingly"/>
+        </additionalInstructions>
+        <timing>
+            <repeat>
+                <frequency value="2"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <siteCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="72098002"/>
+                <display value="Entire left upper arm (body structure)"/>
+            </coding>
+        </siteCodeableConcept>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="359540000"/>
+                <display value="Topical (qualifier value)"/>
+            </coding>
+        </route>
+        <doseQuantity>
+            <value value="1"/>
+            <unit value="ea"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="ea"/>
+        </doseQuantity>
+    </dosageInstruction>
+</MedicationDispense>

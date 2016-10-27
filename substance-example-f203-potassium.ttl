@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Substance/f203> a fhir:Substance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f203"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>identifier</b>: 1234</p><p><b>category</b>: Chemical <span>(Details : {http://hl7.org.fhir/substance-category code 'chemical' = 'chemical', given as 'Chemical'})</span></p><p><b>code</b>: Potassium <span>(Details : {SNOMED CT code '88480006' = 'Potassium (substance)', given as 'Potassium'})</span></p></div>"
+  ];
+  fhir:Substance.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://acme.org/identifiers/substances" ];
+     fhir:Identifier.value [ fhir:value "1234" ]
+  ];
+  fhir:Substance.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org.fhir/substance-category" ];
+       fhir:Coding.code [ fhir:value "chemical" ];
+       fhir:Coding.display [ fhir:value "Chemical" ]
+     ]
+  ];
+  fhir:Substance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:88480006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "88480006" ];
+       fhir:Coding.display [ fhir:value "Potassium" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

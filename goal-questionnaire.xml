@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Questionnaire xmlns="http://hl7.org/fhir">
+  <id value="qs1"/>
+  <contained>
+    <ValueSet>
+      <id value="vs2"/>
+      <name value="Type options for Goal.subject"/>
+      <status value="active"/>
+      <description value="Type options for Goal.subject"/>
+      <expansion>
+        <identifier value="urn:uuid:4ccd9dbf-a5d1-4c4b-8b3e-892450981ee9"/>
+        <timestamp value="2016-10-27T16:27:20+00:00"/>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Patient"/>
+          <display value="Patient"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Group"/>
+          <display value="Group"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Organization"/>
+          <display value="Organization"/>
+        </contains>
+      </expansion>
+    </ValueSet>
+  </contained>
+  <contained>
+    <ValueSet>
+      <id value="vs3"/>
+      <name value="Type options for Goal.start[x]"/>
+      <status value="active"/>
+      <description value="Type options for Goal.start[x]"/>
+      <expansion>
+        <identifier value="urn:uuid:61d1e773-fabf-4799-a2de-ab4cea464b2f"/>
+        <timestamp value="2016-10-27T16:27:20+00:00"/>
+        <contains>
+          <system value="http://hl7.org/fhir/data-types"/>
+          <code value="date"/>
+          <display value="date"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/data-types"/>
+          <code value="CodeableConcept"/>
+          <display value="CodeableConcept"/>
+        </contains>
+      </expansion>
+    </ValueSet>
+  </contained>
+  <contained>
+    <ValueSet>
+      <id value="vs4"/>
+      <name value="Type options for Goal.target[x]"/>
+      <status value="active"/>
+      <description value="Type options for Goal.target[x]"/>
+      <expansion>
+        <identifier value="urn:uuid:07b49451-512b-43fb-9af9-1b7eec5556c8"/>
+        <timestamp value="2016-10-27T16:27:20+00:00"/>
+        <contains>
+          <system value="http://hl7.org/fhir/data-types"/>
+          <code value="date"/>
+          <display value="date"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/data-types"/>
+          <code value="Duration"/>
+          <display value="Duration"/>
+        </contains>
+      </expansion>
+    </ValueSet>
+  </contained>
+  <contained>
+    <ValueSet>
+      <id value="vs5"/>
+      <name value="Type options for Goal.expressedBy"/>
+      <status value="active"/>
+      <description value="Type options for Goal.expressedBy"/>
+      <expansion>
+        <identifier value="urn:uuid:cb7b59d9-b7d6-4a80-9b2e-4d3197470237"/>
+        <timestamp value="2016-10-27T16:27:20+00:00"/>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Patient"/>
+          <display value="Patient"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Practitioner"/>
+          <display value="Practitioner"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="RelatedPerson"/>
+          <display value="RelatedPerson"/>
+        </contains>
+      </expansion>
+    </ValueSet>
+  </contained>
+  <contained>
+    <ValueSet>
+      <id value="vs6"/>
+      <name value="Type options for Goal.addresses"/>
+      <status value="active"/>
+      <description value="Type options for Goal.addresses"/>
+      <expansion>
+        <identifier value="urn:uuid:35216635-5c21-4ac6-abba-23d7f58d7c72"/>
+        <timestamp value="2016-10-27T16:27:20+00:00"/>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Condition"/>
+          <display value="Condition"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Observation"/>
+          <display value="Observation"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="MedicationStatement"/>
+          <display value="MedicationStatement"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="NutritionRequest"/>
+          <display value="NutritionRequest"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="ProcedureRequest"/>
+          <display value="ProcedureRequest"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="RiskAssessment"/>
+          <display value="RiskAssessment"/>
+        </contains>
+      </expansion>
+    </ValueSet>
+  </contained>
+  <contained>
+    <ValueSet>
+      <id value="vs7"/>
+      <name value="Type options for Goal.outcome.result[x]"/>
+      <status value="active"/>
+      <description value="Type options for Goal.outcome.result[x]"/>
+      <expansion>
+        <identifier value="urn:uuid:57aa40dd-bcd6-4d70-88bb-4de6c31a5041"/>
+        <timestamp value="2016-10-27T16:27:20+00:00"/>
+        <contains>
+          <system value="http://hl7.org/fhir/data-types"/>
+          <code value="CodeableConcept"/>
+          <display value="CodeableConcept"/>
+        </contains>
+        <contains>
+          <system value="http://hl7.org/fhir/resource-types"/>
+          <code value="Observation"/>
+          <display value="Observation"/>
+        </contains>
+      </expansion>
+    </ValueSet>
+  </contained>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+  </identifier>
+  <status value="draft"/>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <publisher value="Health Level Seven International (Patient Care)"/>
+  <item>
+    <linkId value="Goal"/>
+    <text value="Describes the intended objective(s) for a patient, group or organization"/>
+    <type value="group"/>
+    <required value="false"/>
+    <repeats value="true"/>
+    <item>
+      <text value="Goal can be achieving a particular change or merely maintaining a current state or even slowing a decline."/>
+      <type value="display"/>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="flyover"/>
+            <display value="Fly-over"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <text value="Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc."/>
+      <type value="display"/>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="string"/>
+      </extension>
+      <linkId value="Goal.id"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.id.value"/>
+        <text value="Logical id of this artifact"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <linkId value="Goal.meta"/>
+      <text value="Metadata about the resource"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+        <type value="display"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="uri"/>
+      </extension>
+      <linkId value="Goal.implicitRules"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.implicitRules.value"/>
+        <text value="A set of rules under which this content was created"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="code"/>
+      </extension>
+      <linkId value="Goal.language"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.language.value"/>
+        <text value="language"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <linkId value="Goal.text"/>
+      <text value="Text summary of the resource, for human interpretation"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded in formation is added later."/>
+        <type value="display"/>
+      </item>
+    </item>
+    <item>
+      <linkId value="Goal.contained"/>
+      <text value="Contained, inline Resources"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+        <type value="display"/>
+      </item>
+    </item>
+    <item>
+      <linkId value="Goal.extension"/>
+      <text value="Additional Content defined by implementations"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+        <type value="display"/>
+      </item>
+    </item>
+    <item>
+      <linkId value="Goal.modifierExtension"/>
+      <text value="Extensions that cannot be ignored"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+        <type value="display"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="Identifier"/>
+      </extension>
+      <linkId value="Goal.identifier"/>
+      <text value="External Ids for this goal"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.identifier.label"/>
+        <text value="label:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+      <item>
+        <linkId value="Goal.identifier.system"/>
+        <text value="system:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+      <item>
+        <linkId value="Goal.identifier.value"/>
+        <text value="value:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="code"/>
+      </extension>
+      <linkId value="Goal.status"/>
+      <type value="group"/>
+      <required value="true"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Indicates whether the goal has been reached and is still considered relevant."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.status.value"/>
+        <text value="status"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="CodeableConcept"/>
+      </extension>
+      <linkId value="Goal.category"/>
+      <text value="E.g. Treatment, dietary, behavioral, etc."/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Indicates a category the goal falls within."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.category.coding"/>
+        <text value="code:"/>
+        <type value="open-choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+      <item>
+        <linkId value="Goal.category.text"/>
+        <text value="text:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="CodeableConcept"/>
+      </extension>
+      <linkId value="Goal.priority"/>
+      <text value="high | medium |low"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Identifies the mutually agreed level of importance associated with reaching/sustaining the goal. Extensions are available to track priorities as established by each participant (i.e. Priority from the patient&#39;s perspective, different practitioners&#39; perspectives, family member&#39;s perspectives)The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a &quot;low value=important&quot;."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.priority.coding"/>
+        <text value="code:"/>
+        <type value="open-choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+      <item>
+        <linkId value="Goal.priority.text"/>
+        <text value="text:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="CodeableConcept"/>
+      </extension>
+      <linkId value="Goal.description"/>
+      <text value="Code or text describing goal"/>
+      <type value="group"/>
+      <required value="true"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Code and/or human-readable description of a specific desired objective of care. If no code is available, use CodeableConcept.text."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.description.coding"/>
+        <text value="code:"/>
+        <type value="open-choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+      <item>
+        <linkId value="Goal.description.text"/>
+        <text value="text:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <linkId value="Goal.subject"/>
+      <text value="Who this goal is intended for"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Identifies the patient, group or organization for whom the goal is being established."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.subject._type"/>
+        <text value="type"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <options>
+          <reference value="#vs2"/>
+        </options>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.subject._Patient"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Patient"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.subject._Patient.value"/>
+            <text value="Patient"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.subject._Group"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Group"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.subject._Group.value"/>
+            <text value="Group"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.subject._Organization"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Organization"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.subject._Organization.value"/>
+            <text value="Organization"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <linkId value="Goal.start[x]"/>
+      <text value="When goal pursuit begins"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="The date or event after which the goal should begin being pursued."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.start[x]._type"/>
+        <text value="type"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <options>
+          <reference value="#vs3"/>
+        </options>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="datetime"/>
+          </extension>
+          <linkId value="Goal.start[x]._date"/>
+          <type value="group"/>
+          <item>
+            <linkId value="Goal.start[x]._date.value"/>
+            <text value="date"/>
+            <type value="dateTime"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="CodeableConcept"/>
+          </extension>
+          <linkId value="Goal.start[x]._CodeableConcept"/>
+          <text value="CodeableConcept"/>
+          <type value="group"/>
+          <item>
+            <linkId value="Goal.start[x]._CodeableConcept.coding"/>
+            <text value="code:"/>
+            <type value="open-choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+          <item>
+            <linkId value="Goal.start[x]._CodeableConcept.text"/>
+            <text value="text:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <linkId value="Goal.target[x]"/>
+      <text value="Reach goal on or before"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Indicates either the date or the duration after start by which the goal should be met."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.target[x]._type"/>
+        <text value="type"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <options>
+          <reference value="#vs4"/>
+        </options>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="datetime"/>
+          </extension>
+          <linkId value="Goal.target[x]._date"/>
+          <type value="group"/>
+          <item>
+            <linkId value="Goal.target[x]._date.value"/>
+            <text value="date"/>
+            <type value="dateTime"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Quantity"/>
+          </extension>
+          <linkId value="Goal.target[x]._Duration"/>
+          <text value="Duration"/>
+          <type value="group"/>
+          <item>
+            <linkId value="Goal.target[x]._Duration.comparator"/>
+            <text value="comp:"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+          <item>
+            <linkId value="Goal.target[x]._Duration.value"/>
+            <text value="value:"/>
+            <type value="decimal"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+          <item>
+            <linkId value="Goal.target[x]._Duration.units"/>
+            <text value="units:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+          <item>
+            <linkId value="Goal.target[x]._Duration.code"/>
+            <text value="coded units:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+          <item>
+            <linkId value="Goal.target[x]._Duration.system"/>
+            <text value="units system:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="datetime"/>
+      </extension>
+      <linkId value="Goal.statusDate"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Identifies when the current status.  I.e. When initially created, when achieved, when cancelled, etc. To see the date for past statuses, query history."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.statusDate.value"/>
+        <text value="When goal status took effect"/>
+        <type value="dateTime"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="CodeableConcept"/>
+      </extension>
+      <linkId value="Goal.statusReason"/>
+      <text value="Reason for current status"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Captures the reason for the current status. This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.statusReason.coding"/>
+        <text value="code:"/>
+        <type value="open-choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+      <item>
+        <linkId value="Goal.statusReason.text"/>
+        <text value="text:"/>
+        <type value="string"/>
+        <required value="false"/>
+        <repeats value="false"/>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+        <valueInteger value="1"/>
+      </extension>
+      <linkId value="Goal.expressedBy"/>
+      <text value="Who&#39;s responsible for creating Goal?"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Indicates whose goal this is - patient goal, practitioner goal, etc. This is the individual reponsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.)."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.expressedBy._type"/>
+        <text value="type"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <options>
+          <reference value="#vs5"/>
+        </options>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.expressedBy._Patient"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Patient"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.expressedBy._Patient.value"/>
+            <text value="Patient"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.expressedBy._Practitioner"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Practitioner"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.expressedBy._Practitioner.value"/>
+            <text value="Practitioner"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.expressedBy._RelatedPerson"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="RelatedPerson"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.expressedBy._RelatedPerson.value"/>
+            <text value="RelatedPerson"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item>
+      <linkId value="Goal.addresses"/>
+      <text value="Issues addressed by this goal"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="The identified conditions and other health record elements that are intended to be addressed by the goal."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <linkId value="Goal.addresses._type"/>
+        <text value="type"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <options>
+          <reference value="#vs6"/>
+        </options>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.addresses._Condition"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Condition"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.addresses._Condition.value"/>
+            <text value="Condition"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.addresses._Observation"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="Observation"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.addresses._Observation.value"/>
+            <text value="Observation"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.addresses._MedicationStatement"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="MedicationStatement"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.addresses._MedicationStatement.value"/>
+            <text value="MedicationStatement"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.addresses._NutritionRequest"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="NutritionRequest"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.addresses._NutritionRequest.value"/>
+            <text value="NutritionRequest"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.addresses._ProcedureRequest"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="ProcedureRequest"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.addresses._ProcedureRequest.value"/>
+            <text value="ProcedureRequest"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+            <valueString value="Reference"/>
+          </extension>
+          <linkId value="Goal.addresses._RiskAssessment"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+              <valueCode value="RiskAssessment"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+              <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+            </extension>
+            <linkId value="Goal.addresses._RiskAssessment.value"/>
+            <text value="RiskAssessment"/>
+            <type value="reference"/>
+            <required value="false"/>
+            <repeats value="false"/>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+        <valueString value="Annotation"/>
+      </extension>
+      <linkId value="Goal.note"/>
+      <text value="Comments about the goal"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Any comments related to the goal. May be used for progress notes, concerns or other related information that doesn&#39;t actually describe the goal itself."/>
+        <type value="display"/>
+      </item>
+    </item>
+    <item>
+      <linkId value="Goal.outcome"/>
+      <text value="What result was achieved regarding the goal?"/>
+      <type value="group"/>
+      <required value="false"/>
+      <repeats value="true"/>
+      <item>
+        <text value="Note that this should not duplicate the goal status."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="flyover"/>
+              <display value="Fly-over"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <text value="Identifies the change (or lack of change) at the point where the goal was deemed to be cancelled or achieved."/>
+        <type value="display"/>
+      </item>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+          <valueInteger value="1"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+          <valueString value="string"/>
+        </extension>
+        <linkId value="Goal.outcome.id"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                <code value="flyover"/>
+                <display value="Fly-over"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <text value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+          <type value="display"/>
+        </item>
+        <item>
+          <linkId value="Goal.outcome.id.value"/>
+          <text value="xml:id (or equivalent in JSON)"/>
+          <type value="string"/>
+          <required value="false"/>
+          <repeats value="false"/>
+        </item>
+      </item>
+      <item>
+        <linkId value="Goal.outcome.extension"/>
+        <text value="Additional Content defined by implementations"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                <code value="flyover"/>
+                <display value="Fly-over"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <text value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+          <type value="display"/>
+        </item>
+      </item>
+      <item>
+        <linkId value="Goal.outcome.modifierExtension"/>
+        <text value="Extensions that cannot be ignored"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                <code value="flyover"/>
+                <display value="Fly-over"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <text value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+          <type value="display"/>
+        </item>
+      </item>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs">
+          <valueInteger value="1"/>
+        </extension>
+        <linkId value="Goal.outcome.result[x]"/>
+        <text value="Code or observation that resulted from goal"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+          <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                <code value="flyover"/>
+                <display value="Fly-over"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <text value="Details of what&#39;s changed (or not changed)."/>
+          <type value="display"/>
+        </item>
+        <item>
+          <linkId value="Goal.outcome.result[x]._type"/>
+          <text value="type"/>
+          <type value="choice"/>
+          <required value="false"/>
+          <repeats value="false"/>
+          <options>
+            <reference value="#vs7"/>
+          </options>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+              <valueString value="CodeableConcept"/>
+            </extension>
+            <linkId value="Goal.outcome.result[x]._CodeableConcept"/>
+            <text value="CodeableConcept"/>
+            <type value="group"/>
+            <item>
+              <linkId value="Goal.outcome.result[x]._CodeableConcept.coding"/>
+              <text value="code:"/>
+              <type value="open-choice"/>
+              <required value="false"/>
+              <repeats value="false"/>
+            </item>
+            <item>
+              <linkId value="Goal.outcome.result[x]._CodeableConcept.text"/>
+              <text value="text:"/>
+              <type value="string"/>
+              <required value="false"/>
+              <repeats value="false"/>
+            </item>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType">
+              <valueString value="Reference"/>
+            </extension>
+            <linkId value="Goal.outcome.result[x]._Observation"/>
+            <type value="group"/>
+            <item>
+              <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource">
+                <valueCode value="Observation"/>
+              </extension>
+              <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter">
+                <valueString value="subject=$subj&amp;patient=$subj&amp;encounter=$encounter"/>
+              </extension>
+              <linkId value="Goal.outcome.result[x]._Observation.value"/>
+              <text value="Observation"/>
+              <type value="reference"/>
+              <required value="false"/>
+              <repeats value="false"/>
+            </item>
+          </item>
+        </item>
+      </item>
+    </item>
+  </item>
+</Questionnaire>

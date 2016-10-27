@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticReport/f201> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f201"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>status</b>: final</p><p><b>category</b>: Radiology <span>(Details : {SNOMED CT code '394914008' = 'Radiology - specialty (qualifier value)', given as 'Radiology'}; {http://hl7.org/fhir/v2/0074 code 'RAD' = 'Radiology)</span></p><p><b>code</b>: CT of head-neck <span>(Details : {SNOMED CT code '429858000' = 'Computed tomography of head and neck (procedure)', given as 'Computed tomography (CT) of head and neck'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>effective</b>: Dec 1, 2012 12:00:00 PM</p><p><b>issued</b>: Dec 1, 2012 12:00:00 PM</p><p><b>performer</b>: <a>Blijdorp MC</a></p><p><b>imagingStudy</b>: HEAD and NECK CT DICOM imaging study</p><p><b>conclusion</b>: CT brains: large tumor sphenoid/clivus.</p><p><b>codedDiagnosis</b>: Malignant tumor of craniopharyngeal duct <span>(Details : {SNOMED CT code '188340000' = 'Malignant tumor of craniopharyngeal duct (disorder)', given as 'Malignant tumor of craniopharyngeal duct'})</span></p></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:394914008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394914008" ];
+       fhir:Coding.display [ fhir:value "Radiology" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0074" ];
+       fhir:Coding.code [ fhir:value "RAD" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:429858000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "429858000" ];
+       fhir:Coding.display [ fhir:value "Computed tomography (CT) of head and neck" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "CT of head-neck" ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2012-12-01T12:00:00+01:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.issued [ fhir:value "2012-12-01T12:00:00+01:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Organization/f203>;
+     fhir:Reference.reference [ fhir:value "Organization/f203" ];
+     fhir:Reference.display [ fhir:value "Blijdorp MC" ]
+  ];
+  fhir:DiagnosticReport.imagingStudy [
+     fhir:index 0;
+     fhir:Reference.display [ fhir:value "HEAD and NECK CT DICOM imaging study" ]
+  ];
+  fhir:DiagnosticReport.conclusion [ fhir:value "CT brains: large tumor sphenoid/clivus."];
+  fhir:DiagnosticReport.codedDiagnosis [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:188340000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "188340000" ];
+       fhir:Coding.display [ fhir:value "Malignant tumor of craniopharyngeal duct" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/f203> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

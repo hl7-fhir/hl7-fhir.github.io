@@ -1,0 +1,31 @@
+{
+  "@context": "http://build.fhir.org/Parameters.jsonld",
+  "@context": "http://hl7.org/fhir/Parameters/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "Parameters.parameter": [
+    {
+      "Parameters.parameter.name": {
+        "string.value": "start"
+      },
+      "Parameters.parameter.valueDate": {
+        "date.value": "2010-01-01"
+      }
+    },
+    {
+      "Parameters.parameter.name": {
+        "string.value": "end"
+      },
+      "Parameters.parameter.resource": {
+        "@context": "http://build.fhir.org/Binary.jsonld",
+        "Binary.contentType": {
+          "code.value": "text/plain"
+        },
+        "Binary.content": {
+          "base64Binary.value": "VGhpcyBpcyBhIHRlc3QgZXhhbXBsZQ=="
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "@context": "http://build.fhir.org/OperationOutcome.jsonld",
+  "@context": "http://hl7.org/fhir/OperationOutcome/break-the-glass",
+  "Resource.id": {
+    "id.value": "break-the-glass"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Additional information may be available using the Break-The-Glass Protocol</p>\n    </div>"
+    }
+  },
+  "OperationOutcome.issue": [
+    {
+      "OperationOutcome.issue.severity": {
+        "code.value": "information"
+      },
+      "OperationOutcome.issue.code": {
+        "code.value": "suppressed"
+      },
+      "OperationOutcome.issue.details": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3-ActReason"
+            },
+            "Coding.code": {
+              "code.value": "ETREAT"
+            },
+            "Coding.display": {
+              "string.value": "Emergency Treatment"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Additional information may be available using the Break-The-Glass Protocol"
+        }
+      }
+    }
+  ]
+}

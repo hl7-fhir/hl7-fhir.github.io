@@ -1,0 +1,1051 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Extensibility - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/extensibility.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><b>Extensibility</b></li>          <!-- extensibility.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Extensiblity</a></li><li><a href="defining-extensions.html">Defining Extensions</a></li><li><a href="extensibility-examples.html">Examples</a></li><li><a href="extensibility-definitions.html">Detailed Descriptions</a></li><li><a href="extensibility-registry.html">Registry</a></li></ul>
+
+
+<a name="root"> </a>
+<h1 class="self-link-parent"><span class="sectioncount">2.20.0<a name="2.20.0"> </a></span> Extensibility <a href="extensibility.html#2.20.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: 3</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+This exchange specification is based on generally agreed common
+requirements across healthcare - covering many jurisdictions, domains, and
+different functional approaches. It is common for
+specific implementations to have valid requirements that are not
+part of these agreed common requirements. Incorporating all of these requirements
+would make this specification very cumbersome and difficult to
+implement. Instead, this specification expects that these additional
+distinct requirements will be implemented as extensions.
+</p>
+<p>
+As such, extensibility is a fundamental part of the design of this
+specification. Every element in a resource may have extension child elements 
+to represent additional information that is not part of the basic definition 
+of the resource. Applications should not reject resources merely because
+they contain extensions, though they may need to reject resources 
+because of the specific contents of the extensions.
+</p>
+<p>
+Note that, unlike in many other specifications, there can be no stigma
+associated with the use of extensions by any application, project, or
+standard - regardless of the institution or jurisdiction that uses or defines the
+extensions.  The use of extensions is what allows the FHIR specification to retain a core
+simplicity for everyone.
+</p>
+<p>
+In order to make the use of extensions safe and manageable, there is a
+strict governance applied to the definition and use of extensions. Though
+any implementer is allowed to define and use extensions, there is a set of requirements
+that must be met as part of their use and definition.
+</p>
+<a name="Extension"/>
+<a name="extension"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.20.0.1</span> Extension Element <a href="extensibility.html#extension" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Every element in a resource or data type includes an optional &quot;extension&quot; child element that may 
+be present any number of times. This is the content model of the extension as it appears in each resource:
+</p>
+<div id="tabs-Extension">
+ <ul>
+  <li><a href="#tabs-Extension-struc">Structure</a></li>
+  <li><a href="#tabs-Extension-uml">UML</a></li>
+  <li><a href="#tabs-Extension-xml">XML</a></li>
+  <li><a href="#tabs-Extension-json">JSON</a></li>
+  <li><a href="#tabs-Extension-ttl">Turtle</a></li>
+  <li><a href="#tabs-Extension-diff">R2 Diff</a></li>
+  <li><a href="#tabs-Extension-all">All</a></li>
+ </ul>
+ <div id="tabs-Extension-struc">
+  <div id="tbl">
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="extensibility-definitions.html#Extension" title="Extension : Optional Extensions Element - found in all resources.">Extension</a><a name="Extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Optional Extensions Element<br/><span style="font-style: italic" title="ext-1">Must have either extensions or value[x], not both</span></td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="extensibility-definitions.html#Extension.url" title="Extension.url : Source of the definition for the extension code - a logical name or a URL.">url</a><a name="Extension.url"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">identifies the meaning of the extension</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="extensibility-definitions.html#Extension.value_x_" title="Extension.value[x] : Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).">value[x]</a><a name="Extension.value_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#open">*</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Value of extension</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Extension-uml">
+  <div id="uml">
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443.6" version="1.1" height="84.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1)" rx="4" ry="4" x="160.0" width="83.60000000000001" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="243.60000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="201.8" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="extensibility.html#extension">Extension</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility-definitions.html#Extension.url"><title>Source of the definition for the extension code - a logical name or a URL</title>url</a> : <a xlink:href="datatypes.html#uri">uri</a> [1..1]</text><text x="166.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility-definitions.html#Extension.value_x_"><title>Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)</title>value[x]</a> : <a xlink:href="datatypes.html#open">*</a> [0..1]</text></g></g><line y1="26.560165975103732" x1="114.4" y2="29.398340248962654" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(3.5615330889631136 114.4 26.560165975103732)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,26.560165975103732 122.4,32.56016597510373 122.4,20.560165975103732 114.4,26.560165975103732"/></svg>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Extension-xml">
+  <div id="xml">
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+    <pre class="spec">
+&lt;<a href="extensibility-definitions.html#Extension" title="Optional Extensions Element - found in all resources." class="dict"><b>extension|modifierExtension</b></a> xmlns=&quot;http://hl7.org/fhir&quot; url=&quot;<span style="color: navy">identifies the meaning of the extension</span> (<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>)&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="extensibility-definitions.html#Extension.value[x]" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict"><b>value[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#open">*</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Value of extension</a></span><span style="color: Gray"> --&gt;</span>&lt;/value[x]&gt;
+&lt;/extension|modifierExtension&gt;
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Extension-json">
+  <div id="json">
+   <p><b>JSON Template</b></p>   <div id="json-inner">
+    <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  // from Element: <a href="extensibility.html">extension</a>
+  &quot;<a href="extensibility-definitions.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL." class="dict">url</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">identifies the meaning of the extension</a></span>
+  <span style="color: Gray">// value[x]: <span style="color: navy; opacity: 0.8">Value of extension</span>. One of these 23:</span>
+  &quot;<a href="extensibility-definitions.html#Extension.valueInteger" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueInteger</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#integer">integer</a></span>&gt;
+  &quot;<a href="extensibility-definitions.html#Extension.valueDecimal" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueDecimal</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt;
+  &quot;<a href="extensibility-definitions.html#Extension.valueDateTime" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueDateTime</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueDate" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueDate</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueInstant" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueInstant</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueString" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueString</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueUri" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueUri</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueBoolean" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueBoolean</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>&gt;
+  &quot;<a href="extensibility-definitions.html#Extension.valueCode" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueCode</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueBase64Binary" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueBase64Binary</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#base64Binary">base64Binary</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueCoding" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueCoding</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueCodeableConcept" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueCodeableConcept</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueAttachment" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueAttachment</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueIdentifier" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueIdentifier</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueQuantity" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueQuantity</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Quantity">Quantity</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueRange" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueRange</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Range">Range</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valuePeriod" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valuePeriod</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueRatio" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueRatio</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Ratio">Ratio</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueHumanName" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueHumanName</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#HumanName">HumanName</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueAddress" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueAddress</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueContactPoint" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueContactPoint</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueSchedule" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueSchedule</a>&quot; : { <span style="color: darkgreen"><a href="schedule.html#Schedule">Schedule</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueReference" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueReference</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a></span> }
+}
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Extension-ttl">
+  <div id="json">
+   <p><b>Turtle Template</b></p>   <div id="ttl-inner">
+    <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="extensibility-definitions.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL." class="dict">Extension.url</a><a name="ttl-url"> </a>[ <a href="datatypes.html#uri">uri</a> ]; # 1..1 <span style="color: navy">identifies the meaning of the extension</span>
+  # <a href="extensibility-definitions.html#Extension.value[x]" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.value[x]</a><a name="ttl-value[x]"> </a>: 0..1 <span style="color: navy">Value of extension</span>. One of these 38
+    fhir:<a href="extensibility-definitions.html#Extension.valueBase64Binary" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueBase64Binary</a><a name="ttl-valueBase64Binary"> </a>[ <a href="datatypes.html#base64Binary">base64Binary</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueBoolean" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueBoolean</a><a name="ttl-valueBoolean"> </a>[ <a href="datatypes.html#boolean">boolean</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCode" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCode</a><a name="ttl-valueCode"> </a>[ <a href="datatypes.html#code">code</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDate" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDate</a><a name="ttl-valueDate"> </a>[ <a href="datatypes.html#date">date</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDateTime" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDateTime</a><a name="ttl-valueDateTime"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDecimal" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDecimal</a><a name="ttl-valueDecimal"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueId" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueId</a><a name="ttl-valueId"> </a>[ <a href="datatypes.html#id">id</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueInstant" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueInstant</a><a name="ttl-valueInstant"> </a>[ <a href="datatypes.html#instant">instant</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueInteger" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueInteger</a><a name="ttl-valueInteger"> </a>[ <a href="datatypes.html#integer">integer</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueMarkdown" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueMarkdown</a><a name="ttl-valueMarkdown"> </a>[ <a href="datatypes.html#markdown">markdown</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueOid" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueOid</a><a name="ttl-valueOid"> </a>[ <a href="datatypes.html#oid">oid</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valuePositiveInt" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valuePositiveInt</a><a name="ttl-valuePositiveInt"> </a>[ <a href="datatypes.html#positiveInt">positiveInt</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueString" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueString</a><a name="ttl-valueString"> </a>[ <a href="datatypes.html#string">string</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueTime" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueTime</a><a name="ttl-valueTime"> </a>[ <a href="datatypes.html#time">time</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueUnsignedInt" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueUnsignedInt</a><a name="ttl-valueUnsignedInt"> </a>[ <a href="datatypes.html#unsignedInt">unsignedInt</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueUri" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueUri</a><a name="ttl-valueUri"> </a>[ <a href="datatypes.html#uri">uri</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAddress" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAddress</a><a name="ttl-valueAddress"> </a>[ <a href="datatypes.html#Address">Address</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAge" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAge</a><a name="ttl-valueAge"> </a>[ <a href="datatypes.html#Age">Age</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAnnotation" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAnnotation</a><a name="ttl-valueAnnotation"> </a>[ <a href="datatypes.html#Annotation">Annotation</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAttachment" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAttachment</a><a name="ttl-valueAttachment"> </a>[ <a href="datatypes.html#Attachment">Attachment</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCodeableConcept" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCodeableConcept</a><a name="ttl-valueCodeableConcept"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCoding" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCoding</a><a name="ttl-valueCoding"> </a>[ <a href="datatypes.html#Coding">Coding</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueContactPoint" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueContactPoint</a><a name="ttl-valueContactPoint"> </a>[ <a href="datatypes.html#ContactPoint">ContactPoint</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCount" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCount</a><a name="ttl-valueCount"> </a>[ <a href="datatypes.html#Count">Count</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDistance" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDistance</a><a name="ttl-valueDistance"> </a>[ <a href="datatypes.html#Distance">Distance</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDuration" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDuration</a><a name="ttl-valueDuration"> </a>[ <a href="datatypes.html#Duration">Duration</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueHumanName" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueHumanName</a><a name="ttl-valueHumanName"> </a>[ <a href="datatypes.html#HumanName">HumanName</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueIdentifier" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueIdentifier</a><a name="ttl-valueIdentifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueMoney" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueMoney</a><a name="ttl-valueMoney"> </a>[ <a href="datatypes.html#Money">Money</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valuePeriod" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valuePeriod</a><a name="ttl-valuePeriod"> </a>[ <a href="datatypes.html#Period">Period</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueQuantity" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueQuantity</a><a name="ttl-valueQuantity"> </a>[ <a href="datatypes.html#Quantity">Quantity</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueRange" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueRange</a><a name="ttl-valueRange"> </a>[ <a href="datatypes.html#Range">Range</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueRatio" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueRatio</a><a name="ttl-valueRatio"> </a>[ <a href="datatypes.html#Ratio">Ratio</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueReference" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueReference</a><a name="ttl-valueReference"> </a>[ <a href="references.html#Reference">Reference</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueSampledData" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueSampledData</a><a name="ttl-valueSampledData"> </a>[ <a href="datatypes.html#SampledData">SampledData</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueSignature" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueSignature</a><a name="ttl-valueSignature"> </a>[ <a href="datatypes.html#Signature">Signature</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueTiming" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueTiming</a><a name="ttl-valueTiming"> </a>[ <a href="datatypes.html#Timing">Timing</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueMeta" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueMeta</a><a name="ttl-valueMeta"> </a>[ <a href="resource.html#Meta">Meta</a> ]
+]
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Extension-diff">
+  <div id="diff">
+   <p><b>Changes since DSTU2</b></p>   <div id="diff-inner">
+    <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Extension</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">Extension.value[x]</td>
+    <td class="diff-right">Add Age, Add Count, Add Distance, Add Duration, Add Money</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Extension-all">
+  <div id="tbla">
+   <a name="tbl-Extension"> </a>
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="extensibility-definitions.html#Extension" title="Extension : Optional Extensions Element - found in all resources.">Extension</a><a name="Extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Optional Extensions Element<br/><span style="font-style: italic" title="ext-1">Must have either extensions or value[x], not both</span></td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="extensibility-definitions.html#Extension.url" title="Extension.url : Source of the definition for the extension code - a logical name or a URL.">url</a><a name="Extension.url"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">identifies the meaning of the extension</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="extensibility-definitions.html#Extension.value_x_" title="Extension.value[x] : Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).">value[x]</a><a name="Extension.value_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#open">*</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Value of extension</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+
+  <div id="umla">
+   <a name="uml-Extension"> </a>
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443.6" version="1.1" height="84.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1b" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="160.0" width="83.60000000000001" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="243.60000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="201.8" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="extensibility.html#extension">Extension</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility-definitions.html#Extension.url"><title>Source of the definition for the extension code - a logical name or a URL</title>url</a> : <a xlink:href="datatypes.html#uri">uri</a> [1..1]</text><text x="166.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility-definitions.html#Extension.value_x_"><title>Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)</title>value[x]</a> : <a xlink:href="datatypes.html#open">*</a> [0..1]</text></g></g><line y1="26.560165975103732" x1="114.4" y2="29.398340248962654" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(3.5615330889631136 114.4 26.560165975103732)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,26.560165975103732 122.4,32.56016597510373 122.4,20.560165975103732 114.4,26.560165975103732"/></svg>
+   </div>
+  </div>
+
+  <div id="xmla">
+   <a name="xml-Extension"> </a>
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+     <pre class="spec">
+&lt;<a href="extensibility-definitions.html#Extension" title="Optional Extensions Element - found in all resources." class="dict"><b>extension|modifierExtension</b></a> xmlns=&quot;http://hl7.org/fhir&quot; url=&quot;<span style="color: navy">identifies the meaning of the extension</span> (<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>)&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="extensibility-definitions.html#Extension.value[x]" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict"><b>value[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#open">*</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Value of extension</a></span><span style="color: Gray"> --&gt;</span>&lt;/value[x]&gt;
+&lt;/extension|modifierExtension&gt;
+</pre>
+
+
+   </div>
+  </div>
+
+  <div id="jsona">
+   <a name="json-Extension"> </a>
+   <p><b>JSON Template</b></p>
+   <div id="json-inner">
+     <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  // from Element: <a href="extensibility.html">extension</a>
+  &quot;<a href="extensibility-definitions.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL." class="dict">url</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">identifies the meaning of the extension</a></span>
+  <span style="color: Gray">// value[x]: <span style="color: navy; opacity: 0.8">Value of extension</span>. One of these 23:</span>
+  &quot;<a href="extensibility-definitions.html#Extension.valueInteger" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueInteger</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#integer">integer</a></span>&gt;
+  &quot;<a href="extensibility-definitions.html#Extension.valueDecimal" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueDecimal</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt;
+  &quot;<a href="extensibility-definitions.html#Extension.valueDateTime" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueDateTime</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueDate" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueDate</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueInstant" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueInstant</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueString" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueString</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueUri" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueUri</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueBoolean" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueBoolean</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>&gt;
+  &quot;<a href="extensibility-definitions.html#Extension.valueCode" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueCode</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueBase64Binary" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueBase64Binary</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#base64Binary">base64Binary</a></span>&gt;&quot;
+  &quot;<a href="extensibility-definitions.html#Extension.valueCoding" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueCoding</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueCodeableConcept" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueCodeableConcept</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueAttachment" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueAttachment</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueIdentifier" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueIdentifier</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueQuantity" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueQuantity</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Quantity">Quantity</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueRange" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueRange</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Range">Range</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valuePeriod" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valuePeriod</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueRatio" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueRatio</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Ratio">Ratio</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueHumanName" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueHumanName</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#HumanName">HumanName</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueAddress" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueAddress</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueContactPoint" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueContactPoint</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueSchedule" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueSchedule</a>&quot; : { <span style="color: darkgreen"><a href="schedule.html#Schedule">Schedule</a></span> }
+  &quot;<a href="extensibility-definitions.html#Extension.valueReference" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">valueReference</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a></span> }
+}
+</pre>
+
+
+   </div>
+  </div>
+  <div id="ttla">
+   <a name="ttl-Extension"> </a>
+   <p><b>Turtle Template</b></p>
+   <div id="ttl-inner">
+     <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="extensibility-definitions.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL." class="dict">Extension.url</a><a name="ttl-url"> </a>[ <a href="datatypes.html#uri">uri</a> ]; # 1..1 <span style="color: navy">identifies the meaning of the extension</span>
+  # <a href="extensibility-definitions.html#Extension.value[x]" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.value[x]</a><a name="ttl-value[x]"> </a>: 0..1 <span style="color: navy">Value of extension</span>. One of these 38
+    fhir:<a href="extensibility-definitions.html#Extension.valueBase64Binary" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueBase64Binary</a><a name="ttl-valueBase64Binary"> </a>[ <a href="datatypes.html#base64Binary">base64Binary</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueBoolean" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueBoolean</a><a name="ttl-valueBoolean"> </a>[ <a href="datatypes.html#boolean">boolean</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCode" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCode</a><a name="ttl-valueCode"> </a>[ <a href="datatypes.html#code">code</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDate" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDate</a><a name="ttl-valueDate"> </a>[ <a href="datatypes.html#date">date</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDateTime" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDateTime</a><a name="ttl-valueDateTime"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDecimal" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDecimal</a><a name="ttl-valueDecimal"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueId" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueId</a><a name="ttl-valueId"> </a>[ <a href="datatypes.html#id">id</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueInstant" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueInstant</a><a name="ttl-valueInstant"> </a>[ <a href="datatypes.html#instant">instant</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueInteger" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueInteger</a><a name="ttl-valueInteger"> </a>[ <a href="datatypes.html#integer">integer</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueMarkdown" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueMarkdown</a><a name="ttl-valueMarkdown"> </a>[ <a href="datatypes.html#markdown">markdown</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueOid" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueOid</a><a name="ttl-valueOid"> </a>[ <a href="datatypes.html#oid">oid</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valuePositiveInt" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valuePositiveInt</a><a name="ttl-valuePositiveInt"> </a>[ <a href="datatypes.html#positiveInt">positiveInt</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueString" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueString</a><a name="ttl-valueString"> </a>[ <a href="datatypes.html#string">string</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueTime" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueTime</a><a name="ttl-valueTime"> </a>[ <a href="datatypes.html#time">time</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueUnsignedInt" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueUnsignedInt</a><a name="ttl-valueUnsignedInt"> </a>[ <a href="datatypes.html#unsignedInt">unsignedInt</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueUri" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueUri</a><a name="ttl-valueUri"> </a>[ <a href="datatypes.html#uri">uri</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAddress" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAddress</a><a name="ttl-valueAddress"> </a>[ <a href="datatypes.html#Address">Address</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAge" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAge</a><a name="ttl-valueAge"> </a>[ <a href="datatypes.html#Age">Age</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAnnotation" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAnnotation</a><a name="ttl-valueAnnotation"> </a>[ <a href="datatypes.html#Annotation">Annotation</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueAttachment" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueAttachment</a><a name="ttl-valueAttachment"> </a>[ <a href="datatypes.html#Attachment">Attachment</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCodeableConcept" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCodeableConcept</a><a name="ttl-valueCodeableConcept"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCoding" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCoding</a><a name="ttl-valueCoding"> </a>[ <a href="datatypes.html#Coding">Coding</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueContactPoint" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueContactPoint</a><a name="ttl-valueContactPoint"> </a>[ <a href="datatypes.html#ContactPoint">ContactPoint</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueCount" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueCount</a><a name="ttl-valueCount"> </a>[ <a href="datatypes.html#Count">Count</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDistance" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDistance</a><a name="ttl-valueDistance"> </a>[ <a href="datatypes.html#Distance">Distance</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueDuration" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueDuration</a><a name="ttl-valueDuration"> </a>[ <a href="datatypes.html#Duration">Duration</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueHumanName" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueHumanName</a><a name="ttl-valueHumanName"> </a>[ <a href="datatypes.html#HumanName">HumanName</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueIdentifier" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueIdentifier</a><a name="ttl-valueIdentifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueMoney" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueMoney</a><a name="ttl-valueMoney"> </a>[ <a href="datatypes.html#Money">Money</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valuePeriod" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valuePeriod</a><a name="ttl-valuePeriod"> </a>[ <a href="datatypes.html#Period">Period</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueQuantity" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueQuantity</a><a name="ttl-valueQuantity"> </a>[ <a href="datatypes.html#Quantity">Quantity</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueRange" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueRange</a><a name="ttl-valueRange"> </a>[ <a href="datatypes.html#Range">Range</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueRatio" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueRatio</a><a name="ttl-valueRatio"> </a>[ <a href="datatypes.html#Ratio">Ratio</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueReference" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueReference</a><a name="ttl-valueReference"> </a>[ <a href="references.html#Reference">Reference</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueSampledData" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueSampledData</a><a name="ttl-valueSampledData"> </a>[ <a href="datatypes.html#SampledData">SampledData</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueSignature" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueSignature</a><a name="ttl-valueSignature"> </a>[ <a href="datatypes.html#Signature">Signature</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueTiming" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueTiming</a><a name="ttl-valueTiming"> </a>[ <a href="datatypes.html#Timing">Timing</a> ]
+    fhir:<a href="extensibility-definitions.html#Extension.valueMeta" title="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." class="dict">Extension.valueMeta</a><a name="ttl-valueMeta"> </a>[ <a href="resource.html#Meta">Meta</a> ]
+]
+</pre>
+
+
+   </div>
+  </div>
+  <div id="diffa">
+   <a name="diff-Extension"> </a>
+   <p><b>Changes since DSTU2</b></p>
+   <div id="diff-inner">
+     <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Extension</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">Extension.value[x]</td>
+    <td class="diff-right">Add Age, Add Count, Add Distance, Add Duration, Add Money</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+   </div>
+  </div>
+ </div>
+</div>
+
+<p>
+Notes:
+</p>
+<ul>
+ <li>The <code>url</code> is a mandatory attribute / property and identifies a retrievable <a href="structuredefinition.html">extension definition</a> that defines the content and meaning of the extension</li>
+ <li>The <code>url</code> SHALL be a URL, not a URN (e.g. not an OID or a UUID), and it SHALL be the canonical URL of a StructureDefinition that defines the extension. Except for child extensions defined within a complex extensions, the URL SHALL be an absolute URL). The StructureDefinition the defines the extension SHOULD be available at the identified location so that resource processors can access the definition from the URL</li>
+ <li>An extension SHALL have either a value (i.e. a value[x] element) or sub-extensions, but not both. If present, the value[x] element SHALL have content (value attribute or other elements)</li>
+ <li>If it is not safe for an application processing the content of the resource to ignore the extension it must be represented diffferently, using <a href="#isModifier">a Modifier Extension</a></li>
+ <li>The <i>value[x]</i> element has an actual name of &quot;value&quot; and then the TitleCased name of one of these defined types, and its contents are those as defined for that type:
+  <ul class="dense">
+   <li>valueInteger : <a href="datatypes.html#integer">integer</a></li>
+   <li>valueUnsignedInt : <a href="datatypes.html#unsignedInt">unsignedInt</a></li>
+   <li>valuePositiveInt : <a href="datatypes.html#positiveInt">positiveInt</a></li>
+   <li>valueDecimal : <a href="datatypes.html#decimal">decimal</a></li>
+   <li>valueDateTime : <a href="datatypes.html#dateTime">dateTime</a></li>
+   <li>valueDate : <a href="datatypes.html#date">date</a></li>
+   <li>valueTime : <a href="datatypes.html#time">time</a></li>
+   <li>valueInstant : <a href="datatypes.html#instant">instant</a></li>
+   <li>valueString : <a href="datatypes.html#string">string</a></li>
+   <li>valueUri : <a href="datatypes.html#uri">uri</a></li>
+   <li>valueOid : <a href="datatypes.html#oid">oid</a></li>
+   <li>valueUuid : <a href="datatypes.html#uuid">uuid</a></li>
+   <li>valueId : <a href="datatypes.html#id">id</a></li>
+   <li>valueBoolean : <a href="datatypes.html#boolean">boolean</a></li>
+   <li>valueCode : <a href="datatypes.html#code">code</a> (only if the extension definition provides a <a href="terminologies.html#code">fixed</a> binding to a suitable set of codes)</li>
+   <li>valueMarkdown : <a href="datatypes.html#markdown">markdown</a></li>
+   <li>valueBase64Binary : <a href="datatypes.html#base64Binary">base64Binary</a></li>
+   <li>valueCoding : <a href="datatypes.html#Coding">Coding</a></li>
+   <li>valueCodeableConcept : <a href="datatypes.html#CodeableConcept">CodeableConcept</a></li>
+   <li>valueAttachment : <a href="datatypes.html#Attachment">Attachment</a></li>
+   <li>valueIdentifier : <a href="datatypes.html#Identifier">Identifier</a></li>
+   <li>valueQuantity : <a href="datatypes.html#Quantity">Quantity</a></li>
+   <li>valueSampledData : <a href="datatypes.html#SampledData">SampledData</a></li>
+   <li>valueRange : <a href="datatypes.html#Range">Range</a></li>
+   <li>valuePeriod : <a href="datatypes.html#Period">Period</a></li>
+   <li>valueRatio : <a href="datatypes.html#Ratio">Ratio</a></li>
+   <li>valueHumanName : <a href="datatypes.html#HumanName">HumanName</a></li>
+   <li>valueAddress : <a href="datatypes.html#Address">Address</a></li>
+   <li>valueContactPoint : <a href="datatypes.html#ContactPoint">ContactPoint</a></li>
+   <li>valueTiming : <a href="datatypes.html#Timing">Timing</a></li>
+   <li>valueReference : <a href="references.html#Reference">Reference</a> - a reference to another resource</li>
+   <li>valueAnnotation : <a href="datatypes.html#Annotation">Annotation</a></li>
+   <li>valueSignature : <a href="datatypes.html#Signature">Signature</a></li>
+   <li>valueMeta : A <a href="resource.html#Meta">Meta</a> heading from a resource</li>
+           
+  </ul>
+ </li> 
+</ul>
+<div class="example">
+<p>
+Here is an example of an extension in XML:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso-21090-name-use&quot; &gt;
+    &lt;valueCode value=&quot;I&quot; /&gt;
+  &lt;/extension&gt;
+  &lt;text value=&quot;Chief Red Cloud&quot;/&gt;
+&lt;/name&gt;
+</pre>
+<p>
+In this example, the name with text = &quot;Chief Red Cloud&quot; is extended to have a 
+name use code of &quot;Indigenous&quot; (defined in ISO 21090, but very rarely used in 
+practice). 
+</p>
+<p>
+In JSON, extensions are represented similarly:
+</p>
+<pre fragment="HumanName" class="json">
+  &quot;name&quot; : {
+    &quot;extension&quot; : [{
+      &quot;url&quot; : &quot;http://hl7.org/fhir/StructureDefinition/iso-21090-name-use&quot;,
+      &quot;valueCode&quot; : &quot;I&quot;
+    }],
+   &quot;text&quot; : &quot;Chief Red Cloud&quot;
+  }
+</pre>
+</div>
+<p>
+Making the types explicit in the representation means that all systems can read and write 
+(and therefore store and/or exchange) extensions correctly without needing to access the
+definition of the extension.
+</p>
+<p>
+Note that the JSON represenation for extensions on primitive data types is handled
+differently. See <a href="json.html#primitive">Representing primitive types in JSON</a> for further information.
+</p>
+<p>
+Extensions can also contain extensions, either because the extension 
+definition itself defines complex content - that is, a nested tree of values 
+in the extension, or because the extension is extended with an additional 
+extension defined separately. 
+</p>
+<p>
+In the first case, the identity of the parts of the extension are local/relative to the reference
+to the extension definition.
+</p>
+<div class="example">
+<p>
+As an example, consider extending a patient with an opt-in status for a clinical trial, with 3 fields: clinical trial number, period of involvement, and 
+a reason for enrollment. In XML:
+</p>
+<pre fragment="Patient" class="xml">
+&lt;Patient&gt;
+  &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/patient-clinicalTrial&quot; &gt;
+    &lt;extension url=&quot;NCT&quot; &gt;
+      &lt;valueString value=&quot;123456789&quot; /&gt;
+    &lt;/extension&gt;
+    &lt;extension url=&quot;period&quot; &gt;	  
+      &lt;valuePeriod&gt;
+        &lt;start value=&quot;2009-03-14&quot; /&gt;	  
+      &lt;/valuePeriod&gt;
+    &lt;/extension&gt;
+    &lt;extension url=&quot;reason&quot; &gt;	  
+      &lt;valueCodeableConcept&gt;	  
+        &lt;coding&gt;	  	    
+          &lt;system value=&quot;http://acme.org/codes/general&quot; /&gt;	  
+          &lt;code value=&quot;tt14j&quot; /&gt;	  
+        &lt;/coding&gt;	  	    
+      &lt;/valueCodeableConcept&gt;	  
+    &lt;/extension&gt;
+  &lt;/extension&gt;
+  &lt;!-- other data for patient --&gt;
+&lt;/Patient&gt;
+</pre>
+<p>
+Or in JSON:
+</p>
+<pre fragment="Patient" class="json">
+{
+  &quot;resourceType&quot; : &quot;Patient&quot;,
+  &quot;extension&quot; : [{
+    &quot;url&quot; : &quot;http://hl7.org/fhir/StructureDefinition/patient-clinicalTrial&quot;,
+    &quot;extension&quot; : [{
+      &quot;url&quot; : &quot;NCT&quot;,
+      &quot;valueString&quot; : &quot;123456789&quot;
+    }, {
+      &quot;url&quot; : &quot;period&quot;, 
+      &quot;valuePeriod&quot; : {
+         &quot;start&quot; : &quot;2009-03-14&quot; 
+      }   
+    },  {
+      &quot;url&quot; : &quot;reason&quot;,
+      &quot;valueCodeableConcept&quot; : {
+          &quot;coding&quot; : {
+             &quot;system&quot; : &quot;http://acme.org/codes/general&quot;,
+             &quot;code&quot; : &quot;tt14j&quot;,
+          }
+       }
+    }]
+  }]
+  ... other data for patient ...
+}
+</pre>
+</div>
+<p>
+As the URL suggests, <a href="extension-patient-clinicaltrial.html">this extension is defined as part of this specification</a>.
+</p>
+<p>
+This can be extended again, by adding a &quot;registrar&quot; extension:
+</p>
+<div class="example">
+<p>
+The registrar is defined as a separate extension (e.g. by
+an implementing organization), rather than part of the official clinical-trial extension. 
+The URL of the extension is different:
+</p>
+<pre fragment="Patient" class="xml">
+&lt;Patient&gt;
+  &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/patient-clinicalTrial&quot; &gt;
+    &lt;extension url=&quot;NCT&quot; &gt;
+      &lt;valueString value=&quot;123456789&quot; /&gt;
+    &lt;/extension&gt;
+    &lt;extension url=&quot;period&quot; &gt;	  
+      &lt;valuePeriod&gt;
+        &lt;start value=&quot;2009-03-14&quot; /&gt;	  
+      &lt;/valuePeriod&gt;
+    &lt;/extension&gt;
+    &lt;extension url=&quot;reason&quot; &gt;	  
+      &lt;valueCodeableConcept&gt;	  
+        &lt;coding&gt;	  	    
+          &lt;system value=&quot;http://acme.org/codes/general&quot; /&gt;	  
+          &lt;code value=&quot;tt14j&quot; /&gt;	  
+        &lt;/coding&gt;	  	    
+      &lt;/valueCodeableConcept&gt;	  
+    &lt;/extension&gt;
+  &lt;/extension&gt;
+    &lt;extension url=&quot;http://acme.org/fhir/StructureDefinition/registrar&quot; &gt;	  
+      &lt;valueReference&gt;
+        &lt;reference value=&quot;Practitioner/example&quot; /&gt;	  
+      &lt;/valueReference&gt;
+    &lt;/extension&gt;
+  &lt;!-- other data for patient --&gt;
+&lt;/Patient&gt;
+</pre>
+<p>
+or in JSON:
+</p>
+<pre fragment="Patient" class="json">
+{
+  &quot;resourceType&quot; : &quot;Patient&quot;,
+  &quot;extension&quot; : [{
+    &quot;url&quot; : &quot;http://hl7.org/fhir/StructureDefinition/patient-clinicalTrial&quot;,
+    &quot;extension&quot; : [{
+      &quot;url&quot; : &quot;NCT&quot;,
+      &quot;valueString&quot; : &quot;123456789&quot;
+    }, {
+      &quot;url&quot; : &quot;period&quot;, 
+      &quot;valuePeriod&quot; : {
+         &quot;start&quot; : &quot;2009-03-14&quot; 
+      }   
+    },  {
+      &quot;url&quot; : &quot;reason&quot;,
+      &quot;valueCodeableConcept&quot; : {
+          &quot;coding&quot; : {
+             &quot;system&quot; : &quot;http://acme.org/codes/general&quot;,
+             &quot;code&quot; : &quot;tt14j&quot;,
+          }
+       }
+    },{
+      &quot;url&quot; : &quot;http://acme.org/fhir/StructureDefinition/registrar&quot;, 
+      &quot;valueReference&quot; : {
+         &quot;reference&quot; : &quot;Practitioner/example&quot; 
+      }   
+    }]
+  }]
+  ... other data for patient ...
+}
+</pre>
+</div>
+
+<a name="mustUnderstand"> </a>
+<a name="isModifier"> </a>
+<a name="modifierExtension"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.20.0.2</span> Modifier Extensions <a href="extensibility.html#modifierExtension" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+There are some cases where the information provided in an extension modifies the meaning 
+of the element that contains it. Typically, this means information that qualifies or 
+negates the primary meaning of the element that contains it. Some examples:
+</p>
+<ul>
+ <li>An anti-prescription: recording an instruction <b>not</b> to take a medication</li>
+ <li>Using the <a href="condition.html">Condition</a> resource to record an assertion that a patient has a family history of the condition rather than the condition itself</li>
+ <li>Asserting that a performer was <b>not</b> actually involved in a <a href="procedure.html">Procedure</a></li>
+ <li>Asserting an additional subsumption relationship on a concept in a <a href="valueset.html">value set</a></li>
+</ul>
+<p>
+Implementers should avoid the use of modifier extensions where possible.  Any use should be 
+carefully considered against its possible downstream consequences. However, implementers
+are often forced into these situations by the business arrangements around
+the use of resources, so this specification creates a framework for handling such cases.
+If modifier extensions are present, an application cannot safely process the resource unless it knows
+what the extension means for its own use of the data.
+</p>
+<p>
+This specification allows for such modifier elements to be included at the base of a resource or in any elements
+that do not have a data type (e.g. the elements that correspond to classes in the resource UML
+diagrams). Elements that are data types, or that are inside data types SHALL NOT have modifier extensions,
+nor can extensions have modifier extensions internally.
+</p>
+<p>
+Note that complex extensions are allowed to have elements in the complex extension that are marked is 
+<a href="conformance-rules.html#isModifier">modifier = true</a>, in that the modify the extension value itself. 
+Such elements are conveyed using &quot;extension&quot;, not &quot;modifierExtension&quot; because the impact of the modifier 
+element is expected to be known by applications that understand the containing extension. Any modifierExtension 
+defined outside an extension cannot be placed in another extension.
+</p>
+<blockquote class="dstu-note">
+<a name="dstu"> </a>
+<p>
+<b>DSTU Note:</b> Is this a problem? Input from implementers identiying places where modifier 
+extensions might be needed inside other extensions is welcome <a href="http://wiki.hl7.org/index.php?title=FHIR_Specification_Feedback_(DSTU_2)">here <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+</blockquote>
+
+<p>
+In XML, these modifier elements are represented using an element named &quot;modifierExtension&quot;, which has same content as the 
+<i>extension</i> element documented above: 
+</p>
+<div class="example">
+<p>
+  Example: There's no element on <a href="medicationrequest.html">MedicationRequest</a> 
+to write an &quot;anti-prescription&quot; - an instruction not to take a medication for a particular time.
+Classical clinical recording systems do not record this as a prescription - but one particular
+system does, and these &quot;anti-prescription&quot; records need to be shared within the institution 
+where this happens, as they are an important part of the workflow.  Hence, applications are allowed to extend a resource with data like this: 
+</p>
+<pre class="xml">
+&lt;MedicationRequest&gt;
+  &lt;modifierExtension url=&quot;http://example.org/fhir/StructureDefinition/anti-prescription&quot;&gt;
+    &lt;valueBoolean value=&quot;true&quot;/&gt;
+  &lt;/modifierExtension&gt;
+  &lt;!-- ... other content ... --&gt;
+&lt;/MedicationRequest&gt;
+</pre>
+<p>
+Or in JSON:
+</p>
+<pre class="json">
+{
+  &quot;resourceType&quot; : &quot;MedicationRequest&quot;,
+  &quot;modifierExtension&quot; : [{
+    &quot;url&quot; : &quot;http://example.org/fhir/StructureDefinition/anti-prescription&quot;,
+    &quot;valueBoolean&quot; : &quot;true&quot;
+  }],
+  .. other content ...
+}
+</pre>
+</div>
+
+<p>
+Implementations processing the data in resources SHALL 
+check for modifiers anywhere they may appear, and if 
+a modifier extension is present, SHALL do one of these
+things:
+</p>
+<ol>
+ <li>understand the impact of the extension when using the data</li>
+ <li>refuse to process the data</li>
+ <li>carry a warning concerning the data along with any action or output that results from processing the data to inform users that it has not fully understood the source information</li>
+</ol>
+<p>
+Processing the data of a resource typically means
+copying or filtering data out of a resource for use in another 
+context (display to a human, decision support, exchange in another 
+format where not all information is included, or storing it for this kind of use).
+Servers and background processes that simply move whole resources around unchanged 
+are not &quot;processing the data of the resource&quot;, and therefore these applications 
+are not required to check for unknown modifier extensions. 
+</p>
+<p>
+<b>#1</b>: When an application understands this extension, it means that some developer
+has provided appropriate instructions for what to do with the data contained 
+in it because of the existence of the modifier extension. 
+</p>
+<p><b>#2</b>: 
+This means that implementations are not inherently required to &quot;support&quot; 
+a modifier extension in any meaningful way - they may achieve this 
+understanding by rejecting instances that contain this extension
+(a server, for instance, could return a HTTP 422 status code with
+an <a href="operationoutcome.html">OperationOutcome</a> if a client
+PUTs or POSTs a modifier extension it does not know.
+Applications may also be able to ignore a modifier extension if they 
+can know that this is safe to do in its own context, though this would not usually be the case.
+</p>
+<p> 
+Note that implementations may be able to be sure, due to their 
+implementation environment (e.g. specific trading partner agreement), 
+that modifier extensions will never occur, and can therefore meet
+the requirement to check for modifiers at the design stage. 
+However, since integration and deployment options often change
+subsequently, applications SHOULD always check for modifier extensions when 
+processing resources anyway.
+</p>
+
+<p><b>#3</b>: 
+One way to warn the user is to download the extension definition
+from the given URL, and then use the defined display name to present
+the extension to the user. An error message could look something like
+this:
+</p>
+<img src="modifier-extension-warning.png"/>
+<p>
+Note that the narrative of the resource SHALL contain this qualifying 
+information, so it is safe to show this to the user as an expression 
+of the resource's content. A warning dialog box could be extended to
+offer the user the choice to see the original narrative. 
+</p>
+<div class="example">
+<p>
+Here is the prescription example from above with narrative:
+</p>
+<pre class="xml">
+&lt;MedicationRequest xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      &lt;p&gt;&lt;b&gt;Note: This prescription is an instruction NOT to take a medication&lt;/b&gt;&lt;/p&gt;
+      &lt;!-- snip actual narrative --&gt;
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;!-- ...data... --&gt;
+  &lt;modifierExtension url=&quot;http://example.org/fhir/StructureDefinition/anti-prescription&quot;&gt;
+    &lt;valueBoolean value=&quot;true&quot;/&gt;
+  &lt;/modifierExtension&gt;
+  &lt;!-- ...data... --&gt;
+&lt;/MedicationRequest&gt;
+</pre>
+</div>
+<p>
+An application only needs to concern itself with modifierExtensions on elements that
+it processes. Take, for example, the case above where a procedure resource 
+has a modifierExtension on one of the performer elements indicating that they did 
+not participate in the procedure. In this case, if an application is not using the performer details at all,
+the fact that one of the performers has a modifierExtension is irrelevant and the 
+application is free to ignore it. If it does process the performers, and it sees the
+modifier extension, it must act in one of the ways outlined above.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.20.0.2.1<a name="2.20.0.2.1"> </a></span> Summary: Conformance Rules for Modifier Extensions <a href="extensibility.html#2.20.0.2.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<ul>
+ <li>Modifier Extensions SHALL only modify the element which contains it and/or that element's children</li>
+ <li>It SHALL always be safe to show the narrative to humans; any modifier extension SHALL be represented in the narrative</li>
+ <li>Applications SHALL always check for modifier extensions when processing the data from any element that may carry one</li>
+ <li>If a modifier Extension they do not understand is present, the application SHALL either refuse to process the resource or affected element, or provide an appropriate warning to its users</li>
+</ul>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.20.0.2.2<a name="2.20.0.2.2"> </a></span> Special Case: Missing data <a href="extensibility.html#2.20.0.2.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In some cases, implementers may find that they do not have appropriate data for an
+element with minimum cardinality = 1. In this case, the element must be present, but 
+unless the resource or a profile on it has made the actual value of the primitive 
+data type mandatory, it is possible to provide an extension that explains why the 
+primitive value is not present:
+</p>
+<pre class="xml">
+&lt;uri&gt;
+  &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/data-absent-reason&quot;&gt;
+    &lt;valueCode=&quot;unknown&quot;/&gt;
+  &lt;/extension&gt;
+&lt;/uri&gt;
+</pre>
+<p>
+In this example, instead of a value, a <a href="general-extensions.html">data missing code</a> is provided. Note that 
+it is not required that this particular extension be used. This extension 
+is <b>not</b> a modifier extension, because the primitive data type has no
+value. 
+</p>
+<p>
+It is not valid to create a fictional piece of data for the primitive value,
+and then to add an extension indicating that the data has been constructed
+to meet the data rules. This would be both a bad idea, and also a modifier
+extension, which is not allowed on data types. 
+</p>
+
+<a name="exchange"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.20.0.3</span> Exchanging Extensions <a href="extensibility.html#exchange" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+Extensions are a way of allowing local requirements to be reflected in a resource using
+a common information based approach so that all systems can confidently process them 
+using the same tools. However, when it comes to processing the information, applications
+will be constrained in their ability to handle extensions by the degree to which they 
+are informed about them. 
+</p>
+<p>
+While the structured definition of an extension should always be available (see below for 
+details), the mere availability of a definition does not automatically mean that applications
+know how to handle them correctly - generally, human decisions are required to be made around
+how the data in extensions contain should be handled, along with the implicit obligations 
+that surround the information. 
+</p>
+<p>
+For this reason, local requirements that manifest as extensions are an obstacle to 
+integration. The more the requirements are shared (i.e. regional or national scale),
+the less impact they will have. The consistent representation, definition and registration of 
+extensions that this specification defines cannot resolve that problem - it only provides a framework 
+within which such local variations can be handled more easily. 
+</p>
+<p>
+When it comes to deploying applications that support local requirements, situations
+will very likely arise where different applications
+exchanging information with each other are supporting different sets of extensions.
+This specification makes some basic rules that are intended to make management
+of these situations easier, but they cannot resolve them.
+</p>
+<ul>
+ <li>When exchanging resources, systems SHOULD retain unknown extensions when they are capable of doing so (just as they SHOULD retain core elements when they are capable of doing so)</li>
+ <li>If a system modifies a resource it SHOULD remove any extensions that it does not understand from the 
+modified element and its descendants, because it cannot know whether the modifications it has made 
+might invalidate the value of the unknown extension</li>
+ <li>Systems that drop existing elements are considered to be &quot;processing the resource&quot;</li>
+ <li>A system SHALL NOT modify a resource or element that contains &quot;modifier&quot; extensions it doesn't understand</li>
+ <li>Applications SHOULD ignore extensions that they do not recognize if they are not &quot;modifier&quot; extensions</li>
+ <li>Systems that do not accept unknown extensions SHALL declare so in their Conformance resource instances</li>
+</ul>
+<p>
+The degree to which a system can retain unknown extensions is a function of the type of system
+it is: a general purpose FHIR server, or a middleware engine would be expected to retain 
+all extensions, while an application that manages patient registration through a user 
+interface can only retain extensions to the degree that the information in them is part of the
+set managed by the user. Other applications will fall somewhere between these two extremes.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.20.0.3.1<a name="2.20.0.3.1"> </a></span> Summary: Handling extensions <a href="extensibility.html#2.20.0.3.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Use the following rules as a guideline for handling resources:
+</p>
+<ul>
+ <li>When writing extensions, make sure they are defined and published</li>
+ <li>When reading, navigating through or searching on elements that can have modifier extensions, check whether there are any</li>
+ <li>When reading elements, read and process the extensions you know and use, and ignore other extensions</li>
+ <li>Retain extensions whenever you can</li>
+</ul> 
+ 
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fextensibility.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fextensibility.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+  <script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){ 
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+
+$( '#tabs-Extension' ).tabs({ active: currentTabIndex, activate: function( event, ui ) { store(ui.newTab.index()); } });
+     
+     
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){ 
+  }
+  $( '#tabs-Extension' ).tabs('option', 'active', currentTab);
+}     
+</script>
+
+</body>
+</html>

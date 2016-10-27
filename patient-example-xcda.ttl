@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Patient/xcda> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "xcda"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Henry Levin the 7th</p>\n    \n    </div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "MR" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.19.5" ];
+     fhir:Identifier.value [ fhir:value "12345" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [
+       fhir:value "Levin";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Henry";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1932-09-24"^^xsd:date];
+  fhir:Patient.managingOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/2.16.840.1.113883.19.5>;
+     fhir:Reference.reference [ fhir:value "Organization/2.16.840.1.113883.19.5" ];
+     fhir:Reference.display [ fhir:value "Good Health Clinic" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/2.16.840.1.113883.19.5> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

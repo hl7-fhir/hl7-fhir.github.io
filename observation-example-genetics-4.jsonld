@@ -1,0 +1,113 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/example-genetics-4",
+  "Resource.id": {
+    "id.value": "example-genetics-4"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-genetics-4</p><p><b>status</b>: final</p><p><b>code</b>: Allele ABC <span>(Details )</span></p><p><b>subject</b>: <a>Molecular Lab Patient ID: HOSP-23456</a></p><p><b>issued</b>: Apr 3, 2013 3:30:10 PM</p><p><b>performer</b>: <a>Molecular Diagnostics Laboratory</a></p><p><b>interpretation</b>: Positive <span>(Details : {http://hl7.org/fhir/v2/0078 code 'POS' = 'Positive)</span></p><p><b>specimen</b>: <a>Molecular Specimen ID: MLD45-Z4-1234</a></p><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>Variant-1</a></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>Variant-2</a></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>Variant-3</a></p></blockquote></div>"
+    }
+  },
+  "Observation.status": {
+    "code.value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.text": {
+      "string.value": "Allele ABC"
+    }
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Molecular Lab Patient ID: HOSP-23456"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.issued": {
+    "instant.value": "2013-04-03T15:30:10+01:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/example"
+      },
+      "Reference.display": {
+        "string.value": "Molecular Diagnostics Laboratory"
+      }
+    }
+  ],
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "code.value": "POS"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Positive"
+    }
+  },
+  "Observation.specimen": {
+    "Reference.reference": {
+      "string.value": "Specimen/genetics-example1-somatic"
+    },
+    "Reference.display": {
+      "string.value": "Molecular Specimen ID: MLD45-Z4-1234"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Specimen/genetics-example1-somatic"
+  },
+  "Observation.related": [
+    {
+      "Observation.related.type": {
+        "code.value": "has-member"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "Observation/example-genetics-1"
+        },
+        "Reference.display": {
+          "string.value": "Variant-1"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Observation/example-genetics-1"
+      }
+    },
+    {
+      "Observation.related.type": {
+        "code.value": "has-member"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "Observation/example-genetics-2"
+        },
+        "Reference.display": {
+          "string.value": "Variant-2"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Observation/example-genetics-2"
+      }
+    },
+    {
+      "Observation.related.type": {
+        "code.value": "has-member"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "Observation/example-genetics-3"
+        },
+        "Reference.display": {
+          "string.value": "Variant-3"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Observation/example-genetics-3"
+      }
+    }
+  ]
+}

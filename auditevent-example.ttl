@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/AuditEvent/example> a fhir:AuditEvent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Application Start for under service login &quot;Grahame&quot; (id: Grahame's Test HL7Connect)</div>"
+  ];
+  fhir:AuditEvent.type [
+     fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+     fhir:Coding.code [ fhir:value "110100" ];
+     fhir:Coding.display [ fhir:value "Application Activity" ]
+  ];
+  fhir:AuditEvent.subtype [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+     fhir:Coding.code [ fhir:value "110120" ];
+     fhir:Coding.display [ fhir:value "Application Start" ]
+  ];
+  fhir:AuditEvent.action [ fhir:value "E"];
+  fhir:AuditEvent.recorded [ fhir:value "2012-10-25T22:04:27+11:00"^^xsd:dateTime];
+  fhir:AuditEvent.outcome [ fhir:value "0"];
+  fhir:AuditEvent.agent [
+     fhir:index 0;
+     fhir:AuditEvent.agent.role [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Service User (Logon)" ]
+     ];
+     fhir:AuditEvent.agent.userId [
+       fhir:Identifier.value [ fhir:value "Grahame" ]
+     ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "false"^^xsd:boolean ];
+     fhir:AuditEvent.agent.network [
+       fhir:AuditEvent.agent.network.address [ fhir:value "127.0.0.1" ];
+       fhir:AuditEvent.agent.network.type [ fhir:value "2" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:AuditEvent.agent.role [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+         fhir:Coding.code [ fhir:value "110153" ];
+         fhir:Coding.display [ fhir:value "Source Role ID" ]
+       ]
+     ];
+     fhir:AuditEvent.agent.userId [
+       fhir:Identifier.value [ fhir:value "2.16.840.1.113883.4.2|2.16.840.1.113883.4.2" ]
+     ];
+     fhir:AuditEvent.agent.altId [ fhir:value "6580" ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "false"^^xsd:boolean ];
+     fhir:AuditEvent.agent.network [
+       fhir:AuditEvent.agent.network.address [ fhir:value "Workstation1.ehr.familyclinic.com" ];
+       fhir:AuditEvent.agent.network.type [ fhir:value "1" ]
+     ]
+  ];
+  fhir:AuditEvent.source [
+     fhir:AuditEvent.source.site [ fhir:value "Development" ];
+     fhir:AuditEvent.source.identifier [
+       fhir:Identifier.value [ fhir:value "Grahame's Laptop" ]
+     ];
+     fhir:AuditEvent.source.type [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/audit-event-sub-type" ];
+       fhir:Coding.code [ fhir:value "1" ]
+     ]
+  ];
+  fhir:AuditEvent.entity [
+     fhir:index 0;
+     fhir:AuditEvent.entity.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+           fhir:Coding.code [ fhir:value "SNO" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Dell Serial Number" ]
+       ];
+       fhir:Identifier.value [ fhir:value "ABCDEF" ]
+     ];
+     fhir:AuditEvent.entity.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-type" ];
+       fhir:Coding.code [ fhir:value "4" ];
+       fhir:Coding.display [ fhir:value "Other" ]
+     ];
+     fhir:AuditEvent.entity.role [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-role" ];
+       fhir:Coding.code [ fhir:value "4" ];
+       fhir:Coding.display [ fhir:value "Domain Resource" ]
+     ];
+     fhir:AuditEvent.entity.lifecycle [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-lifecycle" ];
+       fhir:Coding.code [ fhir:value "6" ];
+       fhir:Coding.display [ fhir:value "Access / Use" ]
+     ];
+     fhir:AuditEvent.entity.name [ fhir:value "Grahame's Laptop" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

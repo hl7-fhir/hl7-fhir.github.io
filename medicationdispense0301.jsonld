@@ -1,0 +1,188 @@
+{
+  "@context": "http://build.fhir.org/MedicationDispense.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationDispense/meddisp0301",
+  "Resource.id": {
+    "id.value": "meddisp0301"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0301</p><p><b>contained</b>: </p><p><b>status</b>: in-progress</p><p><b>medication</b>: Vancomycin Hydrochloride. Generated Summary: id: med0301; Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE) <span>(Details : {http://hl7.org/fhir/sid/ndc code '0069-2587-10' = '0069-2587-10', given as 'Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE)'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0318</a></p><p><b>type</b>: emergency Fill <span>(Details : {http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType code 'EF' = 'EF', given as 'emergency Fill'})</span></p><p><b>quantity</b>: 12 Vial<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code Vial = 'Vial')</span></p><p><b>daysSupply</b>: 3 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0301"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/sid/ndc"
+            },
+            "Coding.code": {
+              "code.value": "0069-2587-10"
+            },
+            "Coding.display": {
+              "string.value": "Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE)"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationDispense.status": {
+    "code.value": "in-progress"
+  },
+  "MedicationDispense.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0301"
+    },
+    "Reference.display": {
+      "string.value": "Vancomycin Hydrochloride"
+    }
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f006"
+    },
+    "Reference.display": {
+      "string.value": "Rob van den Berk"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f006"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "string.value": "MedicationRequest/medrx0318"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType"
+        },
+        "Coding.code": {
+          "code.value": "EF"
+        },
+        "Coding.display": {
+          "string.value": "emergency Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "decimal.value": 12
+    },
+    "Quantity.unit": {
+      "string.value": "Vial"
+    },
+    "Quantity.system": {
+      "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+    },
+    "Quantity.code": {
+      "code.value": "Vial"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "decimal.value": 3
+    },
+    "Quantity.unit": {
+      "string.value": "Day"
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "d"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "dateTime.value": "2015-01-15T10:20:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "500mg IV q6h x 3 days"
+      },
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 6
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "h"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "255560000"
+            },
+            "Coding.display": {
+              "string.value": "Intravenous"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#255560000"
+      },
+      "DosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "420620005"
+            },
+            "Coding.display": {
+              "string.value": "Push - dosing instruction imperative (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#420620005"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 500
+        },
+        "Quantity.unit": {
+          "string.value": "mg"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mg"
+        }
+      }
+    }
+  ]
+}

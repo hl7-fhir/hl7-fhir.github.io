@@ -1,0 +1,398 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Lifecycle - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/lifecycle.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><b>Life Cycle</b></li>          <!-- lifecycle.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+
+<div class="col-9">
+
+<h2 class="self-link-parent"><span class="sectioncount">2.16<a name="2.16"> </a></span> FHIR Life Cycle Page <a href="lifecycle.html#2.16" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: 3</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+This page describes several issues around lifecycle management for 
+the resources and the content they contain. Specifically, this page 
+describes:
+</p>
+<ul>
+ <li><a href="#status">Resource Status</a>: how resource status codes work</li>
+ <li><a href="#current">Current List</a>: issues associated with retrieving &quot;current X list&quot; of resources</li>
+ <li><a href="#error">Entered in Error</a>: information about how erroneous entry is handled for the resources</li>
+</ul>
+
+<a name="status"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.16.1</span> Resource Status <a href="lifecycle.html#status" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>Many FHIR resources have a status element that represents the lifecycle state of the resource or the clinical process represented by the resource. Work groups can specify status values appropriate to the individual resource. Although consistency between resources is not the primary objective, it is helpful to users and developers to have well-crafted value sets that cover all possible states (since the value sets are typically required and non-extensible).</p>
+
+<p>To understand existing status elements, and to help create extensions and resources involving resource states, we note that status value sets follow one of the following life cycles:</p>
+<ul>
+	<li>Clinical workflow process life cycle</li>
+	<li>Request/Order  life cycle</li>
+	<li>Entity status life cycle</li>
+	<li>Clinical status life cycle</li>
+</ul>
+
+<a name="clinical"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.16.2</span> Clinical Workflow Process Life Cycle <a href="lifecycle.html#clinical" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>Describes the lifecycle states of complex activities common in healthcare. Typically, these states follow a chronological life cycle that leads from initiation to the conclusion of the action. 
+A characteristic (but non-exhaustive) set of states for the clinical workflow process life cycle include:</p>
+<ul>
+	<li>planned - resources for the activity are being allocated but the activity has not begun</li>
+	<li>cancelled - the planned activity did not start and will not take place</li>
+	<li>in-progress - the activity has begun</li>
+	<li>on-hold (suspended) - the activity has been temporarily interrupted</li>
+	<li>stopped (aborted, failed) - the activity has not been completed but no future action is planned</li>
+	<li>completed (finished) - the activity has been completed</li>
+</ul>
+<p>Examples of the clinical workflow life cycle:</p>
+<ul>
+ <li>Communication.status: <span title="In Progress: The communication transmission is ongoing.">in-progress</span> | <span title="Completed: The message transmission is complete, i.e., delivered to the recipient's destination.">completed</span> | <span title="Suspended: The communication transmission has been held by originating system/user request.">suspended</span> | <span title="Rejected: The receiving system has declined to accept the message.">rejected</span> | <span title="Failed: There was a failure in transmitting the message out.">failed</span></li>
+ <li>Encounter.status:  <span title="Planned: The Encounter has not yet started.">planned</span> | <span title="Arrived: The Patient is present for the encounter, however is not currently meeting with a practitioner.">arrived</span> | <span title="In Progress: The Encounter has begun and the patient is present / the practitioner and the patient are meeting.">in-progress</span> | <span title="On Leave: The Encounter has begun, but the patient is temporarily on leave.">onleave</span> | <span title="Finished: The Encounter has ended.">finished</span> | <span title="Cancelled: The Encounter has ended before it has begun.">cancelled</span> | <span title="Entered in Error: This instance should not have been part of this patient's medical record.">entered-in-error</span></li>
+ <li>Goal.status: <span title="Proposed: A goal is proposed for this patient">proposed</span> | <span title="Planned: A goal is planned for this patient">planned</span> | <span title="Accepted: A proposed goal was accepted">accepted</span> | <span title="Rejected: A proposed goal was rejected">rejected</span> | <span title="In Progress: The goal is being sought but has not yet been reached.  (Also applies if goal was reached in the past but there has been regression and goal is being sought again)">in-progress</span> | <span title="Achieved: The goal has been met and no further action is needed">achieved</span> | <span title="Sustaining: The goal has been met, but ongoing activity is needed to sustain the goal objective">sustaining</span> | <span title="On Hold: The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.">on-hold</span> | <span title="Cancelled: The goal is no longer being sought">cancelled</span> | <span title="On Target: The goal is on scheduled for the planned timelines">on-target</span> | <span title="Ahead of Target: The goal is ahead of the planned timelines">ahead-of-target</span> | <span title="Behind Target: The goal is behind the planned timelines">behind-target</span> | <span title="Entered In Error: The goal was entered in error and voided.">entered-in-error</span></li>
+ <li>MedicationAdministration.status: <span title="In Progress: The administration has started but has not yet completed.">in-progress</span> | <span title="On Hold: Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;.">on-hold</span> | <span title="Completed: All actions that are implied by the administration have occurred.">completed</span> | <span title="Entered in Error: The administration was entered in error and therefore nullified.">entered-in-error</span> | <span title="Stopped: Actions implied by the administration have been permanently halted, before all of them occurred.">stopped</span></li>
+ <li>MedicationDispense.status: <span title="In Progress: The dispense has started but has not yet completed.">in-progress</span> | <span title="On Hold: Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;">on-hold</span> | <span title="Completed: All actions that are implied by the dispense have occurred.">completed</span> | <span title="Entered in-Error: The dispense was entered in error and therefore nullified.">entered-in-error</span> | <span title="Stopped: Actions implied by the dispense have been permanently halted, before all of them occurred.">stopped</span></li>
+ <li>Procedure.status: <span title="In Progress: The procedure is still occurring.">in-progress</span> | <span title="Aboted: The procedure was terminated without completing successfully.">aborted</span> | <span title="Completed: All actions involved in the procedure have taken place.">completed</span> | <span title="Entered in Error: The statement was entered in error and Is not valid.">entered-in-error</span></li>
+</ul>
+
+<a name="order"> </a>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.16.3</span> Request/Order Life Cycle <a href="lifecycle.html#order" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>Some resources in FHIR represent orders or requests. The request lifecycle can be generalized in terms of four stages: creating the request, sending the request, receiving acceptance or refusal of the request, and fulfillment of the request. A characteristic (but non-exhaustive) set of states for the request/order pattern include:</p>
+
+<ul>
+ <li>proposed: An actor (e.g. a clinical decision support system) has proposed an action to be requested</li>
+ <li>draft: The request is in preliminary form, prior to being requested</li>
+ <li>requested: The request has been been made</li>
+ <li>rejected: The request receiver has declined the request</li>
+ <li>accepted: The request receiver has accepted the request</li>
+ <li>in-progress: Work to fulfill the request has begun</li>
+ <li>on-hold (suspended): Work on the request has been interrupted</li>
+ <li>stopped (aborted):  The activity has not been completed but no future action is planned</li>
+ <li>completed: Work on the requested task has been completed, and no further action is required</li>
+ <li>cancelled: The request has been withdrawn</li>
+</ul>
+<p>Examples of the request/order life cycle:</p>
+<ul>
+ <li>CommunicationRequest.status:  <span title="Proposed: The request has been proposed.">proposed</span> | <span title="Planned: The request has been planned.">planned</span> | <span title="Requested: The request has been placed.">requested</span> | <span title="Received: The receiving system has received the request but not yet decided whether it will be performed.">received</span> | <span title="Accepted: The receiving system has accepted the order, but work has not yet commenced.">accepted</span> | <span title="In Progress: The work to fulfill the order is happening.">in-progress</span> | <span title="Completed: The work has been complete, the report(s) released, and no further work is planned.">completed</span> | <span title="Suspended: The request has been held by originating system/user request.">suspended</span> | <span title="Rejected: The receiving system has declined to fulfill the request">rejected</span> | <span title="Failed: The communication was attempted, but due to some procedural error, it could not be completed.">failed</span></li>
+ <li>DeviceUseRequest.status: <span title="Draft: The request is in preliminary form prior to being sent.">draft</span> | <span title="Active: The request is complete and is ready for fulfillment.">active</span> | <span title="Suspended: The request has been held by originating system/user request.">suspended</span> | <span title="Completed: The work has been completed, the report(s) released, and no further work is planned.">completed</span> | <span title="Entered in Error: The request was entered in error and voided.">entered-in-error</span> | <span title="Cancelled: The request has been withdrawn.">cancelled</span></li>
+ <li>DiagnosticRequest.status: <span title="Draft: The request is in preliminary form prior to being sent.">draft</span> | <span title="Active: The request is complete and is ready for fulfillment.">active</span> | <span title="Suspended: The request has been held by originating system/user request.">suspended</span> | <span title="Completed: The work has been completed, the report(s) released, and no further work is planned.">completed</span> | <span title="Entered in Error: The request was entered in error and voided.">entered-in-error</span> | <span title="Cancelled: The request has been withdrawn.">cancelled</span></li>
+ <li>MedicationRequest.status: <span title="Active: The prescription is 'actionable', but not all actions that are implied by it have occurred yet.">active</span> | <span title="On Hold: Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called &quot;suspended&quot;.">on-hold</span> | <span title="Cancelled: The prescription has been withdrawn.">cancelled</span> | <span title="Completed: All actions that are implied by the prescription have occurred.">completed</span> | <span title="Entered In Error: The prescription was entered in error.">entered-in-error</span> | <span title="Stopped: Actions implied by the prescription are to be permanently halted, before all of them occurred.">stopped</span> | <span title="Draft: The prescription is not yet 'actionable', i.e. it is a work in progress, requires sign-off or verification, and needs to be run through decision support process.">draft</span></li>
+ <li>ProcedureRequest.status: <span title="Proposed: The request has been proposed.">proposed</span> | <span title="Draft: The request is in preliminary form, prior to being requested.">draft</span> | <span title="Requested: The request has been placed.">requested</span> | <span title="Received: The receiving system has received the request but not yet decided whether it will be performed.">received</span> | <span title="Accepted: The receiving system has accepted the request, but work has not yet commenced.">accepted</span> | <span title="In Progress: The work to fulfill the request is happening.">in-progress</span> | <span title="Completed: The work has been completed, the report(s) released, and no further work is planned.">completed</span> | <span title="Suspended: The request has been held by originating system/user request.">suspended</span> | <span title="Rejected: The receiving system has declined to fulfill the request.">rejected</span> | <span title="Aborted: The request was attempted, but due to some procedural error, it could not be completed.">aborted</span></li>
+ <li>ReferralRequest.status: <span title="Draft: A draft referral that has yet to be send.">draft</span> | <span title="Active: The referral is complete and is ready for fulfillment.">active</span> | <span title="Cancelled: The referral has been cancelled without being completed. For example it is no longer needed.">cancelled</span> | <span title="Completed: The referral has been completely actioned.">completed</span> | <span title="Entered in Error: This referral record should never have existed, though it's possible some degree of real-world activity or decisions may have been taken due to its existence">entered-in-error</span></li>
+</ul>
+
+<a name="entity"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.16.4</span> Entity Availability Life Cycle <a href="lifecycle.html#entity" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>The entity availability life cycle indicates if the resource, or the entity described by the resource, is ready for use, not yet ready for use, or has been retired from use. A characteristic (but non-exhaustive) set of states for the entity availability life cycle include: </p>
+
+<ul>
+ <li>draft: The entity is being prepared but is not yet in use</li>
+ <li>active: The entity is in use</li>
+ <li>suspended: The entity is not in use at the moment, but may return to active status</li>
+ <li>amended: The entity has undergone a revision but is still active</li>
+ <li>retired (superseded): The entity is no longer in use.</li>
+</ul>
+<p>Examples of the entity availability life cycle:</p>
+<ul>
+ <li>DiagnosticReport.status: <span title="Registered: The existence of the report is registered, but there is nothing yet available.">registered</span> | <span title="Partial: This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.">partial</span> | <span title="Final: The report is complete and verified by an authorized person.">final</span> | <span title="Corrected: The report has been modified subsequent to being Final, and is complete and verified by an authorized person">corrected</span> | <span title="Appended: The report has been modified subsequent to being Final, and is complete and verified by an authorized person. New content has been added, but existing content hasn't changed.">appended</span> | <span title="Cancelled: The report is unavailable because the measurement was not started or not completed (also sometimes called &quot;aborted&quot;).">cancelled</span> | <span title="Entered in Error: The report has been withdrawn following a previous final release.">entered-in-error</span></li>
+ <li>MedicationStatement.status: <span title="Active: The medication is still being taken.">active</span> | <span title="Completed: The medication is no longer being taken.">completed</span> | <span title="Entered in Error: The statement was entered in error.">entered-in-error</span> | <span title="Intended: The medication may be taken at some time in the future.">intended</span> | <span title="Stopped: Actions implied by the statement have been permanently halted, before all of them occurred.">stopped</span> | <span title="On Hold: Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;.">on-hold</span>. (note: in-progress and completed are states reflecting the administration of the medication)</li>
+ <li>DocumentManifest.status: <span title="Current: This is the current reference for this document.">current</span> | <span title="Superseded: This reference has been superseded by another reference.">superseded</span> | <span title="Entered in Error: This reference was created in error.">entered-in-error</span></li>
+ <li>CapabilityStatement.status: <span title="Draft: This resource is still under development.">draft</span> | <span title="Active: This resource is ready for normal use.">active</span> | <span title="Retired: This resource has been withdrawn or superseded and should no longer be used.">retired</span></li>
+ <li>StructureDefinition.status: <span title="Draft: This resource is still under development.">draft</span> | <span title="Active: This resource is ready for normal use.">active</span> | <span title="Retired: This resource has been withdrawn or superseded and should no longer be used.">retired</span></li>
+ <li>DataElement: <span title="Draft: This resource is still under development.">draft</span> | <span title="Active: This resource is ready for normal use.">active</span> | <span title="Retired: This resource has been withdrawn or superseded and should no longer be used.">retired</span></li>
+ <li>Questionnaire.status: <span title="Draft: This Questionnaire is not ready for official use.">draft</span> | <span title="Published: This Questionnaire is ready for use.">published</span> | <span title="Retired: This Questionnaire should no longer be used to gather data.">retired</span></li>
+ <li>DocumentReference.status:  <span title="Current: This is the current reference for this document.">current</span> | <span title="Superseded: This reference has been superseded by another reference.">superseded</span> | <span title="Entered in Error: This reference was created in error.">entered-in-error</span></li>
+ <li>QuestionnaireResponse.status: <span title="In Progress: This QuestionnaireResponse has been partially filled out with answers, but changes or additions are still expected to be made to it.">in-progress</span> | <span title="Completed: This QuestionnaireResponse has been filled out with answers, and the current content is regarded as definitive.">completed</span> | <span title="Amended: This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.">amended</span> | <span title="Entered In Error: This QuestionnaireResponse was entered in error and voided.">entered-in-error</span></li>
+ <li>Flag.status: <span title="Active: A current flag that should be displayed to a user. A system may use the category to determine which roles should view the flag.">active</span> | <span title="Inactive: The flag does not need to be displayed any more.">inactive</span> | <span title="Entered in Error: The flag was added in error, and should no longer be displayed.">entered-in-error</span></li>
+ <li>Location.status: <span title="Active: The location is operational.">active</span> | <span title="Suspended: The location is temporarily closed.">suspended</span> | <span title="Inactive: The location is no longer used.">inactive</span></li>
+ <li>Organization.active: true | false</li>
+ <li>Patient.active: true | false</li>
+</ul>
+<p/>
+
+<a name="cstatus"> </a>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.16.5</span> Clinical Status Life Cycle <a href="lifecycle.html#cstatus" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>Clinical status is somewhat different than the previous status values, since it does not deal with workflow or lifecycle. Instead, it indicates how evidence is affecting a clinical interpretation. Here are two examples:</p>
+<ul>
+	<li>AllergyIntolerance.status: <span title="Active: An active record of a risk of a reaction to the identified substance.">active</span> | <span title="Inactive: An inactivated record of a risk of a reaction to the identified substance">inactive</span> | <span title="Entered In Error: The statement was entered in error and is not valid.">entered-in-error</span></li>
+	<li>Condition.clinicalStatus: <span title="Active: The subject is currently experiencing the symptoms of the condition.">active</span> | <span title="Relapse: The subject is re-experiencing the symptoms of the condition after a period of remission or presumed resolution.">relapse</span> | <span title="Remission: The subject is no longer experiencing the symptoms of the condition, but there is a risk of the symptoms returning.">remission</span> | <span title="Resolved: The subject is no longer experiencing the symptoms of the condition and there is no perceived risk of the symptoms returning.">resolved</span></li>
+
+</ul>
+
+<hr/>
+
+<a name="current"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.16.6</span> Current Resource Lists <a href="lifecycle.html#current" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Many clinical systems maintain current lists of some kind of resources for a patient. Some of the commonly maintained lists include:
+</p>
+<ul>
+ <li>Current Problem List: a list of the problems that are of concern for care of the patient</li>
+ <li>Current Medication List: a list of the medications that a patient is known to be on at the current time</li>
+</ul>
+<p>
+Because of the way that resources are used, there is no simple way to determine, from 
+examination of a resource, whether it is 'current' or not. Take, as an example, the 
+<a href="condition.html">Condition</a> resource. In a typical EHR, condition resources 
+might be published on the RESTful interface for the following reasons:
+</p>
+<ul>
+ <li>to represent an item in a patient's curated problem list</li>
+ <li>to represent a complaint or a diagnosis from an encounter record</li>
+ <li>to represent a problem for investigation provided by a diagnostic system as part of a <a href="diagnosticrequest.html">DiagnosticRequest</a>/<a href="diagnosticreport.html">DiagnosticReport</a> pair</li>
+ <li>the resources were received from another system as part of a referral package, and were current for that system when they were received</li>
+</ul>
+<p>
+There is no element on the Condition resource than can convey the difference between these usages. In particular, there can be 
+no way to differentiate between current and past current resources without having to retrospectively alter resources, which is 
+problematic with regard to intergrity and digital signatures. 
+</p>
+<p>
+One consequnce of this is that searching the condition resource for a given patient will return more
+than just the patient's current problems. Though this is somewhat counter-intuitive to some implementers,
+restricting searches on Condition to only include the patient's current curated problem list excludes 
+all the other - important - uses of the Condition resource.
+</p>
+<p>
+Determining whether a Condition is an entry on a patient's current problem list is done by checking
+with the Condition resource is referenced from the correct list.
+</p>
+<p>
+On the RESTful API, this is done using the <a href="search.html#current">list search mechanism</a>:
+</p>
+<pre>
+ GET [base]/AllergyIntolerance?patient=42&amp;_list=$current-allergies
+</pre>
+<p>
+This is a request to fetch all the allergies in the patient 42's &quot;Currrent Problem List&quot;.
+Note that the server is not required to actually make a resource representation of the current allergy list 
+available, though doing so assists clients in their audit/integrity tasks. See 
+<a href="list-operations.html#find">List Operation &quot;Find&quot;</a> for further information.
+</p>
+<p>
+In a document, current lists are determined by the code on a Composition section. 
+</p>
+<a name="lists"> </a>
+<p>
+FHIR defines the following names for functional lists:
+</p>
+<table class="grid">
+ <tr>
+  <td><b>List</b></td>
+  <td><b>ResourceType</b></td>
+  <td><b>Description</b></td>
+  <td><b>Possible LOINC codes in documents / sections</b></td>
+ </tr>
+ <tr>
+  <td>$current-problems</td>
+  <td><a href="condition.html">Condition</a></td>
+  <td>The &quot;Currrent Problem List&quot; - A list of current and active diagnoses as well as past diagnoses relevant to the current care of the patient</td>
+  <td>46105-3	(Problem conditions Set)</td>
+ </tr>
+ <tr>
+  <td>$current-medications</td>
+  <td><a href="medicationstatement.html">MedicationStatement</a>/ <a href="medicationrequest.html">MedicationRequest</a></td>
+  <td>A list of all medications that the patient is taking. The 'current medications list' 
+	  sometimes may in clude a mix of prescribed and over-the-counter medications - or only some of them. The list may 
+	  contain a mix of <a href="medicationrequest.html">prescriptions</a> and more general <a href="medicationstatement.html">statements</a>, or only one of the two. 
+		The list may also correspond to a formal reconciled medication administration schedule, but more often does not</td>
+  <td>57828-6	(Prescription list), 10160-0 (History of medication)</td>
+ </tr>
+ <tr>
+  <td>$current-allergies</td>
+  <td><a href="allergyintolerance.html">AllergyIntolerance</a></td>
+  <td>A list of known or suspected propensities to medications, foods, or environmental agents that is provided to help prevent reactions while care is occurring</td>
+  <td>18716-1	(Allergy studies (set)), 52472-8	(Allergies and Adverse Drug Reactions), and 48765-2 (Allergies and adverse reactions Document)</td>
+ </tr>
+ <tr>
+  <td>$current-drug-allergies</td>
+  <td><a href="allergyintolerance.html">AllergyIntolerance</a></td>
+  <td>A list of known or suspected propensities to medications that is provided to help prevent reactions while care is occurring. This list is a subset of the full allergies list</td>
+  <td>(same as above?)</td>
+ </tr>
+</table>
+
+<hr/>
+<a name="error"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.16.7</span> Entered In Error Summary <a href="lifecycle.html#error" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+The entered-in-error state indicates the resource was created accidentally, and 
+should be ignored. This state can apply to resources created by manual 
+entry. It is usually not associated with the Clinical Workflow Process life cycle, 
+but can be associated with the Request/Order and the Entity Availability life cycles.
+</p>
+
+<p>
+This table summarises what is expected to happen for each resource in the case 
+that the data it contains is subsequently found to be an erroneous entry.
+</p>
+
+<table class="grid">
+<tr><td><b>Resource</b></td><td><b>Status</b></td></tr><tr><td><a href="account.html">Account</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="activitydefinition.html">ActivityDefinition</a></td><td>.status = retired</td></tr><tr><td><a href="activitygroup.html">ActivityGroup</a></td><td/></tr><tr><td><a href="allergyintolerance.html">AllergyIntolerance</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="appointment.html">Appointment</a></td><td>.status=entered-in-error</td></tr><tr><td><a href="appointmentresponse.html">AppointmentResponse</a></td><td>.participantStatus=entered-in-error</td></tr><tr><td><a href="auditevent.html">AuditEvent</a></td><td>Audit Events are recorded, there is no update or delete. </td></tr><tr><td><a href="basic.html">Basic</a></td><td>There are no fixed arrangements for Basic - profiles should describe how this works as arrangements will depend on the 'type' of Basic resource</td></tr><tr><td><a href="binary.html">Binary</a></td><td>n/a (This would be handled where the binary is linked from)</td></tr><tr><td><a href="bodysite.html">BodySite</a></td><td/></tr><tr><td><a href="bundle.html">Bundle</a></td><td>Depends on the type: document - see for Composition; message - see for MessageHeader; transaction / transaction-response / history / searchset - not expected to be stored; collection: just delete it if it's stored, and in error</td></tr><tr><td><a href="capabilitystatement.html">CapabilityStatement</a></td><td>.status = retired</td></tr><tr><td><a href="careplan.html">CarePlan</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="careteam.html">CareTeam</a></td><td/></tr><tr><td><a href="claim.html">Claim</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="claimresponse.html">ClaimResponse</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="clinicalimpression.html">ClinicalImpression</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="codesystem.html">CodeSystem</a></td><td>.status = retired</td></tr><tr><td><a href="communication.html">Communication</a></td><td/></tr><tr><td><a href="communicationrequest.html">CommunicationRequest</a></td><td/></tr><tr><td><a href="compartmentdefinition.html">CompartmentDefinition</a></td><td>.status = retired</td></tr><tr><td><a href="composition.html">Composition</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="conceptmap.html">ConceptMap</a></td><td>.status = retired</td></tr><tr><td><a href="condition.html">Condition</a></td><td>.verificationStatus = entered-in-error</td></tr><tr><td><a href="consent.html">Consent</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="contract.html">Contract</a></td><td/></tr><tr><td><a href="coverage.html">Coverage</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="dataelement.html">DataElement</a></td><td>.status = retired</td></tr><tr><td><a href="decisionsupportservicemodule.html">DecisionSupportServiceModule</a></td><td>.status = retired</td></tr><tr><td><a href="detectedissue.html">DetectedIssue</a></td><td/></tr><tr><td><a href="device.html">Device</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="devicecomponent.html">DeviceComponent</a></td><td/></tr><tr><td><a href="devicemetric.html">DeviceMetric</a></td><td/></tr><tr><td><a href="deviceuserequest.html">DeviceUseRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="deviceusestatement.html">DeviceUseStatement</a></td><td/></tr><tr><td><a href="diagnosticreport.html">DiagnosticReport</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="diagnosticrequest.html">DiagnosticRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="documentmanifest.html">DocumentManifest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="documentreference.html">DocumentReference</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="eligibilityrequest.html">EligibilityRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="eligibilityresponse.html">EligibilityResponse</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="encounter.html">Encounter</a></td><td>.status=entered-in-error</td></tr><tr><td><a href="endpoint.html">Endpoint</a></td><td>.status=entered-in-error</td></tr><tr><td><a href="enrollmentrequest.html">EnrollmentRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="enrollmentresponse.html">EnrollmentResponse</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="episodeofcare.html">EpisodeOfCare</a></td><td>.status=entered-in-error</td></tr><tr><td><a href="expansionprofile.html">ExpansionProfile</a></td><td>.status=retired</td></tr><tr><td><a href="explanationofbenefit.html">ExplanationOfBenefit</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="familymemberhistory.html">FamilyMemberHistory</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="flag.html">Flag</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="goal.html">Goal</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="group.html">Group</a></td><td>.active = false</td></tr><tr><td><a href="guidanceresponse.html">GuidanceResponse</a></td><td/></tr><tr><td><a href="healthcareservice.html">HealthcareService</a></td><td>.active = false</td></tr><tr><td><a href="imagingmanifest.html">ImagingManifest</a></td><td>Imaging Object Selection state is managed in PACS.</td></tr><tr><td><a href="imagingstudy.html">ImagingStudy</a></td><td>Imaging Study state is managed in PACS.</td></tr><tr><td><a href="immunization.html">Immunization</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="immunizationrecommendation.html">ImmunizationRecommendation</a></td><td/></tr><tr><td><a href="implementationguide.html">ImplementationGuide</a></td><td>.status = retired</td></tr><tr><td><a href="library.html">Library</a></td><td>.status = retired</td></tr><tr><td><a href="linkage.html">Linkage</a></td><td/></tr><tr><td><a href="list.html">List</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="location.html">Location</a></td><td>.status = inactive</td></tr><tr><td><a href="measure.html">Measure</a></td><td>.status = retired</td></tr><tr><td><a href="measurereport.html">MeasureReport</a></td><td/></tr><tr><td><a href="media.html">Media</a></td><td>n/a - this would be handled whereever the media is linked from</td></tr><tr><td><a href="medication.html">Medication</a></td><td>Medication does not have a status</td></tr><tr><td><a href="medicationadministration.html">MedicationAdministration</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="medicationdispense.html">MedicationDispense</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="medicationrequest.html">MedicationRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="medicationstatement.html">MedicationStatement</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="messageheader.html">MessageHeader</a></td><td>mostly n/a, but in the cases where messages are stored in error, they would simply be deleted</td></tr><tr><td><a href="namingsystem.html">NamingSystem</a></td><td>.status = retired</td></tr><tr><td><a href="nutritionrequest.html">NutritionRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="observation.html">Observation</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="operationdefinition.html">OperationDefinition</a></td><td>.status = retired</td></tr><tr><td><a href="operationoutcome.html">OperationOutcome</a></td><td>n/a - this resource is not expected to be stored</td></tr><tr><td><a href="organization.html">Organization</a></td><td>.active = false</td></tr><tr><td><a href="patient.html">Patient</a></td><td>.active = false</td></tr><tr><td><a href="paymentnotice.html">PaymentNotice</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="paymentreconciliation.html">PaymentReconciliation</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="person.html">Person</a></td><td>.active = false</td></tr><tr><td><a href="plandefinition.html">PlanDefinition</a></td><td>.status = retired</td></tr><tr><td><a href="practitioner.html">Practitioner</a></td><td>.active = false</td></tr><tr><td><a href="practitionerrole.html">PractitionerRole</a></td><td>.active = false</td></tr><tr><td><a href="procedure.html">Procedure</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="procedurerequest.html">ProcedureRequest</a></td><td/></tr><tr><td><a href="processrequest.html">ProcessRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="processresponse.html">ProcessResponse</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="provenance.html">Provenance</a></td><td>Provenance are recorded, there is no update or delete. </td></tr><tr><td><a href="questionnaire.html">Questionnaire</a></td><td>.status = retired</td></tr><tr><td><a href="questionnaireresponse.html">QuestionnaireResponse</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="referralrequest.html">ReferralRequest</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="relatedperson.html">RelatedPerson</a></td><td>.active = false</td></tr><tr><td><a href="riskassessment.html">RiskAssessment</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="schedule.html">Schedule</a></td><td>.active = false</td></tr><tr><td><a href="searchparameter.html">SearchParameter</a></td><td>.status = retired</td></tr><tr><td><a href="sequence.html">Sequence</a></td><td/></tr><tr><td><a href="servicedefinition.html">ServiceDefinition</a></td><td>.status = retired</td></tr><tr><td><a href="slot.html">Slot</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="specimen.html">Specimen</a></td><td>.status = entered-in-error</td></tr><tr><td><a href="structuredefinition.html">StructureDefinition</a></td><td>.status = retired</td></tr><tr><td><a href="structuremap.html">StructureMap</a></td><td>.status = retired</td></tr><tr><td><a href="subscription.html">Subscription</a></td><td>.status = off (just turn it off, maybe update the error message)</td></tr><tr><td><a href="substance.html">Substance</a></td><td/></tr><tr><td><a href="supplydelivery.html">SupplyDelivery</a></td><td/></tr><tr><td><a href="supplyrequest.html">SupplyRequest</a></td><td/></tr><tr><td><a href="task.html">Task</a></td><td/></tr><tr><td><a href="testreport.html">TestReport</a></td><td/></tr><tr><td><a href="testscript.html">TestScript</a></td><td>.status = retired</td></tr><tr><td><a href="valueset.html">ValueSet</a></td><td>.status = retired</td></tr><tr><td><a href="visionprescription.html">VisionPrescription</a></td><td>.status = entered-in-error</td></tr></table>
+
+
+<p>
+Note: Resources that are not listed in this table do not have any explicit documentation with regard to being entered in error.
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Flifecycle.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Flifecycle.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+
+</html>

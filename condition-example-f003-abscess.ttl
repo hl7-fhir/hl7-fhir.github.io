@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Condition/f003> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f003"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f003</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>category</b>: diagnosis <span>(Details : {SNOMED CT code '439401001' = 'Diagnosis (observable entity)', given as 'diagnosis'})</span></p><p><b>severity</b>: Mild to moderate <span>(Details : {SNOMED CT code '371923003' = 'Mild to moderate (qualifier value)', given as 'Mild to moderate'})</span></p><p><b>code</b>: Retropharyngeal abscess <span>(Details : {SNOMED CT code '18099001' = 'Retropharyngeal abscess', given as 'Retropharyngeal abscess'})</span></p><p><b>bodySite</b>: Entire retropharyngeal area <span>(Details : {SNOMED CT code '280193007' = 'Entire retropharyngeal area (body structure)', given as 'Entire retropharyngeal area'})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>context</b>: <a>Encounter/f003</a></p><p><b>onset</b>: Feb 27, 2012</p><p><b>dateRecorded</b>: Feb 20, 2012</p><p><b>asserter</b>: <a>P. van de Heuvel</a></p><h3>Evidences</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>CT of neck <span>(Details : {SNOMED CT code '169068008' = 'Computed tomography of neck (procedure)', given as 'CT of neck'})</span></td></tr></table></div>"
+  ];
+  fhir:Condition.clinicalStatus [ fhir:value "active"];
+  fhir:Condition.verificationStatus [ fhir:value "confirmed"];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:439401001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "439401001" ];
+       fhir:Coding.display [ fhir:value "diagnosis" ]
+     ]
+  ];
+  fhir:Condition.severity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:371923003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "371923003" ];
+       fhir:Coding.display [ fhir:value "Mild to moderate" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:18099001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "18099001" ];
+       fhir:Coding.display [ fhir:value "Retropharyngeal abscess" ]
+     ]
+  ];
+  fhir:Condition.bodySite [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:280193007;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "280193007" ];
+       fhir:Coding.display [ fhir:value "Entire retropharyngeal area" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Condition.context [
+     fhir:link <http://hl7.org/fhir/Encounter/f003>;
+     fhir:Reference.reference [ fhir:value "Encounter/f003" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2012-02-27"^^xsd:date];
+  fhir:Condition.dateRecorded [ fhir:value "2012-02-20"^^xsd:date];
+  fhir:Condition.asserter [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Condition.evidence [
+     fhir:index 0;
+     fhir:Condition.evidence.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:169068008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "169068008" ];
+         fhir:Coding.display [ fhir:value "CT of neck" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/f001> a fhir:Patient, fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/f003> a fhir:Encounter .
+
+# -------------------------------------------------------------------------------------
+

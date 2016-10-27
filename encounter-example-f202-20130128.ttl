@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Encounter/f202> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f202"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>identifier</b>: Encounter_Roel_20130128 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>type</b>: Chemotherapy <span>(Details : {SNOMED CT code '367336001' = 'Chemotherapy (procedure)', given as 'Chemotherapy'})</span></p><p><b>priority</b>: Urgent <span>(Details : {SNOMED CT code '103391001' = 'Urgency (qualifier value)', given as 'Urgent'})</span></p><p><b>patient</b>: <a>Roel</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/f201</a></td></tr></table><p><b>length</b>: 56 minutes<span> (Details: UCUM code min = 'min')</span></p><p><b>reason</b>: The patient is treated for a tumor. <span>(Details )</span></p><p><b>indication</b>: <a>Roel's TPF chemotherapy on January 28th, 2013</a></p><p><b>serviceProvider</b>: <a>Organization/f201</a></p></div>"
+  ];
+  fhir:Encounter.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "temp" ];
+     fhir:Identifier.value [ fhir:value "Encounter_Roel_20130128" ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+     fhir:Coding.code [ fhir:value "AMB" ];
+     fhir:Coding.display [ fhir:value "ambulatory" ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:367336001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "367336001" ];
+       fhir:Coding.display [ fhir:value "Chemotherapy" ]
+     ]
+  ];
+  fhir:Encounter.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:103391001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "103391001" ];
+       fhir:Coding.display [ fhir:value "Urgent" ]
+     ]
+  ];
+  fhir:Encounter.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://hl7.org/fhir/Practitioner/f201>;
+       fhir:Reference.reference [ fhir:value "Practitioner/f201" ]
+     ]
+  ];
+  fhir:Encounter.length [
+     fhir:Quantity.value [ fhir:value "56"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "minutes" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "min" ]
+  ];
+  fhir:Encounter.reason [
+     fhir:index 0;
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/encounter-primaryDiagnosis" ];
+       fhir:Extension.valuePositiveInt [ fhir:value "2"^^xsd:positiveInteger ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "The patient is treated for a tumor." ]
+  ];
+  fhir:Encounter.indication [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Procedure/f201>;
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/encounter-primaryDiagnosis" ];
+       fhir:Extension.valuePositiveInt [ fhir:value "1"^^xsd:positiveInteger ]
+     ];
+     fhir:Reference.reference [ fhir:value "Procedure/f201" ];
+     fhir:Reference.display [ fhir:value "Roel's TPF chemotherapy on January 28th, 2013" ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://hl7.org/fhir/Organization/f201>;
+     fhir:Reference.reference [ fhir:value "Organization/f201" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Procedure/f201> a fhir:Procedure .
+
+<http://hl7.org/fhir/Organization/f201> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

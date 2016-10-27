@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/List/current-allergies> a fhir:List;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "current-allergies"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Patient Peter Chalmers, DOB = Dec 25, 1974, MRN = 12345 (Acme Healthcare) has the following allergies</p>\n      <ul>\n        <li>cashew nut allergenic extract Injectable Product (<b>High</b>)</li>\n        <li>Allergenic extract, penicillin (high)</li>\n      </ul>\n    </div>"
+  ];
+  fhir:List.status [ fhir:value "current"];
+  fhir:List.mode [ fhir:value "working"];
+  fhir:List.title [ fhir:value "Current Allergy List"];
+  fhir:List.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:52472-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "52472-8" ];
+       fhir:Coding.display [ fhir:value "Allergies and Adverse Drug Reactions" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Current Allergy List" ]
+  ];
+  fhir:List.date [ fhir:value "2015-07-14T23:10:23+11:00"^^xsd:dateTime];
+  fhir:List.source [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:List.orderedBy [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/list-order" ];
+       fhir:Coding.code [ fhir:value "entry-date" ]
+     ]
+  ];
+  fhir:List.entry [
+     fhir:index 0;
+     fhir:List.entry.item [
+       fhir:link <http://hl7.org/fhir/AllergyIntolerance/example>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/example" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:List.entry.item [
+       fhir:link <http://hl7.org/fhir/AllergyIntolerance/medication>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/medication" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/AllergyIntolerance/example> a fhir:AllergyIntolerance .
+
+<http://hl7.org/fhir/AllergyIntolerance/medication> a fhir:AllergyIntolerance .
+
+# -------------------------------------------------------------------------------------
+

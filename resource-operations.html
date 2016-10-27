@@ -1,0 +1,712 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Resource - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/resource-operations.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="resource.html">Resource</a></li>        <li><b>Operations</b></li>          <!-- resource.html / res-Operations / Resource -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="resource.html">Content</a></li><li><a href="resource-definitions.html">Detailed Descriptions</a></li><li class="active"><a href="#">Operations</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">2.27.7<a name="2.27.7"> </a></span> Resource Resource - Operations <a href="resource-operations.html#2.27.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+This resource has 4 operations associated with it:
+</p>
+<table class="list">
+<tr><td><a href="#validate">$validate</a></td><td>Validate a resource</td></tr>
+<tr><td><a href="#meta">$meta</a></td><td>Access a list of profiles, tags, and security labels</td></tr>
+<tr><td><a href="#meta-add">$meta-add</a></td><td>Add profiles, tags, and security labels to a resource</td></tr>
+<tr><td><a href="#meta-delete">$meta-delete</a></td><td>Delete profiles, tags, and security labels for a resource</td></tr>
+</table>
+
+<p>
+For more information about operations, including how they are invoked, see <a href="operations.html">Operations</a>.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.27.7.1<a name="2.27.7.1"> </a></span> Validate a resource<a name="validate"> </a> <a href="resource-operations.html#2.27.7.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>The validate operation checks whether the attached content would be acceptable either generally, as a create, an update or as a delete to an existing resource.  The action the server takes depends on the mode parameter:<br/></p>
+<ul>
+<li>[mode not provided]: The server checks the content of the resource against any schema, constraint rules, and other general terminology rules</li>
+<li>create: The server checks the content, and then checks that the content would be acceptable as a create (e.g. that the content would not violate any uniqueness constraints)</li>
+<li>update: The server checks the content, and then checks that it would accept it as an update against the nominated specific resource (e.g. that there are no changes to immutable fields the server does not allow to change, and checking version integrity if appropriate)</li>
+<li>delete: The server ignores the content, and checks that the nominated resource is allowed to be deleted (e.g. checking referential integrity rules)<br/></li>
+</ul>
+<p>Modes update and delete can only be used when the operation is invoked at the resource instance level.   The return from this operation is an <a href="operationoutcome.html">OperationOutcome</a></p>
+
+<p><a href="operation-resource-validate.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/[Resource]/$validate</p>
+<p>URL: [base]/[Resource]/[id]/$validate</p>
+<table class="grid">
+<tr><td colspan="6"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>resource</td><td>0..1</td><td><a href="resource.html#Resource">Resource</a></td><td/><td/><td><p>Must be present unless the mode is &quot;delete&quot;</p>
+</td></tr><tr><td>mode</td><td>0..1</td><td><a href="datatypes.html#code">code</a></td><td><a href="valueset-resource-validation-mode.html">ResourceValidationMode</a> (<a href="terminologies.html#required">Required</a>)</td><td/><td><p>Default is 'no action'; (e.g. general validation)</p>
+</td></tr><tr><td>profile</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>If this is nominated, then the resource is validated against this specific profile. If a profile is nominated, and the server cannot validate against the nominated profile, it SHALL return an error</p>
+</td></tr><tr><td colspan="6"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="operationoutcome.html">OperationOutcome</a></td><td/><td/><td><p>If the operation outcome does not list any errors, and a mode was specified, then this is an indication that the operation would be expected to succeed (excepting for transactional integrity issues, see below)</p>
+<p>Note: as this the only out parameter, it is a resource, and it has the name 'return', the result of this operation is returned directly as a resource</p></td></tr></table>
+<p>This operation may be used during design and development to validate application design. It can also be used at run-time. One possible use might be that a client asks the server whether a proposed update is valid as the user is editing a dialog and displays an updated error to the user. The operation can be used as part of a light-weight two phase commit protocol but there is no expectation that the server will hold the content of the resource after this operation is used, or that the server guarantees to successfully perform an actual create, update or delete after the validation operation completes.</p>
+<p>This operation returns a 200 OK whether or not the resource is valid. A 4xx or 5xx error means that the validation itself could not be performed, and it is unknown whether the resource is valid or not.</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">2.27.7.1.1<a name="2.27.7.1.1"> </a></span> Examples <a href="resource-operations.html#2.27.7.1.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Validate a Patient against the DAF patient profile using POST directly. (Request):</p>
+<pre>
+POST /open/Patient/$validate?profile=http://hl7.org/fhir/StructureDefinition/daf-patient
+[other headers]
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Patient xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+	&lt;id value=&quot;us01&quot;/&gt;
+	&lt;text&gt;
+		&lt;status value=&quot;generated&quot;/&gt;
+		&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+			&lt;p&gt;
+				&lt;b&gt;Generated Narrative with Details&lt;/b&gt;
+			&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;id&lt;/b&gt;: us01&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;
+				&lt;p&gt;
+				&lt;b&gt;birthsex&lt;/b&gt;: Male&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;name&lt;/b&gt;: Peter James Chalmers (OFFICIAL)&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;telecom&lt;/b&gt;: ph: (03) 5555 6473(WORK), person@example.org(WORK)&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;address&lt;/b&gt;: 534 Erewhon St PleasantVille Vic 3999 (HOME)&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;race&lt;/b&gt;: White, American Indian or Alaska Native, Asian, Shoshone, Filipino&lt;/p&gt;
+			&lt;p&gt;
+				&lt;b&gt;ethnicity&lt;/b&gt;: Hispanic or Latino, Dominican, Mexican&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/text&gt;
+	&lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-race&quot;&gt;
+		&lt;extension url=&quot;ombCategory&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Race&quot;/&gt;
+				&lt;code value=&quot;2106-3&quot;/&gt;
+				&lt;display value=&quot;White&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+		&lt;extension url=&quot;ombCategory&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Race&quot;/&gt;
+				&lt;code value=&quot;1002-5&quot;/&gt;
+				&lt;display value=&quot;American Indian or Alaska Native&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+		&lt;extension url=&quot;ombCategory&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Race&quot;/&gt;
+				&lt;code value=&quot;2028-9&quot;/&gt;
+				&lt;display value=&quot;Asian&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+		&lt;extension url=&quot;detailed&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Race&quot;/&gt;
+				&lt;code value=&quot;1586-7&quot;/&gt;
+				&lt;display value=&quot;Shoshone&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+		&lt;extension url=&quot;detailed&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Race&quot;/&gt;
+				&lt;code value=&quot;2036-2&quot;/&gt;
+				&lt;display value=&quot;Filipino&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+	&lt;/extension&gt;
+	&lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-ethnicity&quot;&gt;
+		&lt;extension url=&quot;ombCategory&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Ethnicity&quot;/&gt;
+				&lt;code value=&quot;2135-2&quot;/&gt;
+				&lt;display value=&quot;Hispanic or Latino&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+		&lt;extension url=&quot;detailed&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Ethnicity&quot;/&gt;
+				&lt;code value=&quot;2184-0&quot;/&gt;
+				&lt;display value=&quot;Dominican&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+		&lt;extension url=&quot;detailed&quot;&gt;
+			&lt;valueCoding&gt;
+				&lt;system value=&quot;http://hl7.org/fhir/v3/Ethnicity&quot;/&gt;
+				&lt;code value=&quot;2148-5&quot;/&gt;
+				&lt;display value=&quot;Mexican&quot;/&gt;
+			&lt;/valueCoding&gt;
+		&lt;/extension&gt;
+	&lt;/extension&gt;
+	&lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-birthsex&quot;&gt;
+		&lt;valueCode value=&quot;M&quot;/&gt;
+	&lt;/extension&gt;
+	&lt;active value=&quot;true&quot;/&gt;
+	&lt;!--  Peter James Chalmers, but called &quot;Jim&quot;  --&gt;
+	&lt;name&gt;
+		&lt;use value=&quot;official&quot;/&gt;
+		&lt;family value=&quot;Chalmers&quot;/&gt;
+		&lt;given value=&quot;Peter&quot;/&gt;
+		&lt;given value=&quot;James&quot;/&gt;
+	&lt;/name&gt;
+	&lt;telecom&gt;
+		&lt;system value=&quot;phone&quot;/&gt;
+		&lt;value value=&quot;(03) 5555 6473&quot;/&gt;
+		&lt;use value=&quot;work&quot;/&gt;
+	&lt;/telecom&gt;
+	&lt;telecom&gt;
+		&lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-direct&quot;&gt;
+			&lt;valueBoolean value=&quot;true&quot;/&gt;
+		&lt;/extension&gt;
+		&lt;system value=&quot;email&quot;/&gt;
+		&lt;value value=&quot;person@example.org&quot;/&gt;
+		&lt;use value=&quot;work&quot;/&gt;
+	&lt;/telecom&gt;
+	&lt;address&gt;
+		&lt;use value=&quot;home&quot;/&gt;
+		&lt;line value=&quot;534 Erewhon St&quot;/&gt;
+		&lt;city value=&quot;PleasantVille&quot;/&gt;
+		&lt;district value=&quot;Orange County&quot;/&gt;
+		&lt;state value=&quot;Vic&quot;/&gt;
+		&lt;postalCode value=&quot;3999&quot;/&gt;
+	&lt;/address&gt;
+&lt;/Patient&gt;
+</pre>
+<p>Validate a proposed patient update - and for this example, using the Parameters syntax (Request):</p>
+<pre>
+
+POST /open/Patient/example/$validate
+[other headers]
+
+&lt;Parameters xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;mode&quot;/&gt;
+    &lt;valueCode value=&quot;update&quot;/&gt;
+  &lt;parameter&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;mode&quot;/&gt;
+    &lt;resource&gt;
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      
+      &lt;Patient xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+        &lt;id value=&quot;example&quot;/&gt;
+        &lt;text&gt;
+          &lt;status value=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+            
+            &lt;table&gt;
+              
+              &lt;tbody&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Name&lt;/td&gt;
+                  
+                  &lt;td&gt;Peter James 
+                    &lt;b&gt;Chalmers&lt;/b&gt; (&amp;quot;Jim&amp;quot;)
+                  &lt;/td&gt;
+                
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Address&lt;/td&gt;
+                  
+                  &lt;td&gt;534 Erewhon, Pleasantville, Vic, 3999&lt;/td&gt;
+                
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Contacts&lt;/td&gt;
+                  
+                  &lt;td&gt;Home: unknown. Work: (03) 5555 6473&lt;/td&gt;
+                
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Id&lt;/td&gt;
+                  
+                  &lt;td&gt;MRN: 12345 (Acme Healthcare)&lt;/td&gt;
+                
+                &lt;/tr&gt;
+              
+              &lt;/tbody&gt;
+            
+            &lt;/table&gt;    
+          
+          &lt;/div&gt;
+        &lt;/text&gt;
+      &lt;!--  MRN assigned by ACME healthcare on 6-May 2001  --&gt;
+        &lt;identifier&gt;
+          &lt;use value=&quot;usual&quot;/&gt;
+          &lt;type&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/v2/0203&quot;/&gt;
+              &lt;code value=&quot;MR&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/type&gt;
+          &lt;system value=&quot;urn:oid:1.2.36.146.595.217.0.1&quot;/&gt;
+          &lt;value value=&quot;12345&quot;/&gt;
+          &lt;period&gt;
+            &lt;start value=&quot;2001-05-06&quot;/&gt;
+          &lt;/period&gt;
+          &lt;assigner&gt;
+            &lt;display value=&quot;Acme Healthcare&quot;/&gt;
+          &lt;/assigner&gt;
+        &lt;/identifier&gt;
+        &lt;active value=&quot;true&quot;/&gt;
+      &lt;!--  Peter James Chalmers, but called &quot;Jim&quot;  --&gt;
+        &lt;name&gt;
+          &lt;use value=&quot;official&quot;/&gt;
+          &lt;family value=&quot;Chalmers&quot;/&gt;
+          &lt;given value=&quot;Peter&quot;/&gt;
+          &lt;given value=&quot;James&quot;/&gt;
+        &lt;/name&gt;
+        &lt;name&gt;
+          &lt;use value=&quot;usual&quot;/&gt;
+          &lt;given value=&quot;Jim&quot;/&gt;
+        &lt;/name&gt;
+        &lt;telecom&gt;
+          &lt;use value=&quot;home&quot;/&gt;
+        &lt;!--  home communication details aren't known  --&gt;
+        &lt;/telecom&gt;
+        &lt;telecom&gt;
+          &lt;system value=&quot;phone&quot;/&gt;
+          &lt;value value=&quot;(03) 5555 6473&quot;/&gt;
+          &lt;use value=&quot;work&quot;/&gt;
+        &lt;/telecom&gt;
+      &lt;!--  use FHIR code system for male / female  --&gt;
+        &lt;gender value=&quot;male&quot;/&gt;
+        &lt;birthDate value=&quot;1974-12-25&quot;&gt;
+          &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/patient-birthTime&quot;&gt;
+            &lt;valueDateTime value=&quot;1974-12-25T14:35:45-05:00&quot;/&gt;
+          &lt;/extension&gt;
+        &lt;/birthDate&gt;
+        &lt;deceasedBoolean value=&quot;false&quot;/&gt;
+        &lt;address&gt;
+          &lt;use value=&quot;home&quot;/&gt;
+          &lt;type value=&quot;both&quot;/&gt;
+          &lt;line value=&quot;534 Erewhon St&quot;/&gt;
+          &lt;city value=&quot;PleasantVille&quot;/&gt;
+          &lt;district value=&quot;Rainbow&quot;/&gt;
+          &lt;state value=&quot;Vic&quot;/&gt;
+          &lt;postalCode value=&quot;3999&quot;/&gt;
+          &lt;period&gt;
+            &lt;start value=&quot;1974-12-25&quot;/&gt;
+          &lt;/period&gt;
+        &lt;/address&gt;
+        &lt;contact&gt;
+          &lt;relationship&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/patient-contact-relationship&quot;/&gt;
+              &lt;code value=&quot;partner&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/relationship&gt;
+          &lt;name&gt;
+            &lt;family value=&quot;du&quot;&gt;
+            &lt;!--  the &quot;du&quot; part is a family name prefix (VV in iso 21090)  --&gt;
+              &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;&gt;
+                &lt;valueCode value=&quot;VV&quot;/&gt;
+              &lt;/extension&gt;
+            &lt;/family&gt;
+            &lt;family value=&quot;Marché&quot;/&gt;
+            &lt;given value=&quot;Bénédicte&quot;/&gt;
+          &lt;/name&gt;
+          &lt;telecom&gt;
+            &lt;system value=&quot;phone&quot;/&gt;
+            &lt;value value=&quot;+33 (237) 998327&quot;/&gt;
+          &lt;/telecom&gt;
+          &lt;address&gt;
+            &lt;use value=&quot;home&quot;/&gt;
+            &lt;type value=&quot;both&quot;/&gt;
+            &lt;line value=&quot;534 Erewhon St&quot;/&gt;
+            &lt;city value=&quot;PleasantVille&quot;/&gt;
+            &lt;district value=&quot;Rainbow&quot;/&gt;
+            &lt;state value=&quot;Vic&quot;/&gt;
+            &lt;postalCode value=&quot;3999&quot;/&gt;
+            &lt;period&gt;
+              &lt;start value=&quot;1974-12-25&quot;/&gt;
+            &lt;/period&gt;
+          &lt;/address&gt;
+          &lt;gender value=&quot;female&quot;/&gt;
+          &lt;period&gt;
+          &lt;!--  The contact relationship started in 2012  --&gt;
+            &lt;start value=&quot;2012&quot;/&gt;
+          &lt;/period&gt;
+        &lt;/contact&gt;
+        &lt;managingOrganization&gt;
+          &lt;reference value=&quot;Organization/1&quot;/&gt;
+        &lt;/managingOrganization&gt;
+      &lt;/Patient&gt;
+    &lt;/resource&gt;
+  &lt;parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>Returned when the resource is valid (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OperationOutcome xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;allok&quot;/&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      &lt;p&gt;All OK&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;issue&gt; 
+    &lt;severity value=&quot;information&quot;/&gt;
+    &lt;code value=&quot;informational&quot;/&gt;
+    &lt;details&gt;
+      &lt;text value=&quot;All OK&quot;/&gt;
+    &lt;/details&gt;
+ &lt;/issue&gt;
+&lt;/OperationOutcome&gt;
+</pre>
+<p>Returned when the resource is not valid (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OperationOutcome xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;validationfail&quot;/&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      &lt;p&gt;Error parsing resource XML (Unknown Content &amp;quot;label&amp;quot; @ /Patient/identifier/label)&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;issue&gt;
+    &lt;severity value=&quot;error&quot;/&gt;
+    &lt;code value=&quot;structure&quot;/&gt;
+    &lt;details&gt;
+      &lt;text value=&quot;Error parsing resource XML (Unknown Content &amp;quot;label&amp;quot;&quot;/&gt;
+    &lt;/details&gt; 
+    &lt;location value=&quot;/f:Patient/f:identifier&quot;/&gt;    
+  &lt;/issue&gt;
+&lt;/OperationOutcome&gt;
+</pre>
+<p>&nbsp;</p><h3 class="self-link-parent"><span class="sectioncount">2.27.7.2<a name="2.27.7.2"> </a></span> Access a list of profiles, tags, and security labels<a name="meta"> </a> <a href="resource-operations.html#2.27.7.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>This operation retrieves a summary of the profiles, tags, and security labels for the given scope; e.g. for each scope:<br/></p>
+<ul>
+<li>system-wide: a list of all profiles, tags and security labels in use by the system</li>
+<li>resource-type level: A list of all profiles, tags, and security labels for the resource type</li>
+<li>individual resource level: A list of all profiles, tags, and security labels for the current version of the resource.  Also, as a special case, this operation (and other meta operations) can be performed on a historical version of a resource)</li>
+</ul>
+
+<p><a href="operation-resource-meta.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/$meta</p>
+<p>URL: [base]/[Resource]/$meta</p>
+<p>URL: [base]/[Resource]/[id]/$meta</p>
+<table class="grid">
+<tr><td colspan="6"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>The meta returned by the operation</p>
+</td></tr></table>
+<p>At the system and type levels, the $meta operation is used to get a summary of all the labels that are in use across the system. The principle use for this operation is to support search e.g. what tags can be searched for. At these levels, the meta will not contain versionId, lastUpdated etc. Systems are not obligated to implement the operation at this level (and should return a 4xx error if they don't). At the resource and historical entry level, the $meta operation returns the same meta as would be returned by accessing the resource directly. This can be used to allow a system to get access to the meta-information for the resource without accessing the resource itself, e.g. for security reasons</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">2.27.7.2.1<a name="2.27.7.2.1"> </a></span> Examples <a href="resource-operations.html#2.27.7.2.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Get all the tags, profiles, and security labels used on patient resources (Request):</p>
+<pre>
+
+GET /fhir/Patient/$meta
+</pre>
+<p>All the tags, profiles, and security labels used on patient resources (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/uslab-patient&quot;/&gt;
+      &lt;security&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/ActCode&quot;/&gt;
+        &lt;code value=&quot;EMP&quot;/&gt;
+        &lt;display value=&quot;employee information sensitivity&quot;/&gt;
+      &lt;/security&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>&nbsp;</p><h3 class="self-link-parent"><span class="sectioncount">2.27.7.3<a name="2.27.7.3"> </a></span> Add profiles, tags, and security labels to a resource<a name="meta-add"> </a> <a href="resource-operations.html#2.27.7.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>This operation takes a meta, and adds the profiles, tags, and security labels found in it to the nominated resource.   This operation can also be used on historical entries - to update them without creating a different historical version</p>
+
+<p><a href="operation-resource-meta-add.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/[Resource]/[id]/$meta-add</p>
+<table class="grid">
+<tr><td colspan="6"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>meta</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Profiles, tags, and security labels to add to the existing resource. Note that profiles, tags, and security labels are sets, and duplicates are not created.  The identity of a tag or security label is the system+code. When matching existing tags during adding, version and display are ignored. For profiles, matching is based on the full URL</p>
+</td></tr><tr><td colspan="6"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Resulting meta for the resource</p>
+</td></tr></table>
+<p>This operation is special in that executing this operation does not cause a new version of the resource to be created. The meta is updated directly. This is because the content in meta does not affect the meaning of the resource, and the security labels (in particular) are used to apply access rules to existing versions of resources</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">2.27.7.3.1<a name="2.27.7.3.1"> </a></span> Examples <a href="resource-operations.html#2.27.7.3.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Add a 'paper record lost' tag to a resource (Request):</p>
+<pre>
+
+POST /fhir/Patient/example/$meta-add
+[Other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;meta&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>All the tags, profiles, and security labels used on patient resources (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;    
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>&nbsp;</p><h3 class="self-link-parent"><span class="sectioncount">2.27.7.4<a name="2.27.7.4"> </a></span> Delete profiles, tags, and security labels for a resource<a name="meta-delete"> </a> <a href="resource-operations.html#2.27.7.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>This operation takes a meta, and deletes the profiles, tags, and security labels found in it from the nominated resource.   This operation can also be used on historical entries</p>
+
+<p><a href="operation-resource-meta-delete.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/[Resource]/[id]/$meta-delete</p>
+<table class="grid">
+<tr><td colspan="6"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>meta</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Profiles, tags, and security labels to delete from the existing resource. It is not an error if these tags, profiles, and labels do not exist.  The identity of a tag or security label is the system+code. When matching existing tags during deletion, version and display are ignored. For profiles, matching is based on the full URL</p>
+</td></tr><tr><td colspan="6"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Resulting meta for the resource</p>
+</td></tr></table>
+<p>This operation is special in that executing this operation does not cause a new version of the resource to be created. The meta is updated directly. This is because the content in meta does not affect the meaning of the resource, and the security labels (in particular) are used to apply access rules to existing versions of resources</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">2.27.7.4.1<a name="2.27.7.4.1"> </a></span> Examples <a href="resource-operations.html#2.27.7.4.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Remove the 'current patient' tag from a resource (Request):</p>
+<pre>
+
+POST /fhir/Patient/example/$meta-delete
+[Other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;meta&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>All the tags, profiles, and security labels used on patient resources (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;    
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>&nbsp;</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fresource-operations.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fresource-operations.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir"><id value="v3-DocumentCompletion"/><meta><lastUpdated value="2016-03-23T00:00:00.000+00:00"/><profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/></meta><text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Release Date: 2016-03-23</p>
+<table class="grid">
+ <tr><td><b>Level</b></td><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+ <tr><td>1</td><td>AU<a name="AU"> </a></td><td>authenticated</td><td>
+                        A completion status in which a document has been signed manually or electronically by one or more individuals who attest to its accuracy.  No explicit determination is made that the assigned individual has performed the authentication.  While the standard allows multiple instances of authentication, it would be typical to have a single instance of authentication, usually by the assigned individual.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>DI<a name="DI"> </a></td><td>dictated</td><td>
+                        A completion status in which information has been orally recorded but not yet transcribed.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>DO<a name="DO"> </a></td><td>documented</td><td>
+                        A completion status in which document content, other than dictation, has been received but has not been translated into the final electronic format.  Examples include paper documents, whether hand-written or typewritten, and intermediate electronic forms, such as voice to text.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>IN<a name="IN"> </a></td><td>incomplete</td><td>
+                        A completion status in which information is known to be missing from a transcribed document.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>IP<a name="IP"> </a></td><td>in progress</td><td>
+                        A workflow status where the material has been assigned to personnel to perform the task of transcription. The document remains in this state until the document is transcribed.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>LA<a name="LA"> </a></td><td>legally authenticated</td><td>
+                        A completion status in which a document has been signed manually or electronically by the individual who is legally responsible for that document. This is the most mature state in the workflow progression.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>NU<a name="NU"> </a></td><td>nullified document</td><td>
+                        A completion status in which a document was created in error or was placed in the wrong chart. The document is no longer available.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>PA<a name="PA"> </a></td><td>pre-authenticated</td><td>
+                        A completion status in which a document is transcribed but not authenticated.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>UC<a name="UC"> </a></td><td>unsigned completed document</td><td>
+                        A completion status where the document is complete and there is no expectation that the document will be signed.<br/>
+
+                     </td></tr>
+</table>
+</div></text><url value="http://hl7.org/fhir/ValueSet/v3-DocumentCompletion"/><identifier><system value="urn:ietf:rfc:3986"/><value value="urn:oid:2.16.840.1.113883.1.11.271"/></identifier><version value="2016-03-23"/><name value="v3 Code System DocumentCompletion"/><status value="active"/><experimental value="false"/><publisher value="HL7, Inc"/><contact><telecom><system value="other"/><value value="http://hl7.org"/></telecom></contact><date value="2016-03-23"/><description value=" Identifies the current completion state of a clinical document."/><compose><include><system value="http://hl7.org/fhir/v3/DocumentCompletion"/></include></compose></ValueSet>

@@ -1,0 +1,176 @@
+{
+  "@context": "http://build.fhir.org/QuestionnaireResponse.jsonld",
+  "@context": "http://hl7.org/fhir/QuestionnaireResponse/f201",
+  "Resource.id": {
+    "id.value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>status</b>: completed</p><p><b>subject</b>: <a>Roel</a></p><p><b>author</b>: <a>Practitioner/f201</a></p><p><b>authored</b>: Jun 18, 2013 12:00:00 AM</p><p><b>source</b>: <a>Practitioner/f201</a></p><blockquote><p><b>item</b></p><p><b>linkId</b>: 1</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 2</p><p><b>text</b>: General questions</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 3</p><p><b>text</b>: Intoxications</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+    }
+  },
+  "QuestionnaireResponse.status": {
+    "code.value": "completed"
+  },
+  "QuestionnaireResponse.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f201"
+    },
+    "Reference.display": {
+      "string.value": "Roel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "QuestionnaireResponse.author": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f201"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "QuestionnaireResponse.authored": {
+    "dateTime.value": "2013-06-18T00:00:00+01:00"
+  },
+  "QuestionnaireResponse.source": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f201"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "1"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "1.1"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "Do you have allergies?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "string.value": "I am allergic to house dust"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "2"
+      },
+      "QuestionnaireResponse.item.text": {
+        "string.value": "General questions"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "2.1"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "What is your gender?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "string.value": "Male"
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "2.2"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "What is your date of birth?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueDate": {
+                "date.value": "1960-03-13"
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "2.3"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "What is your country of birth?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "string.value": "The Netherlands"
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "2.4"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "What is your marital status?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "string.value": "married"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "3"
+      },
+      "QuestionnaireResponse.item.text": {
+        "string.value": "Intoxications"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "3.1"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "Do you smoke?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "string.value": "No"
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "3.2"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "Do you drink alchohol?"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "string.value": "No, but I used to drink"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

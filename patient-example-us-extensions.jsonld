@@ -1,0 +1,248 @@
+{
+  "@context": "http://build.fhir.org/Patient.jsonld",
+  "@context": "http://hl7.org/fhir/Patient/us01",
+  "Resource.id": {
+    "id.value": "us01"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Generated Narrative with Details</b>\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\t<b>id</b>: us01</p>\n\t\t\t<p>\n\t\t\t\t<b>active</b>: true</p>\n\t\t\t\t<p>\n\t\t\t\t<b>birthsex</b>: Male</p>\n\t\t\t<p>\n\t\t\t\t<b>name</b>: Peter James Chalmers (OFFICIAL)</p>\n\t\t\t<p>\n\t\t\t\t<b>telecom</b>: ph: (03) 5555 6473(WORK), person@example.org(WORK)</p>\n\t\t\t<p>\n\t\t\t\t<b>address</b>: 534 Erewhon St PleasantVille Vic 3999 (HOME)</p>\n\t\t\t<p>\n\t\t\t\t<b>race</b>: White, American Indian or Alaska Native, Asian, Shoshone, Filipino</p>\n\t\t\t<p>\n\t\t\t\t<b>ethnicity</b>: Hispanic or Latino, Dominican, Mexican</p>\n\t\t</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "uri.value": "http://hl7.org/fhir/StructureDefinition/us-core-race"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "ombCategory"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Race"
+            },
+            "Coding.code": {
+              "code.value": "2106-3"
+            },
+            "Coding.display": {
+              "string.value": "White"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "ombCategory"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Race"
+            },
+            "Coding.code": {
+              "code.value": "1002-5"
+            },
+            "Coding.display": {
+              "string.value": "American Indian or Alaska Native"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "ombCategory"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Race"
+            },
+            "Coding.code": {
+              "code.value": "2028-9"
+            },
+            "Coding.display": {
+              "string.value": "Asian"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "detailed"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Race"
+            },
+            "Coding.code": {
+              "code.value": "1586-7"
+            },
+            "Coding.display": {
+              "string.value": "Shoshone"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "detailed"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Race"
+            },
+            "Coding.code": {
+              "code.value": "2036-2"
+            },
+            "Coding.display": {
+              "string.value": "Filipino"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Extension.url": {
+        "uri.value": "http://hl7.org/fhir/StructureDefinition/us-core-ethnicity"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "ombCategory"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Ethnicity"
+            },
+            "Coding.code": {
+              "code.value": "2135-2"
+            },
+            "Coding.display": {
+              "string.value": "Hispanic or Latino"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "detailed"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Ethnicity"
+            },
+            "Coding.code": {
+              "code.value": "2184-0"
+            },
+            "Coding.display": {
+              "string.value": "Dominican"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "detailed"
+          },
+          "Extension.valueCoding": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/Ethnicity"
+            },
+            "Coding.code": {
+              "code.value": "2148-5"
+            },
+            "Coding.display": {
+              "string.value": "Mexican"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Extension.url": {
+        "uri.value": "http://hl7.org/fhir/StructureDefinition/us-core-birthsex"
+      },
+      "Extension.valueCode": {
+        "code.value": "M"
+      }
+    }
+  ],
+  "Patient.active": {
+    "boolean.value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "code.value": "official"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "Chalmers"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Peter"
+        },
+        {
+          "string.value": "James"
+        }
+      ]
+    }
+  ],
+  "Patient.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "(03) 5555 6473"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://hl7.org/fhir/StructureDefinition/us-core-direct"
+          },
+          "Extension.valueBoolean": {
+            "boolean.value": true
+          }
+        }
+      ],
+      "ContactPoint.system": {
+        "code.value": "email"
+      },
+      "ContactPoint.value": {
+        "string.value": "person@example.org"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    }
+  ],
+  "Patient.address": [
+    {
+      "Address.use": {
+        "code.value": "home"
+      },
+      "Address.line": [
+        {
+          "string.value": "534 Erewhon St"
+        }
+      ],
+      "Address.city": {
+        "string.value": "PleasantVille"
+      },
+      "Address.district": {
+        "string.value": "Orange County"
+      },
+      "Address.state": {
+        "string.value": "Vic"
+      },
+      "Address.postalCode": {
+        "string.value": "3999"
+      }
+    }
+  ]
+}

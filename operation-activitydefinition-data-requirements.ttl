@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "ActivityDefinition-data-requirements"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/ActivityDefinition-data-requirements"];
+  fhir:OperationDefinition.name [ fhir:value "Data Requirements"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The data-requirements operation aggregates and returns the parameters and data requirements for the activity definition and all its dependencies as a single module definition library"];
+  fhir:OperationDefinition.code [ fhir:value "data-requirements"];
+  fhir:OperationDefinition.comment [ fhir:value "The effect of invoking this operation is to determine the aggregate set of data requirements and dependencies for the activity definition. The result is a Library resource with a type of module-definition that contains all the parameter definitions and data requirements of the activity definition and any libraries referenced by it. Implementations SHOULD aggregate data requirements intelligently (i.e. by collapsing overlapping data requirements)"];
+  fhir:OperationDefinition.resource [
+     fhir:value "ActivityDefinition";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "false"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The result of the requirements gathering" ];
+     fhir:OperationDefinition.type [ fhir:value "Library" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

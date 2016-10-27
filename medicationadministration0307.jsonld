@@ -1,0 +1,224 @@
+{
+  "@context": "http://build.fhir.org/MedicationAdministration.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationAdministration/medadmin0307",
+  "Resource.id": {
+    "id.value": "medadmin0307"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0307</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0313; Lorazepam 2mg/ml injection solution 1ml vial (product) <span>(Details : {SNOMED CT code '400621001' = 'Lorazepam 2mg/mL injection solution 1mL vial (product)', given as 'Lorazepam 2mg/ml injection solution 1ml vial (product)'})</span>; </p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>effectiveTime</b>: Jan 15, 2015 4:30:00 AM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0315</a></p><p><b>device</b>: <a>Device/f001</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>0.05 - 0.1mg/kg IV over 2-5 minutes every 15 minutes as needed</td><td>Intravenous <span>(Details : {SNOMED CT code '255560000' = 'Intravenous (qualifier value)', given as 'Intravenous'})</span></td><td>Push - dosing instruction imperative (qualifier value) <span>(Details : {SNOMED CT code '420620005' = 'Push - dosing instruction imperative (qualifier value)', given as 'Push - dosing instruction imperative (qualifier value)'})</span></td><td>7 mg<span> (Details: UCUM code mg = 'mg')</span></td><td>4 min<span> (Details: UCUM code min = 'min')</span></td></tr></table></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0313"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "400621001"
+            },
+            "Coding.display": {
+              "string.value": "Lorazepam 2mg/ml injection solution 1ml vial (product)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#400621001"
+      },
+      "Medication.isBrand": {
+        "boolean.value": false
+      },
+      "Medication.product": {
+        "Medication.product.form": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "385219001"
+              },
+              "Coding.display": {
+                "string.value": "Injection solution (qualifier value)"
+              }
+            }
+          ],
+          "Resource.concept": "http://snomed.info/sct#385219001"
+        },
+        "Medication.product.ingredient": [
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://snomed.info/sct"
+                  },
+                  "Coding.code": {
+                    "code.value": "387106007"
+                  },
+                  "Coding.display": {
+                    "string.value": "Lorazepam (substance)"
+                  }
+                }
+              ],
+              "Resource.concept": "http://snomed.info/sct#387106007"
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 2
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mg"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 1
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mL"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationAdministration.status": {
+    "code.value": "completed"
+  },
+  "MedicationAdministration.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0313"
+    }
+  },
+  "MedicationAdministration.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationAdministration.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/f001"
+    },
+    "Reference.display": {
+      "string.value": "encounter who leads to this prescription"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "MedicationAdministration.effectiveTimePeriod": {
+    "Period.start": {
+      "dateTime.value": "2015-01-15T04:30:00+01:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2015-01-15T14:30:00+01:00"
+    }
+  },
+  "MedicationAdministration.performer": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "string.value": "Patrick Pump"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationAdministration.prescription": {
+    "Reference.reference": {
+      "string.value": "MedicationRequest/medrx0315"
+    },
+    "Resource.reference": "http://hl7.org/fhir//MedicationRequest/medrx0315"
+  },
+  "MedicationAdministration.device": [
+    {
+      "Reference.reference": {
+        "string.value": "Device/f001"
+      }
+    }
+  ],
+  "MedicationAdministration.dosage": {
+    "MedicationAdministration.dosage.text": {
+      "string.value": "0.05 - 0.1mg/kg IV over 2-5 minutes every 15 minutes as needed"
+    },
+    "MedicationAdministration.dosage.route": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "255560000"
+          },
+          "Coding.display": {
+            "string.value": "Intravenous"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#255560000"
+    },
+    "MedicationAdministration.dosage.method": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "420620005"
+          },
+          "Coding.display": {
+            "string.value": "Push - dosing instruction imperative (qualifier value)"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#420620005"
+    },
+    "MedicationAdministration.dosage.dose": {
+      "Quantity.value": {
+        "decimal.value": 7
+      },
+      "Quantity.unit": {
+        "string.value": "mg"
+      },
+      "Quantity.system": {
+        "uri.value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "code.value": "mg"
+      }
+    },
+    "MedicationAdministration.dosage.rateQuantity": {
+      "Quantity.value": {
+        "decimal.value": 4
+      },
+      "Quantity.unit": {
+        "string.value": "min"
+      },
+      "Quantity.system": {
+        "uri.value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "code.value": "min"
+      }
+    }
+  }
+}

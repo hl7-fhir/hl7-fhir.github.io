@@ -1,0 +1,161 @@
+{
+  "@context": "http://build.fhir.org/MedicationRequest.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationRequest/medrx0306",
+  "Resource.id": {
+    "id.value": "medrx0306"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx0306</p><p><b>contained</b>: </p><p><b>identifier</b>: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>stage</b>: original-order <span>(Details : {[not stated] code 'original-order' = 'original-order)</span></p><p><b>medication</b>: Myleran 2mg tablet. Generated Summary: id: med0304; Myleran 2mg tablet, film coated <span>(Details : {http://hl7.org/fhir/sid/ndc code '76388-713-25' = '76388-713-25', given as 'Myleran 2mg tablet, film coated'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>reasonCode</b>: Chronic myeloid Leukemia (disorder) <span>(Details : {SNOMED CT code '92818009' = 'Chronic myeloid leukemia', given as 'Chronic myeloid Leukemia (disorder)'})</span></p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0304"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/sid/ndc"
+            },
+            "Coding.code": {
+              "code.value": "76388-713-25"
+            },
+            "Coding.display": {
+              "string.value": "Myleran 2mg tablet, film coated"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationRequest.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "string.value": "12345689"
+      }
+    }
+  ],
+  "MedicationRequest.status": {
+    "code.value": "active"
+  },
+  "MedicationRequest.stage": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "code.value": "original-order"
+        }
+      }
+    ]
+  },
+  "MedicationRequest.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0304"
+    },
+    "Reference.display": {
+      "string.value": "Myleran 2mg tablet"
+    }
+  },
+  "MedicationRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationRequest.dateWritten": {
+    "dateTime.value": "2015-01-15"
+  },
+  "MedicationRequest.prescriber": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "string.value": "Patrick Pump"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationRequest.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "92818009"
+          },
+          "Coding.display": {
+            "string.value": "Chronic myeloid Leukemia (disorder)"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationRequest.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "6 mg PO daily for remission induction; adjust dosage to white blood cell (WBC) count.  With hold treatment if WBC is less than 15,000/µL; resume when WBC is greater than 50,000/µL"
+      },
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral route (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 6
+        },
+        "Quantity.unit": {
+          "string.value": "mg"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mg"
+        }
+      }
+    }
+  ]
+}

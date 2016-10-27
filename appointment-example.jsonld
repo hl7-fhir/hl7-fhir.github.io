@@ -1,0 +1,164 @@
+{
+  "@context": "http://build.fhir.org/Appointment.jsonld",
+  "@context": "http://hl7.org/fhir/Appointment/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+    }
+  },
+  "Appointment.status": {
+    "code.value": "booked"
+  },
+  "Appointment.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/service-category"
+        },
+        "Coding.code": {
+          "code.value": "gp"
+        },
+        "Coding.display": {
+          "string.value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Appointment.serviceType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "code.value": "52"
+          },
+          "Coding.display": {
+            "string.value": "General Discussion"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://example.org/specialty"
+          },
+          "Coding.code": {
+            "code.value": "gp"
+          },
+          "Coding.display": {
+            "string.value": "General Practice"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.appointmentType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/appointment-type"
+        },
+        "Coding.code": {
+          "code.value": "follow"
+        },
+        "Coding.display": {
+          "string.value": "Followup"
+        }
+      }
+    ]
+  },
+  "Appointment.priority": {
+    "unsignedInt.value": 5
+  },
+  "Appointment.description": {
+    "string.value": "Discussion on the results of your recent MRI"
+  },
+  "Appointment.start": {
+    "instant.value": "2013-12-10T09:00:00Z"
+  },
+  "Appointment.end": {
+    "instant.value": "2013-12-10T11:00:00Z"
+  },
+  "Appointment.created": {
+    "dateTime.value": "2013-10-10"
+  },
+  "Appointment.comment": {
+    "string.value": "Further expand on the results of the MRI and determine the next actions that may be appropriate."
+  },
+  "Appointment.participant": [
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Reference.display": {
+          "string.value": "Peter James Chalmers"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.type": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/v3/ParticipationType"
+              },
+              "Coding.code": {
+                "code.value": "ATND"
+              }
+            }
+          ]
+        }
+      ],
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "string.value": "Dr Adam Careful"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Location/1"
+        },
+        "Reference.display": {
+          "string.value": "South Wing, second floor"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Location/1"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    }
+  ]
+}

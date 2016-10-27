@@ -1,0 +1,34 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ServiceDefinition/example> a fhir:ServiceDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Guideline Appropriate Ordering Module</div>"
+  ];
+  fhir:ServiceDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "guildeline-appropriate-ordering" ]
+  ];
+  fhir:ServiceDefinition.version [ fhir:value "1.0.0"];
+  fhir:ServiceDefinition.title [ fhir:value "Guideline Appropriate Ordering Module"];
+  fhir:ServiceDefinition.status [ fhir:value "draft"];
+  fhir:ServiceDefinition.date [ fhir:value "2015-07-22"^^xsd:date];
+  fhir:ServiceDefinition.description [ fhir:value "Guideline appropriate ordering is used to assess appropriateness of an order given a patient, a proposed order, and a set of clinical indications."];
+  fhir:ServiceDefinition.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Guideline Appropriate Ordering" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.text [ fhir:value "Appropriate Use Criteria" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

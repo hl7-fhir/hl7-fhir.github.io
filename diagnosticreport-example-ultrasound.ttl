@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticReport/ultrasound> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ultrasound"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ultrasound</p><p><b>status</b>: final</p><p><b>category</b>: Radiology <span>(Details : {SNOMED CT code '394914008' = 'Radiology - specialty (qualifier value)', given as 'Radiology'}; {http://hl7.org/fhir/v2/0074 code 'RAD' = 'Radiology)</span></p><p><b>code</b>: Abdominal Ultrasound <span>(Details : {SNOMED CT code '45036003' = 'Ultrasonography of abdomen (procedure)', given as 'Ultrasonography of abdomen'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: Dec 1, 2012 12:00:00 PM</p><p><b>issued</b>: Dec 1, 2012 12:00:00 PM</p><p><b>performer</b>: <a>Practitioner/example</a></p><h3>Images</h3><table><tr><td>-</td><td><b>Comment</b></td><td><b>Link</b></td></tr><tr><td>*</td><td>A comment about the image</td><td><a>WADO example image</a></td></tr></table><p><b>conclusion</b>: Unremarkable study</p></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:394914008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394914008" ];
+       fhir:Coding.display [ fhir:value "Radiology" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0074" ];
+       fhir:Coding.code [ fhir:value "RAD" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:45036003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "45036003" ];
+       fhir:Coding.display [ fhir:value "Ultrasonography of abdomen" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Abdominal Ultrasound" ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2012-12-01T12:00:00+01:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.issued [ fhir:value "2012-12-01T12:00:00+01:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:DiagnosticReport.image [
+     fhir:index 0;
+     fhir:DiagnosticReport.image.comment [ fhir:value "A comment about the image" ];
+     fhir:DiagnosticReport.image.link [
+       fhir:link <http://hl7.org/fhir/Media/1.2.840.11361907579238403408700.3.0.14.19970327150033>;
+       fhir:Reference.reference [ fhir:value "Media/1.2.840.11361907579238403408700.3.0.14.19970327150033" ];
+       fhir:Reference.display [ fhir:value "WADO example image" ]
+     ]
+  ];
+  fhir:DiagnosticReport.conclusion [ fhir:value "Unremarkable study"] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Media/1.2.840.11361907579238403408700.3.0.14.19970327150033> a fhir:Media .
+
+# -------------------------------------------------------------------------------------
+

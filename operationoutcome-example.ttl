@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:OperationOutcome;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "101"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>W is not a recognized code for Gender.</p>\n    </div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "error" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "code-invalid" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.text [ fhir:value "The code \"W\" is not known and not legal in this context" ]
+     ];
+     fhir:OperationOutcome.issue.diagnostics [ fhir:value "Acme.Interop.FHIRProcessors.Patient.processGender line 2453" ];
+     fhir:OperationOutcome.issue.location [
+       fhir:value "/f:Person/f:gender";
+       fhir:index 0
+     ]
+  ]] .
+
+# -------------------------------------------------------------------------------------
+

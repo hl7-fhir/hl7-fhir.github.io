@@ -1,0 +1,171 @@
+{
+  "@context": "http://build.fhir.org/Substance.jsonld",
+  "@context": "http://hl7.org/fhir/Substance/f205",
+  "Resource.id": {
+    "id.value": "f205"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f205</p><p><b>contained</b>: , </p><p><b>category</b>: Drug or Medicament <span>(Details : {http://hl7.org.fhir/substance-category code 'drug' = 'drug', given as 'Drug or Medicament'})</span></p><p><b>code</b>: Amoxicillin + clavulanate potassium 875mg/125mg tablet (product) <span>(Details : {SNOMED CT code '392259005' = 'Amoxicillin + clavulanate potassium 875mg/125mg tablet (product)', given as 'Amoxicillin + clavulanate potassium 875mg/125mg tablet (product)'})</span></p><p><b>description</b>: Augmentin 875</p><blockquote><p><b>ingredient</b></p><p><b>quantity</b>: 875 mg<span> (Details: UCUM code mg = 'mg')</span>/1000 mg<span> (Details: UCUM code mg = 'mg')</span></p><p><b>substance</b>: id: ingr1; Amoxicillin (substance) <span>(Details : {SNOMED CT code '372687004' = 'Amoxicillin (substance)', given as 'Amoxicillin (substance)'})</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>quantity</b>: 125 mg<span> (Details: UCUM code mg = 'mg')</span>/1000 mg<span> (Details: UCUM code mg = 'mg')</span></p><p><b>substance</b>: id: ingr2; Clavulanate potassium (substance) <span>(Details : {SNOMED CT code '395938000' = 'Clavulanate potassium (substance)', given as 'Clavulanate potassium (substance)'})</span></p></blockquote></div>"
+    }
+  },
+  "Substance": [
+    {
+      "Resource.id": {
+        "id.value": "ingr1"
+      },
+      "Substance.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "372687004"
+            },
+            "Coding.display": {
+              "string.value": "Amoxicillin (substance)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#372687004"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "ingr2"
+      },
+      "Substance.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "395938000"
+            },
+            "Coding.display": {
+              "string.value": "Clavulanate potassium (substance)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#395938000"
+      }
+    }
+  ],
+  "Substance.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org.fhir/substance-category"
+          },
+          "Coding.code": {
+            "code.value": "drug"
+          },
+          "Coding.display": {
+            "string.value": "Drug or Medicament"
+          }
+        }
+      ]
+    }
+  ],
+  "Substance.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "392259005"
+        },
+        "Coding.display": {
+          "string.value": "Amoxicillin + clavulanate potassium 875mg/125mg tablet (product)"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#392259005"
+  },
+  "Substance.description": {
+    "string.value": "Augmentin 875"
+  },
+  "Substance.ingredient": [
+    {
+      "Substance.ingredient.quantity": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "decimal.value": 875
+          },
+          "Quantity.unit": {
+            "string.value": "mg"
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "mg"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "decimal.value": 1000
+          },
+          "Quantity.unit": {
+            "string.value": "mg"
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "mg"
+          }
+        }
+      },
+      "Substance.ingredient.substanceReference": {
+        "Reference.reference": {
+          "string.value": "#ingr1"
+        }
+      }
+    },
+    {
+      "Substance.ingredient.quantity": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "decimal.value": 125
+          },
+          "Quantity.unit": {
+            "string.value": "mg"
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "mg"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "decimal.value": 1000
+          },
+          "Quantity.unit": {
+            "string.value": "mg"
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "mg"
+          }
+        }
+      },
+      "Substance.ingredient.substanceReference": {
+        "Reference.reference": {
+          "string.value": "#ingr2"
+        }
+      }
+    }
+  ]
+}

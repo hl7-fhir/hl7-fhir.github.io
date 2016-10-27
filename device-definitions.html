@@ -1,0 +1,285 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Device - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/device-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="device.html">Device</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- device.html / res-Detailed Descriptions / Device -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="device.html">Content</a></li><li><a href="device-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="device-mappings.html">Mappings</a></li><li><a href="device-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">8.9.6<a name="8.9.6"> </a></span> Resource Device - Detailed Descriptions <a href="device-definitions.html#8.9.6" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the Device resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="Device"> </a><b>Device</b></td></tr>
+  <tr><td>Definition</td><td><p>This resource identifies an instance or a type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.  Medical devices includes durable (reusable) medical equipment, implantable devices, as well as disposable equipment used for diagnostic, treatment, and research for healthcare and public health.  Non-medical devices may include items such as a machine, cellphone, computer, application, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td>Requirements</td><td><p>Allows institutions to track their devices.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Determine whether HCT/TP stuff gos here or in new resource and determine boundaries.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.identifier"> </a><b>Device.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique instance identifiers assigned to a device by manufacturers other organizations or owners.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Serial Number</td></tr>
+  <tr><td>Comments</td><td><p>The barcode string from a barcode present on a device label or package may identify the instance, include names given to the device in local usage, or may identify the type of device. If the identifier identifies the type of device, Device.type element should be used.  For <a href="device.html#5.11.3.2.2">UDI</a>,  this element corresponds to the variable portion of the UDI that identifies the serial number of a specific device. See <a href="device-mappings.html#udi">UDI mappings</a> for a complete mapping of UDI parts to Device.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.udiCarrier"> </a><b>Device.udiCarrier</b></td></tr>
+  <tr><td>Definition</td><td><p><a href="device.html#5.11.3.2.2">Unique device identifier (UDI)</a> barcode or rfid string assigned to device label or package.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>UDI; Barcode String</td></tr>
+  <tr><td>Comments</td><td><p>The udiCarrier string may identify an unique instance of a device, or it may only identify the type of the device. The Human Readable format (HRF) is required in FHIR. AIDC identifiers cannot be conveyed in FHIR, Because of limitations on character sets in XML and the need to round-trip JSON data through XML.  See <a href="device-mappings.html#udi">UDI mappings</a> for a complete mapping of UDI parts to Device.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.status"> </a><b>Device.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Status of the Device availability.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>DeviceStatus: <a href="valueset-devicestatus.html">The availability status of the device.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.type"> </a><b>Device.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Code or identifier to identify a kind of device.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Device Types: <a href="valueset-device-kind.html">Codes to identify medical devices</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Comments</td><td><p>There can be different code values thath may correspond to different granularities of the same concept.  These can be represented as translations using  the <a href="datatypes.html#codeableconcept">codeableConcept</a> datatype.  For <a href="device.html#5.11.3.2.2">UDI</a>, this element corresponds to the UDI device identifier (DI) part. See <a href="device-mappings.html#udi">UDI mappings</a> for a complete mapping of UDI parts to Device.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.lotNumber"> </a><b>Device.lotNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>Lot number assigned by the manufacturer.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>Alphanumeric. For <a href="device.html#5.11.3.2.2">UDI</a>, this element corresponds to the variable portion of a UDI that identifies the lot or batch number within which a physical instance of a device was manufactured. See <a href="device-mappings.html#udi">UDI mappings</a> for a complete mapping of UDI parts to Device.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.manufacturer"> </a><b>Device.manufacturer</b></td></tr>
+  <tr><td>Definition</td><td><p>A name of the manufacturer.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.manufactureDate"> </a><b>Device.manufactureDate</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time when the device was manufactured.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td>Comments</td><td><p>For <a href="device.html#5.11.3.2.2">UDI</a>, this element corresponds to the variable portion of a UDI that identifies the date a physical instance of a device was manufactured. See <a href="device-mappings.html#udi">UDI mappings</a> for a complete mapping of UDI parts to Device.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.expirationDate"> </a><b>Device.expirationDate</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time beyond which this device is no longer valid or should not be used (if applicable).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td>Comments</td><td><p>For <a href="device.html#5.11.3.2.2">UDI</a>, this element corresponds to the variable portion of a UDI that identifies the expiration date of a physical instance of a device. See <a href="device-mappings.html#udi">UDI mappings</a> for a complete mapping of UDI parts to Device.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.model"> </a><b>Device.model</b></td></tr>
+  <tr><td>Definition</td><td><p>The &quot;model&quot; is an identifier assigned by the manufacturer to identify the product by its type. This number is shared by the all devices sold as the same type.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.version"> </a><b>Device.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The version of the device, if the device has multiple releases under the same model, or if the device is software or carries firmware.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business versionId, not a resource version id (see <a href="resource.html#versions">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.patient"> </a><b>Device.patient</b></td></tr>
+  <tr><td>Definition</td><td><p>Patient information, If the device is affixed to a person.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>If the device is implanted in a patient, then need to associate the device to the patient.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.owner"> </a><b>Device.owner</b></td></tr>
+  <tr><td>Definition</td><td><p>An organization that is responsible for the provision and ongoing maintenance of the device.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="organization.html">Organization</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.contact"> </a><b>Device.contact</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details for an organization or a particular human that is responsible for the device.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td>Comments</td><td><p>used for troubleshooting etc.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.location"> </a><b>Device.location</b></td></tr>
+  <tr><td>Definition</td><td><p>The place where the device can be found.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="location.html">Location</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Device.location can be used to track device location.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.url"> </a><b>Device.url</b></td></tr>
+  <tr><td>Definition</td><td><p>A network address on which the device may be contacted directly.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Comments</td><td><p>If the device is running a FHIR server, the network address should  be the root URL from which a conformance statement may be retrieved.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Device.note"> </a><b>Device.note</b></td></tr>
+  <tr><td>Definition</td><td><p>Descriptive information, usage information or implantation information that is not captured in an existing element.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Annotation">Annotation</a></td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdevice-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdevice-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

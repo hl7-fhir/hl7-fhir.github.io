@@ -1,0 +1,427 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Relatedartifact - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/relatedartifact.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="clinicalreasoning-module.html"><img src="reasoning.png"/> Clinical Reasoning</a></li>
+        <li><b>RelatedArtifact</b></li>          <!-- relatedartifact.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">RelatedResource</a></li><li><a href="relatedartifact-examples.html">Examples</a></li><li><a href="relatedartifact-definitions.html">Detailed Descriptions</a></li><li><a href="relatedartifact-mappings.html">Mappings</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">14.12.0<a name="14.12.0"> </a></span> RelatedArtifact <a href="relatedartifact.html#14.12.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/dss/index.cfm" _target="blank">Clinical Decision Support <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>The RelatedArtifact structure defines resources related to a module such as previous and next versions of documents, documentation, citations, etc. Note that the name <i>resource</i> here is being used in a more general sense than the FHIR-specific Resource. The related resource may be a FHIR resource, or it may be another type of resource, represented using the Attachment data type.</p>
+
+<a name="definition"/>
+<h2 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">14.12.0.1</span> 
+Content
+ <a href="relatedartifact.html#definition" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<div id="tabs-RelatedArtifact">
+ <ul>
+  <li><a href="#tabs-RelatedArtifact-struc">Structure</a></li>
+  <li><a href="#tabs-RelatedArtifact-uml">UML</a></li>
+  <li><a href="#tabs-RelatedArtifact-xml">XML</a></li>
+  <li><a href="#tabs-RelatedArtifact-json">JSON</a></li>
+  <li><a href="#tabs-RelatedArtifact-ttl">Turtle</a></li>
+  <li><a href="#tabs-RelatedArtifact-diff">R2 Diff</a></li>
+  <li><a href="#tabs-RelatedArtifact-all">All</a></li>
+ </ul>
+ <div id="tabs-RelatedArtifact-struc">
+  <div id="tbl">
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact" title="RelatedArtifact : Related artifacts such as additional documentation, justification, or bibliographic references.">RelatedArtifact</a><a name="RelatedArtifact"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Related artifacts for a knowledge resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.type" title="RelatedArtifact.type : The type of relationship to the related artifact.">type</a><a name="RelatedArtifact.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of<br/><a href="valueset-related-artifact-type.html" title="The type of relationship to the related artifact">RelatedArtifactType</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.display" title="RelatedArtifact.display : A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.">display</a><a name="RelatedArtifact.display"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Brief description of the related artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="RelatedArtifact.citation : A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.">citation</a><a name="RelatedArtifact.citation"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Bibliographic citation for the artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.url" title="RelatedArtifact.url : A url for the artifact that can be followed to access the actual content.">url</a><a name="RelatedArtifact.url"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Url for the related artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.document" title="RelatedArtifact.document : The document being referenced, represented as an attachment. This is exclusive with the resource element.">document</a><a name="RelatedArtifact.document"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Attachment">Attachment</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The related document</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="RelatedArtifact.resource : The related resource, such as a library, value set, profile, or other knowledge resource.">resource</a><a name="RelatedArtifact.resource"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The related resource</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-RelatedArtifact-uml">
+  <div id="uml">
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="544.8" version="1.1" height="140.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1)" rx="4" ry="4" x="160.0" width="184.8" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="120.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="344.8" style="stroke:dimgrey;stroke-width:1"/><text x="252.4" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#relatedartifact">RelatedArtifact</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.type"><title>The type of relationship to the related artifact</title>type</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="valueset-related-artifact-type.html"><title>The type of relationship to the related artifact (Strength=Required)</title>RelatedArtifactType</a>! »</text><text x="166.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.display"><title>A brief description of the document or knowledge resource being referenced, suitable for display to a consumer</title>display</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="166.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.citation"><title>A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format</title>citation</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="166.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.url"><title>A url for the artifact that can be followed to access the actual content</title>url</a> : <a xlink:href="datatypes.html#uri">uri</a> [0..1]</text><text x="166.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.document"><title>The document being referenced, represented as an attachment. This is exclusive with the resource element</title>document</a> : <a xlink:href="datatypes.html#Attachment">Attachment</a> [0..1]</text><text x="166.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.resource"><title>The related resource, such as a library, value set, profile, or other knowledge resource</title>resource</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="resourcelist.html#Any">Any</a> »</text></g></g><line y1="33.8422131147541" x1="114.4" y2="42.48565573770492" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(10.733034940445043 114.4 33.8422131147541)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,33.8422131147541 122.4,39.8422131147541 122.4,27.842213114754102 114.4,33.8422131147541"/></svg>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-RelatedArtifact-xml">
+  <div id="xml">
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+    <pre class="spec">
+&lt;<a href="relatedartifact-definitions.html#RelatedArtifact" title="Related artifacts such as additional documentation, justification, or bibliographic references." class="dict"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.type" title="The type of relationship to the related artifact." class="dict"><b>type</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-related-artifact-type.html">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.display" title="A brief description of the document or knowledge resource being referenced, suitable for display to a consumer." class="dict"><b>display</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Brief description of the related artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format." class="dict"><b>citation</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Bibliographic citation for the artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.url" title="A url for the artifact that can be followed to access the actual content." class="dict"><b>url</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Url for the related artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.document" title="The document being referenced, represented as an attachment. This is exclusive with the resource element." class="dict"><b>document</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The related document</a></span><span style="color: Gray"> --&gt;</span>&lt;/document&gt;
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="The related resource, such as a library, value set, profile, or other knowledge resource." class="dict"><b>resource</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The related resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/resource&gt;
+&lt;/[name]&gt;
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-RelatedArtifact-json">
+  <div id="json">
+   <p><b>JSON Template</b></p>   <div id="json-inner">
+    <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="relatedartifact-definitions.html#RelatedArtifact" title="Related artifacts such as additional documentation, justification, or bibliographic references." class="dict"><b>RelatedArtifact</b></a>&quot;,
+  // from Element: <a href="extensibility.html">extension</a>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.type" title="The type of relationship to the related artifact." class="dict">type</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-related-artifact-type.html">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.display" title="A brief description of the document or knowledge resource being referenced, suitable for display to a consumer." class="dict">display</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Brief description of the related artifact</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format." class="dict">citation</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Bibliographic citation for the artifact</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.url" title="A url for the artifact that can be followed to access the actual content." class="dict">url</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Url for the related artifact</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.document" title="The document being referenced, represented as an attachment. This is exclusive with the resource element." class="dict">document</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The related document</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="The related resource, such as a library, value set, profile, or other knowledge resource." class="dict">resource</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> } <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The related resource</a></span>
+}
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-RelatedArtifact-ttl">
+  <div id="json">
+   <p><b>Turtle Template</b></p>   <div id="ttl-inner">
+    <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.type" title="The type of relationship to the related artifact." class="dict">RelatedArtifact.type</a><a name="ttl-type"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.display" title="A brief description of the document or knowledge resource being referenced, suitable for display to a consumer." class="dict">RelatedArtifact.display</a><a name="ttl-display"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Brief description of the related artifact</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format." class="dict">RelatedArtifact.citation</a><a name="ttl-citation"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Bibliographic citation for the artifact</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.url" title="A url for the artifact that can be followed to access the actual content." class="dict">RelatedArtifact.url</a><a name="ttl-url"> </a>[ <a href="datatypes.html#uri">uri</a> ]; # 0..1 <span style="color: navy">Url for the related artifact</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.document" title="The document being referenced, represented as an attachment. This is exclusive with the resource element." class="dict">RelatedArtifact.document</a><a name="ttl-document"> </a>[ <a href="datatypes.html#Attachment">Attachment</a> ]; # 0..1 <span style="color: navy">The related document</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="The related resource, such as a library, value set, profile, or other knowledge resource." class="dict">RelatedArtifact.resource</a><a name="ttl-resource"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ]; # 0..1 <span style="color: navy">The related resource</span>
+]
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-RelatedArtifact-diff">
+  <div id="diff">
+   <p><b>Changes since DSTU2</b></p>   <div id="diff-inner">
+    <p>This complex-type did not exist in Release 2</p>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-RelatedArtifact-all">
+  <div id="tbla">
+   <a name="tbl-RelatedArtifact"> </a>
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact" title="RelatedArtifact : Related artifacts such as additional documentation, justification, or bibliographic references.">RelatedArtifact</a><a name="RelatedArtifact"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Related artifacts for a knowledge resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.type" title="RelatedArtifact.type : The type of relationship to the related artifact.">type</a><a name="RelatedArtifact.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of<br/><a href="valueset-related-artifact-type.html" title="The type of relationship to the related artifact">RelatedArtifactType</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.display" title="RelatedArtifact.display : A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.">display</a><a name="RelatedArtifact.display"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Brief description of the related artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="RelatedArtifact.citation : A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.">citation</a><a name="RelatedArtifact.citation"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Bibliographic citation for the artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.url" title="RelatedArtifact.url : A url for the artifact that can be followed to access the actual content.">url</a><a name="RelatedArtifact.url"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Url for the related artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.document" title="RelatedArtifact.document : The document being referenced, represented as an attachment. This is exclusive with the resource element.">document</a><a name="RelatedArtifact.document"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Attachment">Attachment</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The related document</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="RelatedArtifact.resource : The related resource, such as a library, value set, profile, or other knowledge resource.">resource</a><a name="RelatedArtifact.resource"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The related resource</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+
+  <div id="umla">
+   <a name="uml-RelatedArtifact"> </a>
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="544.8" version="1.1" height="140.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1b" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="160.0" width="184.8" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="120.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="344.8" style="stroke:dimgrey;stroke-width:1"/><text x="252.4" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#relatedartifact">RelatedArtifact</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.type"><title>The type of relationship to the related artifact</title>type</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="valueset-related-artifact-type.html"><title>The type of relationship to the related artifact (Strength=Required)</title>RelatedArtifactType</a>! »</text><text x="166.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.display"><title>A brief description of the document or knowledge resource being referenced, suitable for display to a consumer</title>display</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="166.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.citation"><title>A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format</title>citation</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="166.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.url"><title>A url for the artifact that can be followed to access the actual content</title>url</a> : <a xlink:href="datatypes.html#uri">uri</a> [0..1]</text><text x="166.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.document"><title>The document being referenced, represented as an attachment. This is exclusive with the resource element</title>document</a> : <a xlink:href="datatypes.html#Attachment">Attachment</a> [0..1]</text><text x="166.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#RelatedArtifact.resource"><title>The related resource, such as a library, value set, profile, or other knowledge resource</title>resource</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="resourcelist.html#Any">Any</a> »</text></g></g><line y1="33.8422131147541" x1="114.4" y2="42.48565573770492" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(10.733034940445043 114.4 33.8422131147541)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,33.8422131147541 122.4,39.8422131147541 122.4,27.842213114754102 114.4,33.8422131147541"/></svg>
+   </div>
+  </div>
+
+  <div id="xmla">
+   <a name="xml-RelatedArtifact"> </a>
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+     <pre class="spec">
+&lt;<a href="relatedartifact-definitions.html#RelatedArtifact" title="Related artifacts such as additional documentation, justification, or bibliographic references." class="dict"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.type" title="The type of relationship to the related artifact." class="dict"><b>type</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-related-artifact-type.html">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.display" title="A brief description of the document or knowledge resource being referenced, suitable for display to a consumer." class="dict"><b>display</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Brief description of the related artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format." class="dict"><b>citation</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Bibliographic citation for the artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.url" title="A url for the artifact that can be followed to access the actual content." class="dict"><b>url</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Url for the related artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.document" title="The document being referenced, represented as an attachment. This is exclusive with the resource element." class="dict"><b>document</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The related document</a></span><span style="color: Gray"> --&gt;</span>&lt;/document&gt;
+ &lt;<a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="The related resource, such as a library, value set, profile, or other knowledge resource." class="dict"><b>resource</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The related resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/resource&gt;
+&lt;/[name]&gt;
+</pre>
+
+
+   </div>
+  </div>
+
+  <div id="jsona">
+   <a name="json-RelatedArtifact"> </a>
+   <p><b>JSON Template</b></p>
+   <div id="json-inner">
+     <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="relatedartifact-definitions.html#RelatedArtifact" title="Related artifacts such as additional documentation, justification, or bibliographic references." class="dict"><b>RelatedArtifact</b></a>&quot;,
+  // from Element: <a href="extensibility.html">extension</a>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.type" title="The type of relationship to the related artifact." class="dict">type</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-related-artifact-type.html">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.display" title="A brief description of the document or knowledge resource being referenced, suitable for display to a consumer." class="dict">display</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Brief description of the related artifact</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format." class="dict">citation</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Bibliographic citation for the artifact</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.url" title="A url for the artifact that can be followed to access the actual content." class="dict">url</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Url for the related artifact</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.document" title="The document being referenced, represented as an attachment. This is exclusive with the resource element." class="dict">document</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The related document</a></span>
+  &quot;<a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="The related resource, such as a library, value set, profile, or other knowledge resource." class="dict">resource</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> } <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The related resource</a></span>
+}
+</pre>
+
+
+   </div>
+  </div>
+  <div id="ttla">
+   <a name="ttl-RelatedArtifact"> </a>
+   <p><b>Turtle Template</b></p>
+   <div id="ttl-inner">
+     <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.type" title="The type of relationship to the related artifact." class="dict">RelatedArtifact.type</a><a name="ttl-type"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.display" title="A brief description of the document or knowledge resource being referenced, suitable for display to a consumer." class="dict">RelatedArtifact.display</a><a name="ttl-display"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Brief description of the related artifact</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.citation" title="A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format." class="dict">RelatedArtifact.citation</a><a name="ttl-citation"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Bibliographic citation for the artifact</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.url" title="A url for the artifact that can be followed to access the actual content." class="dict">RelatedArtifact.url</a><a name="ttl-url"> </a>[ <a href="datatypes.html#uri">uri</a> ]; # 0..1 <span style="color: navy">Url for the related artifact</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.document" title="The document being referenced, represented as an attachment. This is exclusive with the resource element." class="dict">RelatedArtifact.document</a><a name="ttl-document"> </a>[ <a href="datatypes.html#Attachment">Attachment</a> ]; # 0..1 <span style="color: navy">The related document</span>
+  fhir:<a href="relatedartifact-definitions.html#RelatedArtifact.resource" title="The related resource, such as a library, value set, profile, or other knowledge resource." class="dict">RelatedArtifact.resource</a><a name="ttl-resource"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ]; # 0..1 <span style="color: navy">The related resource</span>
+]
+</pre>
+
+
+   </div>
+  </div>
+  <div id="diffa">
+   <a name="diff-RelatedArtifact"> </a>
+   <p><b>Changes since DSTU2</b></p>
+   <div id="diff-inner">
+     <p>This complex-type did not exist in Release 2</p>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+
+<div class="use">
+<p><b>Constraints</b></p>
+
+</div>
+
+<p>
+RelatedArtifact is used in the following places: <a href="activitydefinition.html">ActivityDefinition</a>, <a href="activitygroup.html">ActivityGroup</a>, <a href="decisionsupportservicemodule.html">DecisionSupportServiceModule</a>, <a href="guidanceresponse.html">GuidanceResponse</a>, <a href="library.html">Library</a>, <a href="measure.html">Measure</a>, <a href="plandefinition.html">PlanDefinition</a> and <a href="servicedefinition.html">ServiceDefinition</a>
+</p>
+
+<a name="interpretation"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">14.12.0.2</span> Interpretation of RelatedArtifact in different contexts <a href="relatedartifact.html#interpretation" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+  <!-- TODO -->
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Frelatedartifact.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Frelatedartifact.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){ 
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+
+$( '#tabs-RelatedArtifact' ).tabs({ active: currentTabIndex, activate: function( event, ui ) { store(ui.newTab.index()); } });
+     
+     
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){ 
+  }
+  $( '#tabs-RelatedArtifact' ).tabs('option', 'active', currentTab);
+}     
+</script>
+  
+</body>
+</html>

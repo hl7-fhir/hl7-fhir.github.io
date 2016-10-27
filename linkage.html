@@ -1,0 +1,509 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Linkage - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/linkage.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="workflow-module.html"><img src="workflow.png"/> Workflow</a></li>        <li><b>Linkage</b></li>          <!-- linkage.html / resource / Linkage -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="linkage-examples.html">Examples</a></li><li><a href="linkage-definitions.html">Detailed Descriptions</a></li><li><a href="linkage-mappings.html">Mappings</a></li><li><a href="linkage-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">12.10<a name="12.10"> </a></span> Resource Linkage - Content <a href="linkage.html#12.10" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<p style="background-color: salmon; border:1px solid maroon; padding: 5px;">This resource is <a href="timelines.html#levels">marked as a draft</a>.</p>
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/patientcare/index.cfm" _target="blank">Patient Care <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 0</td><td><a href="compartmentdefinition.html">Compartments</a>: <a href="compartmentdefinition-practitioner.html">Practitioner</a></td></tr>
+</table>
+
+
+
+<p> 
+Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;. 
+</p>
+
+
+<div>
+<a name="bnc"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">12.10.1</span> Scope and Usage <a href="linkage.html#bnc" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+This resource allows the assertion of linkages between multiple resource instances (generally of the same type) that are referring to the same underlying business objects.  For example, multiple Condition records that refer to the same underlying problem/issue for a particular Patient; multiple AllergyIntolerance records that refer to the same reaction susceptibility; multiple Patient, Practioner and/or RelatedPerson records that refer to the same human being or animal.
+</p>
+<p>
+FHIR supports a process for sharing electronic records.  It is common for multiple records to exist that deal with the same real-world phenomenon.  This can result from information being captured by different systems, information being captured within a single system by different users (either deliberately to represent distinct perspectives or accidentally when a new record is created rather than updating an existing record).  These multiple records may be referred to as &quot;duplicate&quot; records, but in practice they aren't often actually &quot;duplicate&quot; in that the data represented (and the history of the records) will be at least somewhat distinct.
+</p>
+<p>
+In some cases, the solution upon identifying duplicates is to deprecate one of the records (e.g. by changing the status to &quot;entered in error&quot;) and move all relevant information to the surviving record.  In other cases, the resource may support the ability to establish a linkage directly between the resources.  However, in some cases, both records may need to survive or there's a desire to have both resources continue to be maintained, perhaps because the resources
+live on different servers or have different 'owners'.  The <b>Linkage</b> resource is intended to satisfy this use-case.
+</p>
+
+</div>
+
+  <!-- (recommended): 
+<div>
+<h2>Boundaries and Relationships</h2>
+<p>
+Explains how this resource relates to others. Particularly important is to differentiate between appropriate usages for related resources when an implementer might be confused about what to reference when.
+</p>
+</div> -->
+
+  <!-- (optional):
+<div>
+<h2>Background and Context</h2>
+<p>
+Provides additional detail on exactly how the resource is to be used
+</p>
+</div> -->
+
+
+
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">12.10.2</span> 
+Resource Content
+ <a href="linkage.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="linkage"> </a>
+<a name="Linkage"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="linkage-definitions.html#Linkage" title="Linkage : Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;.">Linkage</a><a name="Linkage"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Links records for 'same' item</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.author" title="Linkage.author : Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage.">author</a><a name="Linkage.author"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who is responsible for linkages</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.item" title="Linkage.item : Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items.">item</a><a name="Linkage.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="backboneelement.html">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Item to be linked</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.item.type" title="Linkage.item.type : Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations.">type</a><a name="Linkage.item.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">source | alternate | historical<br/><a href="valueset-linkage-type.html" title="Used to distinguish different roles a resource can play within a set of linked resources">LinkageType</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.item.resource" title="Linkage.item.resource : The resource instance being linked as part of the group.">resource</a><a name="Linkage.item.resource"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>()</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Resource being linked</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="669.6" version="1.1" height="84.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="242.00000000000003" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="50.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="242.00000000000003" style="stroke:dimgrey;stroke-width:1"/><text x="121.00000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Linkage<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="linkage-definitions.html#Linkage.author"><title>Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage</title>author</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="practitioner.html#Practitioner">Practitioner</a>|<a xlink:href="organization.html#Organization">Organization</a> »</text><g><rect filter="url(#shadowA)" rx="4" ry="4" x="320.0" width="149.60000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="28.0" x1="320.0" y2="28.0" x2="469.6" style="stroke:dimgrey;stroke-width:1"/><text x="394.8" y="20.0" fill="black" class="diagram-class-title">Item</text><text x="326.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="linkage-definitions.html#Linkage.item.type"><title>Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations</title>type</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="valueset-linkage-type.html"><title>Used to distinguish different roles a resource can play within a set of linked resources (Strength=Required)</title>LinkageType</a>! »</text><text x="326.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="linkage-definitions.html#Linkage.item.resource"><title>The resource instance being linked as part of the group</title>resource</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] «  »</text></g></g><line y1="28.093498904309715" x1="242.00000000000003" y2="30.08765522279036" x2="320.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(1.4645109843363358 242.00000000000003 28.093498904309715)" style="fill:navy;stroke:navy;stroke-width:1" points="242.00000000000003,28.093498904309715 248.00000000000003,32.09349890430971 254.00000000000003,28.093498904309715 248.00000000000003,24.093498904309715 242.00000000000003,28.093498904309715"/><rect x="272.5" width="17.0" y="22.0" style="fill:white;stroke:black;stroke-width:0" height="18.0"/><text x="281.0" y="32.0" fill="black" class="diagram-class-linkage"><a xlink:href="linkage-definitions.html#Linkage.item"><title>Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items</title>item</a></text><text x="300.0" y="26.08765522279036" fill="black" class="diagram-class-linkage">[1..*]</text></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="linkage-definitions.html#Linkage" title="Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;." class="dict"><b>Linkage</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="linkage-definitions.html#Linkage.author" title="Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage." class="dict"><b>author</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who is responsible for linkages</a></span><span style="color: Gray"> --&gt;</span>&lt;/author&gt;
+ &lt;<a href="linkage-definitions.html#Linkage.item" title="Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items." class="dict"><b>item</b></a>&gt;  <span style="color: Gray">&lt;!-- <span style="color: brown"><b>1..*</b></span> Item to be linked --&gt;</span>
+  &lt;<a href="linkage-definitions.html#Linkage.item.type" title="Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations." class="dict"><b>type</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-linkage-type.html">source | alternate | historical</a></span><span style="color: Gray"> --&gt;</span>
+  &lt;<a href="linkage-definitions.html#Linkage.item.resource" title="The resource instance being linked as part of the group." class="dict"><b>resource</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Resource being linked</a></span><span style="color: Gray"> --&gt;</span>&lt;/resource&gt;
+ &lt;/item&gt;
+&lt;/Linkage&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="linkage-definitions.html#Linkage" title="Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;." class="dict"><b>Linkage</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="linkage-definitions.html#Linkage.author" title="Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage." class="dict">author</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who is responsible for linkages</a></span>
+  &quot;<a href="linkage-definitions.html#Linkage.item" title="Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items." class="dict">item</a>&quot; : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Item to be linked</a></span>
+    &quot;<a href="linkage-definitions.html#Linkage.item.type" title="Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations." class="dict">type</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-linkage-type.html">source | alternate | historical</a></span>
+    &quot;<a href="linkage-definitions.html#Linkage.item.resource" title="The resource instance being linked as part of the group." class="dict">resource</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a></span> } <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Resource being linked</a></span>
+  }]
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="linkage-definitions.html#Linkage" title="Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;." class="dict"><b>Linkage</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="linkage-definitions.html#Linkage.author" title="Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage." class="dict">Linkage.author</a><a name="ttl-author"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>) ]; # 0..1 <span style="color: navy">Who is responsible for linkages</span>
+  fhir:<a href="linkage-definitions.html#Linkage.item" title="Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items." class="dict">Linkage.item</a><a name="ttl-item"> </a>[ # 1..* <span style="color: navy">Item to be linked</span>
+    fhir:<a href="linkage-definitions.html#Linkage.item.type" title="Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations." class="dict">Linkage.item.type</a><a name="ttl-type"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">source | alternate | historical</span>
+    fhir:<a href="linkage-definitions.html#Linkage.item.resource" title="The resource instance being linked as part of the group." class="dict">Linkage.item.resource</a><a name="ttl-resource"> </a>[ <a href="references.html#Reference">Reference</a> ]; # 1..1 <span style="color: navy">Resource being linked</span>
+  ], ...;
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <p>This resource did not exist in Release 2</p>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="linkage-definitions.html#Linkage" title="Linkage : Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;.">Linkage</a><a name="Linkage"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Links records for 'same' item</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.author" title="Linkage.author : Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage.">author</a><a name="Linkage.author"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who is responsible for linkages</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.item" title="Linkage.item : Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items.">item</a><a name="Linkage.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="backboneelement.html">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Item to be linked</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.item.type" title="Linkage.item.type : Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations.">type</a><a name="Linkage.item.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">source | alternate | historical<br/><a href="valueset-linkage-type.html" title="Used to distinguish different roles a resource can play within a set of linked resources">LinkageType</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="linkage-definitions.html#Linkage.item.resource" title="Linkage.item.resource : The resource instance being linked as part of the group.">resource</a><a name="Linkage.item.resource"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>()</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Resource being linked</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="669.6" version="1.1" height="84.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="242.00000000000003" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="50.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="242.00000000000003" style="stroke:dimgrey;stroke-width:1"/><text x="121.00000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Linkage<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="linkage-definitions.html#Linkage.author"><title>Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage</title>author</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="practitioner.html#Practitioner">Practitioner</a>|<a xlink:href="organization.html#Organization">Organization</a> »</text><g><rect filter="url(#shadowB)" rx="4" ry="4" x="320.0" width="149.60000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="28.0" x1="320.0" y2="28.0" x2="469.6" style="stroke:dimgrey;stroke-width:1"/><text x="394.8" y="20.0" fill="black" class="diagram-class-title">Item</text><text x="326.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="linkage-definitions.html#Linkage.item.type"><title>Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations</title>type</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="valueset-linkage-type.html"><title>Used to distinguish different roles a resource can play within a set of linked resources (Strength=Required)</title>LinkageType</a>! »</text><text x="326.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="linkage-definitions.html#Linkage.item.resource"><title>The resource instance being linked as part of the group</title>resource</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] «  »</text></g></g><line y1="28.093498904309715" x1="242.00000000000003" y2="30.08765522279036" x2="320.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(1.4645109843363358 242.00000000000003 28.093498904309715)" style="fill:navy;stroke:navy;stroke-width:1" points="242.00000000000003,28.093498904309715 248.00000000000003,32.09349890430971 254.00000000000003,28.093498904309715 248.00000000000003,24.093498904309715 242.00000000000003,28.093498904309715"/><rect x="272.5" width="17.0" y="22.0" style="fill:white;stroke:black;stroke-width:0" height="18.0"/><text x="281.0" y="32.0" fill="black" class="diagram-class-linkage"><a xlink:href="linkage-definitions.html#Linkage.item"><title>Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items</title>item</a></text><text x="300.0" y="26.08765522279036" fill="black" class="diagram-class-linkage">[1..*]</text></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="linkage-definitions.html#Linkage" title="Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;." class="dict"><b>Linkage</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="linkage-definitions.html#Linkage.author" title="Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage." class="dict"><b>author</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who is responsible for linkages</a></span><span style="color: Gray"> --&gt;</span>&lt;/author&gt;
+ &lt;<a href="linkage-definitions.html#Linkage.item" title="Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items." class="dict"><b>item</b></a>&gt;  <span style="color: Gray">&lt;!-- <span style="color: brown"><b>1..*</b></span> Item to be linked --&gt;</span>
+  &lt;<a href="linkage-definitions.html#Linkage.item.type" title="Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations." class="dict"><b>type</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-linkage-type.html">source | alternate | historical</a></span><span style="color: Gray"> --&gt;</span>
+  &lt;<a href="linkage-definitions.html#Linkage.item.resource" title="The resource instance being linked as part of the group." class="dict"><b>resource</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Resource being linked</a></span><span style="color: Gray"> --&gt;</span>&lt;/resource&gt;
+ &lt;/item&gt;
+&lt;/Linkage&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="linkage-definitions.html#Linkage" title="Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;." class="dict"><b>Linkage</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="linkage-definitions.html#Linkage.author" title="Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage." class="dict">author</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who is responsible for linkages</a></span>
+  &quot;<a href="linkage-definitions.html#Linkage.item" title="Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items." class="dict">item</a>&quot; : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Item to be linked</a></span>
+    &quot;<a href="linkage-definitions.html#Linkage.item.type" title="Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations." class="dict">type</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-linkage-type.html">source | alternate | historical</a></span>
+    &quot;<a href="linkage-definitions.html#Linkage.item.resource" title="The resource instance being linked as part of the group." class="dict">resource</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a></span> } <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Resource being linked</a></span>
+  }]
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="linkage-definitions.html#Linkage" title="Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;." class="dict"><b>Linkage</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="linkage-definitions.html#Linkage.author" title="Identifies the user or organization responsible for asserting the linkages and who establishes the context for evaluating the nature of each linkage." class="dict">Linkage.author</a><a name="ttl-author"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>) ]; # 0..1 <span style="color: navy">Who is responsible for linkages</span>
+  fhir:<a href="linkage-definitions.html#Linkage.item" title="Identifies one of the records that is considered to refer to the same real-world occurrence as well as how the items hould be evaluated within the collection of linked items." class="dict">Linkage.item</a><a name="ttl-item"> </a>[ # 1..* <span style="color: navy">Item to be linked</span>
+    fhir:<a href="linkage-definitions.html#Linkage.item.type" title="Distinguishes which item is &quot;source of truth&quot; (if any) and which items are no longer considered to be current representations." class="dict">Linkage.item.type</a><a name="ttl-type"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">source | alternate | historical</span>
+    fhir:<a href="linkage-definitions.html#Linkage.item.resource" title="The resource instance being linked as part of the group." class="dict">Linkage.item.resource</a><a name="ttl-resource"> </a>[ <a href="references.html#Reference">Reference</a> ]; # 1..1 <span style="color: navy">Resource being linked</span>
+  ], ...;
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <p>This resource did not exist in Release 2</p>
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="linkage.profile.xml.html">XML</a>, <a href="linkage.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="linkage.xsd">Schema</a>/<a href="linkage.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="Linkage.schema.json">Schema</a>, <a href="linkage.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">12.10.2.1</span> 
+Terminology Bindings
+ <a href="linkage.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="LinkageType">Linkage.item.type </td><td valign="top">Used to distinguish different roles a resource can play within a set of linked resources</td><td><a href="terminologies.html#required">Required</a></td><td valign="top"><a href="valueset-linkage-type.html">LinkageType</a>  <!-- b --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+  <!-- insert xhtml content here -->
+
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">12.10.3</span> Search Parameters <a href="linkage.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>author</td><td><a href="search.html#reference">reference</a></td><td>Author of the Linkage</td><td>Linkage.author<br/>(<a href="practitioner.html">Practitioner</a>, <a href="organization.html">Organization</a>)</td></tr>
+<tr><td>item</td><td><a href="search.html#reference">reference</a></td><td>Matches on any item in the Linkage</td><td>Linkage.item.resource</td></tr>
+<tr><td>source</td><td><a href="search.html#reference">reference</a></td><td>Matches on any item in the Linkage with a type of 'source'</td><td>Linkage.item.resource</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Flinkage.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Flinkage.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,818 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Messaging - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/messaging.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><b>Messaging</b></li>          <!-- messaging.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1 class="self-link-parent"><span class="sectioncount">2.45<a name="2.45"> </a></span> Messaging using FHIR Resources <a href="messaging.html#2.45" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+FHIR Resources can be used in a traditional messaging context, much like <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 v2 <img src="external.png" style="text-align: baseline"/></a> (see <a href="comparison-v2.html">detailed comparison</a>).
+Applications asserting conformance to this framework claim to be conformant to &quot;FHIR messaging&quot;  (see <a href="conformance-rules.html">Conformance</a>).
+</p>
+
+<p>
+In FHIR messaging, a &quot;request message&quot; is sent from a source application to a destination
+application when an event happens. Events mostly correspond to things that happen in the
+real world. The request message consists of a <a href="bundle.html">Bundle</a> identified
+by the <a href="bundle-definitions.html#Bundle.type">type</a> &quot;message&quot;,
+with the first resource in the bundle being a <a href="messageheader.html">MessageHeader</a>
+resource. The MessageHeader resource has a code - the message event - that identifies the
+nature of the request message, and it also carries additional request metadata.
+The other resources in the bundle depend on the type of the request.
+</p>
+<p>
+The events supported in FHIR, along with the resources that are included in them, are defined below.
+</p>
+<p>
+The destination application processes the request and returns one or more response messages
+which are also a <a href="bundle.html">bundle</a> of resources identified
+by the <a href="bundle-definitions.html#Bundle.type">type</a> &quot;message&quot;, with the first
+resource in each bundle being a <a href="messageheader.html">MessageHeader</a> resource with a response
+section that reports the outcome of processing the message and any additional response
+resources required.
+</p>
+<ul>
+ <li>Example Request Message: <A href="message-request-link.xml.html"/> </li>
+ <li>Example Response Message: <A href="message-response-link.xml.html"/> </li>
+</ul>
+
+<a name="basic"> </a>
+
+<h2 class="self-link-parent"><span class="sectioncount">2.45.1</span> Basic Messaging Assumptions <a href="messaging.html#basic" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+This specification assumes that content will be delivered from one application to
+another by some delivery mechanism, and then one or more responses will be returned
+to the source application. The exact mechanism of transfer is irrelevant to
+this specification, but may include file transfer, HTTP based transfer, MLLP
+(HL7 minimal lower layer protocol), MQ series messaging or anything else.
+The only requirement for the transfer layer is that requests are sent to
+a known location and responses are returned to the source of the request.
+This specification considers the source and destination applications as logical
+entities, and the mapping from logical source and destination to implementation
+specific addresses is outside the scope of this specification, though this
+specification does provide a direct delivery mechanism below.
+</p>
+<p>
+The agreements around the content of the messages and the behavior of the two
+applications form the &quot;contract&quot; that describes the exchange. The contract
+will add regional and local agreements to the rules defined in this specification.
+</p>
+<p>
+This specification ignores the existence of interface engines and message
+transfer agents that exist between the <i>source</i> and <i>destination</i>.
+Either they are transparent to the message/transaction content and irrelevant
+to this specification, or they are actively involved in manipulating the message
+content (in particular, the source and destination headers are often changed).
+If these middleware agents are modifying the message content, then they become
+responsible for honoring the contract that applies (including applicable profiles)
+in both directions.
+</p>
+<p>
+A key aspect of a message is the impact of its content:
+</p>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.1.1<a name="2.45.1.1"> </a></span> The impact of the content of a message. <a href="messaging.html#2.45.1.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="codes">
+ <tr><td>Consequence</td><td>The message represents/requests a change that should not be processed more than once; e.g. Making a booking for an appointment.</td></tr>
+ <tr><td>Currency</td><td>The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.</td></tr>
+ <tr><td>Notification</td><td>The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.</td></tr>
+</table>
+
+<p>
+Some Events defined by FHIR are assigned to one of these categories,
+but others are not able to be categorized in advance, and the category
+must be determined by the content, or the context.
+</p>
+
+<a name="synchronous"> </a>
+<a name="patterns"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.1.2</span> Message Exchange Patterns <a href="messaging.html#patterns" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Each FHIR request message has one or more response messages. There must be at least
+one response message so that the sender can know that the message was properly
+received. Multiple response messages SHALL NOT be returned for messages of consequence,
+and SHOULD not be returned for notifications.
+</p>
+<p>
+In principle, source applications are not required to wait for a response to
+a transaction before issuing a new transaction. However in many cases, the
+messages in a given stream are dependent on each other, and must be sent and
+processed in order. In addition, some transfer methods may require sequential
+delivery of messages.
+</p>
+<p>
+For this reason, a synchronous exchange pattern - where the sender sends a
+message, and waits on the same channel for a single response, and then
+sends the next message - is the easiest to understand and manage. The
+<a href="#process">$process-message</a> <a href="operations.html">operation</a>
+described below works in this fashion.
+</p>
+<p>
+However synchronous message exchange does not cater for multiple response
+messages, which may arise when processing queries, and also imposes
+through-put limitations which may become relevant at high volumes.
+Additionally, it may not be practical or appropriate to wait for
+response messages. In these cases, the asynchronous message pattern
+<a href="#async">described below</a> should be used.
+</p>
+
+
+<h3 class="self-link-parent"><span class="sectioncount">2.45.1.3<a name="2.45.1.3"> </a></span> MessageHeader Identifiers <a href="messaging.html#2.45.1.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+An incoming message contains two identifiers: the Bundle.id and
+the <a href="messageheader.html">MessageHeader</a>.id.
+Each time a new message is created, it SHALL be assigned an identifier
+(MessageHeader.id) that is unique within that message stream.
+Note that since message streams are often merged with other streams,
+it is recommended that the identifier should be globally unique.
+This can be achieved by using a UUID or an OID. Each time a message is sent,
+the Bundle.id should be changed to a new value.
+</p>
+<p>
+When a receiver receives and processes the message, it responds with a
+new message with a new identifier, wrapped in a bundle which also has a new id.
+The response message also quotes the request MessageHeader.id in 
+MessageHeader.response.identifier so that the source system can relate the response to its request.
+</p>
+
+<a name="reliable"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.1.4</span> Absence of Reliable Messaging <a href="messaging.html#reliable" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Some of the message delivery mechanisms mentioned above are reliable delivery
+systems - the message is always delivered, or an appropriate error is returned
+to the source. However most implementations use methods which do not provide
+reliable messaging, and either the request or the response can get lost in transit.
+FHIR messaging describes a simple approach that receivers SHOULD conform to in
+order to handle the absence of reliable messaging that maintains predictable
+functionality.
+</p>
+<p>
+If the sender of the message implements reliable messaging, it SHALL do
+the following when it receives no response to a message within a
+configured timeout period based on the value specified in the
+<a href="capabilitystatement.html">CapabilityStatement</a> <code>messaging.event.category</code>
+for the event associated with the message:
+</p>
+<table class="grid">
+ <tr><td>Consequence</td><td>Resend the same message (with the same MessageHeader.id) with the same Bundle.id</td></tr>
+ <tr><td>Currency</td><td>Resend the same message (with the same MessageHeader.id) with a different Bundle.id</td></tr>
+ <tr><td>Notification</td><td>Resend the same message (with the same MessageHeader.id) with a different Bundle.id</td></tr>
+</table>
+<p>
+When a receiver implements reliable messaging, it SHALL check the incoming Bundle.id
+and MessageHeader.id against a cache of previously received messages. The
+correct action to take depends on what is received:
+</p>
+<table class="grid">
+ <tr><td>Both the Bundle.id and MessageHeader.id have not been received</td><td>This is the normal case, and the message should be processed</td></tr>
+ <tr><td>Both envelope and message already received</td><td>The original response has been lost (failed to return to the request issuer), and the original response SHALL be resent</td></tr>
+ <tr><td>The MessageHeader.id has already been received, but the Bundle.id is new</td><td>A previously seen message has been resubmitted for processing again. The server may either reprocess the message, or reject the message</td></tr>
+ <tr><td>The Bundle.id has already been received, but the MessageHeader.id is new</td><td>This is an error - Bundle.id values should never be reused</td></tr>
+</table>
+<p>
+The duration period for caching does generally not need to be very long. At a minimum, it
+could be 1 minute longer than the timeout of the sending system, though it may need to
+be longer depending on the re-sending policies of the sending system.
+</p>
+<p>
+Applications that implement reliable messaging declare their reliable cache
+period in their <a href="capabilitystatement.html">Capability Statement</a>.
+</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">2.45.1.4.1<a name="2.45.1.4.1"> </a></span> Example: Consequence <a href="messaging.html#2.45.1.4.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+In the first example, a Clinical EHR issues an order for a particular imaging examination
+to be performed on a patient. This is considered to be a message of <b>Consequence</b>: multiple
+orders should not be created (in practice there are usually human review processes that
+catch multiple orders, but repeat orders create entropy in the system that is harmful).
+The EHR sends a message where the Bundle.id is UUID 1 (72edc4e0-6708-42ab-9734-f56721882c10),
+with a MessageHeader.id of UUID 2 (dad53a57-dcb4-4f18-b066-7239eb4b5229).
+</p>
+<p>
+The EHR system never receives a response to the message; it does not know whether the request
+message got lost, or the imaging management systems was unable to process the request, or whether
+it successfully processed the message and the response was lost. In this case, the EHR system
+resends the message with same two identifiers.
+</p>
+<p>
+In this case, the imaging system successfully received the message, and processed it. Because
+it receives the resent order after 1 minute (which is within its 15 minute cache time),
+and the two UUIDs 1 and 2 match a message it has already processed, it knows that it already
+processed the order, and simply returns the previous response. In the case of additional resent
+queries, the application keeps sending the original response, though it may also alert system
+administrators that the same original message keeps being resent, since lost messages should be
+a rare occurrence.
+</p>
+<p>
+When the EHR system finally receives the message, it knows how the imaging management system
+responded; it can be sure because the message id from the original request is echoed in the
+response portion of the returned message.
+</p>
+
+
+<h4 class="self-link-parent"><span class="sectioncount">2.45.1.4.2<a name="2.45.1.4.2"> </a></span> Example: Currency <a href="messaging.html#2.45.1.4.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+In this second example, a Clinical EHR needs to know what appointment slots are available
+for a particular imaging procedure. This is a message of <b>Currency</b>: available slots are
+ever disappearing, and ordering a slot that has become unavailable is a waste of time for
+the humans and systems involved. The EHR sends a message where the Bundle.id is
+UUID 3 (4c7f5cb2-5964-4d42-b719-e0227461818c), with a MessageHeader.id is
+UUID 4 (63ed7d68-b2cc-421d-ba1c-a6c7785581f2).
+</p>
+<p>
+The EHR system never receives a response to the message; it does not know whether the request
+message got lost, or the imaging management systems was unable to process the request, or whether
+it successfully processed the message and the response was lost. In this case, the EHR system
+resends the message with same MessageHeader.id (UUID 4), but creates a new Bundle.id (c7c17fe4-9560-49c7-b2ae-42636476fb86).
+</p>
+<p>
+In this case, the imaging system successfully received the message, and processed it. When
+it receives the resent order after 1 minute (which is within its 15 minute cache time), it
+sees that although the message id is the same, the Bundle.id has changed, and it reprocesses
+the message again, and sends a new response.
+</p>
+<p>
+When the EHR system finally receives the message, it knows the current slot availability
+on the imaging management system responded.
+</p>
+<p>
+Note that the existence of active intermediaries (or &quot;middleware&quot;) creates the need
+for this protocol - the original sender matches the response to the request based on the
+MessageHeader.id, and so an active intermediary that choose the re-initiate a query that
+it previously relayed cannot change the MessageHeader.id. This protocol avoids the need for
+the MessageHeader.id to change, and only requires change to the Bundle.id which is never
+the basis for context linking outside the immediate message exchange protocol described
+here.
+</p>
+
+<a name="conf"> </a>
+
+<h2 class="self-link-parent"><span class="sectioncount">2.45.2</span> Capability Statement <a href="messaging.html#conf" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Applications may only assert conformance to &quot;FHIR messaging&quot; if they
+publish a <a href="capabilitystatement.html">Capability statement</a> so the claim may be verified. A
+Capability statement lists all the message events supported (either
+as sender or receiver) and for each event, a
+profile that states which resources are bundled (sender), or
+are required to be bundled (receiver), and any rules about the
+information content of the individual resources. 
+</p>
+
+<a name="process"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.45.3</span> $process-message <a href="messaging.html#process" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+The simplest way to handle messages where there are also <a href="http.html">RESTful interactions</a>
+occurring is to use the <a href="messageheader-operations.html">$process-message</a>. 
+This operation accepts a message, processes it according to the definition of the event in the message header, and returns a one or more response messages. 
+For example, in addition to processing the message event, a server
+may choose to retain all or some the resources and make them available on a RESTful interface, but
+is not required to do so.
+</p>
+<p>
+When processing messages, a server may return a status code of 200 OK, or a process/error code (300+).
+If the server returns 200 OK, it SHALL return a bundle that is the message response.
+For any other response code, the message has not been successfully processed. The server MAY return an
+<a href="operationoutcome.html">OperationOutcome</a> with additional information, and SHOULD
+do so if the response code is 400 or greater.
+The client SHALL interpret a 4xx response to indicate that there is no point resubmitting the unaltered
+message, and a 5xx response to indicate an unexpected error occurred on the part of the server, with
+the implication that it may be appropriate to resubmit the original message. Doing so SHOULD NOT result 
+in a duplicate message response). Repeated failures indicate either a fatal problem with the submission 
+or a problem with the receiving application.
+</p>
+<p>
+The following rules apply when using $process-message:
+</p>
+<ul>
+ <li>The operation only accepts POST transactions - any other HTTP method will result in an HTTP error</li>
+ <li>The request content type submitted is always <a href="bundle.html">a Bundle</a> with type &quot;message&quot; containing a <a href="messageheader.html">Message Header</a> resource as the first resource</li>
+ <li>The response content type returned is always <a href="bundle.html">a Bundle</a> with type &quot;message&quot; containing a <a href="messageheader.html">Message Header</a> resource as the first resource, or an HTTP error</li>
+ <li>If the response is an error, the body SHOULD be an <a href="operationoutcome.html">Errors &amp; Warning</a> resource with full details</li>
+ <li>The mailbox may be authenticated using standard HTTP authentication methods, including OAuth</li>
+</ul>
+<p>
+The $process-message operation can be used by any HTTP end-point that accepts FHIR messages, not just FHIR RESTful servers.
+</p>
+<p>
+In order to ensure consistency of processing, the <a href="#reliable">logical rules regarding processing of Bundle.id and
+message id described above</a> SHALL be followed when messages are processed using this operation. 
+</p>
+
+<p>
+The <a href="messageheader-operations.html">$process-message</a> operation may be used 
+synchronously, or asynchronously.
+</p>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.3.1<a name="2.45.3.1"> </a></span> Synchronous Operation <a href="messaging.html#2.45.3.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Synchronous messaging is the easiest to understand; the sender sends a message to the 
+receiver (the server), the server processes it, and then returns a response. Usually
+(though not always) the sender waits for the response to the current message before  
+sending the next message. This kind of messaging exchange is the most common because
+it's the simplest to understand.
+</p>
+<p>
+The following rules apply when using the $process-message operation synchronously:
+</p>
+<ul>
+ <li>The URL (http://server/base/$process-message) has no parameters</li>
+ <li>It is an error if the sender POSTs a message that requires multiple response messages</li>
+ <li>Servers SHALL accept multiple concurrent message submissions and process them correctly (they are allowed to process them sequentially internally, but multiple concurrent submissions is not an error in its own right)</li>
+</ul>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.3.2<a name="2.45.3.2"> </a></span> Asynchronous Operation <a href="messaging.html#2.45.3.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In Asynchronous messaging, the server acknowledges receipt of the message immediately,
+and responds to the sender separately. The server may respond more than once to any
+given message. 
+</p>
+<p>
+The following rules apply when using the $process-message operation synchronously:
+</p>
+<ul>
+ <li>The URL has at least one parameter: http://server/base/$process-message?async=true</li>
+ <li>The server acknowledges the message with a 200OK with no body, or returns an HTTP error if the message cannot be processed. An <a href="operationoutcome.html">OperationOutcome</a> SHOULD be returned in such a case</li>
+ <li>Accepting the message means that the server has understood the message enough to know where to respond</li>
+ <li>By default, the server responds by invoking the $process-message using the sender's stated end-point in the message: POST [MessageHeader.source.endpoint]/$process-messages]</li>
+ <li>Since the source end-point may be manipulated by message transfer engines, an alternative response address may be specified using the parameter &quot;response-url&quot;: http://server/base/$process-message?async=true&amp;response-url=http://server2.com/base/anything. 
+   The endpoint at the specified URL SHALL implement the signature of the $process-message operation (parameter async=true, accept a Bundle, return a 200 OK or an error)</li>
+ <li>The server submits response messages to the appropriate end-point with the parameter async=true. There is no response message for the response messages</li>
+</ul>
+<p>
+When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent. 
+Note that asynchronous messaging is less reliable than synchronous messaging; more can go wrong. 
+This specification does not dictate any particular error handling protocols or responsibilities; these are left to trading partner agreements between implementers.
+</p>
+
+<a name="endpoints"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.45.4</span> Relationship between Messaging and REST <a href="messaging.html#endpoints" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+As well as this messaging framework documented here, FHIR also defines a
+<a href="http.html">RESTful API</a>. The messaging and RESTful frameworks
+are related in that both share the same set of resources on which they operate.
+In fact, the basic <a href="messageheader.html">MessageHeader</a> resource
+that the messaging framework is implemented is itself a resource that can treated in a RESTful approach.
+</p>
+<p>
+The kinds of functionality that the RESTful API and the messaging framework
+offer are very similar; their primary difference is architectural in nature.
+</p>
+<p>
+For instance, the messaging framework defines an event for notifying that
+a administration resource has been created or updated; the REST API offers
+similar services (<a href="http.html#history">history</a> and <a href="subscription.html">Subscription</a>).
+On the other hand, there are differences in the capabilities offered - while
+a patient merge can be implemented as a series of RESTful operations performed
+by the client that update all resources linked to the patient, when a message
+command to merge patient records is processed, the server will do all
+the work, and is also able to merge in areas not exposed on the RESTful API.
+The REST API, however, provides a set of basic operations on all resources
+that would need special definitions in the messaging framework - definitions that
+are not provided.
+</p>
+<p>
+There is no expectation that RESTful systems will need to offer messaging
+support, or vice versa, though systems may find it useful to support both
+sets of functionality in order to satisfy a wider range of implementers.
+</p>
+<p>
+As a resource that can be used with the RESTful framework, the MessageHeader
+resource has the normal resource end-point (/MessageHeader), which is
+used to manage a set of static message resources. This could be used to
+make an archive of past messages available. <b>Creating or updating MessageHeader resources
+in this fashion does not represent the actual occurrence of any event, nor can it trigger
+any logic associated with the actual event.</b> It is just for managing a set of message header resources.
+</p>
+
+<a name="rest"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.4.1</span> Asynchronous Messaging using the RESTful API <a href="messaging.html#rest" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+It is possible to exchange messages using the RESTful 
+end-point as a central point of exchange. This is not 
+particularly efficient compared to other methods, but 
+is useful for low-volume axynchronous exchange. 
+</p>
+<p>
+To send a message, a sender posts the message bundle to the 
+/Bundle end-point, with a uri that identifies the receiver 
+at <a href="messageheader-definitions.html#MessageHeader.destination.endpoint">MessageHeader.destination.endpoint</a>.
+The RESTful server accepts the bundle,
+stores it as a single bundle, and indexes it on the 
+<a href="messageheader.html">MessageHeader</a>.
+</p>
+<p>
+To receive messages, a receiver searches for all messages
+destined for itself, since it's last check:
+</p>
+<pre>
+ GET [base]/Bundle?message.destination-uri=[rcv]&amp;_lastUpdated=&gt;2015-03-01T02:00:02+01:00
+</pre>
+<p>
+The receiver works through the response, processing each message.
+As each message is processed, the receiver creates a response 
+message, reversing the source and destination, and posts it back
+to the server.
+</p>
+<p>
+To check for responses, the original sender searches for 
+response messages destined for itself, since it's last check:
+</p>
+<pre>
+ GET [base]/Bundle?message.destination-uri=[snd]&amp;message.response-id:missing=false
+      &amp;_lastUpdated=&gt;2015-03-03T06:03:522+01:00
+</pre>
+<p>
+This lightweight protocol needs ongoing administration to 
+ensure that multiple parties do not interfere with each other
+by re-using the same system identifier (and against malicious 
+attack).
+</p>
+
+
+
+
+<a name="Events"/>
+<a name="events"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.45.5</span> Event List <a href="messaging.html#events" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+The <i>message.code</i> element carries a <a href="datatypes.html#Coding">Coding</a> that identifies the event that the message conveys.
+This table lists the message event codes defined in this specification (the system value for these is &quot;<a href="valueset-message-events.html">http://hl7.org/fhir/message-events</a>&quot;):
+</p>
+
+<table class="grid">
+ <tr><th>Code</th><th>Category</th><th>Description</th><th>Request Resources</th><th>Response Resources</th><th>Notes</th></tr>
+ <tr><td>CodeSystem-expand<a name="CodeSystem-expand"> </a></td><td>Currency</td><td>The definition of a code system is used to create a simple collection of codes suitable for use for data entry or validation. An expanded code system will be returned, or an error message.</td><td>CodeSystem</td><td>CodeSystem</td><td/></tr>
+ <tr><td>MedicationAdministration-Complete<a name="MedicationAdministration-Complete"> </a></td><td>Consequence</td><td>Change the status of a Medication Administration to show that it is complete.</td><td>MedicationAdministration</td><td>MedicationAdministration</td><td/></tr>
+ <tr><td>MedicationAdministration-Nullification<a name="MedicationAdministration-Nullification"> </a></td><td>Consequence</td><td>Someone wishes to record that the record of administration of a medication is in error and should be ignored.</td><td>MedicationAdministration</td><td>MedicationAdministration</td><td/></tr>
+ <tr><td>MedicationAdministration-Recording<a name="MedicationAdministration-Recording"> </a></td><td>Consequence</td><td>Indicates that a medication has been recorded against the patient's record.</td><td>MedicationAdministration</td><td>MedicationAdministration</td><td/></tr>
+ <tr><td>MedicationAdministration-Update<a name="MedicationAdministration-Update"> </a></td><td>Consequence</td><td>Update a Medication Administration record.</td><td>MedicationAdministration</td><td>MedicationAdministration</td><td/></tr>
+ <tr><td rowspan="10">admin-notify</td><td rowspan="10">Notification of a change to an administrative resource (either create or update). Note that there is no delete, though some administrative resources have status or period elements for this use.</td><td>Device</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>Device</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>Group</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>Location</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td><font color="silver">--</font></td><td>Organization</td><td><p>(see Patient)</p>
+</td></tr>
+ <tr><td>Patient</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>Practitioner</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>Practitioner</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td><font color="silver">--</font></td><td>RelatedPerson</td><td/></tr>
+ <tr><td>Person</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>diagnosticreport-provide<a name="diagnosticreport-provide"> </a></td><td>Notification</td><td>Provide a diagnostic report, or update a previously provided diagnostic report.</td><td>DiagnosticReport<br/>&nbsp;DiagnosticReport.patient .perfomer .results.specimen .results.result .image</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>observation-provide<a name="observation-provide"> </a></td><td>Notification</td><td>Provide a simple observation or update a previously provided simple observation.</td><td>Observation<br/>&nbsp;Observation.subjectPatient .subjectPatient.person .subjectGroup .subjectDevice .subjectAnimal .performerAgent .performerAgent.person .performerPatient .performerPerson</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>patient-link<a name="patient-link"> </a></td><td>Notification</td><td>Notification that two patient records actually identify the same patient.</td><td>Patient,Patient</td><td><font color="silver">--</font></td><td><p>Follow ups: patient-unlink?</p>
+</td></tr>
+ <tr><td>patient-unlink<a name="patient-unlink"> </a></td><td>Notification</td><td>Notification that previous advice that two patient records concern the same patient is now considered incorrect.</td><td>Patient,Patient</td><td><font color="silver">--</font></td><td/></tr>
+ <tr><td>valueset-expand<a name="valueset-expand"> </a></td><td>Currency</td><td>The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. An expanded value set will be returned, or an error message.</td><td>ValueSet</td><td>ValueSet</td><td/></tr>
+</table>
+
+
+<p>
+The request and response details: The column values are either a resource
+that is included as part of the response, or an element that refers to
+another resource, which means that the target of these references SHALL
+also be in the message.
+In this table, the request and response columns list the focus resource for the event, along with other resources that should also be carried in the message directly (if they exist).
+</p>
+
+<blockquote class="dstu-note">
+<a name="dstu"> </a>
+<p>
+<b>DSTU Note:</b>  
+Additional events may be defined elsewhere, though this specification does not yet define how. 
+</p>
+<p>
+Feedback is sought <a href="http://wiki.hl7.org/index.php?title=FHIR_Specification_Feedback_(DSTU_2)">here <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+</blockquote>
+
+<a name="operations"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.45.6</span> Invoking Operations via Messages <a href="messaging.html#operations" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+A message can be used to invoke an operation as defined for a RESTful interface using
+an operation definition. To invoke an operation using a message:
+</p>
+<ul>
+ <li>The requester sends a message (a bundle with type = message, and a message header resource)</li>
+ <li>The message header has an event.system of <code>urn:ietf:rfc:3986</code></li>
+ <li>The event.code is the URL from the operation definition <code>OperationDefinition.url</code></li>
+ <li>The <code>MessageHeader.data</code> refers to a <a href="parameters.html">Parameters</a> resource</li>
+ <li>The parameters resource is populated appropriately as specified by the nominated operation definition</li>
+</ul>
+<p>
+The recipient executes the operation as specified, and then:
+</p>
+<ul>
+ <li>The receiver sends a message (a bundle with type = message, and a message header resource)</li>
+ <li>The message header has the same event as the original message</li>
+ <li>The MessageHeader contains a response that refers to the original request message, and a code for the outcome, with details if the operation failed</li>
+ <li>The <code>MessageHeader.data</code> refers to a <a href="parameters.html">Parameters</a> resource</li>
+ <li>The parameters resource is populated appropriately as specified for the response by the nominated operation definition</li>
+ <li>If the operation definition specifies a single return, then this is returned as the target of the MesssageHeader.data directly</li>
+</ul>
+<p>
+Here's an example:
+</p>
+<pre class="xml">
+&lt;Bundle xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;urn:uuid:77831928-2a35-4c08-9496-8232323bf48c&quot;/&gt;
+  &lt;!-- normal bundle stuff --&gt;
+  &lt;entry&gt;
+    &lt;fullUrl value=&quot;urn:uuid:6080d4a7-5e05-45dc-96d5-f75329564d1f&quot;/&gt;
+    &lt;resource&gt;
+      &lt;MessageHeader&gt;
+			  &lt;id value=&quot;cac8143e-6138-4f45-b086-bb8ebf976aae&quot;&gt;
+        &lt;!-- normal message header stuff --&gt;
+        &lt;event&gt;
+          &lt;system value=&quot;urn:ietf:rfc:3986&quot;/&gt;
+          &lt;!-- value set expansion --&gt;
+          &lt;code value=&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-expand&quot;/&gt; 
+        &lt;/event&gt;
+        &lt;!-- more normal message header stuff --&gt;
+        &lt;data&gt;
+          &lt;reference value=&quot;urn:uuid:00213637-dc7c-40d2-a7de-f4ef1eea5685&quot;/&gt;
+        &lt;/data&gt;
+      &lt;/MessageHeader&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;entry&gt;
+    &lt;fullUrl value=&quot;urn:uuid:00213637-dc7c-40d2-a7de-f4ef1eea5685&quot;/&gt;
+    &lt;resource&gt;
+      &lt;Parameters&gt;
+        &lt;parameter&gt;
+          &lt;name value=&quot;identifier&quot;/&gt;
+          &lt;valueUri value=&quot;http://hl7.org/fhir/ValueSet/identifier-type&quot;/&gt;
+        &lt;/parameter&gt; 
+      &lt;/Parameters&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+&lt;/Bundle&gt;
+</pre>
+<p>
+Note that there's no way to anchor the execution of the operation against a URL.
+The only operations that can be executed in this way are defined to be executed
+at the System or Resource level for a particular resource.
+</p>
+
+<a name="search"/>
+<h3 class="self-link-parent"><span class="sectioncount">2.45.6.1</span> Invoking Search via Messages <a href="messaging.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In the same way that a defined operation can be invoked, a regular search operation
+can be invoked. This also uses the <a href="parameters.html">Parameters</a> resource,
+with the following rules:
+</p>
+<ul>
+ <li>The event code is &quot;search-type&quot; or &quot;search-system&quot; in the system http://hl7.org/fhir/restful-interaction</li>
+ <li>If the event type is &quot;search-type&quot; there SHALL be a parameter &quot;resourceType&quot; with specifies the type of resource being searched</li>
+ <li>The search parameters are converted to FHIR data types according to the following table</li>
+</ul>
+<table class="grid">
+ <tr>
+  <td><b>Search Parameter Type</b></td>
+  <td><b>Data Type</b></td>
+ </tr>
+ <tr>
+  <td>number</td>
+  <td>integer</td>
+ </tr>
+ <tr>
+  <td>date</td>
+  <td>dateTime</td>
+ </tr>
+ <tr>
+  <td>string</td>
+  <td>string</td>
+ </tr>
+ <tr>
+  <td>token</td>
+  <td>string or Coding (split the system and code apart)</td>
+ </tr>
+ <tr>
+  <td>reference</td>
+  <td>uri</td>
+ </tr>
+ <tr>
+  <td>composite</td>
+  <td>string</td>
+ </tr>
+ <tr>
+  <td>quantity</td>
+  <td>string or Quantity (split the syntax out)</td>
+ </tr>
+ <tr>
+  <td>uri</td>
+  <td>uri</td>
+ </tr>
+</table>
+<p>
+Here's an example:
+</p>
+
+<pre class="xml">
+&lt;Bundle xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;urn:uuid:77831928-2a35-4c08-9496-8232323bf48c&quot;/&gt;
+  &lt;!-- normal bundle stuff --&gt;
+  &lt;entry&gt;
+    &lt;fullUrl value=&quot;urn:uuid:c466754c-09c0-4f59-9f76-a48bd0ea27c9&quot;/&gt;
+    &lt;resource&gt;
+      &lt;MessageHeader&gt;
+        &lt;!-- normal message header stuff --&gt;
+        &lt;event&gt;
+          &lt;system value=&quot;http://hl7.org/fhir/restful-interaction&quot;/&gt;
+          &lt;!-- Search against Patient --&gt;
+          &lt;code value=&quot;search-type&quot;/&gt; 
+        &lt;/event&gt;
+        &lt;!-- more normal message header stuff --&gt;
+        &lt;data&gt;
+          &lt;reference value=&quot;urn:uuid:59a17a19-46eb-42d9-821a-f93a0c530cac&quot;/&gt;
+        &lt;/data&gt;
+      &lt;/MessageHeader&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;entry&gt;
+    &lt;fullUrl value=&quot;urn:uuid:59a17a19-46eb-42d9-821a-f93a0c530cac&quot;/&gt;
+    &lt;resource&gt;
+      &lt;Parameters&gt;
+        &lt;parameter&gt;
+          &lt;name value=&quot;resourceType&quot;/&gt;
+          &lt;valueString value=&quot;Patient&quot;/&gt;
+        &lt;/parameter&gt; 
+        &lt;parameter&gt;
+          &lt;name value=&quot;gender&quot;/&gt;
+          &lt;valueString value=&quot;m&quot;/&gt;
+        &lt;/parameter&gt; 
+      &lt;/Parameters&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+&lt;/Bundle&gt;
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fmessaging.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fmessaging.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+</body>
+</html>

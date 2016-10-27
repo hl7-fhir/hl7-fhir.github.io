@@ -1,0 +1,99 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticReport.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticReport/ultrasound",
+  "Resource.id": {
+    "id.value": "ultrasound"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ultrasound</p><p><b>status</b>: final</p><p><b>category</b>: Radiology <span>(Details : {SNOMED CT code '394914008' = 'Radiology - specialty (qualifier value)', given as 'Radiology'}; {http://hl7.org/fhir/v2/0074 code 'RAD' = 'Radiology)</span></p><p><b>code</b>: Abdominal Ultrasound <span>(Details : {SNOMED CT code '45036003' = 'Ultrasonography of abdomen (procedure)', given as 'Ultrasonography of abdomen'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: Dec 1, 2012 12:00:00 PM</p><p><b>issued</b>: Dec 1, 2012 12:00:00 PM</p><p><b>performer</b>: <a>Practitioner/example</a></p><h3>Images</h3><table><tr><td>-</td><td><b>Comment</b></td><td><b>Link</b></td></tr><tr><td>*</td><td>A comment about the image</td><td><a>WADO example image</a></td></tr></table><p><b>conclusion</b>: Unremarkable study</p></div>"
+    }
+  },
+  "DiagnosticReport.status": {
+    "code.value": "final"
+  },
+  "DiagnosticReport.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "394914008"
+        },
+        "Coding.display": {
+          "string.value": "Radiology"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0074"
+        },
+        "Coding.code": {
+          "code.value": "RAD"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#394914008"
+  },
+  "DiagnosticReport.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "45036003"
+        },
+        "Coding.display": {
+          "string.value": "Ultrasonography of abdomen"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Abdominal Ultrasound"
+    },
+    "Resource.concept": "http://snomed.info/sct#45036003"
+  },
+  "DiagnosticReport.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "DiagnosticReport.effectiveDateTime": {
+    "dateTime.value": "2012-12-01T12:00:00+01:00"
+  },
+  "DiagnosticReport.issued": {
+    "instant.value": "2012-12-01T12:00:00+01:00"
+  },
+  "DiagnosticReport.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/example"
+      }
+    }
+  ],
+  "DiagnosticReport.image": [
+    {
+      "DiagnosticReport.image.comment": {
+        "string.value": "A comment about the image"
+      },
+      "DiagnosticReport.image.link": {
+        "Reference.reference": {
+          "string.value": "Media/1.2.840.11361907579238403408700.3.0.14.19970327150033"
+        },
+        "Reference.display": {
+          "string.value": "WADO example image"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Media/1.2.840.11361907579238403408700.3.0.14.19970327150033"
+      }
+    }
+  ],
+  "DiagnosticReport.conclusion": {
+    "string.value": "Unremarkable study"
+  }
+}

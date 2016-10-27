@@ -1,0 +1,183 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>Operationslist - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/operationslist.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="toc.html"><img src="index.png"/> Table of Contents</a></li>
+        <li><b>Operations</b></li>          <!-- operationslist.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="base"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">1.5<a name="1.5"> </a></span> Defined RESTful API Operations <a href="operationslist.html#1.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+The <a href="http.html">RESTful API</a> defines a set of common interactions (read, update, search, etc.)
+performed on a repository of typed resources. For further information concerning how operations are 
+defined and invoked, see <a href="operations.html">Extended Operations on the RESTful API</a>.
+</p>
+<p>
+This is a full list of the operations defined by this specification:
+</p>
+<table class="grid"> <tr><td colspan="2"><b>Base Operations (All resource types)</b></td></tr>
+<tr><td><a href="resource-operations.html#validate">Validate a resource</a></td><td>[base]/[Resource]/$validate | [base]/[Resource]/[id]/$validate</td></tr><tr><td><a href="resource-operations.html#meta">Access a list of profiles, tags, and security labels</a></td><td>[base]/$meta | [base]/[Resource]/$meta | [base]/[Resource]/[id]/$meta</td></tr><tr><td><a href="resource-operations.html#meta-add">Add profiles, tags, and security labels to a resource</a></td><td>[base]/[Resource]/[id]/$meta-add</td></tr><tr><td><a href="resource-operations.html#meta-delete">Delete profiles, tags, and security labels for a resource</a></td><td>[base]/[Resource]/[id]/$meta-delete</td></tr> <tr><td colspan="2"><b>Operations Defined by Resource Types</b></td></tr>
+<tr><td><a href="activitydefinition-operations.html#apply">Apply</a></td><td>[base]/ActivityDefinition/[id]/$apply</td></tr><tr><td><a href="activitydefinition-operations.html#data-requirements">Data Requirements</a></td><td>[base]/ActivityDefinition/[id]/$data-requirements</td></tr><tr><td><a href="capabilitystatement-operations.html#subset">Fetch a subset of the CapabilityStatement resource</a></td><td>[base]/CapabilityStatement/$subset | [base]/CapabilityStatement/[id]/$subset</td></tr><tr><td><a href="capabilitystatement-operations.html#implements">Test if a server implements a client's required operations</a></td><td>[base]/CapabilityStatement/$implements | [base]/CapabilityStatement/[id]/$implements</td></tr><tr><td><a href="capabilitystatement-operations.html#conforms">Test if a server implements a client's required operations</a></td><td>[base]/CapabilityStatement/$conforms</td></tr><tr><td><a href="codesystem-operations.html#lookup">Concept Look Up &amp; Decomposition</a></td><td>[base]/CodeSystem/$lookup</td></tr><tr><td><a href="codesystem-operations.html#subsumes">Subsumption Testing</a></td><td>[base]/CodeSystem/$subsumes | [base]/CodeSystem/[id]/$subsumes</td></tr><tr><td><a href="codesystem-operations.html#compose">Code Composition based on supplied properties</a></td><td>[base]/CodeSystem/$compose | [base]/CodeSystem/[id]/$compose</td></tr><tr><td><a href="composition-operations.html#document">Generate a Document</a></td><td>[base]/Composition/$document | [base]/Composition/[id]/$document</td></tr><tr><td><a href="conceptmap-operations.html#translate">Concept Translation</a></td><td>[base]/ConceptMap/$translate | [base]/ConceptMap/[id]/$translate</td></tr><tr><td><a href="conceptmap-operations.html#closure">Closure Table Maintenance</a></td><td>[base]/$closure</td></tr><tr><td><a href="decisionsupportservicemodule-operations.html#evaluate">Evaluate</a></td><td>[base]/DecisionSupportServiceModule/[id]/$evaluate</td></tr><tr><td><a href="decisionsupportservicemodule-operations.html#data-requirements">Data Requirements</a></td><td>[base]/DecisionSupportServiceModule/[id]/$data-requirements</td></tr><tr><td><a href="encounter-operations.html#everything">Fetch Encounter Record</a></td><td>[base]/Encounter/[id]/$everything</td></tr><tr><td><a href="library-operations.html#data-requirements">Data Requirements</a></td><td>[base]/$data-requirements | [base]/Library/[id]/$data-requirements</td></tr><tr><td><a href="list-operations.html#find">Find a functional list</a></td><td>[base]/List/$find</td></tr><tr><td><a href="measure-operations.html#evaluate-measure">Evaluate Measure</a></td><td>[base]/Measure/$evaluate-measure | [base]/Measure/[id]/$evaluate-measure</td></tr><tr><td><a href="measure-operations.html#data-requirements">Data Requirements</a></td><td>[base]/Measure/[id]/$data-requirements</td></tr><tr><td><a href="messageheader-operations.html#process-message">Process Message</a></td><td>[base]/$process-message</td></tr><tr><td><a href="observation-operations.html#stats">Observation Statistics</a></td><td>[base]/Observation/$stats | [base]/Observation/[id]/$stats</td></tr><tr><td><a href="patient-operations.html#match">Find patient matches using MPI based logic</a></td><td>[base]/Patient/$match</td></tr><tr><td><a href="patient-operations.html#everything">Fetch Patient Record</a></td><td>[base]/Patient/$everything | [base]/Patient/[id]/$everything</td></tr><tr><td><a href="plandefinition-operations.html#apply">Place</a></td><td>[base]/PlanDefinition/[id]/$apply</td></tr><tr><td><a href="plandefinition-operations.html#data-requirements">Data Requirements</a></td><td>[base]/PlanDefinition/[id]/$data-requirements</td></tr><tr><td><a href="questionnaire-operations.html#populate">Populate Questionnaire</a></td><td>[base]/Questionnaire/$populate | [base]/Questionnaire/[id]/$populate</td></tr><tr><td><a href="questionnaire-operations.html#populatehtml">Geneate HTML for Questionnaire</a></td><td>[base]/Questionnaire/$populatehtml | [base]/Questionnaire/[id]/$populatehtml</td></tr><tr><td><a href="questionnaire-operations.html#populatelink">Generate a link to a Questionnaire completion webpage</a></td><td>[base]/Questionnaire/$populatelink | [base]/Questionnaire/[id]/$populatelink</td></tr><tr><td><a href="servicedefinition-operations.html#evaluate">Evaluate</a></td><td>[base]/ServiceDefinition/[id]/$evaluate</td></tr><tr><td><a href="servicedefinition-operations.html#data-requirements">Data Requirements</a></td><td>[base]/ServiceDefinition/[id]/$data-requirements</td></tr><tr><td><a href="structuredefinition-operations.html#questionnaire">Build Questionnaire</a></td><td>[base]/StructureDefinition/$questionnaire | [base]/StructureDefinition/[id]/$questionnaire</td></tr><tr><td><a href="structuremap-operations.html#transform">Model Instance Transformation</a></td><td>[base]/StructureMap/$transform | [base]/StructureMap/[id]/$transform</td></tr><tr><td><a href="task-operations.html#reserve">Reserve Task</a></td><td>[base]/Task/[id]/$reserve</td></tr><tr><td><a href="task-operations.html#start">Start Task</a></td><td>[base]/Task/[id]/$start</td></tr><tr><td><a href="task-operations.html#finish">Finish Task</a></td><td>[base]/Task/[id]/$finish</td></tr><tr><td><a href="task-operations.html#fail">Fail Task</a></td><td>[base]/Task/[id]/$fail</td></tr><tr><td><a href="task-operations.html#release">Release Task</a></td><td>[base]/Task/[id]/$release</td></tr><tr><td><a href="task-operations.html#suspend">Suspend Task</a></td><td>[base]/Task/[id]/$suspend</td></tr><tr><td><a href="task-operations.html#resume">Resume Task</a></td><td>[base]/Task/[id]/$resume</td></tr><tr><td><a href="task-operations.html#cancel">Cancel Task</a></td><td>[base]/Task/[id]/$cancel</td></tr><tr><td><a href="task-operations.html#stop">Stop Task</a></td><td>[base]/Task/[id]/$stop</td></tr><tr><td><a href="task-operations.html#set-input">Set Task Input</a></td><td>[base]/Task/[id]/$set-input</td></tr><tr><td><a href="task-operations.html#set-output">Set Task Output</a></td><td>[base]/Task/[id]/$set-output</td></tr><tr><td><a href="valueset-operations.html#expand">Value Set Expansion</a></td><td>[base]/ValueSet/$expand | [base]/ValueSet/[id]/$expand</td></tr><tr><td><a href="valueset-operations.html#validate-code">Value Set based Validation</a></td><td>[base]/ValueSet/$validate-code | [base]/ValueSet/[id]/$validate-code</td></tr> <tr><td colspan="2"><b>Operations Defined by Implementation Guides</b></td></tr>
+</table>
+<p>
+Notes:
+</p>
+<ul>
+ <li>The special operations on the <code>meta</code> element also operate on previous versions of a resource (/_history/).  They are the only operations that can manipulate versions other than the &quot;current&quot; version.</li>
+ <li>Implementation Guides can define additional operations</li>
+</ul>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Foperationslist.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Foperationslist.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

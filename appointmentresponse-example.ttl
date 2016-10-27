@@ -1,0 +1,32 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/AppointmentResponse/example> a fhir:AppointmentResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Accept Brian MRI results discussion</div>"
+  ];
+  fhir:AppointmentResponse.appointment [
+     fhir:link <http://hl7.org/fhir/Appointment/example>;
+     fhir:Reference.reference [ fhir:value "Appointment/example" ];
+     fhir:Reference.display [ fhir:value "Brian MRI results discussion" ]
+  ];
+  fhir:AppointmentResponse.actor [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+  ];
+  fhir:AppointmentResponse.participantStatus [ fhir:value "accepted"] .
+
+<http://hl7.org/fhir/Appointment/example> a fhir:Appointment .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

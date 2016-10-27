@@ -1,0 +1,69 @@
+﻿{
+  "@context": {
+    "Communication.identifier": {
+      "@id": "http://hl7.org/fhir/Communication.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "Communication.basedOn": {
+      "@id": "http://hl7.org/fhir/Communication.basedOn",
+      "@type": "http://hl7.org/fhir/Reference(Any)"
+    },
+    "Communication.parent": {
+      "@id": "http://hl7.org/fhir/Communication.parent",
+      "@type": "http://hl7.org/fhir/Reference(Any)"
+    },
+    "Communication.status": {
+      "@id": "http://hl7.org/fhir/Communication.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "Communication.category": {
+      "@id": "http://hl7.org/fhir/Communication.category",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "Communication.medium": {
+      "@id": "http://hl7.org/fhir/Communication.medium",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "Communication.subject": {
+      "@id": "http://hl7.org/fhir/Communication.subject",
+      "@type": "http://hl7.org/fhir/Reference(Patient|Group)"
+    },
+    "Communication.topic": {
+      "@id": "http://hl7.org/fhir/Communication.topic",
+      "@type": "http://hl7.org/fhir/Reference(Any)"
+    },
+    "Communication.context": {
+      "@id": "http://hl7.org/fhir/Communication.context",
+      "@type": "http://hl7.org/fhir/Reference(Encounter|EpisodeOfCare)"
+    },
+    "Communication.sent": {
+      "@id": "http://hl7.org/fhir/Communication.sent",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "Communication.received": {
+      "@id": "http://hl7.org/fhir/Communication.received",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "Communication.sender": {
+      "@id": "http://hl7.org/fhir/Communication.sender",
+      "@type": "http://hl7.org/fhir/Reference(Device|Organization|Patient|Practitioner|RelatedPerson)"
+    },
+    "Communication.recipient": {
+      "@id": "http://hl7.org/fhir/Communication.recipient",
+      "@type": "http://hl7.org/fhir/Reference(Device|Organization|Patient|Practitioner|RelatedPerson|Group)"
+    },
+    "Communication.reason": {
+      "@id": "http://hl7.org/fhir/Communication.reason",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "Communication.payload": {
+      "@id": "http://hl7.org/fhir/Communication.payload",
+      "@type": "http://hl7.org/fhir/"
+    },
+    "Communication.note": {
+      "@id": "http://hl7.org/fhir/Communication.note",
+      "@type": "http://hl7.org/fhir/Annotation"
+    }
+  },
+  "@id": "http://hl7.org/fhir/Communication"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationAdministration xmlns="http://hl7.org/fhir"> 
+  <id value="medadmin0308"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0308</p><p><b>status</b>: completed</p><p><b>medication</b>: Lantus 100 unit/ml injectable solution <span>(Details : {RxNorm code &#39;285018&#39; = &#39;285018&#39;, given as &#39;Lantus 100 unit/ml injectable solution&#39;})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>effectiveTime</b>: Jan 15, 2015 4:30:00 AM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0320</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>20 Units SC before breakfast</td><td>Subcutaneous (qualifier value) <span>(Details : {SNOMED CT code &#39;263887005&#39; = &#39;Subcutaneous&#39;, given as &#39;Subcutaneous (qualifier value)&#39;})</span></td><td>20 U<span> (Details: UCUM code U = &#39;U&#39;)</span></td></tr></table></div></text><status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="285018"/>
+      <display value="Lantus 100 unit/ml injectable solution"/>
+    </coding>
+  </medicationCodeableConcept>
+ <patient>
+   <reference value="Patient/pat1"/>
+   <display value="Donald Duck"/> 
+  </patient>
+ <effectiveTimePeriod>
+  <start value="2015-01-15T04:30:00+01:00"/>
+   <end value="2015-01-15T14:30:00+01:00"/>
+</effectiveTimePeriod>
+  <performer>
+    <reference value="Practitioner/f007"/>
+    <display value="Patrick Pump"/>
+  </performer>
+  <prescription>
+    <reference value="MedicationRequest/medrx0320"/>
+  </prescription>
+  <dosage>
+    <text value="20 Units SC before breakfast"/>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="263887005"/>
+        <display value="Subcutaneous (qualifier value)"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="20"/>
+      <unit value="U"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="U"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

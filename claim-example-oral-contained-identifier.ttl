@@ -1,0 +1,125 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Claim/100155> a fhir:Claim;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "100155"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This example assumes a national health care scheme where patients, providers and organizations have known business identifiers.</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Patient;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "patient-1" ];
+     fhir:Patient.name [
+       fhir:index 0;
+       fhir:HumanName.use [ fhir:value "official" ];
+       fhir:HumanName.family [
+         fhir:value "Donald";
+         fhir:index 0
+       ];
+       fhir:HumanName.given [
+         fhir:value "Duck";
+         fhir:index 0
+       ]
+     ];
+     fhir:Patient.gender [ fhir:value "male" ];
+     fhir:Patient.birthDate [ fhir:value "1986-05-17"^^xsd:date ];
+     fhir:Patient.address [
+       fhir:index 0;
+       fhir:Address.use [ fhir:value "home" ];
+       fhir:Address.line [
+         fhir:value "1234 Main Street";
+         fhir:index 0
+       ];
+       fhir:Address.city [ fhir:value "Vancouver" ];
+       fhir:Address.postalCode [ fhir:value "V2H1Y3" ];
+       fhir:Address.country [ fhir:value "CAD" ]
+     ]
+  ];
+  fhir:Claim.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://happyvalley.com/claim" ];
+     fhir:Identifier.value [ fhir:value "12347" ]
+  ];
+  fhir:Claim.status [ fhir:value "active"];
+  fhir:Claim.type [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ex-claimtype" ];
+     fhir:Coding.code [ fhir:value "oral" ]
+  ];
+  fhir:Claim.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:Claim.insurer [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.jurisdiction.com/insurers" ];
+       fhir:Identifier.value [ fhir:value "123456" ]
+     ]
+  ];
+  fhir:Claim.organization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.jurisdiction.com/careorganizations" ];
+       fhir:Identifier.value [ fhir:value "HOSP12345" ]
+     ]
+  ];
+  fhir:Claim.use [ fhir:value "complete"];
+  fhir:Claim.priority [
+     fhir:Coding.code [ fhir:value "normal" ]
+  ];
+  fhir:Claim.payee [
+     fhir:Claim.payee.type [
+       fhir:Coding.code [ fhir:value "provider" ]
+     ]
+  ];
+  fhir:Claim.diagnosis [
+     fhir:index 0;
+     fhir:Claim.diagnosis.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.diagnosis.diagnosis [
+       fhir:Coding.code [ fhir:value "123456" ]
+     ]
+  ];
+  fhir:Claim.patient [
+     fhir:Reference.reference [ fhir:value "#patient-1" ]
+  ];
+  fhir:Claim.coverage [
+     fhir:index 0;
+     fhir:Claim.coverage.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.coverage.focal [ fhir:value "true"^^xsd:boolean ];
+     fhir:Claim.coverage.coverage [
+       fhir:link <http://www.jurisdiction.com/nationalplan/123AB345>;
+       fhir:Reference.reference [ fhir:value "http://www.jurisdiction.com/nationalplan/123AB345" ]
+     ]
+  ];
+  fhir:Claim.item [
+     fhir:index 0;
+     fhir:Claim.item.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.item.careTeam [
+       fhir:index 0;
+       fhir:Claim.item.careTeam.provider [
+         fhir:Reference.identifier [
+           fhir:Identifier.system [ fhir:value "http://www.jurisdiction.com/providerId" ];
+           fhir:Identifier.value [ fhir:value "MD98765" ]
+         ]
+       ]
+     ];
+     fhir:Claim.item.service [
+       fhir:Coding.code [ fhir:value "1200" ]
+     ];
+     fhir:Claim.item.servicedDate [ fhir:value "2014-08-16"^^xsd:date ];
+     fhir:Claim.item.unitPrice [
+       fhir:Quantity.value [ fhir:value "135.57"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+       fhir:Quantity.code [ fhir:value "USD" ]
+     ];
+     fhir:Claim.item.net [
+       fhir:Quantity.value [ fhir:value "135.57"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+       fhir:Quantity.code [ fhir:value "USD" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

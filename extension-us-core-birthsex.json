@@ -1,0 +1,266 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-birthsex",
+  "url": "http://hl7.org/fhir/StructureDefinition/us-core-birthsex",
+  "name": "Sex of patient assigned at birth",
+  "title": "Sex of patient assigned at birth",
+  "status": "draft",
+  "publisher": "Health Level Seven International (US Realm Steering Committee)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://www.hl7.org/Special/Committees/usrealm"
+        }
+      ]
+    }
+  ],
+  "date": "2013-12-03",
+  "description": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).",
+  "fhirVersion": "1.7.0",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Extension:sexofpatientassignedatbirth",
+        "path": "Extension",
+        "short": "Extension",
+        "definition": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).",
+        "comments": "The codes required are intended to present birth sex (i.e., the sex recorded on the patient’s birth certificate) and not gender identity or reassigned sex.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+            "source": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "PID-8"
+          },
+          {
+            "identity": "rim",
+            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
+          },
+          {
+            "identity": "cda",
+            "map": ".patient.administrativeGenderCode"
+          }
+        ]
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.id",
+        "path": "Extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.extension:extension",
+        "path": "Extension.extension",
+        "sliceName": "extension",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.url",
+        "path": "Extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/us-core-birthsex",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.valueCode",
+        "path": "Extension.valueCode",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Code for sex assigned at birth",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/usrealm-birthsex"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Extension:sexofpatientassignedatbirth",
+        "path": "Extension",
+        "definition": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).",
+        "comments": "The codes required are intended to present birth sex (i.e., the sex recorded on the patient’s birth certificate) and not gender identity or reassigned sex.",
+        "min": 0,
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "PID-8"
+          },
+          {
+            "identity": "rim",
+            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
+          },
+          {
+            "identity": "cda",
+            "map": ".patient.administrativeGenderCode"
+          }
+        ]
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.extension:extension",
+        "path": "Extension.extension",
+        "sliceName": "extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/us-core-birthsex"
+      },
+      {
+        "id": "Extension:sexofpatientassignedatbirth.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Code for sex assigned at birth",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/usrealm-birthsex"
+          }
+        }
+      }
+    ]
+  }
+}

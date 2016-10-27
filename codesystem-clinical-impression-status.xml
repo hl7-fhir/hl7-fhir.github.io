@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="clinical-impression-status"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ClinicalImpressionStatus</h2>
+      <div>
+        <p>The workflow state of a clinical impression.</p>
+
+      </div>
+      <p>This code system http://hl7.org/fhir/clinical-impression-status defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>draft
+            <a name="clinical-impression-status-draft"> </a>
+          </td>
+          <td>In progress</td>
+          <td>The assessment is still on-going and results are not yet final.</td>
+        </tr>
+        <tr>
+          <td>completed
+            <a name="clinical-impression-status-completed"> </a>
+          </td>
+          <td>Completed</td>
+          <td>The assessment is done and the results are final.</td>
+        </tr>
+        <tr>
+          <td>entered-in-error
+            <a name="clinical-impression-status-entered-in-error"> </a>
+          </td>
+          <td>Entered in Error</td>
+          <td>This assessment was never actually done and the record is erroneous (e.g. Wrong patient).</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/clinical-impression-status"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.1.71"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="ClinicalImpressionStatus"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="The workflow state of a clinical impression."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/clinical-impression-status"/>
+  <content value="complete"/>
+  <concept>
+    <code value="draft"/>
+    <display value="In progress"/>
+    <definition value="The assessment is still on-going and results are not yet final."/>
+  </concept>
+  <concept>
+    <code value="completed"/>
+    <display value="Completed"/>
+    <definition value="The assessment is done and the results are final."/>
+  </concept>
+  <concept>
+    <code value="entered-in-error"/>
+    <display value="Entered in Error"/>
+    <definition value="This assessment was never actually done and the record is erroneous (e.g. Wrong patient)."/>
+  </concept>
+</CodeSystem>

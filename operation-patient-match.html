@@ -1,0 +1,210 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Operation-patient-match - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/operation-patient-match.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="operationdefinition.html">OperationDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- operation-patient-match.html / resource-instance:OperationDefinition / Operation Definition-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Operation-patient-match</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="operation-patient-match.xml.html">XML</a> or <a href="operation-patient-match.json.html">JSON</a> format. 
+</p>
+
+<hr/>
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Find patient matches using MPI based logic</h2><p>OPERATION: Find patient matches using MPI based logic</p><div><p>A Master Patient Index (<a href="http://en.wikipedia.org/wiki/Enterprise_master_patient_index">MPI</a> ) is a service used to manage patient identification in a context where multiple patient databases exist. Healthcare applications and middleware use the MPI to match patients between the databases, and as new patient details are encountered. MPIs are highly specialized applications, often tailored extensively to the institution's particular mix of patients. MPIs can also be run on a regional and national basis.</p>
+<p>To ask an MPI to match a patient, clients use the &quot;mpi&quot; query, which takes either a candidate patient resource, or a set of normal search parameters defined for patient. The data provided is interpreted as an MPI input and  passed to an MPI algorithm of some kind that uses them to determine the most appropriate matches in the patient set.</p>
+<p>Note that different MPI matching algorithms have different required inputs. The generic $match operation does not specify any particular algorithm, nor a minimum set of information that must be provided when asking for an MPI match operation to be performed, but may implementations will have a set of minimum information, which may be declared in their definition of the $match operation</p>
+</div><p>URL: [base]/Patient/$match</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>patient</td><td>0..1</td><td>Patient</td><td/><td><div><p>Use this to provide an entire set of patient details for the MPI to match against (e.g. POST a patient record to Patient/$match). If a patient record is not provided, then one or more of the other parameters must be provided</p>
+</div></td></tr><tr><td>IN</td><td>family</td><td>0..1</td><td>string</td><td/><td><div><p>The family name for matching</p>
+</div></td></tr><tr><td>IN</td><td>given</td><td>0..1</td><td>string</td><td/><td><div><p>The given name for matching</p>
+</div></td></tr><tr><td>IN</td><td>gender</td><td>0..1</td><td>string</td><td/><td><div><p>The gender for matching</p>
+</div></td></tr><tr><td>IN</td><td>birthdate</td><td>0..1</td><td>string</td><td/><td><div><p>The birth date of the patient for matching</p>
+</div></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td>string</td><td/><td><div><p>An identifier to use for the matching</p>
+</div></td></tr><tr><td>IN</td><td>telecom</td><td>0..1</td><td>string</td><td/><td><div><p>Some kind of telecom to use for the matching</p>
+</div></td></tr><tr><td>IN</td><td>phone</td><td>0..1</td><td>string</td><td/><td><div><p>A phone number to use for matching</p>
+</div></td></tr><tr><td>IN</td><td>email</td><td>0..1</td><td>string</td><td/><td><div><p>An email address to use for matching</p>
+</div></td></tr><tr><td>IN</td><td>postcode</td><td>0..1</td><td>string</td><td/><td><div><p>A postcode to use for matching</p>
+</div></td></tr><tr><td>IN</td><td>userid</td><td>0..1</td><td>string</td><td/><td><div><p>This optional parameter is used to pass the user details from a trusted client to the MPI. This may be used by the MPI to restrict the possible matches that are returned, based on the user's rights. For example, a staff member covered by policies, etc., may well get a different result than a patient trying to find their own record. Note that this parameter is used where the user would not be expected to log in to the MPI directly; whether this is appropriate or not is a deployment choice.</p>
+</div></td></tr><tr><td>IN</td><td>count</td><td>0..1</td><td>integer</td><td/><td><div><p>The maximum number of records to return. If no value is provided, the server decides how many matches to return. Note that clients should be careful when using this, as it may prevent probable - and valid - matches from being returned</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td>Bundle</td><td/><td><div><p>A bundle contain a set of Patient records that represent possible matches</p>
+</div></td></tr></table><div><p>The response from an &quot;mpi&quot; query is a bundle containing patient records, ordered from most likely to least likely. If there are no patient matches, the MPI SHALL return an empty search set with no error, but may include an operation outcome with further advice regarding patient selection. All patient records SHALL have a search score from 0 to 1, where 1 is the most certain match, along with an extension &quot;<a href="extension-match-grade.html">match-grade</a>&quot; that indicates the MPI's position on the match quality.</p>
+</div></div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Foperation-patient-match.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Foperation-patient-match.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ServiceDefinition/infobutton> a fhir:ServiceDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "infobutton"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">InfoButton Module</div>"
+  ];
+  fhir:ServiceDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "infobutton" ]
+  ];
+  fhir:ServiceDefinition.version [ fhir:value "1.0.0"];
+  fhir:ServiceDefinition.title [ fhir:value "InfoButton Module"];
+  fhir:ServiceDefinition.status [ fhir:value "draft"];
+  fhir:ServiceDefinition.date [ fhir:value "2016-07-05"^^xsd:date];
+  fhir:ServiceDefinition.description [ fhir:value "The InfoButton specification defines a mechanism for retrieving relevant clinical context based a particular set of search criteria.."];
+  fhir:ServiceDefinition.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "InfoButton Module" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.text [ fhir:value "InfoButton" ]
+  ];
+  fhir:ServiceDefinition.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ];
+     fhir:DataRequirement.mustSupport [
+       fhir:value "gender";
+       fhir:index 0
+     ], [
+       fhir:value "birthDate";
+       fhir:index 1
+     ]
+  ], [
+     fhir:index 1;
+     fhir:DataRequirement.type [ fhir:value "Condition" ]
+  ], [
+     fhir:index 2;
+     fhir:DataRequirement.type [ fhir:value "MedicationStatement" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

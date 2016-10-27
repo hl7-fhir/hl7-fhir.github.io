@@ -1,0 +1,130 @@
+{
+  "@context": "http://build.fhir.org/Communication.jsonld",
+  "@context": "http://hl7.org/fhir/Communication/fm-attachment",
+  "Resource.id": {
+    "id.value": "fm-attachment"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachment which is unsolicited</div>"
+    }
+  },
+  "Communication.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://www.providerco.com/communication"
+      },
+      "Identifier.value": {
+        "string.value": "12345"
+      }
+    }
+  ],
+  "Communication.status": {
+    "code.value": "completed"
+  },
+  "Communication.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://acme.org/messagetypes"
+        },
+        "Coding.code": {
+          "code.value": "SolicitedAttachment"
+        }
+      }
+    ]
+  },
+  "Communication.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "Communication.topic": [
+    {
+      "Reference.identifier": {
+        "Identifier.system": {
+          "uri.value": "http://happyvalley.com/claim"
+        },
+        "Identifier.value": {
+          "string.value": "12345"
+        }
+      }
+    },
+    {
+      "Reference.identifier": {
+        "Identifier.system": {
+          "uri.value": "http://www.BenefitsInc.com/fhir/claimresponse"
+        },
+        "Identifier.value": {
+          "string.value": "R3500"
+        }
+      }
+    }
+  ],
+  "Communication.sent": {
+    "dateTime.value": "2016-06-12T18:01:10-08:00"
+  },
+  "Communication.sender": {
+    "Reference.identifier": {
+      "Identifier.system": {
+        "uri.value": "http://www.jurisdiction.com/provideroffices"
+      },
+      "Identifier.value": {
+        "string.value": "3456"
+      }
+    }
+  },
+  "Communication.recipient": [
+    {
+      "Reference.identifier": {
+        "Identifier.system": {
+          "uri.value": "http://www.jurisdiction.com/insurer"
+        },
+        "Identifier.value": {
+          "string.value": "123456"
+        }
+      }
+    }
+  ],
+  "Communication.payload": [
+    {
+      "Communication.payload.contentAttachment": {
+        "Attachment.contentType": {
+          "code.value": "application/pdf"
+        },
+        "Attachment.data": {
+          "base64Binary.value": "SGVsbG8="
+        },
+        "Attachment.title": {
+          "string.value": "accident notes 20100201.pdf"
+        },
+        "Attachment.creation": {
+          "dateTime.value": "2010-02-01T11:50:23-05:00"
+        }
+      }
+    },
+    {
+      "Communication.payload.contentAttachment": {
+        "Attachment.contentType": {
+          "code.value": "application/pdf"
+        },
+        "Attachment.url": {
+          "uri.value": "http://happyvalley.com/docs/AB12345"
+        },
+        "Attachment.size": {
+          "unsignedInt.value": 104274
+        },
+        "Attachment.hash": {
+          "base64Binary.value": "SGVsbG8gdGhlcmU="
+        },
+        "Attachment.creation": {
+          "dateTime.value": "2010-02-01T10:57:34+01:00"
+        }
+      }
+    }
+  ]
+}

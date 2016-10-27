@@ -1,0 +1,321 @@
+﻿<!DOCTYPE HTML>
+  <!-- These elements SHALL always appear in this order. These basic elements shared by all resources come first
+in order to support consistent definitions for schema and UML derived code. --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+      <title>Administration-module - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/administration-module.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+    	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><b><img src="administration.jpg"/> Administration</b></li>          <!-- administration-module.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+    <div class="col-9">
+
+        <a name="root"> </a>
+        <h2 class="self-link-parent"><span class="sectioncount">8.0<a name="8.0"> </a></span> Administration Module <a href="administration-module.html#8.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+        <a name="intro"> </a>
+        <h3 class="self-link-parent"><span class="sectioncount">8.0.1</span> Introduction <a href="administration-module.html#intro" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+        <p>
+            The Administrative module covers the base data that is then linked into
+            the other modules for clinical content, finance/billing, workflow, etc.<br/>
+            This of course is built on the FHIR technology platform modules.
+        </p>
+        <p>
+            Before any clinical data can be recorded, the basic information on the patient
+            must be recorded, and then often the basis of the interaction (such as an encounter)
+        </p>
+
+        <a name="index"> </a>
+        <h3 class="self-link-parent"><span class="sectioncount">8.0.2</span> Index <a href="administration-module.html#index" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+        <table class="bare">
+            <tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Patient Registers<a name="patientregisters"> </a></th></tr>
+<tr><td colspan="3">Track people involved in receiving healthcare, the basics nearly everything else references back to</td></tr>
+
+            <tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+            <tr bgcolor="#EFEFEF"><td><a href="patient.html">Patient</a></td><td>SubjectOfCare Client Resident</td><td>Demographics and other administrative information about an individual or animal receiving care or other health-related services.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="relatedperson.html">RelatedPerson</a></td><td/><td>Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.</td></tr>
+
+            <tr bgcolor="#EFEFEF"><td><a href="person.html">Person</a></td><td/><td>Demographics and administrative information about a person independent of a specific health-related context.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="group.html">Group</a></td><td/><td>Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.</td></tr>
+
+        </table>
+        <div>
+            <img src="administration-module-person.png" alt="Image showing the relationship between resources representing people" width="584px"/>
+        </div>
+        <p>
+            <blockquote>
+                <em>Note:</em> <a href="patient.html#links">Patient linking</a> should also be considered when evaluating
+                searches with references to other resources. e.g. Searching for conditions for a patient.<br/>
+                At present the specification does not define if the links should be also followed to include
+                conditions that reference the linked patients too. We are currently seeking feedback on this.
+            </blockquote>
+            <blockquote>
+                <em>Note:</em> The Person resource may be used as a centralized register of people that may
+                eventually be involved in healthcare, and could be used as the central coe demographics register.<br/>
+                However the fields/values in Person are duplicated in the other resources, and in many cases the
+                Person resource will be hosted on external systems.
+            </blockquote>
+        </p>
+
+        <table class="bare">
+            <tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Clinical Categorization Resources<a name="clinicalcategorizationresources"> </a></th></tr>
+<tr><td colspan="3">Most clinical actitivies occur grouped in some way. Long term care is typically covered by an EpisodeOfCare, where short term care by encounters. Account associates the tracking of transactions back to a Patient (or other resource). Flag is just used to highlight a warning or other notification about a patient (or other resource)</td></tr>
+
+            <tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+            <tr bgcolor="#EFEFEF"><td><a href="episodeofcare.html">EpisodeOfCare</a></td><td>Case Program Problem</td><td>An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="encounter.html">Encounter</a></td><td>Visit</td><td>An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.</td></tr>
+
+            <tr bgcolor="#EFEFEF"><td><a href="account.html">Account</a></td><td>Cost center</td><td>A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="flag.html">Flag</a></td><td>Barriers to Care, Alert</td><td>Prospective warnings of potential issues when providing care to the patient.</td></tr>
+
+        </table>
+        <div>
+            <img src="administration-module-interactions.png" alt="Image showing the administration interactions" width="600px"/>
+        </div>
+        <p>
+            <blockquote>
+                <em>Note:</em> Resources shown with a dotted box are described in other sections of the specification:
+                <code>Coverage</code> and <code>Claim</code> are from the <a href="financial-module.html">section on Finance</a>.
+            </blockquote>
+        </p>
+
+        <table class="bare">
+            <tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Service Provider Directory Resources<a name="serviceproviderdirectoryresources"> </a></th></tr>
+<tr><td colspan="3">Service Directory resources are usually stored in the administration section of applications, and may even be synchronized from external systems.</td></tr>
+
+            <tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+            <tr bgcolor="#EFEFEF"><td><a href="organization.html">Organization</a></td><td/><td>A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="location.html">Location</a></td><td/><td>Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated.</td></tr>
+
+            <tr bgcolor="#EFEFEF"><td><a href="practitioner.html">Practitioner</a></td><td/><td>A person who is directly or indirectly involved in the provisioning of healthcare.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="healthcareservice.html">HealthcareService</a></td><td/><td>The details of a healthcare service available at a location.</td></tr>
+
+            <tr bgcolor="#EFEFEF"><td><a href="endpoint.html">Endpoint</a></td><td/><td>The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="practitionerrole.html">PractitionerRole</a></td><td/><td>A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.</td></tr>
+
+        </table>
+        <div>
+            <img src="administration-module-prov-dir.png" alt="Image showing the provider directory resources" width="513px"/>
+        </div>
+        <p>
+            <blockquote>
+                <em>Note:</em> The PractitionerRole resource is a draft concept to experiment with the
+                extraction from within the practitioner resource. It will be the subject of a Provider Directory Connectathon,
+                and the Baltimore WGM Connectathon in September 2016<br/>
+                If this is approved, then the Role component in Practitioner would likely be removed.
+            </blockquote>
+        </p>
+
+        <table class="bare">
+            <tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Devices and Substances<a name="devicesandsubstances"> </a></th></tr>
+<tr><td colspan="3">Other assets are often registered in the administration system, and maintained as master files.</td></tr>
+
+            <tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+            <tr bgcolor="#EFEFEF"><td><a href="device.html">Device</a></td><td/><td>This resource identifies an instance or a type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.  Medical devices includes durable (reusable) medical equipment, implantable devices, as well as disposable equipment used for diagnostic, treatment, and research for healthcare and public health.  Non-medical devices may include items such as a machine, cellphone, computer, application, etc.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="devicecomponent.html">DeviceComponent</a></td><td/><td>Describes the characteristics, operational status and capabilities of a medical-related component of a medical device.</td></tr>
+
+            <tr bgcolor="#EFEFEF"><td><a href="devicemetric.html">DeviceMetric</a></td><td/><td>Describes a measurement, calculation or setting capability of a medical device.</td></tr>
+
+            <tr bgcolor="#FFFFFF"><td><a href="substance.html">Substance</a></td><td/><td>A homogeneous material with a definite composition.</td></tr>
+
+        </table>
+
+
+        <a name="secpriv"> </a>
+        <h3 class="self-link-parent"><span class="sectioncount">8.0.3</span> Security and Privacy <a href="administration-module.html#secpriv" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+        <p>
+            Patient privacy is handled with security labels and tags in the Resource <a href="resource.html#Meta">Meta</a> property.
+            This is the standard way that the FHIR specification provides this supporting information
+            to a sub-system that implements it (which is not defined by FHIR).
+        </p>
+        <p>
+            One of the more common use cases is for marking a patient as being a <a href="security-labels.html">celebrity</a>.
+        </p>
+        <p>
+            For more general considerations, see <a href="secpriv-module.html">the Security and Privacy module</a>.
+        </p>
+
+        <a name="uses"> </a>
+        <h3 class="self-link-parent"><span class="sectioncount">8.0.4</span> Common use Cases <a href="administration-module.html#uses" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+        <p>
+            All systems require access to administrative resources, such as for:
+        </p>
+        <ul>
+            <li>Maintaining master file lists of patients, practitioners, organizations, locations, etc.</li>
+            <li>Synchronizing/interrogating content from an external registry. Such as a Services Directory or centralized Person register</li>
+            <li/>
+        </ul>
+
+        <a name="roadmap"> </a>
+        <h3 class="self-link-parent"><span class="sectioncount">8.0.5</span> Developmental Roadmap <a href="administration-module.html#roadmap" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+        <p>
+            The Patient Administration is currently working through resources that support:
+        </p>
+        <ul>
+            <li>Encounters and Scheduling <i>(enhance maturity of encounters and further develop in/outpatient scheduling)</i></li>
+            <li>Service Provider Directory <i>(in co-ordination with the Argonaut Provider Directory group)</i></li>
+            <li>Financial Management interactions <i>(account/coverage, then billable item, which links administration to billing)</i></li>
+        </ul>
+        <p>
+            Many of the administrative resources are part of the core resources that most systems
+            use first and have formed the basis for most people's first experiences with FHIR.<br/>
+            However this limited exposure has still to be proven in all contexts, such as veterinary, public health and clinical research.
+        </p>
+    </div>
+
+    
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fadministration-module.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fadministration-module.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

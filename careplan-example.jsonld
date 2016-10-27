@@ -1,0 +1,197 @@
+{
+  "@context": "http://build.fhir.org/CarePlan.jsonld",
+  "@context": "http://hl7.org/fhir/CarePlan/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "additional"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.\n            Some Notes: </p>\n      <ul>\n        <li>It would be good to have some way of specifying/coding a goal; e.g. what the target weight is</li>\n        <li>In the codeable concepts I've been lazy and just put the text. There should, of course, be a code behind these</li>\n      </ul>\n    </div>"
+    }
+  },
+  "Condition": [
+    {
+      "Resource.id": {
+        "id.value": "p1"
+      },
+      "Condition.verificationStatus": {
+        "code.value": "confirmed"
+      },
+      "Condition.code": {
+        "CodeableConcept.text": {
+          "string.value": "Obesity"
+        }
+      },
+      "Condition.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Reference.display": {
+          "string.value": "Peter James Chalmers"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "goal"
+      },
+      "DomainResource.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://hl7.org/fhir/StructureDefinition/goal-target"
+          },
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "uri.value": "goal-target.measure"
+              },
+              "Extension.valueCodeableConcept": {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.system": {
+                      "uri.value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "code.value": "29463-7"
+                    },
+                    "Coding.display": {
+                      "string.value": "Body weight"
+                    }
+                  }
+                ],
+                "Resource.concept": "http://loinc.org/owl#29463-7"
+              }
+            },
+            {
+              "Extension.url": {
+                "uri.value": "goal-target.detail"
+              },
+              "Extension.valueQuantity": {
+                "Quantity.value": {
+                  "decimal.value": 80
+                },
+                "Quantity.system": {
+                  "uri.value": "http://units-of-measure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "kg"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "Goal.status": {
+        "code.value": "planned"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Target weight is 80 kg"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Reference.display": {
+          "string.value": "Peter James Chalmers"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      }
+    }
+  ],
+  "CarePlan.status": {
+    "code.value": "active"
+  },
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter James Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "CarePlan.period": {
+    "Period.end": {
+      "dateTime.value": "2013-01-01"
+    }
+  },
+  "CarePlan.careTeam": [
+    {
+      "Reference.reference": {
+        "string.value": "CareTeam/example"
+      }
+    }
+  ],
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "string.value": "#p1"
+      },
+      "Reference.display": {
+        "string.value": "obesity"
+      }
+    }
+  ],
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "string.value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "observation"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.text": {
+            "string.value": "a code for weight measurement"
+          }
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledTiming": {
+          "Timing.repeat": {
+            "Timing.repeat.frequency": {
+              "integer.value": 1
+            },
+            "Timing.repeat.period": {
+              "decimal.value": 1
+            },
+            "Timing.repeat.periodUnit": {
+              "code.value": "d"
+            }
+          }
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "string.value": "Patient/example"
+            },
+            "Reference.display": {
+              "string.value": "Peter James Chalmers"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

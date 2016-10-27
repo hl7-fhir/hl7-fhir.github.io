@@ -1,0 +1,295 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Questionnaireresponse-example-bluebook.xml - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/questionnaireresponse-example-bluebook.xml.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="questionnaireresponse.html">QuestionnaireResponse</a></li>        <li><b>Example Instance</b></li>        <!-- questionnaireresponse-example-bluebook.xml.html / resource-instance:QuestionnaireResponse / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Questionnaireresponse-example-bluebook.xml</h1>
+
+<p>
+<a href="questionnaireresponse-example-bluebook.xml">Raw XML</a> (<a href="questionnaireresponse-example-bluebook.canonical.xml">canonical form</a>)
+</p>
+
+
+<div class="example">
+<p>Real-world NSW My Personal Health Record example (id = &quot;bb&quot;)</p>
+<pre class="xml">
+<span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html" class="xmltag">QuestionnaireResponse</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://hl7.org/fhir</span>"</span><span class="xmltag">&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--   Please not that in this questionnaire, the questions are mostly unnamed, that is, the
+   questions are not identified using the &lt;name&gt; element. It will therefore
+    be hard to extract useful information in an automated way from this questionnaire.
+   This is, however, quite often the case when modelling existing questionnaires   --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">bb</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">generated</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://www.w3.org/1999/xhtml</span>"</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">pre</a></span><span class="xmltag">&gt;</span><b>
+        Cathy Jones, female. Birth weight 3.25 kg at 44.3 cm. 
+        Injection of Vitamin K given on 1972-11-30 (first dose) and 1972-12-11 (second
+         dose)
+        Note: Was able to speak Chinese at birth.
+      </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">pre</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">completed</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.subject" class="xmltag">subject</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/Patient/1</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.subject" class="xmltag">subject</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.author" class="xmltag">author</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/Practitioner/example</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.author" class="xmltag">author</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.authored" class="xmltag">authored</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2013-02-19T14:15:00+10:00</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmlcomment">&lt;!--   Many groups left out of this example   --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">birthDetails</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Birth details - To be completed by health professional</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">nameOfChild</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Name of child</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueString</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Cathy Jones</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">sex</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Sex</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueCoding</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltagred">&lt;code</span><span class="xmlattr"> value="<span class="xmlattrvalue">f</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueCoding</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item" class="xmltag">item</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">neonatalInformation</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Neonatal Information</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">birthWeight</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Birth weight (kg)</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueDecimal</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">3.25</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">birthLength</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Birth length (cm)</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueDecimal</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">44.3</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">vitaminKgiven</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Vitamin K given</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueCoding</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltagred">&lt;code</span><span class="xmlattr"> value="<span class="xmlattrvalue">INJECTION</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueCoding</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">vitaminKgivenDoses</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">vitaminKDose1</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1st dose</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+                </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer.value[x]" class="xmltag">valueDate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1972-11-30</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item" class="xmltag">item</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">vitaminKDose2</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2nd dose</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+                </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer.value[x]" class="xmltag">valueDate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1972-12-11</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item" class="xmltag">item</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item" class="xmltag">item</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">hepBgiven</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Hep B given y / n</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueBoolean</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">true</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">hepBgivenDate</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Date given</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+                </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer.value[x]" class="xmltag">valueDate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1972-12-04</span>"</span><span class="xmltag">/&gt;</span><b>
+              </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item.item" class="xmltag">item</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.item" class="xmltag">item</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.linkId" class="xmltag">linkId</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">abnormalitiesAtBirth</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Abnormalities noted at birth</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer.value[x]" class="xmltag">valueString</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Already able to speak Chinese</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item.answer" class="xmltag">answer</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item.item" class="xmltag">item</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.item" class="xmltag">item</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item" class="xmltag">item</a>&gt;</span><b>
+</b><span class="xmltag">&lt;/<a href="questionnaireresponse-definitions.html" class="xmltag">QuestionnaireResponse</a>&gt;</span></pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fquestionnaireresponse-example-bluebook.xml.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fquestionnaireresponse-example-bluebook.xml.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

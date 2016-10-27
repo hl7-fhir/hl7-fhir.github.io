@@ -1,0 +1,115 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "Measure-evaluate-measure"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/Measure-evaluate-measure"];
+  fhir:OperationDefinition.name [ fhir:value "Evaluate Measure"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The evaluate-measure operation is used to invoke an eMeasure and obtain the results"];
+  fhir:OperationDefinition.code [ fhir:value "evaluate-measure"];
+  fhir:OperationDefinition.comment [ fhir:value "The effect of invoking this operation is to calculate the measure for the given patient, or all patients if no patient is supplied, and return the results as a MeasureReport resource of the appropriate type"];
+  fhir:OperationDefinition.resource [
+     fhir:value "Measure";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "true"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "periodStart" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The start of the measurement period" ];
+     fhir:OperationDefinition.type [ fhir:value "date" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "periodEnd" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The end of the measurement period" ];
+     fhir:OperationDefinition.type [ fhir:value "date" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "measure" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The measure to evaluate" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Measure" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "reportType" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The type of measure report, patient, patient-list, or population" ];
+     fhir:OperationDefinition.type [ fhir:value "code" ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.name [ fhir:value "patient" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Patient to evaluate against" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:OperationDefinition.name [ fhir:value "practitioner" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Practitioner to evaluate" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.name [ fhir:value "lastReceivedOn" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The date the results of this measure were last received" ];
+     fhir:OperationDefinition.type [ fhir:value "dateTime" ]
+  ], [
+     fhir:index 7;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The results of the measure calculation" ];
+     fhir:OperationDefinition.type [ fhir:value "MeasureReport" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,329 @@
+{
+  "@context": "http://build.fhir.org/MedicationDispense.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationDispense/meddisp0329",
+  "Resource.id": {
+    "id.value": "meddisp0329"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0329</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0319; </p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0329</a></p><p><b>type</b>: partial Fill <span>(Details : {http://hl7.org/fhir/v3/ActPharmacySupplyType code 'PF' = 'PF', given as 'partial Fill'})</span></p><p><b>quantity</b>: 30 gm<span> (Details: UCUM code gm = 'gm')</span></p><p><b>daysSupply</b>: 10 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>whenHandedOver</b>: Jan 15, 2015 4:20:00 PM</p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0319"
+      },
+      "Medication.isBrand": {
+        "boolean.value": false
+      },
+      "Medication.product": {
+        "Medication.product.form": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "385101003"
+              },
+              "Coding.display": {
+                "string.value": "Ointment"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "Ointment"
+          },
+          "Resource.concept": "http://snomed.info/sct#385101003"
+        },
+        "Medication.product.ingredient": [
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://snomed.info/sct"
+                  },
+                  "Coding.code": {
+                    "code.value": "387253001"
+                  },
+                  "Coding.display": {
+                    "string.value": "Salicyclic Acid (substance)"
+                  }
+                }
+              ],
+              "Resource.concept": "http://snomed.info/sct#387253001"
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 5
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 100
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              }
+            }
+          },
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://snomed.info/sct"
+                  },
+                  "Coding.code": {
+                    "code.value": "396458002"
+                  },
+                  "Coding.display": {
+                    "string.value": "Hydrocortisone (substance)"
+                  }
+                }
+              ],
+              "Resource.concept": "http://snomed.info/sct#396458002"
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 1
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 100
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              }
+            }
+          },
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://snomed.info/sct"
+                  },
+                  "Coding.code": {
+                    "code.value": "126066007"
+                  },
+                  "Coding.display": {
+                    "string.value": "White Petrolatum (substance)"
+                  }
+                }
+              ],
+              "Resource.concept": "http://snomed.info/sct#126066007"
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 94
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 100
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationDispense.status": {
+    "code.value": "completed"
+  },
+  "MedicationDispense.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0319"
+    }
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f006"
+    },
+    "Reference.display": {
+      "string.value": "Rob van den Berk"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f006"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "string.value": "MedicationRequest/medrx0329"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v3/ActPharmacySupplyType"
+        },
+        "Coding.code": {
+          "code.value": "PF"
+        },
+        "Coding.display": {
+          "string.value": "partial Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "decimal.value": 30
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "gm"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "decimal.value": 10
+    },
+    "Quantity.unit": {
+      "string.value": "Day"
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "d"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "dateTime.value": "2015-01-15T10:20:00Z"
+  },
+  "MedicationDispense.whenHandedOver": {
+    "dateTime.value": "2015-01-15T16:20:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "Apply twice daily to affected area on left arm"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.text": {
+            "string.value": "Apply sparingly"
+          }
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 2
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "72098002"
+            },
+            "Coding.display": {
+              "string.value": "Entire left upper arm (body structure)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#72098002"
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "359540000"
+            },
+            "Coding.display": {
+              "string.value": "Topical (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#359540000"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 1
+        },
+        "Quantity.unit": {
+          "string.value": "ea"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "ea"
+        }
+      }
+    }
+  ]
+}

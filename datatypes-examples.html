@@ -1,0 +1,1433 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Datatypes-examples - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/datatypes-examples.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><a href="datatypes.html">Data Types</a></li>
+        <li><b>Examples</b></li>          <!-- datatypes-examples.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="datatypes.html">Data Types</a></li><li class="active"><a href="#">Examples</a></li><li><a href="datatypes-definitions.html">Detailed Descriptions</a></li><li><a href="datatypes-mappings.html">Mappings</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">2.22.1<a name="2.22.1"> </a></span> Data Type Examples <a href="datatypes-examples.html#2.22.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>This page includes additional examples of the data types, based on common usages and questions</p>
+
+<p><b>Table of Contents</b></p>
+<table class="grid">
+ <tr>
+  <td><b>Primitive Types</b><br/><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285" version="1.1" height="248">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1)" rx="4" ry="4" x="130.0" width="55.44000000000001" y="60.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><text x="157.72" y="80.0" fill="black" class="diagram-class-title">Element</text><g><rect filter="url(#shadow1)" rx="4" ry="4" x="20.0" width="55.44000000000001" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="20.0" y2="28.0" x2="75.44000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="47.720000000000006" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#instant">instant</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="90.0" width="31.680000000000003" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="90.0" y2="28.0" x2="121.68" style="stroke:dimgrey;stroke-width:1"/><text x="105.84" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#time">time</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="170.0" width="31.680000000000003" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="170.0" y2="28.0" x2="201.68" style="stroke:dimgrey;stroke-width:1"/><text x="185.84" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#date">date</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="210.0" width="63.36000000000001" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="210.0" y2="28.0" x2="273.36" style="stroke:dimgrey;stroke-width:1"/><text x="241.68" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#datetime">dateTime</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="20.0" width="55.44000000000001" y="60.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="88.0" x1="20.0" y2="88.0" x2="75.44000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="47.720000000000006" y="80.0" fill="black" class="diagram-class-title"><a xlink:href="#decimal">decimal</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="210.0" width="55.44000000000001" y="60.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="88.0" x1="210.0" y2="88.0" x2="265.44" style="stroke:dimgrey;stroke-width:1"/><text x="237.72" y="80.0" fill="black" class="diagram-class-title"><a xlink:href="#boolean">boolean</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="20.0" width="55.44000000000001" y="110.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="138.0" x1="20.0" y2="138.0" x2="75.44000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="47.720000000000006" y="130.0" fill="black" class="diagram-class-title"><a xlink:href="#integer">integer</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="185.0" width="47.52" y="110.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="138.0" x1="185.0" y2="138.0" x2="232.52" style="stroke:dimgrey;stroke-width:1"/><text x="208.76" y="130.0" fill="black" class="diagram-class-title"><a xlink:href="#string">string</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="240.0" width="23.76" y="110.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="138.0" x1="240.0" y2="138.0" x2="263.76" style="stroke:dimgrey;stroke-width:1"/><text x="251.88" y="130.0" fill="black" class="diagram-class-title"><a xlink:href="#uri">uri</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="90.0" width="95.04" y="110.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="138.0" x1="90.0" y2="138.0" x2="185.04000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="137.52" y="130.0" fill="black" class="diagram-class-title"><a xlink:href="#base64binary">base64Binary</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="177.0" width="31.680000000000003" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="177.0" y2="188.0" x2="208.68" style="stroke:dimgrey;stroke-width:1"/><text x="192.84" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#code">code</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="220.0" width="15.840000000000002" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="220.0" y2="188.0" x2="235.84" style="stroke:dimgrey;stroke-width:1"/><text x="227.92" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#id">id</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="250.0" width="23.76" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="250.0" y2="188.0" x2="273.76" style="stroke:dimgrey;stroke-width:1"/><text x="261.88" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#oid">oid</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="0.0" width="87.12000000000002" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="0.0" y2="188.0" x2="87.12000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="43.56000000000001" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#unsignedint">unsignedInt</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="90.0" width="87.12000000000002" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="90.0" y2="188.0" x2="177.12" style="stroke:dimgrey;stroke-width:1"/><text x="133.56" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#positiveint">positiveInt</a></text></g><g><rect filter="url(#shadow1)" rx="4" ry="4" x="192.0" width="63.36000000000001" y="200.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="228.0" x1="192.0" y2="228.0" x2="255.36" style="stroke:dimgrey;stroke-width:1"/><text x="223.68" y="220.0" fill="black" class="diagram-class-title"><a xlink:href="#markdown">markdown</a></text></g></g><line y1="59.99999999999999" x1="132.05333333333334" y2="27.999999999999993" x2="73.38666666666667" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-151.3895403340348 132.05333333333334 59.99999999999999)" style="fill:white;stroke:navy;stroke-width:1" points="132.05333333333334,59.99999999999999 140.05333333333334,66.0 140.05333333333334,53.99999999999999 132.05333333333334,59.99999999999999"/><line y1="60.0" x1="145.61466666666666" y2="28.0" x2="117.94533333333334" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-130.84887906731657 145.61466666666666 60.0)" style="fill:white;stroke:navy;stroke-width:1" points="145.61466666666666,60.0 153.61466666666666,66.0 153.61466666666666,54.0 145.61466666666666,60.0"/><line y1="60.0" x1="164.28133333333332" y2="28.0" x2="179.27866666666665" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-64.88907976271865 164.28133333333332 60.0)" style="fill:white;stroke:navy;stroke-width:1" points="164.28133333333332,60.0 172.28133333333332,66.0 172.28133333333332,54.0 164.28133333333332,60.0"/><line y1="60.0" x1="177.31066666666666" y2="28.0" x2="222.08933333333331" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-35.550586316856936 177.31066666666666 60.0)" style="fill:white;stroke:navy;stroke-width:1" points="177.31066666666666,60.0 185.31066666666666,66.0 185.31066666666666,54.0 177.31066666666666,60.0"/><line y1="74.0" x1="130.0" y2="74.0" x2="75.44000000000001" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(180.0 130.0 74.0)" style="fill:white;stroke:navy;stroke-width:1" points="130.0,74.0 138.0,80.0 138.0,68.0 130.0,74.0"/><line y1="73.99999999999997" x1="185.44" y2="73.99999999999997" x2="210.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.0 185.44 73.99999999999997)" style="fill:white;stroke:navy;stroke-width:1" points="185.44,73.99999999999997 193.44,79.99999999999997 193.44,67.99999999999997 185.44,73.99999999999997"/><line y1="86.6" x1="130.0" y2="111.39999999999999" x2="75.44000000000001" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(155.55604521958347 130.0 86.6)" style="fill:white;stroke:navy;stroke-width:1" points="130.0,86.6 138.0,92.6 138.0,80.6 130.0,86.6"/><line y1="88.0" x1="172.01119999999997" y2="110.0" x2="194.46879999999996" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(44.410278043417215 172.01119999999997 88.0)" style="fill:white;stroke:navy;stroke-width:1" points="172.01119999999997,88.0 180.01119999999997,94.0 180.01119999999997,82.0 172.01119999999997,88.0"/><line y1="87.99999999999999" x1="184.08479999999997" y2="117.69158878504673" x2="240.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(27.968795724402472 184.08479999999997 87.99999999999999)" style="fill:white;stroke:navy;stroke-width:1" points="184.08479999999997,87.99999999999999 192.08479999999997,93.99999999999999 192.08479999999997,81.99999999999999 184.08479999999997,87.99999999999999"/><line y1="88.0" x1="152.06399999999996" y2="110.0" x2="143.17599999999996" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(111.99870822273617 152.06399999999996 88.0)" style="fill:white;stroke:navy;stroke-width:1" points="152.06399999999996,88.0 160.06399999999996,94.0 160.06399999999996,82.0 152.06399999999996,88.0"/><line y1="138.0" x1="204.3024" y2="160.0000000000001" x2="197.29759999999996" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(107.66147516335555 204.3024 138.0)" style="fill:white;stroke:navy;stroke-width:1" points="204.3024,138.0 212.3024,144.0 212.3024,132.0 204.3024,138.0"/><line y1="138.00000000000006" x1="214.12480000000002" y2="160.00000000000006" x2="222.5552" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(69.0331675618866 214.12480000000002 138.00000000000006)" style="fill:white;stroke:navy;stroke-width:1" points="214.12480000000002,138.00000000000006 222.12480000000002,144.00000000000006 222.12480000000002,132.00000000000006 214.12480000000002,138.00000000000006"/><line y1="138.0" x1="254.68000000000006" y2="159.99999999999977" x2="259.08000000000004" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(78.69006752597973 254.68000000000006 138.0)" style="fill:white;stroke:navy;stroke-width:1" points="254.68000000000006,138.0 262.68000000000006,144.0 262.68000000000006,132.0 254.68000000000006,138.0"/><line y1="138.0" x1="46.5552" y2="160.0" x2="44.724799999999995" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(94.7560548555596 46.5552 138.0)" style="fill:white;stroke:navy;stroke-width:1" points="46.5552,138.0 54.5552,144.0 54.5552,132.0 46.5552,138.0"/><line y1="138.0" x1="71.75520000000006" y2="160.0" x2="109.52480000000006" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(30.219902847302635 71.75520000000006 138.0)" style="fill:white;stroke:navy;stroke-width:1" points="71.75520000000006,138.0 79.75520000000006,144.0 79.75520000000006,132.0 71.75520000000006,138.0"/><line y1="138.0" x1="211.08088888888892" y2="200.0" x2="221.35911111111113" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(80.58723803003976 211.08088888888892 138.0)" style="fill:white;stroke:navy;stroke-width:1" points="211.08088888888892,138.0 219.08088888888892,144.0 219.08088888888892,132.0 211.08088888888892,138.0"/></svg></td>
+  <td><b>Complex Types</b><br/><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" version="1.1" height="258">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow2" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow2)" rx="4" ry="4" x="150.0" width="55.44000000000001" y="80.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><text x="177.72" y="100.0" fill="black" class="diagram-class-title">Element</text><g><rect filter="url(#shadow2)" rx="4" ry="4" x="260.0" width="79.2" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="260.0" y2="28.0" x2="339.2" style="stroke:dimgrey;stroke-width:1"/><text x="299.6" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#identifier">Identifier</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="325.0" width="71.28" y="40.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="68.0" x1="325.0" y2="68.0" x2="396.28" style="stroke:dimgrey;stroke-width:1"/><text x="360.64" y="60.0" fill="black" class="diagram-class-title"><a xlink:href="#humanname">HumanName</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="325.0" width="55.44000000000001" y="120.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="148.0" x1="325.0" y2="148.0" x2="380.44" style="stroke:dimgrey;stroke-width:1"/><text x="352.72" y="140.0" fill="black" class="diagram-class-title"><a xlink:href="#address">Address</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="330.0" width="95.04" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="330.0" y2="188.0" x2="425.04" style="stroke:dimgrey;stroke-width:1"/><text x="377.52" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#contactpoint">ContactPoint</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="0.0" width="47.52" y="40.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="68.0" x1="0.0" y2="68.0" x2="47.52" style="stroke:dimgrey;stroke-width:1"/><text x="23.76" y="60.0" fill="black" class="diagram-class-title"><a xlink:href="#timing">Timing</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="120.0" width="63.36000000000001" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="120.0" y2="188.0" x2="183.36" style="stroke:dimgrey;stroke-width:1"/><text x="151.68" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#quantity">Quantity</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="140.0" width="110.88000000000002" y="210.0" style="fill:#f8ddf8;stroke:black;stroke-width:1" height="28.0"/><line y1="238.0" x1="140.0" y2="238.0" x2="250.88000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="195.44" y="230.0" fill="black" class="diagram-class-title"><a xlink:href="#simplequantity">SimpleQuantity</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="170.0" width="79.2" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="170.0" y2="28.0" x2="249.2" style="stroke:dimgrey;stroke-width:1"/><text x="209.6" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#attachment">Attachment</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="125.0" width="39.6" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="125.0" y2="28.0" x2="164.6" style="stroke:dimgrey;stroke-width:1"/><text x="144.8" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#range">Range</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="55.0" width="47.52" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="55.0" y2="28.0" x2="102.52000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="78.76" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#period">Period</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="0.0" width="39.6" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="39.6" style="stroke:dimgrey;stroke-width:1"/><text x="19.8" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#ratio">Ratio</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="0.0" width="118.8" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="0.0" y2="188.0" x2="118.8" style="stroke:dimgrey;stroke-width:1"/><text x="59.4" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#codeableconcept">CodeableConcept</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="0.0" width="47.52" y="80.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="108.0" x1="0.0" y2="108.0" x2="47.52" style="stroke:dimgrey;stroke-width:1"/><text x="23.76" y="100.0" fill="black" class="diagram-class-title"><a xlink:href="#coding">Coding</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="240.0" width="87.12000000000002" y="160.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="188.0" x1="240.0" y2="188.0" x2="327.12" style="stroke:dimgrey;stroke-width:1"/><text x="283.56" y="180.0" fill="black" class="diagram-class-title"><a xlink:href="#sampleddata">SampledData</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="0.0" width="23.76" y="210.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="238.0" x1="0.0" y2="238.0" x2="23.76" style="stroke:dimgrey;stroke-width:1"/><text x="11.88" y="230.0" fill="black" class="diagram-class-title"><a xlink:href="#age">Age</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="35.0" width="63.36000000000001" y="210.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="238.0" x1="35.0" y2="238.0" x2="98.36000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="66.68" y="230.0" fill="black" class="diagram-class-title"><a xlink:href="#distance">Distance</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="240.0" width="63.36000000000001" y="210.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="238.0" x1="240.0" y2="238.0" x2="303.36" style="stroke:dimgrey;stroke-width:1"/><text x="271.68" y="230.0" fill="black" class="diagram-class-title"><a xlink:href="#duration">Duration</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="275.0" width="39.6" y="210.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="238.0" x1="275.0" y2="238.0" x2="314.6" style="stroke:dimgrey;stroke-width:1"/><text x="294.8" y="230.0" fill="black" class="diagram-class-title"><a xlink:href="#count">Count</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="320.0" width="39.6" y="210.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="238.0" x1="320.0" y2="238.0" x2="359.6" style="stroke:dimgrey;stroke-width:1"/><text x="339.8" y="230.0" fill="black" class="diagram-class-title"><a xlink:href="#money">Money</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="320.0" width="79.2" y="80.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="108.0" x1="320.0" y2="108.0" x2="399.2" style="stroke:dimgrey;stroke-width:1"/><text x="359.6" y="100.0" fill="black" class="diagram-class-title"><a xlink:href="#annotation">Annotation</a></text></g><g><rect filter="url(#shadow2)" rx="4" ry="4" x="0.0" width="71.28" y="120.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="28.0"/><line y1="148.0" x1="0.0" y2="148.0" x2="71.28" style="stroke:dimgrey;stroke-width:1"/><text x="35.64" y="140.0" fill="black" class="diagram-class-title"><a xlink:href="#signature">Signature</a></text></g></g><line y1="80.0" x1="199.04899999999998" y2="28.0" x2="278.271" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-33.280227223362225 199.04899999999998 80.0)" style="fill:white;stroke:navy;stroke-width:1" points="199.04899999999998,80.0 207.04899999999998,86.0 207.04899999999998,74.0 199.04899999999998,80.0"/><line y1="87.93833369779139" x1="205.44" y2="61.7935709599825" x2="325.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-12.334977000416492 205.44 87.93833369779139)" style="fill:white;stroke:navy;stroke-width:1" points="205.44,87.93833369779139 213.44,93.93833369779139 213.44,81.93833369779139 205.44,87.93833369779139"/><line y1="100.33599999999998" x1="205.44" y2="127.66399999999999" x2="325.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(12.875001559612478 205.44 100.33599999999998)" style="fill:white;stroke:navy;stroke-width:1" points="205.44,100.33599999999998 213.44,106.33599999999998 213.44,94.33599999999998 205.44,100.33599999999998"/><line y1="105.0990990990991" x1="205.44" y2="160.00000000000006" x2="342.5550000000002" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(21.821183697650586 205.44 105.0990990990991)" style="fill:white;stroke:navy;stroke-width:1" points="205.44,105.0990990990991 213.44,111.0990990990991 213.44,99.0990990990991 205.44,105.0990990990991"/><line y1="86.79812938425565" x1="150.0" y2="60.17303195635229" x2="47.52" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-165.4361023408713 150.0 86.79812938425565)" style="fill:white;stroke:navy;stroke-width:1" points="150.0,86.79812938425565 158.0,92.79812938425565 158.0,80.79812938425565 150.0,86.79812938425565"/><line y1="108.0" x1="173.163" y2="160.0" x2="156.23700000000002" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(108.0300688329386 173.163 108.0)" style="fill:white;stroke:navy;stroke-width:1" points="173.163,108.0 181.163,114.0 181.163,102.0 173.163,108.0"/><line y1="187.99999999999997" x1="163.9328" y2="210.0" x2="183.1872" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(48.80758533612887 163.9328 187.99999999999997)" style="fill:white;stroke:navy;stroke-width:1" points="163.9328,187.99999999999997 171.9328,193.99999999999997 171.9328,181.99999999999997 163.9328,187.99999999999997"/><line y1="80.00000000000006" x1="183.299" y2="28.0" x2="204.02100000000002" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-68.27271818426875 183.299 80.00000000000006)" style="fill:white;stroke:navy;stroke-width:1" points="183.299,80.00000000000006 191.299,86.00000000000006 191.299,74.00000000000006 183.299,80.00000000000006"/><line y1="80.0" x1="171.959" y2="28.0" x2="150.561" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-112.3671660117742 171.959 80.0)" style="fill:white;stroke:navy;stroke-width:1" points="171.959,80.0 179.959,86.0 179.959,74.0 171.959,80.0"/><line y1="80.00000000000001" x1="160.40200000000002" y2="28.0" x2="96.078" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-141.04766797098296 160.40200000000002 80.00000000000001)" style="fill:white;stroke:navy;stroke-width:1" points="160.40200000000002,80.00000000000001 168.40200000000002,86.00000000000001 168.40200000000002,74.00000000000001 160.40200000000002,80.00000000000001"/><line y1="80.00000000000001" x1="150.084" y2="24.030395136778118" x2="39.6" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(-153.13388242098364 150.084 80.00000000000001)" style="fill:white;stroke:navy;stroke-width:1" points="150.084,80.00000000000001 158.084,86.00000000000001 158.084,74.00000000000001 150.084,80.00000000000001"/><line y1="108.00000000000003" x1="157.014" y2="160.0" x2="80.10600000000004" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(145.93609550165914 157.014 108.00000000000003)" style="fill:white;stroke:navy;stroke-width:1" points="157.014,108.00000000000003 165.014,114.00000000000003 165.014,102.00000000000003 157.014,108.00000000000003"/><line y1="94.0" x1="150.0" y2="94.0" x2="47.52" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(180.0 150.0 94.0)" style="fill:white;stroke:navy;stroke-width:1" points="150.0,94.0 158.0,100.0 158.0,88.0 150.0,94.0"/><line y1="108.00000000000001" x1="196.24200000000002" y2="160.0" x2="265.038" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(37.08409939330873 196.24200000000002 108.00000000000001)" style="fill:white;stroke:navy;stroke-width:1" points="196.24200000000002,108.00000000000001 204.24200000000002,114.00000000000001 204.24200000000002,102.00000000000001 196.24200000000002,108.00000000000001"/><line y1="185.33047210300427" x1="120.0" y2="219.75107296137338" x2="23.76" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(160.3202173629358 120.0 185.33047210300427)" style="fill:white;stroke:navy;stroke-width:1" points="120.0,185.33047210300427 128.0,191.33047210300427 128.0,179.33047210300427 120.0,185.33047210300427"/><line y1="187.99999999999997" x1="127.88000000000008" y2="210.0" x2="90.48000000000003" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(149.53445508054014 127.88000000000008 187.99999999999997)" style="fill:white;stroke:navy;stroke-width:1" points="127.88000000000008,187.99999999999997 135.88000000000008,193.99999999999997 135.88000000000008,181.99999999999997 127.88000000000008,187.99999999999997"/><line y1="187.2" x1="183.36" y2="210.8" x2="240.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(22.61986494804045 183.36 187.2)" style="fill:white;stroke:navy;stroke-width:1" points="183.36,187.2 191.36,193.2 191.36,181.2 183.36,187.2"/><line y1="185.06763555058694" x1="183.36" y2="217.0827277808832" x2="275.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(19.25722831893505 183.36 185.06763555058694)" style="fill:white;stroke:navy;stroke-width:1" points="183.36,185.06763555058694 191.36,191.06763555058694 191.36,179.06763555058694 183.36,185.06763555058694"/><line y1="182.42015734637468" x1="183.36" y2="218.73740165851586" x2="320.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(14.884394376731128 183.36 182.42015734637468)" style="fill:white;stroke:navy;stroke-width:1" points="183.36,182.42015734637468 191.36,188.42015734637468 191.36,176.42015734637468 183.36,182.42015734637468"/><line y1="94.0" x1="205.44" y2="94.0" x2="320.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.0 205.44 94.0)" style="fill:white;stroke:navy;stroke-width:1" points="205.44,94.0 213.44,100.0 213.44,88.0 205.44,94.0"/><line y1="101.80405405405406" x1="150.0" y2="123.96621621621624" x2="71.28" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(164.2764151212971 150.0 101.80405405405406)" style="fill:white;stroke:navy;stroke-width:1" points="150.0,101.80405405405406 158.0,107.80405405405406 158.0,95.80405405405406 150.0,101.80405405405406"/></svg></td>
+ </tr>
+</table>
+
+
+<a name="primitive"/>
+<h3 class="self-link-parent"><span class="sectioncount">2.22.1.1</span> Primitive Types <a href="datatypes-examples.html#primitive" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<a name="boolean"> </a>
+<a name="integer"> </a>
+<a name="string"> </a>
+<a name="decimal"> </a>
+<a name="uri"> </a>
+<a name="base64Binary"> </a>
+<a name="base64binary"> </a>
+<a name="instant"> </a>
+<a name="date"> </a>
+<a name="dateTime"> </a>
+<a name="datetime"> </a>
+<a name="time"> </a>
+<a name="patterns"/>
+<a name="code"> </a>
+<a name="oid"> </a>
+<a name="uuid"> </a>
+<a name="id"> </a>
+
+
+<div class="example">
+	<p>A boolean true value:</p><pre fragment="boolean" class="xml">&lt;active value=&quot;true&quot; /&gt;</pre>
+	<p>A negative integer value:</p><pre fragment="integer" class="xml">&lt;score value=&quot;-14&quot; /&gt;</pre>
+	<p>A high-precision decimal value:</p><pre fragment="decimal" class="xml">&lt;pi value=&quot;3.14159265358979323846264338327950288419716939937510&quot; /&gt;</pre>
+	<p>A stream of bytes, base64 encoded:</p><pre fragment="base64Binary" class="xml">&lt;data value=&quot;/9j/4...KAP//Z&quot; /&gt; &lt;!-- covers many lines --&gt;</pre>
+	<p>A unicode string:</p><pre fragment="string" class="xml">&lt;caption value=&quot;Noodles are called ?? in Chinese&quot; /&gt;</pre>
+	<p>A URI that points to a website:</p><pre fragment="uri" class="xml">&lt;reference value=&quot;http://hl7.org/fhir&quot; /&gt;</pre>
+	<p>A URI that is a urn:</p><pre fragment="uri" class="xml">&lt;id value=&quot;urn:isbn:0451450523&quot; /&gt;</pre>
+	<p>A date of birth:</p><pre fragment="date" class="xml">&lt;date value=&quot;1951-06-04&quot; /&gt;</pre>
+	<p>An approximate date of birth:</p><pre fragment="date" class="xml">&lt;date value=&quot;1951-06&quot; /&gt;</pre>
+	<p>The instant a document was created, including time zone:</p><pre fragment="instant" class="xml">&lt;instant value=&quot;2013-06-08T10:57:34+01:00&quot; /&gt;</pre>
+	<p>The instant a document was created, expressed in UTC, with milliseconds:</p><pre fragment="instant" class="xml">&lt;instant value=&quot;2013-06-08T09:57:34.2112Z&quot; /&gt;</pre>
+  <p>2:35pm in the afternoon:</p><pre fragment="time" class="xml">&lt;time value=&quot;14:35&quot; /&gt;</pre>
+</div>
+
+<a name="strings"/>
+<h3 class="self-link-parent"><span class="sectioncount">2.22.1.2</span> String Patterns <a href="datatypes-examples.html#strings" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<div class="example">
+	<p>A URI that is the root oid of HL7:</p><pre fragment="oid" class="xml">&lt;root value=&quot;urn:oid:2.16.840.1.113883&quot; /&gt;</pre>
+	<p>A URI that is a uuid:</p><pre fragment="uuid" class="xml">&lt;id value=&quot;urn:uuid:a5afddf4-e880-459b-876e-e4591b0acc11&quot; /&gt;</pre>
+	<p>A code:</p><pre fragment="code" class="xml">&lt;code value=&quot;acq4+acq5&quot; /&gt;</pre>
+	<p>A code with single internal space:</p><pre fragment="code" class="xml">&lt;code value=&quot;Question 4b&quot; /&gt;</pre>
+	<p>A numeric id:</p><pre fragment="code" class="xml">&lt;id value=&quot;314&quot; /&gt;</pre>
+	<p>An alphanumeric id:</p><pre fragment="code" class="xml">&lt;id value=&quot;alpha-gamma-14&quot; /&gt;</pre>
+</div>
+
+<a name="Attachment"/>
+<a name="attachment"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.3</span> 
+Attachment
+ <a href="datatypes-examples.html#attachment" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Attachment">Base Definition</a>, <a href="datatypes-definitions.html#Attachment">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Attachment">Mappings</a>.
+</p>
+<div class="example">
+<p>A PDF document:</p>
+<pre fragment="Attachment" class="xml">
+  &lt;document&gt;
+    &lt;contentType value=&quot;application/pdf&quot; /&gt;
+    &lt;language value=&quot;en&quot; /&gt;
+    &lt;data value=&quot;/9j/4...KAP//Z&quot; /&gt; &lt;!-- covers many lines --&gt;
+    &lt;title value=&quot;Definition of Procedure&quot; /&gt;
+  &lt;/document&gt;
+</pre>
+<pre class="json">
+  document : {
+    contentType :  { value : &quot;application/pdf&quot; },
+    language : { value : &quot;en&quot; },
+    data :  { value : &quot;/9j/4...KAP//Z&quot;},
+    title :  { value : &quot;Definition of Procedure&quot; }
+  }
+</pre>
+<p>
+Since the JSON examples have the same structure as the XML, only XML is shown for the rest of the examples.
+</p>
+<p>A reference to a DICOM image via WADO:</p>
+<pre fragment="Attachment" class="xml">
+  &lt;image&gt;
+    &lt;contentType value=&quot;application/dicom&quot; /&gt;
+    &lt;url value=&quot;http://10.1.2.3:1000/wado?requestType=WADO&amp;amp;wado_details...&quot; /&gt;
+    &lt;hash value=&quot;EQH/..AgME&quot; /&gt;
+  &lt;/image&gt;
+</pre>
+</div>
+
+<a name="Identifier"/>
+<a name="identifier"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.4</span> 
+Identifier
+ <a href="datatypes-examples.html#identifier" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Identifier">Base Definition</a>, <a href="datatypes-definitions.html#Identifier">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Identifier">Mappings</a>.
+</p>
+<div class="example">
+<p><b>Examples</b></p>
+<p>A primary key from an application table (an OID in the space allocated by HL7
+to some organization to further sub-allocate):</p>
+<pre fragment="Identifier" class="xml">
+  &lt;identifier&gt;
+    &lt;use value=&quot;official&quot; /&gt;
+    &lt;system value=&quot;urn:oid:2.16.840.1.113883.16.4.3.2.5&quot; /&gt;
+    &lt;value value=&quot;123&quot; /&gt;
+  &lt;/identifier&gt;
+</pre>
+
+<p>A patient identifier defined by a hospital:</p>
+<pre fragment="Identifier" class="xml">
+  &lt;identifier&gt;
+    &lt;use value=&quot;official&quot; /&gt;
+    &lt;system value=&quot;http://www.acmehosp.com/patients&quot; /&gt;
+    &lt;value value=&quot;44552&quot; /&gt;
+    &lt;period&gt;
+      &lt;start value=&quot;2003-05-03&quot; /&gt;
+    &lt;/period&gt;
+  &lt;/identifier&gt;
+</pre>
+<p>In this case, the period is used to track when the identifier was first assigned to the patient.</p>
+
+<p>An identifier that refers to a patient FHIR resource on a particular system:</p>
+<pre fragment="Identifier" class="xml">
+  &lt;identifier&gt;
+   &lt;system value=&quot;urn:ietf:rfc:3986&quot; /&gt;
+   &lt;value value=&quot;http://pas-server/xxx/Patient/443556&quot; /&gt;
+  &lt;/identifier&gt;
+</pre>
+<p>This is not a resource reference - it's a logical reference by the patient identifier.</p>
+
+<p>A UUID:</p>
+<pre fragment="Identifier" class="xml">
+  &lt;identifier&gt;
+    &lt;use value=&quot;temp&quot; /&gt;
+    &lt;system value=&quot;urn:ietf:rfc:3986&quot; /&gt;
+    &lt;value value=&quot;urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162&quot; /&gt;
+  &lt;/identifier&gt;
+</pre>
+<p>UUIDs are often used for temporary identifiers, though this is not necessary.</p>
+
+<p>A US SSN:</p>
+<pre fragment="Identifier" class="xml">
+  &lt;identifier&gt;
+    &lt;use value=&quot;usual&quot; /&gt;
+    &lt;type&gt;
+      &lt;coding&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v2/0203&quot;/&gt;
+        &lt;code value=&quot;SSN&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/type&gt;
+    &lt;system value=&quot;http://hl7.org/fhir/sid/us-ssn&quot; /&gt;
+    &lt;value value=&quot;000111111&quot; /&gt;
+  &lt;/identifier&gt;
+</pre>
+<p>Notes:</p>
+<ul>
+ <li>US SSNs are often presented like this: 000-11-1111, the dashes are for presentation and should be removed, as specified in the <a href="terminologies-systems.html#identifiersystems">definition of ssn-us</a></li>
+ <li>The use of &quot;usual&quot; means that this institution prefers to use SSN when identifying the patient</li>
+</ul>
+
+<p>A medical record number assigned on 5-July 2009:</p>
+<pre fragment="Identifier" class="xml">
+  &lt;identifier&gt;
+    &lt;use value=&quot;usual&quot; /&gt;
+    &lt;type&gt;
+      &lt;coding&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v2/0203&quot;/&gt;
+        &lt;code value=&quot;MRN&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/type&gt;
+    &lt;system value=&quot;urn:oid:0.1.2.3.4.5.6.7&quot; /&gt;
+    &lt;value value=&quot;2356&quot; /&gt;
+    &lt;period&gt;
+      &lt;start value=&quot;2009-07-05&quot; /&gt;
+    &lt;/period&gt;
+  &lt;/identifier&gt;
+</pre>
+</div>
+
+
+<a name="Coding"/>
+<a name="coding"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.5</span> Coding <a href="datatypes-examples.html#coding" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Coding">Base Definition</a>, <a href="datatypes-definitions.html#Coding">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Coding">Mappings</a>.
+</p>
+<div class="example">
+<p><b>Examples</b></p>
+<p>A simple code for headache, in ICD-10:</p>
+<pre fragment="Coding" class="xml">
+  &lt;code&gt;
+    &lt;system value=&quot;http://hl7.org/fhir/sid/icd-10&quot; /&gt;
+    &lt;code value=&quot;G44.1&quot; /&gt;
+  &lt;/code&gt;
+</pre>
+<p>A SNOMED CT expression:</p>
+<pre fragment="Coding" class="xml">
+  &lt;problem&gt;
+    &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
+    &lt;code value=&quot;128045006:{363698007=56459004}&quot; /&gt;
+  &lt;/problem&gt;
+</pre>
+</div>
+
+
+
+
+<a name="CodeableConcept"/>
+<a name="codeableconcept"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.6</span> 
+CodeableConcept
+ <a href="datatypes-examples.html#codeableconcept" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#CodeableConcept">Base Definition</a>, <a href="datatypes-definitions.html#CodeableConcept">Detailed Descriptions</a> and <a href="datatypes-mappings.html#CodeableConcept">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Examples</b></p>
+<p>A simple code for headache initially coded in SNOMED CT (by picking the SNOMED CT code from a pick-list), and then translated to ICD-10:</p>
+<pre fragment="CodeableConcept" class="xml">
+  &lt;concept&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://hl7.org/fhir/sid/icd-10&quot; /&gt;
+      &lt;code value=&quot;R51&quot; /&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
+      &lt;code value=&quot;25064002&quot; /&gt;
+      &lt;display value=&quot;Headache&quot; /&gt;
+      &lt;userSelected value=&quot;true&quot; /&gt;
+    &lt;/coding&gt;
+    &lt;text value=&quot;general headache&quot; /&gt;
+  &lt;/concept&gt;
+</pre>
+<p>A concept represented in an institution's local coding systems for unit for which no UCUM equivalent exists:</p>
+<pre fragment="CodeableConcept" class="xml">
+  &lt;unit&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;urn:oid:2.16.840.1.113883.19.5.2&quot; /&gt;
+      &lt;code value=&quot;tab&quot; /&gt;
+      &lt;display value=&quot;Tablet&quot; /&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
+    &lt;/coding&gt;
+  &lt;/unit&gt;
+</pre>
+<p>A SNOMED CT expression:</p>
+<pre fragment="CodeableConcept" class="xml">
+  &lt;diagnosis&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
+      &lt;code value=&quot;128045006:{363698007=56459004}&quot; /&gt;
+    &lt;/coding&gt;
+    &lt;text value=&quot;Cellulitis of the foot&quot; /&gt;
+  &lt;/diagnosis&gt;
+</pre>
+<p>
+In this case, there is no display element, because no display is defined for SNOMED CT expressions.
+</p>
+
+<p>Using the value set:</p>
+<p>The results on a urinalysis strip:</p>
+<pre fragment="Coding" class="xml">
+  &lt;valueCoding&gt;
+    &lt;system value=&quot;http://example.org/codes/simple-grades&quot; /&gt;
+    &lt;code value=&quot;+&quot; /&gt;
+  &lt;/valueCoding&gt;
+</pre>
+<p>
+And where the value set would be something like this:
+</p>
+<pre>
+  &lt;ValueSet xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+    &lt;text&gt;
+      &lt;status value=&quot;generated&quot;/&gt;
+      &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        &lt;p&gt;Possible Clinistix codes: neg, trace, +, ++, and +++&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/text&gt;
+    &lt;identifier value=&quot;http://hl7.org/fhir/ValueSet/clinistix&quot;/&gt;
+    &lt;name value=&quot;Codes for Clinistix&quot;/&gt;
+    &lt;publisher value=&quot;HL7&quot;/&gt;
+    &lt;telecom&gt;
+      &lt;system value=&quot;url&quot;/&gt;
+      &lt;value value=&quot;http://hl7.org/fhir&quot;/&gt;
+    &lt;/telecom&gt;
+    &lt;description value=&quot;Clinistix Codes&quot;/&gt;
+    &lt;status value=&quot;draft&quot;/&gt;
+    &lt;experimental value=&quot;true&quot;/&gt;
+    &lt;date value=&quot;2013-10-01&quot;/&gt;
+    &lt;codeSystem&gt;
+      &lt;system value=&quot;http://example.org/codes/simple-grades&quot;/&gt;
+      &lt;caseSensitive value=&quot;false&quot;/&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;neg&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;trace&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;+&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;+&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;++&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;+++&quot;/&gt;
+      &lt;/concept&gt;
+    &lt;/codeSystem&gt;
+  &lt;/ValueSet&gt;
+</pre>
+</div>
+<a name="Quantity"/>
+<a name="quantity"/>
+<a name="SimpleQuantity"/>
+<a name="simplequantity"/>
+<a name="age"/>
+<a name="distance"/>
+<a name="duration"/>
+<a name="count"/>
+<a name="money"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.7</span> 
+Quantity
+ <a href="datatypes-examples.html#money" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Quantity">Base Definition</a>, <a href="datatypes-definitions.html#Quantity">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Quantity">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Examples</b></p>
+<p>A duration:</p>
+<pre fragment="Quantity" class="xml">
+  &lt;time&gt;
+    &lt;value value=&quot;25&quot; /&gt;
+    &lt;unit value=&quot;sec&quot; /&gt;
+    &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
+    &lt;code value=&quot;s&quot; /&gt;
+  &lt;/time&gt;
+</pre>
+<p>A concentration where the value was out of range:</p>
+<pre fragment="Quantity" class="xml">
+  &lt;result&gt;
+    &lt;value value=&quot;40000&quot; /&gt;
+    &lt;comparator value=&quot;&amp;gt;&quot; /&gt;
+    &lt;unit value=&quot;mcg/L&quot; /&gt;
+    &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
+    &lt;code value=&quot;ug&quot; /&gt;
+  &lt;/result&gt;
+</pre>
+<p>An amount of prescribed medication:</p>
+<pre fragment="Quantity" class="xml">
+  &lt;dose&gt;
+    &lt;value value=&quot;3&quot; /&gt;
+    &lt;unit value=&quot;capsules&quot; /&gt;
+    &lt;system value=&quot;http://snomed.info/sct&quot; /&gt;
+    &lt;code value=&quot;385049006&quot; /&gt;
+  &lt;/dose&gt;
+</pre>
+<p>A price (coded using currency codes defined in ISO 4217):</p>
+<pre fragment="Quantity" class="xml">
+  &lt;cost&gt;
+    &lt;value value=&quot;25.45&quot; /&gt;
+    &lt;unit value=&quot;US$&quot; /&gt;
+    &lt;system value=&quot;urn:iso:std:iso:4217&quot; /&gt;
+    &lt;code value=&quot;USD&quot; /&gt;
+  &lt;/cost&gt;
+</pre>
+</div>
+
+<a name="Range"/>
+<a name="range"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.8</span> 
+Range
+ <a href="datatypes-examples.html#range" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Range">Base Definition</a>, <a href="datatypes-definitions.html#Range">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Range">Mappings</a>.
+</p>
+<div class="example">
+<p><b>Examples</b></p>
+<p>Range of Quantity (distance):</p>
+<pre fragment="Range" class="xml">
+  &lt;estimate&gt;
+   &lt;low&gt;
+     &lt;value value=&quot;1.6&quot; /&gt;
+     &lt;unit value=&quot;m&quot; /&gt;
+   &lt;/low&gt;
+   &lt;high&gt;
+     &lt;value value=&quot;1.9&quot; /&gt;
+     &lt;unit value=&quot;m&quot; /&gt;
+   &lt;/high&gt;
+  &lt;/estimate&gt;
+</pre>
+</div>
+<a name="Ratio"/>
+<a name="ratio"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.9</span> 
+Ratio
+ <a href="datatypes-examples.html#ratio" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Ratio">Base Definition</a>, <a href="datatypes-definitions.html#Ratio">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Ratio">Mappings</a>.
+</p>
+<div class="example">
+<p><b>Examples</b></p>
+<p>Titer (Ratio of integer:integer)</p>
+<pre fragment="Ratio" class="xml">
+  &lt;result&gt;
+   &lt;numerator&gt;
+     &lt;value value=&quot;1&quot; /&gt;
+   &lt;/numerator&gt;
+   &lt;denominator&gt;
+     &lt;value value=&quot;128&quot; /&gt;
+   &lt;/denominator&gt;
+  &lt;/result&gt;
+</pre>
+<p>Unit cost (Ratio of Money:Quantity):</p>
+<pre fragment="Ratio" class="xml">
+  &lt;charge&gt;
+   &lt;numerator&gt;
+     &lt;value value=&quot;103.50&quot; /&gt;
+     &lt;unit value=&quot;US$&quot; /&gt;
+     &lt;code value=&quot;USD&quot; /&gt;
+     &lt;system value=&quot;urn:iso:std:iso:4217&quot; /&gt;
+   &lt;/numerator&gt;
+   &lt;denominator&gt;
+     &lt;value value=&quot;1&quot; /&gt;
+     &lt;unit value=&quot;day&quot; /&gt;
+     &lt;code value=&quot;day&quot; /&gt;
+     &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
+   &lt;/denominator&gt;
+  &lt;/charge&gt;
+</pre>
+</div>
+<a name="Period"/>
+<a name="period"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.10</span> 
+Period
+ <a href="datatypes-examples.html#period" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Period">Base Definition</a>, <a href="datatypes-definitions.html#Period">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Period">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Examples</b></p>
+<p>23rd May 2011 to 27th May, including 27th May:</p>
+<pre fragment="Period" class="xml">
+  &lt;coverage&gt;
+   &lt;start value=&quot;2011-05-23&quot; /&gt;
+   &lt;end value=&quot;2011-05-27&quot; /&gt;
+  &lt;/coverage&gt;
+</pre>
+</div>
+
+<a name="SampledData"/>
+<a name="sampleddata"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.11</span> 
+SampledData
+ <a href="datatypes-examples.html#sampleddata" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#SampledData">Base Definition</a>, <a href="datatypes-definitions.html#SampledData">Detailed Descriptions</a> and <a href="datatypes-mappings.html#SampledData">Mappings</a>.
+</p>
+<div class="example">
+<p><b>Example</b></p>
+<p>The output from an EKG device:</p>
+<pre fragment="SampledData" class="xml">
+ &lt;sampledData&gt;
+  &lt;origin&gt;
+   &lt;value value=&quot;0&quot;/&gt;
+   &lt;unit value=&quot;&mu;V&quot;/&gt;
+   &lt;system value=&quot;http://unitsofmeasure.org&quot;/&gt;
+   &lt;code value=&quot;uV&quot;/&gt;
+  &lt;/origin&gt;
+  &lt;period value=&quot;2&quot;/&gt;
+  &lt;factor value=&quot;2.5&quot;/&gt;
+  &lt;dimensions value=&quot;1&quot;/&gt;
+  &lt;data value=&quot;-4 -13 -18 -18 -18 -17 -16 -16 -16 -16 -16 -17 -18 -18 -18 ....&quot;/&gt;
+ &lt;/sampledData&gt;
+</pre>
+</div>
+<a name="HumanName"/>
+<a name="humanname"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.12</span> 
+HumanName
+ <a href="datatypes-examples.html#humanname" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#HumanName">Base Definition</a>, <a href="datatypes-definitions.html#HumanName">Detailed Descriptions</a> and <a href="datatypes-mappings.html#HumanName">Mappings</a>.
+</p>
+
+<div class="example">
+<p>A Simple example</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;Everyman&quot; /&gt;
+  &lt;given value=&quot;Adam&quot; /&gt;
+  &lt;given value=&quot;A.&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>Composite names</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;Contrata&quot; /&gt;
+  &lt;given value=&quot;Mary Jane&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+These cases can be quite ambiguous - is &quot;Mary Jane&quot; one name, or two? Different systems,
+and data enterers may treat this differently, and the person themselves may not know.
+Parts are allowed to contain spaces, but systems should consider how to treat
+these cases. Composite names separated by &quot;-&quot; should be treated as a single name part.
+</p>
+
+<p>A common pattern: a person is called by a name other than that expected from their official name (first given name in most cultures).</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Chalmers&quot; /&gt;
+  &lt;given value=&quot;Peter&quot; /&gt;
+  &lt;given value=&quot;James&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;usual&quot; /&gt;
+  &lt;given value=&quot;Jim&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+This same pattern is often encountered with immigrants, who retain their real name for official use, but adopt a localized name for everyday use:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Sczypinski&quot; /&gt;
+  &lt;given value=&quot;Piotr&quot; /&gt;
+  &lt;given value=&quot;Andre&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;usual&quot; /&gt;
+  &lt;family value=&quot;Skipper&quot; /&gt;
+  &lt;given value=&quot;Jim&quot; /&gt;
+&lt;/name&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>
+Karen van Hentenryck is of Dutch origin, and the &quot;van&quot; is a voorvoegsel.
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;van&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot; &gt;
+	   &lt;valueCode value=&quot;VV&quot; /&gt;
+    &lt;/extension&gt;
+  &lt;/family&gt;
+  &lt;family value=&quot;Hentenryck&quot; /&gt;
+  &lt;given value=&quot;Karen&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+See <a href="extensibility-examples.html">the Extensibility Example for more information</a>.
+Note that this name has multiple family name parts. Systems that do not support as many name parts
+as are provided in an instance they are processing may wish to append parts together using spaces,
+so that this becomes &quot;van Hentenryck&quot;.
+</p>
+</div>
+
+
+<div class="example">
+<p>Complex example from Germany: Dr.phil. Regina Johanna Maria Gräfin Hochheim-Weilenfels, NCFSA. This example shows extensive use of
+multiple given names, prefixes, suffixes, for academic degrees, nobility titles, and professional designations.
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Hochheim-Weilenfels&quot; /&gt;
+  &lt;given value=&quot;Regina&quot; /&gt;
+  &lt;given value=&quot;Johanna&quot; /&gt;
+  &lt;given value=&quot;Maria&quot; /&gt;
+  &lt;prefix value=&quot;Gräfin&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot; &gt;
+      &lt;valueCode value=&quot;NB&quot; /&gt;
+    &lt;/extension&gt;
+  &lt;/prefix&gt;
+  &lt;prefix value=&quot;Dr. phil.&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot; &gt;
+      &lt;valueCode value=&quot;AC&quot; /&gt;
+    &lt;/extension&gt;
+  &lt;/prefix&gt;
+  &lt;suffix value=&quot;NCFSA&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;maiden&quot; /&gt;
+  &lt;family value=&quot;Hochheim&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+This example makes use of the ISO 21090 extensions to carry the rare ISO 21090 qualifier attributes &quot;AC&quot; and &quot;NB&quot;.
+</p>
+</div>
+
+<div class="example">
+<p>Japanese example in the three forms: ideographic (Kanji), syllabic (Hiragana) and alphabetic (Romaji).</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;??&quot; /&gt;
+  &lt;given value=&quot;??&quot; /&gt;
+  &lt;/name&gt;
+&lt;name&gt;
+ &lt;family value=&quot;???&quot; /&gt;
+ &lt;given value=&quot;???&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;family value=&quot;KIMURA&quot; /&gt;
+  &lt;given value=&quot;MICHIO&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+The three forms are differentiated by the character subset each contains.
+</p>
+</div>
+
+<div class="example">
+<p>Russian example in the two forms: cyrillic, and latin:</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;??????&quot; /&gt;
+  &lt;given value=&quot;????&quot; /&gt;
+  &lt;given value=&quot;????????????&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;family value=&quot;EMELIN&quot; /&gt;
+  &lt;given value=&quot;IVAN&quot; /&gt;
+  &lt;given value=&quot;VLADIMIROVICH&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+In  Russian  usage, these names are known as
+the domestic and foreign names respectively. The two forms are differentiated by the character subset each contains.
+</p>
+</div>
+
+<div class="example">
+<p>
+Scandinavian example: Erikson is the family name. Jan Erik are the given names, and Östlund the family name of the mother, which is taken as a Mellannamn.
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Erikson&quot; /&gt;
+  &lt;given value=&quot;Jan&quot; /&gt;
+  &lt;given value=&quot;Erik&quot; /&gt;
+  &lt;given value=&quot;Östlund&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+         &lt;code value=&quot;MID&quot; /&gt;
+         &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+</pre>
+<p>
+This example makes use of the ISO 21090 extension to carry the culture specific ISO 21090 qualifier attribute &quot;MID&quot; for the Mellannamn.
+</p>
+<p>
+Then Jan Erikson has a daughter, Karin, with his wife Margrete Hansen. The first communications of the new born
+name is &quot;Margrete Jente&quot; (Margrete's Girl) and the mother's family name, not the given name (Karin). The
+father's Family name is  not used at all. This is a known temporary name assigned directly after the birth of
+the child.
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;temp&quot; /&gt;
+  &lt;!-- use could be OR+OLD, depends how record keeping is done --&gt;
+  &lt;family value=&quot;Hansen&quot; /&gt;
+  &lt;given value=&quot;Margrete Jente&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+The baby's name is subsequently changed to the fathers' family name, and to use the mother's name as
+mellomnamn.
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Erikson&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+  &lt;given value=&quot;Hansen&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+         &lt;code value=&quot;MID&quot; /&gt;
+         &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+</pre>
+<p>
+Later, Karin gets married to Per Berg, and decides to adopt Berg as her family name, and also decides to use
+Erikson as the mellom navn. (Note: Karin could have chosen to use another mellom navn, e.g. the family name of
+her mother, her father or other family names as specified by naming laws of the country in question).
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;old&quot; /&gt;
+  &lt;family value=&quot;Erikson&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+  &lt;given value=&quot;Hansen&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+        &lt;code value=&quot;MID&quot; /&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Berg&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+  &lt;given value=&quot;Erikson&quot;&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier&quot; &gt;
+      &lt;valueCoding&gt;
+        &lt;code value=&quot;MID&quot; /&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/EntityNamePartQualifier2&quot; /&gt;
+      &lt;/valueCoding&gt;
+    &lt;/extension&gt;
+  &lt;/given&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;usual&quot; /&gt;
+  &lt;family value=&quot;Berg&quot; /&gt;
+  &lt;given value=&quot;Karin&quot; /&gt;
+&lt;/name&gt;
+</pre>
+</div>
+
+<h4 class="self-link-parent"><span class="sectioncount">2.22.1.12.1<a name="2.22.1.12.1"> </a></span> W3C International Examples <a href="datatypes-examples.html#2.22.1.12.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+These examples are taken from the <a href="http://www.w3.org/International/questions/qa-personal-names">W3C International Examples <img src="external.png" style="text-align: baseline"/></a>,
+which should be consulted for further information.
+</p>
+
+<p>
+A patronymic is &quot;The part of a name that links to the genealogy&quot;:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;text value=&quot;Björk Guðmundsdóttir&quot;/&gt;
+  &lt;family value=&quot;Guðmundsdóttir&quot;/&gt;
+  &lt;given value=&quot;Björk&quot;/&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+A patronymic with a &quot;son/daughter of&quot; appellation:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;text value=&quot;Isa bin Osman&quot;/&gt;
+  &lt;family value=&quot;bin Osman&quot;/&gt;
+  &lt;given value=&quot;Isa&quot;/&gt;
+&lt;/name&gt;
+</pre>
+<p>
+Note: The family name may also be given as two different family names.
+</p>
+
+<p>
+A Chinese name with a generational name:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;text value=&quot;毛泽东&quot;/&gt; &lt;!-- left to right --&gt;
+  &lt;family value=&quot;毛&quot;/&gt;
+  &lt;given value=&quot;泽东&quot;/&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;text value=&quot;Mao Ze Dong&quot;/&gt; &lt;!-- left to right --&gt;
+  &lt;family value=&quot;Mao&quot;/&gt;
+  &lt;given value=&quot;Ze Dong&quot;/&gt;
+&lt;/name&gt;
+</pre>
+<p>
+Note that many systems in China do not store family and given names separately, and just use <code>text</code>.
+</p>
+
+<p>
+Additional Western name (see also example above):
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;use value=&quot;official&quot; /&gt;
+  &lt;family value=&quot;Yao&quot; /&gt;
+  &lt;given value=&quot;Ming&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;use value=&quot;usual&quot; /&gt;
+  &lt;given value=&quot;Fred&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+Multiple Family names:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;Carreño&quot; /&gt;
+  &lt;family value=&quot;Quiñones&quot; /&gt;
+  &lt;given value=&quot;María-Jose&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+Brazilian Example:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;Eduardo&quot; /&gt;
+  &lt;family value=&quot;Santos&quot; /&gt;
+  &lt;family value=&quot;Tavares&quot; /&gt;
+  &lt;family value=&quot;Melo&quot; /&gt;
+  &lt;family value=&quot;Silva&quot; /&gt;
+  &lt;given value=&quot;José&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+Russian Examples (using Cyrillic):
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;??????????&quot; /&gt;
+  &lt;family value=&quot;??????&quot; /&gt;
+  &lt;given value=&quot;?????&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;family value=&quot;?????????&quot; /&gt;
+  &lt;family value=&quot;???????&quot; /&gt;
+  &lt;given value=&quot;?????&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+Example with Initial:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;family value=&quot;Public&quot; /&gt;
+  &lt;given value=&quot;John&quot; /&gt;
+  &lt;given value=&quot;Q.&quot; /&gt;
+&lt;/name&gt;
+</pre>
+
+<p>
+Other Examples:
+</p>
+<pre fragment="HumanName" class="xml">
+&lt;name&gt;
+  &lt;text value=&quot;Velikkakathu Sankaran Achuthanandan&quot;/&gt;
+  &lt;family value=&quot;Velikkakathu&quot; /&gt;
+  &lt;given value=&quot;Sankaran&quot; /&gt;
+  &lt;given value=&quot;Achuthanandan&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;text value=&quot;Kogaddu Birappa Timappa Nair&quot;/&gt;
+  &lt;family value=&quot;Nair&quot; /&gt;
+  &lt;given value=&quot;Birappa&quot; /&gt;
+  &lt;given value=&quot;Timappa&quot; /&gt;
+  &lt;prefix value=&quot;Kogaddu&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;text value=&quot;Aditya Pratap Singh Chauhan&quot;/&gt;
+  &lt;family value=&quot;Singh&quot; /&gt;
+  &lt;given value=&quot;Aditya&quot; /&gt;
+  &lt;given value=&quot;Pratap&quot; /&gt;
+  &lt;suffix value=&quot;Chauhan&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;text value=&quot;Madurai Mani Iyer&quot;/&gt;
+  &lt;given value=&quot;Mani&quot; /&gt;
+  &lt;prefix value=&quot;Madurai&quot; /&gt;
+  &lt;suffix value=&quot;Iyer&quot; /&gt;
+&lt;/name&gt;
+&lt;name&gt;
+  &lt;text value=&quot;Abu Karim Muhammad al-Jamil ibn Nidal ibn Abdulaziz al-Filistini&quot;/&gt;
+  &lt;family value=&quot;ibn Nidal&quot; /&gt;
+  &lt;family value=&quot;ibn Abdulaziz&quot; /&gt;
+  &lt;given value=&quot;Muhammad&quot; /&gt;
+  &lt;given value=&quot;al-Jamil&quot; /&gt;
+  &lt;prefix value=&quot;Abu Karim&quot; /&gt;
+  &lt;suffix value=&quot;al-Filistini&quot; /&gt;
+&lt;/name&gt;
+</pre>
+<p>
+<i>Todo: need to discuss this with Indian / Arabic implementers</i>.
+Note that collecting and storing the <i>text</i> element makes the
+primary purpose of the structured parts for index/searching, and
+fidelity of the name parts is not critical.
+</p>
+
+
+
+
+<a name="Address"/>
+<a name="address"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.13</span> 
+Address
+ <a href="datatypes-examples.html#address" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Address">Base Definition</a>, <a href="datatypes-definitions.html#Address">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Address">Mappings</a>.
+</p>
+
+<p>
+Note about these examples: the most important element in an address is the 'text' element - this defines
+what is printed on the envelope, the actual postal address. The other data elements are provided to 
+support either data analysis based on a patient's address, or for the many systems that exchange 
+fully structured addresses specific to a particular culture. For this reason, these examples focus 
+on the structured data elements of the address.
+</p>
+
+<div class="example">
+<p><b>Example</b></p>
+<p>HL7 office's address.</p>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+   &lt;use value=&quot;work&quot; /&gt;
+   &lt;text value=&quot;1050 W Wishard Blvd
+RG
+         5th floor
+Indianapolis, IN 46240&quot; /&gt;
+   &lt;line value=&quot;1050 W Wishard Blvd&quot; /&gt;
+   &lt;line value=&quot;RG 5th floor&quot; /&gt;
+   &lt;city value=&quot;Indianapolis&quot; /&gt;
+   &lt;state value=&quot;IN&quot; /&gt;
+   &lt;postalCode value=&quot;46240&quot; /&gt;
+  &lt;/address&gt;
+</pre>
+<p>A UK example address, with the county 'HUDDERSFIELD'.</p>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;text value=&quot;1 Back Lane&amp;#13;&amp;#10;Holmfirth&amp;#13;&amp;#10;HUDDERSFIELD&amp;#13;&amp;#10;HD7 1HQ&quot;/&gt;
+    &lt;line value=&quot;1 Back Lane&quot;/&gt;
+    &lt;city value=&quot;Holmfirth&quot;/&gt;
+    &lt;district value=&quot;HUDDERSFIELD&quot;/&gt;
+    &lt;postalCode value=&quot;HD7 1HQ&quot;/&gt;
+  &lt;/address&gt;
+</pre>
+
+<p>A Postal address - i.e. an address that it doesn't make sense to try and visit.</p>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-AD-use&quot;&gt; 
+      &lt;valueCode value=&quot;PST&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;line value=&quot;PO Box 31445&quot;/&gt;
+    &lt;city value=&quot;Erewhon&quot;/&gt;
+    &lt;postalCode value=&quot;0001&quot;/&gt;
+  &lt;/address&gt;
+</pre>
+
+<p>
+The next set of examples are taken from the official <a href="http://www.upu.int">international 
+postal union <img src="external.png" style="text-align: baseline"/></a> examples.
+</p>
+
+<table class="lines">
+<tr><td>Rue Lougoraïa 12, app. 10</td><td>thoroughfare type, name and number, apartment</td></tr>
+<tr><td>Korolevo</td><td>locality</td></tr>
+<tr><td>223016 NOVY DVOR</td><td>postcode + post office name</td></tr>
+<tr><td>Minsk</td><td>District name of district</td></tr>
+<tr><td>Minsk</td><td>Region name of region</td></tr>
+<tr><td>BELARUS</td><td>Country</td></tr>
+</table>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;line value=&quot;Rue Lougoraïa 12, app. 10&quot;/&gt;
+    &lt;city value=&quot;Korolevo&quot;/&gt;
+    &lt;district value=&quot;Minsk&quot;/&gt;
+    &lt;state value=&quot;Minsk&quot; /&gt;
+    &lt;country value=&quot;BELARUS&quot; /&gt;
+  &lt;/address&gt;
+</pre>
+
+
+<table class="lines">
+<tr><td>Protea Apt 12</td><td>apartment number</td></tr>
+<tr><td>22 Ally Hassan Mwinyi</td><td>premise + street</td></tr>
+<tr><td>14111 MSASANI</td><td>postcode + locality</td></tr>
+<tr><td>DAR ES SALAM</td><td>province</td></tr>
+<tr><td>TANZANIA</td><td>country</td></tr>
+</table>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;line value=&quot;Protea Apt 12&quot;/&gt;
+    &lt;line value=&quot;22 Ally Hassan Mwinyi&quot;/&gt;
+    &lt;city value=&quot;MSASANI&quot;/&gt;
+    &lt;state value=&quot;DAR ES SALAM&quot; /&gt;
+    &lt;postalCode value=&quot;14111&quot;/&gt;
+    &lt;country value=&quot;TANZANIA&quot; /&gt;
+  &lt;/address&gt;
+</pre>
+
+<table class="lines">
+<tr><td>15 Shiri</td><td>premise + sub-locality 2</td></tr>
+<tr><td>Kimashuku Village</td><td>sub-locality</td></tr>
+<tr><td>25204 MACHAME KUSINI</td><td>postcode + locality</td></tr>
+<tr><td>HAI</td><td>sub-province</td></tr>
+<tr><td>KILIMANJARO</td><td>province</td></tr>
+<tr><td>TANZANIA</td><td>country</td></tr>
+</table>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct&quot;&gt;
+      &lt;valueCode value=&quot;Kimashuku Village&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;line value=&quot;15 Shiri&quot;/&gt;
+    &lt;city value=&quot;MACHAME KUSINI&quot;/&gt;
+    &lt;district value=&quot;HAI&quot;/&gt;
+    &lt;state value=&quot;KILIMANJARO&quot; /&gt;
+    &lt;postalCode value=&quot;25204&quot;/&gt;
+    &lt;country value=&quot;TANZANIA&quot; /&gt;
+  &lt;/address&gt;
+</pre>
+
+<table class="lines">
+<tr><td>705-1104</td><td>building number + door</td></tr>
+<tr><td>56, Dalgubeol-daero 323beon-gil, Suseong-gu</td><td>street</td></tr>
+<tr><td>Daegu</td><td>city</td></tr>
+<tr><td>Rep. OF KOREA</td><td>country</td></tr>
+<tr><td>706-907</td><td>postcode</td></tr>
+</table>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;line value=&quot;705-1104&quot;/&gt;
+    &lt;line value=&quot;56, Dalgubeol-daero 323beon-gil, Suseong-gu&quot;/&gt;
+    &lt;city value=&quot;Daegu&quot;/&gt;
+    &lt;country value=&quot;Rep. OF KOREA&quot; /&gt;
+    &lt;postalCode value=&quot;706-907&quot;/&gt;
+  &lt;/address&gt;
+</pre>
+
+<table class="lines">
+<tr><td>3F</td><td>building floor</td></tr>
+<tr><td>42, Toegye-ro 77beon-gil</td><td>street</td></tr>
+<tr><td>Chuncheon-si</td><td>city</td></tr>
+<tr><td>Gangwon-do</td><td>province</td></tr>
+<tr><td>Rep. OF KOREA</td><td>country</td></tr>
+<tr><td>200-066</td><td>postcode</td></tr>
+</table>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;line value=&quot;3F&quot;/&gt;
+    &lt;line value=&quot;42, Toegye-ro 77beon-gil&quot;/&gt;
+    &lt;city value=&quot;Chuncheon-si&quot;/&gt;
+    &lt;state value=&quot;Gangwon-do&quot; /&gt;
+    &lt;country value=&quot;Rep. OF KOREA&quot; /&gt;
+    &lt;postalCode value=&quot;200-066&quot;/&gt;
+  &lt;/address&gt;
+</pre>
+
+<table class="lines">
+<tr><td>Ga-B101</td><td>building number + door</td></tr>
+<tr><td>136, Sesil-ro</td><td>street</td></tr>
+<tr><td>Busan</td><td>city</td></tr>
+<tr><td>Rep. OF KOREA</td><td>country</td></tr>
+<tr><td>612-837</td><td>postcode</td></tr>
+</table>
+<pre fragment="Address" class="xml">
+  &lt;address&gt;
+    &lt;line value=&quot;Ga-B101&quot;/&gt;
+    &lt;line value=&quot;136, Sesil-ro&quot;/&gt;
+    &lt;city value=&quot;Busan&quot;/&gt;
+    &lt;country value=&quot;Rep. OF KOREA&quot; /&gt;
+    &lt;postalCode value=&quot;612-837&quot;/&gt;
+  &lt;/address&gt;
+</pre>
+</div>
+
+
+<a name="ContactPoint"/>
+<a name="contactpoint"/>
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.22.1.14</span> 
+ContactPoint
+ <a href="datatypes-examples.html#contactpoint" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#ContactPoint">Base Definition</a>, <a href="datatypes-definitions.html#ContactPoint">Detailed Descriptions</a> and <a href="datatypes-mappings.html#ContactPoint">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Example</b></p>
+<p>Home phone number:</p>
+<pre fragment="ContactPoint" class="xml">
+  &lt;telecom&gt;
+   &lt;system value=&quot;phone&quot; /&gt;
+   &lt;value value=&quot;(555) 675 5745&quot; /&gt;
+   &lt;use value=&quot;home&quot; /&gt;
+  &lt;/telecom&gt;
+</pre>
+</div>
+
+<p>
+In ISO 21090, <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDA <img src="external.png" style="text-align: baseline"/></a> and other <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186">HL7 v3 <img src="external.png" style="text-align: baseline"/></a> specifications, the TEL data type requires that the telephone number be represented as a formal URI in <a href="http://www.ietf.org/rfc/rfc3966.txt">RFC 3166 <img src="external.png" style="text-align: baseline"/></a> syntax. 
+Many CDA documents violate this rule, since the telephone numbers are not collected from the user in conformance with the underlying rules (particularly around extensions, notes about use, etc.), so
+the base FHIR type does not require the phone number to be conformant. A ISO 21090 extension can be used to convey this if desired:
+</p>
+
+<div class="example">
+<p><b>Example</b></p>
+<p>Formally correct URI:</p>
+<pre fragment="ContactPoint" class="xml">
+  &lt;telecom&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-TEL-address&quot; &gt;
+      &lt;valueUri value=&quot;tel:+15556755745&quot; /&gt;
+    &lt;/extension&gt;
+    &lt;system value=&quot;phone&quot; /&gt;
+    &lt;value value=&quot;(555) 675 5745&quot; /&gt;
+    &lt;use value=&quot;home&quot; /&gt;
+  &lt;/telecom&gt;
+</pre>
+</div>
+
+<a name="Timing"/>
+<a name="timing"/>
+<h3 class="self-link-parent"><span class="sectioncount">2.22.1.15</span> 
+Timing
+ <a href="datatypes-examples.html#timing" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Timing">Base Definition</a>, <a href="datatypes-definitions.html#Timing">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Timing">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Example</b></p>
+<p>A series of appointments for radiotherapy:</p>
+<pre fragment="Timing" class="xml">
+  &lt;schedule&gt;
+    &lt;event value=&quot;2012-01-07T09:00:00+10:00&quot; /&gt;
+    &lt;event value=&quot;2012-01-14T09:00:00+10:00&quot; /&gt;
+    &lt;event value=&quot;2012-01-22T11:00:00+10:00&quot; /&gt;
+  &lt;/schedule&gt;
+</pre>
+<p>BID (twice a day) (no start or end specified):</p>
+<pre fragment="Timing" class="xml">
+  &lt;schedule&gt;
+   &lt;repeat&gt;
+     &lt;frequency value=&quot;2&quot; /&gt;
+     &lt;period value=&quot;1&quot; /&gt;
+     &lt;periodUnit value=&quot;d&quot; /&gt;
+   &lt;/repeat&gt;
+  &lt;/schedule&gt;
+</pre>
+<p>1/2 an hour before breakfast for 10 days from 23-Dec 2011:</p>
+<pre fragment="Timing" class="xml">
+  &lt;schedule&gt;
+    &lt;repeat&gt;
+      &lt;boundsPeriod&gt;
+        &lt;start value=&quot;2011-12-23&quot; /&gt;
+        &lt;end value=&quot;2012-01-02&quot; /&gt;
+      &lt;/boundsPeriod&gt;
+      &lt;when value=&quot;ACM&quot; /&gt;
+      &lt;period value=&quot;30&quot; /&gt;
+      &lt;periodUnit value=&quot;min&quot; /&gt;
+    &lt;/repeat&gt;
+  &lt;/schedule&gt;
+</pre>
+<p>
+Note that the end date is inclusive like the end date of a Period.
+</p>
+<p>TID, for 14 days:</p>
+<pre fragment="Timing" class="xml">
+  &lt;schedule&gt;
+    &lt;repeat&gt;
+      &lt;boundsDuration&gt;
+        &lt;value value=&quot;14&quot; /&gt;
+        &lt;unit value=&quot;d&quot; /&gt;
+        &lt;system value=&quot;http://unitsofmeasure.org&quot; /&gt;
+        &lt;unit value=&quot;d&quot; /&gt;
+      &lt;/boundsDuration&gt;
+      &lt;frequency value=&quot;3&quot; /&gt;
+      &lt;period value=&quot;1&quot; /&gt;
+      &lt;periodUnit value=&quot;d&quot; /&gt;
+    &lt;/repeat&gt;
+  &lt;/schedule&gt;
+</pre>
+<p>BID, start on 7/1/2015 at 1:00 PM:</p>
+<pre fragment="Timing" class="xml">
+  &lt;schedule&gt;
+    &lt;repeat&gt;
+      &lt;boundsPeriod&gt;
+        &lt;start value=&quot;2015-07-01T13:00:00&quot; /&gt;
+      &lt;/boundsPeriod&gt;
+      &lt;frequency value=&quot;2&quot; /&gt;
+      &lt;period value=&quot;1&quot; /&gt;
+      &lt;periodUnit value=&quot;d&quot; /&gt;
+    &lt;/repeat&gt;
+  &lt;/schedule&gt;
+</pre>
+</div>
+
+<a name="Signature"/>
+<a name="signature"/>
+<h3 class="self-link-parent"><span class="sectioncount">2.22.1.16</span> 
+Signature
+ <a href="datatypes-examples.html#signature" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Signature">Base Definition</a>, <a href="datatypes-definitions.html#Signature">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Signature">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Example</b></p>
+<p>todo</p>
+<pre fragment="Signature" class="xml">
+  &lt;signature&gt;
+    &lt;!-- todo --&gt;
+  &lt;/signature&gt;
+</pre>
+
+</div>
+
+<a name="Annotation"/>
+<a name="annotation"/>
+<h3 class="self-link-parent"><span class="sectioncount">2.22.1.17</span> 
+Annotation
+ <a href="datatypes-examples.html#annotation" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p style="background-color: gainsboro; padding: 4px; margin-top: 0px">
+See also <a href="datatypes.html#Annotation">Base Definition</a>, <a href="datatypes-definitions.html#Annotation">Detailed Descriptions</a> and <a href="datatypes-mappings.html#Annotation">Mappings</a>.
+</p>
+
+<div class="example">
+<p><b>Example</b></p>
+<p>todo</p>
+<pre fragment="Annotation" class="xml">
+  &lt;Annotation&gt;
+    &lt;!-- todo --&gt;
+  &lt;/Annotation&gt;
+</pre>
+
+</div>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdatatypes-examples.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdatatypes-examples.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

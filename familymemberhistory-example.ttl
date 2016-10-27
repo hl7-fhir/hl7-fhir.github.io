@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/FamilyMemberHistory/father> a fhir:FamilyMemberHistory;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "father"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father died of a heart attack aged 74</div>"
+  ];
+  fhir:FamilyMemberHistory.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter Patient" ]
+  ];
+  fhir:FamilyMemberHistory.date [ fhir:value "2011-03-18"^^xsd:date];
+  fhir:FamilyMemberHistory.status [ fhir:value "completed"];
+  fhir:FamilyMemberHistory.relationship [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/familial-relationship" ];
+       fhir:Coding.code [ fhir:value "father" ]
+     ]
+  ];
+  fhir:FamilyMemberHistory.condition [
+     fhir:index 0;
+     fhir:FamilyMemberHistory.condition.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:315619001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "315619001" ];
+         fhir:Coding.display [ fhir:value "Myocardial Infarction" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Heart Attack" ]
+     ];
+     fhir:FamilyMemberHistory.condition.onsetAge [
+       fhir:Quantity.value [ fhir:value "74"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "yr" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "a" ]
+     ];
+     fhir:FamilyMemberHistory.condition.note [
+       fhir:Annotation.text [ fhir:value "Was fishing at the time. At least he went doing someting he loved." ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

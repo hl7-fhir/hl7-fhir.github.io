@@ -1,0 +1,73 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "v3-AcknowledgementCondition",
+  "meta": {
+    "lastUpdated": "2016-03-23T00:00:00.000+00:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Release Date: 2016-03-23</p>\r\n<table class=\"grid\">\r\n <tr><td><b>Level</b></td><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>\r\n <tr><td>1</td><td>AL<a name=\"AL\"> </a></td><td>Always</td><td>\n                        Always send an acknowledgement.<br/>\r\n\n                     </td></tr>\r\n <tr><td>1</td><td>ER<a name=\"ER\"> </a></td><td>Error/reject only</td><td>\n                        Send an acknowledgement for error/reject conditions only.<br/>\r\n\n                     </td></tr>\r\n <tr><td>1</td><td>NE<a name=\"NE\"> </a></td><td>Never</td><td>\n                        Never send an acknowledgement.<br/>\r\n\n                     </td></tr>\r\n <tr><td>1</td><td>SU<a name=\"SU\"> </a></td><td>Successful only</td><td>\n                        Send an acknowledgement for successful completions only.<br/>\r\n\n                     </td></tr>\r\n</table>\r\n</div>"
+  },
+  "url": "http://hl7.org/fhir/v3/AcknowledgementCondition",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:oid:2.16.840.1.113883.5.1050"
+  },
+  "version": "2016-03-23",
+  "name": "v3 Code System AcknowledgementCondition",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org"
+        }
+      ]
+    }
+  ],
+  "date": "2016-03-23T00:00:00+00:00",
+  "description": " The codes identify the conditions under which accept acknowledgements are required to be returned in response to this message. Note that accept acknowledgement address two different issues at the same time: reliable transport as well as syntactical correctness",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/v3-AcknowledgementCondition",
+  "hierarchyMeaning": "subsumes",
+  "content": "complete",
+  "property": [
+    {
+      "code": "inactive",
+      "uri": "http://hl7.org/fhir/concept-properties#inactive",
+      "description": "True if the concept is not considered active - e.g. not a valid concept any more",
+      "type": "boolean"
+    }
+  ],
+  "concept": [
+    {
+      "code": "AL",
+      "display": "Always",
+      "definition": "Always send an acknowledgement."
+    },
+    {
+      "code": "ER",
+      "display": "Error/reject only",
+      "definition": "Send an acknowledgement for error/reject conditions only."
+    },
+    {
+      "code": "NE",
+      "display": "Never",
+      "definition": "Never send an acknowledgement."
+    },
+    {
+      "code": "SU",
+      "display": "Successful only",
+      "definition": "Send an acknowledgement for successful completions only.",
+      "property": [
+        {
+          "code": "notSelectable",
+          "valueBoolean": true
+        }
+      ]
+    }
+  ]
+}

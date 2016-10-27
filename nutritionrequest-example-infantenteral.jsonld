@@ -1,0 +1,182 @@
+{
+  "@context": "http://build.fhir.org/NutritionRequest.jsonld",
+  "@context": "http://hl7.org/fhir/NutritionRequest/infantenteral",
+  "Resource.id": {
+    "id.value": "infantenteral"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: infantenteral</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><blockquote><p><b>enteralFormula</b></p><p><b>baseFormulaType</b>: infant formula + iron <span>(Details : {SNOMED CT code '412414007' = 'Infant formula + iron (product)', given as 'infant formula + iron'})</span></p><p><b>baseFormulaProductName</b>: Acme Infant Formula + Iron</p><p><b>additiveType</b>: Modular carbohydrate enteral formula component <span>(Details : {http://hl7.org/fhir/entformula-additive code 'carbohydrate' = 'Modular carbohydrate enteral formula component', given as 'Modular carbohydrate enteral formula component'})</span></p><p><b>additiveProductName</b>: Acme High Carbohydrate Additive</p><p><b>caloricDensity</b>: 20 calories per ounce<span> (Details: UCUM code cal/[foz_us] = 'cal/foz_us')</span></p><p><b>routeofAdministration</b>: Swallow, oral <span>(Details : {http://hl7.org/fhir/v3/RouteOfAdministration code 'PO' = 'Swallow, oral', given as 'Swallow, oral'})</span></p><h3>Administrations</h3><table><tr><td>-</td><td><b>Schedule</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>Starting Sep 17, 2014, Do Once per 3 hours</td><td>4 ounces<span> (Details: UCUM code [foz_us] = 'foz_us')</span></td></tr></table><p><b>maxVolumeToDeliver</b>: 32 ounces<span> (Details: UCUM code [foz_us] = 'foz_us')</span></p><p><b>administrationInstruction</b>: Add high calorie high carbohydrate additive to increase cal/oz from 24 cal/oz to 27 cal/oz.</p></blockquote></div>"
+    }
+  },
+  "NutritionRequest.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://www.acme.org/nutritionorders"
+      },
+      "Identifier.value": {
+        "string.value": "123"
+      }
+    }
+  ],
+  "NutritionRequest.status": {
+    "code.value": "active"
+  },
+  "NutritionRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "NutritionRequest.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/example"
+    },
+    "Reference.display": {
+      "string.value": "Inpatient"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "NutritionRequest.dateTime": {
+    "dateTime.value": "2014-09-17"
+  },
+  "NutritionRequest.orderer": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "string.value": "Dr Adam Careful"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "NutritionRequest.enteralFormula": {
+    "NutritionRequest.enteralFormula.baseFormulaType": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "412414007"
+          },
+          "Coding.display": {
+            "string.value": "infant formula + iron"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#412414007"
+    },
+    "NutritionRequest.enteralFormula.baseFormulaProductName": {
+      "string.value": "Acme Infant Formula + Iron"
+    },
+    "NutritionRequest.enteralFormula.additiveType": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/entformula-additive"
+          },
+          "Coding.code": {
+            "code.value": "carbohydrate"
+          },
+          "Coding.display": {
+            "string.value": "Modular carbohydrate enteral formula component"
+          }
+        }
+      ]
+    },
+    "NutritionRequest.enteralFormula.additiveProductName": {
+      "string.value": "Acme High Carbohydrate Additive"
+    },
+    "NutritionRequest.enteralFormula.caloricDensity": {
+      "Quantity.value": {
+        "decimal.value": 20
+      },
+      "Quantity.unit": {
+        "string.value": "calories per ounce"
+      },
+      "Quantity.system": {
+        "uri.value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "code.value": "cal/[foz_us]"
+      }
+    },
+    "NutritionRequest.enteralFormula.routeofAdministration": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/v3/RouteOfAdministration"
+          },
+          "Coding.code": {
+            "code.value": "PO"
+          },
+          "Coding.display": {
+            "string.value": "Swallow, oral"
+          },
+          "Coding.userSelected": {
+            "boolean.value": true
+          }
+        }
+      ]
+    },
+    "NutritionRequest.enteralFormula.administration": [
+      {
+        "NutritionRequest.enteralFormula.administration.schedule": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "dateTime.value": "2014-09-17"
+              }
+            },
+            "Timing.repeat.frequency": {
+              "integer.value": 1
+            },
+            "Timing.repeat.period": {
+              "decimal.value": 3
+            },
+            "Timing.repeat.periodUnit": {
+              "code.value": "h"
+            }
+          }
+        },
+        "NutritionRequest.enteralFormula.administration.quantity": {
+          "Quantity.value": {
+            "decimal.value": 4
+          },
+          "Quantity.unit": {
+            "string.value": "ounces"
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "[foz_us]"
+          }
+        }
+      }
+    ],
+    "NutritionRequest.enteralFormula.maxVolumeToDeliver": {
+      "Quantity.value": {
+        "decimal.value": 32
+      },
+      "Quantity.unit": {
+        "string.value": "ounces"
+      },
+      "Quantity.system": {
+        "uri.value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "code.value": "[foz_us]"
+      }
+    },
+    "NutritionRequest.enteralFormula.administrationInstruction": {
+      "string.value": "Add high calorie high carbohydrate additive to increase cal/oz from 24 cal/oz to 27 cal/oz."
+    }
+  }
+}

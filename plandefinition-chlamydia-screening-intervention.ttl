@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/PlanDefinition/chlamydia-screening-intervention> a fhir:PlanDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "chlamydia-screening-intervention"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chalmydia Screening CDS Example Using Common</div>"
+  ];
+  fhir:PlanDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "ChlamydiaScreening_CDS_UsingCommon" ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "2.0.0"];
+  fhir:PlanDefinition.title [ fhir:value "Chalmydia Screening CDS Example Using Common"];
+  fhir:PlanDefinition.status [ fhir:value "draft"];
+  fhir:PlanDefinition.date [ fhir:value "2015-07-22"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "Chlamydia Screening CDS Example Using Common"];
+  fhir:PlanDefinition.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Chlamydia Screeening" ]
+  ];
+  fhir:PlanDefinition.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/ChlamydiaScreening_CDS_UsingCommon>;
+     fhir:Reference.reference [ fhir:value "Library/ChlamydiaScreening_CDS_UsingCommon" ]
+  ];
+  fhir:PlanDefinition.actionDefinition [
+     fhir:index 0;
+     fhir:PlanDefinition.actionDefinition.title [ fhir:value "Patient has not had chlamydia screening within the recommended timeframe..." ];
+     fhir:PlanDefinition.actionDefinition.condition [
+       fhir:PlanDefinition.actionDefinition.condition.expression [ fhir:value "NoScreening" ]
+     ];
+     fhir:PlanDefinition.actionDefinition.dynamicValue [
+       fhir:index 0;
+       fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "~" ];
+       fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "ChlamydiaScreeningRequest" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Library/ChlamydiaScreening_CDS_UsingCommon> a fhir:Library .
+
+# -------------------------------------------------------------------------------------
+

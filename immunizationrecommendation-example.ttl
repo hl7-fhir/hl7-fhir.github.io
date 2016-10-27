@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ImmunizationRecommendation/example> a fhir:ImmunizationRecommendation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Authored by Joginder Madra</div>"
+  ];
+  fhir:ImmunizationRecommendation.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1235" ]
+  ];
+  fhir:ImmunizationRecommendation.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:ImmunizationRecommendation.recommendation [
+     fhir:index 0;
+     fhir:ImmunizationRecommendation.recommendation.date [ fhir:value "2015-02-09T11:04:15.817-05:00"^^xsd:dateTime ];
+     fhir:ImmunizationRecommendation.recommendation.vaccineCode [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:14745005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "14745005" ];
+         fhir:Coding.display [ fhir:value "Hepatitis A vaccine" ]
+       ]
+     ];
+     fhir:ImmunizationRecommendation.recommendation.doseNumber [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ImmunizationRecommendation.recommendation.forecastStatus [
+       fhir:CodeableConcept.text [ fhir:value "Not Complete" ]
+     ];
+     fhir:ImmunizationRecommendation.recommendation.dateCriterion [
+       fhir:index 0;
+       fhir:ImmunizationRecommendation.recommendation.dateCriterion.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/immunization-recommendation-date-criterion" ];
+           fhir:Coding.code [ fhir:value "earliest" ];
+           fhir:Coding.display [ fhir:value "Earliest Date" ]
+         ]
+       ];
+       fhir:ImmunizationRecommendation.recommendation.dateCriterion.value [ fhir:value "2015-12-01T00:00:00-05:00"^^xsd:dateTime ]
+     ], [
+       fhir:index 1;
+       fhir:ImmunizationRecommendation.recommendation.dateCriterion.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/immunization-recommendation-date-criterion" ];
+           fhir:Coding.code [ fhir:value "recommended" ];
+           fhir:Coding.display [ fhir:value "Recommended" ]
+         ]
+       ];
+       fhir:ImmunizationRecommendation.recommendation.dateCriterion.value [ fhir:value "2015-12-01T00:00:00-05:00"^^xsd:dateTime ]
+     ], [
+       fhir:index 2;
+       fhir:ImmunizationRecommendation.recommendation.dateCriterion.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/immunization-recommendation-date-criterion" ];
+           fhir:Coding.code [ fhir:value "overdue" ];
+           fhir:Coding.display [ fhir:value "Past Due Date" ]
+         ]
+       ];
+       fhir:ImmunizationRecommendation.recommendation.dateCriterion.value [ fhir:value "2016-12-28T00:00:00-05:00"^^xsd:dateTime ]
+     ];
+     fhir:ImmunizationRecommendation.recommendation.protocol [
+       fhir:ImmunizationRecommendation.recommendation.protocol.doseSequence [ fhir:value "1"^^xsd:positiveInteger ];
+       fhir:ImmunizationRecommendation.recommendation.protocol.description [ fhir:value "First sequence in protocol" ];
+       fhir:ImmunizationRecommendation.recommendation.protocol.authority [
+         fhir:link <http://hl7.org/fhir/Organization/hl7>;
+         fhir:Reference.reference [ fhir:value "Organization/hl7" ]
+       ];
+       fhir:ImmunizationRecommendation.recommendation.protocol.series [ fhir:value "Vaccination Series 1" ]
+     ];
+     fhir:ImmunizationRecommendation.recommendation.supportingImmunization [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/Immunization/example>;
+       fhir:Reference.reference [ fhir:value "Immunization/example" ]
+     ];
+     fhir:ImmunizationRecommendation.recommendation.supportingPatientInformation [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/Observation/example>;
+       fhir:Reference.reference [ fhir:value "Observation/example" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/hl7> a fhir:Organization .
+
+<http://hl7.org/fhir/Immunization/example> a fhir:Immunization .
+
+<http://hl7.org/fhir/Observation/example> a fhir:Observation .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,79 @@
+{
+  "@context": "http://build.fhir.org/Consent.jsonld",
+  "@context": "http://hl7.org/fhir/Consent/consent-example-Out",
+  "Resource.id": {
+    "id.value": "consent-example-Out"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tSpecific to use-case 0) Withhold Authorization of sharing data for Treatment\n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available for normal treatment use.\n   </p>\n   </div>"
+    }
+  },
+  "Consent.status": {
+    "code.value": "active"
+  },
+  "Consent.dateTime": {
+    "dateTime.value": "2015-11-18"
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/f001"
+    },
+    "Reference.display": {
+      "string.value": "P. van de Heuvel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Consent.organization": {
+    "Reference.reference": {
+      "string.value": "Organization/Infoway"
+    },
+    "Reference.display": {
+      "string.value": "Canada Infoway"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/Infoway"
+  },
+  "Consent.sourceAttachment": {
+    "Attachment.title": {
+      "string.value": "The terms of the consent in lawyer speak."
+    }
+  },
+  "Consent.policy": {
+    "uri.value": "http://hl7.org/fhir/ConsentPolicy/opt-out"
+  },
+  "Consent.except": [
+    {
+      "Consent.except.type": {
+        "code.value": "deny"
+      },
+      "Consent.except.actor": [
+        {
+          "Consent.except.actor.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "uri.value": "http://hl7.org/fhir/v3/ParticipationType"
+                },
+                "Coding.code": {
+                  "code.value": "CST"
+                }
+              }
+            ]
+          },
+          "Consent.except.actor.reference": {
+            "Reference.reference": {
+              "string.value": "Organization/2.16.840.1.113883.19.6"
+            },
+            "Reference.display": {
+              "string.value": "Good Health Psychiatric Hospital"
+            },
+            "Resource.reference": "http://hl7.org/fhir//Organization/2.16.840.1.113883.19.6"
+          }
+        }
+      ]
+    }
+  ]
+}

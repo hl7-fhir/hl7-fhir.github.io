@@ -1,0 +1,121 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/AuditEvent/example-media> a fhir:AuditEvent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-media"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-media</p><p><b>type</b>: Export (Details: DICOM code 110106 = 'Export', stated as 'Export')</p><p><b>subtype</b>: Distribute Document Set on Media (Details: urn:oid:1.3.6.1.4.1.19376.1.2 code ITI-32 = 'ITI-32', stated as 'Distribute Document Set on Media')</p><p><b>action</b>: R</p><p><b>recorded</b>: Aug 27, 2015 11:42:24 PM</p><p><b>outcome</b>: 0</p><blockquote><p><b>agent</b></p><p><b>role</b>: Source Role ID <span>(Details : {DICOM code '110153' = 'Source Role ID', given as 'Source Role ID'})</span></p><p><b>userId</b>: ExportToMedia.app</p><p><b>requestor</b>: false</p></blockquote><blockquote><p><b>agent</b></p><p><b>userId</b>: 95</p><p><b>altId</b>: 601847123</p><p><b>name</b>: Grahame Grieve</p><p><b>requestor</b>: true</p></blockquote><blockquote><p><b>agent</b></p><p><b>name</b>: Media title: Hello World</p><p><b>requestor</b>: false</p><p><b>media</b>: DVD (Details: DICOM code 110033 = 'DVD', stated as 'DVD')</p></blockquote><h3>Sources</h3><table><tr><td>-</td><td><b>Identifier</b></td></tr><tr><td>*</td><td>hl7connect.healthintersections.com.au</td></tr></table><blockquote><p><b>entity</b></p><p><b>identifier</b>: e3cdfc81a0d24bd^^^&amp;2.16.840.1.113883.4.2&amp;ISO</p><p><b>type</b>: Person (Details: http://hl7.org/fhir/object-type code 1 = 'Person', stated as 'Person')</p><p><b>role</b>: Patient (Details: http://hl7.org/fhir/object-role code 1 = 'Patient', stated as 'Patient')</p></blockquote><blockquote><p><b>entity</b></p><p><b>identifier</b>: submission set classificationNode = e3cdfc81a0d24bd^^^&amp;2.16.840.1.113883.4.2&amp;ISO</p><p><b>type</b>: System Object (Details: http://hl7.org/fhir/object-type code 2 = 'System Object', stated as 'System Object')</p><p><b>role</b>: Job (Details: http://hl7.org/fhir/object-role code 20 = 'Job', stated as 'Job')</p></blockquote><blockquote><p><b>entity</b></p><p><b>reference</b>: <a>DocumentManifest/example</a></p><p><b>type</b>: System Object (Details: http://hl7.org/fhir/object-type code 2 = 'System Object', stated as 'System Object')</p></blockquote></div>"
+  ];
+  fhir:AuditEvent.type [
+     fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+     fhir:Coding.code [ fhir:value "110106" ];
+     fhir:Coding.display [ fhir:value "Export" ]
+  ];
+  fhir:AuditEvent.subtype [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "urn:oid:1.3.6.1.4.1.19376.1.2" ];
+     fhir:Coding.code [ fhir:value "ITI-32" ];
+     fhir:Coding.display [ fhir:value "Distribute Document Set on Media" ]
+  ];
+  fhir:AuditEvent.action [ fhir:value "R"];
+  fhir:AuditEvent.recorded [ fhir:value "2015-08-27T23:42:24Z"^^xsd:dateTime];
+  fhir:AuditEvent.outcome [ fhir:value "0"];
+  fhir:AuditEvent.agent [
+     fhir:index 0;
+     fhir:AuditEvent.agent.role [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+         fhir:Coding.code [ fhir:value "110153" ];
+         fhir:Coding.display [ fhir:value "Source Role ID" ]
+       ]
+     ];
+     fhir:AuditEvent.agent.userId [
+       fhir:Identifier.value [ fhir:value "ExportToMedia.app" ]
+     ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 1;
+     fhir:AuditEvent.agent.userId [
+       fhir:Identifier.value [ fhir:value "95" ]
+     ];
+     fhir:AuditEvent.agent.altId [ fhir:value "601847123" ];
+     fhir:AuditEvent.agent.name [ fhir:value "Grahame Grieve" ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 2;
+     fhir:AuditEvent.agent.name [ fhir:value "Media title: Hello World" ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "false"^^xsd:boolean ];
+     fhir:AuditEvent.agent.media [
+       fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+       fhir:Coding.code [ fhir:value "110033" ];
+       fhir:Coding.display [ fhir:value "DVD" ]
+     ]
+  ];
+  fhir:AuditEvent.source [
+     fhir:AuditEvent.source.identifier [
+       fhir:Identifier.value [ fhir:value "hl7connect.healthintersections.com.au" ]
+     ]
+  ];
+  fhir:AuditEvent.entity [
+     fhir:index 0;
+     fhir:AuditEvent.entity.identifier [
+       fhir:Identifier.value [ fhir:value "e3cdfc81a0d24bd^^^&2.16.840.1.113883.4.2&ISO" ]
+     ];
+     fhir:AuditEvent.entity.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-type" ];
+       fhir:Coding.code [ fhir:value "1" ];
+       fhir:Coding.display [ fhir:value "Person" ]
+     ];
+     fhir:AuditEvent.entity.role [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-role" ];
+       fhir:Coding.code [ fhir:value "1" ];
+       fhir:Coding.display [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:AuditEvent.entity.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" ];
+           fhir:Coding.code [ fhir:value "IHE XDS Metadata" ];
+           fhir:Coding.display [ fhir:value "submission set classificationNode" ]
+         ]
+       ];
+       fhir:Identifier.value [ fhir:value "e3cdfc81a0d24bd^^^&2.16.840.1.113883.4.2&ISO" ]
+     ];
+     fhir:AuditEvent.entity.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-type" ];
+       fhir:Coding.code [ fhir:value "2" ];
+       fhir:Coding.display [ fhir:value "System Object" ]
+     ];
+     fhir:AuditEvent.entity.role [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-role" ];
+       fhir:Coding.code [ fhir:value "20" ];
+       fhir:Coding.display [ fhir:value "Job" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:AuditEvent.entity.reference [
+       fhir:link <http://hl7.org/fhir/DocumentManifest/example>;
+       fhir:Reference.reference [ fhir:value "DocumentManifest/example" ]
+     ];
+     fhir:AuditEvent.entity.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-type" ];
+       fhir:Coding.code [ fhir:value "2" ];
+       fhir:Coding.display [ fhir:value "System Object" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/DocumentManifest/example> a fhir:DocumentManifest .
+
+# -------------------------------------------------------------------------------------
+

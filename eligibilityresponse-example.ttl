@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/EligibilityResponse/E2500> a fhir:EligibilityResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "E2500"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the EligibilityResponse.</div>"
+  ];
+  fhir:EligibilityResponse.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/fhir/eligibilityresponse" ];
+     fhir:Identifier.value [ fhir:value "881234" ]
+  ];
+  fhir:EligibilityResponse.status [ fhir:value "active"];
+  fhir:EligibilityResponse.request [
+     fhir:link <http://www.BenefitsInc.com/fhir/eligibility/225476332402>;
+     fhir:Reference.reference [ fhir:value "http://www.BenefitsInc.com/fhir/eligibility/225476332402" ]
+  ];
+  fhir:EligibilityResponse.outcome [ fhir:value "complete"];
+  fhir:EligibilityResponse.disposition [ fhir:value "Policy is currently in-force."];
+  fhir:EligibilityResponse.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:EligibilityResponse.organization [
+     fhir:link <http://hl7.org/fhir/Organization/2>;
+     fhir:Reference.reference [ fhir:value "Organization/2" ]
+  ];
+  fhir:EligibilityResponse.requestOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/1>;
+     fhir:Reference.reference [ fhir:value "Organization/1" ]
+  ];
+  fhir:EligibilityResponse.inforce [ fhir:value "true"^^xsd:boolean] .
+
+<http://hl7.org/fhir/Organization/2> a fhir:Organization .
+
+<http://hl7.org/fhir/Organization/1> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

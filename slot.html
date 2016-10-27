@@ -1,0 +1,647 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Slot - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/slot.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="workflow-module.html"><img src="workflow.png"/> Workflow</a></li>        <li><b>Slot</b></li>          <!-- slot.html / resource / Slot -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="slot-examples.html">Examples</a></li><li><a href="slot-definitions.html">Detailed Descriptions</a></li><li><a href="slot-mappings.html">Mappings</a></li><li><a href="slot-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">12.18<a name="12.18"> </a></span> Resource Slot - Content <a href="slot.html#12.18" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/pafm/index.cfm" _target="blank">Patient Administration <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 1</td><td><a href="compartmentdefinition.html">Compartments</a>: Not linked to any defined compartments</td></tr>
+</table>
+
+
+
+<p> 
+A slot of time on a schedule that may be available for booking appointments. 
+</p>
+
+
+	<div>
+<a name="scope"> </a>
+		<h2 class="self-link-parent"><span class="sectioncount">12.18.1</span> Scope and Usage <a href="slot.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+		<p>
+			Slot resources are used to provide time-slots that can be booked using an appointment.
+			They do not provide any information about appointments that are available, just the time,
+			and optionally what the time can be used for. These are effectively spaces of free/busy time.<br/>
+      Slots can also be marked as busy without having appointments associated.
+    </p>
+		<p>
+			A slot can have more than one appointment allocated to it. A scheduling system may permit
+			multiple allocations up to a specific number of places. An example of this type of usage 
+      could be where the slot is being used for a group service that permits 5 participants at 
+      the same time.
+		</p>
+		<p>
+			A slot can be marked as over-booked indicating that there are too many appointments allocated
+			to it.
+		</p>
+		<p>
+			In some situations a service may have a specific set of slots reserved for specific uses, such 
+			as &quot;walk-ins&quot; or a specific organization has a &quot;standing booking&quot; for Thursday mornings.
+			These should be represented using the type field with a specified and agreed value.<br/>
+			Security Permissions or specific business rules on the system could enforce that only eligible
+			appointments are allocated to them.
+		</p>
+    <p>
+      If a service had a weekly schedule created that permitted eight 1 hour appointments each
+      day of a working week (Monday - Friday), this would be constructed by a single Schedule
+      resource with the dates for the start and end of the week set, and then 40 (5x8) Slot 
+      resources associated with it.<br/>
+      As appointments fill up the schedule, these slots would individually be marked as busy
+      as the appointments are filled into the slots.<br/>
+      The slots in a schedule do not need to be the same size, and can be different for different
+      days of the week.<br/>
+      Slot instances do not have any recurrence information included. If recurring information is
+      desired, this will be managed outside these resources, or included as extensions.
+    </p>
+  </div>
+
+
+<p>This resource is referenced by <a href="appointment.html">appointment</a></p>
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">12.18.2</span> 
+Resource Content
+ <a href="slot.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="slot"> </a>
+<a name="Slot"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="slot-definitions.html#Slot" title="Slot : A slot of time on a schedule that may be available for booking appointments.">Slot</a><a name="Slot"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A slot of time on a schedule that may be available for booking appointments</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.identifier" title="Slot.identifier : External Ids for this item.">identifier</a><a name="Slot.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">External Ids for this item</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.serviceCategory" title="Slot.serviceCategory : A broad categorisation of the service that is to be performed during this appointment.">serviceCategory</a><a name="Slot.serviceCategory"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A broad categorisation of the service that is to be performed during this appointment<br/><a href="valueset-service-category.html">ServiceCategory</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.serviceType" title="Slot.serviceType : The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource.">serviceType</a><a name="Slot.serviceType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource<br/><a href="valueset-service-type.html">ServiceType</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.specialty" title="Slot.specialty : The specialty of a practitioner that would be required to perform the service requested in this appointment.">specialty</a><a name="Slot.specialty"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The specialty of a practitioner that would be required to perform the service requested in this appointment<br/><a href="valueset-c80-practice-codes.html" title="Additional details about where the content was created (e.g. clinical specialty).">Practice Setting Code Value Set</a> (<a href="terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.">Preferred</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.appointmentType" title="Slot.appointmentType : The style of appointment or patient that has been booked in the slot (not service type).">appointmentType</a><a name="Slot.appointmentType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The style of appointment or patient that has been booked in the slot (not service type)<br/><a href="v2/0276/index.html">v2 Appointment reason codes</a> (<a href="terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.">Preferred</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="slot-definitions.html#Slot.schedule" title="Slot.schedule : The schedule resource that this slot defines an interval of status information.">schedule</a><a name="Slot.schedule"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="schedule.html">Schedule</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The schedule resource that this slot defines an interval of status information</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.status" title="Slot.status : busy | free | busy-unavailable | busy-tentative | entered-in-error.">status</a><a name="Slot.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">busy | free | busy-unavailable | busy-tentative | entered-in-error<br/><a href="valueset-slotstatus.html" title="The free/busy status of the slot.">SlotStatus</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.start" title="Slot.start : Date/Time that the slot is to begin.">start</a><a name="Slot.start"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#instant">instant</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Date/Time that the slot is to begin</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.end" title="Slot.end : Date/Time that the slot is to conclude.">end</a><a name="Slot.end"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#instant">instant</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Date/Time that the slot is to conclude</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.overbooked" title="Slot.overbooked : This slot has already been overbooked, appointments are unlikely to be accepted for this time.">overbooked</a><a name="Slot.overbooked"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">This slot has already been overbooked, appointments are unlikely to be accepted for this time</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.comment" title="Slot.comment : Comments on the slot to describe any extended information. Such as custom constraints on the slot.">comment</a><a name="Slot.comment"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Comments on the slot to describe any extended information. Such as custom constraints on the slot</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="394.8" version="1.1" height="214.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="294.8" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="204.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="294.8" style="stroke:dimgrey;stroke-width:1"/><text x="147.4" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Slot<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.identifier"><title>External Ids for this item</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.serviceCategory"><title>A broad categorisation of the service that is to be performed during this appointment</title>serviceCategory</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="valueset-service-category.html"><title> (Strength=Example)</title>ServiceCategory</a>?? »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.serviceType"><title>The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</title>serviceType</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..*] « <a xlink:href="valueset-service-type.html"><title> (Strength=Example)</title>ServiceType</a>?? »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.specialty"><title>The specialty of a practitioner that would be required to perform the service requested in this appointment</title>specialty</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..*] « <a xlink:href="valueset-c80-practice-codes.html"><title>Additional details about where the content was created (e.g. clinical specialty). (Strength=Preferred)</title>Practice Setting Code Value</a></text><text x="26.0" y="98.0" fill="black" class="diagram-class-detail">      <a xlink:href="valueset-c80-practice-codes.html"> S...</a>? »</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.appointmentType"><title>The style of appointment or patient that has been booked in the slot (not service type)</title>appointmentType</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="v2/0276/index.html"><title> (Strength=Preferred)</title>v2 Appointment reason </a>? »</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.schedule"><title>The schedule resource that this slot defines an interval of status information</title>schedule</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="schedule.html#Schedule">Schedule</a> »</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.status"><title>busy | free | busy-unavailable | busy-tentative | entered-in-error</title>status</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="valueset-slotstatus.html"><title>The free/busy status of the slot. (Strength=Required)</title>SlotStatus</a>! »</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.start"><title>Date/Time that the slot is to begin</title>start</a> : <a xlink:href="datatypes.html#instant">instant</a> [1..1]</text><text x="6.0" y="168.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.end"><title>Date/Time that the slot is to conclude</title>end</a> : <a xlink:href="datatypes.html#instant">instant</a> [1..1]</text><text x="6.0" y="182.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.overbooked"><title>This slot has already been overbooked, appointments are unlikely to be accepted for this time</title>overbooked</a> : <a xlink:href="datatypes.html#boolean">boolean</a> [0..1]</text><text x="6.0" y="196.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.comment"><title>Comments on the slot to describe any extended information. Such as custom constraints on the slot</title>comment</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text></g></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="slot-definitions.html#Slot" title="A slot of time on a schedule that may be available for booking appointments." class="dict"><b>Slot</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="slot-definitions.html#Slot.identifier" title="External Ids for this item." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">External Ids for this item</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="slot-definitions.html#Slot.serviceCategory" title="A broad categorisation of the service that is to be performed during this appointment." class="dict"><b>serviceCategory</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-service-category.html">A broad categorisation of the service that is to be performed during this appointment</a></span><span style="color: Gray"> --&gt;</span>&lt;/serviceCategory&gt;
+ &lt;<a href="slot-definitions.html#Slot.serviceType" title="The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource." class="dict"><b>serviceType</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-service-type.html">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/serviceType&gt;
+ &lt;<a href="slot-definitions.html#Slot.specialty" title="The specialty of a practitioner that would be required to perform the service requested in this appointment." class="dict"><b>specialty</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-c80-practice-codes.html">The specialty of a practitioner that would be required to perform the service requested in this appointment</a></span><span style="color: Gray"> --&gt;</span>&lt;/specialty&gt;
+ &lt;<a href="slot-definitions.html#Slot.appointmentType" title="The style of appointment or patient that has been booked in the slot (not service type)." class="dict"><b>appointmentType</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="v2/0276/index.html">The style of appointment or patient that has been booked in the slot (not service type)</a></span><span style="color: Gray"> --&gt;</span>&lt;/appointmentType&gt;
+ &lt;<a href="slot-definitions.html#Slot.schedule" title="The schedule resource that this slot defines an interval of status information." class="dict"><b>schedule</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="schedule.html#Schedule">Schedule</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The schedule resource that this slot defines an interval of status information</a></span><span style="color: Gray"> --&gt;</span>&lt;/schedule&gt;
+ &lt;<a href="slot-definitions.html#Slot.status" title="busy | free | busy-unavailable | busy-tentative | entered-in-error." class="dict"><b>status</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-slotstatus.html">busy | free | busy-unavailable | busy-tentative | entered-in-error</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.start" title="Date/Time that the slot is to begin." class="dict"><b>start</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Date/Time that the slot is to begin</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.end" title="Date/Time that the slot is to conclude." class="dict"><b>end</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Date/Time that the slot is to conclude</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.overbooked" title="This slot has already been overbooked, appointments are unlikely to be accepted for this time." class="dict"><b>overbooked</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">This slot has already been overbooked, appointments are unlikely to be accepted for this time</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.comment" title="Comments on the slot to describe any extended information. Such as custom constraints on the slot." class="dict"><b>comment</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Comments on the slot to describe any extended information. Such as custom constraints on the slot</a></span><span style="color: Gray"> --&gt;</span>
+&lt;/Slot&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="slot-definitions.html#Slot" title="A slot of time on a schedule that may be available for booking appointments." class="dict"><b>Slot</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="slot-definitions.html#Slot.identifier" title="External Ids for this item." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">External Ids for this item</a></span>
+  &quot;<a href="slot-definitions.html#Slot.serviceCategory" title="A broad categorisation of the service that is to be performed during this appointment." class="dict">serviceCategory</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-service-category.html">A broad categorisation of the service that is to be performed during this appointment</a></span>
+  &quot;<a href="slot-definitions.html#Slot.serviceType" title="The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource." class="dict">serviceType</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-service-type.html">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</a></span>
+  &quot;<a href="slot-definitions.html#Slot.specialty" title="The specialty of a practitioner that would be required to perform the service requested in this appointment." class="dict">specialty</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-c80-practice-codes.html">The specialty of a practitioner that would be required to perform the service requested in this appointment</a></span>
+  &quot;<a href="slot-definitions.html#Slot.appointmentType" title="The style of appointment or patient that has been booked in the slot (not service type)." class="dict">appointmentType</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="v2/0276/index.html">The style of appointment or patient that has been booked in the slot (not service type)</a></span>
+  &quot;<a href="slot-definitions.html#Slot.schedule" title="The schedule resource that this slot defines an interval of status information." class="dict">schedule</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="schedule.html#Schedule">Schedule</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The schedule resource that this slot defines an interval of status information</a></span>
+  &quot;<a href="slot-definitions.html#Slot.status" title="busy | free | busy-unavailable | busy-tentative | entered-in-error." class="dict">status</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-slotstatus.html">busy | free | busy-unavailable | busy-tentative | entered-in-error</a></span>
+  &quot;<a href="slot-definitions.html#Slot.start" title="Date/Time that the slot is to begin." class="dict">start</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Date/Time that the slot is to begin</a></span>
+  &quot;<a href="slot-definitions.html#Slot.end" title="Date/Time that the slot is to conclude." class="dict">end</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Date/Time that the slot is to conclude</a></span>
+  &quot;<a href="slot-definitions.html#Slot.overbooked" title="This slot has already been overbooked, appointments are unlikely to be accepted for this time." class="dict">overbooked</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">This slot has already been overbooked, appointments are unlikely to be accepted for this time</a></span>
+  &quot;<a href="slot-definitions.html#Slot.comment" title="Comments on the slot to describe any extended information. Such as custom constraints on the slot." class="dict">comment</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot; <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Comments on the slot to describe any extended information. Such as custom constraints on the slot</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="slot-definitions.html#Slot" title="A slot of time on a schedule that may be available for booking appointments." class="dict"><b>Slot</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="slot-definitions.html#Slot.identifier" title="External Ids for this item." class="dict">Slot.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">External Ids for this item</span>
+  fhir:<a href="slot-definitions.html#Slot.serviceCategory" title="A broad categorisation of the service that is to be performed during this appointment." class="dict">Slot.serviceCategory</a><a name="ttl-serviceCategory"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">A broad categorisation of the service that is to be performed during this appointment</span>
+  fhir:<a href="slot-definitions.html#Slot.serviceType" title="The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource." class="dict">Slot.serviceType</a><a name="ttl-serviceType"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ], ... ; # 0..* <span style="color: navy">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</span>
+  fhir:<a href="slot-definitions.html#Slot.specialty" title="The specialty of a practitioner that would be required to perform the service requested in this appointment." class="dict">Slot.specialty</a><a name="ttl-specialty"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ], ... ; # 0..* <span style="color: navy">The specialty of a practitioner that would be required to perform the service requested in this appointment</span>
+  fhir:<a href="slot-definitions.html#Slot.appointmentType" title="The style of appointment or patient that has been booked in the slot (not service type)." class="dict">Slot.appointmentType</a><a name="ttl-appointmentType"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">The style of appointment or patient that has been booked in the slot (not service type)</span>
+  fhir:<a href="slot-definitions.html#Slot.schedule" title="The schedule resource that this slot defines an interval of status information." class="dict">Slot.schedule</a><a name="ttl-schedule"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="schedule.html#Schedule">Schedule</a>) ]; # 1..1 <span style="color: navy">The schedule resource that this slot defines an interval of status information</span>
+  fhir:<a href="slot-definitions.html#Slot.status" title="busy | free | busy-unavailable | busy-tentative | entered-in-error." class="dict">Slot.status</a><a name="ttl-status"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">busy | free | busy-unavailable | busy-tentative | entered-in-error</span>
+  fhir:<a href="slot-definitions.html#Slot.start" title="Date/Time that the slot is to begin." class="dict">Slot.start</a><a name="ttl-start"> </a>[ <a href="datatypes.html#instant">instant</a> ]; # 1..1 <span style="color: navy">Date/Time that the slot is to begin</span>
+  fhir:<a href="slot-definitions.html#Slot.end" title="Date/Time that the slot is to conclude." class="dict">Slot.end</a><a name="ttl-end"> </a>[ <a href="datatypes.html#instant">instant</a> ]; # 1..1 <span style="color: navy">Date/Time that the slot is to conclude</span>
+  fhir:<a href="slot-definitions.html#Slot.overbooked" title="This slot has already been overbooked, appointments are unlikely to be accepted for this time." class="dict">Slot.overbooked</a><a name="ttl-overbooked"> </a>[ <a href="datatypes.html#boolean">boolean</a> ]; # 0..1 <span style="color: navy">This slot has already been overbooked, appointments are unlikely to be accepted for this time</span>
+  fhir:<a href="slot-definitions.html#Slot.comment" title="Comments on the slot to describe any extended information. Such as custom constraints on the slot." class="dict">Slot.comment</a><a name="ttl-comment"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Comments on the slot to describe any extended information. Such as custom constraints on the slot</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Slot</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Slot.serviceCategory</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">Slot.serviceType</td>
+    <td class="diff-right">
+Renamed from type to serviceType      <br/>
+Max Cardinality changed from 1 to *
+    </td>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Slot.specialty</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Slot.appointmentType</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">Slot.status</td>
+    <td class="diff-right">Renamed from freeBusyType to status</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="slot-definitions.html#Slot" title="Slot : A slot of time on a schedule that may be available for booking appointments.">Slot</a><a name="Slot"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A slot of time on a schedule that may be available for booking appointments</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.identifier" title="Slot.identifier : External Ids for this item.">identifier</a><a name="Slot.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">External Ids for this item</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.serviceCategory" title="Slot.serviceCategory : A broad categorisation of the service that is to be performed during this appointment.">serviceCategory</a><a name="Slot.serviceCategory"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A broad categorisation of the service that is to be performed during this appointment<br/><a href="valueset-service-category.html">ServiceCategory</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.serviceType" title="Slot.serviceType : The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource.">serviceType</a><a name="Slot.serviceType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource<br/><a href="valueset-service-type.html">ServiceType</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.specialty" title="Slot.specialty : The specialty of a practitioner that would be required to perform the service requested in this appointment.">specialty</a><a name="Slot.specialty"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The specialty of a practitioner that would be required to perform the service requested in this appointment<br/><a href="valueset-c80-practice-codes.html" title="Additional details about where the content was created (e.g. clinical specialty).">Practice Setting Code Value Set</a> (<a href="terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.">Preferred</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.appointmentType" title="Slot.appointmentType : The style of appointment or patient that has been booked in the slot (not service type).">appointmentType</a><a name="Slot.appointmentType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The style of appointment or patient that has been booked in the slot (not service type)<br/><a href="v2/0276/index.html">v2 Appointment reason codes</a> (<a href="terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.">Preferred</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="slot-definitions.html#Slot.schedule" title="Slot.schedule : The schedule resource that this slot defines an interval of status information.">schedule</a><a name="Slot.schedule"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="schedule.html">Schedule</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The schedule resource that this slot defines an interval of status information</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.status" title="Slot.status : busy | free | busy-unavailable | busy-tentative | entered-in-error.">status</a><a name="Slot.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">busy | free | busy-unavailable | busy-tentative | entered-in-error<br/><a href="valueset-slotstatus.html" title="The free/busy status of the slot.">SlotStatus</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.start" title="Slot.start : Date/Time that the slot is to begin.">start</a><a name="Slot.start"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#instant">instant</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Date/Time that the slot is to begin</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.end" title="Slot.end : Date/Time that the slot is to conclude.">end</a><a name="Slot.end"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#instant">instant</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Date/Time that the slot is to conclude</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.overbooked" title="Slot.overbooked : This slot has already been overbooked, appointments are unlikely to be accepted for this time.">overbooked</a><a name="Slot.overbooked"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">This slot has already been overbooked, appointments are unlikely to be accepted for this time</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="slot-definitions.html#Slot.comment" title="Slot.comment : Comments on the slot to describe any extended information. Such as custom constraints on the slot.">comment</a><a name="Slot.comment"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Comments on the slot to describe any extended information. Such as custom constraints on the slot</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="394.8" version="1.1" height="214.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="294.8" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="204.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="294.8" style="stroke:dimgrey;stroke-width:1"/><text x="147.4" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Slot<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.identifier"><title>External Ids for this item</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.serviceCategory"><title>A broad categorisation of the service that is to be performed during this appointment</title>serviceCategory</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="valueset-service-category.html"><title> (Strength=Example)</title>ServiceCategory</a>?? »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.serviceType"><title>The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</title>serviceType</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..*] « <a xlink:href="valueset-service-type.html"><title> (Strength=Example)</title>ServiceType</a>?? »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.specialty"><title>The specialty of a practitioner that would be required to perform the service requested in this appointment</title>specialty</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..*] « <a xlink:href="valueset-c80-practice-codes.html"><title>Additional details about where the content was created (e.g. clinical specialty). (Strength=Preferred)</title>Practice Setting Code Value</a></text><text x="26.0" y="98.0" fill="black" class="diagram-class-detail">      <a xlink:href="valueset-c80-practice-codes.html"> S...</a>? »</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.appointmentType"><title>The style of appointment or patient that has been booked in the slot (not service type)</title>appointmentType</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="v2/0276/index.html"><title> (Strength=Preferred)</title>v2 Appointment reason </a>? »</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.schedule"><title>The schedule resource that this slot defines an interval of status information</title>schedule</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="schedule.html#Schedule">Schedule</a> »</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.status"><title>busy | free | busy-unavailable | busy-tentative | entered-in-error</title>status</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="valueset-slotstatus.html"><title>The free/busy status of the slot. (Strength=Required)</title>SlotStatus</a>! »</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.start"><title>Date/Time that the slot is to begin</title>start</a> : <a xlink:href="datatypes.html#instant">instant</a> [1..1]</text><text x="6.0" y="168.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.end"><title>Date/Time that the slot is to conclude</title>end</a> : <a xlink:href="datatypes.html#instant">instant</a> [1..1]</text><text x="6.0" y="182.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.overbooked"><title>This slot has already been overbooked, appointments are unlikely to be accepted for this time</title>overbooked</a> : <a xlink:href="datatypes.html#boolean">boolean</a> [0..1]</text><text x="6.0" y="196.0" fill="black" class="diagram-class-detail"><a xlink:href="slot-definitions.html#Slot.comment"><title>Comments on the slot to describe any extended information. Such as custom constraints on the slot</title>comment</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text></g></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="slot-definitions.html#Slot" title="A slot of time on a schedule that may be available for booking appointments." class="dict"><b>Slot</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="slot-definitions.html#Slot.identifier" title="External Ids for this item." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">External Ids for this item</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="slot-definitions.html#Slot.serviceCategory" title="A broad categorisation of the service that is to be performed during this appointment." class="dict"><b>serviceCategory</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-service-category.html">A broad categorisation of the service that is to be performed during this appointment</a></span><span style="color: Gray"> --&gt;</span>&lt;/serviceCategory&gt;
+ &lt;<a href="slot-definitions.html#Slot.serviceType" title="The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource." class="dict"><b>serviceType</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-service-type.html">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/serviceType&gt;
+ &lt;<a href="slot-definitions.html#Slot.specialty" title="The specialty of a practitioner that would be required to perform the service requested in this appointment." class="dict"><b>specialty</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-c80-practice-codes.html">The specialty of a practitioner that would be required to perform the service requested in this appointment</a></span><span style="color: Gray"> --&gt;</span>&lt;/specialty&gt;
+ &lt;<a href="slot-definitions.html#Slot.appointmentType" title="The style of appointment or patient that has been booked in the slot (not service type)." class="dict"><b>appointmentType</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="v2/0276/index.html">The style of appointment or patient that has been booked in the slot (not service type)</a></span><span style="color: Gray"> --&gt;</span>&lt;/appointmentType&gt;
+ &lt;<a href="slot-definitions.html#Slot.schedule" title="The schedule resource that this slot defines an interval of status information." class="dict"><b>schedule</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="schedule.html#Schedule">Schedule</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The schedule resource that this slot defines an interval of status information</a></span><span style="color: Gray"> --&gt;</span>&lt;/schedule&gt;
+ &lt;<a href="slot-definitions.html#Slot.status" title="busy | free | busy-unavailable | busy-tentative | entered-in-error." class="dict"><b>status</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-slotstatus.html">busy | free | busy-unavailable | busy-tentative | entered-in-error</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.start" title="Date/Time that the slot is to begin." class="dict"><b>start</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Date/Time that the slot is to begin</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.end" title="Date/Time that the slot is to conclude." class="dict"><b>end</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Date/Time that the slot is to conclude</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.overbooked" title="This slot has already been overbooked, appointments are unlikely to be accepted for this time." class="dict"><b>overbooked</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">This slot has already been overbooked, appointments are unlikely to be accepted for this time</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="slot-definitions.html#Slot.comment" title="Comments on the slot to describe any extended information. Such as custom constraints on the slot." class="dict"><b>comment</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Comments on the slot to describe any extended information. Such as custom constraints on the slot</a></span><span style="color: Gray"> --&gt;</span>
+&lt;/Slot&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="slot-definitions.html#Slot" title="A slot of time on a schedule that may be available for booking appointments." class="dict"><b>Slot</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="slot-definitions.html#Slot.identifier" title="External Ids for this item." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">External Ids for this item</a></span>
+  &quot;<a href="slot-definitions.html#Slot.serviceCategory" title="A broad categorisation of the service that is to be performed during this appointment." class="dict">serviceCategory</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-service-category.html">A broad categorisation of the service that is to be performed during this appointment</a></span>
+  &quot;<a href="slot-definitions.html#Slot.serviceType" title="The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource." class="dict">serviceType</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-service-type.html">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</a></span>
+  &quot;<a href="slot-definitions.html#Slot.specialty" title="The specialty of a practitioner that would be required to perform the service requested in this appointment." class="dict">specialty</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-c80-practice-codes.html">The specialty of a practitioner that would be required to perform the service requested in this appointment</a></span>
+  &quot;<a href="slot-definitions.html#Slot.appointmentType" title="The style of appointment or patient that has been booked in the slot (not service type)." class="dict">appointmentType</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="v2/0276/index.html">The style of appointment or patient that has been booked in the slot (not service type)</a></span>
+  &quot;<a href="slot-definitions.html#Slot.schedule" title="The schedule resource that this slot defines an interval of status information." class="dict">schedule</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="schedule.html#Schedule">Schedule</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The schedule resource that this slot defines an interval of status information</a></span>
+  &quot;<a href="slot-definitions.html#Slot.status" title="busy | free | busy-unavailable | busy-tentative | entered-in-error." class="dict">status</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-slotstatus.html">busy | free | busy-unavailable | busy-tentative | entered-in-error</a></span>
+  &quot;<a href="slot-definitions.html#Slot.start" title="Date/Time that the slot is to begin." class="dict">start</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Date/Time that the slot is to begin</a></span>
+  &quot;<a href="slot-definitions.html#Slot.end" title="Date/Time that the slot is to conclude." class="dict">end</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Date/Time that the slot is to conclude</a></span>
+  &quot;<a href="slot-definitions.html#Slot.overbooked" title="This slot has already been overbooked, appointments are unlikely to be accepted for this time." class="dict">overbooked</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">This slot has already been overbooked, appointments are unlikely to be accepted for this time</a></span>
+  &quot;<a href="slot-definitions.html#Slot.comment" title="Comments on the slot to describe any extended information. Such as custom constraints on the slot." class="dict">comment</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot; <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Comments on the slot to describe any extended information. Such as custom constraints on the slot</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="slot-definitions.html#Slot" title="A slot of time on a schedule that may be available for booking appointments." class="dict"><b>Slot</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="slot-definitions.html#Slot.identifier" title="External Ids for this item." class="dict">Slot.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">External Ids for this item</span>
+  fhir:<a href="slot-definitions.html#Slot.serviceCategory" title="A broad categorisation of the service that is to be performed during this appointment." class="dict">Slot.serviceCategory</a><a name="ttl-serviceCategory"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">A broad categorisation of the service that is to be performed during this appointment</span>
+  fhir:<a href="slot-definitions.html#Slot.serviceType" title="The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource." class="dict">Slot.serviceType</a><a name="ttl-serviceType"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ], ... ; # 0..* <span style="color: navy">The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource</span>
+  fhir:<a href="slot-definitions.html#Slot.specialty" title="The specialty of a practitioner that would be required to perform the service requested in this appointment." class="dict">Slot.specialty</a><a name="ttl-specialty"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ], ... ; # 0..* <span style="color: navy">The specialty of a practitioner that would be required to perform the service requested in this appointment</span>
+  fhir:<a href="slot-definitions.html#Slot.appointmentType" title="The style of appointment or patient that has been booked in the slot (not service type)." class="dict">Slot.appointmentType</a><a name="ttl-appointmentType"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">The style of appointment or patient that has been booked in the slot (not service type)</span>
+  fhir:<a href="slot-definitions.html#Slot.schedule" title="The schedule resource that this slot defines an interval of status information." class="dict">Slot.schedule</a><a name="ttl-schedule"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="schedule.html#Schedule">Schedule</a>) ]; # 1..1 <span style="color: navy">The schedule resource that this slot defines an interval of status information</span>
+  fhir:<a href="slot-definitions.html#Slot.status" title="busy | free | busy-unavailable | busy-tentative | entered-in-error." class="dict">Slot.status</a><a name="ttl-status"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">busy | free | busy-unavailable | busy-tentative | entered-in-error</span>
+  fhir:<a href="slot-definitions.html#Slot.start" title="Date/Time that the slot is to begin." class="dict">Slot.start</a><a name="ttl-start"> </a>[ <a href="datatypes.html#instant">instant</a> ]; # 1..1 <span style="color: navy">Date/Time that the slot is to begin</span>
+  fhir:<a href="slot-definitions.html#Slot.end" title="Date/Time that the slot is to conclude." class="dict">Slot.end</a><a name="ttl-end"> </a>[ <a href="datatypes.html#instant">instant</a> ]; # 1..1 <span style="color: navy">Date/Time that the slot is to conclude</span>
+  fhir:<a href="slot-definitions.html#Slot.overbooked" title="This slot has already been overbooked, appointments are unlikely to be accepted for this time." class="dict">Slot.overbooked</a><a name="ttl-overbooked"> </a>[ <a href="datatypes.html#boolean">boolean</a> ]; # 0..1 <span style="color: navy">This slot has already been overbooked, appointments are unlikely to be accepted for this time</span>
+  fhir:<a href="slot-definitions.html#Slot.comment" title="Comments on the slot to describe any extended information. Such as custom constraints on the slot." class="dict">Slot.comment</a><a name="ttl-comment"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Comments on the slot to describe any extended information. Such as custom constraints on the slot</span>
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Slot</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Slot.serviceCategory</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">Slot.serviceType</td>
+    <td class="diff-right">
+Renamed from type to serviceType      <br/>
+Max Cardinality changed from 1 to *
+    </td>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Slot.specialty</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Slot.appointmentType</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">Slot.status</td>
+    <td class="diff-right">Renamed from freeBusyType to status</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="slot.profile.xml.html">XML</a>, <a href="slot.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="slot.xsd">Schema</a>/<a href="slot.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="Slot.schema.json">Schema</a>, <a href="slot.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">12.18.2.1</span> 
+Terminology Bindings
+ <a href="slot.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="ServiceCategory">Slot.serviceCategory </td><td valign="top"/><td><a href="terminologies.html#example">Example</a></td><td valign="top"><a href="valueset-service-category.html">ServiceCategory</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="ServiceType">Slot.serviceType </td><td valign="top"/><td><a href="terminologies.html#example">Example</a></td><td valign="top"><a href="valueset-service-type.html">ServiceType</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="Practice Setting Code Value Set">Slot.specialty </td><td valign="top">Additional details about where the content was created (e.g. clinical specialty).</td><td><a href="terminologies.html#preferred">Preferred</a></td><td valign="top"><a href="valueset-c80-practice-codes.html">Practice Setting Code Value Set</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="v2 Appointment reason codes">Slot.appointmentType </td><td valign="top"/><td><a href="terminologies.html#preferred">Preferred</a></td><td valign="top"><a href="v2/0276/index.html">v2 Appointment reason codes</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="SlotStatus">Slot.status </td><td valign="top">The free/busy status of the slot.</td><td><a href="terminologies.html#required">Required</a></td><td valign="top"><a href="valueset-slotstatus.html">SlotStatus</a>  <!-- b --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+  <a name="notes"> </a>
+  <h2 class="self-link-parent"><span class="sectioncount">12.18.3</span> Notes: <a href="slot.html#notes" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+    <ul>
+			<li>Interaction with other Standards</li>
+			<p>
+				The strong desire is that implementers of this resource should consider providing this resource
+				in the iCalendar format as an alternative representation. Many 3rd party applications and component providers 
+				have parsers and user interface controls to display this information.
+				This may lower the entry point to integrate outside the health-care specific applications, and into the 
+				consumer space. This would permit the easier creation of a mobile application that creates appointments
+				in the devices native calendar.<br/>
+				The iCalendar specification can be found at <a href="http://www.ietf.org/rfc/rfc2445.txt">http://www.ietf.org/rfc/rfc2445.txt <img src="external.png" style="text-align: baseline"/></a>.
+			</p>
+    </ul>
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">12.18.4</span> Search Parameters <a href="slot.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>identifier</td><td><a href="search.html#token">token</a></td><td>A Slot Identifier</td><td>Slot.identifier</td></tr>
+<tr><td>schedule</td><td><a href="search.html#reference">reference</a></td><td>The Schedule Resource that we are seeking a slot within</td><td>Slot.schedule<br/>(<a href="schedule.html">Schedule</a>)</td></tr>
+<tr><td>slot-type</td><td><a href="search.html#token">token</a></td><td>The type of appointments that can be booked into the slot</td><td>Slot.serviceType</td></tr>
+<tr><td>start</td><td><a href="search.html#date">date</a></td><td>Appointment date/time.</td><td>Slot.start</td></tr>
+<tr><td>status</td><td><a href="search.html#token">token</a></td><td>The free/busy status of the appointment</td><td>Slot.status</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fslot.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fslot.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

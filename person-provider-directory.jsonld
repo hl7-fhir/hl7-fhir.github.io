@@ -1,0 +1,136 @@
+{
+  "@context": "http://build.fhir.org/Person.jsonld",
+  "@context": "http://hl7.org/fhir/Person/pd",
+  "Resource.id": {
+    "id.value": "pd"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>Name</td>\n            <td>\n              Harold <b>Hippocrates</b>\n            </td>\n          </tr>\n          <tr>\n            <td>Address</td>\n            <td>1003 Healthcare Drive, Northfield, MN</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+    }
+  },
+  "Person.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "code.value": "SS"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "uri.value": "http://hl7.org/fhir/sid/us-ssn"
+      },
+      "Identifier.value": {
+        "string.value": "444444444"
+      }
+    }
+  ],
+  "Person.name": [
+    {
+      "HumanName.use": {
+        "code.value": "official"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "Hippocrates"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Harold"
+        }
+      ]
+    }
+  ],
+  "Person.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "555-555-1003"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    }
+  ],
+  "Person.gender": {
+    "code.value": "male"
+  },
+  "Person.birthDate": {
+    "date.value": "1959-04-22"
+  },
+  "Person.address": [
+    {
+      "Address.use": {
+        "code.value": "home"
+      },
+      "Address.line": [
+        {
+          "string.value": "1003 Healthcare Drive"
+        }
+      ],
+      "Address.city": {
+        "string.value": "Northfield"
+      },
+      "Address.state": {
+        "string.value": "MN"
+      }
+    }
+  ],
+  "Person.managingOrganization": {
+    "Reference.reference": {
+      "string.value": "http://www.northfield-regional.com/Organization/2"
+    },
+    "Reference.display": {
+      "string.value": "Northfield Regional Physician Directory"
+    },
+    "Resource.reference": "http://www.northfield-regional.com/Organization/2"
+  },
+  "Person.active": {
+    "boolean.value": true
+  },
+  "Person.link": [
+    {
+      "Person.link.target": {
+        "Reference.reference": {
+          "string.value": "http://www.goodhealth.com/Practitioner/98574"
+        },
+        "Reference.display": {
+          "string.value": "Dr. Harold Hippocrates"
+        },
+        "Resource.reference": "http://www.goodhealth.com/Practitioner/98574"
+      },
+      "Person.link.assurance": {
+        "code.value": "level2"
+      }
+    },
+    {
+      "Person.link.target": {
+        "Reference.reference": {
+          "string.value": "http://www.acme-medical.com/Practitioner/ab34d"
+        },
+        "Reference.display": {
+          "string.value": "Harold Hippocrates, MD"
+        },
+        "Resource.reference": "http://www.acme-medical.com/Practitioner/ab34d"
+      },
+      "Person.link.assurance": {
+        "code.value": "level2"
+      }
+    }
+  ]
+}

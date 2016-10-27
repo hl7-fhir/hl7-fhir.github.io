@@ -1,0 +1,170 @@
+{
+  "@context": "http://build.fhir.org/Practitioner.jsonld",
+  "@context": "http://hl7.org/fhir/Practitioner/f201",
+  "Resource.id": {
+    "id.value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>identifier</b>: UZI-nummer = 12345678901 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>name</b>: Dokter Bronsig(OFFICIAL)</p><p><b>telecom</b>: ph: +31715269111(WORK)</p><p><b>address</b>: Walvisbaai 3 C4 - Automatisering Den helder 2333ZA NLD (WORK)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Dec 24, 1956</p><h3>Roles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Code</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td><a>AUMC</a></td><td>Implementation of planned interventions <span>(Details : {SNOMED CT code '225304007' = 'Implementation of planned interventions (procedure)', given as 'Implementation of planned interventions'})</span></td><td>Medical oncologist <span>(Details : {SNOMED CT code '310512001' = 'Medical oncologist (occupation)', given as 'Medical oncologist'})</span></td></tr></table><h3>Qualifications</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Pulmonologist <span>(Details : {SNOMED CT code '41672002' = 'Respiratory disease specialist (occupation)', given as 'Pulmonologist'})</span></td></tr></table></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "string.value": "UZI-nummer"
+        }
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:2.16.528.1.1007.3.1"
+      },
+      "Identifier.value": {
+        "string.value": "12345678901"
+      }
+    }
+  ],
+  "Practitioner.active": {
+    "boolean.value": true
+  },
+  "Practitioner.name": [
+    {
+      "HumanName.use": {
+        "code.value": "official"
+      },
+      "HumanName.text": {
+        "string.value": "Dokter Bronsig"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "Bronsig"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Arend"
+        }
+      ],
+      "HumanName.prefix": [
+        {
+          "string.value": "Dr."
+        }
+      ]
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "+31715269111"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    }
+  ],
+  "Practitioner.address": [
+    {
+      "Address.use": {
+        "code.value": "work"
+      },
+      "Address.line": [
+        {
+          "string.value": "Walvisbaai 3"
+        },
+        {
+          "string.value": "C4 - Automatisering"
+        }
+      ],
+      "Address.city": {
+        "string.value": "Den helder"
+      },
+      "Address.postalCode": {
+        "string.value": "2333ZA"
+      },
+      "Address.country": {
+        "string.value": "NLD"
+      }
+    }
+  ],
+  "Practitioner.gender": {
+    "code.value": "male"
+  },
+  "Practitioner.birthDate": {
+    "date.value": "1956-12-24"
+  },
+  "Practitioner.role": [
+    {
+      "Practitioner.role.organization": {
+        "Reference.reference": {
+          "string.value": "Organization/f201"
+        },
+        "Reference.display": {
+          "string.value": "AUMC"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Organization/f201"
+      },
+      "Practitioner.role.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "225304007"
+            },
+            "Coding.display": {
+              "string.value": "Implementation of planned interventions"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#225304007"
+      },
+      "Practitioner.role.specialty": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "310512001"
+              },
+              "Coding.display": {
+                "string.value": "Medical oncologist"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Practitioner.qualification": [
+    {
+      "Practitioner.qualification.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "41672002"
+            },
+            "Coding.display": {
+              "string.value": "Pulmonologist"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#41672002"
+      }
+    }
+  ]
+}

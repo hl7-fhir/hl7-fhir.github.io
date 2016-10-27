@@ -1,0 +1,338 @@
+﻿<!DOCTYPE HTML>
+  <!-- These elements SHALL always appear in this order. These basic elements shared by all resources come first
+in order to support consistent definitions for schema and UML derived code. --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Implsupport-module - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/implsupport-module.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><b><img src="implsupport.png"/> Implementation Support</b></li>          <!-- implsupport-module.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="root"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">7.0<a name="7.0"> </a></span> Implementation Support Module <a href="implsupport-module.html#7.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<a name="intro"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.0.1</span> Introduction <a href="implsupport-module.html#intro" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+This section provides information which will be useful for FHIR implementors,
+including information about available libraries, tools, and other similar
+resources, as well as where to seek help.
+</p>
+
+<a name="index"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.0.2</span> Index <a href="implsupport-module.html#index" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+	In addition to the content below, a number of implementation
+	resources can be found on the
+	<a href="./downloads.html">Downloads Page</a>.
+</p>
+<p>
+This module also contains some specific documentation that relates to issues commonly
+encountered by developers:
+</p>
+
+<table class="none">
+ <tr>
+  <td>
+    <ul>
+     <li><a href="testing.html">Testing FHIR</a> + <a href="testscript.html">TestScript</a> + <a href="testreport.html">TestReport</a></li>
+     <li><a href="validation.html">Validating Resources</a></li>
+     <li><a href="mapping-language.html">Mapping Language</a> (<a href="mapping-tutorial.html">Tutorial</a>)</li>
+     <li><a href="usecases.html">Common Usages</a></li>
+     <li><a href="compatibility.html">Inter-version Compatibility</a></li>
+    </ul>
+  </td>
+  <td>
+    <ul>
+     <li><a href="safety.html">Clinical Safety Considerations</a></li>
+     <li><a href="ehr-fm.html">How FHIR fits into an EHR</a></li>
+     <li><a href="managing.html">Managing Resource Identity</a></li>
+     <li><a href="pushpull.html">Interaction Patterns</a></li>
+     <li><a href="updates.html">Update Rules</a></li>
+     <li><a href="integrated-examples.html">Clinical Examples</a></li>
+    </ul>
+  </td>
+  <td>
+    <p><a href="comparison.html">Comparisons:</a></p>
+    <ul>
+     <li><a href="comparison-v2.html">v2</a> &amp; </li>
+     <li><a href="comparison-v3.html">v3 Messaging</a></li>
+     <li><a href="comparison-cda.html">CDA</a> + <a href="cda-intro.html">CDA on FHIR</a></li>
+     <li><a href="comparison-other.html">Other Specifications</a></li>
+     <li><a href="ehr-fm.html">EHR-FM Specification</a></li>
+    </ul>
+  </td>
+ </tr>
+</table>
+
+
+
+<a name="secpriv"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.0.3</span> Security and Privacy <a href="implsupport-module.html#secpriv" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+For more general considerations, see <a href="secpriv-module.html">the Security and Privacy module</a>.
+</p>
+
+<a name="uses"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.0.4</span> Common use Cases <a href="implsupport-module.html#uses" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<h4 class="self-link-parent"><span class="sectioncount">7.0.4.1<a name="7.0.4.1"> </a></span> For Client Developers and Testers: Reference Servers <a href="implsupport-module.html#7.0.4.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+	The following reference servers have been created by the FHIR team, and
+	are provided made available to help implemeters to test their code. While
+	the reference servers are not considered to be a normative part of the FHIR
+	specification, the maintainers make every effort to ensure that they are
+	fully compliant.
+</p>
+<p>
+	Note that there are a large number of servers available for testing that
+	are not listed here. A full list is available on the HL7 wiki
+	<a href="http://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing">here <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+<table class="grid">
+	<thead>
+		<tr><th>Server Name</th><th>Maintainer</th><th>Link</th><th>Link</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>Healthintersections</td><td>Grahame Grieve</td><td><a href="http://fhir3.healthintersections.com.au/">http://fhir3.healthintersections.com.au/ <img src="external.png" style="text-align: baseline"/></a></td></tr>
+		<tr><td>Spark</td><td>Furore Informatica</td><td><a href="http://spark.furore.com/">http://spark.furore.com/ <img src="external.png" style="text-align: baseline"/></a></td></tr>
+		<tr><td>HAPI</td><td>University Health Network / James Agnew</td><td><a href="http://fhirtest.uhn.ca/">http://fhirtest.uhn.ca/ <img src="external.png" style="text-align: baseline"/></a></td></tr>
+		<tr><td>HealthConnex</td><td>HealthConnex / Brian Postlethwaite</td><td><a href="http://sqlonfhir-may.azurewebsites.net/fhir">http://sqlonfhir-may.azurewebsites.net/fhir <img src="external.png" style="text-align: baseline"/></a></td></tr>
+	</tbody>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">7.0.4.2<a name="7.0.4.2"> </a></span> For Developers: Reference Implementations (Libraries) <a href="implsupport-module.html#7.0.4.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+	The following reference implementations are made available under an open-source
+	license. These libraries may be used by developers to quickly add FHIR capabilities
+	to their applications.
+</p>
+<table class="grid">
+	<thead>
+		<tr><th>Language</th><th>Library</th><th>Link</th><th>License</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>.NET / C#</td><td>FHIR .NET API</td><td><a href="https://github.com/ewoutkramer/fhir-net-api">https://github.com/ewoutkramer/fhir-net-api <img src="external.png" style="text-align: baseline"/></a></td><td>BSD-3</td></tr>
+		<tr><td>Java</td><td>HAPI FHIR</td><td><a href="http://hapifhir.io">http://hapifhir.io <img src="external.png" style="text-align: baseline"/></a></td><td>Apache 2.0</td></tr>
+		<tr><td>Swift</td><td>Swift FHIR</td><td><a href="https://github.com/smart-on-fhir/Swift-FHIR">https://github.com/smart-on-fhir/Swift-FHIR <img src="external.png" style="text-align: baseline"/></a></td><td>Apache 2.0</td></tr>
+		<tr><td>JavaScript</td><td>fhir.js</td><td><a href="https://github.com/smart-on-fhir/fhir.js">https://github.com/smart-on-fhir/fhir.js <img src="external.png" style="text-align: baseline"/></a></td><td>MIT</td></tr>
+		<tr><td>Python</td><td>Client Py</td><td><a href="https://github.com/smart-on-fhir/client-py">https://github.com/smart-on-fhir/client-py <img src="external.png" style="text-align: baseline"/></a></td><td>Apache 2.0</td></tr>
+		<tr><td>Pascal</td><td>FHIR Pascal</td><td><a href="http://hl7.org/fhir/downloads.html">http://hl7.org/fhir/downloads.html <img src="external.png" style="text-align: baseline"/></a></td><td>BSD-3</td></tr>
+	</tbody>
+</table>
+
+<a name="for_profilers"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">7.0.4.3</span> For Profilers <a href="implsupport-module.html#for_profilers" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+	The following tools are available to profilers wishing to create
+	profiles for use in their implementations. See the
+	<a href="./conformance-module.html">conformance module</a> for
+	information on profiling.
+</p>
+<table class="grid">
+	<thead>
+		<tr><th>Tool</th><th>Link</th></tr>
+	</thead>
+	<tbody>
+		<tr><th>Forge</th><th><a href="http://fhir.furore.com/Forge">http://fhir.furore.com/Forge <img src="external.png" style="text-align: baseline"/></a></th></tr>
+	</tbody>
+</table>
+
+<a name="for_profilers"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">7.0.4.4</span> For Testers <a href="implsupport-module.html#for_profilers" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+	The following tools are available to solution testers who
+	want to test FHIR implementations for conformance to the
+	FHIR specification.
+</p>
+<table class="grid">
+	<thead>
+		<tr><th>Tool</th><th>Link</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>Touchstone</td><td><a href="http://www.aegis.net/touchstone.html">http://www.aegis.net/touchstone.html <img src="external.png" style="text-align: baseline"/></a></td></tr>
+		<tr><td>Crucible</td><td><a href="https://projectcrucible.org/">https://projectcrucible.org/ <img src="external.png" style="text-align: baseline"/></a></td></tr>
+	</tbody>
+</table>
+
+<a name="help"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.0.5</span> Getting Help <a href="implsupport-module.html#help" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+	The following are a few ways that implementers can seek help
+	as they work with FHIR:
+</p>
+<ul>
+  <li><a href="http://community.fhir.org/">FHIR Community Forum <img src="external.png" style="text-align: baseline"/></a> (maintained by fhir.org)</li>
+  <li><a href="http://chat.fhir.org/">FHIR Chat Channel / Zulip <img src="external.png" style="text-align: baseline"/></a> (maintained by fhir.org)</li>
+  <li><a href="http://stackoverflow.com/questions/tagged/hl7_fhir">StackOverflow <img src="external.png" style="text-align: baseline"/></a> (General tech community, use the tag <code>hl7_fhir</code>)</li>
+</ul>
+
+<a name="roadmap"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.0.6</span> Developmental Roadmap <a href="implsupport-module.html#roadmap" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The reference servers and reference implementations generally try to keep up to date with
+recent changes to the FHIR specification. Each server may have multiple endpoints which are
+held to a specific version of the specification, but generally there will also be
+endpoints available for testing which conform to a very recent build.
+</p>
+<p>
+Efforts are now underway to create a curated collection of quality test data which
+can be used by FHIR implementers to help test their applcations. This collection will
+be made available when it is ready.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.0.7<a name="7.0.7"> </a></span> Suggestions <a href="implsupport-module.html#7.0.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+	This page is maintained by
+	<a href="https://github.com/jamesagnew/">James Agnew <img src="external.png" style="text-align: baseline"/></a>
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fimplsupport-module.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fimplsupport-module.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

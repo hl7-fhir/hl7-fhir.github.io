@@ -1,0 +1,98 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+
+# A series of measurements taken by a device
+<SampledData> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:SampledData.origin @<SimpleQuantity>;  # Zero value and units
+    fhir:SampledData.period @<decimal>;     # Number of milliseconds between 
+                                            # samples 
+    fhir:SampledData.factor @<decimal>?;    # Multiply data by this before 
+                                            # adding to origin 
+    fhir:SampledData.lowerLimit @<decimal>?;  # Lower limit of detection
+    fhir:SampledData.upperLimit @<decimal>?;  # Upper limit of detection
+    fhir:SampledData.dimensions @<positiveInt>;  # Number of sample points at each 
+                                            # time point 
+    fhir:SampledData.data @<string>;        # Decimal values with spaces, or "E" 
+                                            # | "U" | "L" 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A fixed quantity (no comparator)
+<SimpleQuantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type positiveInt
+<positiveInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:positiveInteger?;        # Primitive value for positiveInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+<decimal> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type uri
+<uri> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+#---------------------- Value Sets ------------------------

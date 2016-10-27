@@ -1,0 +1,829 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Contract.shex - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/contract.shex.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="datatypes.html">Data Types</a></li>        <li><b>Profile</b></li>        <!-- contract.shex.html / profile-instance:type:Contract / Type-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Contract.shex</h1>
+
+<p>
+<a href="contract.shex">Raw ShEx</a>
+</p>
+
+<div class="example">
+<p>ShEx statement for contract</p>
+<pre class="shex">
+PREFIX fhir: &lt;http://hl7.org/fhir/&gt; 
+PREFIX fhirvs: &lt;http://hl7.org/fhir/ValueSet/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; 
+BASE &lt;http://hl7.org/fhir/shape/&gt;
+
+start=@&lt;Contract&gt; AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# Contract
+&lt;Contract&gt; CLOSED {
+    a [fhir:Contract];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @&lt;id&gt;?;                # Logical id of this artifact
+    fhir:Resource.meta @&lt;Meta&gt;?;            # Metadata about the resource
+    fhir:Resource.implicitRules @&lt;uri&gt;?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @&lt;code&gt;?;        # Language of the resource content
+    fhir:DomainResource.text @&lt;Narrative&gt;?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @&lt;Resource&gt;*;  # Contained, inline Resources
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:Contract.identifier @&lt;Identifier&gt;?;  # Contract identifier
+    fhir:Contract.issued @&lt;dateTime&gt;?;      # When this Contract was issued
+    fhir:Contract.applies @&lt;Period&gt;?;       # Effective time
+    fhir:Contract.subject @&lt;Reference&gt;*;    # Contract Target Entity
+    fhir:Contract.topic @&lt;Reference&gt;*;      # Context of the Contract
+    fhir:Contract.authority @&lt;Reference&gt;*;  # Authority under which this 
+                                            # Contract has standing 
+    fhir:Contract.domain @&lt;Reference&gt;*;     # Domain in which this Contract 
+                                            # applies 
+    fhir:Contract.type @&lt;CodeableConcept&gt;?;  # Contract Type
+    fhir:Contract.subType @&lt;CodeableConcept&gt;*;  # Contract Subtype
+    fhir:Contract.action @&lt;CodeableConcept&gt;*;  # Contract Action
+    fhir:Contract.actionReason @&lt;CodeableConcept&gt;*;  # Contract Action Reason
+    fhir:Contract.agent @&lt;Contract.agent&gt;*;  # Contract Agent
+    fhir:Contract.signer @&lt;Contract.signer&gt;*;  # Contract Signer
+    fhir:Contract.valuedItem @&lt;Contract.valuedItem&gt;*;  # Contract Valued Item
+    fhir:Contract.term @&lt;Contract.term&gt;*;   # Contract Term List
+    (                                       # Binding Contract
+        fhir:Contract.bindingAttachment @&lt;Attachment&gt;  |
+        fhir:Contract.bindingReference @&lt;Reference&gt;  |
+        fhir:Contract.bindingReference @&lt;Reference&gt;  |
+        fhir:Contract.bindingReference @&lt;Reference&gt; 
+    )?;
+    fhir:Contract.friendly @&lt;Contract.friendly&gt;*;  # Contract Friendly Language
+    fhir:Contract.legal @&lt;Contract.legal&gt;*;  # Contract Legal Language
+    fhir:Contract.rule @&lt;Contract.rule&gt;*;   # Computable Contract Language
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Friendly Language
+&lt;Contract.friendly&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    (                                       # Easily comprehended representation 
+                                            # of this Contract 
+        fhir:Contract.friendly.contentAttachment @&lt;Attachment&gt;  |
+        fhir:Contract.friendly.contentReference @&lt;Reference&gt;  |
+        fhir:Contract.friendly.contentReference @&lt;Reference&gt;  |
+        fhir:Contract.friendly.contentReference @&lt;Reference&gt; 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Valued Item
+&lt;Contract.valuedItem&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    (                                       # Contract Valued Item Type
+        fhir:Contract.valuedItem.entityCodeableConcept @&lt;CodeableConcept&gt;  |
+        fhir:Contract.valuedItem.entityReference @&lt;Reference&gt; 
+    )?;
+    fhir:Contract.valuedItem.identifier @&lt;Identifier&gt;?;  # Contract Valued Item Identifier
+    fhir:Contract.valuedItem.effectiveTime @&lt;dateTime&gt;?;  # Contract Valued Item Effective Tiem
+    fhir:Contract.valuedItem.quantity @&lt;SimpleQuantity&gt;?;  # Count of Contract Valued Items
+    fhir:Contract.valuedItem.unitPrice @&lt;Money&gt;?;  # Contract Valued Item fee, charge, 
+                                            # or cost 
+    fhir:Contract.valuedItem.factor @&lt;decimal&gt;?;  # Contract Valued Item Price Scaling 
+                                            # Factor 
+    fhir:Contract.valuedItem.points @&lt;decimal&gt;?;  # Contract Valued Item Difficulty 
+                                            # Scaling Factor 
+    fhir:Contract.valuedItem.net @&lt;Money&gt;?;  # Total Contract Valued Item Value
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Agent
+&lt;Contract.agent&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:Contract.agent.actor               # Contract Agent Type
+    (   @&lt;ContractReference&gt; OR
+        @&lt;DeviceReference&gt; OR
+        @&lt;GroupReference&gt; OR
+        @&lt;LocationReference&gt; OR
+        @&lt;OrganizationReference&gt; OR
+        @&lt;PatientReference&gt; OR
+        @&lt;PractitionerReference&gt; OR
+        @&lt;RelatedPersonReference&gt; OR
+        @&lt;SubstanceReference&gt;
+    );
+    fhir:Contract.agent.role @&lt;CodeableConcept&gt;*;  # Contract  Agent Role
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Signer
+&lt;Contract.signer&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:Contract.signer.type @&lt;Coding&gt;;    # Contract Signer Type
+    fhir:Contract.signer.party              # Contract Signatory Party
+    (   @&lt;OrganizationReference&gt; OR
+        @&lt;PatientReference&gt; OR
+        @&lt;PractitionerReference&gt; OR
+        @&lt;RelatedPersonReference&gt;
+    );
+    fhir:Contract.signer.signature @&lt;Signature&gt;+;  # Contract Documentation Signature
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Legal Language
+&lt;Contract.legal&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    (                                       # Contract Legal Text
+        fhir:Contract.legal.contentAttachment @&lt;Attachment&gt;  |
+        fhir:Contract.legal.contentReference @&lt;Reference&gt;  |
+        fhir:Contract.legal.contentReference @&lt;Reference&gt;  |
+        fhir:Contract.legal.contentReference @&lt;Reference&gt; 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Term List
+&lt;Contract.term&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:Contract.term.identifier @&lt;Identifier&gt;?;  # Contract Term identifier
+    fhir:Contract.term.issued @&lt;dateTime&gt;?;  # Contract Term Issue Date Time
+    fhir:Contract.term.applies @&lt;Period&gt;?;  # Contract Term Effective Time
+    fhir:Contract.term.type @&lt;CodeableConcept&gt;?;  # Contract Term Type
+    fhir:Contract.term.subType @&lt;CodeableConcept&gt;?;  # Contract Term Subtype
+    fhir:Contract.term.topic @&lt;Reference&gt;*;  # Context of the Contract term
+    fhir:Contract.term.action @&lt;CodeableConcept&gt;*;  # Contract Term Action
+    fhir:Contract.term.actionReason @&lt;CodeableConcept&gt;*;  # Contract Term Action Reason
+    fhir:Contract.term.agent @&lt;Contract.term.agent&gt;*;  # Contract Term Agent List
+    fhir:Contract.term.text @&lt;string&gt;?;     # Human readable Contract term text
+    fhir:Contract.term.valuedItem @&lt;Contract.term.valuedItem&gt;*;  # Contract Term Valued Item
+    fhir:Contract.term.group @&lt;Contract.term&gt;*;  # Nested Contract Term Group
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Computable Contract Language
+&lt;Contract.rule&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    (                                       # Computable Contract Rules
+        fhir:Contract.rule.contentAttachment @&lt;Attachment&gt;  |
+        fhir:Contract.rule.contentReference @&lt;Reference&gt; 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Term Agent List
+&lt;Contract.term.agent&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:Contract.term.agent.actor          # Contract Term Agent List
+    (   @&lt;ContractReference&gt; OR
+        @&lt;DeviceReference&gt; OR
+        @&lt;GroupReference&gt; OR
+        @&lt;LocationReference&gt; OR
+        @&lt;OrganizationReference&gt; OR
+        @&lt;PatientReference&gt; OR
+        @&lt;PractitionerReference&gt; OR
+        @&lt;RelatedPersonReference&gt; OR
+        @&lt;SubstanceReference&gt;
+    );
+    fhir:Contract.term.agent.role @&lt;CodeableConcept&gt;*;  # Contract Term Agent Role
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Contract Term Valued Item
+&lt;Contract.term.valuedItem&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    (                                       # Contract Term Valued Item Type
+        fhir:Contract.term.valuedItem.entityCodeableConcept @&lt;CodeableConcept&gt;  |
+        fhir:Contract.term.valuedItem.entityReference @&lt;Reference&gt; 
+    )?;
+    fhir:Contract.term.valuedItem.identifier @&lt;Identifier&gt;?;  # Contract Term Valued Item 
+                                            # Identifier 
+    fhir:Contract.term.valuedItem.effectiveTime @&lt;dateTime&gt;?;  # Contract Term Valued Item 
+                                            # Effective Tiem 
+    fhir:Contract.term.valuedItem.quantity @&lt;SimpleQuantity&gt;?;  # Contract Term Valued Item Count
+    fhir:Contract.term.valuedItem.unitPrice @&lt;Money&gt;?;  # Contract Term Valued Item fee, 
+                                            # charge, or cost 
+    fhir:Contract.term.valuedItem.factor @&lt;decimal&gt;?;  # Contract Term Valued Item Price 
+                                            # Scaling Factor 
+    fhir:Contract.term.valuedItem.points @&lt;decimal&gt;?;  # Contract Term Valued Item 
+                                            # Difficulty Scaling Factor 
+    fhir:Contract.term.valuedItem.net @&lt;Money&gt;?;  # Total Contract Term Valued Item 
+                                            # Value 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Primitive Type dateTime
+&lt;dateTime&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Metadata about a resource
+&lt;Meta&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @&lt;id&gt;?;             # Version specific identifier
+    fhir:Meta.lastUpdated @&lt;instant&gt;?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @&lt;uri&gt;*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @&lt;Coding&gt;*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @&lt;Coding&gt;*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+&lt;code&gt; CLOSED {
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+&lt;string&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+&lt;Reference&gt; CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @&lt;string&gt;?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @&lt;Identifier&gt;?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @&lt;string&gt;?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+&lt;Resource&gt; {a .+;
+    fhir:Resource.id @&lt;id&gt;?;                # Logical id of this artifact
+    fhir:Resource.meta @&lt;Meta&gt;?;            # Metadata about the resource
+    fhir:Resource.implicitRules @&lt;uri&gt;?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @&lt;code&gt;?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# A fixed quantity (no comparator)
+&lt;SimpleQuantity&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @&lt;decimal&gt;?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.unit @&lt;string&gt;?;          # Unit representation
+    fhir:Quantity.system @&lt;uri&gt;?;           # System that defines coded unit form
+    fhir:Quantity.code @&lt;code&gt;?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+&lt;Period&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @&lt;dateTime&gt;?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @&lt;dateTime&gt;?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Content in a format defined elsewhere
+&lt;Attachment&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Attachment.contentType @&lt;code&gt;?;   # Mime type of the content, with 
+                                            # charset etc. 
+    fhir:Attachment.language @&lt;code&gt;?;      # Human language of the content 
+                                            # (BCP-47) 
+    fhir:Attachment.data @&lt;base64Binary&gt;?;  # Data inline, base64ed
+    fhir:Attachment.url @&lt;uri&gt;?;            # Uri where the data can be found
+    fhir:Attachment.size @&lt;unsignedInt&gt;?;   # Number of bytes of content (if url 
+                                            # provided) 
+    fhir:Attachment.hash @&lt;base64Binary&gt;?;  # Hash of the data (sha-1, base64ed)
+    fhir:Attachment.title @&lt;string&gt;?;       # Label to display in place of the 
+                                            # data 
+    fhir:Attachment.creation @&lt;dateTime&gt;?;  # Date attachment was first created
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type uri
+&lt;uri&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+&lt;Extension&gt; {fhir:extension @&lt;Extension&gt;*;
+    fhir:index xsd:integer?
+}
+
+# An amount of economic utility in some recognised currency
+&lt;Money&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @&lt;decimal&gt;?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @&lt;code&gt; AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # &lt; | &lt;= | &gt;= | &gt; - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @&lt;string&gt;?;          # Unit representation
+    fhir:Quantity.system @&lt;uri&gt;?;           # System that defines coded unit form
+    fhir:Quantity.code @&lt;code&gt;?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An identifier intended for computation
+&lt;Identifier&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @&lt;code&gt; AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @&lt;CodeableConcept&gt;?;  # Description of identifier
+    fhir:Identifier.system @&lt;uri&gt;?;         # The namespace for the identifier
+    fhir:Identifier.value @&lt;string&gt;?;       # The value that is unique
+    fhir:Identifier.period @&lt;Period&gt;?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @&lt;Reference&gt;?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+&lt;Narrative&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @&lt;code&gt; AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+&lt;Coding&gt; CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @&lt;uri&gt;?;             # Identity of the terminology system
+    fhir:Coding.version @&lt;string&gt;?;         # Version of the system - if relevant
+    fhir:Coding.code @&lt;code&gt;?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @&lt;string&gt;?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @&lt;boolean&gt;?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.
+&lt;Signature&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Signature.type @&lt;Coding&gt;+;         # Indication of the reason the 
+                                            # entity signed the object(s) 
+    fhir:Signature.when @&lt;instant&gt;;         # When the signature was created
+    (                                       # Who signed
+        fhir:Signature.whoUri @&lt;uri&gt;  |
+        fhir:Signature.whoReference @&lt;Reference&gt;  |
+        fhir:Signature.whoReference @&lt;Reference&gt;  |
+        fhir:Signature.whoReference @&lt;Reference&gt;  |
+        fhir:Signature.whoReference @&lt;Reference&gt;  |
+        fhir:Signature.whoReference @&lt;Reference&gt; 
+    );
+    (                                       # The party represented
+        fhir:Signature.onBehalfOfUri @&lt;uri&gt;  |
+        fhir:Signature.onBehalfOfReference @&lt;Reference&gt;  |
+        fhir:Signature.onBehalfOfReference @&lt;Reference&gt;  |
+        fhir:Signature.onBehalfOfReference @&lt;Reference&gt;  |
+        fhir:Signature.onBehalfOfReference @&lt;Reference&gt;  |
+        fhir:Signature.onBehalfOfReference @&lt;Reference&gt; 
+    )?;
+    fhir:Signature.contentType @&lt;code&gt;?;    # The technical format of the 
+                                            # signature 
+    fhir:Signature.blob @&lt;base64Binary&gt;?;   # The actual signature content (XML 
+                                            # DigSig. JWT, picture, etc.) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+&lt;id&gt; CLOSED {
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+&lt;decimal&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+&lt;CodeableConcept&gt; CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @&lt;Coding&gt;*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @&lt;string&gt;?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+&lt;instant&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type boolean
+&lt;boolean&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type base64Binary
+&lt;base64Binary&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:base64Binary?;           # Primitive value for base64Binary
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type unsignedInt
+&lt;unsignedInt&gt; CLOSED {
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:nonNegativeInteger?;     # Primitive value for unsignedInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+&lt;PractitionerReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Practitioner&gt; OR CLOSED {a fhir:Practitioner}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Practitioner&gt; {
+    a [fhir:Practitioner];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;GroupReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Group&gt; OR CLOSED {a fhir:Group}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Group&gt; {
+    a [fhir:Group];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;OrganizationReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Organization&gt; OR CLOSED {a fhir:Organization}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Organization&gt; {
+    a [fhir:Organization];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;DeviceReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Device&gt; OR CLOSED {a fhir:Device}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Device&gt; {
+    a [fhir:Device];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;PatientReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Patient&gt; OR CLOSED {a fhir:Patient}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Patient&gt; {
+    a [fhir:Patient];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;SubstanceReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Substance&gt; OR CLOSED {a fhir:Substance}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Substance&gt; {
+    a [fhir:Substance];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;ContractReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Contract&gt; OR CLOSED {a fhir:Contract}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Contract&gt; {
+    a [fhir:Contract];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;RelatedPersonReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;RelatedPerson&gt; OR CLOSED {a fhir:RelatedPerson}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;RelatedPerson&gt; {
+    a [fhir:RelatedPerson];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+&lt;LocationReference&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;
+    fhir:extension @&lt;Extension&gt;*;
+    fhir:link @&lt;Location&gt; OR CLOSED {a fhir:Location}?;
+    fhir:Reference.reference @&lt;string&gt;?;
+    fhir:Reference.display @&lt;string&gt;?;
+    fhir:index xsd:integer?
+}
+
+&lt;Location&gt; {
+    a [fhir:Location];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+#---------------------- Value Sets ------------------------
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use [&quot;usual&quot; &quot;official&quot; &quot;temp&quot; &quot;secondary&quot;]
+
+# How the Quantity should be understood and represented.
+fhirvs:quantity-comparator [&quot;&lt;&quot; &quot;&lt;=&quot; &quot;&gt;=&quot; &quot;&gt;&quot;]
+
+# The status of a resource narrative
+fhirvs:narrative-status [&quot;generated&quot; &quot;extensions&quot; &quot;additional&quot; &quot;empty&quot;]
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+ShEx files are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fcontract.shex.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fcontract.shex.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

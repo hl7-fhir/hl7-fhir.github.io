@@ -1,0 +1,765 @@
+{
+  "@context": "http://build.fhir.org/PlanDefinition.jsonld",
+  "@context": "http://hl7.org/fhir/PlanDefinition/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Low Suicide Risk Order Set...</div>"
+    }
+  },
+  "ActivityDefinition": [
+    {
+      "Resource.id": {
+        "id.value": "referralToMentalHealthCare"
+      },
+      "ActivityDefinition.status": {
+        "code.value": "draft"
+      },
+      "ActivityDefinition.description": {
+        "markdown.value": "refer to primary care mental-health integrated care program for evaluation and treatment of mental health conditions now"
+      },
+      "ActivityDefinition.category": {
+        "code.value": "referral"
+      },
+      "ActivityDefinition.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "code.value": "306206005"
+            }
+          }
+        ]
+      },
+      "ActivityDefinition.timingTiming": {
+        "Timing.event": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/cqif-basic-cqlExpression"
+                },
+                "Extension.valueString": {
+                  "string.value": "Now()"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "ActivityDefinition.participantType": [
+        {
+          "code.value": "practitioner"
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "citalopramPrescription"
+      },
+      "ActivityDefinition.status": {
+        "code.value": "draft"
+      },
+      "ActivityDefinition.category": {
+        "code.value": "drug"
+      },
+      "ActivityDefinition.productReference": {
+        "Reference.reference": {
+          "string.value": "#citalopramMedication"
+        }
+      },
+      "ActivityDefinition.dynamicValue": [
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dosageInstruction.text"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "'1 tablet oral 1 time daily'"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dosageInstruction.timing.repeat.frequency"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "1"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dosageInstruction.timing.repeat.period"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "1"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dosageInstruction.timing.repeat.periodUnit"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "'d'"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dosageInstruction.route.coding"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "code '26643006' from \"http://snomed.info/sct\" display 'Oral route (qualifier value)'"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dosageInstruction.doseQuantity"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "1 '{tbl}'"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dispenseRequest.numberOfRepeatsAllowed"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "3"
+          }
+        },
+        {
+          "ActivityDefinition.dynamicValue.path": {
+            "string.value": "dispenseRequest.quantity"
+          },
+          "ActivityDefinition.dynamicValue.expression": {
+            "string.value": "30 '{tbl}'"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "citalopramMedication"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "code.value": "200371"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "citalopram"
+        }
+      },
+      "Medication.product": {
+        "Medication.product.form": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.code": {
+                "code.value": "385055001"
+              },
+              "Coding.display": {
+                "string.value": "Tablet dose form"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "Tablet dose form"
+          }
+        },
+        "Medication.product.ingredient": [
+          {
+            "Medication.product.ingredient.itemReference": {
+              "Reference.reference": {
+                "string.value": "#citalopramSubstance"
+              }
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 20
+                },
+                "Quantity.unit": {
+                  "string.value": "mg"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 1
+                },
+                "Quantity.unit": {
+                  "string.value": "{tbl}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "citalopramSubstance"
+      },
+      "Substance.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "code.value": "2556"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "citalopram"
+        }
+      }
+    }
+  ],
+  "PlanDefinition.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.value": {
+        "string.value": "mmi:low-suicide-risk-order-set"
+      }
+    }
+  ],
+  "PlanDefinition.version": {
+    "string.value": "1.0.0"
+  },
+  "PlanDefinition.title": {
+    "string.value": "Low Suicide Risk Order Set"
+  },
+  "PlanDefinition.status": {
+    "code.value": "draft"
+  },
+  "PlanDefinition.date": {
+    "dateTime.value": "2015-08-15"
+  },
+  "PlanDefinition.description": {
+    "markdown.value": "..."
+  },
+  "PlanDefinition.useContext": [
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "gender"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "133936004"
+            },
+            "Coding.display": {
+              "string.value": "Adult"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#133936004"
+      }
+    },
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "focus"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "87512008"
+            },
+            "Coding.display": {
+              "string.value": "Mild major depression"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#87512008"
+      }
+    },
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "focus"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "40379007"
+            },
+            "Coding.display": {
+              "string.value": "Major depression, recurrent, mild"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#40379007"
+      }
+    },
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "focus"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "394687007"
+            },
+            "Coding.display": {
+              "string.value": "Low suicide risk"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#394687007"
+      }
+    },
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "focus"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "225337009"
+            },
+            "Coding.display": {
+              "string.value": "Suicide risk assessment"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#225337009"
+      }
+    },
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "user"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "309343006"
+            },
+            "Coding.display": {
+              "string.value": "Physician"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#309343006"
+      }
+    },
+    {
+      "UsageContext.code": {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/usage-context-type"
+        },
+        "Coding.code": {
+          "code.value": "venue"
+        }
+      },
+      "UsageContext.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "440655000"
+            },
+            "Coding.display": {
+              "string.value": "Outpatient environment"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#440655000"
+      }
+    }
+  ],
+  "PlanDefinition.topic": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "Suicide risk assessment"
+      }
+    }
+  ],
+  "PlanDefinition.contributor": [
+    {
+      "Contributor.type": {
+        "code.value": "author"
+      },
+      "Contributor.name": {
+        "string.value": "Motive Medical Intelligence"
+      },
+      "Contributor.contact": [
+        {
+          "ContactDetail.telecom": [
+            {
+              "ContactPoint.system": {
+                "code.value": "phone"
+              },
+              "ContactPoint.value": {
+                "string.value": "415-362-4007"
+              },
+              "ContactPoint.use": {
+                "code.value": "work"
+              }
+            },
+            {
+              "ContactPoint.system": {
+                "code.value": "email"
+              },
+              "ContactPoint.value": {
+                "string.value": "info@motivemi.com"
+              },
+              "ContactPoint.use": {
+                "code.value": "work"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "PlanDefinition.publisher": {
+    "string.value": "Motive Medical Intelligence"
+  },
+  "PlanDefinition.contact": [
+    {
+      "ContactDetail.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "phone"
+          },
+          "ContactPoint.value": {
+            "string.value": "415-362-4007"
+          },
+          "ContactPoint.use": {
+            "code.value": "work"
+          }
+        },
+        {
+          "ContactPoint.system": {
+            "code.value": "email"
+          },
+          "ContactPoint.value": {
+            "string.value": "info@motivemi.com"
+          },
+          "ContactPoint.use": {
+            "code.value": "work"
+          }
+        }
+      ]
+    }
+  ],
+  "PlanDefinition.library": [
+    {
+      "Reference.reference": {
+        "string.value": "Library/mmi-suiciderisk-orderset-logic"
+      }
+    }
+  ],
+  "PlanDefinition.actionDefinition": [
+    {
+      "PlanDefinition.actionDefinition.title": {
+        "string.value": "Suicide Risk Assessment and Outpatient Management"
+      },
+      "PlanDefinition.actionDefinition.actionDefinition": [
+        {
+          "PlanDefinition.actionDefinition.title": {
+            "string.value": "Consults and Referrals"
+          },
+          "PlanDefinition.actionDefinition.groupingBehavior": {
+            "code.value": "logical-group"
+          },
+          "PlanDefinition.actionDefinition.selectionBehavior": {
+            "code.value": "any"
+          },
+          "PlanDefinition.actionDefinition.actionDefinition": [
+            {
+              "PlanDefinition.actionDefinition.textEquivalent": {
+                "string.value": "Refer to outpatient mental health program for evaluation and treatment of mental health conditions now"
+              },
+              "PlanDefinition.actionDefinition.activityDefinition": {
+                "Reference.reference": {
+                  "string.value": "#referralToMentalHealthCare"
+                }
+              },
+              "PlanDefinition.actionDefinition.dynamicValue": [
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "timing.event"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "Now()"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "specialty"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "Code '261QM0850X' from \"urn:oid:2.16.840.1.113883.11.19462\""
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "fulfillmentTime"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "ReferralRequestFulfillmentTime"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "patient"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "Patient"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "requester"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "Practitioner"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "reason"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "RiskAssessmentScore"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.dynamicValue.path": {
+                    "string.value": "supportingInformation"
+                  },
+                  "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                    "string.value": "RiskAssessment"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "PlanDefinition.actionDefinition.title": {
+            "string.value": "Medications"
+          },
+          "PlanDefinition.actionDefinition.groupingBehavior": {
+            "code.value": "logical-group"
+          },
+          "PlanDefinition.actionDefinition.selectionBehavior": {
+            "code.value": "at-most-one"
+          },
+          "PlanDefinition.actionDefinition.actionDefinition": [
+            {
+              "PlanDefinition.actionDefinition.title": {
+                "string.value": "First-Line Antidepressants"
+              },
+              "PlanDefinition.actionDefinition.documentation": [
+                {
+                  "RelatedArtifact.type": {
+                    "code.value": "justification"
+                  },
+                  "RelatedArtifact.document": {
+                    "Attachment.contentType": {
+                      "code.value": "text/html"
+                    },
+                    "Attachment.url": {
+                      "uri.value": "http://psychiatryonline.org/pb/assets/raw/sitewide/practice_guidelines/guidelines/mdd.pdf"
+                    },
+                    "Attachment.title": {
+                      "string.value": "Practice Guideline for the Treatment of Patients with Major Depressive Disorder"
+                    }
+                  }
+                }
+              ],
+              "PlanDefinition.actionDefinition.groupingBehavior": {
+                "code.value": "logical-group"
+              },
+              "PlanDefinition.actionDefinition.selectionBehavior": {
+                "code.value": "at-most-one"
+              },
+              "PlanDefinition.actionDefinition.actionDefinition": [
+                {
+                  "PlanDefinition.actionDefinition.title": {
+                    "string.value": "Selective Serotonin Reuptake Inhibitors (Choose a mazimum of one or document reasons for exception)"
+                  },
+                  "PlanDefinition.actionDefinition.documentation": [
+                    {
+                      "RelatedArtifact.type": {
+                        "code.value": "justification"
+                      },
+                      "RelatedArtifact.document": {
+                        "Attachment.contentType": {
+                          "code.value": "text/html"
+                        },
+                        "Attachment.url": {
+                          "uri.value": "http://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6daeb45c-451d-b135-bf8f-2d6dff4b6b01"
+                        },
+                        "Attachment.title": {
+                          "string.value": "National Library of Medicine. DailyMed website. CITALOPRAM- citalopram hydrobromide tablet, film coated."
+                        }
+                      }
+                    }
+                  ],
+                  "PlanDefinition.actionDefinition.groupingBehavior": {
+                    "code.value": "logical-group"
+                  },
+                  "PlanDefinition.actionDefinition.selectionBehavior": {
+                    "code.value": "at-most-one"
+                  },
+                  "PlanDefinition.actionDefinition.actionDefinition": [
+                    {
+                      "PlanDefinition.actionDefinition.textEquivalent": {
+                        "string.value": "citalopram 20 mg tablet 1 tablet oral 1 time daily now (30 table; 3 refills)"
+                      },
+                      "PlanDefinition.actionDefinition.activityDefinition": {
+                        "Reference.reference": {
+                          "string.value": "#citalopramPrescription"
+                        }
+                      },
+                      "PlanDefinition.actionDefinition.dynamicValue": [
+                        {
+                          "PlanDefinition.actionDefinition.dynamicValue.path": {
+                            "string.value": "status"
+                          },
+                          "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                            "string.value": "'draft'"
+                          }
+                        },
+                        {
+                          "PlanDefinition.actionDefinition.dynamicValue.path": {
+                            "string.value": "patient"
+                          },
+                          "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                            "string.value": "Patient"
+                          }
+                        },
+                        {
+                          "PlanDefinition.actionDefinition.dynamicValue.path": {
+                            "string.value": "prescriber"
+                          },
+                          "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                            "string.value": "Practitioner"
+                          }
+                        },
+                        {
+                          "PlanDefinition.actionDefinition.dynamicValue.path": {
+                            "string.value": "reasonCode"
+                          },
+                          "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                            "string.value": "RiskAssessmentScore"
+                          }
+                        },
+                        {
+                          "PlanDefinition.actionDefinition.dynamicValue.path": {
+                            "string.value": "reasonReference"
+                          },
+                          "PlanDefinition.actionDefinition.dynamicValue.expression": {
+                            "string.value": "RiskAssessment"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "PlanDefinition.actionDefinition.textEquivalent": {
+                        "string.value": "escitalopram 10 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)"
+                      }
+                    },
+                    {
+                      "PlanDefinition.actionDefinition.textEquivalent": {
+                        "string.value": "fluoxetine 20 mg capsule 1 capsule oral 1 time daily now (30 tablet; 3 refills)"
+                      }
+                    },
+                    {
+                      "PlanDefinition.actionDefinition.textEquivalent": {
+                        "string.value": "paroxetine 20 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)"
+                      }
+                    },
+                    {
+                      "PlanDefinition.actionDefinition.textEquivalent": {
+                        "string.value": "sertraline 50 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "PlanDefinition.actionDefinition.textEquivalent": {
+                    "string.value": "Dopamine Norepinephrine Reuptake Inhibitors (Choose a maximum of one or document reasons for exception)"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.textEquivalent": {
+                    "string.value": "Serotonin Norepinephrine Reuptake Inhibitors (Choose a maximum of one or doument reasons for exception)"
+                  }
+                },
+                {
+                  "PlanDefinition.actionDefinition.textEquivalent": {
+                    "string.value": "Norepinephrine-Serotonin Modulators (Choose a maximum of one or document reasons for exception)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

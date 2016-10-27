@@ -1,0 +1,1799 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>V3-ObservationMethod.cs.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="../../fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/v3-ObservationMethod.cs.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../.././dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="../.././assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="../.././assets/css/project.css" rel="stylesheet"/>
+  <link href="../.././assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="../../jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../.././assets/js/html5shiv.js"></script>
+  <script src="../.././assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../.././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../.././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../.././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="../.././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="../.././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="../.././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="../.././assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./../../assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../.././index.html">Home</a></li>
+              <li><a href="../.././modules.html">Getting Started</a></li>
+              <li><a href="../.././documentation.html">Documentation</a></li>
+              <li><a href="../.././resourcelist.html">Resources</a></li>
+              <li><a href="../.././profilelist.html">Profiles</a></li>
+              <li><a href="../.././extensibility-registry.html">Extensions</a></li>
+              <li><a href="../.././operationslist.html">Operations</a></li>
+              <li><a href="../.././servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="../../terminology-module.html"><img src="../../terminology.png"/> Terminology</a></li>        <li><a href="../../terminologies-valuesets.html">Value Sets</a></li>        <li><a href="index.html">ObservationMethod</a></li>        <li><b>Instance</b></li>        <!-- v3-ObservationMethod.cs.json.html / v3:cs:ObservationMethod / CodeSystem-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>V3-ObservationMethod.cs.json</h1>
+
+<p>
+<a href="v3-ObservationMethod.cs.json">Raw JSON</a> (<a href="v3-ObservationMethod.cs.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p> A code that provides additional detail about the means or technique used to ascertain the observation.  Examples:
+Blood pressure measurement method: arterial puncture vs. sphygmomanometer (Riva-Rocci), sitting vs. supine position, etc.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.  Note that the Domain has a full discussion about use of the attribute and constraining that is not appropriate for the code system description.  Needs to be improved.</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;CodeSystem&quot;,
+  &quot;id&quot;: &quot;v3-ObservationMethod&quot;,
+  &quot;meta&quot;: {
+    &quot;lastUpdated&quot;: &quot;2016-03-23T00:00:00.000+00:00&quot;
+  },
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div&gt;!-- Snipped for Brevity --&gt;&lt;/div&gt;&quot;
+  },
+  &quot;url&quot;: &quot;http://hl7.org/fhir/v3/ObservationMethod&quot;,
+  &quot;identifier&quot;: {
+    &quot;system&quot;: &quot;urn:ietf:rfc:3986&quot;,
+    &quot;value&quot;: &quot;urn:oid:2.16.840.1.113883.5.84&quot;
+  },
+  &quot;version&quot;: &quot;2016-03-23&quot;,
+  &quot;name&quot;: &quot;v3 Code System ObservationMethod&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;experimental&quot;: false,
+  &quot;publisher&quot;: &quot;HL7, Inc&quot;,
+  &quot;contact&quot;: [
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;http://hl7.org&quot;
+        }
+      ]
+    }
+  ],
+  &quot;date&quot;: &quot;2016-03-23T00:00:00+00:00&quot;,
+  &quot;description&quot;: &quot; A code that provides additional detail about the means or technique used to ascertain the observation.  Examples:\r\nBlood pressure measurement method: arterial puncture vs. sphygmomanometer (Riva-Rocci), sitting vs. supine position, etc.  OpenIssue:\r\nDescription copied from Concept Domain of same name.  Must be verified.  Note that the Domain has a full discussion about use of the attribute and constraining that is not appropriate for the code system description.  Needs to be improved.&quot;,
+  &quot;caseSensitive&quot;: true,
+  &quot;valueSet&quot;: &quot;http://hl7.org/fhir/ValueSet/v3-ObservationMethod&quot;,
+  &quot;hierarchyMeaning&quot;: &quot;subsumes&quot;,
+  &quot;content&quot;: &quot;complete&quot;,
+  &quot;property&quot;: [
+    {
+      &quot;code&quot;: &quot;notSelectable&quot;,
+      &quot;uri&quot;: &quot;http://hl7.org/fhir/concept-properties#notSelectable&quot;,
+      &quot;description&quot;: &quot;Indicates that the code is abstract - only intended to be used as a selector for other concepts&quot;,
+      &quot;type&quot;: &quot;boolean&quot;
+    },
+    {
+      &quot;code&quot;: &quot;inactive&quot;,
+      &quot;uri&quot;: &quot;http://hl7.org/fhir/concept-properties#inactive&quot;,
+      &quot;description&quot;: &quot;True if the concept is not considered active - e.g. not a valid concept any more&quot;,
+      &quot;type&quot;: &quot;boolean&quot;
+    }
+  ],
+  &quot;concept&quot;: [
+    {
+      &quot;code&quot;: &quot;_DecisionObservationMethod&quot;,
+      &quot;display&quot;: &quot;DecisionObservationMethod&quot;,
+      &quot;definition&quot;: &quot;Provides codes for decision methods, initially for assessing the causality of events.&quot;,
+      &quot;property&quot;: [
+        {
+          &quot;code&quot;: &quot;notSelectable&quot;,
+          &quot;valueBoolean&quot;: true
+        }
+      ],
+      &quot;concept&quot;: [
+        {
+          &quot;code&quot;: &quot;ALGM&quot;,
+          &quot;display&quot;: &quot;algorithm&quot;,
+          &quot;definition&quot;: &quot;Reaching a decision through the application of an algorithm designed to weigh the different factors involved.&quot;,
+          &quot;concept&quot;: [
+            {
+              &quot;code&quot;: &quot;BYCL&quot;,
+              &quot;display&quot;: &quot;bayesian calculation&quot;,
+              &quot;definition&quot;: &quot;Reaching a decision through the use of Bayesian statistical analysis.&quot;
+            }
+          ]
+        },
+        {
+          &quot;code&quot;: &quot;GINT&quot;,
+          &quot;display&quot;: &quot;global introspection&quot;,
+          &quot;definition&quot;: &quot;Reaching a decision by consideration of the totality of factors involved in order to reach a judgement.&quot;
+        }
+      ]
+    },
+    {
+      &quot;code&quot;: &quot;_GeneticObservationMethod&quot;,
+      &quot;display&quot;: &quot;GeneticObservationMethod&quot;,
+      &quot;definition&quot;: &quot;A code that provides additional detail about the means or technique used to ascertain the genetic analysis. Example, PCR, Micro Array&quot;,
+      &quot;property&quot;: [
+        {
+          &quot;code&quot;: &quot;notSelectable&quot;,
+          &quot;valueBoolean&quot;: true
+        }
+      ],
+      &quot;concept&quot;: [
+        {
+          &quot;code&quot;: &quot;PCR&quot;,
+          &quot;display&quot;: &quot;PCR&quot;,
+          &quot;definition&quot;: &quot;Description: Polymerase Chain Reaction&quot;
+        }
+      ]
+    },
+    {
+      &quot;code&quot;: &quot;_ObservationMethodAggregate&quot;,
+      &quot;display&quot;: &quot;observation method aggregate&quot;,
+      &quot;definition&quot;: &quot;Provides additional detail about the aggregation methods used to compute the aggregated values for an observation. This is an abstract code.&quot;,
+      &quot;property&quot;: [
+        {
+          &quot;code&quot;: &quot;notSelectable&quot;,
+          &quot;valueBoolean&quot;: true
+        }
+      ],
+      &quot;concept&quot;: [
+        {
+          &quot;code&quot;: &quot;AVERAGE&quot;,
+          &quot;display&quot;: &quot;average&quot;,
+          &quot;definition&quot;: &quot;Average of non-null values in the referenced set of values&quot;
+        },
+        {
+          &quot;code&quot;: &quot;COUNT&quot;,
+          &quot;display&quot;: &quot;count&quot;,
+          &quot;definition&quot;: &quot;Count of non-null values in the referenced set of values&quot;
+        },
+        {
+          &quot;code&quot;: &quot;MAX&quot;,
+          &quot;display&quot;: &quot;maxima&quot;,
+          &quot;definition&quot;: &quot;Largest of all non-null values in the referenced set of values.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;MEDIAN&quot;,
+          &quot;display&quot;: &quot;median&quot;,
+          &quot;definition&quot;: &quot;The median of all non-null values in the referenced set of values.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;MIN&quot;,
+          &quot;display&quot;: &quot;minima&quot;,
+          &quot;definition&quot;: &quot;Smallest of all non-null values in the referenced set of values.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;MODE&quot;,
+          &quot;display&quot;: &quot;mode&quot;,
+          &quot;definition&quot;: &quot;The most common value of all non-null values in the referenced set of values.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;STDEV.P&quot;,
+          &quot;display&quot;: &quot;population standard deviation&quot;,
+          &quot;definition&quot;: &quot;Standard Deviation of the values in the referenced set of values, computed over the population.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;STDEV.S&quot;,
+          &quot;display&quot;: &quot;sample standard deviation&quot;,
+          &quot;definition&quot;: &quot;Standard Deviation of the values in the referenced set of values, computed over a sample of the population.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;SUM&quot;,
+          &quot;display&quot;: &quot;sum&quot;,
+          &quot;definition&quot;: &quot;Sum of non-null values in the referenced set of values&quot;
+        },
+        {
+          &quot;code&quot;: &quot;VARIANCE.P&quot;,
+          &quot;display&quot;: &quot;population variance&quot;,
+          &quot;definition&quot;: &quot;Variance of the values in the referenced set of values, computed over the population.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;VARIANCE.S&quot;,
+          &quot;display&quot;: &quot;sample variance&quot;,
+          &quot;definition&quot;: &quot;Variance of the values in the referenced set of values, computed over a sample of the population.&quot;
+        }
+      ]
+    },
+    {
+      &quot;code&quot;: &quot;_VerificationMethod&quot;,
+      &quot;display&quot;: &quot;VerificationMethod&quot;,
+      &quot;definition&quot;: &quot;VerificationMethod&quot;,
+      &quot;property&quot;: [
+        {
+          &quot;code&quot;: &quot;notSelectable&quot;,
+          &quot;valueBoolean&quot;: true
+        }
+      ],
+      &quot;concept&quot;: [
+        {
+          &quot;code&quot;: &quot;VDOC&quot;,
+          &quot;display&quot;: &quot;document verification&quot;,
+          &quot;definition&quot;: &quot;Verification by means of document.\r\n\n                        \n                           Example: Fax, letter, attachment to e-mail.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;VREG&quot;,
+          &quot;display&quot;: &quot;registry verification&quot;,
+          &quot;definition&quot;: &quot;verification by means of  a response to an electronic query\r\n\n                        \n                           Example: query message to a Covered Party registry application or Coverage Administrator.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;VTOKEN&quot;,
+          &quot;display&quot;: &quot;electronic token verification&quot;,
+          &quot;definition&quot;: &quot;Verification by means of electronic token.\r\n\n                        \n                           Example: smartcard, magnetic swipe card, RFID device.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;VVOICE&quot;,
+          &quot;display&quot;: &quot;voice-based verification&quot;,
+          &quot;definition&quot;: &quot;Verification by means of voice.\r\n\n                        \n                           Example: By speaking with or calling the Coverage Administrator or Covered Party&quot;
+        }
+      ]
+    },
+    {
+      &quot;code&quot;: &quot;0001&quot;,
+      &quot;display&quot;: &quot;Complement fixation&quot;,
+      &quot;definition&quot;: &quot;Complement fixation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0002&quot;,
+      &quot;display&quot;: &quot;Computed axial tomography&quot;,
+      &quot;definition&quot;: &quot;Computed axial tomography&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0003&quot;,
+      &quot;display&quot;: &quot;HLAR agar test&quot;,
+      &quot;definition&quot;: &quot;Susceptibility, High Level Aminoglycoside Resistance agar test&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0004&quot;,
+      &quot;display&quot;: &quot;Macroscopic observation&quot;,
+      &quot;definition&quot;: &quot;Visual, Macroscopic observation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0005&quot;,
+      &quot;display&quot;: &quot;Magnetic resonance&quot;,
+      &quot;definition&quot;: &quot;Computed, Magnetic resonance&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0006&quot;,
+      &quot;display&quot;: &quot;Morphometry&quot;,
+      &quot;definition&quot;: &quot;Computed, Morphometry&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0007&quot;,
+      &quot;display&quot;: &quot;Positron emission tomography&quot;,
+      &quot;definition&quot;: &quot;Computed, Positron emission tomography&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0008&quot;,
+      &quot;display&quot;: &quot;SAMHSA confirmation&quot;,
+      &quot;definition&quot;: &quot;SAMHSA drug assay confirmation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0009&quot;,
+      &quot;display&quot;: &quot;SAMHSA screening&quot;,
+      &quot;definition&quot;: &quot;SAMHSA drug assay screening&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0010&quot;,
+      &quot;display&quot;: &quot;Serum Neutralization&quot;,
+      &quot;definition&quot;: &quot;Serum Neutralization&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0011&quot;,
+      &quot;display&quot;: &quot;Titration&quot;,
+      &quot;definition&quot;: &quot;Titration&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0012&quot;,
+      &quot;display&quot;: &quot;Ultrasound&quot;,
+      &quot;definition&quot;: &quot;Ultrasound&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0013&quot;,
+      &quot;display&quot;: &quot;X-ray crystallography&quot;,
+      &quot;definition&quot;: &quot;X-ray crystallography&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0014&quot;,
+      &quot;display&quot;: &quot;Agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0015&quot;,
+      &quot;display&quot;: &quot;Buffered acidified plate agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Buffered acidified plate&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0016&quot;,
+      &quot;display&quot;: &quot;Card agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Card&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0017&quot;,
+      &quot;display&quot;: &quot;Hemagglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Hemagglutination&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0018&quot;,
+      &quot;display&quot;: &quot;Hemagglutination inhibition&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Hemagglutination inhibition&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0019&quot;,
+      &quot;display&quot;: &quot;Latex agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Latex&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0020&quot;,
+      &quot;display&quot;: &quot;Plate agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Plate&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0021&quot;,
+      &quot;display&quot;: &quot;Rapid agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Rapid Plate&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0022&quot;,
+      &quot;display&quot;: &quot;RBC agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, RBC&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0023&quot;,
+      &quot;display&quot;: &quot;Rivanol agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Rivanol&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0024&quot;,
+      &quot;display&quot;: &quot;Tube agglutination&quot;,
+      &quot;definition&quot;: &quot;Agglutination, Tube&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0025&quot;,
+      &quot;display&quot;: &quot;Bioassay&quot;,
+      &quot;definition&quot;: &quot;Bioassay&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0026&quot;,
+      &quot;display&quot;: &quot;Animal Inoculation&quot;,
+      &quot;definition&quot;: &quot;Bioassay, Animal Inoculation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0027&quot;,
+      &quot;display&quot;: &quot;Cytotoxicity&quot;,
+      &quot;definition&quot;: &quot;Bioassay, Cytotoxicity&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0028&quot;,
+      &quot;display&quot;: &quot;Embryo infective dose 50&quot;,
+      &quot;definition&quot;: &quot;Bioassay, Embryo Infective Dose 50&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0029&quot;,
+      &quot;display&quot;: &quot;Embryo lethal dose 50&quot;,
+      &quot;definition&quot;: &quot;Bioassay, Embryo Lethal Dose 50&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0030&quot;,
+      &quot;display&quot;: &quot;Mouse intercerebral inoculation&quot;,
+      &quot;definition&quot;: &quot;Bioassay, Mouse intercerebral inoculation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0031&quot;,
+      &quot;display&quot;: &quot;Bioassay, qualitative&quot;,
+      &quot;definition&quot;: &quot;Bioassay, qualitative&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0032&quot;,
+      &quot;display&quot;: &quot;Bioassay, quantitative&quot;,
+      &quot;definition&quot;: &quot;Bioassay, quantitative&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0033&quot;,
+      &quot;display&quot;: &quot;Chemical method&quot;,
+      &quot;definition&quot;: &quot;Chemical&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0034&quot;,
+      &quot;display&quot;: &quot;Differential light absorption chemical test&quot;,
+      &quot;definition&quot;: &quot;Chemical, Differential light absorption&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0035&quot;,
+      &quot;display&quot;: &quot;Dipstick&quot;,
+      &quot;definition&quot;: &quot;Chemical, Dipstick&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0036&quot;,
+      &quot;display&quot;: &quot;Dipstick colorimetric laboratory test&quot;,
+      &quot;definition&quot;: &quot;Chemical, Dipstick colorimetric laboratory test&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0037&quot;,
+      &quot;display&quot;: &quot;Test strip&quot;,
+      &quot;definition&quot;: &quot;Chemical, Test strip&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0038&quot;,
+      &quot;display&quot;: &quot;Chromatography&quot;,
+      &quot;definition&quot;: &quot;Chromatography&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0039&quot;,
+      &quot;display&quot;: &quot;Affinity chromatography&quot;,
+      &quot;definition&quot;: &quot;Chromatography, Affinity&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0040&quot;,
+      &quot;display&quot;: &quot;Gas liquid chromatography&quot;,
+      &quot;definition&quot;: &quot;Chromatography, Gas liquid&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0041&quot;,
+      &quot;display&quot;: &quot;High performance liquid chromatography&quot;,
+      &quot;definition&quot;: &quot;Chromatography, High performance liquid&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0042&quot;,
+      &quot;display&quot;: &quot;Liquid Chromatography&quot;,
+      &quot;definition&quot;: &quot;Chromatography, Liquid&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0043&quot;,
+      &quot;display&quot;: &quot;Protein A affinity chromatography&quot;,
+      &quot;definition&quot;: &quot;Chromatography, Protein A affinity&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0044&quot;,
+      &quot;display&quot;: &quot;Coagulation&quot;,
+      &quot;definition&quot;: &quot;Coagulation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0045&quot;,
+      &quot;display&quot;: &quot;Tilt tube coagulation time&quot;,
+      &quot;definition&quot;: &quot;Coagulation, Tilt tube&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0046&quot;,
+      &quot;display&quot;: &quot;Tilt tube reptilase induced coagulation&quot;,
+      &quot;definition&quot;: &quot;Coagulation, Tilt tube reptilase induced&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0047&quot;,
+      &quot;display&quot;: &quot;Automated count&quot;,
+      &quot;definition&quot;: &quot;Count, Automated&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0048&quot;,
+      &quot;display&quot;: &quot;Manual cell count&quot;,
+      &quot;definition&quot;: &quot;Count, Manual&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0049&quot;,
+      &quot;display&quot;: &quot;Platelet count, Rees-Ecker&quot;,
+      &quot;definition&quot;: &quot;Count, Platelet, Rees-Ecker&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0050&quot;,
+      &quot;display&quot;: &quot;Aerobic Culture&quot;,
+      &quot;definition&quot;: &quot;Culture, Aerobic&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0051&quot;,
+      &quot;display&quot;: &quot;Anaerobic Culture&quot;,
+      &quot;definition&quot;: &quot;Culture, Anaerobic&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0052&quot;,
+      &quot;display&quot;: &quot;Chicken embryo culture&quot;,
+      &quot;definition&quot;: &quot;Culture, Chicken Embryo&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0053&quot;,
+      &quot;display&quot;: &quot;Delayed secondary enrichment&quot;,
+      &quot;definition&quot;: &quot;Culture, Delayed secondary enrichment&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0054&quot;,
+      &quot;display&quot;: &quot;Microaerophilic Culture&quot;,
+      &quot;definition&quot;: &quot;Culture, Microaerophilic&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0055&quot;,
+      &quot;display&quot;: &quot;Quantitative microbial culture, cup&quot;,
+      &quot;definition&quot;: &quot;Culture, Quantitative microbial, cup&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0056&quot;,
+      &quot;display&quot;: &quot;Quantitative microbial culture, droplet&quot;,
+      &quot;definition&quot;: &quot;Culture, Quantitative microbial, droplet&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0057&quot;,
+      &quot;display&quot;: &quot;Quantitative microbial culture, filter paper&quot;,
+      &quot;definition&quot;: &quot;Culture, Quantitative microbial, filter paper&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0058&quot;,
+      &quot;display&quot;: &quot;Quantitative microbial culture, pad culture&quot;,
+      &quot;definition&quot;: &quot;Culture, Quantitative microbial, pad&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0059&quot;,
+      &quot;display&quot;: &quot;Quantitative microbial culture, pour plate&quot;,
+      &quot;definition&quot;: &quot;Culture, Quantitative microbial, pour plate&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0060&quot;,
+      &quot;display&quot;: &quot;Quantitative microbial culture, surface streak&quot;,
+      &quot;definition&quot;: &quot;Culture, Quantitative microbial, surface streak&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0061&quot;,
+      &quot;display&quot;: &quot;Somatic Cell culture&quot;,
+      &quot;definition&quot;: &quot;Culture, Somatic Cell&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0062&quot;,
+      &quot;display&quot;: &quot;Agar diffusion&quot;,
+      &quot;definition&quot;: &quot;Diffusion, Agar&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0063&quot;,
+      &quot;display&quot;: &quot;Agar Gel Immunodiffusion&quot;,
+      &quot;definition&quot;: &quot;Diffusion, Agar Gel Immunodiffusion&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0064&quot;,
+      &quot;display&quot;: &quot;Electrophoresis&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0065&quot;,
+      &quot;display&quot;: &quot;Agaorse gel electrophoresis&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis, Agaorse gel&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0066&quot;,
+      &quot;display&quot;: &quot;Electrophoresis, citrate agar&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis, citrate agar&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0067&quot;,
+      &quot;display&quot;: &quot;Immunoelectrophoresis&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis, Immuno&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0068&quot;,
+      &quot;display&quot;: &quot;Polyacrylamide gel electrophoresis&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis, Polyacrylamide gel&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0069&quot;,
+      &quot;display&quot;: &quot;Starch gel electrophoresis&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis, Starch gel&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0070&quot;,
+      &quot;display&quot;: &quot;ELISA&quot;,
+      &quot;definition&quot;: &quot;ELISA&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0071&quot;,
+      &quot;display&quot;: &quot;ELISA, antigen capture&quot;,
+      &quot;definition&quot;: &quot;ELISA, antigen capture&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0072&quot;,
+      &quot;display&quot;: &quot;ELISA, avidin biotin peroxidase complex&quot;,
+      &quot;definition&quot;: &quot;ELISA, avidin biotin peroxidase complex&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0073&quot;,
+      &quot;display&quot;: &quot;Kinetic ELISA&quot;,
+      &quot;definition&quot;: &quot;ELISA, Kinetic&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0074&quot;,
+      &quot;display&quot;: &quot;ELISA, peroxidase-antiperoxidase&quot;,
+      &quot;definition&quot;: &quot;ELISA, peroxidase-antiperoxidase&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0075&quot;,
+      &quot;display&quot;: &quot;API 20 Strep&quot;,
+      &quot;definition&quot;: &quot;Identification, API 20 Strep&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0076&quot;,
+      &quot;display&quot;: &quot;API 20A&quot;,
+      &quot;definition&quot;: &quot;Identification, API 20A&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0077&quot;,
+      &quot;display&quot;: &quot;API 20C AUX&quot;,
+      &quot;definition&quot;: &quot;Identification, API 20C AUX&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0078&quot;,
+      &quot;display&quot;: &quot;API 20E&quot;,
+      &quot;definition&quot;: &quot;Identification, API 20E&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0079&quot;,
+      &quot;display&quot;: &quot;API 20NE&quot;,
+      &quot;definition&quot;: &quot;Identification, API 20NE&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0080&quot;,
+      &quot;display&quot;: &quot;API 50 CH&quot;,
+      &quot;definition&quot;: &quot;Identification, API 50 CH&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0081&quot;,
+      &quot;display&quot;: &quot;API An-IDENT&quot;,
+      &quot;definition&quot;: &quot;Identification, API An-IDENT&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0082&quot;,
+      &quot;display&quot;: &quot;API Coryne&quot;,
+      &quot;definition&quot;: &quot;Identification, API Coryne&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0083&quot;,
+      &quot;display&quot;: &quot;API Rapid 20E&quot;,
+      &quot;definition&quot;: &quot;Identification, API Rapid 20E&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0084&quot;,
+      &quot;display&quot;: &quot;API Staph&quot;,
+      &quot;definition&quot;: &quot;Identification, API Staph&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0085&quot;,
+      &quot;display&quot;: &quot;API ZYM&quot;,
+      &quot;definition&quot;: &quot;Identification, API ZYM&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0086&quot;,
+      &quot;display&quot;: &quot;Bacterial identification&quot;,
+      &quot;definition&quot;: &quot;Identification, Bacterial&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0087&quot;,
+      &quot;display&quot;: &quot;mini VIDAS&quot;,
+      &quot;definition&quot;: &quot;Identification, mini VIDAS&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0088&quot;,
+      &quot;display&quot;: &quot;Phage susceptibility typing&quot;,
+      &quot;definition&quot;: &quot;Identification, Phage susceptibility typing&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0089&quot;,
+      &quot;display&quot;: &quot;Quad-FERM+&quot;,
+      &quot;definition&quot;: &quot;Identification, Quad-FERM+&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0090&quot;,
+      &quot;display&quot;: &quot;RAPIDEC Staph&quot;,
+      &quot;definition&quot;: &quot;Identification, RAPIDEC Staph&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0091&quot;,
+      &quot;display&quot;: &quot;Staphaurex&quot;,
+      &quot;definition&quot;: &quot;Identification, Staphaurex&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0092&quot;,
+      &quot;display&quot;: &quot;VIDAS&quot;,
+      &quot;definition&quot;: &quot;Identification, VIDAS&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0093&quot;,
+      &quot;display&quot;: &quot;Vitek&quot;,
+      &quot;definition&quot;: &quot;Identification, Vitek&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0094&quot;,
+      &quot;display&quot;: &quot;VITEK 2&quot;,
+      &quot;definition&quot;: &quot;Identification, VITEK 2&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0095&quot;,
+      &quot;display&quot;: &quot;Immune stain&quot;,
+      &quot;definition&quot;: &quot;Immune stain&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0096&quot;,
+      &quot;display&quot;: &quot;Immunofluorescent antibody, direct&quot;,
+      &quot;definition&quot;: &quot;Immune stain, Immunofluorescent antibody, direct&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0097&quot;,
+      &quot;display&quot;: &quot;Immunofluorescent antibody, indirect&quot;,
+      &quot;definition&quot;: &quot;Immune stain, Immunofluorescent antibody, indirect&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0098&quot;,
+      &quot;display&quot;: &quot;Immunoperoxidase, Avidin-Biotin Complex&quot;,
+      &quot;definition&quot;: &quot;Immune stain, Immunoperoxidase, Avidin-Biotin Complex&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0099&quot;,
+      &quot;display&quot;: &quot;Immunoperoxidase, Peroxidase anti-peroxidase complex&quot;,
+      &quot;definition&quot;: &quot;Immune stain, Immunoperoxidase, Peroxidase anti-peroxidase complex&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0100&quot;,
+      &quot;display&quot;: &quot;Immunoperoxidase, Protein A-peroxidase complex&quot;,
+      &quot;definition&quot;: &quot;Immune stain, Immunoperoxidase, Protein A-peroxidase complex&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0101&quot;,
+      &quot;display&quot;: &quot;Immunoassay&quot;,
+      &quot;definition&quot;: &quot;Immunoassay&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0102&quot;,
+      &quot;display&quot;: &quot;Immunoassay, qualitative, multiple step&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, qualitative, multiple step&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0103&quot;,
+      &quot;display&quot;: &quot;Immunoassay, qualitative, single step&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, qualitative, single step&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0104&quot;,
+      &quot;display&quot;: &quot;Radioimmunoassay&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, Radioimmunoassay&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0105&quot;,
+      &quot;display&quot;: &quot;Immunoassay, semi-quantitative, multiple step&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, semi-quantitative, multiple step&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0106&quot;,
+      &quot;display&quot;: &quot;Immunoassay, semi-quantitative, single step&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, semi-quantitative, single step&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0107&quot;,
+      &quot;display&quot;: &quot;Microscopy&quot;,
+      &quot;definition&quot;: &quot;Microscopy&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0108&quot;,
+      &quot;display&quot;: &quot;Darkfield microscopy&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Darkfield&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0109&quot;,
+      &quot;display&quot;: &quot;Electron microscopy&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Electron&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0110&quot;,
+      &quot;display&quot;: &quot;Electron microscopy tomography&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Electron microscopy tomography&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0111&quot;,
+      &quot;display&quot;: &quot;Electron microscopy, negative stain&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Electron, negative stain&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0112&quot;,
+      &quot;display&quot;: &quot;Electron microscopy, thick section&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Electron, thick section transmission&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0113&quot;,
+      &quot;display&quot;: &quot;Electron microscopy, thin section&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Electron, thin section transmission&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0114&quot;,
+      &quot;display&quot;: &quot;Microscopy, Light&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Light&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0115&quot;,
+      &quot;display&quot;: &quot;Polarizing light microscopy&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Polarized light&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0116&quot;,
+      &quot;display&quot;: &quot;Scanning electron microscopy&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Scanning electron&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0117&quot;,
+      &quot;display&quot;: &quot;Transmission electron microscopy&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Transmission electron&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0118&quot;,
+      &quot;display&quot;: &quot;Transparent tape direct examination&quot;,
+      &quot;definition&quot;: &quot;Microscopy, Transparent tape direct examination&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0119&quot;,
+      &quot;display&quot;: &quot;3 Self-Sustaining Sequence Replication&quot;,
+      &quot;definition&quot;: &quot;Molecular, 3 Self-Sustaining Sequence Replication&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0120&quot;,
+      &quot;display&quot;: &quot;Branched Chain DNA&quot;,
+      &quot;definition&quot;: &quot;Molecular, Branched Chain DNA&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0121&quot;,
+      &quot;display&quot;: &quot;Hybridization Protection Assay&quot;,
+      &quot;definition&quot;: &quot;Molecular, Hybridization Protection Assay&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0122&quot;,
+      &quot;display&quot;: &quot;Immune blot&quot;,
+      &quot;definition&quot;: &quot;Molecular, Immune blot&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0123&quot;,
+      &quot;display&quot;: &quot;In-situ hybridization&quot;,
+      &quot;definition&quot;: &quot;Molecular, In-situ hybridization&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0124&quot;,
+      &quot;display&quot;: &quot;Ligase Chain Reaction&quot;,
+      &quot;definition&quot;: &quot;Molecular, Ligase Chain Reaction&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0125&quot;,
+      &quot;display&quot;: &quot;Ligation Activated Transcription&quot;,
+      &quot;definition&quot;: &quot;Molecular, Ligation Activated Transcription&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0126&quot;,
+      &quot;display&quot;: &quot;Nucleic Acid Probe&quot;,
+      &quot;definition&quot;: &quot;Molecular, Nucleic Acid Probe&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0128&quot;,
+      &quot;display&quot;: &quot;Nucleic acid probe with amplification&quot;,
+      &quot;definition&quot;: &quot;Molecular, Nucleic acid probe with amplification\r\n\n                        \r\n\n                        Rationale: Duplicate of code 0126. Use code 0126 instead.&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0129&quot;,
+      &quot;display&quot;: &quot;Nucleic acid probe with target amplification&quot;,
+      &quot;definition&quot;: &quot;Molecular, Nucleic acid probe with target amplification&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0130&quot;,
+      &quot;display&quot;: &quot;Nucleic acid reverse transcription&quot;,
+      &quot;definition&quot;: &quot;Molecular, Nucleic acid reverse transcription&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0131&quot;,
+      &quot;display&quot;: &quot;Nucleic Acid Sequence Based Analysis&quot;,
+      &quot;definition&quot;: &quot;Molecular, Nucleic Acid Sequence Based Analysis&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0132&quot;,
+      &quot;display&quot;: &quot;Polymerase chain reaction&quot;,
+      &quot;definition&quot;: &quot;Molecular, Polymerase chain reaction&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0133&quot;,
+      &quot;display&quot;: &quot;Q-Beta Replicase or probe amplification category method&quot;,
+      &quot;definition&quot;: &quot;Molecular, Q-Beta Replicase or probe amplification category method&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0134&quot;,
+      &quot;display&quot;: &quot;Restriction Fragment Length Polymorphism&quot;,
+      &quot;definition&quot;: &quot;Molecular, Restriction Fragment Length Polymorphism&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0135&quot;,
+      &quot;display&quot;: &quot;Southern Blot&quot;,
+      &quot;definition&quot;: &quot;Molecular, Southern Blot&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0136&quot;,
+      &quot;display&quot;: &quot;Strand Displacement Amplification&quot;,
+      &quot;definition&quot;: &quot;Molecular, Strand Displacement Amplification&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0137&quot;,
+      &quot;display&quot;: &quot;Transcription Mediated Amplification&quot;,
+      &quot;definition&quot;: &quot;Molecular, Transcription Mediated Amplification&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0138&quot;,
+      &quot;display&quot;: &quot;Western Blot&quot;,
+      &quot;definition&quot;: &quot;Molecular, Western Blot&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0139&quot;,
+      &quot;display&quot;: &quot;Flocculation&quot;,
+      &quot;definition&quot;: &quot;Precipitation, Flocculation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0140&quot;,
+      &quot;display&quot;: &quot;Immune precipitation&quot;,
+      &quot;definition&quot;: &quot;Precipitation, Immune precipitation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0141&quot;,
+      &quot;display&quot;: &quot;Milk ring test&quot;,
+      &quot;definition&quot;: &quot;Precipitation, Milk ring test&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0142&quot;,
+      &quot;display&quot;: &quot;Precipitin&quot;,
+      &quot;definition&quot;: &quot;Precipitation, Precipitin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0143&quot;,
+      &quot;display&quot;: &quot;Acid fast stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Acid fast&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0144&quot;,
+      &quot;display&quot;: &quot;Acid fast stain, fluorochrome&quot;,
+      &quot;definition&quot;: &quot;Stain, Acid fast, fluorochrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0145&quot;,
+      &quot;display&quot;: &quot;Acid fast stain, Kinyoun's cold carbolfuchsin&quot;,
+      &quot;definition&quot;: &quot;Stain, Acid fast, Kinyoun's cold carbolfuchsin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0146&quot;,
+      &quot;display&quot;: &quot;Acid fast stain, Ziehl-Neelsen&quot;,
+      &quot;definition&quot;: &quot;Stain, Acid fast, Ziehl-Neelsen&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0147&quot;,
+      &quot;display&quot;: &quot;Acid phosphatase stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Acid phosphatase&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0148&quot;,
+      &quot;display&quot;: &quot;Acridine orange stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Acridine orange&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0149&quot;,
+      &quot;display&quot;: &quot;Active brilliant orange KH stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Active brilliant orange KH&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0150&quot;,
+      &quot;display&quot;: &quot;Alazarin red S stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Alazarin red S&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0151&quot;,
+      &quot;display&quot;: &quot;Alcian blue stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Alcian blue&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0152&quot;,
+      &quot;display&quot;: &quot;Alcian blue with Periodic acid Schiff stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Alcian blue with Periodic acid Schiff&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0153&quot;,
+      &quot;display&quot;: &quot;Argentaffin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Argentaffin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0154&quot;,
+      &quot;display&quot;: &quot;Argentaffin silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Argentaffin silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0155&quot;,
+      &quot;display&quot;: &quot;Azure-eosin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Azure-eosin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0156&quot;,
+      &quot;display&quot;: &quot;Basic Fuschin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Basic Fuschin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0157&quot;,
+      &quot;display&quot;: &quot;Bennhold stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Bennhold&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0158&quot;,
+      &quot;display&quot;: &quot;Bennhold's Congo red stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Bennhold's Congo red&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0159&quot;,
+      &quot;display&quot;: &quot;Bielschowsky stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Bielschowsky&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0160&quot;,
+      &quot;display&quot;: &quot;Bielschowsky's silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Bielschowsky's silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0161&quot;,
+      &quot;display&quot;: &quot;Bleach stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Bleach&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0162&quot;,
+      &quot;display&quot;: &quot;Bodian stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Bodian&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0163&quot;,
+      &quot;display&quot;: &quot;Brown-Brenn stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Brown-Brenn&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0164&quot;,
+      &quot;display&quot;: &quot;Butyrate-esterase stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Butyrate-esterase&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0165&quot;,
+      &quot;display&quot;: &quot;Calcofluor white fluorescent stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Calcofluor white fluorescent&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0166&quot;,
+      &quot;display&quot;: &quot;Carbol-fuchsin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Carbol-fuchsin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0167&quot;,
+      &quot;display&quot;: &quot;Carmine stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Carmine&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0168&quot;,
+      &quot;display&quot;: &quot;Churukian-Schenk stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Churukian-Schenk&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0169&quot;,
+      &quot;display&quot;: &quot;Congo red stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Congo red&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0170&quot;,
+      &quot;display&quot;: &quot;Cresyl echt violet stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Cresyl echt violet&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0171&quot;,
+      &quot;display&quot;: &quot;Crystal violet stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Crystal violet&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0172&quot;,
+      &quot;display&quot;: &quot;De Galantha stain&quot;,
+      &quot;definition&quot;: &quot;Stain, De Galantha&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0173&quot;,
+      &quot;display&quot;: &quot;Dieterle silver impregnation stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Dieterle silver impregnation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0174&quot;,
+      &quot;display&quot;: &quot;Fite-Farco stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Fite-Farco&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0175&quot;,
+      &quot;display&quot;: &quot;Fontana-Masson silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Fontana-Masson silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0176&quot;,
+      &quot;display&quot;: &quot;Fouchet stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Fouchet&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0177&quot;,
+      &quot;display&quot;: &quot;Gomori stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Gomori&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0178&quot;,
+      &quot;display&quot;: &quot;Gomori methenamine silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Gomori methenamine silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0179&quot;,
+      &quot;display&quot;: &quot;Gomori-Wheatly trichrome stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Gomori-Wheatly trichrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0180&quot;,
+      &quot;display&quot;: &quot;Gridley stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Gridley&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0181&quot;,
+      &quot;display&quot;: &quot;Grimelius silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Grimelius silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0182&quot;,
+      &quot;display&quot;: &quot;Grocott stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Grocott&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0183&quot;,
+      &quot;display&quot;: &quot;Grocott methenamine silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Grocott methenamine silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0184&quot;,
+      &quot;display&quot;: &quot;Hale's colloidal ferric oxide stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Hale's colloidal ferric oxide&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0185&quot;,
+      &quot;display&quot;: &quot;Hale's colloidal iron stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Hale's colloidal iron&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0186&quot;,
+      &quot;display&quot;: &quot;Hansel stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Hansel&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0187&quot;,
+      &quot;display&quot;: &quot;Harris regressive hematoxylin and eosin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Harris regressive hematoxylin and eosin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0188&quot;,
+      &quot;display&quot;: &quot;Hematoxylin and eosin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Hematoxylin and eosin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0189&quot;,
+      &quot;display&quot;: &quot;Highman stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Highman&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0190&quot;,
+      &quot;display&quot;: &quot;Holzer stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Holzer&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0191&quot;,
+      &quot;display&quot;: &quot;Iron hematoxylin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Iron hematoxylin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0192&quot;,
+      &quot;display&quot;: &quot;Jones stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Jones&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0193&quot;,
+      &quot;display&quot;: &quot;Jones methenamine silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Jones methenamine silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0194&quot;,
+      &quot;display&quot;: &quot;Kossa stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Kossa&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0195&quot;,
+      &quot;display&quot;: &quot;Lawson-Van Gieson stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Lawson-Van Gieson&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0196&quot;,
+      &quot;display&quot;: &quot;Loeffler methylene blue stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Loeffler methylene blue&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0197&quot;,
+      &quot;display&quot;: &quot;Luxol fast blue with cresyl violet stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Luxol fast blue with cresyl violet&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0198&quot;,
+      &quot;display&quot;: &quot;Luxol fast blue with Periodic acid-Schiff stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Luxol fast blue with Periodic acid-Schiff&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0199&quot;,
+      &quot;display&quot;: &quot;MacNeal's tetrachrome blood stain&quot;,
+      &quot;definition&quot;: &quot;Stain, MacNeal's tetrachrome blood&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0200&quot;,
+      &quot;display&quot;: &quot;Mallory-Heidenhain stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Mallory-Heidenhain&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0201&quot;,
+      &quot;display&quot;: &quot;Masson trichrome stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Masson trichrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0202&quot;,
+      &quot;display&quot;: &quot;Mayer mucicarmine stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Mayer mucicarmine&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0203&quot;,
+      &quot;display&quot;: &quot;Mayers progressive hematoxylin and eosin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Mayers progressive hematoxylin and eosin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0204&quot;,
+      &quot;display&quot;: &quot;May-Grunwald Giemsa stain&quot;,
+      &quot;definition&quot;: &quot;Stain, May-Grunwald Giemsa&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0205&quot;,
+      &quot;display&quot;: &quot;Methyl green stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Methyl green&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0206&quot;,
+      &quot;display&quot;: &quot;Methyl green pyronin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Methyl green pyronin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0207&quot;,
+      &quot;display&quot;: &quot;Modified Gomori-Wheatly trichrome stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Modified Gomori-Wheatly trichrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0208&quot;,
+      &quot;display&quot;: &quot;Modified Masson trichrome stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Modified Masson trichrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0209&quot;,
+      &quot;display&quot;: &quot;Modified trichrome stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Modified trichrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0210&quot;,
+      &quot;display&quot;: &quot;Movat pentachrome stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Movat pentachrome&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0211&quot;,
+      &quot;display&quot;: &quot;Mucicarmine stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Mucicarmine&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0212&quot;,
+      &quot;display&quot;: &quot;Neutral red stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Neutral red&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0213&quot;,
+      &quot;display&quot;: &quot;Night blue stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Night blue&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0214&quot;,
+      &quot;display&quot;: &quot;Non-specific esterase stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Non-specific esterase&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0215&quot;,
+      &quot;display&quot;: &quot;Oil red-O stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Oil red-O&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0216&quot;,
+      &quot;display&quot;: &quot;Orcein stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Orcein&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0217&quot;,
+      &quot;display&quot;: &quot;Perls' stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Perls'&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0218&quot;,
+      &quot;display&quot;: &quot;Phosphotungstic acid-hematoxylin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Phosphotungstic acid-hematoxylin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0219&quot;,
+      &quot;display&quot;: &quot;Potassium ferrocyanide stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Potassium ferrocyanide&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0220&quot;,
+      &quot;display&quot;: &quot;Prussian blue stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Prussian blue&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0221&quot;,
+      &quot;display&quot;: &quot;Putchler modified Bennhold stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Putchler modified Bennhold&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0222&quot;,
+      &quot;display&quot;: &quot;Quinacrine fluorescent stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Quinacrine fluorescent&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0223&quot;,
+      &quot;display&quot;: &quot;Reticulin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Reticulin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0224&quot;,
+      &quot;display&quot;: &quot;Rhodamine stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Rhodamine&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0225&quot;,
+      &quot;display&quot;: &quot;Safranin stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Safranin&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0226&quot;,
+      &quot;display&quot;: &quot;Schmorl stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Schmorl&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0227&quot;,
+      &quot;display&quot;: &quot;Seiver-Munger stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Seiver-Munger&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0228&quot;,
+      &quot;display&quot;: &quot;Silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0229&quot;,
+      &quot;display&quot;: &quot;Specific esterase stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Specific esterase&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0230&quot;,
+      &quot;display&quot;: &quot;Steiner silver stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Steiner silver&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0231&quot;,
+      &quot;display&quot;: &quot;Sudan III stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Sudan III&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0232&quot;,
+      &quot;display&quot;: &quot;Sudan IVI stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Sudan IVI&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0233&quot;,
+      &quot;display&quot;: &quot;Sulfated alcian blue stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Sulfated alcian blue&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0234&quot;,
+      &quot;display&quot;: &quot;Supravital stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Supravital&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0235&quot;,
+      &quot;display&quot;: &quot;Thioflavine-S stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Thioflavine-S&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0236&quot;,
+      &quot;display&quot;: &quot;Three micron Giemsa stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Three micron Giemsa&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0237&quot;,
+      &quot;display&quot;: &quot;Vassar-Culling stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Vassar-Culling&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0238&quot;,
+      &quot;display&quot;: &quot;Vital Stain&quot;,
+      &quot;definition&quot;: &quot;Stain, Vital&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0239&quot;,
+      &quot;display&quot;: &quot;von Kossa stain&quot;,
+      &quot;definition&quot;: &quot;Stain, von Kossa&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0243&quot;,
+      &quot;display&quot;: &quot;Minimum bactericidal concentration test, macrodilution&quot;,
+      &quot;definition&quot;: &quot;Susceptibility, Minimum bactericidal concentration, macrodilution&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0244&quot;,
+      &quot;display&quot;: &quot;Minimum bactericidal concentration test, microdilution&quot;,
+      &quot;definition&quot;: &quot;Susceptibility, Minimum bactericidal concentration, microdilution&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0247&quot;,
+      &quot;display&quot;: &quot;Turbidometric&quot;,
+      &quot;definition&quot;: &quot;Turbidometric&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0248&quot;,
+      &quot;display&quot;: &quot;Refractometric&quot;,
+      &quot;definition&quot;: &quot;Turbidometric, Refractometric&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0249&quot;,
+      &quot;display&quot;: &quot;Thin layer chromatography (TLC)&quot;,
+      &quot;definition&quot;: &quot;Chromatography, Thin Layer&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0250&quot;,
+      &quot;display&quot;: &quot;EMIT&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, enzyme-multiplied technique (EMIT)&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0251&quot;,
+      &quot;display&quot;: &quot;Flow cytometry (FC)&quot;,
+      &quot;definition&quot;: &quot;Flow Cytometry&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0252&quot;,
+      &quot;display&quot;: &quot;Radial immunodiffusion (RID)&quot;,
+      &quot;definition&quot;: &quot;Radial Immunodiffusion&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0253&quot;,
+      &quot;display&quot;: &quot;Fluorescence polarization immunoassay (FPIA)&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, Fluorescence Polarization&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0254&quot;,
+      &quot;display&quot;: &quot;Immunofixation electrophoresis (IFE)&quot;,
+      &quot;definition&quot;: &quot;Electrophoresis, Immunofixation&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0255&quot;,
+      &quot;display&quot;: &quot;Equilibrium dialysis&quot;,
+      &quot;definition&quot;: &quot;Dialysis, Direct Equilibrium&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0256&quot;,
+      &quot;display&quot;: &quot;Kleihauer-Betke acid elution&quot;,
+      &quot;definition&quot;: &quot;Acid Elution, Kleihauer-Betke Method&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0257&quot;,
+      &quot;display&quot;: &quot;Anti-complement immunofluorescence (ACIF)&quot;,
+      &quot;definition&quot;: &quot;Immunofluorescence, Anti-Complement&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0258&quot;,
+      &quot;display&quot;: &quot;GC/MS&quot;,
+      &quot;definition&quot;: &quot;Gas Chromatography/Mass Spectroscopy&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0259&quot;,
+      &quot;display&quot;: &quot;Nephelometry&quot;,
+      &quot;definition&quot;: &quot;Light Scatter, Nephelometry&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0260&quot;,
+      &quot;display&quot;: &quot;IgE immunoassay antibody&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, IgE Antibody Test&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0261&quot;,
+      &quot;display&quot;: &quot;Lymphocyte Microcytotoxicity Assay&quot;,
+      &quot;definition&quot;: &quot;Lymphocyte Microcytotoxicity Assay&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0262&quot;,
+      &quot;display&quot;: &quot;Spectrophotometry&quot;,
+      &quot;definition&quot;: &quot;Spectrophotometry&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0263&quot;,
+      &quot;display&quot;: &quot;Atomic absorption spectrophotometry (AAS)&quot;,
+      &quot;definition&quot;: &quot;Spectrophotometry, Atomic Absorption&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0264&quot;,
+      &quot;display&quot;: &quot;Ion selective electrode (ISE)&quot;,
+      &quot;definition&quot;: &quot;Electrochemical, Ion Selective Electrode&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0265&quot;,
+      &quot;display&quot;: &quot;Gas chromatography (GC)&quot;,
+      &quot;definition&quot;: &quot;Chromatography, Gas&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0266&quot;,
+      &quot;display&quot;: &quot;Isoelectric focusing (IEF)&quot;,
+      &quot;definition&quot;: &quot;Isoelectric Focusing&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0267&quot;,
+      &quot;display&quot;: &quot;Immunochemiluminescence&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, Chemiluminescent&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0268&quot;,
+      &quot;display&quot;: &quot;Microparticle enzyme immunoassay (MEIA)&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, Microparticle Enzyme&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0269&quot;,
+      &quot;display&quot;: &quot;ICP/MS&quot;,
+      &quot;definition&quot;: &quot;Inductively-Coupled Plasma/Mass Spectrometry&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0270&quot;,
+      &quot;display&quot;: &quot;Immunoradiometric assay (IRMA)&quot;,
+      &quot;definition&quot;: &quot;Immunoassay, Immunoradiometric Assay&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0271&quot;,
+      &quot;display&quot;: &quot;Photo optical clot detection&quot;,
+      &quot;definition&quot;: &quot;Coagulation, Photo Optical Clot Detection&quot;
+    },
+    {
+      &quot;code&quot;: &quot;0280&quot;,
+      &quot;display&quot;: &quot;Susceptibility Testing&quot;,
+      &quot;definition&quot;: &quot;Test methods designed to determine a microorganismaTMs susceptibility to being killed by an antibiotic.&quot;,
+      &quot;concept&quot;: [
+        {
+          &quot;code&quot;: &quot;0240&quot;,
+          &quot;display&quot;: &quot;Antibiotic sensitivity, disk&quot;,
+          &quot;definition&quot;: &quot;Susceptibility, Antibiotic sensitivity, disk&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0241&quot;,
+          &quot;display&quot;: &quot;BACTEC susceptibility test&quot;,
+          &quot;definition&quot;: &quot;Susceptibility, BACTEC susceptibility test&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0242&quot;,
+          &quot;display&quot;: &quot;Disk dilution&quot;,
+          &quot;definition&quot;: &quot;Susceptibility, Disk dilution&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0272&quot;,
+          &quot;display&quot;: &quot;Minimum Inhibitory Concentration&quot;,
+          &quot;definition&quot;: &quot;Testing to measure the minimum concentration of the antibacterial agent in a given culture medium below which bacterial growth is not inhibited.&quot;,
+          &quot;concept&quot;: [
+            {
+              &quot;code&quot;: &quot;0245&quot;,
+              &quot;display&quot;: &quot;Minimum Inhibitory Concentration, macrodilution&quot;,
+              &quot;definition&quot;: &quot;Susceptibility, Minimum Inhibitory concentration, macrodilution&quot;
+            },
+            {
+              &quot;code&quot;: &quot;0246&quot;,
+              &quot;display&quot;: &quot;Minimum Inhibitory Concentration, microdilution&quot;,
+              &quot;definition&quot;: &quot;Susceptibility, Minimum Inhibitory concentration, microdilution&quot;
+            }
+          ]
+        },
+        {
+          &quot;code&quot;: &quot;0273&quot;,
+          &quot;display&quot;: &quot;Viral Genotype Susceptibility&quot;,
+          &quot;definition&quot;: &quot;Viral Genotype Susceptibility&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0274&quot;,
+          &quot;display&quot;: &quot;Viral Phenotype Susceptibility&quot;,
+          &quot;definition&quot;: &quot;Viral Phenotype Susceptibility&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0275&quot;,
+          &quot;display&quot;: &quot;Gradient Strip&quot;,
+          &quot;definition&quot;: &quot;Gradient Strip&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0275a&quot;,
+          &quot;display&quot;: &quot;Minimum Lethal Concentration (MLC)&quot;,
+          &quot;definition&quot;: &quot;Minimum Lethal Concentration (MLC)&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0276&quot;,
+          &quot;display&quot;: &quot;Slow Mycobacteria Susceptibility&quot;,
+          &quot;definition&quot;: &quot;Testing to measure the minimum concentration of the antibacterial agent in a given culture medium below which bacterial growth is not inhibited.&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0277&quot;,
+          &quot;display&quot;: &quot;Serum bactericidal titer&quot;,
+          &quot;definition&quot;: &quot;Serum bactericidal titer&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0278&quot;,
+          &quot;display&quot;: &quot;Agar screen&quot;,
+          &quot;definition&quot;: &quot;Agar screen&quot;
+        },
+        {
+          &quot;code&quot;: &quot;0279&quot;,
+          &quot;display&quot;: &quot;Disk induction&quot;,
+          &quot;definition&quot;: &quot;Disk induction&quot;
+        }
+      ]
+    },
+    {
+      &quot;code&quot;: &quot;0127&quot;,
+      &quot;display&quot;: &quot;Nucleic acid probe&quot;,
+      &quot;definition&quot;: &quot;Molecular, Nucleic acid probe&quot;,
+      &quot;property&quot;: [
+        {
+          &quot;code&quot;: &quot;notSelectable&quot;,
+          &quot;valueBoolean&quot;: true
+        }
+      ]
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:29+0000. <a href="../../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="../../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fv3-ObservationMethod.cs.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fv3-ObservationMethod.cs.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="../../license.html"><img src="../../cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../.././assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="../.././dist/js/bootstrap.min.js"> </script>
+<script src="../.././assets/js/respond.min.js"> </script>
+
+<script src="../.././assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

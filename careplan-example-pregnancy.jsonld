@@ -1,0 +1,430 @@
+{
+  "@context": "http://build.fhir.org/CarePlan.jsonld",
+  "@context": "http://hl7.org/fhir/CarePlan/preg",
+  "Resource.id": {
+    "id.value": "preg"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "additional"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>A maternity care plan (for a pregnant woman).</p>\n      <p>LMP is 1st Jan, 2013 (a greaat new years party!) The plan has a scheduled first antenatal,\n            and 'placeholders' for the second antenatal and delivery (there would be lots of others of course)</p>\n      <p>Note that where is a proposed 'status' element against each activity</p>\n    </div>"
+    }
+  },
+  "Condition": [
+    {
+      "Resource.id": {
+        "id.value": "p1"
+      },
+      "Condition.verificationStatus": {
+        "code.value": "confirmed"
+      },
+      "Condition.code": {
+        "CodeableConcept.text": {
+          "string.value": "pregnancy"
+        }
+      },
+      "Condition.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "pr1"
+      },
+      "Practitioner.name": [
+        {
+          "HumanName.family": [
+            {
+              "string.value": "Midwife"
+            }
+          ],
+          "HumanName.given": [
+            {
+              "string.value": "Mavis"
+            }
+          ]
+        }
+      ],
+      "Practitioner.role": [
+        {
+          "Practitioner.role.specialty": [
+            {
+              "CodeableConcept.text": {
+                "string.value": "Midwife"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "pr2"
+      },
+      "Practitioner.name": [
+        {
+          "HumanName.family": [
+            {
+              "string.value": "Obstetrician"
+            }
+          ],
+          "HumanName.given": [
+            {
+              "string.value": "Oscar"
+            }
+          ]
+        }
+      ],
+      "Practitioner.role": [
+        {
+          "Practitioner.role.specialty": [
+            {
+              "CodeableConcept.text": {
+                "string.value": "Obstetrician"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "uri.value": "http://example.org/mysys"
+                },
+                "Coding.code": {
+                  "code.value": "lmc"
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "string.value": "Midwife"
+            }
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "string.value": "#pr1"
+            },
+            "Reference.display": {
+              "string.value": "Mavis Midwife"
+            }
+          }
+        },
+        {
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "uri.value": "http://example.org/mysys"
+                },
+                "Coding.code": {
+                  "code.value": "obs"
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "string.value": "Obstretitian"
+            }
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "string.value": "#pr2"
+            },
+            "Reference.display": {
+              "string.value": "Oscar Obstetrician"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "goal"
+      },
+      "Goal.status": {
+        "code.value": "in-progress"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Maintain patient's health throughout pregnancy and ensure a healthy child"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    }
+  ],
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "uri.value": "http://example.org/DoNotUse/careplan#lmp"
+      },
+      "Extension.valueDateTime": {
+        "dateTime.value": "2013-01-01"
+      }
+    }
+  ],
+  "CarePlan.status": {
+    "code.value": "active"
+  },
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/1"
+    },
+    "Reference.display": {
+      "string.value": "Eve Everywoman"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "dateTime.value": "2013-01-01"
+    },
+    "Period.end": {
+      "dateTime.value": "2013-10-01"
+    }
+  },
+  "CarePlan.careTeam": [
+    {
+      "Reference.reference": {
+        "string.value": "#careteam"
+      }
+    }
+  ],
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "string.value": "#p1"
+      },
+      "Reference.display": {
+        "string.value": "pregnancy"
+      }
+    }
+  ],
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "string.value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://example.org/DoNotUse/careplan#andetails"
+          },
+          "Extension.valueUri": {
+            "uri.value": "http://orionhealth.com/fhir/careplan/1andetails"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "encounter"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://example.org/mySystem"
+              },
+              "Coding.code": {
+                "code.value": "1an"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "First Antenatal encounter"
+          }
+        },
+        "CarePlan.activity.detail.status": {
+          "code.value": "scheduled"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledTiming": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "dateTime.value": "2013-02-14"
+              },
+              "Period.end": {
+                "dateTime.value": "2013-02-28"
+              }
+            }
+          }
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "string.value": "#pr1"
+            },
+            "Reference.display": {
+              "string.value": "Mavis Midwife"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.description": {
+          "string.value": "The first antenatal encounter. This is where a detailed physical examination is performed.             and the pregnanacy discussed with the mother-to-be."
+        }
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "encounter"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://example.org/mySystem"
+              },
+              "Coding.code": {
+                "code.value": "an"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "Follow-up Antenatal encounter"
+          }
+        },
+        "CarePlan.activity.detail.status": {
+          "code.value": "not-started"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledTiming": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "dateTime.value": "2013-03-01"
+              },
+              "Period.end": {
+                "dateTime.value": "2013-03-14"
+              }
+            }
+          }
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "string.value": "#pr1"
+            },
+            "Reference.display": {
+              "string.value": "Mavis Midwife"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.description": {
+          "string.value": "The second antenatal encounter. Discuss any issues that arose from the first antenatal encounter"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "encounter"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://example.org/mySystem"
+              },
+              "Coding.code": {
+                "code.value": "del"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "Delivery"
+          }
+        },
+        "CarePlan.activity.detail.status": {
+          "code.value": "not-started"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledTiming": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "dateTime.value": "2013-09-01"
+              },
+              "Period.end": {
+                "dateTime.value": "2013-09-14"
+              }
+            }
+          }
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "string.value": "#pr1"
+            },
+            "Reference.display": {
+              "string.value": "Mavis Midwife"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.description": {
+          "string.value": "The delivery."
+        }
+      }
+    }
+  ]
+}

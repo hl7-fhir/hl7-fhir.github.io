@@ -1,0 +1,80 @@
+{
+  "@context": "http://build.fhir.org/Procedure.jsonld",
+  "@context": "http://hl7.org/fhir/Procedure/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Routine Appendectomy</div>"
+    }
+  },
+  "Procedure.status": {
+    "code.value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "80146002"
+        },
+        "Coding.display": {
+          "string.value": "Appendectomy (Procedure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Appendectomy"
+    },
+    "Resource.concept": "http://snomed.info/sct#80146002"
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Procedure.performedDateTime": {
+    "dateTime.value": "2013-04-05"
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "string.value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "string.value": "Dr Cecil Surgeon"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "Procedure.reasonCode": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "Generalized abdominal pain 24 hours. Localized in RIF with rebound and guarding"
+      }
+    }
+  ],
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "ROS 5 days  - 2013-04-10"
+      }
+    }
+  ],
+  "Procedure.notes": [
+    {
+      "Annotation.text": {
+        "string.value": "Routine Appendectomy. Appendix was inflamed and in retro-caecal position"
+      }
+    }
+  ]
+}

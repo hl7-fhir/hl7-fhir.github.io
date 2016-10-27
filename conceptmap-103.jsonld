@@ -1,0 +1,150 @@
+{
+  "@context": "http://build.fhir.org/ConceptMap.jsonld",
+  "@context": "http://hl7.org/fhir/ConceptMap/103",
+  "Resource.id": {
+    "id.value": "103"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>SNOMED CT to ICD-10-CM mappings for fracture of ulna (http://hl7.org/fhir/ConceptMap/103)</h2>\n      <p>Mapping from http://snomed.info/id?fhir_vs to http://hl7.org/fhir/sid/icd-10-us</p>\n      <p>DRAFT (not intended for production usage). Published on Jun 13, 2012 by HL7, Inc (FHIR project team (example): \n        <a href=\"http://hl7.org/fhir\">http://hl7.org/fhir</a>; ). Creative Commons 0\n      </p>\n      <div>\n        <p>Example rule-based mappings between SNOMED CT to ICD-10-CM for fracture of ulna</p>\n\n      </div>\n      <br/>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Source Code</b>\n          </td>\n          <td>\n            <b>Equivalence</b>\n          </td>\n          <td>\n            <b>Destination Code</b>\n          </td>\n          <td>\n            <b>Comments</b>\n          </td>\n        </tr>\n        <tr>\n          <td>263204007 (Fracture of shaft of ulna (disorder))</td>\n          <td>narrower</td>\n          <td>S52.209A</td>\n          <td>The target mapping to ICD-10-CM is narrower, since additional patient data on the encounter (initial vs. subsequent) and fracture type is required for a valid ICD-10-CM mapping.</td>\n        </tr>\n        <tr>\n          <td/>\n          <td>narrower</td>\n          <td>S52.209D</td>\n          <td>The target mapping to ICD-10-CM is narrower, since additional patient data on the encounter (initial vs. subsequent), fracture type and healing (for subsequent encounter) is required for a valid ICD-10-CM mapping.</td>\n        </tr>\n      </table>\n    </div>"
+    }
+  },
+  "ConceptMap.url": {
+    "uri.value": "http://hl7.org/fhir/ConceptMap/103"
+  },
+  "ConceptMap.identifier": {
+    "Identifier.system": {
+      "uri.value": "urn:ietf:rfc:3986"
+    },
+    "Identifier.value": {
+      "string.value": "urn:uuid:53cd62ee-033e-414c-9f58-3ca97b5ffc3b"
+    }
+  },
+  "ConceptMap.version": {
+    "string.value": "20120613"
+  },
+  "ConceptMap.name": {
+    "string.value": "SNOMED CT to ICD-10-CM mappings for fracture of ulna"
+  },
+  "ConceptMap.status": {
+    "code.value": "draft"
+  },
+  "ConceptMap.experimental": {
+    "boolean.value": true
+  },
+  "ConceptMap.publisher": {
+    "string.value": "HL7, Inc"
+  },
+  "ConceptMap.contact": [
+    {
+      "ContactDetail.name": {
+        "string.value": "FHIR project team (example)"
+      },
+      "ContactDetail.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "other"
+          },
+          "ContactPoint.value": {
+            "string.value": "http://hl7.org/fhir"
+          }
+        }
+      ]
+    }
+  ],
+  "ConceptMap.date": {
+    "dateTime.value": "2012-06-13"
+  },
+  "ConceptMap.description": {
+    "markdown.value": "Example rule-based mappings between SNOMED CT to ICD-10-CM for fracture of ulna"
+  },
+  "ConceptMap.jurisdiction": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://unstats.un.org/unsd/methods/m49/m49.htm"
+          },
+          "Coding.code": {
+            "code.value": "840"
+          },
+          "Coding.display": {
+            "string.value": "United States of America"
+          }
+        }
+      ]
+    }
+  ],
+  "ConceptMap.purpose": {
+    "markdown.value": "Show example rule based mappings"
+  },
+  "ConceptMap.copyright": {
+    "markdown.value": "Creative Commons 0"
+  },
+  "ConceptMap.sourceReference": {
+    "Reference.reference": {
+      "string.value": "http://snomed.info/id?fhir_vs"
+    },
+    "Resource.reference": "http://snomed.info/id?fhir_vs"
+  },
+  "ConceptMap.targetReference": {
+    "Reference.reference": {
+      "string.value": "http://hl7.org/fhir/sid/icd-10-us"
+    },
+    "Resource.reference": "http://hl7.org/fhir/sid/icd-10-us"
+  },
+  "ConceptMap.group": [
+    {
+      "ConceptMap.group.source": {
+        "uri.value": "http://snomed.info/sct"
+      },
+      "ConceptMap.group.sourceVersion": {
+        "string.value": "March 2015 US Edition"
+      },
+      "ConceptMap.group.target": {
+        "uri.value": "http://hl7.org/fhir/sid/icd-10-us"
+      },
+      "ConceptMap.group.targetVersion": {
+        "string.value": "2015"
+      },
+      "ConceptMap.group.element": [
+        {
+          "ConceptMap.group.element.code": {
+            "code.value": "263204007"
+          },
+          "ConceptMap.group.element.target": [
+            {
+              "ConceptMap.group.element.target.code": {
+                "code.value": "S52.209A"
+              },
+              "ConceptMap.group.element.target.equivalence": {
+                "code.value": "narrower"
+              },
+              "ConceptMap.group.element.target.comments": {
+                "string.value": "The target mapping to ICD-10-CM is narrower, since additional patient data on the encounter (initial vs. subsequent) and fracture type is required for a valid ICD-10-CM mapping."
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.group.element.target": [
+            {
+              "ConceptMap.group.element.target.code": {
+                "code.value": "S52.209D"
+              },
+              "ConceptMap.group.element.target.equivalence": {
+                "code.value": "narrower"
+              },
+              "ConceptMap.group.element.target.comments": {
+                "string.value": "The target mapping to ICD-10-CM is narrower, since additional patient data on the encounter (initial vs. subsequent), fracture type and healing (for subsequent encounter) is required for a valid ICD-10-CM mapping."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

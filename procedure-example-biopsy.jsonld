@@ -1,0 +1,100 @@
+{
+  "@context": "http://build.fhir.org/Procedure.jsonld",
+  "@context": "http://hl7.org/fhir/Procedure/biopsy",
+  "Resource.id": {
+    "id.value": "biopsy"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biopsy of suspected melanoma L) arm</div>"
+    }
+  },
+  "Procedure.status": {
+    "code.value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "90105005"
+        },
+        "Coding.display": {
+          "string.value": "Biopsy of soft tissue of forearm (Procedure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Biopsy of suspected melanoma L) arm"
+    },
+    "Resource.concept": "http://snomed.info/sct#90105005"
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Procedure.performedDateTime": {
+    "dateTime.value": "2014-02-03"
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "string.value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "string.value": "Dr Bert Biopser"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "Procedure.reasonCode": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "Dark lesion l) forearm. getting darker last 3 months."
+      }
+    }
+  ],
+  "Procedure.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "368225008"
+          },
+          "Coding.display": {
+            "string.value": "Entire Left Forearm"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "string.value": "Left forearm"
+      }
+    }
+  ],
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "Review in clinic"
+      }
+    }
+  ],
+  "Procedure.notes": [
+    {
+      "Annotation.text": {
+        "string.value": "Standard Biopsy"
+      }
+    }
+  ]
+}

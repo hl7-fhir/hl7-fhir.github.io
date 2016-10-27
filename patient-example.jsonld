@@ -1,0 +1,249 @@
+{
+  "@context": "http://build.fhir.org/Patient.jsonld",
+  "@context": "http://hl7.org/fhir/Patient/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <table>\n        \n        <tbody>\n          \n          <tr>\n            \n            <td>Name</td>\n            \n            <td>Peter James \n              <b>Chalmers</b> (&quot;Jim&quot;)\n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>Address</td>\n            \n            <td>534 Erewhon, Pleasantville, Vic, 3999</td>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>Contacts</td>\n            \n            <td>Home: unknown. Work: (03) 5555 6473</td>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>Id</td>\n            \n            <td>MRN: 12345 (Acme Healthcare)</td>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>    \n    \n    </div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "code.value": "MR"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:1.2.36.146.595.217.0.1"
+      },
+      "Identifier.value": {
+        "string.value": "12345"
+      },
+      "Identifier.period": {
+        "Period.start": {
+          "dateTime.value": "2001-05-06"
+        }
+      },
+      "Identifier.assigner": {
+        "Reference.display": {
+          "string.value": "Acme Healthcare"
+        }
+      }
+    }
+  ],
+  "Patient.active": {
+    "boolean.value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "code.value": "official"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "Chalmers"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Peter"
+        },
+        {
+          "string.value": "James"
+        }
+      ]
+    },
+    {
+      "HumanName.use": {
+        "code.value": "usual"
+      },
+      "HumanName.given": [
+        {
+          "string.value": "Jim"
+        }
+      ]
+    }
+  ],
+  "Patient.telecom": [
+    {
+      "ContactPoint.use": {
+        "code.value": "home"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "(03) 5555 6473"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    }
+  ],
+  "Patient.gender": {
+    "code.value": "male"
+  },
+  "Patient.birthDate": {
+    "date.value": "1974-12-25",
+    "Element.extension": [
+      {
+        "Extension.url": {
+          "uri.value": "http://hl7.org/fhir/StructureDefinition/patient-birthTime"
+        },
+        "Extension.valueDateTime": {
+          "dateTime.value": "1974-12-25T14:35:45-05:00"
+        }
+      }
+    ]
+  },
+  "Patient.deceasedBoolean": {
+    "boolean.value": false
+  },
+  "Patient.address": [
+    {
+      "Address.use": {
+        "code.value": "home"
+      },
+      "Address.type": {
+        "code.value": "both"
+      },
+      "Address.line": [
+        {
+          "string.value": "534 Erewhon St"
+        }
+      ],
+      "Address.city": {
+        "string.value": "PleasantVille"
+      },
+      "Address.district": {
+        "string.value": "Rainbow"
+      },
+      "Address.state": {
+        "string.value": "Vic"
+      },
+      "Address.postalCode": {
+        "string.value": "3999"
+      },
+      "Address.period": {
+        "Period.start": {
+          "dateTime.value": "1974-12-25"
+        }
+      }
+    }
+  ],
+  "Patient.contact": [
+    {
+      "Patient.contact.relationship": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/patient-contact-relationship"
+              },
+              "Coding.code": {
+                "code.value": "partner"
+              }
+            }
+          ]
+        }
+      ],
+      "Patient.contact.name": {
+        "HumanName.family": [
+          {
+            "string.value": "du",
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+                },
+                "Extension.valueCode": {
+                  "code.value": "VV"
+                }
+              }
+            ]
+          },
+          {
+            "string.value": "Marché"
+          }
+        ],
+        "HumanName.given": [
+          {
+            "string.value": "Bénédicte"
+          }
+        ]
+      },
+      "Patient.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "phone"
+          },
+          "ContactPoint.value": {
+            "string.value": "+33 (237) 998327"
+          }
+        }
+      ],
+      "Patient.contact.address": {
+        "Address.use": {
+          "code.value": "home"
+        },
+        "Address.type": {
+          "code.value": "both"
+        },
+        "Address.line": [
+          {
+            "string.value": "534 Erewhon St"
+          }
+        ],
+        "Address.city": {
+          "string.value": "PleasantVille"
+        },
+        "Address.district": {
+          "string.value": "Rainbow"
+        },
+        "Address.state": {
+          "string.value": "Vic"
+        },
+        "Address.postalCode": {
+          "string.value": "3999"
+        },
+        "Address.period": {
+          "Period.start": {
+            "dateTime.value": "1974-12-25"
+          }
+        }
+      },
+      "Patient.contact.gender": {
+        "code.value": "female"
+      },
+      "Patient.contact.period": {
+        "Period.start": {
+          "dateTime.value": "2012"
+        }
+      }
+    }
+  ],
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "string.value": "Organization/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/1"
+  }
+}

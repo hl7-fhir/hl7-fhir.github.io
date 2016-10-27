@@ -1,0 +1,680 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<CapabilityStatement> AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# A statement of system Capabilities
+<CapabilityStatement> CLOSED {
+    a [fhir:CapabilityStatement];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:DomainResource.text @<Narrative>?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @<Resource>*;  # Contained, inline Resources
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.url @<uri>?;   # Logical uri to reference this 
+                                            # capability statement (globally 
+                                            # unique) 
+    fhir:CapabilityStatement.version @<string>?;  # Business version of the capability 
+                                            # statement 
+    fhir:CapabilityStatement.name @<string>?;  # Name for this capability statement 
+                                            # (Computer friendly) 
+    fhir:CapabilityStatement.title @<string>?;  # Name for this capability statement 
+                                            # (Human friendly) 
+    fhir:CapabilityStatement.status @<code> AND
+    	{fhir:value @fhirvs:publication-status};  # draft | active | retired
+    fhir:CapabilityStatement.experimental @<boolean>?;  # If for testing purposes, not real 
+                                            # usage 
+    fhir:CapabilityStatement.date @<dateTime>;  # Date this was last changed
+    fhir:CapabilityStatement.publisher @<string>?;  # Name of the publisher 
+                                            # (Organization or individual) 
+    fhir:CapabilityStatement.contact @<ContactDetail>*;  # Contact details for the publisher
+    fhir:CapabilityStatement.description @<markdown>?;  # Natural language description of 
+                                            # the capability statement 
+    fhir:CapabilityStatement.useContext @<UsageContext>*;  # Content intends to support these 
+                                            # contexts 
+    fhir:CapabilityStatement.jurisdiction @<CodeableConcept>*;  # Intended jurisdiction for 
+                                            # capability statement (if 
+                                            # applicable) 
+    fhir:CapabilityStatement.purpose @<markdown>?;  # Why this capability statement is 
+                                            # defined 
+    fhir:CapabilityStatement.copyright @<markdown>?;  # Use and/or publishing restrictions
+    fhir:CapabilityStatement.kind @<code> AND
+    	{fhir:value @fhirvs:capability-statement-kind};  # instance | capability | 
+                                            # requirements 
+    fhir:CapabilityStatement.instantiates @<uri>*;  # Canonical URL of service 
+                                            # implemented/used by software 
+    fhir:CapabilityStatement.software @<CapabilityStatement.software>?;  # Software that is covered by this 
+                                            # capability statement 
+    fhir:CapabilityStatement.implementation @<CapabilityStatement.implementation>?;  # If this describes a specific 
+                                            # instance 
+    fhir:CapabilityStatement.fhirVersion @<id>;  # FHIR Version the system uses
+    fhir:CapabilityStatement.acceptUnknown @<code> AND
+    	{fhir:value @fhirvs:unknown-content-code};  # no | extensions | elements | both
+    fhir:CapabilityStatement.format @<code>+;  # formats supported (xml | json | 
+                                            # ttl | mime type) 
+    fhir:CapabilityStatement.profile @<Reference>*;  # Profiles for use cases supported
+    fhir:CapabilityStatement.rest @<CapabilityStatement.rest>*;  # If the endpoint is a RESTful one
+    fhir:CapabilityStatement.messaging @<CapabilityStatement.messaging>*;  # If messaging is supported
+    fhir:CapabilityStatement.document @<CapabilityStatement.document>*;  # Document definition
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# If this describes a specific instance
+<CapabilityStatement.implementation> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.implementation.description @<string>;  # Describes this specific instance
+    fhir:CapabilityStatement.implementation.url @<uri>?;  # Base URL for the installation
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# If messaging is supported
+<CapabilityStatement.messaging> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.messaging.endpoint @<CapabilityStatement.messaging.endpoint>*;  # Where messages should be sent
+    fhir:CapabilityStatement.messaging.reliableCache @<unsignedInt>?;  # Reliable Message Cache Length (min)
+    fhir:CapabilityStatement.messaging.documentation @<string>?;  # Messaging interface behavior 
+                                            # details 
+    fhir:CapabilityStatement.messaging.event @<CapabilityStatement.messaging.event>+;  # Declare support for this event
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Software that is covered by this capability statement
+<CapabilityStatement.software> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.software.name @<string>;  # A name the software is known by
+    fhir:CapabilityStatement.software.version @<string>?;  # Version covered by this statement
+    fhir:CapabilityStatement.software.releaseDate @<dateTime>?;  # Date this version released
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# If the endpoint is a RESTful one
+<CapabilityStatement.rest> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.mode @<code> AND
+    	{fhir:value @fhirvs:restful-capability-mode};  # client | server
+    fhir:CapabilityStatement.rest.documentation @<string>?;  # General description of 
+                                            # implementation 
+    fhir:CapabilityStatement.rest.security @<CapabilityStatement.rest.security>?;  # Information about security of 
+                                            # implementation 
+    fhir:CapabilityStatement.rest.resource @<CapabilityStatement.rest.resource>*;  # Resource served on the REST 
+                                            # interface 
+    fhir:CapabilityStatement.rest.interaction @<CapabilityStatement.rest.interaction>*;  # What operations are supported?
+    fhir:CapabilityStatement.rest.searchParam @<CapabilityStatement.rest.resource.searchParam>*;  # Search params for searching all 
+                                            # resources 
+    fhir:CapabilityStatement.rest.operation @<CapabilityStatement.rest.operation>*;  # Definition of an operation or a 
+                                            # custom query 
+    fhir:CapabilityStatement.rest.compartment @<uri>*;  # Compartments served/used by system
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Document definition
+<CapabilityStatement.document> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.document.mode @<code> AND
+    	{fhir:value @fhirvs:document-mode};  # producer | consumer
+    fhir:CapabilityStatement.document.documentation @<string>?;  # Description of document support
+    fhir:CapabilityStatement.document.profile @<Reference>;  # Constraint on a resource used in 
+                                            # the document 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Resource served on the REST interface
+<CapabilityStatement.rest.resource> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.resource.type @<code> AND
+    	{fhir:value @fhirvs:resource-types};  # A resource type that is supported
+    fhir:CapabilityStatement.rest.resource.profile @<Reference>?;  # Base System profile for all uses 
+                                            # of resource 
+    fhir:CapabilityStatement.rest.resource.documentation @<markdown>?;  # Additional information about the 
+                                            # use of the resource type 
+    fhir:CapabilityStatement.rest.resource.interaction @<CapabilityStatement.rest.resource.interaction>+;  # What operations are supported?
+    fhir:CapabilityStatement.rest.resource.versioning @<code> AND
+    	{fhir:value @fhirvs:versioning-policy}?;  # no-version | versioned | 
+                                            # versioned-update 
+    fhir:CapabilityStatement.rest.resource.readHistory @<boolean>?;  # Whether vRead can return past 
+                                            # versions 
+    fhir:CapabilityStatement.rest.resource.updateCreate @<boolean>?;  # If update can commit to a new 
+                                            # identity 
+    fhir:CapabilityStatement.rest.resource.conditionalCreate @<boolean>?;  # If allows/uses conditional create
+    fhir:CapabilityStatement.rest.resource.conditionalRead @<code> AND
+    	{fhir:value @fhirvs:conditional-read-status}?;  # not-supported | modified-since | 
+                                            # not-match | full-support 
+    fhir:CapabilityStatement.rest.resource.conditionalUpdate @<boolean>?;  # If allows/uses conditional update
+    fhir:CapabilityStatement.rest.resource.conditionalDelete @<code> AND
+    	{fhir:value @fhirvs:conditional-delete-status}?;  # not-supported | single | multiple 
+                                            # - how conditional delete is 
+                                            # supported 
+    fhir:CapabilityStatement.rest.resource.referencePolicy @<code> AND
+    	{fhir:value @fhirvs:reference-handling-policy}*;  # literal | logical | resolves | 
+                                            # enforced | local 
+    fhir:CapabilityStatement.rest.resource.searchInclude @<string>*;  # _include values supported by the 
+                                            # server 
+    fhir:CapabilityStatement.rest.resource.searchRevInclude @<string>*;  # _revinclude values supported by 
+                                            # the server 
+    fhir:CapabilityStatement.rest.resource.searchParam @<CapabilityStatement.rest.resource.searchParam>*;  # Search params supported by 
+                                            # implementation 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Definition of an operation or a custom query
+<CapabilityStatement.rest.operation> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.operation.name @<string>;  # Name by which the operation/query 
+                                            # is invoked 
+    fhir:CapabilityStatement.rest.operation.definition @<Reference>;  # The defined operation/query
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# What operations are supported?
+<CapabilityStatement.rest.interaction> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.interaction.code @<code> AND
+    	{fhir:value @fhirvs:system-restful-interaction};  # transaction | batch | 
+                                            # search-system | history-system 
+    fhir:CapabilityStatement.rest.interaction.documentation @<string>?;  # Anything special about operation 
+                                            # behavior 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Where messages should be sent
+<CapabilityStatement.messaging.endpoint> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.messaging.endpoint.protocol @<Coding>;  # http | ftp | mllp +
+    fhir:CapabilityStatement.messaging.endpoint.address @<uri>;  # Address of end-point
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Declare support for this event
+<CapabilityStatement.messaging.event> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.messaging.event.code @<Coding>;  # Event type
+    fhir:CapabilityStatement.messaging.event.category @<code> AND
+    	{fhir:value @fhirvs:message-significance-category}?;  # Consequence | Currency | 
+                                            # Notification 
+    fhir:CapabilityStatement.messaging.event.mode @<code> AND
+    	{fhir:value @fhirvs:event-capability-mode};  # sender | receiver
+    fhir:CapabilityStatement.messaging.event.focus @<code> AND
+    	{fhir:value @fhirvs:resource-types};  # Resource that's focus of message
+    fhir:CapabilityStatement.messaging.event.request @<Reference>;  # Profile that describes the request
+    fhir:CapabilityStatement.messaging.event.response @<Reference>;  # Profile that describes the response
+    fhir:CapabilityStatement.messaging.event.documentation @<string>?;  # Endpoint-specific event 
+                                            # documentation 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Information about security of implementation
+<CapabilityStatement.rest.security> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.security.cors @<boolean>?;  # Adds CORS Headers 
+                                            # (http://enable-cors.org/) 
+    fhir:CapabilityStatement.rest.security.service @<CodeableConcept>*;  # OAuth | SMART-on-FHIR | NTLM | 
+                                            # Basic | Kerberos | Certificates 
+    fhir:CapabilityStatement.rest.security.description @<string>?;  # General description of how 
+                                            # security works 
+    fhir:CapabilityStatement.rest.security.certificate @<CapabilityStatement.rest.security.certificate>*;  # Certificates associated with 
+                                            # security profiles 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# What operations are supported?
+<CapabilityStatement.rest.resource.interaction> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.resource.interaction.code @<code> AND
+    	{fhir:value @fhirvs:type-restful-interaction};  # read | vread | update | delete | 
+                                            # history-instance | history-type | 
+                                            # create | search-type 
+    fhir:CapabilityStatement.rest.resource.interaction.documentation @<string>?;  # Anything special about operation 
+                                            # behavior 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Certificates associated with security profiles
+<CapabilityStatement.rest.security.certificate> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.security.certificate.type @<code>?;  # Mime type for certificate
+    fhir:CapabilityStatement.rest.security.certificate.blob @<base64Binary>?;  # Actual certificate
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Search params supported by implementation
+<CapabilityStatement.rest.resource.searchParam> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:CapabilityStatement.rest.resource.searchParam.name @<string>;  # Name of search parameter
+    fhir:CapabilityStatement.rest.resource.searchParam.definition @<uri>?;  # Source of definition for parameter
+    fhir:CapabilityStatement.rest.resource.searchParam.type @<code> AND
+    	{fhir:value @fhirvs:search-param-type};  # number | date | string | token | 
+                                            # reference | composite | quantity | 
+                                            # uri 
+    fhir:CapabilityStatement.rest.resource.searchParam.documentation @<string>?;  # Server-specific usage
+    fhir:CapabilityStatement.rest.resource.searchParam.target @<code> AND
+    	{fhir:value @fhirvs:resource-types}*;  # Types of resource (if a resource 
+                                            # reference) 
+    fhir:CapabilityStatement.rest.resource.searchParam.modifier @<code> AND
+    	{fhir:value @fhirvs:search-modifier-code}*;  # missing | exact | contains | not | 
+                                            # text | in | not-in | below | above 
+                                            # | type 
+    fhir:CapabilityStatement.rest.resource.searchParam.chain @<string>*;  # Chained names supported
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Primitive Type dateTime
+<dateTime> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Metadata about a resource
+<Meta> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @<id>?;             # Version specific identifier
+    fhir:Meta.lastUpdated @<instant>?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @<uri>*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @<Coding>*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @<Coding>*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+<Reference> CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @<string>?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @<Identifier>?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @<string>?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+<Resource> {a .+;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# Primitive Type uri
+<uri> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# Contact information
+<ContactDetail> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:ContactDetail.name @<string>?;     # Name of an individual to contact
+    fhir:ContactDetail.telecom @<ContactPoint>*;  # Contact details for individual or 
+                                            # organization 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type boolean
+<boolean> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+<Narrative> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @<code> AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Describes the context of use for a knowledge resource
+<UsageContext> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:UsageContext.code @<Coding>;       # Type of context being specified
+    (                                       # Value that defines the context
+        fhir:UsageContext.valueCodeableConcept @<CodeableConcept>  |
+        fhir:UsageContext.valueQuantity @<Quantity>  |
+        fhir:UsageContext.valueRange @<Range> 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+<Coding> CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @<uri>?;             # Identity of the terminology system
+    fhir:Coding.version @<string>?;         # Version of the system - if relevant
+    fhir:Coding.code @<code>?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @<string>?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @<boolean>?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type base64Binary
+<base64Binary> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:base64Binary?;           # Primitive value for base64Binary
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type markdown
+<markdown> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for markdown
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type unsignedInt
+<unsignedInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:nonNegativeInteger?;     # Primitive value for unsignedInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+<CodeableConcept> CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @<Coding>*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @<string>?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A measured or measurable amount
+<Quantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Set of values bounded by low and high
+<Range> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Range.low @<SimpleQuantity>?;      # Low limit
+    fhir:Range.high @<SimpleQuantity>?;     # High limit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+<instant> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Details of a Technology mediated contact point (phone, fax, email, etc.)
+<ContactPoint> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:ContactPoint.system @<code> AND
+    	{fhir:value @fhirvs:contact-point-system}?;  # phone | fax | email | pager | other
+    fhir:ContactPoint.value @<string>?;     # The actual contact point details
+    fhir:ContactPoint.use @<code> AND
+    	{fhir:value @fhirvs:contact-point-use}?;  # home | work | temp | old | mobile 
+                                            # - purpose of this contact point 
+    fhir:ContactPoint.rank @<positiveInt>?;  # Specify preferred order of use (1 
+                                            # = highest) 
+    fhir:ContactPoint.period @<Period>?;    # Time period when the contact point 
+                                            # was/is in use 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An identifier intended for computation
+<Identifier> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @<code> AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @<CodeableConcept>?;  # Description of identifier
+    fhir:Identifier.system @<uri>?;         # The namespace for the identifier
+    fhir:Identifier.value @<string>?;       # The value that is unique
+    fhir:Identifier.period @<Period>?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @<Reference>?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type positiveInt
+<positiveInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:positiveInteger?;        # Primitive value for positiveInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A fixed quantity (no comparator)
+<SimpleQuantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+<Period> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @<dateTime>?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @<dateTime>?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+<decimal> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+#---------------------- Value Sets ------------------------
+
+# A code that indicates how the server supports conditional delete.
+fhirvs:conditional-delete-status ["not-supported" "single" "multiple"]
+
+# How a capability statement is intended to be used.
+fhirvs:capability-statement-kind ["instance" "capability" "requirements"]
+
+# A code that indicates how the server supports conditional read.
+fhirvs:conditional-read-status ["not-supported" "modified-since" "not-match" "full-support"]
+
+# Whether the application produces or consumes documents.
+fhirvs:document-mode ["producer" "consumer"]
+
+# Operations supported by REST at the system level.
+fhirvs:system-restful-interaction ["transaction" "batch" "search-system" "history-system"]
+
+# One of the resource types defined as part of FHIR.
+fhirvs:resource-types ["Account" "ActivityDefinition" "ActivityGroup" "AllergyIntolerance" "Appointment" "AppointmentResponse" "AuditEvent" "Basic" "Binary" "BodySite" "Bundle" "CapabilityStatement" "CarePlan" "CareTeam" "Claim" "ClaimResponse" "ClinicalImpression" "CodeSystem" "Communication" "CommunicationRequest" "CompartmentDefinition" "Composition" "ConceptMap" "Condition" "Consent" "Contract" "Coverage" "DataElement" "DecisionSupportServiceModule" "DetectedIssue" "Device" "DeviceComponent" "DeviceMetric" "DeviceUseRequest" "DeviceUseStatement" "DiagnosticReport" "DiagnosticRequest" "DocumentManifest" "DocumentReference" "DomainResource" "EligibilityRequest" "EligibilityResponse" "Encounter" "Endpoint" "EnrollmentRequest" "EnrollmentResponse" "EpisodeOfCare" "ExpansionProfile" "ExplanationOfBenefit" "FamilyMemberHistory" "Flag" "Goal" "Group" "GuidanceResponse" "HealthcareService" "ImagingManifest" "ImagingStudy" "Immunization" "ImmunizationRecommendation" "ImplementationGuide" "Library" "Linkage" "List" "Location" "Measure" "MeasureReport" "Media" "Medication" "MedicationAdministration" "MedicationDispense" "MedicationRequest" "MedicationStatement" "MessageHeader" "NamingSystem" "NutritionRequest" "Observation" "OperationDefinition" "OperationOutcome" "Organization" "Parameters" "Patient" "PaymentNotice" "PaymentReconciliation" "Person" "PlanDefinition" "Practitioner" "PractitionerRole" "Procedure" "ProcedureRequest" "ProcessRequest" "ProcessResponse" "Provenance" "Questionnaire" "QuestionnaireResponse" "ReferralRequest" "RelatedPerson" "Resource" "RiskAssessment" "Schedule" "SearchParameter" "Sequence" "ServiceDefinition" "Slot" "Specimen" "StructureDefinition" "StructureMap" "Subscription" "Substance" "SupplyDelivery" "SupplyRequest" "Task" "TestReport" "TestScript" "ValueSet" "VisionPrescription"]
+
+# Operations supported by REST at the type or instance level.
+fhirvs:type-restful-interaction ["read" "vread" "update" "delete" "history-instance" "history-type" "create" "search-type"]
+
+# Data types allowed to be used for search parameters.
+fhirvs:search-param-type ["number" "date" "string" "token" "reference" "composite" "quantity" "uri"]
+
+# A supported modifier for a search parameter.
+fhirvs:search-modifier-code ["missing" "exact" "contains" "not" "text" "in" "not-in" "below" "above" "type"]
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use ["usual" "official" "temp" "secondary"]
+
+# How the Quantity should be understood and represented.
+fhirvs:quantity-comparator ["<" "<=" ">=" ">"]
+
+# A code that indicates whether an application accepts unknown elements or extensions when reading resources.
+fhirvs:unknown-content-code ["no" "extensions" "elements" "both"]
+
+# The mode of a RESTful capability statement.
+fhirvs:restful-capability-mode ["client" "server"]
+
+# The status of a resource narrative
+fhirvs:narrative-status ["generated" "extensions" "additional" "empty"]
+
+# The lifecycle status of a Value Set or Concept Map.
+fhirvs:publication-status ["draft" "active" "retired"]
+
+# The mode of a message capability statement.
+fhirvs:event-capability-mode ["sender" "receiver"]
+
+# Use of contact point
+fhirvs:contact-point-use ["home" "work" "temp" "old" "mobile"]
+
+# A set of flags that defines how references are supported
+fhirvs:reference-handling-policy ["literal" "logical" "resolves" "enforced" "local"]
+
+# The impact of the content of a message.
+fhirvs:message-significance-category ["Consequence" "Currency" "Notification"]
+
+# How the system supports versioning for a resource.
+fhirvs:versioning-policy ["no-version" "versioned" "versioned-update"]
+
+# Telecommunications form for contact point
+fhirvs:contact-point-system ["phone" "fax" "email" "pager" "other"]

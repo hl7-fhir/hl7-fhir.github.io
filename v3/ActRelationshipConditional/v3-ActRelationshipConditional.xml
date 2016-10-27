@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v3-ActRelationshipConditional"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ActRelationshipConditional</h2>
+      <div>
+        <p>Specifies under what circumstances (target Act) the source-Act may, must, must not or has occurred</p>
+
+      </div>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include codes from 
+          <a href="../../v3/ActRelationshipType/cs.html">http://hl7.org/fhir/v3/ActRelationshipType</a> where concept  is-a  
+          <a href="../../v3/ActRelationshipType/cs.html#_ActRelationshipConditional">_ActRelationshipConditional</a>
+        </li>
+        <li>Exclude these codes as defined in 
+          <a href="../../v3/ActRelationshipType/cs.html">http://hl7.org/fhir/v3/ActRelationshipType</a>
+          <table class="none">
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>_ActRelationshipConditional</td>
+              <td>ActRelationshipConditional</td>
+              <td>Specifies under what circumstances (target Act) the source-Act may, must, must not or has occurred</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v3-ActRelationshipConditional"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.1.11.18977"/>
+  </identifier>
+  <version value="2014-03-26"/>
+  <name value="ActRelationshipConditional"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 v3"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value=" Specifies under what circumstances (target Act) the source-Act may, must, must not or has occurred"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ActRelationshipType"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="_ActRelationshipConditional"/>
+      </filter>
+    </include>
+    <exclude>
+      <system value="http://hl7.org/fhir/v3/ActRelationshipType"/>
+      <concept>
+        <code value="_ActRelationshipConditional"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

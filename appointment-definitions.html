@@ -1,0 +1,321 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Appointment - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/appointment-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="workflow-module.html"><img src="workflow.png"/> Workflow</a></li>        <li><a href="appointment.html">Appointment</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- appointment.html / res-Detailed Descriptions / Appointment -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="appointment.html">Content</a></li><li><a href="appointment-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="appointment-mappings.html">Mappings</a></li><li><a href="appointment-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">12.15.8<a name="12.15.8"> </a></span> Resource Appointment - Detailed Descriptions <a href="appointment-definitions.html#12.15.8" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the Appointment resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="Appointment"> </a><b>Appointment</b></td></tr>
+  <tr><td>Definition</td><td><p>A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">app-2</b>: Either start and end are specified, or neither (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: start.empty() xor end.exists(), xpath: ((exists(f:start) and exists(f:end)) or (not(exists(f:start)) and not(exists(f:end)))))<br/><b title="Formal Invariant Identifier">app-3</b>: Only proposed or cancelled appointments can be missing start/end dates (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: (start.exists() and end.exists()) or (status in ('proposed' | 'cancelled')), xpath: ((exists(f:start) and exists(f:end)) or (f:status/@value='proposed') or (f:status/@value='cancelled')))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.identifier"> </a><b>Appointment.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.status"> </a><b>Appointment.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>AppointmentStatus: <a href="valueset-appointmentstatus.html">The free/busy status of an appointment.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If the Appointment's status is &quot;cancelled&quot; then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.serviceCategory"> </a><b>Appointment.serviceCategory</b></td></tr>
+  <tr><td>Definition</td><td><p>A broad categorisation of the service that is to be performed during this appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ServiceCategory: <a href="valueset-service-category.html"/> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.serviceType"> </a><b>Appointment.serviceType</b></td></tr>
+  <tr><td>Definition</td><td><p>The specific service that is to be performed during this appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ServiceType: <a href="valueset-service-type.html"/> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.specialty"> </a><b>Appointment.specialty</b></td></tr>
+  <tr><td>Definition</td><td><p>The specialty of a practitioner that would be required to perform the service requested in this appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Practice Setting Code Value Set: <a href="valueset-c80-practice-codes.html"/> (<a href="terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.appointmentType"> </a><b>Appointment.appointmentType</b></td></tr>
+  <tr><td>Definition</td><td><p>The style of appointment or patient that has been booked in the slot (not service type).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>v2 Appointment reason codes: <a href="v2/0276/index.html"/> (<a href="terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.reason"> </a><b>Appointment.reason</b></td></tr>
+  <tr><td>Definition</td><td><p>The reason that this appointment is being scheduled. This is more clinical than administrative.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Encounter Reason Codes: <a href="valueset-encounter-reason.html">The Reason for the appointment to take place.</a> (<a href="terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.priority"> </a><b>Appointment.priority</b></td></tr>
+  <tr><td>Definition</td><td><p>The priority of the appointment. Can be used to make informed decisions if needing to re-prioritize appointments. (The iCal Standard specifies 0 as undefined, 1 as highest, 9 as lowest priority).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#unsignedInt">unsignedInt</a></td></tr>
+  <tr><td>Comments</td><td><p>Seeking implementer feedback on this property and how interoperable it is.</p>
+<p>Using an extension to record a codeableconcept for named values may be tested at a future connectathon.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.description"> </a><b>Appointment.description</b></td></tr>
+  <tr><td>Definition</td><td><p>The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.start"> </a><b>Appointment.start</b></td></tr>
+  <tr><td>Definition</td><td><p>Date/Time that the appointment is to take place.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#instant">instant</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.end"> </a><b>Appointment.end</b></td></tr>
+  <tr><td>Definition</td><td><p>Date/Time that the appointment is to conclude.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#instant">instant</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.minutesDuration"> </a><b>Appointment.minutesDuration</b></td></tr>
+  <tr><td>Definition</td><td><p>Number of minutes that the appointment is to take. This can be less than the duration between the start and end times (where actual time of appointment is only an estimate or is a planned appointment request).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.slot"> </a><b>Appointment.slot</b></td></tr>
+  <tr><td>Definition</td><td><p>The slot that this appointment is filling. If provided then the schedule will not be provided as slots are not recursive, and the start/end values MUST be the same as from the slot.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="slot.html">Slot</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.created"> </a><b>Appointment.created</b></td></tr>
+  <tr><td>Definition</td><td><p>The date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td>Comments</td><td><p>This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.comment"> </a><b>Appointment.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional comments about the appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>Additional text to aid in facilitating the appointment. For instance, a comment might be, &quot;patient should proceed immediately to infusion room upon arrival&quot;</p>
+<p>Where this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.participant"> </a><b>Appointment.participant</b></td></tr>
+  <tr><td>Definition</td><td><p>List of participants involved in the appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">app-1</b>: Either the type or actor on the participant MUST be specified (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: type.exists() or actor.exists(), xpath: (exists(f:type) or exists(f:actor)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.participant.type"> </a><b>Appointment.participant.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Role of participant in the appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ParticipantType: <a href="valueset-encounter-participant-type.html">Role of participant in encounter.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The role of the participant can be used to declare what the actor will be doing in the scope of this appointment.</p>
+<p>If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.</p>
+<p>This value MUST be the same when creating an AppointmentResponse so that they can be matched, and subsequently update the Appointment.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.participant.actor"> </a><b>Appointment.participant.actor</b></td></tr>
+  <tr><td>Definition</td><td><p>A Person, Location/HealthcareService or Device that is participating in the appointment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a> | <a href="practitioner.html">Practitioner</a> | <a href="relatedperson.html">RelatedPerson</a> | <a href="device.html">Device</a> | <a href="healthcareservice.html">HealthcareService</a> | <a href="location.html">Location</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.participant.required"> </a><b>Appointment.participant.required</b></td></tr>
+  <tr><td>Definition</td><td><p>Is this participant required to be present at the meeting. This covers a use-case where 2 doctors need to meet to discuss the results for a specific patient, and the patient is not required to be present.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ParticipantRequired: <a href="valueset-participantrequired.html">Is the Participant required to attend the appointment.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.participant.status"> </a><b>Appointment.participant.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Participation status of the Patient.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ParticipationStatus: <a href="valueset-participationstatus.html">The Participation status of an appointment.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Appointment.requestedPeriod"> </a><b>Appointment.requestedPeriod</b></td></tr>
+  <tr><td>Definition</td><td><p>A set of date ranges (potentially including times) that the appointment is preferred to be scheduled. When using these values, the minutes duration should be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Period">Period</a></td></tr>
+  <tr><td>Comments</td><td><p>This does not introduce a capacity for recurring appointments.</p>
+</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fappointment-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fappointment-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

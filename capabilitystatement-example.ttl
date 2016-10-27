@@ -1,0 +1,206 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CapabilityStatement/example> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>The EHR Server supports the following transactions for the resource Person: read, vread, \n        update, history, search(name,gender), create and updates.</p>\n      \n      <p>The EHR System supports the following message: admin-notify::Person.</p>\n      \n      <p>The EHR Application has a \n        <a href=\"http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796\">general document profile</a>.\n      </p>\n    \n    </div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "68D043B5-9ECF-4559-A57A-396E0D452311"];
+  fhir:CapabilityStatement.version [ fhir:value "20130510"];
+  fhir:CapabilityStatement.name [ fhir:value "ACME EHR capability statement"];
+  fhir:CapabilityStatement.status [ fhir:value "draft"];
+  fhir:CapabilityStatement.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:CapabilityStatement.date [ fhir:value "2012-01-04"^^xsd:date];
+  fhir:CapabilityStatement.publisher [ fhir:value "ACME Corporation"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "System Administrator" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "wile@acme.org" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This is the FHIR capability statement for the main EHR at ACME for the private interface - it does not describe the public interface"];
+  fhir:CapabilityStatement.purpose [ fhir:value "Main EHR capability statement, published for contracting and operational support"];
+  fhir:CapabilityStatement.copyright [ fhir:value "Copyright © Acme Healthcare and GoodCorp EHR Systems"];
+  fhir:CapabilityStatement.kind [ fhir:value "instance"];
+  fhir:CapabilityStatement.software [
+     fhir:CapabilityStatement.software.name [ fhir:value "EHR" ];
+     fhir:CapabilityStatement.software.version [ fhir:value "0.00.020.2134" ];
+     fhir:CapabilityStatement.software.releaseDate [ fhir:value "2012-01-04"^^xsd:date ]
+  ];
+  fhir:CapabilityStatement.implementation [
+     fhir:CapabilityStatement.implementation.description [ fhir:value "main EHR at ACME" ];
+     fhir:CapabilityStatement.implementation.url [ fhir:value "http://10.2.3.4/fhir" ]
+  ];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "1.0.0"];
+  fhir:CapabilityStatement.acceptUnknown [ fhir:value "both"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "Main FHIR endpoint for acem health" ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.cors [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.security.service [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/restful-security-service" ];
+           fhir:Coding.code [ fhir:value "SMART-on-FHIR" ]
+         ]
+       ];
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "See Smart on FHIR documentation" ];
+       fhir:CapabilityStatement.rest.security.certificate [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.security.certificate.type [ fhir:value "application/jwt" ];
+         fhir:CapabilityStatement.rest.security.certificate.blob [ fhir:value "IHRoaXMgYmxvYiBpcyBub3QgdmFsaWQ="^^xsd:base64Binary ]
+       ]
+     ];
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Patient" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:link <http://fhir.hl7.org/base/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416>;
+         fhir:Reference.reference [ fhir:value "http://fhir.hl7.org/base/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Only supported for patient records since 12-Dec 2012" ]
+       ], [
+         fhir:index 2;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 3;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 4;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 5;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.versioning [ fhir:value "versioned-update" ];
+       fhir:CapabilityStatement.rest.resource.readHistory [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.updateCreate [ fhir:value "false"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalCreate [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalUpdate [ fhir:value "false"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.conditionalDelete [ fhir:value "not-supported" ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Organization";
+         fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchRevInclude [
+         fhir:value "Person";
+         fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/Patient-identifier" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Only supports search by institution MRN" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.modifier [
+           fhir:value "missing";
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "careprovider" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/Patient-careprovider" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.target [
+           fhir:value "Organization";
+           fhir:index 0
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.modifier [
+           fhir:value "missing";
+           fhir:index 0
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.chain [
+           fhir:value "name";
+           fhir:index 0
+         ], [
+           fhir:value "identifier";
+           fhir:index 1
+         ]
+       ]
+     ];
+     fhir:CapabilityStatement.rest.interaction [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "transaction" ]
+     ], [
+       fhir:index 1;
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "history-system" ]
+     ];
+     fhir:CapabilityStatement.rest.compartment [
+       fhir:value "http://hl7.org/fhir/compartment/Patient";
+       fhir:index 0
+     ]
+  ];
+  fhir:CapabilityStatement.messaging [
+     fhir:index 0;
+     fhir:CapabilityStatement.messaging.endpoint [
+       fhir:index 0;
+       fhir:CapabilityStatement.messaging.endpoint.protocol [
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/message-transport" ];
+         fhir:Coding.code [ fhir:value "mllp" ]
+       ];
+       fhir:CapabilityStatement.messaging.endpoint.address [ fhir:value "mllp:10.1.1.10:9234" ]
+     ];
+     fhir:CapabilityStatement.messaging.reliableCache [ fhir:value "30"^^xsd:nonNegativeInteger ];
+     fhir:CapabilityStatement.messaging.documentation [ fhir:value "ADT A08 equivalent for external system notifications" ];
+     fhir:CapabilityStatement.messaging.event [
+       fhir:index 0;
+       fhir:CapabilityStatement.messaging.event.code [
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/message-type" ];
+         fhir:Coding.code [ fhir:value "admin-notify" ]
+       ];
+       fhir:CapabilityStatement.messaging.event.category [ fhir:value "Consequence" ];
+       fhir:CapabilityStatement.messaging.event.mode [ fhir:value "receiver" ];
+       fhir:CapabilityStatement.messaging.event.focus [ fhir:value "Patient" ];
+       fhir:CapabilityStatement.messaging.event.request [
+         fhir:link <http://hl7.org/fhir/StructureDefinition/daf-patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/daf-patient" ]
+       ];
+       fhir:CapabilityStatement.messaging.event.response [
+         fhir:link <http://hl7.org/fhir/StructureDefinition/MessageHeader>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MessageHeader" ]
+       ];
+       fhir:CapabilityStatement.messaging.event.documentation [ fhir:value "Notification of an update to a patient resource. changing the links is not supported" ]
+     ]
+  ];
+  fhir:CapabilityStatement.document [
+     fhir:index 0;
+     fhir:CapabilityStatement.document.mode [ fhir:value "consumer" ];
+     fhir:CapabilityStatement.document.documentation [ fhir:value "Basic rules for all documents in the EHR system" ];
+     fhir:CapabilityStatement.document.profile [
+       fhir:link <http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796>;
+       fhir:Reference.reference [ fhir:value "http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/StructureDefinition/daf-patient> a fhir:StructureDefinition .
+
+<http://hl7.org/fhir/StructureDefinition/MessageHeader> a fhir:StructureDefinition .
+
+# -------------------------------------------------------------------------------------
+

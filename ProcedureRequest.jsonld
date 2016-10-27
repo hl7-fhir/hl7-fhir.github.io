@@ -1,0 +1,49 @@
+﻿{
+  "@context": {
+    "ProcedureRequest.identifier": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "ProcedureRequest.subject": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.subject",
+      "@type": "http://hl7.org/fhir/Reference(Patient|Group)"
+    },
+    "ProcedureRequest.code": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.code",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ProcedureRequest.bodySite": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.bodySite",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ProcedureRequest.encounter": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.encounter",
+      "@type": "http://hl7.org/fhir/Reference(Encounter)"
+    },
+    "ProcedureRequest.performer": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.performer",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner|Organization|Patient|RelatedPerson)"
+    },
+    "ProcedureRequest.status": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "ProcedureRequest.notes": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.notes",
+      "@type": "http://hl7.org/fhir/Annotation"
+    },
+    "ProcedureRequest.orderedOn": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.orderedOn",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "ProcedureRequest.orderer": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.orderer",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner|Patient|RelatedPerson|Device)"
+    },
+    "ProcedureRequest.priority": {
+      "@id": "http://hl7.org/fhir/ProcedureRequest.priority",
+      "@type": "http://hl7.org/fhir/code"
+    }
+  },
+  "@id": "http://hl7.org/fhir/ProcedureRequest"
+}

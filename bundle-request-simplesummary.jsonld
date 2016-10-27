@@ -1,0 +1,52 @@
+{
+  "@context": "http://build.fhir.org/Bundle.jsonld",
+  "@context": "http://hl7.org/fhir/Bundle/bundle-request-simplesummary",
+  "Resource.id": {
+    "id.value": "bundle-request-simplesummary"
+  },
+  "Bundle.type": {
+    "code.value": "batch"
+  },
+  "Bundle.entry": [
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "code.value": "GET"
+        },
+        "Bundle.entry.request.url": {
+          "uri.value": "/Patient/example"
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "code.value": "GET"
+        },
+        "Bundle.entry.request.url": {
+          "uri.value": "/Condition?patient=example"
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "code.value": "GET"
+        },
+        "Bundle.entry.request.url": {
+          "uri.value": "/MedicationStatement?patient=example"
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "code.value": "GET"
+        },
+        "Bundle.entry.request.url": {
+          "uri.value": "/Observation?patient=example&code=http://loinc.org|55284-4&date=ge2015-01-01"
+        }
+      }
+    }
+  ]
+}

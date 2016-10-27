@@ -1,0 +1,55 @@
+{
+  "@context": "http://build.fhir.org/Condition.jsonld",
+  "@context": "http://hl7.org/fhir/Condition/f205",
+  "Resource.id": {
+    "id.value": "f205"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f205</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: differential</p><p><b>code</b>: Bacterial infectious disease <span>(Details : {SNOMED CT code '87628006' = 'Bacterial infectious disease (disorder)', given as 'Bacterial infectious disease'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>dateRecorded</b>: Apr 4, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p></div>"
+    }
+  },
+  "Condition.clinicalStatus": {
+    "code.value": "active"
+  },
+  "Condition.verificationStatus": {
+    "code.value": "differential"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "87628006"
+        },
+        "Coding.display": {
+          "string.value": "Bacterial infectious disease"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#87628006"
+  },
+  "Condition.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f201"
+    },
+    "Reference.display": {
+      "string.value": "Roel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Condition.dateRecorded": {
+    "date.value": "2013-04-04"
+  },
+  "Condition.asserter": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f201"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f201"
+  }
+}

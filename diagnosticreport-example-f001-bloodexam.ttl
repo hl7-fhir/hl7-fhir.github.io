@@ -1,0 +1,162 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticReport/f001> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f001"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>contained</b>: </p><p><b>identifier</b>: nr1239044 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>category</b>: Haematology test <span>(Details : {SNOMED CT code '252275004' = 'Hematology test (procedure)', given as 'Haematology test'}; {http://hl7.org/fhir/v2/0074 code 'HM' = 'Hematology)</span></p><p><b>code</b>: Complete blood count (hemogram) panel - Blood by Automated count <span>(Details : {LOINC code '58410-2' = 'Complete blood count (hemogram) panel - Blood by Automated count', given as 'Complete blood count (hemogram) panel - Blood by Automated count'})</span></p><p><b>subject</b>: <a>P. van den Heuvel</a></p><p><b>effective</b>: Apr 2, 2013</p><p><b>issued</b>: May 15, 2013 7:32:52 PM</p><p><b>performer</b>: <a>Burgers University Medical Centre</a></p><p><b>request</b>: id: req; Extensions: todo; L2381; Original Order <span>(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)</span>; Complete blood count (hemogram) panel - Blood by Automated count <span>(Details : {LOINC code '58410-2' = 'Complete blood count (hemogram) panel - Blood by Automated count', given as 'Complete blood count (hemogram) panel - Blood by Automated count'})</span>; P. van den Heuvel; ????; E.van den Broek; Annotation: patient almost fainted during procedure</p><p><b>result</b>: </p><ul><li><a>Observation/f001</a></li><li><a>Observation/f002</a></li><li><a>Observation/f003</a></li><li><a>Observation/f004</a></li><li><a>Observation/f005</a></li></ul><p><b>conclusion</b>: Core lab</p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:DiagnosticRequest;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "req" ];
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/bodysitecode" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:14975008;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "14975008" ];
+           fhir:Coding.display [ fhir:value "Forearm structure" ]
+         ]
+       ]
+     ];
+     fhir:DiagnosticRequest.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://www.bmc.nl/zorgportal/identifiers/labresults" ];
+       fhir:Identifier.value [ fhir:value "L2381" ]
+     ];
+     fhir:DiagnosticRequest.stage [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/request-stage" ];
+         fhir:Coding.code [ fhir:value "original-order" ]
+       ]
+     ];
+     fhir:DiagnosticRequest.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:58410-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "58410-2" ];
+         fhir:Coding.display [ fhir:value "Complete blood count (hemogram) panel - Blood by Automated count" ]
+       ]
+     ];
+     fhir:DiagnosticRequest.subject [
+       fhir:link <http://hl7.org/fhir/Patient/f001>;
+       fhir:Reference.reference [ fhir:value "Patient/f001" ];
+       fhir:Reference.display [ fhir:value "P. van den Heuvel" ]
+     ];
+     fhir:DiagnosticRequest.context [
+       fhir:link <http://hl7.org/fhir/Encounter/f001>;
+       fhir:Reference.reference [ fhir:value "Encounter/f001" ]
+     ];
+     fhir:DiagnosticRequest.requester [
+       fhir:link <http://hl7.org/fhir/Practitioner/f001>;
+       fhir:Reference.reference [ fhir:value "Practitioner/f001" ];
+       fhir:Reference.display [ fhir:value "E.van den Broek" ]
+     ];
+     fhir:DiagnosticRequest.note [
+       fhir:index 0;
+       fhir:Annotation.text [ fhir:value "patient almost fainted during procedure" ]
+     ]
+  ];
+  fhir:DiagnosticReport.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://www.bmc.nl/zorgportal/identifiers/reports" ];
+     fhir:Identifier.value [ fhir:value "nr1239044" ]
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:252275004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "252275004" ];
+       fhir:Coding.display [ fhir:value "Haematology test" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0074" ];
+       fhir:Coding.code [ fhir:value "HM" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:58410-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "58410-2" ];
+       fhir:Coding.display [ fhir:value "Complete blood count (hemogram) panel - Blood by Automated count" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van den Heuvel" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2013-04-02"^^xsd:date];
+  fhir:DiagnosticReport.issued [ fhir:value "2013-05-15T19:32:52+01:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Organization/f001>;
+     fhir:Reference.reference [ fhir:value "Organization/f001" ];
+     fhir:Reference.display [ fhir:value "Burgers University Medical Centre" ]
+  ];
+  fhir:DiagnosticReport.request [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#req" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Observation/f001>;
+     fhir:Reference.reference [ fhir:value "Observation/f001" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/Observation/f002>;
+     fhir:Reference.reference [ fhir:value "Observation/f002" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/Observation/f003>;
+     fhir:Reference.reference [ fhir:value "Observation/f003" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/Observation/f004>;
+     fhir:Reference.reference [ fhir:value "Observation/f004" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/Observation/f005>;
+     fhir:Reference.reference [ fhir:value "Observation/f005" ]
+  ];
+  fhir:DiagnosticReport.conclusion [ fhir:value "Core lab"] .
+
+<http://hl7.org/fhir/Patient/f001> a fhir:Patient, fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/f001> a fhir:Encounter .
+
+<http://hl7.org/fhir/Practitioner/f001> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+<http://hl7.org/fhir/Observation/f001> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/f002> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/f003> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/f004> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/f005> a fhir:Observation .
+
+# -------------------------------------------------------------------------------------
+

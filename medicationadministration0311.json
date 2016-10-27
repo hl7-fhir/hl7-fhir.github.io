@@ -1,0 +1,71 @@
+{
+  "resourceType": "MedicationAdministration",
+  "id": "medadmin0311",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0311</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0304; Alprazolam 0.25mg Oral Tablet <span>(Details : {RxNorm code '308047' = '308047', given as 'Alprazolam 0.25mg Oral Tablet'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>effectiveTime</b>: Jan 15, 2015 10:03:00 PM --&gt; Jan 16, 2015 2:03:00 AM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0305</a></p><p><b>reasonGiven</b>: Dysmenorrhea <span>(Details : {SNOMED CT code '266599000' = 'Dysmenorrhea', given as 'Dysmenorrhea'})</span></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>0.25mg PO every 6-12 hours as needed for menses from Jan 15-20, 2015.  Do not exceed more than 4mg per day</td><td>Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></td><td>1 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = 'TAB')</span></td></tr></table></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "med0304",
+      "code": {
+        "coding": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "308047",
+            "display": "Alprazolam 0.25mg Oral Tablet"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "completed",
+  "medicationReference": {
+    "reference": "#med0304"
+  },
+  "patient": {
+    "reference": "Patient/pat1",
+    "display": "Donald Duck"
+  },
+  "effectiveTimePeriod": {
+    "start": "2015-01-15T22:03:00+01:00",
+    "end": "2015-01-16T02:03:00+01:00"
+  },
+  "performer": {
+    "reference": "Practitioner/f007",
+    "display": "Patrick Pump"
+  },
+  "prescription": {
+    "reference": "MedicationRequest/medrx0305"
+  },
+  "reasonGiven": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "266599000",
+          "display": "Dysmenorrhea"
+        }
+      ]
+    }
+  ],
+  "dosage": {
+    "text": "0.25mg PO every 6-12 hours as needed for menses from Jan 15-20, 2015.  Do not exceed more than 4mg per day",
+    "route": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "26643006",
+          "display": "Oral Route"
+        }
+      ]
+    },
+    "dose": {
+      "value": 1,
+      "unit": "TAB",
+      "system": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm",
+      "code": "TAB"
+    }
+  }
+}

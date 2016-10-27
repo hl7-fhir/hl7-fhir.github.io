@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v3-ProvenanceEventCurrentState-DC"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ProvenanceEventCurrentState-DC</h2>
+      <div>
+        <p>Specifies the state change of a target Act using DocuymentCompletion codes, from its previous state as a predecessor Act. For example, if the target Act is the result of a predecessor Act being &quot;obsoleted&quot; and replaced with the target Act, the source ProvenanceEventCurrentState Act code would be &quot;obsoleted&quot;.</p>
+
+      </div>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="../../v3/DocumentCompletion/cs.html">http://hl7.org/fhir/v3/DocumentCompletion</a>
+          <table class="none">
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>AU</td>
+              <td>authenticated</td>
+              <td>A completion status in which a document has been signed manually or electronically by one or more individuals who attest to its accuracy.  No explicit determination is made that the assigned individual has performed the authentication.  While the standard allows multiple instances of authentication, it would be typical to have a single instance of authentication, usually by the assigned individual.</td>
+            </tr>
+            <tr>
+              <td>DI</td>
+              <td>dictated</td>
+              <td>A completion status in which information has been orally recorded but not yet transcribed.</td>
+            </tr>
+            <tr>
+              <td>DO</td>
+              <td>documented</td>
+              <td>A completion status in which document content, other than dictation, has been received but has not been translated into the final electronic format.  Examples include paper documents, whether hand-written or typewritten, and intermediate electronic forms, such as voice to text.</td>
+            </tr>
+            <tr>
+              <td>LA</td>
+              <td>legally authenticated</td>
+              <td>A completion status in which a document has been signed manually or electronically by the individual who is legally responsible for that document. This is the most mature state in the workflow progression.</td>
+            </tr>
+            <tr>
+              <td>UC</td>
+              <td>unsigned completed document</td>
+              <td>A completion status where the document is complete and there is no expectation that the document will be signed.</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v3-ProvenanceEventCurrentState-DC"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.1.11.20546"/>
+  </identifier>
+  <version value="2014-08-07"/>
+  <name value="ProvenanceEventCurrentState-DC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 v3"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value=" Specifies the state change of a target Act using DocuymentCompletion codes, from its previous state as a predecessor Act. For example, if the target Act is the result of a predecessor Act being &quot;obsoleted&quot; and replaced with the target Act, the source ProvenanceEventCurrentState Act code would be &quot;obsoleted&quot;."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/DocumentCompletion"/>
+      <concept>
+        <code value="AU"/>
+      </concept>
+      <concept>
+        <code value="DI"/>
+      </concept>
+      <concept>
+        <code value="DO"/>
+      </concept>
+      <concept>
+        <code value="LA"/>
+      </concept>
+      <concept>
+        <code value="UC"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

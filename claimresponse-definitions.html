@@ -1,0 +1,583 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ClaimResponse - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/claimresponse-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="financial-module.html"><img src="financial.png"/> Financial</a></li>        <li><a href="claimresponse.html">ClaimResponse</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- claimresponse.html / res-Detailed Descriptions / ClaimResponse -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="claimresponse.html">Content</a></li><li><a href="claimresponse-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="claimresponse-mappings.html">Mappings</a></li><li><a href="claimresponse-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">13.2.5<a name="13.2.5"> </a></span> Resource ClaimResponse - Detailed Descriptions <a href="claimresponse-definitions.html#13.2.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the ClaimResponse resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse"> </a><b>ClaimResponse</b></td></tr>
+  <tr><td>Definition</td><td><p>This resource provides the adjudication details from the processing of a Claim resource.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Remittance Advice</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.identifier"> </a><b>ClaimResponse.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>The Response business identifier.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.status"> </a><b>ClaimResponse.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the resource instance.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ClaimResponseStatus: <a href="valueset-claimresponse-status.html">A code specifying the state of the resource instance.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.request"> </a><b>ClaimResponse.request</b></td></tr>
+  <tr><td>Definition</td><td><p>Original request resource referrence.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="claim.html">Claim</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.ruleset"> </a><b>ClaimResponse.ruleset</b></td></tr>
+  <tr><td>Definition</td><td><p>The version of the style of resource contents. This should be mapped to the allowable profiles for this and supporting resources.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Ruleset Codes: <a href="valueset-ruleset.html">The static and dynamic model to which contents conform, which may be business version or standard/version.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>BusinessVersion</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.originalRuleset"> </a><b>ClaimResponse.originalRuleset</b></td></tr>
+  <tr><td>Definition</td><td><p>The style (standard) and version of the original material which was converted into this resource.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Ruleset Codes: <a href="valueset-ruleset.html">The static and dynamic model to which contents conform, which may be business version or standard/version.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>Knowledge of the original version can inform the processing of this instance so that information which is processable by the originating system may be generated.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>OriginalBusinessVersion</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.created"> </a><b>ClaimResponse.created</b></td></tr>
+  <tr><td>Definition</td><td><p>The date when the enclosed suite of services were performed or completed.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.organization"> </a><b>ClaimResponse.organization</b></td></tr>
+  <tr><td>Definition</td><td><p>The Insurer who produced this adjudicated response.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="organization.html">Organization</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.requestProvider"> </a><b>ClaimResponse.requestProvider</b></td></tr>
+  <tr><td>Definition</td><td><p>The practitioner who is responsible for the services rendered to the patient.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="practitioner.html">Practitioner</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.requestOrganization"> </a><b>ClaimResponse.requestOrganization</b></td></tr>
+  <tr><td>Definition</td><td><p>The organization which is responsible for the services rendered to the patient.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="organization.html">Organization</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.outcome"> </a><b>ClaimResponse.outcome</b></td></tr>
+  <tr><td>Definition</td><td><p>Processing outcome errror, partial or complete processing.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Claim Processing Codes: <a href="valueset-remittance-outcome.html">The result of the claim processing</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.disposition"> </a><b>ClaimResponse.disposition</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of the status of the adjudication.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payeeType"> </a><b>ClaimResponse.payeeType</b></td></tr>
+  <tr><td>Definition</td><td><p>Party to be reimbursed: Subscriber, provider, other.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Payee Type Codes: <a href="valueset-payeetype.html">A code for the party to be reimbursed.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item"> </a><b>ClaimResponse.item</b></td></tr>
+  <tr><td>Definition</td><td><p>The first tier service adjudications for submitted services.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.sequenceLinkId"> </a><b>ClaimResponse.item.sequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>A service line number.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.noteNumber"> </a><b>ClaimResponse.item.noteNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of note references to the notes provided below.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.adjudication"> </a><b>ClaimResponse.item.adjudication</b></td></tr>
+  <tr><td>Definition</td><td><p>The adjudications results.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.adjudication.category"> </a><b>ClaimResponse.item.adjudication.category</b></td></tr>
+  <tr><td>Definition</td><td><p>Code indicating: Co-Pay, deductible, eligible, benefit, tax, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Adjudication Codes: <a href="valueset-adjudication.html">The adjudication codes.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.adjudication.reason"> </a><b>ClaimResponse.item.adjudication.reason</b></td></tr>
+  <tr><td>Definition</td><td><p>Adjudication reason such as limit reached.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Adjudication Reason Codes: <a href="valueset-adjudication-reason.html">The adjudication reason codes.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.adjudication.amount"> </a><b>ClaimResponse.item.adjudication.amount</b></td></tr>
+  <tr><td>Definition</td><td><p>Monetary amount associated with the code.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.adjudication.value"> </a><b>ClaimResponse.item.adjudication.value</b></td></tr>
+  <tr><td>Definition</td><td><p>A non-monetary value for example a percentage. Mutually exclusive to the amount element above.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#decimal">decimal</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail"> </a><b>ClaimResponse.item.detail</b></td></tr>
+  <tr><td>Definition</td><td><p>The second tier service adjudications for submitted services.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.sequenceLinkId"> </a><b>ClaimResponse.item.detail.sequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>A service line number.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.noteNumber"> </a><b>ClaimResponse.item.detail.noteNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of note references to the notes provided below.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.adjudication"> </a><b>ClaimResponse.item.detail.adjudication</b></td></tr>
+  <tr><td>Definition</td><td><p>The adjudications results.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#ClaimResponse.item.adjudication">See ClaimResponse.item.adjudication</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.subDetail"> </a><b>ClaimResponse.item.detail.subDetail</b></td></tr>
+  <tr><td>Definition</td><td><p>The third tier service adjudications for submitted services.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.subDetail.sequenceLinkId"> </a><b>ClaimResponse.item.detail.subDetail.sequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>A service line number.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.subDetail.noteNumber"> </a><b>ClaimResponse.item.detail.subDetail.noteNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of note references to the notes provided below.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.item.detail.subDetail.adjudication"> </a><b>ClaimResponse.item.detail.subDetail.adjudication</b></td></tr>
+  <tr><td>Definition</td><td><p>The adjudications results.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#ClaimResponse.item.adjudication">See ClaimResponse.item.adjudication</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem"> </a><b>ClaimResponse.addItem</b></td></tr>
+  <tr><td>Definition</td><td><p>The first tier service adjudications for payor added services.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.sequenceLinkId"> </a><b>ClaimResponse.addItem.sequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>List of input service items which this service line is intended to replace.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.revenue"> </a><b>ClaimResponse.addItem.revenue</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of reveneu or cost center providing the product and/or service.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Example Revenue Center Codes: <a href="valueset-ex-revenue-center.html">Codes for the revenue or cost centers supplying the service and/or products.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.category"> </a><b>ClaimResponse.addItem.category</b></td></tr>
+  <tr><td>Definition</td><td><p>Health Care Service Type Codes  to identify the classification of service or benefits.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Benefit SubCategory Codes: <a href="valueset-benefit-subcategory.html">Benefit subcategories such as: oral-basic, major, glasses</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.service"> </a><b>ClaimResponse.addItem.service</b></td></tr>
+  <tr><td>Definition</td><td><p>A code to indicate the Professional Service or Product supplied.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>USCLS Codes: <a href="valueset-service-uscls.html">Allowable service and product codes.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.modifier"> </a><b>ClaimResponse.addItem.modifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Item typification or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or for medical whether the treatment was outside the clinic or out of office hours.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Modifier type Codes: <a href="valueset-claim-modifiers.html">Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>May impact on adjudication.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.fee"> </a><b>ClaimResponse.addItem.fee</b></td></tr>
+  <tr><td>Definition</td><td><p>The fee charged for the professional service or product..</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.noteNumber"> </a><b>ClaimResponse.addItem.noteNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of note references to the notes provided below.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.adjudication"> </a><b>ClaimResponse.addItem.adjudication</b></td></tr>
+  <tr><td>Definition</td><td><p>The adjudications results.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#ClaimResponse.item.adjudication">See ClaimResponse.item.adjudication</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail"> </a><b>ClaimResponse.addItem.detail</b></td></tr>
+  <tr><td>Definition</td><td><p>The second tier service adjudications for payor added services.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.revenue"> </a><b>ClaimResponse.addItem.detail.revenue</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of reveneu or cost center providing the product and/or service.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Example Revenue Center Codes: <a href="valueset-ex-revenue-center.html">Codes for the revenue or cost centers supplying the service and/or products.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.category"> </a><b>ClaimResponse.addItem.detail.category</b></td></tr>
+  <tr><td>Definition</td><td><p>Health Care Service Type Codes  to identify the classification of service or benefits.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Benefit SubCategory Codes: <a href="valueset-benefit-subcategory.html">Benefit subcategories such as: oral-basic, major, glasses</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.service"> </a><b>ClaimResponse.addItem.detail.service</b></td></tr>
+  <tr><td>Definition</td><td><p>A code to indicate the Professional Service or Product supplied.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>USCLS Codes: <a href="valueset-service-uscls.html">Allowable service and product codes.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.modifier"> </a><b>ClaimResponse.addItem.detail.modifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Item typification or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or for medical whether the treatment was outside the clinic or out of office hours.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Modifier type Codes: <a href="valueset-claim-modifiers.html">Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>May impact on adjudication.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.fee"> </a><b>ClaimResponse.addItem.detail.fee</b></td></tr>
+  <tr><td>Definition</td><td><p>The fee charged for the professional service or product..</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.noteNumber"> </a><b>ClaimResponse.addItem.detail.noteNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of note references to the notes provided below.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.addItem.detail.adjudication"> </a><b>ClaimResponse.addItem.detail.adjudication</b></td></tr>
+  <tr><td>Definition</td><td><p>The adjudications results.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#ClaimResponse.item.adjudication">See ClaimResponse.item.adjudication</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.error"> </a><b>ClaimResponse.error</b></td></tr>
+  <tr><td>Definition</td><td><p>Mutually exclusive with Services Provided (Item).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.error.sequenceLinkId"> </a><b>ClaimResponse.error.sequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>The sequence number of the line item submitted which contains the error. This value is omitted when the error is elsewhere.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.error.detailSequenceLinkId"> </a><b>ClaimResponse.error.detailSequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>The sequence number of the addition within the line item submitted which contains the error. This value is omitted when the error is not related to an Addition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.error.subdetailSequenceLinkId"> </a><b>ClaimResponse.error.subdetailSequenceLinkId</b></td></tr>
+  <tr><td>Definition</td><td><p>The sequence number of the addition within the line item submitted which contains the error. This value is omitted when the error is not related to an Addition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.error.code"> </a><b>ClaimResponse.error.code</b></td></tr>
+  <tr><td>Definition</td><td><p>An error code,from a specified code system, which details why the claim could not be adjudicated.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Adjudication Error Codes: <a href="valueset-adjudication-error.html">The adjudication error codes.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.totalCost"> </a><b>ClaimResponse.totalCost</b></td></tr>
+  <tr><td>Definition</td><td><p>The total cost of the services reported.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td>Requirements</td><td><p>This is a check value that the receiver calculates and returns.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.unallocDeductable"> </a><b>ClaimResponse.unallocDeductable</b></td></tr>
+  <tr><td>Definition</td><td><p>The amount of deductible applied which was not allocated to any particular service line.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.totalBenefit"> </a><b>ClaimResponse.totalBenefit</b></td></tr>
+  <tr><td>Definition</td><td><p>Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated Deductible).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment"> </a><b>ClaimResponse.payment</b></td></tr>
+  <tr><td>Definition</td><td><p>Payment details for the claim if the claim has been paid.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment.type"> </a><b>ClaimResponse.payment.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Whether this represents partial or complete payment of the claim.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Example Payment Type Codes: <a href="valueset-ex-paymenttype.html">The type (partial, complete) of the payment</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment.adjustment"> </a><b>ClaimResponse.payment.adjustment</b></td></tr>
+  <tr><td>Definition</td><td><p>Adjustment to the payment of this transaction which is not related to adjudication of this transaction.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment.adjustmentReason"> </a><b>ClaimResponse.payment.adjustmentReason</b></td></tr>
+  <tr><td>Definition</td><td><p>Reason for the payment adjustment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Payment Adjustment Reason Codes: <a href="valueset-payment-adjustment-reason.html">Payment Adjustment reason codes.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment.date"> </a><b>ClaimResponse.payment.date</b></td></tr>
+  <tr><td>Definition</td><td><p>Estimated payment data.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#date">date</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment.amount"> </a><b>ClaimResponse.payment.amount</b></td></tr>
+  <tr><td>Definition</td><td><p>Payable less any payment adjustment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Money">Money</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.payment.identifier"> </a><b>ClaimResponse.payment.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Payment identifier.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.reserved"> </a><b>ClaimResponse.reserved</b></td></tr>
+  <tr><td>Definition</td><td><p>Status of funds reservation (For provider, for Patient, None).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Funds Reservation Codes: <a href="valueset-fundsreserve.html">For whom funds are to be reserved: (Patient, Provider, None).</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.form"> </a><b>ClaimResponse.form</b></td></tr>
+  <tr><td>Definition</td><td><p>The form to be used for printing the content.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Form Codes: <a href="valueset-forms.html">The forms codes.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.note"> </a><b>ClaimResponse.note</b></td></tr>
+  <tr><td>Definition</td><td><p>Note text.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.note.number"> </a><b>ClaimResponse.note.number</b></td></tr>
+  <tr><td>Definition</td><td><p>An integer associated with each note which may be referred to from each service line item.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.note.type"> </a><b>ClaimResponse.note.type</b></td></tr>
+  <tr><td>Definition</td><td><p>The note purpose: Print/Display.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>NoteType: <a href="valueset-note-type.html">The presentation types of notes.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.note.text"> </a><b>ClaimResponse.note.text</b></td></tr>
+  <tr><td>Definition</td><td><p>The note text.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.note.language"> </a><b>ClaimResponse.note.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Common Languages: <a href="valueset-languages.html">A human language.</a> (<a href="terminologies.html#extensible">Extensible</a> but limited to ??)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage"> </a><b>ClaimResponse.coverage</b></td></tr>
+  <tr><td>Definition</td><td><p>Financial instrument by which payment information for health care.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Requirements</td><td><p>Health care programs and insurers are significant payors of health service costs.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage.sequence"> </a><b>ClaimResponse.coverage.sequence</b></td></tr>
+  <tr><td>Definition</td><td><p>A service line item.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td>Requirements</td><td><p>To maintain order of the coverages.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage.focal"> </a><b>ClaimResponse.coverage.focal</b></td></tr>
+  <tr><td>Definition</td><td><p>The instance number of the Coverage which is the focus for adjudication. The Coverage against which the claim is to be adjudicated.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Requirements</td><td><p>To identify which coverage is being adjudicated.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage.coverage"> </a><b>ClaimResponse.coverage.coverage</b></td></tr>
+  <tr><td>Definition</td><td><p>Reference to the program or plan identification, underwriter or payor.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="coverage.html">Coverage</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Need to identify the issuer to target for processing and for coordination of benefit processing.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage.businessArrangement"> </a><b>ClaimResponse.coverage.businessArrangement</b></td></tr>
+  <tr><td>Definition</td><td><p>The contract number of a business agreement which describes the terms and conditions.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage.preAuthRef"> </a><b>ClaimResponse.coverage.preAuthRef</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of references from the Insurer to which these services pertain.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>To provide any pre-determination or prior authorization reference.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClaimResponse.coverage.claimResponse"> </a><b>ClaimResponse.coverage.claimResponse</b></td></tr>
+  <tr><td>Definition</td><td><p>The Coverages adjudication details.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="claimresponse.html">ClaimResponse</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Used by downstream payers to determine what balance remains and the net payable.</p>
+</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fclaimresponse-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fclaimresponse-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

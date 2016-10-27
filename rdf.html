@@ -1,0 +1,421 @@
+﻿<!DOCTYPE HTML>
+  <!-- These elements SHALL always appear in this order. These basic elements shared by all resources come first
+in order to support consistent definitions for schema and UML derived code. --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Rdf - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/rdf.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="ontology-module.html"><img src="ontology.png"/> Ontology</a></li>
+        <li><b>RDF</b></li>          <!-- rdf.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="formats.html">Formats</a></li><li><a href="xml.html">XML</a></li><li><a href="json.html">JSON</a></li><li class="active"><a href="#">RDF</a></li></ul>
+
+
+<a name="root"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">3.1<a name="3.1"> </a></span> Resource Description Framework (RDF) Representation  <a href="rdf.html#3.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: 0</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">Draft</a></td></tr></table>
+
+<div style="background-color: #E6FFFF; border:1px solid black; padding: 5px;">
+<table>
+<tr>
+ <td><img src="http://w3c-domains.com/img/w3c-96.png"/></td>
+ <td>
+<p>
+This page and the RDF forms are joinlty maintained by the HL7 FHIR project and the 
+<a href="https://www.w3.org/blog/hcls/">W3C Semantic Web Health Care and Life Sciences Interest Group <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+</td></tr></table>
+</div>
+
+<p>
+FHIR resources can be represented as an <a href="http://www.w3.org/RDF/">RDF graph <img src="external.png" style="text-align: baseline"/></a> serialised in the 
+<a href="https://www.w3.org/TR/turtle/">Turtle format <img src="external.png" style="text-align: baseline"/></a>. The RDF format is defined to assist the process 
+of bridging between operational data exchange and formal knowledge processing systems. While the RDF 
+form offers a fully functional representation of FHIR resources, it has different operational 
+characteristics to the <a href="json.html">JSON</a> and <a href="xml.html">XML</a> representations, and 
+would be implemented for different reasons. Systems focused on operational exchange of data would 
+not generally use choose to use RDF.
+</p>
+<p>
+This page describes:
+</p>
+<ul>
+ <li><a href="#instance">Representing FHIR resources in Turtle</a></li>
+ <li><a href="#class">The FHIR definitions as Turtle</a></li>
+  <!-- <li><a href="#profile">RDF representation of Profiles</a></li> -->
+ <li><a href="#api">How to exchange RDF using the RESTful API</a></li>
+</ul>
+
+<a name="instance"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.1.1</span> Turtle Format for Resources <a href="rdf.html#instance" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A FHIR resource is represented by a series of RDF triples. The Turtle 
+representation for a resource is described using this format:
+</p>
+
+<pre class="spec">
+Turtle Template
+
+[ a fhir:Observation; fhir:nodeRole fhir:treeRoot;
+  # from Resource: id; meta; implicitRules; and language
+  # from DomainResource: text; contained; extension; and modifierExtension
+  fhir:Obervation.identifier [ <a href="#">Identifier</a> ]; # 0..* Unique Id for this particular observation
+  fhir:Obervation.status [ fhir:value &quot;&lt;code&gt;&quot; ]; # R!  registered | preliminary | final | amended +
+  fhir:Obervation.code [ <a href="#">CodeableConcept</a> ]; # 1..1 R!  Type of observation (code / type)
+  fhir:Obervation.subject [ fhir:reference [ <a href="#">Patient</a>|<a href="#">Group</a>|<a href="#">Device</a>|<a href="#">Location</a> ] ]; # 0..1 Who and/or what this is about
+  fhir:Obervation.encounter [ fhir:reference [ <a href="#">Encounter</a> ] ]; # 0..1 Healthcare event during which this observation is made
+  # effective[x]: 0..1 Clinically relevant time/time-period for observation. One of these 2:
+    fhir:Obervation.effectiveDateTime [ fhir:value &quot;&lt;dateTime&gt;&quot; ];
+    fhir:Obervation.effectivePeriod [ <a href="#">Period</a> ];
+]
+
+</pre>
+<p>
+<i>Note: this is a placeholder for when the proper format is defined</i>.
+</p>
+<p>
+Using this format:
+</p>
+<ul>
+ <li>To build a valid Turtle instance of a resource, replace the contents of the property values with valid content
+   as described by the type rules and content description found in the property value for each element</li>
+  <!-- <li>In this example:
+   <ol>
+     <li><code>property1</code> has a primitive data type; the value of the property will be as described for the stated type</li>
+     <li><code>property2</code> has a complex data type; the value of the property is an object that has the content as described for the stated type</li>
+     <li><code>property3</code> is an object property that contains additional properties (e.g. propertyA; the allowable properties are listed (but also include extensions as appropriate)</li>
+     <li><code>property4</code> is an array property that contains items which are objects themselves. The items may have any of the types already encountered in points 1-3</li>
+     <li><code>propertyA</code> has a binding to a value set - the Short description is a link to the value set. In addition, the binding strength is shown </li>
+     <li><code>propertyB</code> is a reference to a particular kind of resource </li>
+   </ol>
+ </li> -->
+ <li>Relationship names are case-sensitive (though duplicates that differ only in case are never defined)</li>
+ <li>Relationships can appear in any order</li>
+ <li>Content within a resource is always represented with anonymous nodes - only resources can be identified</li>
+ <li>Nodes are never empty. If an element is present in the resource, it SHALL have properties as defined for its type, or 1 or more <a href="extensibility.html">extensions</a></li>
+ <li>The <span style="color: brown"><b>R!</b></span> denotes that a relationship is mandatory - it must be present (or in an array, at least one item must be present)</li>
+ <li>Note that this specification produces turtle that is nicely formatted and well laid out, but this is not required nor expected</li>
+ <li>The MIME-type for this format is <code>text/turtle</code>.</li>
+</ul>
+
+<a name="resource"> </a>
+
+<h4 class="self-link-parent"><span class="sectioncount">3.1.1.1</span> Representing resources <a href="rdf.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Each resource is represented as a set of RDF triples represented using the Turtle syntax.
+When a resource has a persistent identity (e.g. it can be found at a particular URL - usually a FHIR RESTful server), 
+then that URL is it's identity. Resources with no persistent identity (e.g. bundles from search results) have the the identity of the root document -   &quot;&lt;&gt;&quot; in turtle syntax.
+</p>
+<p>
+Some resources can contain other resources. Given that the relationships can appear in any order, it
+cannot be assumed that the first encountered element represents the resource of interest that is being
+represented by the set of turtle statements. The focal resource - where to start when parsing - is the 
+resource with the relationship <code>fhir:nodeRole</code> to <code>fhir:treeRoot</code>. if there is 
+more than node in a set of turtle statements, it cannot be determined how to parse them as a single
+resource.
+</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">3.1.1.2<a name="3.1.1.2"> </a></span> Representing Repeating Elements <a href="rdf.html#3.1.1.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<p>
+Elements that can repeat are represented by a relationship 
+</p>
+<pre class="rdf">
+  fhir:index [n]
+</pre>
+<p>
+where [n] is a zero-based integer offset (ie.g the first element has an index of 0).
+Lists are never sparse; it is an error if there are missing items in the repeat sequence.
+</p>
+
+<a name="primitive"> </a>
+
+<h4 class="self-link-parent"><span class="sectioncount">3.1.1.3</span> Representing Primitive Elements <a href="rdf.html#primitive" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Primitive elements - elements with a primitive type - are represented as regular nodes so that the 
+elements extensions can be represented. The actual value of the primitive type is represented
+using the fhir:value predicate:
+</p>
+<pre class="rdf">
+  fhir:value &quot;[value]&quot;^^xs:type
+</pre>
+<p>
+The value is always a literal string that contains the value, followed by a schema type as specified for the <a href="datatypes.html#primitive">primitive type</a>.
+The schema type is required, but may be omitted when the defalut value of xs:string is correct. 
+Note that the correct schema type for a date/dateTime must be determined by inspecting the value of the date for precision.
+</p>
+<p>
+The fhir:value property can never be empty. Either the relationship is absent, or it is present with at least one character of content. XHTML is represented as an escaped xs:string.
+</p>
+
+<a name="reference"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.1.1.4</span> Representing References <a href="rdf.html#reference" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+A <a href="references.html#Reference">Reference</a> element is representing using the same
+rules as above:
+</p>
+<pre class="rdf">
+ fhir:Observation.subjectReference [
+     fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ];
+     fhir:Reference.display [ fhir:value &quot;Example Patient&quot; ];
+  ];
+</pre>
+<p>
+This allows faithful round tripping of the resource between the Turtle
+format and the JSON and XML formats. But it's very useful for an RDF 
+processor to be able to link to the target of the reference directly. 
+This can be done using the fhir:link property:
+</p>
+<pre class="rdf">
+ fhir:Observation.subjectReference [
+     fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+  ];
+</pre>
+<p>
+The fhir:link relationship can be added automatically 
+as part of generating the resource representation, or it
+can be injected by a post-processor that knows how to 
+convert the raw references into RDF-suitable references. 
+</p>
+
+<a name="concept"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.1.1.5</span> Representing Concepts <a href="rdf.html#concept" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+The same logic applies to the <a href="datatypes.html#Coding">Coding</a> and 
+<a href="datatypes.html#CodeableConcept">CodeableConcept</a> data types.
+These are represented directly in turtle by serialising their properties
+as specified above:
+</p>
+<pre class="rdf">
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+       fhir:Coding.code [ fhir:value &quot;29463-7&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Body Weight&quot; ]     
+    ];
+    fhir:CodeableConcept.coding [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;27113001&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Body weight&quot; ]    
+    ]
+  ];
+</pre>
+<p>
+For reasoners using the RDF, it's very useful to make the implicit
+concept references in these Coding and CodeableConcept explicit
+using rdfs:type assertions:
+</p>
+<pre class="rdf">
+  fhir:Observation.code [
+     a loinc:29463-7;
+     a sct:27113001;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:29463-7;
+       fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+       fhir:Coding.code [ fhir:value &quot;29463-7&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Body Weight&quot; ]     
+     ];
+     fhir:CodeableConcept.coding [
+       fhir:index 2;
+       a sct:27113001;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;27113001&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Body weight&quot; ]     
+    ]
+  ];
+</pre>
+<p>
+These type assertions can be make by any agent that 
+knows how to convert from the code system to the correct
+ontological representation of that. Note that a few 
+code systems have standard ontological representations,
+but many don't. Again, these assertions can be made by 
+the serialiser, or injected by a post-processor. 
+</p>
+
+<a name="schema"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.1.1.6</span> Schema <a href="rdf.html#schema" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<p>
+FHIR uses ShEx for representing the turtle schema.
+Todo: actually generate the ShEx schema.
+</p>
+
+
+<a name="class"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.1.2</span> RDF Representation of FHIR <a href="rdf.html#class" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In addition to the basic representation of FHIR resources in 
+turtle format, a Turtle representation of the FHIR infrastructure
+and definitions is also published, for the following purposes:
+</p>
+<ul>
+ <li>Providing the class definitions to support RDF based representation of resource instances</li>
+ <li>Supporting knowledge based analysis of the FHIR specification itself</li>
+ <li>Providing knowledge of use at run-time for converting between FHIR and other content models</li>
+ <li>Supporting reasoning across the information/terminology model boundary</li>
+</ul>
+<p>
+The RDF definitions are published as a series of turtle files: <a href="rim.ttl">RIM</a> and <a href="fhir.ttl">FHIR</a>. Note: these are out of sync with the serialization above; this will be fixed in the lead up to the Montreal connectathon.
+</p>
+
+<a name="api"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.1.3</span> Using RDF with the REST API <a href="rdf.html#api" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+TODO
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Frdf.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Frdf.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

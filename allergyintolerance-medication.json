@@ -1,0 +1,42 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "medication",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medication</p><p><b>status</b>: active</p><p><b>category</b>: medication</p><p><b>criticality</b>: high</p><p><b>code</b>: ALLERGENIC EXTRACT, PENICILLIN <span>(Details : {RxNorm code '314422' = '314422', given as 'ALLERGENIC EXTRACT, PENICILLIN'})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>attestedDate</b>: Mar 1, 2010</p><p><b>recorder</b>: <a>Practitioner/13</a></p><h3>Reactions</h3><table><tr><td>-</td><td><b>Manifestation</b></td></tr><tr><td>*</td><td>Hives <span>(Details : {SNOMED CT code '247472004' = 'Weal (disorder)', given as 'Hives'})</span></td></tr></table></div>"
+  },
+  "status": "active",
+  "category": "medication",
+  "criticality": "high",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314422",
+        "display": "ALLERGENIC EXTRACT, PENICILLIN"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "attestedDate": "2010-03-01",
+  "recorder": {
+    "reference": "Practitioner/13"
+  },
+  "reaction": [
+    {
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "247472004",
+              "display": "Hives"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

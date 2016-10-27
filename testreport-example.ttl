@@ -1,0 +1,157 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/TestReport/testreport-example> a fhir:TestReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "testreport-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: testreport-example</p><p><b>name</b>: TestReport Example for TestScript Example</p><p><b>status</b>: complete</p><p><b>score</b>: 100.0</p><p><b>tester</b>: HL7 Execution Engine</p><p><b>testScript</b>: <a>TestScript/testscript-example</a></p><p><b>issued</b>: Oct 7, 2016 8:25:34 AM</p><blockquote><p><b>participant</b></p><p><b>type</b>: test-engine</p><p><b>uri</b>: <a>http://projectcrucible.org</a></p><p><b>display</b>: Crucible</p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: server</p><p><b>uri</b>: <a>http://fhir3.healthintersections.com.au/open</a></p><p><b>display</b>: HealthIntersections STU3</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Result</b></td><td><b>Message</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>pass</td><td>DELETE Patient</td><td><a>http://projectcrucible.org/permalink/1</a></td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td><td><b>Result</b></td><td><b>Message</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>pass</td><td>HTTP 204</td><td>http://projectcrucible.org/permalink/1</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Result</b></td><td><b>Message</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>pass</td><td>POST Patient/fixture-patient-create</td><td><a>http://projectcrucible.org/permalink/1</a></td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td><td><b>Result</b></td><td><b>Message</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>pass</td><td>HTTP 201</td><td>http://projectcrucible.org/permalink/1</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Read Patient</p><p><b>description</b>: Read a Patient and validate response.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>teardown</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+  ];
+  fhir:TestReport.name [ fhir:value "TestReport Example for TestScript Example"];
+  fhir:TestReport.status [ fhir:value "complete"];
+  fhir:TestReport.score [ fhir:value "100.0"^^xsd:decimal];
+  fhir:TestReport.tester [ fhir:value "HL7 Execution Engine"];
+  fhir:TestReport.testScript [
+     fhir:link <http://hl7.org/fhir/TestScript/testscript-example>;
+     fhir:Reference.reference [ fhir:value "TestScript/testscript-example" ]
+  ];
+  fhir:TestReport.issued [ fhir:value "2016-10-07T08:25:34-05:00"^^xsd:dateTime];
+  fhir:TestReport.participant [
+     fhir:index 0;
+     fhir:TestReport.participant.type [ fhir:value "test-engine" ];
+     fhir:TestReport.participant.uri [ fhir:value "http://projectcrucible.org" ];
+     fhir:TestReport.participant.display [ fhir:value "Crucible" ]
+  ], [
+     fhir:index 1;
+     fhir:TestReport.participant.type [ fhir:value "server" ];
+     fhir:TestReport.participant.uri [ fhir:value "http://fhir3.healthintersections.com.au/open" ];
+     fhir:TestReport.participant.display [ fhir:value "HealthIntersections STU3" ]
+  ];
+  fhir:TestReport.setup [
+     fhir:TestReport.setup.action [
+       fhir:index 0;
+       fhir:TestReport.setup.action.operation [
+         fhir:TestReport.setup.action.operation.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.operation.message [ fhir:value "DELETE Patient" ];
+         fhir:TestReport.setup.action.operation.detail [ fhir:value "http://projectcrucible.org/permalink/1" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestReport.setup.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "HTTP 204" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/1" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestReport.setup.action.operation [
+         fhir:TestReport.setup.action.operation.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.operation.message [ fhir:value "POST Patient/fixture-patient-create" ];
+         fhir:TestReport.setup.action.operation.detail [ fhir:value "http://projectcrucible.org/permalink/1" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestReport.setup.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "HTTP 201" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/1" ]
+       ]
+     ]
+  ];
+  fhir:TestReport.test [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "01-ReadPatient" ];
+     fhir:TestReport.test.name [ fhir:value "Read Patient" ];
+     fhir:TestReport.test.description [ fhir:value "Read a Patient and validate response." ];
+     fhir:TestReport.test.action [
+       fhir:index 0;
+       fhir:TestReport.test.action.operation [
+         fhir:TestReport.setup.action.operation.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.operation.message [ fhir:value "GET Patient/fixture-patient-create" ];
+         fhir:TestReport.setup.action.operation.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "HTTP 200" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Last-Modified Present" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Response is Patient" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Response validates" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Patient.name.family 'Chalmers'" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Patient.name.given 'Peter'" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Patient.name.family 'Chalmers'" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Patient.name.family 'Chalmers'" ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:TestReport.test.action.assert [
+         fhir:TestReport.setup.action.assert.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Patient expected values." ];
+         fhir:TestReport.setup.action.assert.detail [ fhir:value "http://projectcrucible.org/permalink/2" ]
+       ]
+     ]
+  ];
+  fhir:TestReport.teardown [
+     fhir:TestReport.teardown.action [
+       fhir:index 0;
+       fhir:TestReport.teardown.action.operation [
+         fhir:TestReport.setup.action.operation.result [ fhir:value "pass" ];
+         fhir:TestReport.setup.action.operation.message [ fhir:value "DELETE Patient/fixture-patient-create." ];
+         fhir:TestReport.setup.action.operation.detail [ fhir:value "http://projectcrucible.org/permalink/3" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/TestScript/testscript-example> a fhir:TestScript .
+
+# -------------------------------------------------------------------------------------
+

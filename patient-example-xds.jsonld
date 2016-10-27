@@ -1,0 +1,90 @@
+{
+  "@context": "http://build.fhir.org/Patient.jsonld",
+  "@context": "http://hl7.org/fhir/Patient/xds",
+  "Resource.id": {
+    "id.value": "xds"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Patient John Doe, M, 27-May 1956. ID: 89765a87b</p>\n    \n    </div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "code.value": "MR"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:1.2.3.4.5"
+      },
+      "Identifier.value": {
+        "string.value": "89765a87b"
+      }
+    }
+  ],
+  "Patient.active": {
+    "boolean.value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.family": [
+        {
+          "string.value": "Doe"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "John"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "code.value": "male"
+  },
+  "Patient.birthDate": {
+    "date.value": "1956-05-27"
+  },
+  "Patient.address": [
+    {
+      "Address.line": [
+        {
+          "string.value": "100 Main St"
+        }
+      ],
+      "Address.city": {
+        "string.value": "Metropolis"
+      },
+      "Address.state": {
+        "string.value": "Il"
+      },
+      "Address.postalCode": {
+        "string.value": "44130"
+      },
+      "Address.country": {
+        "string.value": "USA"
+      }
+    }
+  ],
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "string.value": "Organization/2"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/2"
+  }
+}

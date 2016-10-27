@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Device/example-udi1> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-udi1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-udi1</p><p><b>identifier</b>: 1234-5678-90AB-CDEF, Serial Number = 10987654d321</p><p><b>udiCarrier</b>: Universal Device Identifier = {01}09504000059118{17}141120{10}7654321D{21}10987654d321</p><p><b>status</b>: not-available</p><p><b>type</b>: Coated femoral stem prosthesis, modular <span>(Details : {http://hl7.org/fhir/NamingSystem/gs1-di code '09504000059118' = '09504000059118; {SNOMED CT code '468063009' = 'Coated femoral stem prosthesis, modular (physical object)', given as 'Coated femoral stem prosthesis, modular'})</span></p><p><b>lotNumber</b>: 7654321D</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>expirationDate</b>: Nov 20, 2014</p><p><b>model</b>: PM/Octane 2014</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+  ];
+  fhir:Device.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://acme.com/devices/pacemakers/octane/serial" ];
+     fhir:Identifier.value [ fhir:value "1234-5678-90AB-CDEF" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+         fhir:Coding.code [ fhir:value "SNO" ]
+       ]
+     ];
+     fhir:Identifier.value [ fhir:value "10987654d321" ]
+  ];
+  fhir:Device.udiCarrier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+         fhir:Coding.code [ fhir:value "UDI" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/NamingSystem/fda-udi" ];
+     fhir:Identifier.value [ fhir:value "{01}09504000059118{17}141120{10}7654321D{21}10987654d321" ]
+  ];
+  fhir:Device.status [ fhir:value "not-available"];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/NamingSystem/gs1-di" ];
+       fhir:Coding.code [ fhir:value "09504000059118" ]
+     ], [
+       fhir:index 1;
+       fhir:concept sct:468063009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "468063009" ];
+       fhir:Coding.display [ fhir:value "Coated femoral stem prosthesis, modular" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Coated femoral stem prosthesis, modular" ]
+  ];
+  fhir:Device.lotNumber [ fhir:value "7654321D"];
+  fhir:Device.manufacturer [ fhir:value "Acme Devices, Inc"];
+  fhir:Device.expirationDate [ fhir:value "2014-11-20"^^xsd:date];
+  fhir:Device.model [ fhir:value "PM/Octane 2014"];
+  fhir:Device.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

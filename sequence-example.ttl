@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Sequence/example> a fhir:Sequence;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>type</b>: DNA</p><p><b>coordinateSystem</b>: 0</p><p><b>patient</b>: <a>Patient/example</a></p><h3>ReferenceSeqs</h3><table><tr><td>-</td><td><b>ReferenceSeqId</b></td><td><b>Strand</b></td><td><b>WindowStart</b></td><td><b>WindowEnd</b></td></tr><tr><td>*</td><td>NC_000007.14 <span>(Details : {http://www.ncbi.nlm.nih.gov/nuccore code 'NC_000007.14' = 'NC_000007.14)</span></td><td>1</td><td>55227970</td><td>55227980</td></tr></table><h3>Variants</h3><table><tr><td>-</td><td><b>Start</b></td><td><b>End</b></td><td><b>ObservedAllele</b></td><td><b>ReferenceAllele</b></td></tr><tr><td>*</td><td>55227976</td><td>55227977</td><td>T</td><td>A</td></tr></table><h3>Repositories</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Name</b></td><td><b>VariantId</b></td></tr><tr><td>*</td><td><a>https://www.googleapis.com/genomics/v1beta2</a></td><td>ga4gh</td><td>A1A2</td></tr></table></div>"
+  ];
+  fhir:Sequence.type [ fhir:value "DNA"];
+  fhir:Sequence.coordinateSystem [ fhir:value "0"^^xsd:int];
+  fhir:Sequence.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Sequence.referenceSeq [
+     fhir:Sequence.referenceSeq.referenceSeqId [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.ncbi.nlm.nih.gov/nuccore" ];
+         fhir:Coding.code [ fhir:value "NC_000007.14" ]
+       ]
+     ];
+     fhir:Sequence.referenceSeq.strand [ fhir:value "1"^^xsd:int ];
+     fhir:Sequence.referenceSeq.windowStart [ fhir:value "55227970"^^xsd:int ];
+     fhir:Sequence.referenceSeq.windowEnd [ fhir:value "55227980"^^xsd:int ]
+  ];
+  fhir:Sequence.variant [
+     fhir:index 0;
+     fhir:Sequence.variant.start [ fhir:value "55227976"^^xsd:int ];
+     fhir:Sequence.variant.end [ fhir:value "55227977"^^xsd:int ];
+     fhir:Sequence.variant.observedAllele [ fhir:value "T" ];
+     fhir:Sequence.variant.referenceAllele [ fhir:value "A" ]
+  ];
+  fhir:Sequence.repository [
+     fhir:index 0;
+     fhir:Sequence.repository.url [ fhir:value "https://www.googleapis.com/genomics/v1beta2" ];
+     fhir:Sequence.repository.name [ fhir:value "ga4gh" ];
+     fhir:Sequence.repository.variantId [ fhir:value "A1A2" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

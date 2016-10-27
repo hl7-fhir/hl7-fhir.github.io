@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ActivityDefinition/example> a fhir:ActivityDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Referral definition</div>"
+  ];
+  fhir:ActivityDefinition.status [ fhir:value "draft"];
+  fhir:ActivityDefinition.description [ fhir:value "refer to primary care mental-health integrated care program for evaluation and treatment of mental health conditions now"];
+  fhir:ActivityDefinition.category [ fhir:value "referral"];
+  fhir:ActivityDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "306206005" ]
+     ]
+  ];
+  fhir:ActivityDefinition.participantType [
+     fhir:value "practitioner";
+     fhir:index 0
+  ] .
+
+# -------------------------------------------------------------------------------------
+

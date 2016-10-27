@@ -1,0 +1,178 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "ValueSet-expand"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"];
+  fhir:OperationDefinition.name [ fhir:value "Value Set Expansion"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation.   If the operation is not called at the instance level, one of the in parameters identifier, context or valueset must be provided.  An expanded value set will be returned, or an OperationOutcome with an error message."];
+  fhir:OperationDefinition.code [ fhir:value "expand"];
+  fhir:OperationDefinition.comment [ fhir:value "The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used.   Clients can work through large flat expansions in a set of pages (partial views of the full expansion) instead of just getting the full expansion in a single exchange by using offset and count parameters. Servers are not obliged to support paging, but if they do, SHALL support both the offset and count parameters. Hierarchical expansions are not subject to paging and servers simply return the entire expansion.  Different servers may return different results from expanding a value set for the following reasons:  * The underlying code systems are different (e.g. different versions, possibly with different defined behavior) * The server optimizes filter includes differently, such as sorting by code frequency * Servers introduce arbitrary groups to assist a user to navigate the lists based either on extensions in the definition, or additional knowledge available to the server\n\nWhen a server cannot correctly expand a value set because it does not fully understand the code systems (e.g. it has the wrong version, or incomplete definitions) then it SHALL return an error. If the value set itself is unbounded due to the inclusion of post-coordinated value sets (e.g. SNOMED CT, UCUM), then the extension [[[http://hl7.org/fhir/StructureDefinition/valueset-unclosed]]] can be used to indicate that the expansion is incomplete"];
+  fhir:OperationDefinition.resource [
+     fhir:value "ValueSet";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "true"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "identifier" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A logical value set identifier (i.e. ValueSet.url). The server must know the value set (e.g. it is defined explicitly in the server's value sets, or it is defined implicitly by some code system known to the server" ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "valueSet" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion" ];
+     fhir:OperationDefinition.type [ fhir:value "ValueSet" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "context" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The context of the value set, so that the server can resolve this to a value set to expand. The recommended format for this URI is [Structure Definition URL]#[name or path into structure definition] e.g. http://hl7.org/fhir/StructureDefinition/observation-hspc-height-hspcheight#Observation.interpretation. Other forms may be used but are not defined. This form is only useable if the terminology server also has access to the profile registry that the server is using, but can be used to delegate the mapping from an application context to a binding at run-time" ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "filter" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A text filter that is applied to restrict the codes that are returned (this is useful in a UI context). The interpretation of this is delegated to the server in order to allow to determine the most optimal search approach for the context" ];
+     fhir:OperationDefinition.type [ fhir:value "string" ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.name [ fhir:value "profile" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A reference to an external definition that provides additional control information about how the expansion is performed.  At this time, there is no agreed format or functionality for the target of this URI. The [VSAC Documentation](http://www.nlm.nih.gov/vsac/support/authorguidelines/updatingvaluesets.html) provides one example of the use of this parameter.  Implementers using this element will need to agree on an appropriate mechanism for use within their interoperability community.  Known uses for profile include: * whether to return the value set content logical definition with the expansion * whether to include inactive concepts" ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 5;
+     fhir:OperationDefinition.name [ fhir:value "date" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The date for which the expansion should be generated.  if a date is provided, it means that the server should use the value set / code system definitions as they were on the given date, or return an error if this is not possible.  Normally, the date is the current conditions (which is the default value) but under some circumstances, systems need to generate an expansion as it would have been in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy." ];
+     fhir:OperationDefinition.type [ fhir:value "dateTime" ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.name [ fhir:value "offset" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Paging support - where to start if a subset is desired (default = 0)" ];
+     fhir:OperationDefinition.type [ fhir:value "integer" ]
+  ], [
+     fhir:index 7;
+     fhir:OperationDefinition.name [ fhir:value "count" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Paging support - how many codes should be provided in a partial view. Paging only applies to flat expansions - servers ignore paging if the expansion is not flat.  If count = 0, the client is asking how large the expansion is. Servers SHOULD honor this request for hierarchical expansions as well, and simply return the overall count" ];
+     fhir:OperationDefinition.type [ fhir:value "integer" ]
+  ], [
+     fhir:index 8;
+     fhir:OperationDefinition.name [ fhir:value "includeDesignations" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Controls whether concept designations are to be included or excluded in value set expansions. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 9;
+     fhir:OperationDefinition.name [ fhir:value "includeDefinition" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Controls whether the value set definition is included or excluded in value set expansions. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 10;
+     fhir:OperationDefinition.name [ fhir:value "activeOnly" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Controls whether inactive concepts are included or excluded in value set expansions. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 11;
+     fhir:OperationDefinition.name [ fhir:value "excludeNested" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Controls whether or not the value set expansion includes nested codes (i.e. ValueSet.expansion.contains.contains). Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 12;
+     fhir:OperationDefinition.name [ fhir:value "excludeNotForUI" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Controls whether or not the value set expansion includes codes which cannot be displayed in user interfaces. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 13;
+     fhir:OperationDefinition.name [ fhir:value "excludePostCoordinated" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Controls whether or not the value set expansion includes post coordinated codes. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 14;
+     fhir:OperationDefinition.name [ fhir:value "displayLanguage" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Specifies the language to be used for description in the expansions i.e. the language to be used for ValueSet.expansion.contains.display. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "code" ]
+  ], [
+     fhir:index 15;
+     fhir:OperationDefinition.name [ fhir:value "limitedExpansion" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "If the value set being expanded is incomplete (because it is too big to expand), return a limited expansion (a subset) with an indicator that expansion is incomplete. Overrides the value in the expansion profile if there is one" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 16;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The result of the expansion" ];
+     fhir:OperationDefinition.type [ fhir:value "ValueSet" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

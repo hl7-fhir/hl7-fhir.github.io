@@ -1,0 +1,185 @@
+{
+  "@context": "http://build.fhir.org/MedicationRequest.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationRequest/medrx0319",
+  "Resource.id": {
+    "id.value": "medrx0319"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx0319</p><p><b>contained</b>: </p><p><b>identifier</b>: 12345689 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>stage</b>: original-order <span>(Details : {[not stated] code 'original-order' = 'original-order)</span></p><p><b>medication</b>: Piperacillin/Tazobactam 4.5gm. Generated Summary: id: med0302; Zosyn (piperacillin/tazobactam) 4.5gm injection <span>(Details : {http://hl7.org/fhir/sid/ndc code '0206-8862-02' = '0206-8862-02', given as 'Zosyn (piperacillin/tazobactam) 4.5gm injection'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>reasonCode</b>: Community acquired pneumonia (disorder) <span>(Details : {SNOMED CT code '385093006' = 'Community acquired pneumonia (disorder)', given as 'Community acquired pneumonia (disorder)'})</span></p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0302"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/sid/ndc"
+            },
+            "Coding.code": {
+              "code.value": "0206-8862-02"
+            },
+            "Coding.display": {
+              "string.value": "Zosyn (piperacillin/tazobactam) 4.5gm injection"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationRequest.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "string.value": "12345689"
+      }
+    }
+  ],
+  "MedicationRequest.status": {
+    "code.value": "completed"
+  },
+  "MedicationRequest.stage": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "code.value": "original-order"
+        }
+      }
+    ]
+  },
+  "MedicationRequest.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0302"
+    },
+    "Reference.display": {
+      "string.value": "Piperacillin/Tazobactam 4.5gm"
+    }
+  },
+  "MedicationRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationRequest.dateWritten": {
+    "dateTime.value": "2015-01-15"
+  },
+  "MedicationRequest.prescriber": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "string.value": "Patrick Pump"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationRequest.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "385093006"
+          },
+          "Coding.display": {
+            "string.value": "Community acquired pneumonia (disorder)"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationRequest.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "4.5 grams in D5W 250 ml. IV every 6 hours.Infuse over 30 min at 8L/min "
+      },
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 6
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "h"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "47625008"
+            },
+            "Coding.display": {
+              "string.value": "Intravenous route (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#47625008"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 4.5
+        },
+        "Quantity.unit": {
+          "string.value": "g"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "g"
+        }
+      },
+      "DosageInstruction.rateRatio": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "decimal.value": 8
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "ml"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "decimal.value": 1
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "min"
+          }
+        }
+      }
+    }
+  ]
+}

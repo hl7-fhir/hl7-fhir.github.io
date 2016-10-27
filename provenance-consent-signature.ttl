@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Provenance/consent-signature> a fhir:Provenance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consent-signature"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: consent-signature</p><p><b>target</b>: <a>Consent/consent-example-signature</a></p><p><b>recorded</b>: May 26, 2016 12:41:10 AM</p><h3>Agents</h3><table><tr><td>-</td><td><b>Role</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Author (Details: http://hl7.org/fhir/provenance-participant-role code author = 'Author', stated as 'null')</td><td><a>Patient/72</a></td></tr></table><p><b>signature</b>: </p></div>"
+  ];
+  fhir:Provenance.target [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Consent/consent-example-signature>;
+     fhir:Reference.reference [ fhir:value "Consent/consent-example-signature" ]
+  ];
+  fhir:Provenance.recorded [ fhir:value "2016-05-26T00:41:10-04:00"^^xsd:dateTime];
+  fhir:Provenance.agent [
+     fhir:index 0;
+     fhir:Provenance.agent.role [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/provenance-participant-role" ];
+       fhir:Coding.code [ fhir:value "author" ]
+     ];
+     fhir:Provenance.agent.actor [
+       fhir:link <http://hl7.org/fhir/Patient/72>;
+       fhir:Reference.reference [ fhir:value "Patient/72" ]
+     ]
+  ];
+  fhir:Provenance.signature [
+     fhir:index 0;
+     fhir:Signature.type [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso-astm:E1762-95:2013" ];
+       fhir:Coding.code [ fhir:value "1.2.840.10065.1.12.1.1" ];
+       fhir:Coding.display [ fhir:value "Author's Signature" ]
+     ];
+     fhir:Signature.when [ fhir:value "2016-05-26T00:41:10-04:00"^^xsd:dateTime ];
+     fhir:Signature.whoReference [
+       fhir:link <http://hl7.org/fhir/Patient/72>;
+       fhir:Reference.reference [ fhir:value "Patient/72" ]
+     ];
+     fhir:Signature.contentType [ fhir:value "application/signature+xml" ];
+     fhir:Signature.blob [ fhir:value "dGhpcyBibG9iIGlzIHNuaXBwZWQ="^^xsd:base64Binary ]
+  ] .
+
+<http://hl7.org/fhir/Consent/consent-example-signature> a fhir:Consent .
+
+<http://hl7.org/fhir/Patient/72> a fhir:Patient, fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

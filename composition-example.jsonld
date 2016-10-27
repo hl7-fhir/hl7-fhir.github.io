@@ -1,0 +1,271 @@
+{
+  "@context": "http://build.fhir.org/Composition.jsonld",
+  "@context": "http://hl7.org/fhir/Composition/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>Consultation note for Henry Levin the 7th</p>\n\t\t\t<p>Managed by Good Health Clinic</p>\n\t\t</div>"
+    }
+  },
+  "Composition.identifier": {
+    "Identifier.system": {
+      "uri.value": "http://healthintersections.com.au/test"
+    },
+    "Identifier.value": {
+      "string.value": "1"
+    }
+  },
+  "Composition.date": {
+    "dateTime.value": "2012-01-04T09:10:14Z"
+  },
+  "Composition.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "11488-4"
+        },
+        "Coding.display": {
+          "string.value": "Consult note"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#11488-4"
+  },
+  "Composition.class": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "LP173421-1"
+        },
+        "Coding.display": {
+          "string.value": "Report"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#LP173421-1"
+  },
+  "Composition.title": {
+    "string.value": "Consultation Note"
+  },
+  "Composition.status": {
+    "code.value": "final"
+  },
+  "Composition.confidentiality": {
+    "code.value": "N"
+  },
+  "Composition.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/xcda"
+    },
+    "Reference.display": {
+      "string.value": "Henry Levin the 7th"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/xcda"
+  },
+  "Composition.author": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/xcda-author"
+      },
+      "Reference.display": {
+        "string.value": "Harold Hippocrates, MD"
+      }
+    }
+  ],
+  "Composition.attester": [
+    {
+      "Composition.attester.mode": [
+        {
+          "code.value": "legal"
+        }
+      ],
+      "Composition.attester.time": {
+        "dateTime.value": "2012-01-04T09:10:14Z"
+      },
+      "Composition.attester.party": {
+        "Reference.reference": {
+          "string.value": "Practitioner/xcda-author"
+        },
+        "Reference.display": {
+          "string.value": "Harold Hippocrates, MD"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/xcda-author"
+      }
+    }
+  ],
+  "Composition.custodian": {
+    "Reference.reference": {
+      "string.value": "Organization/2.16.840.1.113883.19.5"
+    },
+    "Reference.display": {
+      "string.value": "Good Health Clinic"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/2.16.840.1.113883.19.5"
+  },
+  "Composition.event": [
+    {
+      "Composition.event.code": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/v3/ActCode"
+              },
+              "Coding.code": {
+                "code.value": "HEALTHREC"
+              },
+              "Coding.display": {
+                "string.value": "health record"
+              }
+            }
+          ]
+        }
+      ],
+      "Composition.event.period": {
+        "Period.start": {
+          "dateTime.value": "2010-07-18"
+        },
+        "Period.end": {
+          "dateTime.value": "2012-11-12"
+        }
+      },
+      "Composition.event.detail": [
+        {
+          "Reference.reference": {
+            "string.value": "Observation/example"
+          }
+        }
+      ]
+    }
+  ],
+  "Composition.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/xcda"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/xcda"
+  },
+  "Composition.section": [
+    {
+      "Composition.section.title": {
+        "string.value": "History of present illness"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "11348-0"
+            },
+            "Coding.display": {
+              "string.value": "History of past illness Narrative"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#11348-0"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "code.value": "generated"
+        },
+        "Narrative.div": {
+          "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t<table>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Code</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Date</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Type</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>BodySite</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Severity</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Stroke</td>\n\t\t\t\t\t\t<td>2010-07-18</td>\n\t\t\t\t\t\t<td>Diagnosis</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Burnt Ear</td>\n\t\t\t\t\t\t<td>2012-05-24</td>\n\t\t\t\t\t\t<td>Diagnosis</td>\n\t\t\t\t\t\t<td>Left Ear</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Asthma</td>\n\t\t\t\t\t\t<td>2012-11-12</td>\n\t\t\t\t\t\t<td>Finding</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t\t<td>Mild</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>"
+        }
+      },
+      "Composition.section.mode": {
+        "code.value": "snapshot"
+      },
+      "Composition.section.orderedBy": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/list-order"
+            },
+            "Coding.code": {
+              "code.value": "event-date"
+            },
+            "Coding.display": {
+              "string.value": "Sorted by Event Date"
+            }
+          }
+        ]
+      },
+      "Composition.section.entry": [
+        {
+          "Reference.reference": {
+            "string.value": "Condition/stroke"
+          }
+        },
+        {
+          "Reference.reference": {
+            "string.value": "Condition/example"
+          }
+        },
+        {
+          "Reference.reference": {
+            "string.value": "Condition/example2"
+          }
+        }
+      ]
+    },
+    {
+      "Composition.section.title": {
+        "string.value": "History of family member diseases"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "10157-6"
+            },
+            "Coding.display": {
+              "string.value": "History of family member diseases Narrative"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#10157-6"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "code.value": "generated"
+        },
+        "Narrative.div": {
+          "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>History of family member diseases - not available</p>\n\t\t\t</div>"
+        }
+      },
+      "Composition.section.mode": {
+        "code.value": "snapshot"
+      },
+      "Composition.section.emptyReason": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/list-empty-reason"
+            },
+            "Coding.code": {
+              "code.value": "withheld"
+            },
+            "Coding.display": {
+              "string.value": "Information Withheld"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

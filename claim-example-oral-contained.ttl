@@ -1,0 +1,184 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Claim/100152> a fhir:Claim;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "100152"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Oral Health Claim</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Organization;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "org-insurer" ];
+     fhir:Organization.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://www.bindb.com/bin" ];
+       fhir:Identifier.value [ fhir:value "123456" ]
+     ]
+  ], [
+     a fhir:Organization;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "org-org" ];
+     fhir:Organization.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://www.jurisdiction.com/oralhealthoffices" ];
+       fhir:Identifier.value [ fhir:value "3456" ]
+     ]
+  ], [
+     a fhir:Practitioner;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "provider-1" ];
+     fhir:Practitioner.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://www.jurisdiction.com/oralhealthproviders" ];
+       fhir:Identifier.value [ fhir:value "123456789" ]
+     ]
+  ], [
+     a fhir:Patient;
+     fhir:index 3;
+     fhir:Resource.id [ fhir:value "patient-1" ];
+     fhir:Patient.name [
+       fhir:index 0;
+       fhir:HumanName.use [ fhir:value "official" ];
+       fhir:HumanName.family [
+         fhir:value "Donald";
+         fhir:index 0
+       ];
+       fhir:HumanName.given [
+         fhir:value "Duck";
+         fhir:index 0
+       ]
+     ];
+     fhir:Patient.gender [ fhir:value "male" ];
+     fhir:Patient.birthDate [ fhir:value "1986-05-17"^^xsd:date ];
+     fhir:Patient.address [
+       fhir:index 0;
+       fhir:Address.use [ fhir:value "home" ];
+       fhir:Address.line [
+         fhir:value "1234 Main Street";
+         fhir:index 0
+       ];
+       fhir:Address.city [ fhir:value "Vancouver" ];
+       fhir:Address.postalCode [ fhir:value "V2H1Y3" ];
+       fhir:Address.country [ fhir:value "CAD" ]
+     ]
+  ], [
+     a fhir:Coverage;
+     fhir:index 4;
+     fhir:Resource.id [ fhir:value "coverage-1" ];
+     fhir:Coverage.status [ fhir:value "active" ];
+     fhir:Coverage.issuer [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://www.bindb.com/bin" ];
+         fhir:Identifier.value [ fhir:value "123456" ]
+       ]
+     ];
+     fhir:Coverage.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "EHCPOL" ]
+     ];
+     fhir:Coverage.planholder [
+       fhir:Reference.reference [ fhir:value "#patient-1" ]
+     ];
+     fhir:Coverage.beneficiary [
+       fhir:Reference.reference [ fhir:value "#patient-1" ]
+     ];
+     fhir:Coverage.relationship [
+       fhir:Coding.code [ fhir:value "self" ]
+     ];
+     fhir:Coverage.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://benefitsinc.com/certificate" ];
+       fhir:Identifier.value [ fhir:value "12345" ]
+     ];
+     fhir:Coverage.level [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://benefitsinc.com/plan" ];
+       fhir:Coding.code [ fhir:value "CBI35" ];
+       fhir:Coding.display [ fhir:value "Corporate Baker's Inc. Plan#35" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://benefitsinc.com/subplan" ];
+       fhir:Coding.code [ fhir:value "123" ];
+       fhir:Coding.display [ fhir:value "Trainee Part-time Benefits" ]
+     ];
+     fhir:Coverage.dependent [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Coverage.sequence [ fhir:value "1"^^xsd:positiveInteger ]
+  ];
+  fhir:Claim.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://happyvalley.com/claim" ];
+     fhir:Identifier.value [ fhir:value "12347" ]
+  ];
+  fhir:Claim.status [ fhir:value "active"];
+  fhir:Claim.type [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ex-claimtype" ];
+     fhir:Coding.code [ fhir:value "oral" ]
+  ];
+  fhir:Claim.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:Claim.insurer [
+     fhir:Reference.reference [ fhir:value "#org-insurer" ]
+  ];
+  fhir:Claim.organization [
+     fhir:Reference.reference [ fhir:value "#org-org" ]
+  ];
+  fhir:Claim.use [ fhir:value "complete"];
+  fhir:Claim.priority [
+     fhir:Coding.code [ fhir:value "normal" ]
+  ];
+  fhir:Claim.payee [
+     fhir:Claim.payee.type [
+       fhir:Coding.code [ fhir:value "provider" ]
+     ]
+  ];
+  fhir:Claim.diagnosis [
+     fhir:index 0;
+     fhir:Claim.diagnosis.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.diagnosis.diagnosis [
+       fhir:Coding.code [ fhir:value "123456" ]
+     ]
+  ];
+  fhir:Claim.patient [
+     fhir:Reference.reference [ fhir:value "#patient-1" ]
+  ];
+  fhir:Claim.coverage [
+     fhir:index 0;
+     fhir:Claim.coverage.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.coverage.focal [ fhir:value "true"^^xsd:boolean ];
+     fhir:Claim.coverage.coverage [
+       fhir:Reference.reference [ fhir:value "#coverage-1" ]
+     ]
+  ];
+  fhir:Claim.item [
+     fhir:index 0;
+     fhir:Claim.item.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.item.careTeam [
+       fhir:index 0;
+       fhir:Claim.item.careTeam.provider [
+         fhir:Reference.reference [ fhir:value "#provider-1" ]
+       ]
+     ];
+     fhir:Claim.item.service [
+       fhir:Coding.code [ fhir:value "1200" ]
+     ];
+     fhir:Claim.item.servicedDate [ fhir:value "2014-08-16"^^xsd:date ];
+     fhir:Claim.item.unitPrice [
+       fhir:Quantity.value [ fhir:value "135.57"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+       fhir:Quantity.code [ fhir:value "USD" ]
+     ];
+     fhir:Claim.item.net [
+       fhir:Quantity.value [ fhir:value "135.57"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+       fhir:Quantity.code [ fhir:value "USD" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ClaimResponse/R3500> a fhir:ClaimResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "R3500"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+  ];
+  fhir:ClaimResponse.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/fhir/remittance" ];
+     fhir:Identifier.value [ fhir:value "R3500" ]
+  ];
+  fhir:ClaimResponse.status [ fhir:value "active"];
+  fhir:ClaimResponse.request [
+     fhir:link <http://www.BenefitsInc.com/fhir/oralhealthclaim/15476332402>;
+     fhir:Reference.reference [ fhir:value "http://www.BenefitsInc.com/fhir/oralhealthclaim/15476332402" ]
+  ];
+  fhir:ClaimResponse.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:ClaimResponse.organization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.jurisdiction.org/insurers" ];
+       fhir:Identifier.value [ fhir:value "555123" ]
+     ]
+  ];
+  fhir:ClaimResponse.outcome [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/remittance-outcome" ];
+     fhir:Coding.code [ fhir:value "complete" ]
+  ];
+  fhir:ClaimResponse.disposition [ fhir:value "Claim settled as per contract."];
+  fhir:ClaimResponse.payeeType [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/payeetype" ];
+     fhir:Coding.code [ fhir:value "provider" ]
+  ];
+  fhir:ClaimResponse.item [
+     fhir:index 0;
+     fhir:ClaimResponse.item.sequenceLinkId [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ClaimResponse.item.adjudication [
+       fhir:index 0;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:Coding.code [ fhir:value "eligible" ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "135.57"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:Coding.code [ fhir:value "copay" ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "10.00"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:Coding.code [ fhir:value "eligpercent" ]
+       ];
+       fhir:ClaimResponse.item.adjudication.value [ fhir:value "80.00"^^xsd:decimal ]
+     ], [
+       fhir:index 3;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:Coding.code [ fhir:value "benefit" ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "100.47"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ]
+  ];
+  fhir:ClaimResponse.totalCost [
+     fhir:Quantity.value [ fhir:value "135.57"^^xsd:decimal ];
+     fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+     fhir:Quantity.code [ fhir:value "USD" ]
+  ];
+  fhir:ClaimResponse.totalBenefit [
+     fhir:Quantity.value [ fhir:value "100.47"^^xsd:decimal ];
+     fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+     fhir:Quantity.code [ fhir:value "USD" ]
+  ];
+  fhir:ClaimResponse.payment [
+     fhir:ClaimResponse.payment.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ValueSet/ex-paymenttype" ];
+       fhir:Coding.code [ fhir:value "complete" ]
+     ];
+     fhir:ClaimResponse.payment.date [ fhir:value "2014-08-31"^^xsd:date ];
+     fhir:ClaimResponse.payment.amount [
+       fhir:Quantity.value [ fhir:value "100.47"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "urn:iso:std:iso:4217" ];
+       fhir:Quantity.code [ fhir:value "USD" ]
+     ];
+     fhir:ClaimResponse.payment.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/fhir/paymentidentifier" ];
+       fhir:Identifier.value [ fhir:value "201408-2-1569478" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

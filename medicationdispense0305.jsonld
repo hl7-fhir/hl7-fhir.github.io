@@ -1,0 +1,400 @@
+{
+  "@context": "http://build.fhir.org/MedicationDispense.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationDispense/meddisp0305",
+  "Resource.id": {
+    "id.value": "meddisp0305"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0305</p><p><b>contained</b>: </p><p><b>status</b>: entered-in-error</p><p><b>medication</b>: Prednisone. Generated Summary: id: med0311; Prednisone 5mg Oral Tablet 48 Count Pack <span>(Details : {RxNorm code '763179' = '763179', given as 'Prednisone 5mg Oral Tablet 48 Count Pack'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0303</a></p><p><b>type</b>: First Fill <span>(Details : {http:hl7.org/fhir code 'FF' = 'FF', given as 'First Fill'})</span></p><p><b>quantity</b>: 49 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = 'TAB')</span></p><p><b>daysSupply</b>: 21 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>whenHandedOver</b>: Jan 15, 2015 4:20:00 PM</p><p><b>dosageInstruction</b>: , , </p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0311"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            },
+            "Coding.code": {
+              "code.value": "763179"
+            },
+            "Coding.display": {
+              "string.value": "Prednisone 5mg Oral Tablet 48 Count Pack"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationDispense.status": {
+    "code.value": "entered-in-error"
+  },
+  "MedicationDispense.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0311"
+    },
+    "Reference.display": {
+      "string.value": "Prednisone"
+    }
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f006"
+    },
+    "Reference.display": {
+      "string.value": "Rob van den Berk"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f006"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "string.value": "MedicationRequest/medrx0303"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http:hl7.org/fhir"
+        },
+        "Coding.code": {
+          "code.value": "FF"
+        },
+        "Coding.display": {
+          "string.value": "First Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "decimal.value": 49
+    },
+    "Quantity.unit": {
+      "string.value": "TAB"
+    },
+    "Quantity.system": {
+      "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+    },
+    "Quantity.code": {
+      "code.value": "TAB"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "decimal.value": 21
+    },
+    "Quantity.unit": {
+      "string.value": "Day"
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "d"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "dateTime.value": "2015-01-15T10:20:00Z"
+  },
+  "MedicationDispense.whenHandedOver": {
+    "dateTime.value": "2015-01-15T16:20:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "Take 4 tablets daily for 7 days starting January 16, 2015"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "311504000"
+              },
+              "Coding.display": {
+                "string.value": "With or after Food"
+              }
+            }
+          ]
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.boundsPeriod": {
+            "Period.start": {
+              "dateTime.value": "2015-01-16"
+            },
+            "Period.end": {
+              "dateTime.value": "2015-01-20"
+            }
+          },
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral Route"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "421521009"
+            },
+            "Coding.display": {
+              "string.value": "Swallow - dosing instruction imperative (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#421521009"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 4
+        },
+        "Quantity.unit": {
+          "string.value": "TAB"
+        },
+        "Quantity.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+        },
+        "Quantity.code": {
+          "code.value": "TAB"
+        }
+      }
+    },
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 2
+      },
+      "DosageInstruction.text": {
+        "string.value": "Take 2 tablets daily for 7 days starting January 23, 2015"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "311504000"
+              },
+              "Coding.display": {
+                "string.value": "With or after Food"
+              }
+            }
+          ]
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.boundsPeriod": {
+            "Period.start": {
+              "dateTime.value": "2015-01-23"
+            },
+            "Period.end": {
+              "dateTime.value": "2015-01-30"
+            }
+          },
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral Route"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "421521009"
+            },
+            "Coding.display": {
+              "string.value": "Swallow - dosing instruction imperative (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#421521009"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 2
+        },
+        "Quantity.unit": {
+          "string.value": "TAB"
+        },
+        "Quantity.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+        },
+        "Quantity.code": {
+          "code.value": "TAB"
+        }
+      }
+    },
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 3
+      },
+      "DosageInstruction.text": {
+        "string.value": "Take 1 tablets daily for 7 days starting January 31, 2015"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "311504000"
+              },
+              "Coding.display": {
+                "string.value": "With or after Food"
+              }
+            }
+          ]
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.boundsPeriod": {
+            "Period.start": {
+              "dateTime.value": "2015-01-31"
+            },
+            "Period.end": {
+              "dateTime.value": "2015-02-06"
+            }
+          },
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral Route"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "421521009"
+            },
+            "Coding.display": {
+              "string.value": "Swallow - dosing instruction imperative (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#421521009"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 1
+        },
+        "Quantity.unit": {
+          "string.value": "TAB"
+        },
+        "Quantity.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+        },
+        "Quantity.code": {
+          "code.value": "TAB"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Profilelist - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/profilelist.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="toc.html"><img src="index.png"/> Table of Contents</a></li>
+        <li><b>Profiles</b></li>          <!-- profilelist.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h2 class="self-link-parent"><span class="sectioncount">1.3<a name="1.3"> </a></span> Profiles defined as part of FHIR <a href="profilelist.html#1.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+ 
+<p>
+This specification is a common platform standard that must be <a href="profiling.html">adapted to particular
+use cases</a>. 
+
+Some particular use cases are common or important enough to be described as a part of the 
+specification itself.
+These are published as a &quot;Profile&quot; - a group of <a href="structuredefinition.html">Structure Definitions</a> (Constraints or Extensions),
+<a href="valueset.html">Value Sets</a>, and examples that are all defined with a common purpose. 
+Additional profiles may be registered on the HL7 FHIR registry at <a href="http://hl7.org/fhir/registry">http://hl7.org/fhir/registry <img src="external.png" style="text-align: baseline"/></a>
+</p>
+
+<table class="grid">
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><b>General</b></td>
+  </tr>
+  <tr>
+    <td><a href="ehrsrle/auditevent-ehrsrle.html">EHRS FM Record Lifecycle Event - Audit Event</a></td>
+    <td>Defines the elements to be supported within the AuditEvent resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard</td>
+ </tr>
+  <tr>
+    <td><a href="cqif/basic-cqif-extensions.html">Basic CQIF Extensions</a></td>
+    <td>Defines common extensions used by the Clinical Quality Improvement Framework profiles.</td>
+ </tr>
+  <tr>
+    <td><a href="cqif/basic-cqif-guidance-extensions.html">Basic CQIF Guidance Extensions</a></td>
+    <td>Defines common extensions used by the Decision Support-Specific Clinical Quality Improvement Framework profiles.</td>
+ </tr>
+  <tr>
+    <td><a href="element-extensions.html">Element-definition Extensions for use by FHIR Implementers</a></td>
+    <td>A set of extensions that constrain data elements, whether used in DataElements, StructureDefinitions or Questionnaires</td>
+ </tr>
+  <tr>
+    <td><a href="elementdefinition-11179.html">ISO 11179 Element Definition Profile</a></td>
+    <td>A profile showing how to use ElementDefinition to express 11179 Data_Element and Concept_Elements.  At present, the profile is a partially-complete place-holder</td>
+ </tr>
+  <tr>
+    <td><a href="elementdefinition-dataelement.html">DataElement constraint on ElementDefinition data type</a></td>
+    <td>Identifies how the ElementDefinition data type is used when it appears within a data element</td>
+ </tr>
+  <tr>
+    <td><a href="elementdefinition-extensions.html">Common extensions for ElementDefinition data type</a></td>
+    <td>Defines &quot;common&quot; extensions for use with the DataElement data type</td>
+ </tr>
+  <tr>
+    <td><a href="general-extensions.html">General Extensions for use by FHIR Implementers</a></td>
+    <td>A set of general extensions defined for the convenience of implementers that use FHIR resources</td>
+ </tr>
+  <tr>
+    <td><a href="iso-21090.html">ISO 21090 Data Type Extensions</a></td>
+    <td>Extra ISO 21090 features not included in data types because of core design policy</td>
+ </tr>
+  <tr>
+    <td><a href="pharmacy-core.html">International Realm Pharmacy Extensions Profile</a></td>
+    <td>Contains a number of pharmacy domain extensions relevant to a number of medication-related resources.</td>
+ </tr>
+  <tr>
+    <td><a href="ehrsrle/provenance-ehrsrle.html">EHRS FM Record Lifecycle Event - Provenance</a></td>
+    <td>Defines the elements to be supported within the Provenance resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard</td>
+ </tr>
+  <tr>
+    <td><a href="cqif/questionnaire-cqif.html">CQIF-Questionnaire</a></td>
+    <td>Adds the ability to define behavior as part of a questionnaire.</td>
+ </tr>
+  <tr>
+    <td><a href="rendering-extensions.html">Extensions for rendering data elements</a></td>
+    <td>A set of extensions dealing with controlling how particular data elements are rendered when displayed.  Initially created for questionnaires, but potentially useable elsewhere.</td>
+ </tr>
+  <tr>
+    <td><a href="us-core.html">United States Realm FHIR Profile</a></td>
+    <td>Contains constraints and extensions to the FHIR specification specific to the US realm</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>AllergyIntolerance</b></td>
+  </tr>
+  <tr>
+    <td><a href="allergyintolerance-openehr.html">openEHR Archetype Profile</a></td>
+    <td>A set of extensions that define how the parts of the openEHR RiskOfAdverseReaction archetype that are not generaly encountered by implementers are represented</td>
+ </tr>
+  <tr>
+    <td><a href="allergyintolerance-extensions.html">AllergyIntolerance HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the AllergyIntolerance resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>AuditEvent</b></td>
+  </tr>
+  <tr>
+    <td><a href="auditevent-extensions.html">AuditEvent HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the AuditEvent resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Bundle</b></td>
+  </tr>
+  <tr>
+    <td><a href="bundle-extensions.html">Common extensions for bundle-related types</a></td>
+    <td>Defines &quot;common&quot; extensions for use with the Bundle resource and contained elements</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>CapabilityStatement</b></td>
+  </tr>
+  <tr>
+    <td><a href="capabilitystatement-common.html">Common CapabilityStatement extensions</a></td>
+    <td>Common extensions for use with the CapabilityStatement resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>CarePlan</b></td>
+  </tr>
+  <tr>
+    <td><a href="careplan-extensions.html">Common Care Plan Extensions</a></td>
+    <td>A set of commonly used extensions that don't make the usage requirements for inclusion in the resource itself</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>CodeSystem</b></td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-extensions.html">CodeSystem HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the CodeSystem resource</td>
+ </tr>
+  <tr>
+    <td><a href="codesystem-shareable.html">Shareable CodeSystem</a></td>
+    <td>Enforces the minimum information set for the value set metadata required by HL7 and other organisations that share and publish value sets</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Communication</b></td>
+  </tr>
+  <tr>
+    <td><a href="communication-extensions.html">Communication HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Communication resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>CommunicationRequest</b></td>
+  </tr>
+  <tr>
+    <td><a href="communicationrequest-extensions.html">CommunicationRequest HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the CommunicationRequest resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Composition</b></td>
+  </tr>
+  <tr>
+    <td><a href="composition-clindoc.html">Clinical Document Profile for Composition</a></td>
+    <td>The base Composition is a general resource for compositions or documents about any kind of subject that might be encountered in healthcare including such things as guidelines, medicines, etc. A clinical document is focused on documents related to the provision of care process, where the subject is a patient, a group of patients, or a closely related concept. A clinical document has additional reqiurements around confidentiality that do not apply in the same way to other kinds of documents</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ConceptMap</b></td>
+  </tr>
+  <tr>
+    <td><a href="conceptmap-extensions.html">ConceptMap HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the ConceptMap resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Condition</b></td>
+  </tr>
+  <tr>
+    <td><a href="condition-extensions.html">Condition HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Condition resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Consent</b></td>
+  </tr>
+  <tr>
+    <td><a href="consent-extensions.html">Consent HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Consent resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>DataElement</b></td>
+  </tr>
+  <tr>
+    <td><a href="dataelement-extensions.html">Standard DataElement Extensions</a></td>
+    <td>This profile describes common extensions that are used with DataElements</td>
+ </tr>
+  <tr>
+    <td><a href="dataelement-11179.html">ISO 11179 Data Element Profile</a></td>
+    <td>A profile showing how to use DataElement to express 11179 Data_Element and Concept_Elements.  At present, the profile is a partially-complete place-holder</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Device</b></td>
+  </tr>
+  <tr>
+    <td><a href="device-extensions.html">Device HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Device resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>DeviceUseRequest</b></td>
+  </tr>
+  <tr>
+    <td><a href="deviceuserequest-extensions.html">DeviceUseRequest HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the DeviceUseRequest resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>DeviceUseStatement</b></td>
+  </tr>
+  <tr>
+    <td><a href="deviceusestatement-extensions.html">DeviceUseStatement HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the DeviceUseStatement resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>DiagnosticReport</b></td>
+  </tr>
+  <tr>
+    <td><a href="lipid-report.html">Example Lipid Profile</a></td>
+    <td>Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes</td>
+ </tr>
+  <tr>
+    <td><a href="diagnosticreport-extensions.html">DiagnosticReport HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the DiagnosticReport resource</td>
+ </tr>
+  <tr>
+    <td><a href="diagnosticreport-genetics.html">Diagnostic Report for Genetics</a></td>
+    <td>Describes how the DiagnosticReport resource is used to report structured genetic test results</td>
+ </tr>
+  <tr>
+    <td><a href="diagnosticreport-hla-results.html">Profile for HLA Genotyping Results</a></td>
+    <td>Describes how the HLA genotyping results</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>DiagnosticRequest</b></td>
+  </tr>
+  <tr>
+    <td><a href="diagnoticorder-extensions.html">DiagnosticRequest HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the DiagnosticRequest resource</td>
+ </tr>
+  <tr>
+    <td><a href="diagnosticrequest-genetics.html">Diagnostic Request for Genetics</a></td>
+    <td>Describes how the DiagnosticRequest resource is used to for genetics</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>DocumentReference</b></td>
+  </tr>
+  <tr>
+    <td><a href="xds.html">XDS profile for Document Reference</a></td>
+    <td>Specific XDS profile for the general document reference functionality</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Encounter</b></td>
+  </tr>
+  <tr>
+    <td><a href="encounter-extensions.html">Encounter HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Encounter resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>FamilyMemberHistory</b></td>
+  </tr>
+  <tr>
+    <td><a href="family-member-history-genetics.html">Family member history for genetics analysis</a></td>
+    <td>Adds additional information to a family member history supporting both the capture of mother/father relationships as well as additional observations necessary to enable genetics-based risk analysis for patients</td>
+ </tr>
+  <tr>
+    <td><a href="familymemberhistory-extensions.html">Family Member History HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the FamilyMemberHistory resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Flag</b></td>
+  </tr>
+  <tr>
+    <td><a href="flag-extensions.html">Flag HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Flag resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Goal</b></td>
+  </tr>
+  <tr>
+    <td><a href="goal-extensions.html">FHIR Core Goal Profile</a></td>
+    <td>This profile holds core Goal extensions</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ImagingStudy</b></td>
+  </tr>
+  <tr>
+    <td><a href="imagingstudy-extensions.html">ImagingStudy HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the ImagingStudy resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Immunization</b></td>
+  </tr>
+  <tr>
+    <td><a href="immunization-extensions.html">Immunization HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Immunization resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ImmunizationRecommendation</b></td>
+  </tr>
+  <tr>
+    <td><a href="immunizationrecommendation-extensions.html">ImmunizationRecommendation HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the ImmunizationRecommendation resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ImplementationGuide</b></td>
+  </tr>
+  <tr>
+    <td><a href="implementationguide-extensions.html">FHIR Core ImplementationGuide Profile</a></td>
+    <td>This profile holds core ImplementationGuide extensions</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Location</b></td>
+  </tr>
+  <tr>
+    <td><a href="location-extensions.html">Location HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Location resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Medication</b></td>
+  </tr>
+  <tr>
+    <td><a href="medication-extensions.html">Medication HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Medication resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>MedicationAdministration</b></td>
+  </tr>
+  <tr>
+    <td><a href="medicationadministration-extensions.html">MedicationAdministration HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the MedicationAdministration resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>MedicationDispense</b></td>
+  </tr>
+  <tr>
+    <td><a href="medicationdispense-extensions.html">MedicationDispense HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the MedicationDispense resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>MedicationRequest</b></td>
+  </tr>
+  <tr>
+    <td><a href="medicationrequest-extensions.html">MedicationRequest HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the MedicationRequest resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>MedicationStatement</b></td>
+  </tr>
+  <tr>
+    <td><a href="medicationstatement-extensions.html">MedicationStatement HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the MedicationStatement resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Observation</b></td>
+  </tr>
+  <tr>
+    <td><a href="observation-devicemetricobservation.html">Device Metric Observation Profile</a></td>
+    <td>This profile describes the direct or derived, qualitative or quantitative physiological measurement, setting, or calculation data produced by a medical device or a device component.</td>
+ </tr>
+  <tr>
+    <td><a href="observation-extensions.html">Observation HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Observation resource</td>
+ </tr>
+  <tr>
+    <td><a href="observation-genetics.html">Observation for Genetics</a></td>
+    <td>Describes how the observation resource is used to report structured genetic test results</td>
+ </tr>
+  <tr>
+    <td><a href="observation-vitalsigns.html">Vital Signs Profile</a></td>
+    <td>Defines constraints and extensions on the Observation resource for use in querying and retrieving Vital Signs information.</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>OperationOutcome</b></td>
+  </tr>
+  <tr>
+    <td><a href="operationoutcome-extensions.html">Standard OperationOutcome Extensions</a></td>
+    <td>This profile describes common extensions that are used with OperationOutcomes</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Organization</b></td>
+  </tr>
+  <tr>
+    <td><a href="organization-extensions.html">Organization HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Organization resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Patient</b></td>
+  </tr>
+  <tr>
+    <td><a href="patient-extensions.html">Patient HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Patient resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Practitioner</b></td>
+  </tr>
+  <tr>
+    <td><a href="practitioner-extensions.html">Practitioner HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Practitioner resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Procedure</b></td>
+  </tr>
+  <tr>
+    <td><a href="procedure-extensions.html">Procedure HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Procedure resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ProcedureRequest</b></td>
+  </tr>
+  <tr>
+    <td><a href="procedurerequest-extensions.html">Procedure Request HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Procedure Request resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Questionnaire</b></td>
+  </tr>
+  <tr>
+    <td><a href="questionnaire-extensions.html">Core extensions for Questionnaire</a></td>
+    <td>Contains standard extensions for Questionnaire, amongst others for validation</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>QuestionnaireResponse</b></td>
+  </tr>
+  <tr>
+    <td><a href="questionnaireresponse-extensions.html">Core extensions for QuestionnaireResponse</a></td>
+    <td>Contains standard extensions for QuestionnaireResponse, amongst others for validation</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ReferralRequest</b></td>
+  </tr>
+  <tr>
+    <td><a href="referralrequest-extensions.html">ReferralRequest HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the ReferralRequest resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>SearchParameter</b></td>
+  </tr>
+  <tr>
+    <td><a href="searchparameter-extensions.html">Standard Search Parameter Extensions</a></td>
+    <td>This profile describes common extensions that are used with Search Parameters</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>Specimen</b></td>
+  </tr>
+  <tr>
+    <td><a href="specimen-extensions.html">Specimen HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the Specimen resource</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>StructureDefinition</b></td>
+  </tr>
+  <tr>
+    <td><a href="structuredefinition-extensions.html">Standard Structure Definition Extensions</a></td>
+    <td>This profile describes common extensions that are used with Structure Definitions</td>
+ </tr>
+  <tr>
+    <td colspan="2"><b>ValueSet</b></td>
+  </tr>
+  <tr>
+    <td><a href="valueset-extensions.html">ValueSet HL7 Extensions</a></td>
+    <td>Defines common extensions used with or related to the ValueSet resource</td>
+ </tr>
+  <tr>
+    <td><a href="valueset-shareable.html">Shareable ValueSet</a></td>
+    <td>Enforces the minimum information set for the value set metadata required by HL7 and other organisations that share and publish value sets</td>
+ </tr>
+</table>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fprofilelist.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fprofilelist.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>

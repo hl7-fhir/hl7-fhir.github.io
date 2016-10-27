@@ -1,0 +1,37 @@
+{
+  "@context": "http://build.fhir.org/ProcedureRequest.jsonld",
+  "@context": "http://hl7.org/fhir/ProcedureRequest/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be added</div>"
+    }
+  },
+  "ProcedureRequest.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "ProcedureRequest.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "303653007"
+        },
+        "Coding.display": {
+          "string.value": "Computed tomography of head"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#303653007"
+  }
+}

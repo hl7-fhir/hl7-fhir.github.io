@@ -1,0 +1,387 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Observation-example-2minute-apgar-score.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/observation-example-2minute-apgar-score.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="diagnostics-module.html"><img src="diagnostics.jpg"/> Diagnostics</a></li>        <li><a href="observation.html">Observation</a></li>        <li><b>Example Instance</b></li>        <!-- observation-example-2minute-apgar-score.json.html / resource-instance:Observation / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Observation-example-2minute-apgar-score.json</h1>
+
+<p>
+<a href="observation-example-2minute-apgar-score.json">Raw JSON</a> (<a href="observation-example-2minute-apgar-score.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>Example of a 2 minute Apgar score including the individual score components</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Observation&quot;,
+  &quot;id&quot;: &quot;2minute-apgar-score&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 2minute-apgar-score&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Survey &lt;span&gt;(Details : {http://hl7.org/fhir/observation-category code 'survey' = 'Survey', given as 'Survey'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: 2 minute Apgar Score &lt;span&gt;(Details : {LOINC code '9273-4' = '2 minute Apgar Score', given as '2 minute Apgar Score'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a&gt;Patient/infant&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: May 18, 2016 10:33:22 PM&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a&gt;Practitioner/example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 5 {score}&lt;span&gt; (Details: UCUM code {score} = '{score}')&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Apgar color score &lt;span&gt;(Details : {SNOMED CT code '249227004' = 'Apgar color score (observable entity)', given as 'Apgar color score'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 1. Good color in body with bluish hands or feet &lt;span&gt;(Details : {http://loinc.org/la code 'LA6723-6' = 'LA6723-6', given as 'Good color in body with bluish hands or feet'}; {http:/acme.ped/apgarcolor code '1' = '1)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Apgar respiratory effort score &lt;span&gt;(Details : {SNOMED CT code '249223000' = 'Apgar heart rate score (observable entity)', given as 'Apgar heart rate score'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 1. Fewer than 100 beats per minute &lt;span&gt;(Details : {http://loinc.org/la code 'LA6720-2' = 'LA6720-2', given as 'Fewer than 100 beats per minute'}; {http:/acme.ped/apgarheartrate code '1' = '1)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Apgar response to stimulus score &lt;span&gt;(Details : {SNOMED CT code '249226008' = 'Apgar response to stimulus score (observable entity)', given as 'Apgar response to stimulus score'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 1. Grimace during suctioning &lt;span&gt;(Details : {http://loinc.org/la code 'LA6721-0' = 'LA6721-0', given as 'Grimace during suctioning'}; {http:/acme.ped/apgarreflexirritability code '1' = '1)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Apgar muscle tone score &lt;span&gt;(Details : {SNOMED CT code '249225007' = 'Apgar muscle tone score (observable entity)', given as 'Apgar muscle tone score'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 1. Some flexion of arms and legs &lt;span&gt;(Details : {http://loinc.org/la code 'LA6714-5' = 'LA6714-5', given as 'Some flexion of arms and legs'}; {http:/acme.ped/apgarmuscletone code '1' = '1)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Apgar respiratory effort score &lt;span&gt;(Details : {SNOMED CT code '249224006' = 'Apgar respiratory effort score (observable entity)', given as 'Apgar respiratory effort score'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 1. Weak cry; may sound like whimpering, slow or irregular breathing &lt;span&gt;(Details : {http://loinc.org/la code 'LA6726-9' = 'LA6726-9', given as 'Weak cry; may sound like whimpering, slow or irregular breathing'}; {http:/acme.ped/apgarrespiratoryeffort code '1' = '1)&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+  },
+  &quot;status&quot;: &quot;final&quot;,
+  &quot;category&quot;: [
+    {
+      &quot;coding&quot;: [
+        {
+          &quot;system&quot;: &quot;http://hl7.org/fhir/observation-category&quot;,
+          &quot;code&quot;: &quot;survey&quot;,
+          &quot;display&quot;: &quot;Survey&quot;
+        }
+      ],
+      &quot;text&quot;: &quot;Survey&quot;
+    }
+  ],
+  &quot;code&quot;: {
+    &quot;coding&quot;: [
+      {
+        &quot;system&quot;: &quot;http://loinc.org&quot;,
+        &quot;code&quot;: &quot;9273-4&quot;,
+        &quot;display&quot;: &quot;2 minute Apgar Score&quot;
+      }
+    ],
+    &quot;text&quot;: &quot;2 minute Apgar Score&quot;
+  },
+  &quot;subject&quot;: {
+    &quot;reference&quot;: &quot;Patient/infant&quot;
+  },
+  &quot;effectiveDateTime&quot;: &quot;2016-05-18T22:33:22Z&quot;,
+  &quot;performer&quot;: [
+    {
+      &quot;reference&quot;: &quot;Practitioner/example&quot;
+    }
+  ],
+  &quot;valueQuantity&quot;: {
+    &quot;value&quot;: 5,
+    &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,
+    &quot;code&quot;: &quot;{score}&quot;
+  },
+  &quot;component&quot;: [
+    {
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+            &quot;code&quot;: &quot;249227004&quot;,
+            &quot;display&quot;: &quot;Apgar color score&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;Apgar color score&quot;
+      },
+      &quot;valueCodeableConcept&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;extension&quot;: [
+              {
+                &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/iso21090-CO-value&quot;,
+                &quot;valueDecimal&quot;: 1
+              }
+            ],
+            &quot;system&quot;: &quot;http://loinc.org/la&quot;,
+            &quot;code&quot;: &quot;LA6723-6&quot;,
+            &quot;display&quot;: &quot;Good color in body with bluish hands or feet&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http:/acme.ped/apgarcolor&quot;,
+            &quot;code&quot;: &quot;1&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;1. Good color in body with bluish hands or feet&quot;
+      }
+    },
+    {
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+            &quot;code&quot;: &quot;249223000&quot;,
+            &quot;display&quot;: &quot;Apgar heart rate score&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;Apgar respiratory effort score&quot;
+      },
+      &quot;valueCodeableConcept&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;extension&quot;: [
+              {
+                &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/iso21090-CO-value&quot;,
+                &quot;valueDecimal&quot;: 1
+              }
+            ],
+            &quot;system&quot;: &quot;http://loinc.org/la&quot;,
+            &quot;code&quot;: &quot;LA6720-2&quot;,
+            &quot;display&quot;: &quot;Fewer than 100 beats per minute&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http:/acme.ped/apgarheartrate&quot;,
+            &quot;code&quot;: &quot;1&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;1. Fewer than 100 beats per minute&quot;
+      }
+    },
+    {
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+            &quot;code&quot;: &quot;249226008&quot;,
+            &quot;display&quot;: &quot;Apgar response to stimulus score&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;Apgar response to stimulus score&quot;
+      },
+      &quot;valueCodeableConcept&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;extension&quot;: [
+              {
+                &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/iso21090-CO-value&quot;,
+                &quot;valueDecimal&quot;: 1
+              }
+            ],
+            &quot;system&quot;: &quot;http://loinc.org/la&quot;,
+            &quot;code&quot;: &quot;LA6721-0&quot;,
+            &quot;display&quot;: &quot;Grimace during suctioning&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http:/acme.ped/apgarreflexirritability&quot;,
+            &quot;code&quot;: &quot;1&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;1. Grimace during suctioning&quot;
+      }
+    },
+    {
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+            &quot;code&quot;: &quot;249225007&quot;,
+            &quot;display&quot;: &quot;Apgar muscle tone score&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;Apgar muscle tone score&quot;
+      },
+      &quot;valueCodeableConcept&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;extension&quot;: [
+              {
+                &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/iso21090-CO-value&quot;,
+                &quot;valueDecimal&quot;: 1
+              }
+            ],
+            &quot;system&quot;: &quot;http://loinc.org/la&quot;,
+            &quot;code&quot;: &quot;LA6714-5&quot;,
+            &quot;display&quot;: &quot;Some flexion of arms and legs&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http:/acme.ped/apgarmuscletone&quot;,
+            &quot;code&quot;: &quot;1&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;1. Some flexion of arms and legs&quot;
+      }
+    },
+    {
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+            &quot;code&quot;: &quot;249224006&quot;,
+            &quot;display&quot;: &quot;Apgar respiratory effort score&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;Apgar respiratory effort score&quot;
+      },
+      &quot;valueCodeableConcept&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;extension&quot;: [
+              {
+                &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/iso21090-CO-value&quot;,
+                &quot;valueDecimal&quot;: 1
+              }
+            ],
+            &quot;system&quot;: &quot;http://loinc.org/la&quot;,
+            &quot;code&quot;: &quot;LA6726-9&quot;,
+            &quot;display&quot;: &quot;Weak cry; may sound like whimpering, slow or irregular breathing&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http:/acme.ped/apgarrespiratoryeffort&quot;,
+            &quot;code&quot;: &quot;1&quot;
+          }
+        ],
+        &quot;text&quot;: &quot;1. Weak cry; may sound like whimpering, slow or irregular breathing&quot;
+      }
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fobservation-example-2minute-apgar-score.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fobservation-example-2minute-apgar-score.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><DiagnosticRequest xmlns="http://hl7.org/fhir">
+	<id value="di"/>
+<!--  	<extension url="http://hl7.org/fhir/StructureDefinition/bodysitecode">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="51185008"/>
+				<display value="Thoracic structure"/>
+			</coding>
+		</valueCodeableConcept>
+</extension>
+	  -->
+<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: di</p><p><b>status</b>: active</p><p><b>stage</b>: Original Order <span>(Details : {http://hl7.org/fhir/request-stage code &#39;original-order&#39; = &#39;Original Order)</span></p><p><b>code</b>: Chest CT <span>(Details : {LOINC code &#39;24627-2&#39; = &#39;Chest CT)</span></p><p><b>subject</b>: <a>Patient/dicom</a></p><p><b>occurrence</b>: May 8, 2013 9:33:27 AM</p><p><b>requester</b>: <a>Dr. Adam Careful</a></p><p><b>reason</b>: Check for metastatic disease <span>(Details )</span></p></div></text><status value="active"/>
+	<stage>
+		<coding>
+			<system value="http://hl7.org/fhir/request-stage"/>
+			<code value="original-order"/>
+		</coding>
+	</stage>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="24627-2"/>
+		</coding>
+		<text value="Chest CT"/>
+	</code>
+	<subject>
+		<reference value="Patient/dicom"/>
+	</subject>
+	<occurrenceDateTime value="2013-05-08T09:33:27+07:00"/>
+	<requester>
+		<reference value="Practitioner/example"/>
+		<display value="Dr. Adam Careful"/>
+	</requester>
+	<reason>
+		<text value="Check for metastatic disease"/>
+	</reason>
+</DiagnosticRequest>

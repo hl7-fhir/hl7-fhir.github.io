@@ -1,0 +1,58 @@
+{
+  "@context": "http://build.fhir.org/Substance.jsonld",
+  "@context": "http://hl7.org/fhir/Substance/f203",
+  "Resource.id": {
+    "id.value": "f203"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>identifier</b>: 1234</p><p><b>category</b>: Chemical <span>(Details : {http://hl7.org.fhir/substance-category code 'chemical' = 'chemical', given as 'Chemical'})</span></p><p><b>code</b>: Potassium <span>(Details : {SNOMED CT code '88480006' = 'Potassium (substance)', given as 'Potassium'})</span></p></div>"
+    }
+  },
+  "Substance.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://acme.org/identifiers/substances"
+      },
+      "Identifier.value": {
+        "string.value": "1234"
+      }
+    }
+  ],
+  "Substance.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org.fhir/substance-category"
+          },
+          "Coding.code": {
+            "code.value": "chemical"
+          },
+          "Coding.display": {
+            "string.value": "Chemical"
+          }
+        }
+      ]
+    }
+  ],
+  "Substance.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "88480006"
+        },
+        "Coding.display": {
+          "string.value": "Potassium"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#88480006"
+  }
+}

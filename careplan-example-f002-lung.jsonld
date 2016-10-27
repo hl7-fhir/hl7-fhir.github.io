@@ -1,0 +1,177 @@
+{
+  "@context": "http://build.fhir.org/CarePlan.jsonld",
+  "@context": "http://hl7.org/fhir/CarePlan/f002",
+  "Resource.id": {
+    "id.value": "f002"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>contained</b>: , </p><p><b>identifier</b>: CP2934 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>period</b>: Jul 6, 2011 --&gt; Jul 7, 2013</p><p><b>modified</b>: Jul 7, 2011 9:30:10 AM</p><p><b>careTeam</b>: id: careteam</p><p><b>addresses</b>: <a>?????</a></p><p><b>goal</b>: id: goal; status: achieved; succesful surgery on lung of patient <span>(Details )</span>; P. van de Heuvel; Annotation: goal accomplished with minor complications</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td><td><b>Scheduled[x]</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>Procedure <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'procedure' = 'Procedure)</span></td><td>Partial lobectomy of lung <span>(Details : {SNOMED CT code '359615001' = 'Partial lobectomy of lung (procedure)', given as 'Partial lobectomy of lung'})</span></td><td>completed</td><td>true</td><td>2011-07-07T09:30:10+01:00</td><td><a>M.I.M. Versteegh</a></td></tr></table></blockquote></div>"
+    }
+  },
+  "CareTeam": [
+    {
+      "Resource.id": {
+        "id.value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "string.value": "Practitioner/f003"
+            },
+            "Reference.display": {
+              "string.value": "M.I.M. Versteegh"
+            },
+            "Resource.reference": "http://hl7.org/fhir//Practitioner/f003"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "goal"
+      },
+      "Goal.status": {
+        "code.value": "achieved"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "succesful surgery on lung of patient"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/f001"
+        },
+        "Reference.display": {
+          "string.value": "P. van de Heuvel"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+      },
+      "Goal.note": [
+        {
+          "Annotation.text": {
+            "string.value": "goal accomplished with minor complications"
+          }
+        }
+      ]
+    }
+  ],
+  "CarePlan.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/zorgportal/identifiers/careplans"
+      },
+      "Identifier.value": {
+        "string.value": "CP2934"
+      }
+    }
+  ],
+  "CarePlan.status": {
+    "code.value": "completed"
+  },
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f001"
+    },
+    "Reference.display": {
+      "string.value": "P. van de Heuvel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "dateTime.value": "2011-07-06"
+    },
+    "Period.end": {
+      "dateTime.value": "2013-07-07"
+    }
+  },
+  "CarePlan.modified": {
+    "dateTime.value": "2011-07-07T09:30:10+01:00"
+  },
+  "CarePlan.careTeam": [
+    {
+      "Reference.reference": {
+        "string.value": "#careteam"
+      }
+    }
+  ],
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "string.value": "Condition/f201"
+      },
+      "Reference.display": {
+        "string.value": "?????"
+      }
+    }
+  ],
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "string.value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "procedure"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "359615001"
+              },
+              "Coding.display": {
+                "string.value": "Partial lobectomy of lung"
+              }
+            }
+          ],
+          "Resource.concept": "http://snomed.info/sct#359615001"
+        },
+        "CarePlan.activity.detail.status": {
+          "code.value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": true
+        },
+        "CarePlan.activity.detail.scheduledString": {
+          "string.value": "2011-07-07T09:30:10+01:00"
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "string.value": "Practitioner/f003"
+            },
+            "Reference.display": {
+              "string.value": "M.I.M. Versteegh"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v3-ParticipationVerifier"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ParticipationVerifier</h2>
+      <div>
+        <p>A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability.</p>
+
+      </div>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include codes from 
+          <a href="../../v3/ParticipationType/cs.html">http://hl7.org/fhir/v3/ParticipationType</a> where concept  is-a  
+          <a href="../../v3/ParticipationType/cs.html#VRF">VRF</a>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v3-ParticipationVerifier"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.1.11.10259"/>
+  </identifier>
+  <version value="2014-03-26"/>
+  <name value="ParticipationVerifier"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 v3"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value=" A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="VRF"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

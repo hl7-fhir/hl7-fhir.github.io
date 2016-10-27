@@ -1,0 +1,103 @@
+{
+  "resourceType": "ClaimResponse",
+  "id": "R3500",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://www.BenefitsInc.com/fhir/remittance",
+      "value": "R3500"
+    }
+  ],
+  "status": "active",
+  "request": {
+    "reference": "http://www.BenefitsInc.com/fhir/oralhealthclaim/15476332402"
+  },
+  "created": "2014-08-16",
+  "organization": {
+    "identifier": {
+      "system": "http://www.jurisdiction.org/insurers",
+      "value": "555123"
+    }
+  },
+  "outcome": {
+    "system": "http://hl7.org/fhir/remittance-outcome",
+    "code": "complete"
+  },
+  "disposition": "Claim settled as per contract.",
+  "payeeType": {
+    "system": "http://hl7.org/fhir/payeetype",
+    "code": "provider"
+  },
+  "item": [
+    {
+      "sequenceLinkId": 1,
+      "adjudication": [
+        {
+          "category": {
+            "code": "eligible"
+          },
+          "amount": {
+            "value": 135.57,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "code": "copay"
+          },
+          "amount": {
+            "value": 10.00,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "code": "eligpercent"
+          },
+          "value": 80.00
+        },
+        {
+          "category": {
+            "code": "benefit"
+          },
+          "amount": {
+            "value": 100.47,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        }
+      ]
+    }
+  ],
+  "totalCost": {
+    "value": 135.57,
+    "system": "urn:iso:std:iso:4217",
+    "code": "USD"
+  },
+  "totalBenefit": {
+    "value": 100.47,
+    "system": "urn:iso:std:iso:4217",
+    "code": "USD"
+  },
+  "payment": {
+    "type": {
+      "system": "http://hl7.org/fhir/ValueSet/ex-paymenttype",
+      "code": "complete"
+    },
+    "date": "2014-08-31",
+    "amount": {
+      "value": 100.47,
+      "system": "urn:iso:std:iso:4217",
+      "code": "USD"
+    },
+    "identifier": {
+      "system": "http://www.BenefitsInc.com/fhir/paymentidentifier",
+      "value": "201408-2-1569478"
+    }
+  }
+}

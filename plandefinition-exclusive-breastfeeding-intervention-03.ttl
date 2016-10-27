@@ -1,0 +1,87 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/PlanDefinition/exclusive-breastfeeding-intervention-03> a fhir:PlanDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "exclusive-breastfeeding-intervention-03"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Exclusive Breastfeeding Intervention-03</div>"
+  ];
+  fhir:PlanDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "exclusive-breastfeeding-intervention-03" ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "1.0.0"];
+  fhir:PlanDefinition.title [ fhir:value "Exclusive Breastfeeding Intervention-03"];
+  fhir:PlanDefinition.status [ fhir:value "active"];
+  fhir:PlanDefinition.date [ fhir:value "2015-03-08"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "Exclusive breastfeeding intervention intended to improve outcomes for exclusive breastmilk feeding of newborns by notifying the charge and/or bedside nurse to perform the breastfeeding readiness assessment."];
+  fhir:PlanDefinition.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Exclusive Breastfeeding" ]
+  ];
+  fhir:PlanDefinition.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/library-exclusive-breastfeeding-cds-logic>;
+     fhir:Reference.reference [ fhir:value "Library/library-exclusive-breastfeeding-cds-logic" ]
+  ];
+  fhir:PlanDefinition.actionDefinition [
+     fhir:index 0;
+     fhir:PlanDefinition.actionDefinition.title [ fhir:value "Mother should be administered a breastfeeding readiness assessment." ];
+     fhir:PlanDefinition.actionDefinition.triggerDefinition [
+       fhir:index 0;
+       fhir:TriggerDefinition.type [ fhir:value "named-event" ];
+       fhir:TriggerDefinition.eventName [ fhir:value "Admission" ]
+     ], [
+       fhir:index 1;
+       fhir:TriggerDefinition.type [ fhir:value "named-event" ];
+       fhir:TriggerDefinition.eventName [ fhir:value "Birth" ]
+     ], [
+       fhir:index 2;
+       fhir:TriggerDefinition.type [ fhir:value "named-event" ];
+       fhir:TriggerDefinition.eventName [ fhir:value "Infant Transfer to Recovery" ]
+     ], [
+       fhir:index 3;
+       fhir:TriggerDefinition.type [ fhir:value "named-event" ];
+       fhir:TriggerDefinition.eventName [ fhir:value "Transfer to Post-Partum" ]
+     ];
+     fhir:PlanDefinition.actionDefinition.condition [
+       fhir:PlanDefinition.actionDefinition.condition.expression [ fhir:value "Should Notify Nurse to Perform Assessment" ]
+     ];
+     fhir:PlanDefinition.actionDefinition.actionDefinition [
+       fhir:index 0;
+       fhir:PlanDefinition.actionDefinition.title [ fhir:value "Notify the charge nurse to perform the assessment." ];
+       fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "A Breastfeeding Readiness Assessment is recommended, please administer the assessment." ];
+       fhir:PlanDefinition.actionDefinition.type [
+         fhir:Coding.code [ fhir:value "create" ]
+       ];
+       fhir:PlanDefinition.actionDefinition.dynamicValue [
+         fhir:index 0;
+         fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "/" ];
+         fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Communication Request to Charge Nurse" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:PlanDefinition.actionDefinition.title [ fhir:value "Notify the bedside nurse to perform the assessment." ];
+       fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "A Breastfeeding Readiness Assessment is recommended, please administer the assessment." ];
+       fhir:PlanDefinition.actionDefinition.type [
+         fhir:Coding.code [ fhir:value "create" ]
+       ];
+       fhir:PlanDefinition.actionDefinition.dynamicValue [
+         fhir:index 0;
+         fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "/" ];
+         fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Communication Request to Bedside Nurse" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Library/library-exclusive-breastfeeding-cds-logic> a fhir:Library .
+
+# -------------------------------------------------------------------------------------
+

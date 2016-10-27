@@ -1,0 +1,626 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Mapping-tutorial - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/mapping-tutorial.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="implsupport-module.html"><img src="implsupport.png"/> Implementation Support</a></li>
+        <li><a href="mapping-language.html">Mapping Language</a></li>
+        <li><b>Mapping Language Tutorial</b></li>          <!-- mapping-tutorial.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+
+<div class="col-9">
+
+<h2 class="self-link-parent"><span class="sectioncount">7.8.1<a name="7.8.1"> </a></span> FHIR Mapping Language - Tutorial <a href="mapping-tutorial.html#7.8.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: 0</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">n/a yet</a></td></tr></table>
+
+<p>
+This tutorial introduces the FHIR <a href="mapping-language.html">mapping language</a>.
+</p>
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.1<a name="7.8.1.1"> </a></span> Step #1: Simplest possible transform <a href="mapping-tutorial.html#7.8.1.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+To start with, we're going to consider a very simple case: mapping between two structures
+that have the same definition, a single element with the same name and the same primitive type:
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      a : string [0..1]
+  </pre></td><td><pre>
+    TRight
+      a : string [0..1]
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying a to a</td></tr>
+</table>
+<p>
+<i>Note that for clarity in this tutorial, all the types are prefixed with T.</i>
+</p>
+
+<p>
+The first task to do is to set up the mapping context on a default group. 
+All mappings are divided up into a set of groups. For now, we just set up a 
+group named &quot;tutorial&quot; - the same as the name of the mapping. 
+For this tutorial, we also declaring the source and target models, and 
+specify that an application invokes this with a copy of the left (source) 
+instance, and also an empty copy of the right (target) instance: 
+</p>
+<pre>
+map &quot;http://hl7.org/fhir/StructureMap/tutorial&quot; = tutorial
+
+uses &quot;http://hl7.org/fhir/StructureDefinition/tutorial-left&quot; as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/tutorial-right&quot; as target
+
+group tutorial
+  input &quot;source&quot; : TLeft as source
+  input &quot;target&quot; : TRight as target
+
+// rules go here
+
+endgroup
+</pre>
+<p>
+Note that the way the input variables are set up is a choice: we choose to provide the 
+underlying type definitions on which both source and target models are based,
+and we choose to specify that the invoking application most provide both
+the source and the target instance trees. Other options are possible; these 
+are discussed further below. The rest of the tutorial examples use the same 
+setup for the group.
+</p>
+<p>
+Having set up the context, we now need to define the relationships between
+the source and target structures:
+</p>
+<pre>
+&quot;rule_a&quot; : for source.a as a make target.a = a
+</pre>
+<p>
+This simple statement says that:
+</p>
+<ul>
+ <li>for every source (there'll only be one)</li>
+ <li>for any element 'a' in the source</li>
+ <li>if there isn't any element 'a', then don't do anything</li>
+ <li>if there is one, call it variable 'a'</li>
+ <li>the value of property 'a' of the target will be a copy of variable a - that is, source.a</li>
+</ul>
+<p>
+Note that the types don't feature explicitly in the mapping statements.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.2<a name="7.8.1.2"> </a></span> Step #2: Fields with different names <a href="mapping-tutorial.html#7.8.1.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Now consider the case where the elements have different names:
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      a1 : string [0..1]
+  </pre></td><td><pre>
+    TRight
+      a2 : string [0..1]
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying a1 to a2</td></tr>
+</table>
+<p>
+This relationship is a simple variation of the last:
+</p>
+<pre>
+&quot;rule_a1&quot; : for source.a1 as b make target.a2 = b
+</pre>
+<p>
+Note that the choice of variable name is purely arbitrary. It does not need to be the same as the element name.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.3<a name="7.8.1.3"> </a></span> Step #3: Length restriction <a href="mapping-tutorial.html#7.8.1.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Still sticking with very simple mappings, let's consider the case where there is a length restriction on the target model that is shorter than the one on the source 
+model - in this case, 20 characters.
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      a2 : string [0..1]
+  </pre></td><td><pre>
+    TRight
+      a2 : string [0..1] {maxlength = 20}
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying a2 to a2, but target.a2 can only be 20 characters long</td></tr>
+</table>
+<p>
+There are 3 different ways to express this mapping, depending on what should happen when the length of source.a is &gt; 20 characters:
+</p>
+<pre>
+&quot;rule_a20a&quot; : for source.a2 as a make target.a2 = truncate(a, 20) // just cut it off at 20 characters
+&quot;rule_a20b&quot; : for source.a2 as a where a1.length &lt;= 20 make target.a2 = a // ignore it
+&quot;rule_a20c&quot; : for source.a2 as a check a2.length &lt;= 20 make target.a2 = a // error if it's longer than 20 characters
+</pre>
+<p>
+Note that it is implicit here that the transformation engine is not required to expected to validate the 
+output against that underlying structure definitions that may apply to it. An application may - and usually 
+should - validate the outputs after the transforms, but the transform engine itself should not assume that it's the 
+final step in the process and automatically validate the output. 
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.4<a name="7.8.1.4"> </a></span> Step #4: Type Conversion <a href="mapping-tutorial.html#7.8.1.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Now for the case where there is a simple type conversion between left and right, in this case from a string to an integer.
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      a21 : string [0..1]
+  </pre></td><td><pre>
+    TRight
+      a21 : integer [0..1] 
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying a21 to a21, but a21 is converted to an integer</td></tr>
+</table>
+<p>
+There are 3 different ways to express this mapping, depending on what should happen when a is not an integer:
+</p>
+<pre>
+&quot;rule_a21a&quot; : for source.a21 as a make target.a21 = cast(a, &quot;integer&quot;) // error if it's not an integer
+&quot;rule_a21b&quot; : for source.a21 as a where a1.isInteger make target.a2 = cast(a, &quot;integer&quot;) // ignore it
+&quot;rule_a21c&quot; : for source.a21 as a where not at1.isInteger make target.a21 = 0 // just assign it 0
+</pre>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.5<a name="7.8.1.5"> </a></span> Step #5: Managing lists, part 1 <a href="mapping-tutorial.html#7.8.1.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Back to the simple case where source.a22 is copied to target.a22, but in this case, a22 can repeat (in both source and target):
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      a22 : string [0..*]
+  </pre></td><td><pre>
+    TRight
+      a22 : string [0..*] 
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying a22 to a22, once for each copy of a22</td></tr>
+</table>
+<p>
+The transform rule simply asserts that a22 maps to a22. The engine will apply the rule once for each instance of a22:
+</p>
+<pre>
+&quot;rule_a22&quot; : for source.a22 as a make target.a22 = a 
+</pre>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.6<a name="7.8.1.6"> </a></span> Step #6: Managing lists, part 2 <a href="mapping-tutorial.html#7.8.1.6" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A more difficult case is where the source allows multiple repeats, but the target doesn't:
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      a23 : string [0..*]
+  </pre></td><td><pre>
+    TRight
+      a23 : integer [0..1] 
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying a23 to a23, but there can only be one copy of a23</td></tr>
+</table>
+<p>
+Again, there are multiple different ways to write this, depending on out desired outcome if there is more than one copy of a23:
+</p>
+<pre>
+rule_a23a : for source.a23 as a make target.a23 = a { only_one } // transform engine creates an error 
+rule_a23b : for source.a23 as a make target.a23 = a  // leave error to lower layer; less informative
+
+rule_a23c_1 : for source.a23 { first } as a make target.a23 = a // only use the first item in the list
+</pre>
+<p>
+The last rule is the first example of stringing rules together. In this case, rule_a23c_1 exists to define a variable for 
+the list so that the where condition can compare the items in the list against a criteria expressed against abother variable. 
+The ability to compare conditions amongst variables like this in the where clause is a powerful technique that will explored 
+further below.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.7<a name="7.8.1.7"> </a></span> Step #7: Simple Nesting <a href="mapping-tutorial.html#7.8.1.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Most transformations involve nested content. Let's start with a simple case, where element aa contains ab: 
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      aa : [0..*]
+        ab : string [1..1]
+  </pre></td><td><pre>
+    TRight
+      aa : [0..*]
+        ab : string [1..1]
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by copying aa to aa, and within aa, ab to ab</td></tr>
+</table>
+<p>
+Note that there is no specified type for the element aa. Some structure definitions (FHIR resources) do 
+leave these elements as anonymously typed, while others explicitly type them. However since the mapping
+does not refer to the type, it's literal type is not important.
+</p>
+<pre>
+rule_aa : for source.aa as s_aa make target.aa as t_aa then rule_ab(s_aa, t_aa) // make aa exist
+rule_ab : for s_aa.ab as ab make t_aa.ab = ab // copy ab inside aa
+</pre>
+<p>
+This situation is handled by a pair of rules: the first rule establishes that relationship
+between source.aa and target.aa, and assigns 2 variable names to them. Then, the rule says to 
+check other rules for mappings involving s_aa and t_aa, and apply any other rules that match.
+In this case, rule_ab matches, and so for every source.aa, source.ab will be copied to target.aa.
+</p>
+<p>
+Note that the source and target variables never overlap, so both of the variables could have been 
+named 'aa' with no ambiguity, but overloading the names like this is avoided in this tutorial due
+to the potential for reader confusion.
+</p>
+<p>
+In this case, the first rule specified for the any additional rules involving the variables 
+defined by applying the rule. This is a very flexible way to set up the mapping arrangements,
+but requires discipline in the way that variables are named so as not to get the rules crossed.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.8<a name="7.8.1.8"> </a></span> Step #8: Translation <a href="mapping-tutorial.html#7.8.1.8" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A common translation pattern is to perform a translation e.g. from one set of codes to another
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      d : code [0..1]
+  </pre></td><td><pre>
+    TRight
+      d : code [0..1]
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by translating source.d from one set of codes to another</td></tr>
+</table>
+<p>
+The key to this transformation is the <a href="conceptmap.html">ConceptMap</a> resource, which 
+actually specifies the mapping from one set of codes to the other:
+</p>
+<pre>
+rule_d : for source.d as d make target.d = translate(d, 'uri-of-concept-map', 'code')
+</pre>
+<p>
+This asks the mapping engine to use the <a href="conceptmap-operations.html#translate">$translate</a>
+operation on the terminology server to translate the code, and then to put the code value of the 
+return translation in target.d.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.9<a name="7.8.1.9"> </a></span> Step #9: Co-dependency in translation <a href="mapping-tutorial.html#7.8.1.9" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Another common translation is where the target mapping for one element depends on the 
+value of another element. 
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      i : string [0..1]
+      m : integer [1..1]
+  </pre></td><td><pre>
+    TRight
+      j : [0..1]
+      k : [0..1]
+  </pre></td></tr>
+  <tr><td colspan="2">How the left instance is transformed to the right instance depends on the value of m: if m &lt; 2, then i maps to j, else it maps to k</td></tr>
+</table>
+<p>
+This is managed using conditions on the mapping statements:
+</p>
+<pre>
+rule_i1 : for source.i as i where m &lt; 2 make target.j = i
+rule_i2 : for source.i as i where m &gt;= 2 make target.k = i
+</pre>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.10<a name="7.8.1.10"> </a></span> Step #10: Reworking Structure #1 <a href="mapping-tutorial.html#7.8.1.10" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+It's now time to start maving away from relatively simple cases to some of the harder ones to 
+manage mappings for. The first mixes list management, and converting from a specific structure 
+to a general structure:
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      e : string [0..*]
+      f : string [1..1]
+  </pre></td><td><pre>
+    TRight
+      e : [0..*]
+        f : string [1..1]
+        g : code [1..1]
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance by adding one instance of target.e for each source.e, where the value goes into target.e.f, and 
+    the value of target.e.g is 'g1'. source.f is also transformed into the same structure, but the value of target.e.g is 'g2'. As an added complication, the value for 
+    source.f must come first</td></tr>
+</table>
+<p>
+This leads to some more complex mapping statements:
+</p>
+<pre>
+ef_a1: for source.e as s_e make target.e as t_e then {
+  ef_a2: for s_e make t_e.f = s_e, t_e.g = &quot;g1&quot;
+}
+
+ef_b1: for source.f as s_f make target.e as t_e { first } then {
+  ef_b2: for s_f make t_e.f = s_f, t_e.g = &quot;g2&quot;
+}
+</pre>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.11<a name="7.8.1.11"> </a></span> Step #10: Reworking Structure #2 <a href="mapping-tutorial.html#7.8.1.11" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The second example for reworking structure moves cardinality around the heirarchy.
+in this case, the source has an optional structure that contains a repeating structure,
+while the target puts the cardinality at the next level up:
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      az1 :[0..1]
+        az2 : string [1..1]
+        az3 : string [0..*]
+  </pre></td><td><pre>
+    TRight
+      az1 :[0..*]
+        az2 : string [1..1]
+        az3 : string [0..1]   
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance creating on target.az1 for every source.az1.az3, and then populating 
+  each az1 with the matching value of az3, and copying the value of az2 to each instance</td></tr>
+</table>
+<p>
+The key to setting this mapping up is to create a variable context for source.az1, and then carry it down, performing the actual mappings at the next level down:
+</p>
+<pre>
+// setting up a variable for the parent
+aza : for src.az1 as s_az1 then {
+  
+  // one target.az1 for each az3
+  azb : for s_az1.az3 as s_az3 make target.az1 as t_az1 then {
+    // value for az2. Note that this refers to a previous context in the source
+    az2 : for s_az1.az2 as az2 make t_az1.az2 = az2  
+    
+    // value for az3      
+    az3 : for s_az3 make tgt_az1.az3 = src_az3       
+  }
+}
+</pre>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.12<a name="7.8.1.12"> </a></span> Step #11: Multiple structures #1 <a href="mapping-tutorial.html#7.8.1.12" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Simple mappings, such as we've dealt with so far, where the source and target 
+structure both have the same scope, and there is only one of each, are all well
+and good, but there are many mappings where this is not the case. There is a set of 
+complications when dealing with multiple instances:
+</p>
+<ul>
+ <li>If there are multiple source inputs, how does the application know what they are? Sometimes, they are just independent inputs, but more often, the 
+    inputs are dependent on references in the source input, and therefore which source inputs are required depends on the mapping rules</li>
+ <li>If there are multiple output instances, how are they identified as they are created, and how do the target models reference each other?
+   Mostly, the answer is that it depends on the context; the actual identification details are not part of the mapping</li>
+ <li>It may even be the case that the kind of output structure to produce depends on the mapping rules, so the application can't create the target
+ structure before invoking the map</li>
+</ul>
+<p>
+For our first example, we're going to look at creating multiple output structures from a single input structure.
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      f1 : String [0..*];
+  </pre></td><td><pre>
+    TRight
+      ptr : Resource(TRight2) [0..*]
+  
+    TRight2
+      f1 : String [1..1];
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance creating a copy of TRight2 for each f1 in the source, and 
+  then putting the value of source.f1 in TRight2.f1</td></tr>
+</table>
+<p>
+The key to setting this mapping up is to create a variable context for source.az1, and then carry it down, performing the actual mappings at the next level down:
+</p>
+<pre>
+f1 : for source.f1 as s_f1 make create(&quot;TRight2&quot;) as rr, target.ptr = reference(rr) then {
+  f1a: for s_f1 make rr.f2 = srcff
+}
+</pre>
+<p>
+This mapping statement makes use a special known value &quot;null&quot; for the target context to indicate that the created element/object of type &quot;TRight2&quot; 
+doesn't get added to any existing target context. Instead, it will only be available as a context in which to perform further mappings - as rule f1a
+does.
+</p>
+<p>
+The mapping engine passes the create request through to the host application, which is using the mapping. It must create a valid instance
+of TRight, and identify it as appropriate for the technical context in which the mapping is being used. The reference transform is 
+also passed back to the host application for it to determine how to represent the reference - but this is usally some kind of URL.
+</p>
+
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.1.13<a name="7.8.1.13"> </a></span> Step #12: Multiple structures #2 <a href="mapping-tutorial.html#7.8.1.13" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+For our second example, we're going to look at the reverse: where  multiple input structures create a single input structure.
+</p>
+<table>
+  <tr><td><b>Source Structure</b></td><td><b>Target Structure</b></td></tr>
+  <tr><td><pre>
+    TLeft
+      ptr : Resource(TLeft2) [0..*]
+  
+    TLeft2
+      f2 : String [0..*];
+  </pre></td><td><pre>
+    TRight
+      f2 : String [1..*];
+  </pre></td></tr>
+  <tr><td colspan="2">The left instance is transformed to the right instance finding each ptr reference, getting
+   it's value foe f1, and adding this in target.f2</td></tr>
+</table>
+<p>
+The first task of the map is to ask the application host to find the structure 
+identified by source.ptr, and create a variable for it
+</p>
+<pre>
+f2: [todo]
+</pre>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fmapping-tutorial.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fmapping-tutorial.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+
+</html>

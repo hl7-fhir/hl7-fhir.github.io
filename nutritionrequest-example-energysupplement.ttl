@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/NutritionRequest/energysupplement> a fhir:NutritionRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "energysupplement"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: energysupplement</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><p><b>allergyIntolerance</b>: <a>Cashew Nuts</a></p><p><b>foodPreferenceModifier</b>: Kosher <span>(Details : {http://hl7.org/fhir/diet code 'kosher' = 'Kosher)</span></p><p><b>excludeFoodModifier</b>: Cashew Nut <span>(Details : {SNOMED CT code '227493005' = 'Cashew nut (substance)', given as 'Cashew Nut'})</span></p><h3>Supplements</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>ProductName</b></td><td><b>Schedule</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>Adult high energy drink <span>(Details : {SNOMED CT code '442971000124100' = 'Adult high energy formula (product)', given as 'Adult high energy formula'}; {http://goodhealthhospital.org/supplement-type-codes code '1010' = '1010', given as 'Adult high energy drink'})</span></td><td>Ensure</td><td>Starting Feb 10, 2015, Do 3 per 1 days</td><td>1 8 oz can</td></tr></table></div>"
+  ];
+  fhir:NutritionRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://goodhealthhospital.org/nutrition-requests" ];
+     fhir:Identifier.value [ fhir:value "123" ]
+  ];
+  fhir:NutritionRequest.status [ fhir:value "active"];
+  fhir:NutritionRequest.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:NutritionRequest.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example>;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ];
+     fhir:Reference.display [ fhir:value "Inpatient" ]
+  ];
+  fhir:NutritionRequest.dateTime [ fhir:value "2014-09-17"^^xsd:date];
+  fhir:NutritionRequest.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+     fhir:Reference.display [ fhir:value "Dr Adam Careful" ]
+  ];
+  fhir:NutritionRequest.allergyIntolerance [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/AllergyIntolerance/example>;
+     fhir:Reference.reference [ fhir:value "AllergyIntolerance/example" ];
+     fhir:Reference.display [ fhir:value "Cashew Nuts" ]
+  ];
+  fhir:NutritionRequest.foodPreferenceModifier [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/diet" ];
+       fhir:Coding.code [ fhir:value "kosher" ]
+     ]
+  ];
+  fhir:NutritionRequest.excludeFoodModifier [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:227493005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.version [ fhir:value "20140730" ];
+       fhir:Coding.code [ fhir:value "227493005" ];
+       fhir:Coding.display [ fhir:value "Cashew Nut" ]
+     ]
+  ];
+  fhir:NutritionRequest.supplement [
+     fhir:index 0;
+     fhir:NutritionRequest.supplement.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:442971000124100;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "442971000124100" ];
+         fhir:Coding.display [ fhir:value "Adult high energy formula" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://goodhealthhospital.org/supplement-type-codes" ];
+         fhir:Coding.code [ fhir:value "1010" ];
+         fhir:Coding.display [ fhir:value "Adult high energy drink" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Adult high energy drink" ]
+     ];
+     fhir:NutritionRequest.supplement.productName [ fhir:value "Ensure" ];
+     fhir:NutritionRequest.supplement.schedule [
+       fhir:index 0;
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2015-02-10"^^xsd:date ]
+         ];
+         fhir:Timing.repeat.frequency [ fhir:value "3"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:NutritionRequest.supplement.quantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "8 oz can" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+<http://hl7.org/fhir/AllergyIntolerance/example> a fhir:AllergyIntolerance .
+
+# -------------------------------------------------------------------------------------
+

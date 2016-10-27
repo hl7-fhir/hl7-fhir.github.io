@@ -1,0 +1,962 @@
+{
+  "@context": "http://build.fhir.org/CarePlan.jsonld",
+  "@context": "http://hl7.org/fhir/CarePlan/integrate",
+  "Resource.id": {
+    "id.value": "integrate"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Patient family is not ready to commit to goal setting at this time.  Goal setting will be addressed in the future</p>\n      <table>\n        <thead>\n          <tr>\n            <th>Start Date</th>\n            <th>Goal</th>\n            <th>Action Steps</th>\n            <th>Status</th>\n            <th>Date Last Updated</th>\n            <th>Comments</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>10 Sep 2012</td>\n            <td>Eve will lose weight and reduce her GERDS symptoms by improving her diet</td>\n            <td>Eve will review photos of high and low density foods and share with her parents</td>\n            <td>New Goal</td>\n            <td>10 Sep 2012</td>\n            <td>9/10/12 Eve eats one meal a day with her parents</td>\n          </tr>\n          <tr>\n            <td>10 Sep 2012</td>\n            <td>Eve will lose weight and reduce her GERDS symptoms by improving her diet</td>\n            <td>Eve will ask her dad to asist her to put the head of her bed on blocks</td>\n            <td>New Goal</td>\n            <td>10 Sep 2012</td>\n            <td>9/10/12 Eve will sleep in her bed more often than the couch</td>\n          </tr>\n          <tr>\n            <td>10 Sep 2012</td>\n            <td>Eve will improve her GERDS symptoms</td>\n            <td>Eve will reduce her intake of coffee and chocolate</td>\n            <td>In Process</td>\n            <td>10 Sep 2012</td>\n            <td/>\n          </tr>\n          <tr>\n            <td>27 Aug 2012</td>\n            <td>Eve will increase her energy by being more active</td>\n            <td>Eve will walk her friend's dog up and down a big hill 15-30 minutes 3 days a week</td>\n            <td>In Process</td>\n            <td>10 Sep 2012</td>\n            <td>8/27/12 Eve would like to try for 5 days a week.  9/10/12 Eve is still walking the dogs.</td>\n          </tr>\n          <tr>\n            <td>23 Jul 2012</td>\n            <td>Eve will increase her energy by being more active</td>\n            <td>Eve will walk 3 blocks to her parents house twice a week</td>\n            <td>In Process</td>\n            <td>10 Sep 2012</td>\n            <td>8/13/12 Eve walked 4 times the last week.  9/10/12 Eve did not walk to her parents the last week, but has plans to start again</td>\n          </tr>\n          <tr>\n            <td>23 Jul 2012</td>\n            <td>Eve will set up her medications and take as prescribed</td>\n            <td>Eve will us a calendar to check off after medications are taken</td>\n            <td>In Process</td>\n            <td>13 Aug 2012</td>\n            <td/>\n          </tr>\n          <tr>\n            <td>23 Jul 2012</td>\n            <td>Eve will restart her light treatments</td>\n            <td>Eve will use her lights MWF after her shower for 3 minutes</td>\n            <td>In Process</td>\n            <td>27 Aug 2012</td>\n            <td>8/13/12 After restarting the vinegar soaks the psoriasis is improved and Eve plans to treat the remainder with light treatments.  She plans to start this week.  8/27/12 Since her skin is improved Eve has not been using the light treatment as often, maybe once a week.  She would like to increase to 3 times a week again</td>\n          </tr>\n          <tr>\n            <td>10 Jul 2012</td>\n            <td>Eve will set up her medications and take as prescribed</td>\n            <td>Eve will use a calendar of a chart to help her remember when to take her medications</td>\n            <td>In Process</td>\n            <td>10 Sep 2012</td>\n            <td>7/23/12 Eve created a chart as a reminer to take the medications that do not fit in her pill box</td>\n          </tr>\n          <tr>\n            <td>23 Jul 2012</td>\n            <td>Eve will increase her energy by being more active</td>\n            <td>Eve will start using stretch bands and one step 2 days a week Mon/Wed 6-7am and maybe Friday afternoon</td>\n            <td>On-Hold</td>\n            <td>23 Aug 2012</td>\n            <td>7/30/12 will be able to esume exercise.  8/13/12 Eve prefers to focus on walking at this time</td>\n          </tr>\n          <tr>\n            <td>10 Jul 2012</td>\n            <td>Eve will set up her medications and take as prescribed</td>\n            <td>Eve will match a printed medication worksheet with the medication bottles at home</td>\n            <td>Completed</td>\n            <td>23 Jul 2012</td>\n            <td/>\n          </tr>\n          <tr>\n            <td>10 Jul 2012</td>\n            <td>Eve will set up her medications and take as prescribed</td>\n            <td>Eve will get a medication box to sort her pills.  She will have one for scheduled medications and one for as needed</td>\n            <td>Completed</td>\n            <td>16 Jul 2012</td>\n            <td>7/16/12 Eve now has some of her medications set up in pill packs by her pharmacist</td>\n          </tr>\n          <tr>\n            <td>23 Jul 2012</td>\n            <td>Eve will increase her energy by being more active</td>\n            <td>Eve will open &quot;The Firm&quot; DVD workout package and listen to it</td>\n            <td>Discontinued</td>\n            <td>13 Aug 2012</td>\n            <td>7/30/12 Eve will be able to resume exercise on 7/30/12.  8/13/12 -hold until &quot;less busy&quot;</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+    }
+  },
+  "Condition": [
+    {
+      "Resource.id": {
+        "id.value": "p1"
+      },
+      "Condition.verificationStatus": {
+        "code.value": "confirmed"
+      },
+      "Condition.code": {
+        "CodeableConcept.text": {
+          "string.value": "GERDS"
+        }
+      },
+      "Condition.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "p2"
+      },
+      "Condition.verificationStatus": {
+        "code.value": "confirmed"
+      },
+      "Condition.code": {
+        "CodeableConcept.text": {
+          "string.value": "Obesity"
+        }
+      },
+      "Condition.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "p3"
+      },
+      "Condition.verificationStatus": {
+        "code.value": "confirmed"
+      },
+      "Condition.code": {
+        "CodeableConcept.text": {
+          "string.value": "Psoriasis"
+        }
+      },
+      "Condition.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "g1"
+      },
+      "Goal.status": {
+        "code.value": "in-progress"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Eve will lose weight and reduce her GERDS symptoms by improving her diet"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "g2"
+      },
+      "Goal.status": {
+        "code.value": "in-progress"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Eve will improve her GERDS symptoms"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "g3"
+      },
+      "Goal.status": {
+        "code.value": "in-progress"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Eve will increase her energy by being more active"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "g4"
+      },
+      "Goal.status": {
+        "code.value": "in-progress"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Eve will set up her medications and take as prescribed"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "g5"
+      },
+      "Goal.status": {
+        "code.value": "in-progress"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Eve will restart her light treatments"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/1"
+        },
+        "Reference.display": {
+          "string.value": "Eve Everywoman"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/1"
+      }
+    }
+  ],
+  "CarePlan.status": {
+    "code.value": "active"
+  },
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/1"
+    },
+    "Reference.display": {
+      "string.value": "Eve Everywoman"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "CarePlan.modified": {
+    "dateTime.value": "2012-09-10"
+  },
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "string.value": "#p1"
+      },
+      "Reference.display": {
+        "string.value": "GERDS"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#p2"
+      },
+      "Reference.display": {
+        "string.value": "Obesity"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#p3"
+      },
+      "Reference.display": {
+        "string.value": "Psoriasis"
+      }
+    }
+  ],
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "string.value": "#g1"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#g2"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#g3"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#g4"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#g5"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-09-10"
+          },
+          "Annotation.text": {
+            "string.value": "Eve eats one meal a day with her parents"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/StructureDefinition/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-09-10"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g1"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "not-started"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-09-10"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will review photos of high and low density foods and share with her parents"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-09-10"
+          },
+          "Annotation.text": {
+            "string.value": "Eve will sleep in her bed more often than the couch"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-09-10"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g1"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "not-started"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-09-10"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will ask her dad to asist her to put the head of her bed on blocks"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-09-10"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g2"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "in-progress"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-09-10"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will reduce her intake of coffee and chocolate"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-08-27"
+          },
+          "Annotation.text": {
+            "string.value": "Eve would like to try for 5 days a week."
+          }
+        },
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-09-10"
+          },
+          "Annotation.text": {
+            "string.value": "Eve is still walking the dogs."
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-09-10"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g3"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "in-progress"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-08-27"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will walk her friend's dog up and down a big hill 15-30 minutes 3 days a week"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-08-13"
+          },
+          "Annotation.text": {
+            "string.value": "Eve walked 4 times the last week."
+          }
+        },
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-09-10"
+          },
+          "Annotation.text": {
+            "string.value": "Eve did not walk to her parents the last week, but has plans to start again"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-09-10"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g3"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "in-progress"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-23"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will walk 3 blocks to her parents house twice a week"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-08-13"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g4"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "in-progress"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-23"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will us a calendar to check off after medications are taken"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-08-13"
+          },
+          "Annotation.text": {
+            "string.value": "After restarting the vinegar soaks the psoriasis is improved and Eve plans to treat the remainder with light treatments.  She plans to start this week."
+          }
+        },
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-08-27"
+          },
+          "Annotation.text": {
+            "string.value": "Since her skin is improved Eve has not been using the light treatment as often, maybe once a week.  She would like to increase to 3 times a week again"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-08-27"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g5"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "in-progress"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-23"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will use her lights MWF after her shower for 3 minutes"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-07-23"
+          },
+          "Annotation.text": {
+            "string.value": "Eve created a chart as a reminer to take the medications that do not fit in her pill box"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-09-10"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g4"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "in-progress"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-10"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will use a calendar of a chart to help her remember when to take her medications"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-07-30"
+          },
+          "Annotation.text": {
+            "string.value": "Will be able to esume exercise."
+          }
+        },
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-08-13"
+          },
+          "Annotation.text": {
+            "string.value": "Eve prefers to focus on walking at this time"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-08-23"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g3"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "on-hold"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-23"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will start using stretch bands and one step 2 days a week Mon/Wed 6-7am and maybe Friday afternoon"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-07-23"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g4"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-10"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will match a printed medication worksheet with the medication bottles at home"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-07-16"
+          },
+          "Annotation.text": {
+            "string.value": "Eve now has some of her medications set up in pill packs by her pharmacist"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-07-16"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g4"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-10"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will get a medication box to sort her pills.  She will have one for scheduled medications and one for as needed"
+        }
+      }
+    },
+    {
+      "CarePlan.activity.progress": [
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-07-12"
+          },
+          "Annotation.text": {
+            "string.value": "Eve will be able to resume exercise on 7/30/12"
+          }
+        },
+        {
+          "Annotation.time": {
+            "dateTime.value": "2012-08-13"
+          },
+          "Annotation.text": {
+            "string.value": "hold until \"less busy\""
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "Element.extension": [
+          {
+            "Extension.url": {
+              "uri.value": "http://example.org/DoNotUse/General/RevisionDate"
+            },
+            "Extension.valueDate": {
+              "date.value": "2012-08-13"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "other"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.goal": [
+          {
+            "Reference.reference": {
+              "string.value": "#g3"
+            }
+          }
+        ],
+        "CarePlan.activity.detail.status": {
+          "code.value": "on-hold"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "dateTime.value": "2012-07-23"
+          }
+        },
+        "CarePlan.activity.detail.description": {
+          "string.value": "Eve will open \"The Firm\" DVD workout package and listen to it"
+        }
+      }
+    }
+  ],
+  "CarePlan.note": {
+    "Annotation.text": {
+      "string.value": "Patient family is not ready to commit to goal setting at this time.  Goal setting will be addressed in the future"
+    }
+  }
+}

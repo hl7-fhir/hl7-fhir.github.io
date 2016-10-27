@@ -1,0 +1,228 @@
+{
+  "@context": "http://build.fhir.org/QuestionnaireResponse.jsonld",
+  "@context": "http://hl7.org/fhir/QuestionnaireResponse/bb",
+  "Resource.id": {
+    "id.value": "bb"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n        Cathy Jones, female. Birth weight 3.25 kg at 44.3 cm. \n        Injection of Vitamin K given on 1972-11-30 (first dose) and 1972-12-11 (second dose)\n        Note: Was able to speak Chinese at birth.\n      </pre>\n    </div>"
+    }
+  },
+  "QuestionnaireResponse.status": {
+    "code.value": "completed"
+  },
+  "QuestionnaireResponse.subject": {
+    "Reference.reference": {
+      "string.value": "http://hl7.org/fhir/Patient/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir/Patient/1"
+  },
+  "QuestionnaireResponse.author": {
+    "Reference.reference": {
+      "string.value": "http://hl7.org/fhir/Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir/Practitioner/example"
+  },
+  "QuestionnaireResponse.authored": {
+    "dateTime.value": "2013-02-19T14:15:00+10:00"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "birthDetails"
+      },
+      "QuestionnaireResponse.item.text": {
+        "string.value": "Birth details - To be completed by health professional"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "nameOfChild"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Name of child"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueString": {
+                    "string.value": "Cathy Jones"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "sex"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Sex"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "f"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "string.value": "neonatalInformation"
+          },
+          "QuestionnaireResponse.item.text": {
+            "string.value": "Neonatal Information"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "birthWeight"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Birth weight (kg)"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                    "decimal.value": 3.25
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "birthLength"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Birth length (cm)"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                    "decimal.value": 44.3
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "vitaminKgiven"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Vitamin K given"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "INJECTION"
+                    }
+                  },
+                  "QuestionnaireResponse.item.answer.item": [
+                    {
+                      "QuestionnaireResponse.item.linkId": {
+                        "string.value": "vitaminKgivenDoses"
+                      },
+                      "QuestionnaireResponse.item.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "string.value": "vitaminKDose1"
+                          },
+                          "QuestionnaireResponse.item.text": {
+                            "string.value": "1st dose"
+                          },
+                          "QuestionnaireResponse.item.answer": [
+                            {
+                              "QuestionnaireResponse.item.answer.valueDate": {
+                                "date.value": "1972-11-30"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "string.value": "vitaminKDose2"
+                          },
+                          "QuestionnaireResponse.item.text": {
+                            "string.value": "2nd dose"
+                          },
+                          "QuestionnaireResponse.item.answer": [
+                            {
+                              "QuestionnaireResponse.item.answer.valueDate": {
+                                "date.value": "1972-12-11"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "hepBgiven"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Hep B given y / n"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueBoolean": {
+                    "boolean.value": true
+                  },
+                  "QuestionnaireResponse.item.answer.item": [
+                    {
+                      "QuestionnaireResponse.item.linkId": {
+                        "string.value": "hepBgivenDate"
+                      },
+                      "QuestionnaireResponse.item.item": [
+                        {
+                          "QuestionnaireResponse.item.text": {
+                            "string.value": "Date given"
+                          },
+                          "QuestionnaireResponse.item.answer": [
+                            {
+                              "QuestionnaireResponse.item.answer.valueDate": {
+                                "date.value": "1972-12-04"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "string.value": "abnormalitiesAtBirth"
+              },
+              "QuestionnaireResponse.item.text": {
+                "string.value": "Abnormalities noted at birth"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueString": {
+                    "string.value": "Already able to speak Chinese"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "@context": "http://build.fhir.org/ServiceDefinition.jsonld",
+  "@context": "http://hl7.org/fhir/ServiceDefinition/infobutton",
+  "Resource.id": {
+    "id.value": "infobutton"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">InfoButton Module</div>"
+    }
+  },
+  "ServiceDefinition.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.value": {
+        "string.value": "infobutton"
+      }
+    }
+  ],
+  "ServiceDefinition.version": {
+    "string.value": "1.0.0"
+  },
+  "ServiceDefinition.title": {
+    "string.value": "InfoButton Module"
+  },
+  "ServiceDefinition.status": {
+    "code.value": "draft"
+  },
+  "ServiceDefinition.date": {
+    "dateTime.value": "2016-07-05"
+  },
+  "ServiceDefinition.description": {
+    "markdown.value": "The InfoButton specification defines a mechanism for retrieving relevant clinical context based a particular set of search criteria.."
+  },
+  "ServiceDefinition.topic": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "InfoButton Module"
+      }
+    },
+    {
+      "CodeableConcept.text": {
+        "string.value": "InfoButton"
+      }
+    }
+  ],
+  "ServiceDefinition.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "code.value": "Patient"
+      },
+      "DataRequirement.mustSupport": [
+        {
+          "string.value": "gender"
+        },
+        {
+          "string.value": "birthDate"
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "code.value": "Condition"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "code.value": "MedicationStatement"
+      }
+    }
+  ]
+}

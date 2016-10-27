@@ -1,0 +1,77 @@
+﻿{
+  "@context": {
+    "ReferralRequest.identifier": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "ReferralRequest.basedOn": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.basedOn",
+      "@type": "http://hl7.org/fhir/Reference(ReferralRequest|CarePlan|DiagnosticRequest|ProcedureRequest)"
+    },
+    "ReferralRequest.parent": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.parent",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "ReferralRequest.status": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "ReferralRequest.category": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.category",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "ReferralRequest.type": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.type",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ReferralRequest.priority": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.priority",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ReferralRequest.patient": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.patient",
+      "@type": "http://hl7.org/fhir/Reference(Patient)"
+    },
+    "ReferralRequest.context": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.context",
+      "@type": "http://hl7.org/fhir/Reference(Encounter|EpisodeOfCare)"
+    },
+    "ReferralRequest.fulfillmentTime": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.fulfillmentTime",
+      "@type": "http://hl7.org/fhir/Period"
+    },
+    "ReferralRequest.authored": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.authored",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "ReferralRequest.requester": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.requester",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner|Organization|Patient)"
+    },
+    "ReferralRequest.specialty": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.specialty",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ReferralRequest.recipient": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.recipient",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner|Organization)"
+    },
+    "ReferralRequest.reason": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.reason",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ReferralRequest.description": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.description",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "ReferralRequest.serviceRequested": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.serviceRequested",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ReferralRequest.supportingInformation": {
+      "@id": "http://hl7.org/fhir/ReferralRequest.supportingInformation",
+      "@type": "http://hl7.org/fhir/Reference(Any)"
+    }
+  },
+  "@id": "http://hl7.org/fhir/ReferralRequest"
+}

@@ -1,0 +1,169 @@
+{
+  "@context": "http://build.fhir.org/Medication.jsonld",
+  "@context": "http://hl7.org/fhir/Medication/med0305",
+  "Resource.id": {
+    "id.value": "med0305"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0305</p><p><b>contained</b>: </p><p><b>code</b>: Timoptic 5mg/ml solution <span>(Details : {http://hl7.org/fhir/sid/ndc code '2501-813-16' = '2501-813-16', given as 'Timoptic 5mg/ml solution'})</span></p><p><b>isBrand</b>: true</p><p><b>manufacturer</b>: id: org5; name: Aton Pharma Inc</p><blockquote><p><b>product</b></p><p><b>form</b>: Opthalmic Solution (qualifier value) <span>(Details : {SNOMED CT code '75359005' = 'Timolol maleate', given as 'Opthalmic Solution (qualifier value)'})</span></p><h3>Ingredients</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Timolol Maleate (substance) <span>(Details : {SNOMED CT code '75359005' = 'Timolol maleate', given as 'Timolol Maleate (substance)'})</span></td><td>5 mg<span> (Details: UCUM code mg = 'mg')</span>/1 mL<span> (Details: UCUM code mL = 'mL')</span></td></tr></table><h3>Batches</h3><table><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>May 22, 2017</td></tr></table></blockquote><blockquote><p><b>package</b></p><p><b>container</b>: Bottle - unit of product usage (qualifier value) <span>(Details : {SNOMED CT code '419672006' = 'Bottle - unit of product usage (qualifier value)', given as 'Bottle - unit of product usage (qualifier value)'})</span></p><h3>Contents</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Timolol maleate 0.5% opthalmic solution (product) <span>(Details : {SNOMED CT code '376877002' = 'Timolol maleate 0.5% ophthalmic solution (product)', given as 'Timolol maleate 0.5% opthalmic solution (product)'})</span></td><td>10 mL<span> (Details: UCUM code mL = 'mL')</span></td></tr></table></blockquote></div>"
+    }
+  },
+  "Organization": [
+    {
+      "Resource.id": {
+        "id.value": "org5"
+      },
+      "Organization.name": {
+        "string.value": "Aton Pharma Inc"
+      }
+    }
+  ],
+  "Medication.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/sid/ndc"
+        },
+        "Coding.code": {
+          "code.value": "2501-813-16"
+        },
+        "Coding.display": {
+          "string.value": "Timoptic 5mg/ml solution"
+        }
+      }
+    ]
+  },
+  "Medication.isBrand": {
+    "boolean.value": true
+  },
+  "Medication.manufacturer": {
+    "Reference.reference": {
+      "string.value": "#org5"
+    }
+  },
+  "Medication.product": {
+    "Medication.product.form": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "75359005"
+          },
+          "Coding.display": {
+            "string.value": "Opthalmic Solution (qualifier value)"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#75359005"
+    },
+    "Medication.product.ingredient": [
+      {
+        "Medication.product.ingredient.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "75359005"
+              },
+              "Coding.display": {
+                "string.value": "Timolol Maleate (substance)"
+              }
+            }
+          ],
+          "Resource.concept": "http://snomed.info/sct#75359005"
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "decimal.value": 5
+            },
+            "Quantity.system": {
+              "uri.value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "code.value": "mg"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "decimal.value": 1
+            },
+            "Quantity.system": {
+              "uri.value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "code.value": "mL"
+            }
+          }
+        }
+      }
+    ],
+    "Medication.product.batch": [
+      {
+        "Medication.product.batch.lotNumber": {
+          "string.value": "9494788"
+        },
+        "Medication.product.batch.expirationDate": {
+          "dateTime.value": "2017-05-22"
+        }
+      }
+    ]
+  },
+  "Medication.package": {
+    "Medication.package.container": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "419672006"
+          },
+          "Coding.display": {
+            "string.value": "Bottle - unit of product usage (qualifier value)"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#419672006"
+    },
+    "Medication.package.content": [
+      {
+        "Medication.package.content.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "376877002"
+              },
+              "Coding.display": {
+                "string.value": "Timolol maleate 0.5% opthalmic solution (product)"
+              }
+            }
+          ],
+          "Resource.concept": "http://snomed.info/sct#376877002"
+        },
+        "Medication.package.content.amount": {
+          "Quantity.value": {
+            "decimal.value": 10
+          },
+          "Quantity.system": {
+            "uri.value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "code.value": "mL"
+          }
+        }
+      }
+    ]
+  }
+}

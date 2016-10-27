@@ -1,0 +1,81 @@
+{
+  "@context": "http://build.fhir.org/MedicationAdministration.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationAdministration/medadminexample03",
+  "Resource.id": {
+    "id.value": "medadminexample03"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadminexample03</p><p><b>contained</b>: </p><p><b>status</b>: on-hold</p><p><b>medication</b>: id: med0303; Alemtuzumab 10mg/ml (Lemtrada) <span>(Details : {RxNorm code '1594660' = '1594660', given as 'Alemtuzumab 10mg/ml (Lemtrada)'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>Encounter/f001</a></p><p><b>effectiveTime</b>: Jan 15, 2015 2:30:00 PM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>prescription</b>: <a>MedicationRequest/medrx0317</a></p><p><b>note</b>: Patient started Bupropion this morning - will administer in a reduced dose tomorrow</p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0303"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            },
+            "Coding.code": {
+              "code.value": "1594660"
+            },
+            "Coding.display": {
+              "string.value": "Alemtuzumab 10mg/ml (Lemtrada)"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationAdministration.status": {
+    "code.value": "on-hold"
+  },
+  "MedicationAdministration.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0303"
+    }
+  },
+  "MedicationAdministration.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationAdministration.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/f001"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "MedicationAdministration.effectiveTimePeriod": {
+    "Period.start": {
+      "dateTime.value": "2015-01-15T14:30:00+01:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2015-01-15T14:30:00+01:00"
+    }
+  },
+  "MedicationAdministration.prescription": {
+    "Reference.reference": {
+      "string.value": "MedicationRequest/medrx0317"
+    },
+    "Resource.reference": "http://hl7.org/fhir//MedicationRequest/medrx0317"
+  },
+  "MedicationAdministration.note": [
+    {
+      "Annotation.text": {
+        "string.value": "Patient started Bupropion this morning - will administer in a reduced dose tomorrow"
+      }
+    }
+  ]
+}

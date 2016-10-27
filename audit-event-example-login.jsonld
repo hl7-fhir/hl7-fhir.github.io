@@ -1,0 +1,135 @@
+{
+  "@context": "http://build.fhir.org/AuditEvent.jsonld",
+  "@context": "http://hl7.org/fhir/AuditEvent/example-login",
+  "Resource.id": {
+    "id.value": "example-login"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-login</p><p><b>type</b>: User Authentication (Details: DICOM code 110114 = 'User Authentication', stated as 'User Authentication')</p><p><b>subtype</b>: Login (Details: DICOM code 110122 = 'Login', stated as 'Login')</p><p><b>action</b>: E</p><p><b>recorded</b>: Jun 20, 2013 11:41:23 PM</p><p><b>outcome</b>: 0</p><blockquote><p><b>agent</b></p><p><b>userId</b>: 95</p><p><b>altId</b>: 601847123</p><p><b>name</b>: Grahame Grieve</p><p><b>requestor</b>: true</p><h3>Networks</h3><table><tr><td>-</td><td><b>Address</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>127.0.0.1</td><td>2</td></tr></table></blockquote><blockquote><p><b>agent</b></p><p><b>role</b>: Source Role ID <span>(Details : {DICOM code '110153' = 'Source Role ID', given as 'Source Role ID'})</span></p><p><b>userId</b>: 2.16.840.1.113883.4.2|2.16.840.1.113883.4.2</p><p><b>altId</b>: 6580</p><p><b>requestor</b>: false</p><h3>Networks</h3><table><tr><td>-</td><td><b>Address</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Workstation1.ehr.familyclinic.com</td><td>1</td></tr></table></blockquote><h3>Sources</h3><table><tr><td>-</td><td><b>Site</b></td><td><b>Identifier</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Cloud</td><td>hl7connect.healthintersections.com.au</td><td>Web Server (Details: http://hl7.org/fhir/security-source-type code 3 = 'Web Server', stated as 'Web Server')</td></tr></table></div>"
+    }
+  },
+  "AuditEvent.type": {
+    "Coding.system": {
+      "uri.value": "http://nema.org/dicom/dicm"
+    },
+    "Coding.code": {
+      "code.value": "110114"
+    },
+    "Coding.display": {
+      "string.value": "User Authentication"
+    }
+  },
+  "AuditEvent.subtype": [
+    {
+      "Coding.system": {
+        "uri.value": "http://nema.org/dicom/dicm"
+      },
+      "Coding.code": {
+        "code.value": "110122"
+      },
+      "Coding.display": {
+        "string.value": "Login"
+      }
+    }
+  ],
+  "AuditEvent.action": {
+    "code.value": "E"
+  },
+  "AuditEvent.recorded": {
+    "instant.value": "2013-06-20T23:41:23Z"
+  },
+  "AuditEvent.outcome": {
+    "code.value": "0"
+  },
+  "AuditEvent.agent": [
+    {
+      "AuditEvent.agent.userId": {
+        "Identifier.value": {
+          "string.value": "95"
+        }
+      },
+      "AuditEvent.agent.altId": {
+        "string.value": "601847123"
+      },
+      "AuditEvent.agent.name": {
+        "string.value": "Grahame Grieve"
+      },
+      "AuditEvent.agent.requestor": {
+        "boolean.value": true
+      },
+      "AuditEvent.agent.network": {
+        "AuditEvent.agent.network.address": {
+          "string.value": "127.0.0.1"
+        },
+        "AuditEvent.agent.network.type": {
+          "code.value": "2"
+        }
+      }
+    },
+    {
+      "AuditEvent.agent.role": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://nema.org/dicom/dicm"
+              },
+              "Coding.code": {
+                "code.value": "110153"
+              },
+              "Coding.display": {
+                "string.value": "Source Role ID"
+              }
+            }
+          ]
+        }
+      ],
+      "AuditEvent.agent.userId": {
+        "Identifier.value": {
+          "string.value": "2.16.840.1.113883.4.2|2.16.840.1.113883.4.2"
+        }
+      },
+      "AuditEvent.agent.altId": {
+        "string.value": "6580"
+      },
+      "AuditEvent.agent.requestor": {
+        "boolean.value": false
+      },
+      "AuditEvent.agent.network": {
+        "AuditEvent.agent.network.address": {
+          "string.value": "Workstation1.ehr.familyclinic.com"
+        },
+        "AuditEvent.agent.network.type": {
+          "code.value": "1"
+        }
+      }
+    }
+  ],
+  "AuditEvent.source": {
+    "AuditEvent.source.site": {
+      "string.value": "Cloud"
+    },
+    "AuditEvent.source.identifier": {
+      "Identifier.value": {
+        "string.value": "hl7connect.healthintersections.com.au"
+      }
+    },
+    "AuditEvent.source.type": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/security-source-type"
+        },
+        "Coding.code": {
+          "code.value": "3"
+        },
+        "Coding.display": {
+          "string.value": "Web Server"
+        }
+      }
+    ]
+  }
+}

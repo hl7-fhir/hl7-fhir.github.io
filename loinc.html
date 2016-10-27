@@ -1,0 +1,447 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Loinc - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/loinc.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="terminology-module.html"><img src="terminology.png"/> Terminology</a></li>
+        <li><a href="terminologies-systems.html">Code Systems</a></li>
+        <li><b>LOINC</b></li>          <!-- loinc.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Using Codes</a></li><li><a href="terminologies-systems.html">Code Systems</a></li><li><a href="terminologies-valuesets.html">Value Sets</a></li><li><a href="terminologies-conceptmaps.html">Concept Maps</a></li><li><a href="identifier-registry.html">Identifier Systems</a></li></ul>
+
+
+<h2 class="self-link-parent"><span class="sectioncount">4.2.3<a name="4.2.3"> </a></span> Using LOINC with FHIR <a href="loinc.html#4.2.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/Vocab/index.cfm" _target="blank">Vocabulary <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.1<a name="4.2.3.1"> </a></span> Summary <a href="loinc.html#4.2.3.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<table class="grid">
+ <tr><td>Source</td><td>LOINC is made available by the <a href="https://www.regenstrief.org/">Regenstrief Institute <img src="external.png" style="text-align: baseline"/></a> at <a href="http://loinc.org">http://loinc.org <img src="external.png" style="text-align: baseline"/></a></td></tr>
+ <tr><td>System</td><td>The URI <a href="http://loinc.org">http://loinc.org <img src="external.png" style="text-align: baseline"/></a> identifies LOINC codes</td></tr>
+ <tr><td>Version</td><td>Where a version is used, it should be the standard LOINC version e.g. 2.48</td></tr>
+ <tr><td>Code</td><td>The LOINC Code Identifier e.g. 21176-3. LOINC codes are not case sensitive. In addition, LOINC part codes and LOINC answer string ids can be used where appropriate</td></tr>
+ <tr><td>Display</td><td>Use either the SHORTNAME or LONG_COMMON_NAME field for the display</td></tr>
+ <tr><td>Filter Properties</td><td>Several properties are defined as described below</td></tr>
+</table>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.2<a name="4.2.3.2"> </a></span> Copyright Issues <a href="loinc.html#4.2.3.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+The terms of use for LOINC require that a <a href="license.html#loinc">notice</a> be included with any use of LOINC codes.
+This notice must appear in the <i>copyright</i> element of any value set that includes LOINC codes (either in the code or filter elements, or in an expansion):
+</p>
+<pre>
+&lt;copyright value=&quot;This content LOINC&reg; is copyright &copy; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;/&gt;
+</pre>
+<p>
+Additional copyright statements may also be found in the <i>copyright</i> element. Some LOINC codes have
+3rd party copyright statements. When these codes are included in a value set, they must carry their own 
+copyright statement as well.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.3<a name="4.2.3.3"> </a></span> Case Sensitivity <a href="loinc.html#4.2.3.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+For comparison purposes, LOINC codes, displays, and property values are not case sensitive, though implementers SHOULD maintain the correct case when using LOINC codes and property values.
+</p>
+
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.4<a name="4.2.3.4"> </a></span> Use of LOINC PARTS <a href="loinc.html#4.2.3.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+As described in the <a href="http://loinc.org/downloads/files/LOINCManual.pdf">LOINC Manual <img src="external.png" style="text-align: baseline"/></a> section 10.2,
+LOINC Parts are a coded representation of a value for a dimension used to specify a LOINC Term
+which are assigned a non-semantic identifier with a &quot;LP&quot; prefix and a mod-10 check digit. Following
+the LOINC license, these part codes may be used in the following ways:
+</p>
+<ul>
+ <li>In filter properties, as described below</li>
+ <li>In <a href="structuredefinition-definitions.html">Structure Definitions</a>, where the structure describes the use of a set of LOINC codes</li>
+ <li>In a <a href="conceptmap.html">ConceptMap</a> resource, where mappings between LOINC codes and other codes are being defined</li>
+</ul>
+<p>
+Part codes are the same LOINC system(http://loinc.org), and SHALL be represented in uppercase (e.g. LP31755-9).
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.5<a name="4.2.3.5"> </a></span> Use of LOINC Answer Lists <a href="loinc.html#4.2.3.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+LOINC also allocates Answer List and Answer String Ids for use in various forms and questionnaires.
+LOINC Answer String IDs are also valid LOINC codes:
+</p>
+<pre>
+  &lt;coding&gt;
+    &lt;system value=&quot;http://loinc.org&quot;/&gt;
+    &lt;code value=&quot;LA11165-0&quot;/&gt;
+    &lt;display value=&quot;Platelet anisocytosis&quot;/&gt;
+  &lt;/coding&gt;
+</pre>
+<p>
+LOINC Answer List Ids are actually value set identifiers. See <a href="#alist">below</a> for how to use these.
+</p>
+
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.6<a name="4.2.3.6"> </a></span> RDF <a href="loinc.html#4.2.3.6" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+LOIINC uses the namespace http://loinc.org/owl# as the root for LOINC concepts in the 
+RDF space. This means that when a LOINC code is converted from the system::code pair, 
+where the system is http://loinc.org, to the <a href="rdf.html">RDF ontological form</a>, 
+the representation is http://loinc.org/owl#[code].
+</p>
+
+<a name="props"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.7</span> LOINC Properties <a href="loinc.html#props" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In addition to the <a href="terminology-service.html#standard-props">standard properties</a>, the following properties are defined for LOINC:
+</p>
+<table class="grid">
+<tr><td>STATUS</td><td>boolean</td><td>Status of the term. For the purposes of LOINC, codes with Property ACTIVE=DEPRECATED are considered inactive</td></tr>
+<tr><td>COMPONENT</td><td>code</td><td>First major axis-component or analyte: Analyte Name, Analyte sub-class, Challenge</td></tr>
+<tr><td>PROPERTY</td><td>code</td><td>Second major axis-property observed: Kind of Property (also called kind of quantity)</td></tr>
+<tr><td>TIME_ASPCT</td><td>code</td><td>Third major axis-timing of the measurement: Time Aspect (Point or moment in time vs. time interval)</td></tr>
+<tr><td>SYSTEM</td><td>code</td><td>Fourth major axis-type of specimen or system: System (Sample) Type</td></tr>
+<tr><td>SCALE_TYP</td><td>code</td><td>Fifth major axis-scale of measurement: Type of Scale</td></tr>
+<tr><td>METHOD_TYP</td><td>code</td><td>Sixth major axis-method of measurement: Type of Method</td></tr>
+<tr><td>CLASS</td><td>string</td><td>An arbitrary classification of the terms for grouping related observations together</td></tr>
+<tr><td>CONSUMER_NAME</td><td>string</td><td>An experimental (beta) consumer friendly name for this item. The intent is to provide a test name that health care consumers will recognize; it will be similar to the names that might appear on a lab report</td></tr>
+<tr><td>CLASSTYPE</td><td>string</td><td>1=Laboratory class; 2=Clinical class; 3=Claims attachments; 4=Surveys</td></tr>
+<tr><td>ORDER_OBS</td><td>string</td><td>??</td></tr>
+<tr><td>ORDER_OBS</td><td>string</td><td>Provides users with an idea of the intended use of the term by categorizing it as an order only, observation only, or both</td></tr>
+<tr><td>DOCUMENT_SECTION</td><td>string</td><td>Classification of whether this LOINC code can be used a full document, a section of a document, or both</td></tr>
+</table>
+
+<p>
+Note that when a <a href="codesystem-operations.html#lookup">$lookup</a> operation is performed on a LOINC code, 
+servers SHALL return the version being used (see above) in the <code>version</code> property. 
+Other properties are at the discretion of the server and the client.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.8<a name="4.2.3.8"> </a></span> LOINC Filters <a href="loinc.html#4.2.3.8" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+This section documents the property filters that can be used with the LOINC 
+code system in value set composition statements.
+</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.3.8.1<a name="4.2.3.8.1"> </a></span> LOINC Property filter <a href="loinc.html#4.2.3.8.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows the selection of a set of LOINC codes with a common property value (see list above)</td></tr>
+ <tr><td>Property Name</td><td>One of the names listed in the &quot;Field Name&quot; column in LOINC Database Structure (Appendix A of the LOINC manual)</td></tr>
+ <tr><td>Operations Allowed</td><td>= / regex</td></tr>
+ <tr><td>Values Allowed</td><td>[string value]</td></tr>
+ <tr><td>Comments</td><td>The 6 properties COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, and METHOD_TYP are most likely to be useful.</td></tr>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.3.8.2<a name="4.2.3.8.2"> </a></span> 3rd Party Copyright <a href="loinc.html#4.2.3.8.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the inclusion or exclusion of LOINC codes that include 3rd party copyright notices</td></tr>
+ <tr><td>Property Name</td><td>copyright</td></tr>
+ <tr><td>Operations Allowed</td><td>=</td></tr>
+ <tr><td>Values Allowed</td><td>LOINC | 3rdParty</td></tr>
+ <tr><td>Comments</td><td>LOINC = only codes with a sole copyright by Regenstrief. 3rdParty = only codes with a 3rd party copyright in addition to the one from Regenstrief.</td></tr>
+</table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.3.8.3<a name="4.2.3.8.3"> </a></span> Multi-Axial Hierarchy <a href="loinc.html#4.2.3.8.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<table class="grid">
+ <tr><td>Description</td><td>Allows for the selection of a set of codes base on their appearance in the LOINC multi-axial hierarchy </td></tr>
+ <tr><td>Property Name</td><td>parent | ancestor</td></tr>
+ <tr><td>Operations Allowed</td><td>= / in</td></tr>
+ <tr><td>Values Allowed</td><td>Part Code (or, for &quot;in&quot;, multiple part codes separated by commas)</td></tr>
+ <tr><td>Comments</td><td>&quot;parent&quot; selects immediate parents only. For example, the code &quot;44022-2&quot; has the parent &quot;LP52960-9&quot;. Ancestor includes parents transitively, e.g. &quot;LP52960-9&quot; eventually has a parent &quot;LP31755-9&quot;, so the code &quot;44022-2&quot; is in the set of codes that have ancestor=LP31755-9</td></tr>
+</table>
+
+<p><i>TODO: Document Ontology</i></p>
+  <!-- Document.Kind, Document.TypeOfService, Document.Setting, Document.Role, and Document.SubjectMatterDomain -->
+
+<a name="implicit"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.2.3.9</span> Implicit Value Sets <a href="loinc.html#implicit" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Implicit value sets are those whose specification can be predicted based on the grammar of the 
+underlying code system, and the known structure of the URL that refers to them. LOINC
+defines one set of implicit value sets: By Multi-Axial Hierarchy Entry.
+</p>
+<p>
+If any value set resources exist with an identifier that conforms to the URL patterns specified below,
+the content of the resource must conform to the template provided. Profiles and other value set
+references are allowed to reference these value sets directly. <i>todo: can LOINC actually host a service that returns these?</i>
+</p>
+
+<p>
+The value set identifier http://loinc.org/vs is a value set that contains all LOINC codes.
+</p>
+
+<a name="alist"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">4.2.3.9.1</span> LOINC Answer List <a href="loinc.html#alist" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<p>
+LOINC defines a set of Answer lists, each of which contains a set of LOINC codes. 
+LOINC answer lists are value sets. The value set identifier &quot;http://loinc.org/vs/[id]&quot;
+identifies a value set that contains a set of LOINC codes. For instance, the value
+set identifier http://loinc.org/vs/LL715-4 has the following definition for LOINC 2.52:
+</p>
+<pre>
+&lt;ValueSet xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      [some html that identifies that this value set 
+      includes all LOINC codes in this answer list]
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;identifier value=&quot;http://loinc.org/vs/LL715-4&quot;/&gt;
+  &lt;version value=&quot;2.52&quot;/&gt;
+  &lt;name value=&quot;Platelet morph&quot;/&gt;
+  &lt;description value=&quot;LOINC Answer List for Platelet morph&quot;/&gt;
+  &lt;status value=&quot;active&quot;/&gt;
+  &lt;date value=&quot;[optional date of LOINC release]&quot;/&gt;
+  &lt;compose&gt;
+    &lt;include&gt;
+      &lt;system value=&quot;http://loinc.org&quot;/&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11165-0&quot;/&gt;
+        &lt;display value=&quot;Platelet anisocytosis&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11168-4&quot;/&gt;
+        &lt;display value=&quot;Platelet clump&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11167-6&quot;/&gt;
+        &lt;display value=&quot;Platelet large fragments&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11166-8&quot;/&gt;
+        &lt;display value=&quot;Platelet satellitism&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11169-2&quot;/&gt;
+        &lt;display value=&quot;Platelets.agranular&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11170-0&quot;/&gt;
+        &lt;display value=&quot;Platelets.giant&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11172-6&quot;/&gt;
+        &lt;display value=&quot;Platelets.large&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;concept&gt;
+        &lt;code value=&quot;LA11171-8&quot;/&gt;
+        &lt;display value=&quot;Platelets.small&quot;/&gt;
+      &lt;/concept&gt;
+    &lt;/include&gt;
+  &lt;/compose&gt;
+&lt;/ValueSet&gt;
+</pre>
+
+<p>
+Here is an example of a LOINC Answer list used in a Questionnaire
+question:
+</p>
+<pre>
+&lt;question&gt;
+  &lt;concept&gt;
+    &lt;system value=&quot;http://loinc.org&quot;/&gt;
+    &lt;code value=&quot;11125-2&quot;/&gt;
+    &lt;display value=&quot;Plat morph Bld&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;type value=&quot;choice&quot;/&gt;
+  &lt;options&gt;
+    &lt;reference value=&quot;http://loinc.org/vs/LL715-4&quot;/&gt;
+  &lt;/options&gt;
+&lt;/question&gt;
+</pre>
+
+
+
+<h4 class="self-link-parent"><span class="sectioncount">4.2.3.9.2<a name="4.2.3.9.2"> </a></span> Multi-Axial Hierarchy Entry <a href="loinc.html#4.2.3.9.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<p>
+A value set with an identifier of &quot;http://loinc.org/vs/[partcode]&quot; must 
+conform to this template, where [partcode] is a part code from the 
+multi-axial hierarchy:
+</p>
+<pre>
+&lt;ValueSet xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      [some html that identifies that this value set 
+      includes all LOINC codes subsumed by the identified 
+      Multi-Axial Hierarchy Part Code]
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;identifier value=&quot;http://loinc.org/vs/[partcode]&quot;/&gt;
+  &lt;version value=&quot;[optional - but strongly recommended - LOINC version]&quot;/&gt;
+  &lt;name value=&quot;LOINC Value Set from Multi-Axial Hierarchy code [partcode]&quot;/&gt;
+  &lt;description value=&quot;All LOINC codes for [partcode or name]&quot;/&gt;
+  &lt;status value=&quot;active&quot;/&gt;
+  &lt;date value=&quot;[optional date of LOINC release]&quot;/&gt;
+  &lt;compose&gt;
+    &lt;include&gt;
+      &lt;system value=&quot;http://loinc.org&quot;/&gt;
+      &lt;filter&gt;
+        &lt;property value=&quot;ancestor&quot;/&gt;
+        &lt;op value=&quot;=&quot;/&gt;
+        &lt;value value=&quot;[partcode]&quot;/&gt;
+      &lt;/filter&gt;
+    &lt;/include&gt;
+  &lt;/compose&gt;
+&lt;/ValueSet&gt;
+</pre>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Floinc.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Floinc.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "1832473e-2fe0-452d-abe9-3cdb9879522f"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Clinical Laboratory @ Acme Hospital. ph: +1 555 234 1234, email: \n        <a href=\"mailto:contact@labs.acme.org\">contact@labs.acme.org</a>\n      </p>\n    \n    </div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.acme.org.au/units" ];
+     fhir:Identifier.value [ fhir:value "ClinLab" ]
+  ];
+  fhir:Organization.name [ fhir:value "Clinical Lab"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "+1 555 234 1234" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "contact@labs.acme.org" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

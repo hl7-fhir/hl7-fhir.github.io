@@ -1,0 +1,211 @@
+{
+  "@context": "http://build.fhir.org/MedicationStatement.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationStatement/example002",
+  "Resource.id": {
+    "id.value": "example002"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example002</p><p><b>contained</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: id: med0309; Tylenol PM <span>(Details : {http://hl7.org/fhir/sid/ndc code '50580-506-02' = '50580-506-02', given as 'Tylenol PM'})</span>; isBrand</p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>effective</b>: Jan 23, 2015</p><p><b>informationSource</b>: <a>Donald Duck</a></p><p><b>dateAsserted</b>: Feb 22, 2015</p><p><b>notTaken</b>: Y</p><p><b>reasonNotTaken</b>: Liver enzymes abnormal <span>(Details : {SNOMED CT code '166643006' = 'Liver enzymes abnormal (finding)', given as 'Liver enzymes abnormal'})</span></p><p><b>note</b>: Patient can not take acetaminophen as per Dr instructions</p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0309"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/sid/ndc"
+            },
+            "Coding.code": {
+              "code.value": "50580-506-02"
+            },
+            "Coding.display": {
+              "string.value": "Tylenol PM"
+            }
+          }
+        ]
+      },
+      "Medication.isBrand": {
+        "boolean.value": true
+      },
+      "Medication.product": {
+        "Medication.product.form": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "385057009"
+              },
+              "Coding.display": {
+                "string.value": "Film-coated tablet (qualifier value)"
+              }
+            }
+          ],
+          "Resource.concept": "http://snomed.info/sct#385057009"
+        },
+        "Medication.product.ingredient": [
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "Coding.code": {
+                    "code.value": "315266"
+                  },
+                  "Coding.display": {
+                    "string.value": "Acetaminophen 500 MG"
+                  }
+                }
+              ]
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 500
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mg"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 1
+                },
+                "Quantity.system": {
+                  "uri.value": "http://hl7.org/fhir/v3/orderableDrugForm"
+                },
+                "Quantity.code": {
+                  "code.value": "Tab"
+                }
+              }
+            }
+          },
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "Coding.code": {
+                    "code.value": "901813"
+                  },
+                  "Coding.display": {
+                    "string.value": "Diphenhydramine Hydrochloride 25 mg"
+                  }
+                }
+              ]
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 25
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mg"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 1
+                },
+                "Quantity.system": {
+                  "uri.value": "http://hl7.org/fhir/v3/orderableDrugForm"
+                },
+                "Quantity.code": {
+                  "code.value": "Tab"
+                }
+              }
+            }
+          }
+        ],
+        "Medication.product.batch": [
+          {
+            "Medication.product.batch.lotNumber": {
+              "string.value": "9494788"
+            },
+            "Medication.product.batch.expirationDate": {
+              "dateTime.value": "2017-05-22"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationStatement.status": {
+    "code.value": "active"
+  },
+  "MedicationStatement.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0309"
+    }
+  },
+  "MedicationStatement.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationStatement.effectiveDateTime": {
+    "dateTime.value": "2015-01-23"
+  },
+  "MedicationStatement.informationSource": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationStatement.dateAsserted": {
+    "dateTime.value": "2015-02-22"
+  },
+  "MedicationStatement.notTaken": {
+    "code.value": "Y"
+  },
+  "MedicationStatement.reasonNotTaken": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "166643006"
+          },
+          "Coding.display": {
+            "string.value": "Liver enzymes abnormal"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationStatement.note": [
+    {
+      "Annotation.text": {
+        "string.value": "Patient can not take acetaminophen as per Dr instructions"
+      }
+    }
+  ]
+}

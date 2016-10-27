@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "referencerange-meaning",
+  "meta": {
+    "lastUpdated": "2016-10-27T16:23:35.748+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Observation Reference Range Meaning Codes</h2><div><p>This value set defines a set of codes that can be used to indicate the meaning/use of a reference range.</p>\n</div><p><b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</p><p>This value set includes codes from the following code systems:</p><ul><li/><li>Import all the codes that are contained in <a href=\"v3/Race/vs.html\">http://hl7.org/fhir/ValueSet/v3-Race</a></li><li>Include these codes as defined in <a href=\"codesystem-snomedct.html\">http://snomed.info/sct</a><table class=\"none\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>248153007</td><td>Male (finding)</td><td/></tr><tr><td>248152002</td><td>Female (finding)</td><td/></tr><tr><td>77386006</td><td>Patient currently pregnant (finding)</td><td/></tr></table></li><li>Include all codes defined in <a href=\"codesystem-referencerange-meaning.html\">http://hl7.org/fhir/referencerange-meaning</a></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.2.217"
+    }
+  ],
+  "version": "1.7.0",
+  "name": "Observation Reference Range Meaning Codes",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "FHIR Project team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "date": "2016-10-27T16:23:35+00:00",
+  "description": "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/v3-Race"
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "248153007"
+          },
+          {
+            "code": "248152002"
+          },
+          {
+            "code": "77386006"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/referencerange-meaning"
+      }
+    ]
+  }
+}

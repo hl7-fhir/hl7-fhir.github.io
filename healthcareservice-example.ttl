@@ -1,0 +1,185 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/HealthcareService/example> a fhir:HealthcareService;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			25 Dec 2013 9:15am - 9:30am: <b>Busy</b> Physiotherapy\n		</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Location;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "DenBurg" ];
+     fhir:Location.description [ fhir:value "Greater Denburg area" ];
+     fhir:Location.mode [ fhir:value "instance" ];
+     fhir:Location.physicalType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "area" ];
+         fhir:Coding.display [ fhir:value "Area" ]
+       ]
+     ]
+  ];
+  fhir:HealthcareService.active [ fhir:value "true"^^xsd:boolean];
+  fhir:HealthcareService.serviceType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:394913002;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394913002" ];
+       fhir:Coding.display [ fhir:value "Psychotherapy" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:394587001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394587001" ];
+       fhir:Coding.display [ fhir:value "Psychiatry" ]
+     ]
+  ];
+  fhir:HealthcareService.specialty [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:47505003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "47505003" ];
+       fhir:Coding.display [ fhir:value "Posttraumatic stress disorder" ]
+     ]
+  ];
+  fhir:HealthcareService.location [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Location/1>;
+     fhir:Reference.reference [ fhir:value "Location/1" ]
+  ];
+  fhir:HealthcareService.serviceName [ fhir:value "Consulting psychologists and/or psychology services"];
+  fhir:HealthcareService.comment [ fhir:value "Providing Specialist psychology services to the greater Den Burg area, many years of experience dealing with PTSD issues"];
+  fhir:HealthcareService.extraDetails [ fhir:value "Several assessments are required for these specialist services, and the waiting times can be greater than 3 months at times. Existing patients are prioritized when requesting appointments on the schedule."];
+  fhir:HealthcareService.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(555) silent" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "directaddress@example.com" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:HealthcareService.coverageArea [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#DenBurg" ];
+     fhir:Reference.display [ fhir:value "Greater Denburg area" ]
+  ];
+  fhir:HealthcareService.eligibility [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.display [ fhir:value "DVA Required" ]
+     ]
+  ];
+  fhir:HealthcareService.eligibilityNote [ fhir:value "Evidence of application for DVA status may be sufficient for commencing assessment"];
+  fhir:HealthcareService.programName [
+     fhir:value "PTSD outreach";
+     fhir:index 0
+  ];
+  fhir:HealthcareService.characteristic [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.display [ fhir:value "Wheelchair access" ]
+     ]
+  ];
+  fhir:HealthcareService.referralMethod [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "phone" ];
+       fhir:Coding.display [ fhir:value "Phone" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "fax" ];
+       fhir:Coding.display [ fhir:value "Fax" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "elec" ];
+       fhir:Coding.display [ fhir:value "Secure Messaging" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "semail" ];
+       fhir:Coding.display [ fhir:value "Secure Email" ]
+     ]
+  ];
+  fhir:HealthcareService.publicKey [ fhir:value "*** Base64 public key goes here to be used for secure messaging ***"];
+  fhir:HealthcareService.appointmentRequired [ fhir:value "false"^^xsd:boolean];
+  fhir:HealthcareService.availableTime [
+     fhir:index 0;
+     fhir:HealthcareService.availableTime.daysOfWeek [
+       fhir:value "mon";
+       fhir:index 0
+     ], [
+       fhir:value "tue";
+       fhir:index 1
+     ], [
+       fhir:value "wed";
+       fhir:index 2
+     ], [
+       fhir:value "thu";
+       fhir:index 3
+     ], [
+       fhir:value "fri";
+       fhir:index 4
+     ];
+     fhir:HealthcareService.availableTime.availableStartTime [ fhir:value "08:30:00"^^xsd:time ];
+     fhir:HealthcareService.availableTime.availableEndTime [ fhir:value "05:30:00"^^xsd:time ]
+  ], [
+     fhir:index 1;
+     fhir:HealthcareService.availableTime.daysOfWeek [
+       fhir:value "sat";
+       fhir:index 0
+     ], [
+       fhir:value "fri";
+       fhir:index 1
+     ];
+     fhir:HealthcareService.availableTime.availableStartTime [ fhir:value "09:30:00"^^xsd:time ];
+     fhir:HealthcareService.availableTime.availableEndTime [ fhir:value "04:30:00"^^xsd:time ]
+  ];
+  fhir:HealthcareService.notAvailable [
+     fhir:index 0;
+     fhir:HealthcareService.notAvailable.description [ fhir:value "Christmas/Boxing Day" ];
+     fhir:HealthcareService.notAvailable.during [
+       fhir:Period.start [ fhir:value "2015-12-25"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2015-12-26"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:HealthcareService.notAvailable.description [ fhir:value "New Years Day" ];
+     fhir:HealthcareService.notAvailable.during [
+       fhir:Period.start [ fhir:value "2016-01-01"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2016-01-01"^^xsd:date ]
+     ]
+  ];
+  fhir:HealthcareService.availabilityExceptions [ fhir:value "Reduced capacity is available during the Christmas period"] .
+
+<http://hl7.org/fhir/Location/1> a fhir:Location .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,946 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Profiling - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/profiling.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>
+        <li><b>Profiling FHIR</b></li>          <!-- profiling.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Profiling FHIR</a></li><li><a href="profiling-examples.html">Examples</a></li></ul>
+
+
+<h2 class="self-link-parent"><span class="sectioncount">5.1.0<a name="5.1.0"> </a></span> Profiling FHIR <a href="profiling.html#5.1.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+The base FHIR specification (this specification) describes a set of base resources, frameworks
+and APIs that are used in many different contexts in healthcare. However there is wide variability
+between jurisdictions and across the healthcare ecosystem around
+practices, requirements, regulations, education and what actions are feasible
+and/or beneficial.
+</p>
+<p>
+For this reason, the FHIR specification is a &quot;platform specification&quot; - it creates
+a common platform or foundation on which a variety of different solutions are implemented.
+As a consequence, this specification usually requires further adaptation to particular
+contexts of use. Typically, these adaptations specify:
+</p>
+<ul>
+ <li>Rules about which resource elements are or are not used, and what additional elements are added that are not part of the base specification</li>
+ <li>Rules about which API features are used, and how</li>
+ <li>Rules about which terminologies are used in particular elements</li>
+ <li>Descriptions of how the Resource elements and API features map to local requirements and/or implementations</li>
+</ul>
+<p>
+Note that because of the nature of the healthcare ecosystem, there may be multiple
+overlapping sets of adaptations - by healthcare domain, by country, by institution, and/or by vendor/implementation.
+</p>
+<a name="glossary"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.1</span> Glossary <a href="profiling.html#glossary" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+FHIR defines a cascade of artifacts for this purpose:
+</p>
+<table class="grid">
+ <tr>
+  <td><b>Artifact</b></td>
+  <td><b>Description</b></td>
+  <td><b><a href="http://hl7.org/fhir/daf">DAF <img src="external.png" style="text-align: baseline"/></a> example</b></td>
+ </tr>
+ <tr>
+  <td>Implementation Guide (IG)</td>
+  <td>A coherent and bounded set of adaptations that are published as a single unit. Validation occurs within the context of the Implementation Guide</td>
+  <td><a href="http://hl7.org/fhir/daf">DAF IG <img src="external.png" style="text-align: baseline"/></a></td>
+ </tr>
+ <tr>
+  <td>Package</td>
+  <td>A group of related adaptations that are published as a group within an Implementation Guide</td>
+  <td><a href="http://hl7.org/fhir/daf/daf-medicationusage.html">DAF Medication Usage <img src="external.png" style="text-align: baseline"/></a></td>
+ </tr>
+ <tr>
+  <td>Conformance Resource</td>
+  <td>A single resource in a package that makes rules about how an implementation works. These are described below</td>
+   <td><a href="http://hl7.org/fhir/daf/medicationorder-daf.html">DAF Prescription <img src="external.png" style="text-align: baseline"/></a></td>
+ </tr>
+</table>
+<p>
+The term &quot;profile&quot; is a general one that is used about either a &quot;package&quot; or an &quot;item&quot;. 
+&quot;Profiling&quot; is a general term that describes the process of creating an implementation guide,
+or any of the conformance resources found in one. 
+</p>
+
+<a name="conf-res"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.2</span> Conformance Resources <a href="profiling.html#conf-res" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Typically, Implementation Guides both restrict and extend APIs, resources and terminologies. FHIR provides a set of resources that
+can be used to represent and share the decisions that have been made, and allows implementers to build useful services from them. These
+resources are known as the conformance resources. These conformance resources allow implementers to:
+</p>
+<ul>
+ <li>Indicate that <a href="http.html">some API calls</a> are not used for a particular situation, and provide additional details about how API calls are used (<a href="capabilitystatement.html">Capability Statement</a>)</li>
+ <li>Add additional <a href="operations.html">operations</a> or <a href="search.html">search parameters</a> not in the base specification
+   (using the <a href="operationdefinition.html">OperationDefinition</a> resource or the <a href="searchparameter.html">SearchParameter</a> Resource</li>
+ <li>Define how a particular structure (Resource, Extension or Data Type) is used (<a href="structuredefinition.html">StructureDefinition</a> Resource):
+    <ul>
+      <li>Describe how existing elements in resources are used</li>
+      <li>Identify existing elements that are not used</li>
+      <li>Define extensions that can be used in resources or data types</li>
+    </ul>
+ </li>
+ <li>Mix custom and standard terminologies and choose which codes from these to use for a particular coded element(<a href="valueset.html">Value Set</a> and StructureDefinition Resources)</li>
+ <li>Map between local and standard terminologies or content models (<a href="conceptmap.html">Concept Map</a> Resource)</li>
+ <li>Register system namespaces for identifiers and terminologies (<a href="namingsystem.html">NamingSystem</a> Resource)</li>
+ <li>Describe and register in a Data Dictionary specific Data Elements that are used across systems (<a href="dataelement.html">DataElement</a> Resource)</li>
+</ul>
+<p>
+These resources need to be used as discussed below, and also
+following the basic concepts for extension that are described in <a href="extensibility.html">&quot;Extensibility&quot;</a>.
+For implementer convenience, the specification itself publishes its base definitions using these same resources.
+</p>
+
+<a name="profile-uses"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.3</span> Two uses of Profiles <a href="profiling.html#profile-uses" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The <a href="capabilitystatement.html">CapabilityStatement</a> resource describes two different uses for profiles on resources:
+Resource Profiles and System Profiles. Resource Profiles are specified using the <i>CapabilityStatement.rest.resource.profile</i> element 
+and System Profiles are specified using the <i>CapabilityStatement.profile</i> element. 
+</p>
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.3.1<a name="5.1.0.3.1"> </a></span> CapabilityStatement.rest.resource.profile <a href="profiling.html#5.1.0.3.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+These profiles describe the general features that are supported by the system for each kind of 
+resource. Typically, this is the superset of all the different use-cases implemented by the system. 
+This is a resource-level perspective of a system's functionality. 
+</p>
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.3.2<a name="5.1.0.3.2"> </a></span> CapabilityStatement.profile <a href="profiling.html#5.1.0.3.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+These profiles describe the information handled/produced by the system on a per use case basis.
+Some examples of the uses for these kind of profiles:
+</p>
+<ul>
+ <li>A Laboratory service producing a set of different reports - general chemistry, blood count, etc. Typical labs would support several hundred different reports</li>
+ <li>A care manager which handles a set of different types of care plans and associated clinical resources</li>
+ <li>A medications formulary that handles several different levels of sophistication in its medication representations</li>
+</ul> 
+<p>
+Typically, these profiles are a series of variations on the same set of resources - different use cases leading to handling 
+the resources that represent them differently. These usecases described above all pertain to system that produce and publish
+data, but the same concept applies to systems that consume data. For instance:
+</p>
+<ul>
+ <li>An expert service that provides analysis on several different sets of data conforming to a particular pattern - tests x,y and z with particular codes and units</li>
+</ul>
+<p>
+For producer and a consumer systems to exchange data successfully based on 
+one of these system supported profiles, it's not enough to know that the
+systems happen to have system profiles that overlap for the use case 
+of interest; the consumer must be able to filter the total set of resources
+made available by the producer system and deal only with the ones relevant
+to the use case. 
+</p>
+<p>
+As an example consider a laboratory system generating thousands of reports 
+a day. 1% of those reports are a particular endocrine report that a 
+decision support system knows how to process. Both systems declare that 
+they support the particular endocrine report profile, but how does the expert
+system actually find the endocrine reports that it knows how to process? 
+</p>
+<p>
+One possible option is for the expert system to receive every single 
+report coming from the lab system, check whether it conforms to the 
+profile or not, and then decide whether to process it. Checking whether
+a resource conforms to a particular profile or not is a straight 
+forward operation (one option is to use the <a href="downloads.html">provided tools for this</a>),
+but this is very inefficient way - the expert system has to receive 
+and process 100 times many resources as it uses. To help a consumer 
+find the correct set of reports for a use-case, a producer of  
+resources also SHALL, for any profile declared in Conformance.profile:
+</p>
+<ol>
+ <li><a href="resource.html#meta">Mark resources</a> with profile assertions documenting the profile(s) they conform to (this enables indexing by the profile)</li>
+ <li>(if a server) support searching by the <a href="search.html#profile">_profile parameter</a> for the declared profiles</li>
+</ol>
+<p>
+Beyond these requirements, a producer of resources SHOULD ensure that any resource instance that would reasonably be expected
+to conform to the declared profiles SHOULD be published in this form. 
+</p>
+
+<blockquote class="dstu-note">
+<a name="dstu"> </a>
+<p>
+<b>DSTU Note:</b> there are many uninvestigated issues associated with this use of profiles. 
+HL7 is actively seeking feedback from users who experiment in this area, and users
+should be prepared for changes to features and obligations in this area in the future.
+</p>
+<p>
+Feedback <a href="http://wiki.hl7.org/index.php?title=FHIR_Specification_Feedback_(DSTU_2)">here <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+</blockquote>
+
+<a name="api"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.4</span> Extending and Restricting the API <a href="profiling.html#api" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A CapabilityStatement resource lists the REST interactions (read, update, search, etc.) that a server provides or that a client uses, along with 
+some supporting information for each. It can also be used to define a set of desired behavior (e.g. as part of a specification or
+a Request for Proposal).  The only interaction that servers are required to support is the <a href="http.html#capabilities">capabilities</a>
+interaction itself - to retrieve the server's CapabilityStatement. Beyond that, servers and clients support and use whichever
+API calls are relevant to their use case.
+</p>
+<p>
+In addition to the operations that FHIR provides, servers may provide additional 
+operations that are not part of the FHIR specification. Implementers can safely do this 
+by appending a custom operation name prefixed with '$' to an existing FHIR URL, as the <a href="operations.html">Operations
+framework</a> does. The Conformance resource supports defining what OperationDefinitions make use of particular
+names on an end-point.  If services are defined that are not declared using OperationDefinition, it may be
+appropriate to use longer names, reducing the chance of collision (and confusion) with services declared by
+other interfaces.  The base specification will never define operation names with a &quot;.&quot; in them, so 
+implementers are recommended to use some appropriate prefix for their names (such as &quot;ihe.someService&quot;)
+to reduce the likelihood of name conflicts. 
+</p>
+<p>
+Implementations are encouraged, but not required, to define operations using the standard
+FHIR operations framework - that is, to declare the operations using the OperationDefinition
+resource, but some operations may involve formats that can't be described that way. 
+</p>
+<p>
+Implementations are also able to extend the FHIR API using additional content types. 
+For instance, it might be useful to <a href="http.html#read">read</a> or <a href="http.html#update">update</a> 
+the appointment resources using a vCard based format. vCard defines its own mime type, and these additional mime types can 
+safely be used in addition to those defined in this specification.
+</p>
+
+<a name="resources"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.5</span> Extending and Restricting Resources <a href="profiling.html#resources" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Extending and restricting resources (collectively known as 'profiling a resource') is done with a 
+&quot;StructureDefinition&quot; resource, which is a statement of rules about
+how the elements in a resource are used, and where extensions are used in a resource.
+</p>
+
+<a name="cardinality"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.6</span> Changing Cardinality <a href="profiling.html#cardinality" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+One key function of profiles is to change the cardinality of an element. A profile
+can restrict the cardinality of an element within the limits of the base structure
+it is constraining. This table summarizes what types of restrictions are allowed:
+</p>
+<table class="grid">
+ <tr><td>derived (across)<br/>base (down)</td>       <td>0..0<br/>(Not used)</td>      <td>0..1<br/>(optional)</td>              <td>0..n<br/>(optional, many)</td>      <td>1..1<br/>(required)</td>     <td>1..n<br/>(at least 1)</td>    </tr>
+ <tr><td>0..1</td>   <td>yes</td>                     <td>yes</td>                             <td>no</td>                            <td>yes</td>                    <td>no</td>                      </tr>
+ <tr><td>0..*</td>   <td>yes</td>                     <td>yes</td>                             <td>yes</td>                           <td>yes</td>                    <td>yes</td>                     </tr>
+ <tr><td>1..1</td>   <td>no</td>                      <td>no</td>                              <td>no</td>                            <td>yes</td>                    <td>no</td>                      </tr>
+ <tr><td>1..*</td>   <td>no</td>                      <td>no</td>                              <td>no</td>                            <td>yes</td>                    <td>yes</td>                     </tr>
+</table>
+<p>
+When a profile is constraining another profile where there are more cardinality options (e.g. low is not just 0 or 1, and high is not just 1 or *), the same 
+principles still apply: the constraining profile can only allow what the base profile allows.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.7<a name="5.1.0.7"> </a></span> Limitations of Use <a href="profiling.html#5.1.0.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+What Structure Definitions can do when they are constraining existing resources and datatypes is limited in some respects:
+</p>
+<ul>
+ <li>Profiles cannot break the rules established in the base specification (e.g. cardinality as described above)</li>
+ <li>Profiles cannot specify default values or meanings for elements</li>
+ <li>Profiles cannot give more specific names to elements</li>
+ <li>It must be safe to process a resource without knowing the profile</li>
+</ul>
+<p>
+The consequence of this is that if a profile mandates extended behavior that cannot
+be ignored, it must also mandate the use of a <a href="extensibility.html#modifiers">modifier extension</a>. 
+Another way of saying this is that knowledge must be explicit in
+the instance, not implicit in the profile. 
+</p>
+<p>
+As an example, if a profile wished to describe that a <a href="procedure.html">Procedure</a>
+resource was being negated (e.g. asserting that it never happened), it could not simply say 
+in the profile itself that this is what the resource means; instead, the profile must 
+say that the resource must have an extension that represents this knowledge. 
+</p>
+<p>
+There is a facility to mark resources to indicate that they can only be safely understood by 
+a process that is aware of and understands a set of published rules. For more information,
+see <a href="resource.html#implicitRules">Restricted Understanding of Resources</a>.
+</p>
+
+
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.8<a name="5.1.0.8"> </a></span> Using Structure Definitions <a href="profiling.html#5.1.0.8" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A &quot;constraint&quot; Structure Definition specifies a set of restrictions on the content of a FHIR resource or data type,
+or an additional set of constraints on an existing profile.
+A given structure definition is identified by its canonical URL, which SHOULD be the URL at which it
+is published. The following kinds of statements can be made about how an element is used, using a 
+series of <a href="elementdefinition.html">Element Definitions</a>:
+</p>
+<ul>
+ <li>Restricting the cardinality of the element; e.g. the base might allow 0..*, and a particular application might support 1..2</li>
+ <li>Ruling out use of an element by setting its maximum cardinality to 0</li>
+ <li>Restricting the contents of an element to a single fixed value</li>
+ <li>Making additional constraints on the content of nested elements within the resource (expressed as XPath statements)</li>
+ <li>Restricting the types for an element that allows multiple types</li>
+ <li>Requiring a typed element or the target of a resource reference to conform to another structure profile (declared in the same profile, or elsewhere)</li>
+ <li>Specifying a binding to a different terminology value set (see below)</li>
+ <li>Providing refined definitions, comments/usage notes and examples for the elements defined in a Resource to reflect the usage of the element within the context of the Profile</li>
+ <li>Providing more specific or additional mappings (e.g. to <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 v2 <img src="external.png" style="text-align: baseline"/></a> or <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186">HL7 v3 <img src="external.png" style="text-align: baseline"/></a>) for the resource when used in a particular context</li>
+ <li>Declaring that one or more elements in the structure must be 'supported' (see below)</li>
+</ul>
+<p>
+Any changed definitions SHALL be restrictions that are consistent with the
+rules defined in the resource in the FHIR Specification from which the profile is derived. Note that some of 
+these restrictions can be enforced by tooling (and are by the FHIR tooling), but 
+others (e.g. alignment of changes to descriptive text) cannot be automatically enforced.
+</p>
+<p>
+Note that structure definitions cannot 'remove' mappings and constraints that are defined in the base structure, 
+but for purposes of clarity, they can refrain from repeating them.
+</p>
+<p>
+A structure definition contains a linear list of <a href="elementdefinition.html">element definitions</a>. The inherent
+nested structure of the elements is derived from the <i>path</i> value of each element.
+For instance, a sequence of the element paths like this:
+</p>
+<ul>
+ <li>Root</li>
+ <li>Root.childA</li>
+ <li>Root.childA.grandchild1</li>
+ <li>Root.childB</li>
+</ul>
+<p>
+defines the following structure:
+</p>
+<pre class="xml">
+ &lt;Root&gt;
+   &lt;childA&gt;
+     &lt;grandChild1/&gt;
+   &lt;/childA&gt;
+   &lt;childB/&gt;
+ &lt;/Root&gt;
+</pre>
+<p>
+or its JSON equivalent. The structure is coherent - children are never
+implied, and the path statements are always in order. The element list is
+a linear list rather than being explicitly nested because element definitions
+are frequently re-used in multiple places within a single definition, and this re-use
+is easier with a flat structure.
+</p>
+
+<a name="snapshot"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.9</span> Differential vs Snapshot <a href="profiling.html#snapshot" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Structure Definitions may contain a differential statement, a snapshot
+statement or both.
+</p>
+<p>Differential statements describe only the differences that they make
+relative to another structure definition (which is most often the base FHIR resource or data type).
+For example, a profile may make a single element mandatory (cardinality 1..1).
+In the case of a differential structure, it will contain a single element
+with the path of the element being made mandatory, and a cardinality statement.
+Nothing else is stated - all the rest of the structural information is implied (note:
+this means that a differential profile can be sparse and only
+mention the elements that are changed, without having to list the
+full structure. This rule includes the root element - it is not needed in 
+a sparse differential).
+</p>
+<p>
+Note that a differential can choose not to constrain elements. 
+Doing so means that the profile will be more flexible in terms of compatibility
+with other profiles, but will require more work to support from implementing
+systems. Alternatively, a profile can constrain all optional elements to be not 
+present (max cardinality = 0) - this closes the content, which makes 
+implementation easier, but also reduces its usefulness. 
+</p>
+<p>
+In order to properly understand a differential structure, it must be
+applied to the structure definition on which it is based. In order to save
+tools from needing to support this operation (which is computationally intensive - and
+impossible if the base structure is not available), a StructureDefinition
+can also carry a &quot;snapshot&quot; - a fully calculated form of the
+structure that is not dependent on any other structure. The FHIR
+project provides tools for the common platforms that can populate
+a snapshot from a differential (note that the tools generate complete 
+verbose snapshots; they do not support suppressing mappings or constraints).
+</p>
+<p>
+StructureDefinitions can contain both a differential and a snapshot view.
+In fact, this is the most useful form - the differential
+form serves the authoring process, while the snapshot serves
+the implementation tooling. StructureDefinition resources used in operational
+systems should always have the snapshot view populated.
+</p>
+
+<a name="slicing"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.10</span> Slicing <a href="profiling.html#slicing" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+One common feature of constraining Structure Definitions is to take an element that may occur more than once (e.g. in a list), 
+and split the list into a series of sublists, each with different restrictions on the elements in the sublist with associated
+additional meaning. In FHIR, this operation is known as &quot;Slicing&quot; a list. It is common to
+&quot;slice&quot; a list into sub-lists each containing just one element, effectively putting constraints on each element in the list.
+This technique can also be used on elements that do not repeat, but that have a choice of data types.
+</p>
+<p>
+Here is an example to illustrate the process:
+</p>
+<img src="slicing.png" alt="Slicing diagram" width="461" height="353"/>
+<p>
+In this example, the base structure definition for the resource <a href="observation.html">Observation</a> defines 
+the &quot;component&quot; element which contains a nested code and a value for observations that 
+have multiple values. A classic example of this kind of observation is a blood pressure 
+measurement - it contains 2 values, one for systolic, and one for diastolic (<a href="observation-example-bloodpressure.html">example</a>). 
+</p>
+<p>
+This diagram shows the conceptual process of 'slicing' the component list into 
+systolic and diastolic slices (note: to avoid clutter, the &quot;name&quot; attribute of Observation 
+is shown as just a code not a full CodeableConcept).
+</p>
+<p>
+The structure definition for Blood Pressure splits the component list into
+two sublists of one element each: a systolic element, and a diastolic element. Each of these
+elements has a fixed value for the code element (a fixed LOINC code for
+the name), and both have a value of type Quantity. This process
+is known as &quot;slicing&quot; and the Systolic and Diastolic elements are called &quot;slices&quot;.
+</p>
+<p>
+Note that when the resource is exchanged, the wire format that is exchanged is not
+altered by the constraining definition. This means that the item profile names defined in the
+structure definition (&quot;systolic&quot;, etc. in this example) are never exchanged. A resource
+instance looks like this:
+</p>
+<pre>
+ &lt;Observation&gt;
+   ...
+   &lt;component&gt;
+     &lt;code {LOINC=&quot;8480-6&quot;}/&gt;
+     &lt;value ...&gt; 
+   &lt;/component&gt;
+   &lt;component&gt;
+     &lt;code {LOINC=&quot;8462-4&quot;}/&gt;
+     &lt;value ...&gt;
+   &lt;/component&gt;
+ &lt;/Observation&gt;
+</pre>
+<p>
+In order to determine that the first related item corresponds to &quot;Systolic&quot; in
+the structure definition, so that it can determine to which additional constraints for a sub-list the item conforms,
+the system checks the values of the elements. In this case, the &quot;code&quot; element
+in the target resource can be used to determine which slice that target refers to. 
+This element is called the &quot;discriminator&quot;.
+</p>
+
+<a name="discriminator"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.11</span> Discriminator <a href="profiling.html#discriminator" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In the general case, systems processing resources using a structure definition
+that slices a list can determine the slice corresponding to an item in
+the list by checking whether the item's content meets the rules specified
+for the slice.
+This would require a processor to be able to check all the rules
+applied in the slice and to do so speculatively in a depth-first
+fashion. Both of these requirements are inappropriately difficult for an operational system,
+and particularly for generated code (e.g. software that is automatically produced based on 
+the StructureDefinition). Thus, to provide a better way to distinguish 
+slices, a sliced element can designate a field or set of fields that act as a &quot;discriminator&quot; - they
+are used to tell the slices apart. 
+</p>
+<p>
+When a discriminator is provided, the composite of the values of 
+the elements designated in the discriminator is unique and distinct
+for each possible slice and applications can easily determine
+which slice an item in a list is. The intention is that 
+this can be done in generated code, e.g. using a switch/case 
+statement. When slicing elements with a choice of types, the 
+discriminator SHALL be &quot;@type&quot;.
+</p>
+<p>
+When a constraining structure designates one or more discriminators, it SHALL
+fix the value of the element for each discriminator for each
+slice (using <a href="elementdefinition-definitions.html#ElementDefinition.fixed_x_">ElementDefinition.fixed[x]</a>), 
+or if the element has a terminology binding, it SHALL be associated with a required binding with a 
+<a href="valueset.html#required">Value Set</a> that enumerates the list of possible codes in the value set.
+The structure definition SHALL ensure that there is no overlap between the
+set of values and/or codes in the value sets between slices. Note: At present, 
+only a fixed value or a required value set should be used for slicing; using 
+<a href="elementdefinition-definitions.html#ElementDefinition.pattern_x_">ElementDefinition.pattern[x]</a>
+is not recommended as a basis for slicing while issues related to this are investigated during the DSTU period.
+
+
+</p>
+<p>
+It is the composite (combined) values of the discriminators 
+that are unique, not each discriminator alone. For example,
+a slice on a list of items that are references to other 
+resources could designate fields from different resources, 
+where each resource only has one of the designated elements,
+as long as they are distinct across slices.
+</p>
+<p>
+A structure definition is not required to designate any discriminator at all
+for a slice, but those that don't identify discriminators are describing
+content that is very difficult to process, and so this is
+discouraged.
+</p>
+<p>
+Within a structure definition, a slice is defined using multiple <i>element</i>
+entries that share a <i>path</i> but have distinct <i>name</i>s.
+These entries together form a &quot;slice group&quot; that is:
+</p>
+<ol>
+       
+	<li><b>Initiated by a &quot;slicing entry&quot;</b> That is, the first
+		<i>element</i> in a slice group must contain a
+		<i>slicing</i> property that defines the
+		<i>discriminator</i> for all members of the group.  It also contains the unconstrained definition of the element that is sliced, potentially including children of the unconstrained element, if there are any</li>
+
+	<li><b>Mutually exclusive</b>. This means that each
+		<i>element</i> in a slice group SHALL describe a
+		distinct set of  values for the group's
+		<i>discriminators</i>.  Because of this constraint, an 
+	        element in a resource <b>instance</b> will never match more
+		than one <i>element</i> in a given slice group. If no discriminators are named, 
+    it SHOULD still be possible to differentiate the slices based 
+    on their properties, though it may be substantially harder to 
+    do so.</li>
+
+	<li><b>Serialized as a group</b>. The entries in a slice
+		group must be <b>adjacent</b> in a serialized structure definition,
+		<b>or</b>, if there are any intervening elements, those
+		elements must be &quot;compatible with&quot; the group. Concretely, this
+		means that any intervening elements must have a
+		<i>path</i> that starts with the slice groups's
+		<i>path</i>.  For example, an <i>element</i> with a
+		<i>path</i> of <i>Observation.name.extension</i>
+		would be compatible with (and thus, would not &quot;break up&quot;) a
+		slice group whose path was <i>Observation.name</i> </li>
+</ol>
+<p>
+The value of the discriminator element is a path name that identifies
+the descendant element using a dotted notation. For references, the path
+transitions smoothly across the reference and into the children of the 
+root element/object of the resource. For extensions, an extension can be
+qualified with the URL of the extensions being referred to.
+There are two special names: @type, and @profile. Here are some example discriminators:
+</p>
+<table class="grid">
+ <tr>  <td><b>Context</b></td> <td><b>Discriminator</b></td> <td><b>Interpretation</b></td> </tr>
+ <tr>  <td>List.entry</td> <td>item.reference.name</td> <td>Entries are differentiated by the name element on the target resource - probably an observation, which could be determined by other information in the profile</td> </tr>
+ <tr>  <td>List.entry</td> <td>item.reference.@type</td> <td>Entries are differentiated by the type of the target element that the reference points to</td> </tr>
+ <tr>  <td>List.entry</td> <td>item.reference.@profile</td> <td>Entries are differentiated by a profile tag on the target of the reference, as specified by a structure definition (todo: how to do that?)</td> </tr>
+ <tr>  <td>List.entry</td> <td>item.extension(&quot;http://acme.org/extensions/test&quot;).code</td> <td>Entries are differentiated by the value of the code element in the extension with the designated URL</td> </tr>
+ <tr>  <td>List.entry.extension</td> <td>url</td> <td>Extensions are differentiated by the value of their url property (usually how extensions are sliced)</td> </tr>
+ <tr>  <td>List.entry</td> <td>item.reference.@type, item.reference.code</td> <td>Extensions are differentiated by the combination of the type of the referenced resource, and, if it has one, the code element of that resource. This would be
+   appropriate for where a List might be composed of a Condition, and set of observations, each differentiated by its name - the condition has no name, so that is evaluated as a null in the discriminator set</td> </tr>
+ <tr>  <td>Observation.value[x]</td> <td>@type</td> <td>Different constraints (e.g. &quot;must support&quot;, usage notes, vocabulary bindings, etc.) are asserted for different supported types for the multi-typed element Observation.value[x]</td> </tr>
+</table>
+<p>
+Note that @type and @profile can also be used where a repeating element contains a resource directly (e.g. 
+<a href="domainresource-definitions.html#DomainResource.contained">DomainResource.contained</a>, <a href="bundle-definitions.html#Bundle.entry">Bundle.entry</a>, <a href="parameters-definitions.html#Parameters.parameter.resource">Parameters.parameter.resource</a>).
+</p>
+<p>
+The <a href="profiling-examples.html">examples of slicing and discriminators</a> show exactly how this and other typical uses of slicing are represented in profiles.
+</p>
+
+<a name="reslicing"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.12</span> Re-slicing <a href="profiling.html#reslicing" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+When creating a profile based on another profile, it's sometimes necessary to slice data that has already been sliced in the base
+profile.  This is called &quot;Re-slicing&quot;.  The rules for re-slicing are as follows:
+</p>
+
+<p>
+When you slice, you define a name for each new slice. The name has to be unique across the set of slices in the profile. So if profile A defines an element X with cardinality 0..*, and profile B is derived from profile A, then profile B can either:
+</p>
+<ol>
+  <li>make a constraint on X with no name - in which case the profile is aading constraints to all slices of X; or </li>
+  <li>make a constraint on X with a name - in which case the profile is describing a specific slice on X, and the constraints only apply to that slice; or </li>
+  <li>it can do both</li>
+</ol>
+<p>
+Then, profile C derives from profile B. Profile C can do the following:
+</p>
+<ol>
+  <li>make a constraint on X with no name - in which case the profile is constraining all appearances of X; or </li>
+  <li>make a constraint on X with a different name from that used in profile B - in which case the profile is describing a specific new slice on X, and the constraints only apply to that slice; or </li>
+  <li>make a constraint on X with the same name as that used in profile B - in which case the profile is making new constraints on the slice defined in profile B; or </li>
+  <li>some combination of the above options</li>
+</ol>
+<p>
+Note: it is possible for Profile C to make rules that are incompatible with profile B, in which case there is no set of instances that can be valid against profile C
+</p>
+<p>
+In addition to the above, there are times when Profile C will need to further slice a slice defined in B.  In this case, there's a need to reference both the name of the original
+slice from Profile B as well as to define a name for the slice defined within Profile C.  This is done by separating the names using &quot;/&quot;.  For example, if Profile B defines the slice &quot;example&quot;, and profile C defines the slice &quot;example/example1&quot;, then this is deemed to be &quot;example1&quot; slice of the example slice.  This process can continue indefinitely by separating each layer of slicing names with the &quot;/&quot; character.
+</p>
+
+<a name="extensions"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.13</span> Extension Definitions <a href="profiling.html#extensions" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+An extension definition defines the URL that identifies the extension
+and which is used to refer to the extension definition when it is used 
+in a resource.
+</p>
+<p>
+The extension definition also defines the context where the extension can be used (usually
+a particular path or a data type) and then defines the extension element using the same details used to 
+profile the structural elements that are part of resources. This means that a single extension 
+can be defined once and used on different Resource and/or datatypes, e.g. one would only have to 
+define an extension for &quot;hair color&quot; once, and then specify that it can be used on both Patient and Practitioner.
+</p>
+<p>
+For further discussion of defining and using extensions, along with some examples, 
+see <a href="extensibility.html">Extensibility</a>. 
+</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.13.1<a name="5.1.0.13.1"> </a></span> Using Extensions in Profiles <a href="profiling.html#5.1.0.13.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Once defined, an extension can be used in an instance of a resource 
+without any Profile declaring that it can, should or must be, but 
+Profiles can be used to describe how an extension is used.
+</p>
+<p>
+To actually prescribe the use of an extension in an instance, the extension list 
+on the resource needs to be sliced. This is shown in <a href="extensibility-examples.html#sliceextensions">the extensibility 
+examples</a></p>
+<p>
+Note that the minimum cardinality of an extension SHALL be a valid restriction
+on the minimum cardinality in the definition of the extension. if the minimum
+cardinality of the extension is 1 when it is defined, it can only be mandatory
+when it is added to a profile. This is not recommended - the minimum cardinality
+of an extension should usually be 0. 
+</p>
+
+
+<a name="binding"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.14</span> Binding Definitions <a href="profiling.html#binding" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Coded elements have bindings that link from the element to a definition of the 
+set of possible codes the element may contain. The binding identifies the 
+definition of the set of possible codes and controls how tightly the set of the possible codes is interpreted.
+</p>
+<p>
+The set of possible codes is either a formal reference to a <a href="valueset.html">ValueSet</a> 
+resource, which may be version specific, or a general reference to some web content that defines a set of 
+codes. The second is most appropriate where a set of values is defined by 
+some external standard (such as mime types). Alternatively, where the binding
+is incomplete (e.g. under development) just a text description of the 
+possible codes can be provided. 
+</p>
+<p> 
+Bindings have a property that defines how the strongly implementations are required to use the 
+set of codes. See <a href="terminologies.html#strength">Binding Strength</a>.
+</p>
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.15</span> Mixing Custom and Standard Terminologies <a href="profiling.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+<a href="codesystem.html">CodeSystem</a> resources can be used to carry definitions of local 
+codes (<a href="codesystem-example.html">Example</a>) and <a href="valueset.html">ValueSets</a> 
+can mix a combination of local codes and standard codes (e.g. LOINC, SNOMED), or just
+to choose a particular set of standard codes (examples: LOINC, SNOMED, RxNorm). 
+Profiles can bind to these value sets instead of the ones defined in the base
+specification, following these rules:
+</p>
+<table class="grid">
+ <tr> <td><b><a href="terminologies.html#binding">Binding Strength</a> in base specification</b></td> <td><b>Customization Rules in Profiles</b></td> </tr>
+ <tr> <td>required</td> <td>The value set can only contain codes contained in the value set specified by the FHIR specification</td> </tr>
+ <tr> <td>extensible</td>  <td>The value set can contain codes not found in the base value set. These additional codes SHOULD NOT have the same meaning as existing codes in the base value set</td> </tr>
+ <tr> <td>preferred</td>  <td>The value set can contain whatever is appropriate for local use</td> </tr> 
+ <tr> <td>example</td>  <td>The value set can contain whatever is appropriate for local use</td> </tr> 
+</table> 
+<p>
+Note that local codes are not as interoperable as standard published code systems (e.g. LOINC, SNOMED CT, so it is preferable to use standard code systems.
+</p>
+
+<a name="binding-strength"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.16</span> Changing Binding Strength in Profiles <a href="profiling.html#binding-strength" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+A profile
+can change the terminology binding of an element - both strength and value set - within the limits of the base structure
+it is constraining. This table summarises the changes that can be made to the binding strength:
+</p>
+<table class="grid">
+ <tr><td>derived (across)<br/>base (down)</td>  <td>required</td>      <td>extensible</td>              <td>preferred</td>      <td>example</td>       </tr>
+ <tr><td>required</td>               <td>yes</td>                      <td>no</td>                               <td>no</td>        <td>no</td>         </tr>
+ <tr><td>extensible</td>             <td>yes</td>                      <td>yes</td>                              <td>no</td>        <td>no</td>         </tr>
+ <tr><td>preferred</td>              <td>yes</td>                      <td>yes</td>                              <td>yes</td>       <td>no</td>         </tr>
+ <tr><td>example</td>                <td>yes</td>                      <td>yes</td>                              <td>yes</td>       <td>yes</td>            </tr>
+</table>
+<p>
+Note that a constraining profile may leave the binding strength the same and change the value set instead. Whatever the 
+constraining profile does, it cannot make codes valid that are invalid in the base structure/profile.
+</p>
+
+<a name="mustSupport"> </a>
+<a name="mustsupport"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.17</span> Must Support <a href="profiling.html#mustsupport" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+One property that can be declared on profiles that is not declared on the resource or data type definitions is &quot;Must Support&quot;.
+This is a boolean property.  If true, it means that systems claiming to conform to a given profile must &quot;support&quot; the element.
+This is distinct from cardinality.  It is possible to have an element with a minimum cardinality of &quot;0&quot;, but still expect systems
+to support the element.
+</p>
+<p>
+The meaning of &quot;support&quot; is not defined by the base FHIR specification, but can be set to 
+true in a profile. When a profile does this, it SHALL also make clear
+exactly what kind of &quot;support&quot; is required. Examples might include:
+</p>
+<ul>
+  <li>The system must be able to store and retrieve the element</li>
+  <li>The system must display the element to the user and/or allow the user to capture the element via the UI</li>
+  <li>The element must appear in an output report</li>
+  <li>The element must be taken into account when performing decision support, calculations or other processing</li>
+  <li>etc.</li>
+</ul>
+<p>
+The specific meaning of &quot;Must Support&quot; for the purposes of a particular profile SHALL be described in the <code>element.definition</code>, 
+the general <code>StructureDefinition.description</code> or in other documentation for the implementation guide the profile is part of.
+</p>
+<p>
+If creating a profile based on another profile, Must Support can be changed from false to true, but cannot be changed from true to false.
+Note that an element that has the property IsModifier is not necessarily a &quot;key&quot; element (e.g. one of 
+the important elements to make use of the resource), nor is it automatically mustSupport - however both 
+of these things are more likely to be true for IsModifier elements than for other elements.
+</p>
+
+<a name="search"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.18</span> Search Criteria <a href="profiling.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The final thing implementations can do is to define search criteria in addition to those defined in the specification itself.  
+Search criteria fall into one of four categories:
+</p>
+<ol>
+  <li>Enabling search on core elements that don't have standard search criteria defined (e.g. searching Observation by normal range)</li>
+  <li>Enabling search on elements that already have a standard search criteria defined, but with custom matching rules; e.g. a sounds-like search on Practitioner name</li>
+  <li>Enabling search on a particular extension</li>
+  <li>Enabling search that doesn't correspond to a single element but rather a combination of elements or computation on an element; e.g. searching for patients by age</li>
+</ol>
+<p>
+Additional Search Parameters can be defined using the <a href="searchparameter.html">SearchParameter</a> resource.
+</p>
+
+<a name="presentation"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.19</span> Presenting Profiles <a href="profiling.html#presentation" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+When this specification describes a profile,, the profile is presented in 5 different forms:
+</p>
+<ol>
+ <li>Text Summary</li>
+ <li>Differential Table</li>
+ <li>Snapshot Table</li>
+ <li>XML Template</li>
+ <li>JSON Template</li>
+</ol>
+
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.19.1<a name="5.1.0.19.1"> </a></span> Text Summary <a href="profiling.html#5.1.0.19.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>This presents a short summary of the profile - a combination of the author's summary, and some automatically generated summary content</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.19.2<a name="5.1.0.19.2"> </a></span> Differential Table <a href="profiling.html#5.1.0.19.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>This is a view of the differential statement (<a href="#snapshot">see above</a>). For context, additional information not in the differential is also show partially transparent</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.19.3<a name="5.1.0.19.3"> </a></span> Snapshot Table <a href="profiling.html#5.1.0.19.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>This is a view of the snapshot produced by the profile (<a href="#snapshot">see above</a>). The information is a comprehensive view of what the profile means</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.19.4<a name="5.1.0.19.4"> </a></span> XML Template <a href="profiling.html#5.1.0.19.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Not one yet</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">5.1.0.19.5<a name="5.1.0.19.5"> </a></span> JSON Template <a href="profiling.html#5.1.0.19.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Not one yet</p>
+
+<a name="mixing"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">5.1.0.20</span> Supporting Multiple Profiles <a href="profiling.html#mixing" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Applications may be required to support more than one profile at a time. 
+A typical example might be an EHR application that is required to support
+a general purpose data sharing profile (such as <a href="http://hl7.org/fhir/daf">DAF <img src="external.png" style="text-align: baseline"/></a>),
+and also must support specific profiles for decision support using the same 
+interface. 
+</p>
+<p>
+The impact of supporting two sets of profiles depends on whether resources
+are being created or consumed. When an application is creating content, it 
+has to create content that conforms to both sets of profiles - that is, the 
+intersection of the profiles. When an application is consuming information,
+then it must be able to consume content that conforms to either set of 
+profiles - that is, the union of the profiles. 
+</p>
+<p>
+Since applications generally consume and produce resources at the same time,
+conforming to more than one profile may not be possible, unless the profiles
+are designed to make statements at different levels - and the case above
+is one such case, where one profile is focused on data access, provenance, 
+and availability, the other profile is focused on clinical content.
+</p>
+<p>
+Accordingly, profiles can relate to each other in four different ways. 
+Each profile can be thought of in terms of the set of instances that conform to the profile:
+</p>
+<ol>
+ <li>non-overlapping: there no instances that conform to profiles A &amp; B (technically, the intersection of profiles A &amp; B is an empty set)</li>
+ <li>partly overlapping: some instances conform to both A &amp; B, but others only conform to A or B</li>
+ <li>one set contained in the other: all resources that conform to A conform to B, but only some of the ones that conform to B conform to A (or vice versa)</li>
+ <li>identical sets: all resources that conform to A also conform to B and any resources that don't conform to B, don't conform to A</li>
+</ol>
+<p>
+Profiles can be compared to determine their compatibility. 
+One such comparison can be found (no - todo: bring this into the build) 
+between <a href="http://hl7.org/fhir/daf">DAF <img src="external.png" style="text-align: baseline"/></a> and <a href="http://hl7.org/fhir/qicore">QICore <img src="external.png" style="text-align: baseline"/></a>. 
+Note that this comparison is generated by tooling under ongoing development, and is purely draft 
+content to demonstrate the idea of profile comparison.
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fprofiling.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fprofiling.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

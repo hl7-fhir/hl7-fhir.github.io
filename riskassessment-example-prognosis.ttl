@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/RiskAssessment/prognosis> a fhir:RiskAssessment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "prognosis"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Moderate risk of permanent weakness of the left arm, but otherwise no permanent disability</p>\n    </div>"
+  ];
+  fhir:RiskAssessment.status [ fhir:value "final"];
+  fhir:RiskAssessment.occurrenceDateTime [ fhir:value "2010-11-22"^^xsd:date];
+  fhir:RiskAssessment.condition [
+     fhir:link <http://hl7.org/fhir/Condition/stroke>;
+     fhir:Reference.reference [ fhir:value "Condition/stroke" ];
+     fhir:Reference.display [ fhir:value "Ischemic Stroke" ]
+  ];
+  fhir:RiskAssessment.prediction [
+     fhir:index 0;
+     fhir:RiskAssessment.prediction.outcome [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:249943000%3a363698007%3d72098002%2c260868000%3d6934004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "249943000:363698007=72098002,260868000=6934004" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "permanent weakness of the left arm" ]
+     ];
+     fhir:RiskAssessment.prediction.probabilityCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/risk-probability" ];
+         fhir:Coding.code [ fhir:value "moderate" ];
+         fhir:Coding.display [ fhir:value "moderate likelihood" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Condition/stroke> a fhir:Condition .
+
+# -------------------------------------------------------------------------------------
+

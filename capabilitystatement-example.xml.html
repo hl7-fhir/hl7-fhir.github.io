@@ -1,0 +1,396 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Capabilitystatement-example.xml - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/capabilitystatement-example.xml.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="capabilitystatement.html">CapabilityStatement</a></li>        <li><b>Example Instance</b></li>        <!-- capabilitystatement-example.xml.html / resource-instance:CapabilityStatement / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Capabilitystatement-example.xml</h1>
+
+<p>
+<a href="capabilitystatement-example.xml">Raw XML</a> (<a href="capabilitystatement-example.canonical.xml">canonical form</a>)
+</p>
+
+
+<div class="example">
+<p>General Condition Example (id = &quot;example&quot;)</p>
+<pre class="xml">
+<span class="xmltag">&lt;<a href="capabilitystatement-definitions.html" class="xmltag">CapabilityStatement</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://hl7.org/fhir</span>"</span><span class="xmltag">&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">example</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">generated</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://www.w3.org/1999/xhtml</span>"</span><span class="xmltag">&gt;</span><b>
+      
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">p</a></span><span class="xmltag">&gt;</span><b>The EHR Server supports the following transactions for the resource Person: read, vread,
+         
+        update, history, search(name,gender), create and updates.</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">p</a>&gt;</span><b>
+      
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">p</a></span><span class="xmltag">&gt;</span><b>The EHR System supports the following message: admin-notify::Person.</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">p</a>&gt;</span><b>
+      
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">p</a></span><span class="xmltag">&gt;</span><b>The EHR Application has a 
+        </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">a</a></span><span class="xmlattr"> href="<span class="xmlattrvalue">http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911
+        a-721a60663796</span>"</span><span class="xmltag">&gt;</span><b>general document profile</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">a</a>&gt;</span><b>.
+      </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">p</a>&gt;</span><b>
+    
+    </b><span class="xmltag">&lt;/<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a>&gt;</span><b>
+</b><span class="xmlcomment">&lt;!--     the identifier for this capability statement. 
+    The identifier and version establish identifiers that other specifications etc.may
+   use to 
+    refer to the capability statement that this resource represents in a logical manner
+   
+    rather than in a literal (URL) fashion 
+
+    The identifier should be globally unique - a UUID, an OID, or a URL/URI
+      --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.url" class="xmltag">url</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">68D043B5-9ECF-4559-A57A-396E0D452311</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.version" class="xmltag">version</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">20130510</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">ACME EHR capability statement</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">draft</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.experimental" class="xmltag">experimental</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">true</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.date" class="xmltag">date</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2012-01-04</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.publisher" class="xmltag">publisher</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">ACME Corporation</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.contact" class="xmltag">contact</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="contactdetail-definitions.html#ContactDetail.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">System Administrator</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="contactdetail-definitions.html#ContactDetail.telecom" class="xmltag">telecom</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#ContactPoint.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">email</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#ContactPoint.value" class="xmltag">value</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">wile@acme.org</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="contactdetail-definitions.html#ContactDetail.telecom" class="xmltag">telecom</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.contact" class="xmltag">contact</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.description" class="xmltag">description</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">This is the FHIR capability statement for the main EHR at ACME for the private interface
+   - it does not describe the public interface</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.purpose" class="xmltag">purpose</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Main EHR capability statement, published for contracting and operational support</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.copyright" class="xmltag">copyright</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Copyright © Acme Healthcare and GoodCorp EHR Systems</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.kind" class="xmltag">kind</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">instance</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.software" class="xmltag">software</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.software.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">EHR</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.software.version" class="xmltag">version</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">0.00.020.2134</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.software.releaseDate" class="xmltag">releaseDate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2012-01-04</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.software" class="xmltag">software</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.implementation" class="xmltag">implementation</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.implementation.description" class="xmltag">description</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">main EHR at ACME</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.implementation.url" class="xmltag">url</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://10.2.3.4/fhir</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.implementation" class="xmltag">implementation</a>&gt;</span><b>
+  
+  </b><span class="xmlcomment">&lt;!--    while the FHIR infrastructure is turning over prior to development, a version is 
+    required. Note that this may be rescinded later?    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.fhirVersion" class="xmltag">fhirVersion</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1.0.0</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--    this system accepts unknown content in the resources    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.acceptUnknown" class="xmltag">acceptUnknown</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">both</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--    this system can do either xml or json. (Listing both implies full support for either,
+   with interconversion)    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.format" class="xmltag">format</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">xml</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.format" class="xmltag">format</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">json</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--    in a real capability statement, it&apos;s unlikely that a single capability statement 
+    would declare capability for REST, messaging and documents, though it is legal. 
+    This example does so in order to show all the parts of a capability statement    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest" class="xmltag">rest</a></span><span class="xmltag">&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--    this is a server capability statement. Note that servers are required to provide 
+      one of these. It can easily be edited by hand - copy this, replace the metadata
+     above, 
+      delete the messaging and document stuff below, and then replace the details appropriately.
+        --&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.mode" class="xmltag">mode</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">server</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.documentation" class="xmltag">documentation</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Main FHIR endpoint for acem health</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security" class="xmltag">security</a></span><span class="xmltag">&gt;</span><b> 
+      </b><span class="xmlcomment">&lt;!--   cors support is highly recommended - mandatory if using SMART on FHIR  --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.cors" class="xmltag">cors</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">true</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.service" class="xmltag">service</a></span><span class="xmltag">&gt;</span><b>
+         </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/restful-security-service</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">SMART-on-FHIR</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.service" class="xmltag">service</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.description" class="xmltag">description</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">See Smart on FHIR documentation</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.certificate" class="xmltag">certificate</a></span><span class="xmltag">&gt;</span><b>  
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.certificate.type" class="xmltag">type</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">application/jwt</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmlcomment">&lt;!--   base JWT. this blob is not valid   --&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.certificate.blob" class="xmltag">blob</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">IHRoaXMgYmxvYiBpcyBub3QgdmFsaWQ=</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.certificate" class="xmltag">certificate</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security" class="xmltag">security</a>&gt;</span><b>    
+    
+    </b><span class="xmlcomment">&lt;!--    zero or more of these - declaration of support for a resource    --&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource" class="xmltag">resource</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.type" class="xmltag">type</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Patient</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmlcomment">&lt;!--    let&apos;s assume that HL7 has stood up a profile registry at http://fhir.hl7.org/fhir 
+        - it&apos;s likely to have a registry, though this is not decided, nor is a URL decided.
+       
+        This application simply uses a profile registered directly with HL7. For the simplest
+       
+        case of a FHIR REST Server, just delete this profile reference. Profile references
+       do 
+        not need to be a UUID, though a profile registry could insist that they are  
+        --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.profile" class="xmltag">profile</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">http://fhir.hl7.org/base/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.profile" class="xmltag">profile</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">read</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">vread</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.documentation" class="xmltag">documentation</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Only supported for patient records since 12-Dec 2012</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">update</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">history-instance</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">create</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">history-type</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction" class="xmltag">interaction</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.versioning" class="xmltag">versioning</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">versioned-update</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.readHistory" class="xmltag">readHistory</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">true</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmlcomment">&lt;!--   this server doesn&apos;t let the clients create identities   --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate" class="xmltag">updateCreate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">false</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmlcomment">&lt;!--   it&apos;s good to support conditional create on patients; this solves a common middleware
+       problem   --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.conditionalCreate" class="xmltag">conditionalCreate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">true</span>"</span><span class="xmltag">/&gt;</span><b> 
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.conditionalUpdate" class="xmltag">conditionalUpdate</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">false</span>"</span><span class="xmltag">/&gt;</span><span class="xmlcomment">&lt;!--   0..1 If allows/uses conditional update   --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.conditionalDelete" class="xmltag">conditionalDelete</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">not-supported</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchInclude" class="xmltag">searchInclude</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Organization</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchRevInclude" class="xmltag">searchRevInclude</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Person</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam" class="xmltag">searchParam</a></span><span class="xmltag">&gt;</span><b>  
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">identifier</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.definition" class="xmltag">definition</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/SearchParameter/Patient-identifier</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.type" class="xmltag">type</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">token</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.documentation" class="xmltag">documentation</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Only supports search by institution MRN</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.modifier" class="xmltag">modifier</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">missing</span>"</span><span class="xmltag">/&gt;</span><b>
+     </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam" class="xmltag">searchParam</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam" class="xmltag">searchParam</a></span><span class="xmltag">&gt;</span><b>  
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">careprovider</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.definition" class="xmltag">definition</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/SearchParameter/Patient-careprovider</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.type" class="xmltag">type</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">reference</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmlcomment">&lt;!--   there&apos;s not a lot of value in saying this, since it&apos;s the only 
+          choice anyway. but in other cases it&apos;s pretty important   --&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.target" class="xmltag">target</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Organization</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.modifier" class="xmltag">modifier</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">missing</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.chain" class="xmltag">chain</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">name</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam.chain" class="xmltag">chain</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">identifier</span>"</span><span class="xmltag">/&gt;</span><b>
+     </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam" class="xmltag">searchParam</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource" class="xmltag">resource</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">transaction</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction" class="xmltag">interaction</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction" class="xmltag">interaction</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">history-system</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction" class="xmltag">interaction</a>&gt;</span><b>
+   
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.rest.compartment" class="xmltag">compartment</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/compartment/Patient</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.rest" class="xmltag">rest</a>&gt;</span><b>
+</b><span class="xmlcomment">&lt;!--    a messaging capability statement. Applications are not required to make a capability
+   
+    statement with regard to messaging, though there is active argument that they should.
+       --&gt;</span><b>
+ 
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging" class="xmltag">messaging</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.endpoint" class="xmltag">endpoint</a></span><span class="xmltag">&gt;</span><b>  
+     </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.endpoint.protocol" class="xmltag">protocol</a></span><span class="xmltag">&gt;</span><b>
+       </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/message-transport</span>"</span><span class="xmltag">/&gt;</span><b>
+       </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">mllp</span>"</span><span class="xmltag">/&gt;</span><b>
+     </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.endpoint.protocol" class="xmltag">protocol</a>&gt;</span><b>
+     </b><span class="xmlcomment">&lt;!--   LLP server at 10.1.1.10 on port 9234   --&gt;</span><b>
+     </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.endpoint.address" class="xmltag">address</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">mllp:10.1.1.10:9234</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.endpoint" class="xmltag">endpoint</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.reliableCache" class="xmltag">reliableCache</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">30</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.documentation" class="xmltag">documentation</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">ADT A08 equivalent for external system notifications</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event" class="xmltag">event</a></span><span class="xmltag">&gt;</span><b>
+
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.code" class="xmltag">code</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/message-type</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">admin-notify</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.code" class="xmltag">code</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.category" class="xmltag">category</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Consequence</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmlcomment">&lt;!--    this a receiver - i.e. answers. Not neccessariy a server (though this is)    --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.mode" class="xmltag">mode</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">receiver</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.focus" class="xmltag">focus</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Patient</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmlcomment">&lt;!--    specify a profile for the request person. Very often there&apos;s no 
+        point profiling the response, it&apos;s not interesting    --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.request" class="xmltag">request</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue"><font color="red">StructureDefinition/daf-patient</font></span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.request" class="xmltag">request</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.response" class="xmltag">response</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue"><font color="red">StructureDefinition/MessageHeader</font></span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.response" class="xmltag">response</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event.documentation" class="xmltag">documentation</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Notification of an update to a patient resource. changing the links is not supported</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event" class="xmltag">event</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.messaging" class="xmltag">messaging</a>&gt;</span><b>
+  
+</b><span class="xmlcomment">&lt;!--    a document capability statement    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.document" class="xmltag">document</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.document.mode" class="xmltag">mode</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">consumer</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.document.documentation" class="xmltag">documentation</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Basic rules for all documents in the EHR system</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--    this is the important element: a reference to a published document profile 
+       note that this is a version specific reference.   --&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="capabilitystatement-definitions.html#CapabilityStatement.document.profile" class="xmltag">profile</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911
+      a-721a60663796</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.document.profile" class="xmltag">profile</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html#CapabilityStatement.document" class="xmltag">document</a>&gt;</span><b>
+</b><span class="xmltag">&lt;/<a href="capabilitystatement-definitions.html" class="xmltag">CapabilityStatement</a>&gt;</span></pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fcapabilitystatement-example.xml.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fcapabilitystatement-example.xml.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

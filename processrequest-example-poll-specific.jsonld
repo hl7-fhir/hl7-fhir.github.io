@@ -1,0 +1,46 @@
+{
+  "@context": "http://build.fhir.org/ProcessRequest.jsonld",
+  "@context": "http://hl7.org/fhir/ProcessRequest/1111",
+  "Resource.id": {
+    "id.value": "1111"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Poll ProcessRequest</div>"
+    }
+  },
+  "ProcessRequest.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://happyvalley.com/processrequest"
+      },
+      "Identifier.value": {
+        "string.value": "111"
+      }
+    }
+  ],
+  "ProcessRequest.status": {
+    "code.value": "active"
+  },
+  "ProcessRequest.action": {
+    "code.value": "poll"
+  },
+  "ProcessRequest.created": {
+    "dateTime.value": "2014-08-16"
+  },
+  "ProcessRequest.organization": {
+    "Reference.reference": {
+      "string.value": "Organization/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "ProcessRequest.request": {
+    "Reference.reference": {
+      "string.value": "http://benefitco.com/oralhealthclaim/12345"
+    },
+    "Resource.reference": "http://benefitco.com/oralhealthclaim/12345"
+  }
+}

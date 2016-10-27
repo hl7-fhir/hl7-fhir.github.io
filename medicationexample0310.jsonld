@@ -1,0 +1,108 @@
+{
+  "@context": "http://build.fhir.org/Medication.jsonld",
+  "@context": "http://hl7.org/fhir/Medication/med0310",
+  "Resource.id": {
+    "id.value": "med0310"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0310</p><p><b>contained</b>: </p><p><b>code</b>: Oral Form Oxycodone (product) <span>(Details : {SNOMED CT code '430127000' = 'Oral form oxycodone (product)', given as 'Oral Form Oxycodone (product)'})</span></p><p><b>isBrand</b>: false</p><blockquote><p><b>product</b></p><p><b>form</b>: Tablet dose form (qualifier value) <span>(Details : {SNOMED CT code '385055001' = 'Tablet dose form (qualifier value)', given as 'Tablet dose form (qualifier value)'})</span></p><h3>Ingredients</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>id: sub03; Oxycodone (substance) <span>(Details : {SNOMED CT code '55452001' = 'Oxycodone (substance)', given as 'Oxycodone (substance)'})</span></td><td>5 mg<span> (Details: UCUM code mg = 'mg')</span>/1 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></td></tr></table></blockquote></div>"
+    }
+  },
+  "Substance": [
+    {
+      "Resource.id": {
+        "id.value": "sub03"
+      },
+      "Substance.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "55452001"
+            },
+            "Coding.display": {
+              "string.value": "Oxycodone (substance)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#55452001"
+      }
+    }
+  ],
+  "Medication.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "430127000"
+        },
+        "Coding.display": {
+          "string.value": "Oral Form Oxycodone (product)"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#430127000"
+  },
+  "Medication.isBrand": {
+    "boolean.value": false
+  },
+  "Medication.product": {
+    "Medication.product.form": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "385055001"
+          },
+          "Coding.display": {
+            "string.value": "Tablet dose form (qualifier value)"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#385055001"
+    },
+    "Medication.product.ingredient": [
+      {
+        "Medication.product.ingredient.itemReference": {
+          "Reference.reference": {
+            "string.value": "#sub03"
+          }
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "decimal.value": 5
+            },
+            "Quantity.system": {
+              "uri.value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "code.value": "mg"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "decimal.value": 1
+            },
+            "Quantity.system": {
+              "uri.value": "http://hl7.org/fhir/v3/orderableDrugForm"
+            },
+            "Quantity.code": {
+              "code.value": "TAB"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

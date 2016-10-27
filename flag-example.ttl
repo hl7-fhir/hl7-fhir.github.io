@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Flag/example> a fhir:Flag;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Large Dog warning for Peter Patient</div>"
+  ];
+  fhir:Flag.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/local" ];
+       fhir:Coding.code [ fhir:value "admin" ];
+       fhir:Coding.display [ fhir:value "Admin" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "admin" ]
+  ];
+  fhir:Flag.status [ fhir:value "active"];
+  fhir:Flag.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter Patient" ]
+  ];
+  fhir:Flag.author [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+     fhir:Reference.display [ fhir:value "Nancy Nurse" ]
+  ];
+  fhir:Flag.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/local" ];
+       fhir:Coding.code [ fhir:value "bigdog" ];
+       fhir:Coding.display [ fhir:value "Big dog" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Patient has a big dog at his home. Always always wear a suit of armor or take other active counter-measures" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

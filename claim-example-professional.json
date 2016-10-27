@@ -1,0 +1,82 @@
+{
+  "resourceType": "Claim",
+  "id": "860150",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Claim</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://happypdocs.com/claim",
+      "value": "8612345"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "system": "http://hl7.org/fhir/ex-claimtype",
+    "code": "professional"
+  },
+  "created": "2014-08-16",
+  "insurer": {
+    "reference": "Organization/2"
+  },
+  "organization": {
+    "reference": "Organization/1"
+  },
+  "use": "complete",
+  "priority": {
+    "code": "normal"
+  },
+  "payee": {
+    "type": {
+      "code": "provider"
+    }
+  },
+  "diagnosis": [
+    {
+      "sequence": 1,
+      "diagnosis": {
+        "code": "654456"
+      }
+    }
+  ],
+  "patient": {
+    "reference": "Patient/1"
+  },
+  "coverage": [
+    {
+      "sequence": 1,
+      "focal": true,
+      "coverage": {
+        "reference": "Coverage/9876B1"
+      }
+    }
+  ],
+  "item": [
+    {
+      "sequence": 1,
+      "careTeam": [
+        {
+          "provider": {
+            "reference": "Practitioner/example"
+          }
+        }
+      ],
+      "service": {
+        "system": "http://hl7.org/fhir/ex-serviceproduct",
+        "code": "exam"
+      },
+      "servicedDate": "2014-08-16",
+      "unitPrice": {
+        "value": 75.00,
+        "system": "urn:iso:std:iso:4217",
+        "code": "USD"
+      },
+      "net": {
+        "value": 75.00,
+        "system": "urn:iso:std:iso:4217",
+        "code": "USD"
+      }
+    }
+  ]
+}

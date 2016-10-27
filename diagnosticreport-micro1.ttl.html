@@ -1,0 +1,1146 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Diagnosticreport-micro1.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/diagnosticreport-micro1.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="diagnostics-module.html"><img src="diagnostics.jpg"/> Diagnostics</a></li>        <li><a href="diagnosticreport.html">DiagnosticReport</a></li>        <li><b>Example Instance</b></li>        <!-- diagnosticreport-micro1.ttl.html / resource-instance:DiagnosticReport / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Diagnosticreport-micro1.ttl</h1>
+
+<p>
+<a href="diagnosticreport-micro1.ttl">Raw Turtle</a>, 
+<a href="diagnosticreport-micro1.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>An example of a complex Micro Isolate and Sensitivities</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/owl#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/DiagnosticReport/micro&gt; a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;micro&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: micro&lt;/p&gt;&lt;p&gt;&lt;b&gt;contained&lt;/b&gt;: , , , , , , , , , , , , , , , , , , , , , , , , , &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: 290741144&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Microbiology &lt;span&gt;(Details : {http://hl7.org/fhir/v2/0074 code 'MB' = 'Microbiology)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Culture, MRSA &lt;span&gt;(Details : {LOINC code '632-0' = 'Bacteria identified in Wound by Aerobe culture)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a&gt;Patient/example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: Aug 7, 2009 7:00:00 PM&lt;/p&gt;&lt;p&gt;&lt;b&gt;issued&lt;/b&gt;: Aug 10, 2009 8:25:44 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: Todd Ashby&lt;/p&gt;&lt;p&gt;&lt;b&gt;request&lt;/b&gt;: id: req; 255337816; Original Order &lt;span&gt;(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)&lt;/span&gt;; Culture, MRSA &lt;span&gt;(Details : {LOINC code '632-0' = 'Bacteria identified in Wound by Aerobe culture)&lt;/span&gt;; ????&lt;/p&gt;&lt;p&gt;&lt;b&gt;result&lt;/b&gt;: id: org1; status: final; Staphylococcus aureus Panel &lt;span&gt;(Details : {http://acme.org/lab/codes/organisms code 'Staaur' = 'Staaur)&lt;/span&gt;; ????&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Observation;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value &quot;obx1-4&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;ORGANISM&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/organisms&quot; ];
+         fhir:Coding.code [ fhir:value &quot;Staaur&quot; ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value &quot;Staphylococcus aureus&quot; ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value &quot;obx1-5&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;CULTPOSNEG&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/flags&quot; ];
+         fhir:Coding.code [ fhir:value &quot;POS&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value &quot;obx2-1&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60504&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Ampicillin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;R&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 3;
+     fhir:Resource.id [ fhir:value &quot;obx2-2&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60512&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Cefazolin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;2&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 4;
+     fhir:Resource.id [ fhir:value &quot;obx2-4&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60516&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Cefoxitin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;4&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 5;
+     fhir:Resource.id [ fhir:value &quot;obx2-6&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60527&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Clindamycin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&gt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 6;
+     fhir:Resource.id [ fhir:value &quot;obx2-8&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;61203&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Daptomycin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;1&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&gt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 7;
+     fhir:Resource.id [ fhir:value &quot;obx2-10&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60532&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Doxycycline&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 8;
+     fhir:Resource.id [ fhir:value &quot;obx2-12&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60533&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Erythromycin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;8&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&gt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;R&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 9;
+     fhir:Resource.id [ fhir:value &quot;obx2-14&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60536&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Gentamicin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;2&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 10;
+     fhir:Resource.id [ fhir:value &quot;obx2-16&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;61007&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Levofloxacin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 11;
+     fhir:Resource.id [ fhir:value &quot;obx2-18&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60699&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Linezolid&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;4&quot;^^xsd:decimal ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 12;
+     fhir:Resource.id [ fhir:value &quot;obx2-20&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;61204&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Moxifloxacin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 13;
+     fhir:Resource.id [ fhir:value &quot;obx2-22&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60551&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Oxacillin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 14;
+     fhir:Resource.id [ fhir:value &quot;obx2-24&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60552&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Penicillin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;2&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&gt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;R&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 15;
+     fhir:Resource.id [ fhir:value &quot;obx2-26&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60697&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Quinupristin/Dalfopristin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 16;
+     fhir:Resource.id [ fhir:value &quot;obx2-28&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60555&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Rifampin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 17;
+     fhir:Resource.id [ fhir:value &quot;obx2-30&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60558&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Tetracycline&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.5&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 18;
+     fhir:Resource.id [ fhir:value &quot;obx2-32&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60561&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Trimethoprim/Sulfamethoxazole&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;0.0526&quot;^^xsd:decimal ];
+       fhir:Quantity.comparator [ fhir:value &quot;&lt;=&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 19;
+     fhir:Resource.id [ fhir:value &quot;obx2-34&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60563&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Vancomycin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueQuantity [
+       fhir:Quantity.value [ fhir:value &quot;1&quot;^^xsd:decimal ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 20;
+     fhir:Resource.id [ fhir:value &quot;nte-1&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;2099930&quot; ];
+         fhir:Coding.display [ fhir:value &quot;D-Test&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.valueString [ fhir:value &quot;D-Test:  Negative - This isolate does not demonstrate inducible clindamycin resistance in vitro.&quot; ]
+  ], [
+     a fhir:Observation;
+     fhir:index 21;
+     fhir:Resource.id [ fhir:value &quot;obx3-1&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/tests&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60036&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Oxacillin&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.interpretation [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0078&quot; ];
+         fhir:Coding.code [ fhir:value &quot;S&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 22;
+     fhir:Resource.id [ fhir:value &quot;obr-2&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/panels&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60790&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Susceptibility - Automated broth dilution (Billed)&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.performer [
+       fhir:index 0;
+       fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+     ];
+     fhir:Observation.related [
+       fhir:index 0;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-1&quot; ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-2&quot; ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-4&quot; ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-6&quot; ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-8&quot; ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-10&quot; ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-12&quot; ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-14&quot; ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-16&quot; ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-18&quot; ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-20&quot; ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-22&quot; ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-24&quot; ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-26&quot; ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-28&quot; ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-30&quot; ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-32&quot; ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx2-34&quot; ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#nte-1&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 23;
+     fhir:Resource.id [ fhir:value &quot;obr-3&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/panels&quot; ];
+         fhir:Coding.code [ fhir:value &quot;60418&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Susceptibility - Disk diffusion (Billed)&quot; ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.related [
+       fhir:index 0;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx3-1&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 24;
+     fhir:Resource.id [ fhir:value &quot;org1&quot; ];
+     fhir:Observation.status [ fhir:value &quot;final&quot; ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://acme.org/lab/codes/organisms&quot; ];
+         fhir:Coding.code [ fhir:value &quot;Staaur&quot; ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value &quot;Staphylococcus aureus Panel&quot; ]
+     ];
+     fhir:Observation.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ];
+     fhir:Observation.related [
+       fhir:index 0;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx1-4&quot; ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obx1-5&quot; ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obr-2&quot; ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Observation.related.type [ fhir:value &quot;has-member&quot; ];
+       fhir:Observation.related.target [
+         fhir:Reference.reference [ fhir:value &quot;#obr-3&quot; ]
+       ]
+     ]
+  ], [
+     a fhir:DiagnosticRequest;
+     fhir:index 25;
+     fhir:Resource.id [ fhir:value &quot;req&quot; ];
+     fhir:DiagnosticRequest.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value &quot;255337816&quot; ]
+     ];
+     fhir:DiagnosticRequest.stage [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/request-stage&quot; ];
+         fhir:Coding.code [ fhir:value &quot;original-order&quot; ]
+       ]
+     ];
+     fhir:DiagnosticRequest.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:632-0;
+         fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+         fhir:Coding.code [ fhir:value &quot;632-0&quot; ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value &quot;Culture, MRSA&quot; ]
+     ];
+     fhir:DiagnosticRequest.subject [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ]
+  ];
+  fhir:DiagnosticReport.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value &quot;http://hnam.org/identifiers/orders&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;290741144&quot; ]
+  ];
+  fhir:DiagnosticReport.status [ fhir:value &quot;final&quot;];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0074&quot; ];
+       fhir:Coding.code [ fhir:value &quot;MB&quot; ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:632-0;
+       fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+       fhir:Coding.code [ fhir:value &quot;632-0&quot; ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value &quot;Culture, MRSA&quot; ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value &quot;2009-08-07T19:00:00+10:00&quot;^^xsd:dateTime];
+  fhir:DiagnosticReport.issued [ fhir:value &quot;2009-08-10T08:25:44+10:00&quot;^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:Reference.display [ fhir:value &quot;Todd Ashby&quot; ]
+  ];
+  fhir:DiagnosticReport.request [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value &quot;#req&quot; ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value &quot;#org1&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/example&gt; a fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdiagnosticreport-micro1.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdiagnosticreport-micro1.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

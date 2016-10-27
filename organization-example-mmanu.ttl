@@ -1,0 +1,23 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Organization/mmanu> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "mmanu"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Acme Corporation, Proud member of the pharma industry</p>\n    </div>"
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.name [ fhir:value "Acme Corporation"];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.country [ fhir:value "Swizterland" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

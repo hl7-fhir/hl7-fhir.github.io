@@ -1,0 +1,126 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DeviceComponent/example-prodspec> a fhir:DeviceComponent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-prodspec"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>Example of a simple MDS from a pulse oximeter containment tree</p>\n		</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Device;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "d1" ];
+     fhir:Device.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+           fhir:Coding.code [ fhir:value "SNO" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Serial Number" ]
+       ];
+       fhir:Identifier.value [ fhir:value "ID 13.1" ]
+     ], [
+       fhir:index 1;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.text [ fhir:value "Global Medical Device Nomenclature" ]
+       ];
+       fhir:Identifier.system [ fhir:value "urn:iso:std:iso:11073:10101" ];
+       fhir:Identifier.value [ fhir:value "2000" ]
+     ];
+     fhir:Device.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:iso:std:iso:11073:10101" ];
+         fhir:Coding.code [ fhir:value "2000" ];
+         fhir:Coding.display [ fhir:value "MDC_DEV_ANALY_SAT_O2_MDS" ]
+       ]
+     ];
+     fhir:Device.manufacturer [ fhir:value "Center4MI" ];
+     fhir:Device.model [ fhir:value "2-0-14" ]
+  ];
+  fhir:DeviceComponent.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:11073:10101" ];
+       fhir:Coding.code [ fhir:value "2000" ];
+       fhir:Coding.display [ fhir:value "MDC_DEV_ANALY_SAT_O2_MDS" ]
+     ]
+  ];
+  fhir:DeviceComponent.identifier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "Handle ID" ]
+     ];
+     fhir:Identifier.value [ fhir:value "0" ]
+  ];
+  fhir:DeviceComponent.lastSystemChange [ fhir:value "2014-10-07T14:45:00Z"^^xsd:dateTime];
+  fhir:DeviceComponent.source [
+     fhir:Reference.reference [ fhir:value "#d1" ]
+  ];
+  fhir:DeviceComponent.operationalStatus [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:11073:10101" ];
+       fhir:Coding.code [ fhir:value "0" ];
+       fhir:Coding.display [ fhir:value "disconnected" ]
+     ]
+  ];
+  fhir:DeviceComponent.productionSpecification [
+     fhir:index 0;
+     fhir:DeviceComponent.productionSpecification.specType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "1" ];
+         fhir:Coding.display [ fhir:value "Serial number" ]
+       ]
+     ];
+     fhir:DeviceComponent.productionSpecification.productionSpec [ fhir:value "xa-12324-b" ]
+  ], [
+     fhir:index 1;
+     fhir:DeviceComponent.productionSpecification.specType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "3" ];
+         fhir:Coding.display [ fhir:value "Hardware version" ]
+       ]
+     ];
+     fhir:DeviceComponent.productionSpecification.productionSpec [ fhir:value "1.1" ]
+  ], [
+     fhir:index 2;
+     fhir:DeviceComponent.productionSpecification.specType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "4" ];
+         fhir:Coding.display [ fhir:value "Software version" ]
+       ]
+     ];
+     fhir:DeviceComponent.productionSpecification.productionSpec [ fhir:value "1.12" ]
+  ], [
+     fhir:index 3;
+     fhir:DeviceComponent.productionSpecification.specType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "5" ];
+         fhir:Coding.display [ fhir:value "Firmware version" ]
+       ]
+     ];
+     fhir:DeviceComponent.productionSpecification.productionSpec [ fhir:value "1.0.23" ]
+  ];
+  fhir:DeviceComponent.languageCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://tools.ietf.org/html/bcp47" ];
+       fhir:Coding.code [ fhir:value "en-US" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

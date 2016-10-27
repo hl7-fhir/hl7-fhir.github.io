@@ -1,0 +1,29 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:OperationOutcome;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "searchfail"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The &quot;name&quot; parameter has the modifier &quot;exact&quot; which is not supported by this server</p>\n    </div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "fatal" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "code-invalid" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.text [ fhir:value "The \"name\" parameter has the modifier \"exact\" which is not supported by this server" ]
+     ];
+     fhir:OperationOutcome.issue.location [
+       fhir:value "http.name:exact";
+       fhir:index 0
+     ]
+  ]] .
+
+# -------------------------------------------------------------------------------------
+

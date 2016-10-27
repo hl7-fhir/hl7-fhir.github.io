@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+  <id value="f202"/>
+ <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>identifier</b>: Encounter_Roel_20130128 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = &#39;ambulatory&#39;, stated as &#39;ambulatory&#39;)</p><p><b>type</b>: Chemotherapy <span>(Details : {SNOMED CT code &#39;367336001&#39; = &#39;Chemotherapy (procedure)&#39;, given as &#39;Chemotherapy&#39;})</span></p><p><b>priority</b>: Urgent <span>(Details : {SNOMED CT code &#39;103391001&#39; = &#39;Urgency (qualifier value)&#39;, given as &#39;Urgent&#39;})</span></p><p><b>patient</b>: <a>Roel</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/f201</a></td></tr></table><p><b>length</b>: 56 minutes<span> (Details: UCUM code min = &#39;min&#39;)</span></p><p><b>reason</b>: The patient is treated for a tumor. <span>(Details )</span></p><p><b>indication</b>: <a>Roel&#39;s TPF chemotherapy on January 28th, 2013</a></p><p><b>serviceProvider</b>: <a>Organization/f201</a></p></div></text><identifier>
+    <use value="temp"/><!--   0..1 The use of this identifier   -->
+    <value value="Encounter_Roel_20130128"/>
+ </identifier>
+ <status value="finished"/><!--  Encounter has finished  -->
+    <class>
+        <system value="http://hl7.org/fhir/v3/ActCode"/>
+        <code value="AMB"/> <!--   outpatient encounter for chemotherapy   -->
+        <display value="ambulatory"/>
+    </class>
+ <type>
+    <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="367336001"/>
+       <display value="Chemotherapy"/> 
+    </coding>
+ </type>
+ <priority><!--  Urgent priority, because of complications  -->
+    <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="103391001"/>
+       <display value="Urgent"/>
+    </coding>
+ </priority>
+ <patient>
+     <reference value="Patient/f201"/>
+     <display value="Roel"/>
+ </patient>
+ <participant>
+     <individual>
+         <reference value="Practitioner/f201"/>
+    </individual>
+ </participant>
+ <length>
+    <value value="56"/>
+    <unit value="minutes"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="min"/>
+ </length>
+ <reason>
+		<extension url="http://hl7.org/fhir/StructureDefinition/encounter-primaryDiagnosis">
+			<valuePositiveInt value="2"/>
+		</extension>
+   <text value="The patient is treated for a tumor."/>
+ </reason>
+ <indication>
+		<extension url="http://hl7.org/fhir/StructureDefinition/encounter-primaryDiagnosis">
+			<valuePositiveInt value="1"/>
+		</extension>
+     <reference value="Procedure/f201"/>
+     <display value="Roel&#39;s TPF chemotherapy on January 28th, 2013"/>
+ </indication>
+ <!--  No hospitalization was deemed necessary  -->
+ <serviceProvider>
+     <reference value="Organization/f201"/>
+ </serviceProvider>
+</Encounter>

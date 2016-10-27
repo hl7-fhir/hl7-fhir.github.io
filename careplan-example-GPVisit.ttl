@@ -1,0 +1,175 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CarePlan/gpvisit> a fhir:CarePlan;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gpvisit"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>  Represents the flow of a patient within a practice. The plan is created when\n        they arrive and represents the 'care' of the patient over the course of that encounter.\n        They first see the nurse for basic observations (BP, pulse, temp) then the doctor for\n        the consultation and finally the nurse again for a tetanus immunization. As the plan is\n        updated (e.g. a new activity added), different versions of the plan exist, and workflow timings\n        for reporting can be gained by examining the plan history. This example is the version after\n        seeing the doctor, and waiting for the nurse.The plan can either be created 'ad hoc' and modified as\n        the parient progresses, or start with a standard template (which can, of course, be altered to suit the patient.</p>\n    </div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Condition;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "p1" ];
+     fhir:Condition.verificationStatus [ fhir:value "confirmed" ];
+     fhir:Condition.code [
+       fhir:CodeableConcept.text [ fhir:value "Overseas encounter" ]
+     ];
+     fhir:Condition.subject [
+       fhir:link <http://hl7.org/fhir/Patient/100>;
+       fhir:Reference.reference [ fhir:value "Patient/100" ];
+       fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+     ]
+  ], [
+     a fhir:CareTeam;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "careteam" ];
+     fhir:CareTeam.participant [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "part1" ];
+       fhir:CareTeam.participant.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/local" ];
+           fhir:Coding.code [ fhir:value "nur" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "nurse" ]
+       ];
+       fhir:CareTeam.participant.member [
+         fhir:link <http://hl7.org/fhir/Practitioner/13>;
+         fhir:Reference.reference [ fhir:value "Practitioner/13" ];
+         fhir:Reference.display [ fhir:value "Nurse Nancy" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "part2" ];
+       fhir:CareTeam.participant.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/local" ];
+           fhir:Coding.code [ fhir:value "doc" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "doctor" ]
+       ];
+       fhir:CareTeam.participant.member [
+         fhir:link <http://hl7.org/fhir/Practitioner/14>;
+         fhir:Reference.reference [ fhir:value "Practitioner/14" ];
+         fhir:Reference.display [ fhir:value "Doctor Dave" ]
+       ]
+     ]
+  ], [
+     a fhir:Goal;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "goal" ];
+     fhir:Goal.status [ fhir:value "planned" ];
+     fhir:Goal.description [
+       fhir:CodeableConcept.text [ fhir:value "Complete consultation" ]
+     ];
+     fhir:Goal.subject [
+       fhir:link <http://hl7.org/fhir/Patient/100>;
+       fhir:Reference.reference [ fhir:value "Patient/100" ];
+       fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+     ]
+  ];
+  fhir:CarePlan.status [ fhir:value "active"];
+  fhir:CarePlan.subject [
+     fhir:link <http://hl7.org/fhir/Patient/100>;
+     fhir:Reference.reference [ fhir:value "Patient/100" ];
+     fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+  ];
+  fhir:CarePlan.period [
+     fhir:Period.start [ fhir:value "2013-01-01T10:30:00+00:00"^^xsd:dateTime ]
+  ];
+  fhir:CarePlan.careTeam [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#careteam" ]
+  ];
+  fhir:CarePlan.addresses [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#p1" ];
+     fhir:Reference.display [ fhir:value "obesity" ]
+  ];
+  fhir:CarePlan.goal [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#goal" ]
+  ];
+  fhir:CarePlan.activity [
+     fhir:index 0;
+     fhir:CarePlan.activity.actionResulting [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/Encounter/example>;
+       fhir:Reference.reference [ fhir:value "Encounter/example" ]
+     ];
+     fhir:CarePlan.activity.detail [
+       fhir:CarePlan.activity.detail.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/care-plan-activity-category" ];
+           fhir:Coding.code [ fhir:value "encounter" ]
+         ]
+       ];
+       fhir:CarePlan.activity.detail.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/local" ];
+           fhir:Coding.code [ fhir:value "nursecon" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Nurse Consultation" ]
+       ];
+       fhir:CarePlan.activity.detail.status [ fhir:value "completed" ];
+       fhir:CarePlan.activity.detail.prohibited [ fhir:value "false"^^xsd:boolean ];
+       fhir:CarePlan.activity.detail.scheduledPeriod [
+         fhir:Period.start [ fhir:value "2013-01-01T10:38:00+00:00"^^xsd:dateTime ];
+         fhir:Period.end [ fhir:value "2013-01-01T10:50:00+00:00"^^xsd:dateTime ]
+       ];
+       fhir:CarePlan.activity.detail.performer [
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/Practitioner/13>;
+         fhir:Reference.reference [ fhir:value "Practitioner/13" ];
+         fhir:Reference.display [ fhir:value "Nurse Nancy" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CarePlan.activity.detail [
+       fhir:CarePlan.activity.detail.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/care-plan-activity-category" ];
+           fhir:Coding.code [ fhir:value "encounter" ]
+         ]
+       ];
+       fhir:CarePlan.activity.detail.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/local" ];
+           fhir:Coding.code [ fhir:value "doccon" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Doctor Consultation" ]
+       ];
+       fhir:CarePlan.activity.detail.status [ fhir:value "scheduled" ];
+       fhir:CarePlan.activity.detail.prohibited [ fhir:value "false"^^xsd:boolean ];
+       fhir:CarePlan.activity.detail.performer [
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/Practitioner/14>;
+         fhir:Reference.reference [ fhir:value "Practitioner/14" ];
+         fhir:Reference.display [ fhir:value "Doctor Dave" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/100> a fhir:Patient, fhir:Patient, fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/13> a fhir:Practitioner, fhir:Practitioner .
+
+<http://hl7.org/fhir/Practitioner/14> a fhir:Practitioner, fhir:Practitioner .
+
+<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
+
+# -------------------------------------------------------------------------------------
+

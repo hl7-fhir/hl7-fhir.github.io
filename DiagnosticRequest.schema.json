@@ -1,0 +1,156 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/DiagnosticRequest",
+  "$ref": "#/definitions/DiagnosticRequest",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "DiagnosticRequest": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json#/definitions/DomainResource"
+        },
+        {
+          "description": "A record of a request for a diagnostic investigation service to be performed.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a DiagnosticRequest resource",
+              "type": "string",
+              "enum": [
+                "DiagnosticRequest"
+              ]
+            },
+            "identifier": {
+              "description": "Identifiers assigned to this order instance by the orderer and/or  the receiver and/or order fulfiller.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json#/definitions/Identifier"
+              }
+            },
+            "definition": {
+              "description": "Protocol or definition followed by this request.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json#/definitions/Reference"
+              }
+            },
+            "basedOn": {
+              "description": "Plan/proposal/order fulfilled by this request.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json#/definitions/Reference"
+              }
+            },
+            "replaces": {
+              "description": "The request takes the place of the referenced completed or terminated request(s).",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json#/definitions/Reference"
+              }
+            },
+            "requisition": {
+              "description": "Composite request this is part of.",
+              "$ref": "Identifier.schema.json#/definitions/Identifier"
+            },
+            "status": {
+              "description": "The status of the order.",
+              "type": "string",
+              "pattern": "[^\\s]+([\\s]?[^\\s]+)*"
+            },
+            "_status": {
+              "description": "Extensions for status",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "stage": {
+              "description": "Whether the request is a proposal, plan, an original order or a reflex order.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "code": {
+              "description": "A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "subject": {
+              "description": "On whom or what the investigation is to be performed. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "context": {
+              "description": "An encounter or episode of care that provides additional information about the healthcare context in which this request is made.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "occurrenceDateTime": {
+              "description": "The date/time at which the diagnostic testing should occur.",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?",
+              "type": "string"
+            },
+            "_occurrenceDateTime": {
+              "description": "Extensions for occurrenceDateTime",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "occurrencePeriod": {
+              "description": "The date/time at which the diagnostic testing should occur.",
+              "$ref": "Period.schema.json#/definitions/Period"
+            },
+            "occurrenceTiming": {
+              "description": "The date/time at which the diagnostic testing should occur.",
+              "$ref": "Timing.schema.json#/definitions/Timing"
+            },
+            "authored": {
+              "description": "When the request transitioned to being actionable.",
+              "type": "string",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            },
+            "_authored": {
+              "description": "Extensions for authored",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "requester": {
+              "description": "Who/what is requesting diagnostics.  The practitioner that holds legal responsibility for ordering the investigation.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "performerType": {
+              "description": "Desired type of performer for doing the diagnostic testing. (.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "performer": {
+              "description": "The desired perfomer for doing the diagnostic testing.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "reason": {
+              "description": "An explanation or justification for why this diagnostic investigation is being requested.   This is often for billing purposes.  May relate to the resources referred to in supportingInformation.",
+              "type": "array",
+              "items": {
+                "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+              }
+            },
+            "supportingInformation": {
+              "description": "Additional clinical information about the patient or specimen that may influence test interpretations.  This includes observations explicitly requested by the producer(filler) to provide context or supporting information needed to complete the order.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json#/definitions/Reference"
+              }
+            },
+            "note": {
+              "description": "Any other notes and comments made about the service request. (e.g. \"patient hates needles\").",
+              "type": "array",
+              "items": {
+                "$ref": "Annotation.schema.json#/definitions/Annotation"
+              }
+            },
+            "relevantHistory": {
+              "description": "Key events in the history of the request.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json#/definitions/Reference"
+              }
+            }
+          },
+          "required": [
+            "code",
+            "stage",
+            "subject",
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

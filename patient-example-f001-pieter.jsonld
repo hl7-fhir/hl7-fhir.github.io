@@ -1,0 +1,216 @@
+{
+  "@context": "http://build.fhir.org/Patient.jsonld",
+  "@context": "http://hl7.org/fhir/Patient/f001",
+  "Resource.id": {
+    "id.value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: 738472983 (USUAL), ?? (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Pieter van de Heuvel </p><p><b>telecom</b>: ph: 0648352638(MOBILE), p.heuvel@gmail.com(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Nov 17, 1944</p><p><b>deceased</b>: false</p><p><b>address</b>: Van Egmondkade 23 Amsterdam 1024 RJ NLD (HOME)</p><p><b>maritalStatus</b>: Getrouwd <span>(Details : {http://hl7.org/fhir/v3/MaritalStatus code 'M' = 'Married', given as 'Married'})</span></p><p><b>multipleBirth</b>: true</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>partner <span>(Details : {http://hl7.org/fhir/patient-contact-relationship code 'partner' = 'partner)</span></td><td>Sarah Abels </td><td>ph: 0690383372(MOBILE)</td></tr></table><h3>Communications</h3><table><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Nederlands <span>(Details : {urn:ietf:bcp:47 code 'nl' = 'nl', given as 'Dutch'})</span></td><td>true</td></tr></table><p><b>managingOrganization</b>: <a>Burgers University Medical Centre</a></p></div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "usual"
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      },
+      "Identifier.value": {
+        "string.value": "738472983"
+      }
+    },
+    {
+      "Identifier.use": {
+        "code.value": "usual"
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      }
+    }
+  ],
+  "Patient.active": {
+    "boolean.value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "code.value": "usual"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "van de Heuvel"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Pieter"
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "string.value": "MSc"
+        }
+      ]
+    }
+  ],
+  "Patient.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "0648352638"
+      },
+      "ContactPoint.use": {
+        "code.value": "mobile"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "code.value": "email"
+      },
+      "ContactPoint.value": {
+        "string.value": "p.heuvel@gmail.com"
+      },
+      "ContactPoint.use": {
+        "code.value": "home"
+      }
+    }
+  ],
+  "Patient.gender": {
+    "code.value": "male"
+  },
+  "Patient.birthDate": {
+    "date.value": "1944-11-17"
+  },
+  "Patient.deceasedBoolean": {
+    "boolean.value": false
+  },
+  "Patient.address": [
+    {
+      "Address.use": {
+        "code.value": "home"
+      },
+      "Address.line": [
+        {
+          "string.value": "Van Egmondkade 23"
+        }
+      ],
+      "Address.city": {
+        "string.value": "Amsterdam"
+      },
+      "Address.postalCode": {
+        "string.value": "1024 RJ"
+      },
+      "Address.country": {
+        "string.value": "NLD"
+      }
+    }
+  ],
+  "Patient.maritalStatus": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v3/MaritalStatus"
+        },
+        "Coding.code": {
+          "code.value": "M"
+        },
+        "Coding.display": {
+          "string.value": "Married"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Getrouwd"
+    }
+  },
+  "Patient.multipleBirthBoolean": {
+    "boolean.value": true
+  },
+  "Patient.contact": [
+    {
+      "Patient.contact.relationship": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/patient-contact-relationship"
+              },
+              "Coding.code": {
+                "code.value": "partner"
+              }
+            }
+          ]
+        }
+      ],
+      "Patient.contact.name": {
+        "HumanName.use": {
+          "code.value": "usual"
+        },
+        "HumanName.family": [
+          {
+            "string.value": "Abels"
+          }
+        ],
+        "HumanName.given": [
+          {
+            "string.value": "Sarah"
+          }
+        ]
+      },
+      "Patient.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "phone"
+          },
+          "ContactPoint.value": {
+            "string.value": "0690383372"
+          },
+          "ContactPoint.use": {
+            "code.value": "mobile"
+          }
+        }
+      ]
+    }
+  ],
+  "Patient.communication": [
+    {
+      "Patient.communication.language": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "urn:ietf:bcp:47"
+            },
+            "Coding.code": {
+              "code.value": "nl"
+            },
+            "Coding.display": {
+              "string.value": "Dutch"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Nederlands"
+        }
+      },
+      "Patient.communication.preferred": {
+        "boolean.value": true
+      }
+    }
+  ],
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "string.value": "Organization/f001"
+    },
+    "Reference.display": {
+      "string.value": "Burgers University Medical Centre"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/f001"
+  }
+}

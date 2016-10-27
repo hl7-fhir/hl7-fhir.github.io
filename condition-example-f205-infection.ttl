@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Condition/f205> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f205"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f205</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: differential</p><p><b>code</b>: Bacterial infectious disease <span>(Details : {SNOMED CT code '87628006' = 'Bacterial infectious disease (disorder)', given as 'Bacterial infectious disease'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>dateRecorded</b>: Apr 4, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p></div>"
+  ];
+  fhir:Condition.clinicalStatus [ fhir:value "active"];
+  fhir:Condition.verificationStatus [ fhir:value "differential"];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:87628006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "87628006" ];
+       fhir:Coding.display [ fhir:value "Bacterial infectious disease" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:Condition.dateRecorded [ fhir:value "2013-04-04"^^xsd:date];
+  fhir:Condition.asserter [
+     fhir:link <http://hl7.org/fhir/Practitioner/f201>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f201" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

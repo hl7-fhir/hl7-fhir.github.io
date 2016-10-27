@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Group/101> a fhir:Group;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "101"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Herd of 25 horses</p>\n      <p>Gender: mixed</p>\n      <p>Owner: John Smith</p>\n    </div>"
+  ];
+  fhir:Group.type [ fhir:value "animal"];
+  fhir:Group.actual [ fhir:value "true"^^xsd:boolean];
+  fhir:Group.code [
+     fhir:CodeableConcept.text [ fhir:value "Horse" ]
+  ];
+  fhir:Group.name [ fhir:value "John's herd"];
+  fhir:Group.quantity [ fhir:value "25"^^xsd:nonNegativeInteger];
+  fhir:Group.characteristic [
+     fhir:index 0;
+     fhir:Group.characteristic.code [
+       fhir:CodeableConcept.text [ fhir:value "gender" ]
+     ];
+     fhir:Group.characteristic.valueCodeableConcept [
+       fhir:CodeableConcept.text [ fhir:value "mixed" ]
+     ];
+     fhir:Group.characteristic.exclude [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 1;
+     fhir:Group.characteristic.code [
+       fhir:CodeableConcept.text [ fhir:value "owner" ]
+     ];
+     fhir:Group.characteristic.valueCodeableConcept [
+       fhir:CodeableConcept.text [ fhir:value "John Smith" ]
+     ];
+     fhir:Group.characteristic.exclude [ fhir:value "false"^^xsd:boolean ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

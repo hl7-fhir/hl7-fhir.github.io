@@ -1,0 +1,146 @@
+{
+  "@context": "http://build.fhir.org/Condition.jsonld",
+  "@context": "http://hl7.org/fhir/Condition/f204",
+  "Resource.id": {
+    "id.value": "f204"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f204</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: differential</p><p><b>category</b>: Problem <span>(Details : {SNOMED CT code '55607006' = 'Problem (finding)', given as 'Problem'}; {http://hl7.org/fhir/condition-category code 'problem-list-item' = 'Problem List Item)</span></p><p><b>severity</b>: Severe <span>(Details : {SNOMED CT code '24484000' = 'Severe (severity modifier) (qualifier value)', given as 'Severe'})</span></p><p><b>code</b>: Acute renal insufficiency specified as due to procedure <span>(Details : {SNOMED CT code '36225005' = 'Acute renal failure due to procedure (disorder)', given as 'Acute renal insufficiency specified as due to procedure'})</span></p><p><b>bodySite</b>: Kidney <span>(Details : {SNOMED CT code '181414000' = 'Entire kidney (body structure)', given as 'Kidney'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>context</b>: <a>Roel's encounter on March eleventh</a></p><p><b>onset</b>: Mar 11, 2013</p><p><b>abatement</b>: Mar 20, 2013</p><p><b>dateRecorded</b>: Mar 11, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p><h3>Stages</h3><table><tr><td>-</td><td><b>Summary</b></td></tr><tr><td>*</td><td>Temporary <span>(Details : {SNOMED CT code '14803004' = 'Transitory (qualifier value)', given as 'Temporary'})</span></td></tr></table></div>"
+    }
+  },
+  "Condition.clinicalStatus": {
+    "code.value": "active"
+  },
+  "Condition.verificationStatus": {
+    "code.value": "differential"
+  },
+  "Condition.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "55607006"
+          },
+          "Coding.display": {
+            "string.value": "Problem"
+          }
+        },
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/condition-category"
+          },
+          "Coding.code": {
+            "code.value": "problem-list-item"
+          }
+        }
+      ]
+    }
+  ],
+  "Condition.severity": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "24484000"
+        },
+        "Coding.display": {
+          "string.value": "Severe"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#24484000"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "36225005"
+        },
+        "Coding.display": {
+          "string.value": "Acute renal insufficiency specified as due to procedure"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#36225005"
+  },
+  "Condition.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "181414000"
+          },
+          "Coding.display": {
+            "string.value": "Kidney"
+          }
+        }
+      ]
+    }
+  ],
+  "Condition.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f201"
+    },
+    "Reference.display": {
+      "string.value": "Roel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Condition.context": {
+    "Reference.reference": {
+      "string.value": "Encounter/f203"
+    },
+    "Reference.display": {
+      "string.value": "Roel's encounter on March eleventh"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f203"
+  },
+  "Condition.onsetDateTime": {
+    "dateTime.value": "2013-03-11"
+  },
+  "Condition.abatementDateTime": {
+    "dateTime.value": "2013-03-20"
+  },
+  "Condition.dateRecorded": {
+    "date.value": "2013-03-11"
+  },
+  "Condition.asserter": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f201"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "Condition.stage": {
+    "Condition.stage.summary": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "14803004"
+          },
+          "Coding.display": {
+            "string.value": "Temporary"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#14803004"
+    }
+  }
+}

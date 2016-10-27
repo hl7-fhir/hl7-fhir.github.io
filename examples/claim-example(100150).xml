@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><Claim xmlns="http://hl7.org/fhir">
+  <id value="100150"/>
+
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the Oral Health Claim</div>
+  </text>
+
+  <identifier>
+      <system value="http://happyvalley.com/claim"/>
+      <value value="12345"/>
+  </identifier>
+ 
+  <status value="active"/>
+
+  <type>
+    <system value="http://hl7.org/fhir/ex-claimtype"/>
+    <code value="oral"/>
+  </type>
+  
+  <created value="2014-08-16"/>
+
+  <insurer>
+    <reference value="Organization/2"/>
+  </insurer>
+
+  <organization>
+    <reference value="Organization/1"/>
+  </organization>
+
+  <use value="complete"/>
+
+  <priority>
+    <code value="normal"/>
+  </priority>
+
+  <payee>
+    <type>
+      <code value="provider"/>
+    </type>
+  </payee>
+ 
+  <diagnosis>
+    <sequence value="1"/>
+    <diagnosis>
+      <code value="123456"/>
+    </diagnosis>
+  </diagnosis>
+ 
+  <patient>
+    <reference value="Patient/1"/>
+  </patient>
+ 
+  <coverage>
+    <sequence value="1"/>
+    <focal value="true"/>
+    <coverage>
+      <reference value="Coverage/9876B1"/>
+    </coverage>
+  </coverage>
+  
+ <item>
+   <sequence value="1"/>
+   <careTeam>
+     <provider>
+       <reference value="Practitioner/example"/>
+     </provider>
+   </careTeam>
+   <service>
+     <code value="1200"/>
+   </service>
+   <servicedDate value="2014-08-16"/>
+   <unitPrice>
+      <value value="135.57"/>
+      <system value="urn:iso:std:iso:4217"/>
+      <code value="USD"/> 
+   </unitPrice> 
+   <net>
+      <value value="135.57"/>
+      <system value="urn:iso:std:iso:4217"/>
+      <code value="USD"/> 
+   </net> 
+  </item>
+
+</Claim>

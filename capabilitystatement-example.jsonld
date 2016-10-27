@@ -1,0 +1,360 @@
+{
+  "@context": "http://build.fhir.org/CapabilityStatement.jsonld",
+  "@context": "http://hl7.org/fhir/CapabilityStatement/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>The EHR Server supports the following transactions for the resource Person: read, vread, \n        update, history, search(name,gender), create and updates.</p>\n      \n      <p>The EHR System supports the following message: admin-notify::Person.</p>\n      \n      <p>The EHR Application has a \n        <a href=\"http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796\">general document profile</a>.\n      </p>\n    \n    </div>"
+    }
+  },
+  "CapabilityStatement.url": {
+    "uri.value": "68D043B5-9ECF-4559-A57A-396E0D452311"
+  },
+  "CapabilityStatement.version": {
+    "string.value": "20130510"
+  },
+  "CapabilityStatement.name": {
+    "string.value": "ACME EHR capability statement"
+  },
+  "CapabilityStatement.status": {
+    "code.value": "draft"
+  },
+  "CapabilityStatement.experimental": {
+    "boolean.value": true
+  },
+  "CapabilityStatement.date": {
+    "dateTime.value": "2012-01-04"
+  },
+  "CapabilityStatement.publisher": {
+    "string.value": "ACME Corporation"
+  },
+  "CapabilityStatement.contact": [
+    {
+      "ContactDetail.name": {
+        "string.value": "System Administrator"
+      },
+      "ContactDetail.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "email"
+          },
+          "ContactPoint.value": {
+            "string.value": "wile@acme.org"
+          }
+        }
+      ]
+    }
+  ],
+  "CapabilityStatement.description": {
+    "markdown.value": "This is the FHIR capability statement for the main EHR at ACME for the private interface - it does not describe the public interface"
+  },
+  "CapabilityStatement.purpose": {
+    "markdown.value": "Main EHR capability statement, published for contracting and operational support"
+  },
+  "CapabilityStatement.copyright": {
+    "markdown.value": "Copyright © Acme Healthcare and GoodCorp EHR Systems"
+  },
+  "CapabilityStatement.kind": {
+    "code.value": "instance"
+  },
+  "CapabilityStatement.software": {
+    "CapabilityStatement.software.name": {
+      "string.value": "EHR"
+    },
+    "CapabilityStatement.software.version": {
+      "string.value": "0.00.020.2134"
+    },
+    "CapabilityStatement.software.releaseDate": {
+      "dateTime.value": "2012-01-04"
+    }
+  },
+  "CapabilityStatement.implementation": {
+    "CapabilityStatement.implementation.description": {
+      "string.value": "main EHR at ACME"
+    },
+    "CapabilityStatement.implementation.url": {
+      "uri.value": "http://10.2.3.4/fhir"
+    }
+  },
+  "CapabilityStatement.fhirVersion": {
+    "id.value": "1.0.0"
+  },
+  "CapabilityStatement.acceptUnknown": {
+    "code.value": "both"
+  },
+  "CapabilityStatement.format": [
+    {
+      "code.value": "xml"
+    },
+    {
+      "code.value": "json"
+    }
+  ],
+  "CapabilityStatement.rest": [
+    {
+      "CapabilityStatement.rest.mode": {
+        "code.value": "server"
+      },
+      "CapabilityStatement.rest.documentation": {
+        "string.value": "Main FHIR endpoint for acem health"
+      },
+      "CapabilityStatement.rest.security": {
+        "CapabilityStatement.rest.security.cors": {
+          "boolean.value": true
+        },
+        "CapabilityStatement.rest.security.service": [
+          {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "uri.value": "http://hl7.org/fhir/restful-security-service"
+                },
+                "Coding.code": {
+                  "code.value": "SMART-on-FHIR"
+                }
+              }
+            ]
+          }
+        ],
+        "CapabilityStatement.rest.security.description": {
+          "string.value": "See Smart on FHIR documentation"
+        },
+        "CapabilityStatement.rest.security.certificate": [
+          {
+            "CapabilityStatement.rest.security.certificate.type": {
+              "code.value": "application/jwt"
+            },
+            "CapabilityStatement.rest.security.certificate.blob": {
+              "base64Binary.value": "IHRoaXMgYmxvYiBpcyBub3QgdmFsaWQ="
+            }
+          }
+        ]
+      },
+      "CapabilityStatement.rest.resource": [
+        {
+          "CapabilityStatement.rest.resource.type": {
+            "code.value": "Patient"
+          },
+          "CapabilityStatement.rest.resource.profile": {
+            "Reference.reference": {
+              "string.value": "http://fhir.hl7.org/base/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416"
+            },
+            "Resource.reference": "http://fhir.hl7.org/base/StructureDefinition/7896271d-57f6-4231-89dc-dcc91eab2416"
+          },
+          "CapabilityStatement.rest.resource.interaction": [
+            {
+              "CapabilityStatement.rest.resource.interaction.code": {
+                "code.value": "read"
+              }
+            },
+            {
+              "CapabilityStatement.rest.resource.interaction.code": {
+                "code.value": "vread"
+              },
+              "CapabilityStatement.rest.resource.interaction.documentation": {
+                "string.value": "Only supported for patient records since 12-Dec 2012"
+              }
+            },
+            {
+              "CapabilityStatement.rest.resource.interaction.code": {
+                "code.value": "update"
+              }
+            },
+            {
+              "CapabilityStatement.rest.resource.interaction.code": {
+                "code.value": "history-instance"
+              }
+            },
+            {
+              "CapabilityStatement.rest.resource.interaction.code": {
+                "code.value": "create"
+              }
+            },
+            {
+              "CapabilityStatement.rest.resource.interaction.code": {
+                "code.value": "history-type"
+              }
+            }
+          ],
+          "CapabilityStatement.rest.resource.versioning": {
+            "code.value": "versioned-update"
+          },
+          "CapabilityStatement.rest.resource.readHistory": {
+            "boolean.value": true
+          },
+          "CapabilityStatement.rest.resource.updateCreate": {
+            "boolean.value": false
+          },
+          "CapabilityStatement.rest.resource.conditionalCreate": {
+            "boolean.value": true
+          },
+          "CapabilityStatement.rest.resource.conditionalUpdate": {
+            "boolean.value": false
+          },
+          "CapabilityStatement.rest.resource.conditionalDelete": {
+            "code.value": "not-supported"
+          },
+          "CapabilityStatement.rest.resource.searchInclude": [
+            {
+              "string.value": "Organization"
+            }
+          ],
+          "CapabilityStatement.rest.resource.searchRevInclude": [
+            {
+              "string.value": "Person"
+            }
+          ],
+          "CapabilityStatement.rest.resource.searchParam": [
+            {
+              "CapabilityStatement.rest.resource.searchParam.name": {
+                "string.value": "identifier"
+              },
+              "CapabilityStatement.rest.resource.searchParam.definition": {
+                "uri.value": "http://hl7.org/fhir/SearchParameter/Patient-identifier"
+              },
+              "CapabilityStatement.rest.resource.searchParam.type": {
+                "code.value": "token"
+              },
+              "CapabilityStatement.rest.resource.searchParam.documentation": {
+                "string.value": "Only supports search by institution MRN"
+              },
+              "CapabilityStatement.rest.resource.searchParam.modifier": [
+                {
+                  "code.value": "missing"
+                }
+              ]
+            },
+            {
+              "CapabilityStatement.rest.resource.searchParam.name": {
+                "string.value": "careprovider"
+              },
+              "CapabilityStatement.rest.resource.searchParam.definition": {
+                "uri.value": "http://hl7.org/fhir/SearchParameter/Patient-careprovider"
+              },
+              "CapabilityStatement.rest.resource.searchParam.type": {
+                "code.value": "reference"
+              },
+              "CapabilityStatement.rest.resource.searchParam.target": [
+                {
+                  "code.value": "Organization"
+                }
+              ],
+              "CapabilityStatement.rest.resource.searchParam.modifier": [
+                {
+                  "code.value": "missing"
+                }
+              ],
+              "CapabilityStatement.rest.resource.searchParam.chain": [
+                {
+                  "string.value": "name"
+                },
+                {
+                  "string.value": "identifier"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "CapabilityStatement.rest.interaction": [
+        {
+          "CapabilityStatement.rest.interaction.code": {
+            "code.value": "transaction"
+          }
+        },
+        {
+          "CapabilityStatement.rest.interaction.code": {
+            "code.value": "history-system"
+          }
+        }
+      ],
+      "CapabilityStatement.rest.compartment": [
+        {
+          "uri.value": "http://hl7.org/fhir/compartment/Patient"
+        }
+      ]
+    }
+  ],
+  "CapabilityStatement.messaging": [
+    {
+      "CapabilityStatement.messaging.endpoint": [
+        {
+          "CapabilityStatement.messaging.endpoint.protocol": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/message-transport"
+            },
+            "Coding.code": {
+              "code.value": "mllp"
+            }
+          },
+          "CapabilityStatement.messaging.endpoint.address": {
+            "uri.value": "mllp:10.1.1.10:9234"
+          }
+        }
+      ],
+      "CapabilityStatement.messaging.reliableCache": {
+        "unsignedInt.value": 30
+      },
+      "CapabilityStatement.messaging.documentation": {
+        "string.value": "ADT A08 equivalent for external system notifications"
+      },
+      "CapabilityStatement.messaging.event": [
+        {
+          "CapabilityStatement.messaging.event.code": {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/message-type"
+            },
+            "Coding.code": {
+              "code.value": "admin-notify"
+            }
+          },
+          "CapabilityStatement.messaging.event.category": {
+            "code.value": "Consequence"
+          },
+          "CapabilityStatement.messaging.event.mode": {
+            "code.value": "receiver"
+          },
+          "CapabilityStatement.messaging.event.focus": {
+            "code.value": "Patient"
+          },
+          "CapabilityStatement.messaging.event.request": {
+            "Reference.reference": {
+              "string.value": "StructureDefinition/daf-patient"
+            },
+            "Resource.reference": "http://hl7.org/fhir//StructureDefinition/daf-patient"
+          },
+          "CapabilityStatement.messaging.event.response": {
+            "Reference.reference": {
+              "string.value": "StructureDefinition/MessageHeader"
+            },
+            "Resource.reference": "http://hl7.org/fhir//StructureDefinition/MessageHeader"
+          },
+          "CapabilityStatement.messaging.event.documentation": {
+            "string.value": "Notification of an update to a patient resource. changing the links is not supported"
+          }
+        }
+      ]
+    }
+  ],
+  "CapabilityStatement.document": [
+    {
+      "CapabilityStatement.document.mode": {
+        "code.value": "consumer"
+      },
+      "CapabilityStatement.document.documentation": {
+        "string.value": "Basic rules for all documents in the EHR system"
+      },
+      "CapabilityStatement.document.profile": {
+        "Reference.reference": {
+          "string.value": "http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796"
+        },
+        "Resource.reference": "http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796"
+      }
+    }
+  ]
+}

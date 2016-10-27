@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Condition/example2> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mild Asthma (Date: 12-Nov 2012)</div>"
+  ];
+  fhir:Condition.clinicalStatus [ fhir:value "active"];
+  fhir:Condition.verificationStatus [ fhir:value "confirmed"];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/condition-category" ];
+       fhir:Coding.code [ fhir:value "problem-list-item" ];
+       fhir:Coding.display [ fhir:value "Problem List Item" ]
+     ]
+  ];
+  fhir:Condition.severity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:255604002;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "255604002" ];
+       fhir:Coding.display [ fhir:value "Mild" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.text [ fhir:value "Asthma" ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2012-11-12"^^xsd:date] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

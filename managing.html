@@ -1,0 +1,270 @@
+﻿<!DOCTYPE HTML>
+  <!-- However 
+applications may need to replace Service Root URLs. This may be needed 
+as application URLs may change or in uses of FHIR within internal 
+eco-systems, local configuration may dictate that the provider of 
+a resource is different to that claimed by any particular provider 
+or consumer. -->  <!-- A person or animal receiving care at multiple organizations will therefore have its information present in multiple Patient Resources.			
+ 
+ What are the explicit mechanisms that should be used to synchronize them? This dynamic behavior,  is not covered at any depth (that I can see), except to suggest that a message that emulates a HL7 v2 or V3 event be employed. The entire notion of dynamic behavior of a model employing resources is not covered well. If one happens to employ RESTful services (not required AFAICS) then, yes, we have CRUD verb mappings on resources, but no real discussion of the dynamic behavior of multiple resources involved in transactions/events, except to fall back on HL7 v2 and V3. Am I missing something? --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Managing - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/managing.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="implsupport-module.html"><img src="implsupport.png"/> Implementation Support</a></li>
+        <li><b>Managing Resource Identity</b></li>          <!-- managing.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="identity"/>
+<h2 class="self-link-parent"><span class="sectioncount">7.9<a name="7.9"> </a></span> Managing Resource Identity <a href="managing.html#7.9" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+Each resource has a known identity, which is a URL. The identity is not stored 
+inside the resource, but must be tracked by systems handling resources. For 
+RESTful systems, the resource identity is the same as the URL by which it is found. 
+When a resource is packaged in a <a href="bundle.html">bundle</a> (e.g. for 
+<a href="messaging.html">messages</a> or <a href="documents.html">documents</a>, or 
+<a href="services.html">exchanged in a service</a>), the id is included along 
+with the resource. When systems using FHIR resources are deployed in an implementation
+context where there is more than two systems exchanging resources, the way that
+resources are identified with URLs needs to be managed carefully.
+</p>
+
+<p>
+Note that many resources also have an identifier element, and usually there can be 
+multiple identifiers. This identifier is a logical identifier for the concept that 
+the resource describes, and is different from the identity discussed in this section, 
+which is the literal identity of the resource. Note that there are often multiple 
+resource instances that describe the same concept across multiple systems, e.g. each 
+application keeps its own copy of the patient information in a 
+<a href="patient.html">Patient</a> resource. This can even exist within a single 
+system, such as in the case of <a href="patient.html#links">patient duplicates</a>).
+</p>
+
+<a name="using"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.9.1</span> Using Resources <a href="managing.html#using" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Resources are used in a variety of circumstances. Generally, these can be categorized into 3 different scenarios:
+</p>
+<ol>
+ <li><b>Closed Trading System</b>: the resources are only ever exchanged between fixed systems in a tightly controlled 
+community, such as a single EHR system with multiple modules. There is only one master server for each resource type, and resources are managed
+by that server. In this context, the <a href="resource.html#id">logical id</a> of a resource is sufficient 
+to fully identify the resource</li>
+
+ <li><b>Open system</b>: there are many peer servers, each managing a set of resources of different types. 
+In order to identify resources, a full URL reference to the origin server is required. The grand example of 
+an open system is the World Wide Web</li>
+
+ <li><b>Partially closed, inter-linked systems</b>: a mixture of both closed and open systems - trading communities that are tightly managed, but have managed 
+interactions with other closed trading systems, or with the world-wide web, or both. In fact, 
+this combination appears to be the most likely scenario for current real-world healthcare business solutions</li>
+</ol>
+<p>
+These combinations are why either relative (logical) or absolute references are allowed, and why 
+a logical id is always required, in order to enable seamless exchange amongst partially closed trading systems.
+</p>
+<a name="distributed"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">7.9.2</span> Copying Resources and Re-identification <a href="managing.html#distributed" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+When resources are exchanged between systems, they may need to be re-identified (i.e. assigned a new logical resource id).
+When a resource is re-identified, nothing in the resource changes, but any references that point to the resource
+need to be updated. Whether re-identification is required or not depends on the context, as does how resource
+references are updated.
+</p>
+<p>
+The normal case is that a client/receiving system accepts the server/sender's identification of a resource 
+at face value, whether it is a relative or absolute reference. When the client/receiver wants to follow
+resource references, they are done using the server id (typically either by http calls or locating them 
+in a <a href="bundle.html">bundle</a>), but other arrangements are possible. In such cases, there is no need for re-identification. 
+</p>
+<p>
+Another scenario is for a client to retrieve a resource from a server, and make its own local persistent
+copy. If the local resource has a life-cycle of its own (i.e. it is not just a cached resource), then it 
+needs to have its own identity; i.e. the resource must be re-identified. The simplest case is that the
+client only is keeping local copies of resources from a single server. In these cases, the client can 
+simply replace the root URL and keep the logical id of the resource the same. In fact, if the server
+is using relative references, then this change doesn't involve any actual changes to the resources, it only
+means a re-interpretation of the references. 
+</p>
+<p>
+In some cases, however, the client may deal with multiple servers. In this case, the logical id of the 
+resource is not guaranteed to be unique (unless all resources have a UUID for the logical id, which is 
+allowed but not required). When the client cannot be sure that the resource identities are unique, it 
+will have to re-identify the resources. In practice this means that the client needs to keep some kind of
+identity translation table, and update references to the resources it has copied locally when other resources 
+are received.
+</p>	
+<p>
+The case of a gateway system that migrates resources from one ecosystem to another is very similar.
+In some limited cases, it can leave the logical id of the resources unchanged as resources are copied
+from one closed system to another. However in more complicated cases, it will have to modify the 
+resource references as resources pass across the gateway. 
+</p>
+<blockquote class="dstu-note">
+<a name="dstu"> </a>
+<p>
+<b>DSTU Note:</b>  In its current form, FHIR allows various convenient implementer practices around 
+resource identification that make integration across eco-system boundaries more difficult. 
+In particular, either only allowing UUIDs for logical IDs or only allowing absolute references 
+would make the boundary management problem easier but remove useful and convenient flexibility for 
+other uses of FHIR.
+</p>
+<p>
+Feedback is welcome <a href="http://wiki.hl7.org/index.php?title=FHIR_Specification_Feedback_(DSTU_2)">here <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+
+</blockquote>
+
+</div>
+
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fmanaging.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fmanaging.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

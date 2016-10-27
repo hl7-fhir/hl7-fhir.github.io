@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Definition"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/StructureDefinition/Definition"/>
+  <name value="Definition"/>
+  <title value="definition"/>
+  <status value="draft"/>
+  <publisher value="Health Level Seven International fhir"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="Logical Model: A pattern to be followed by resources that represent a specific proposal, plan and/or order for some sort of action or service."/>
+  <fhirVersion value="1.7.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="w5"/>
+    <uri value="http://hl7.org/fhir/w5"/>
+    <name value="W5 Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <snapshot>
+    <element id="Definition">
+      <path value="Definition"/>
+      <short value="Definition Pattern"/>
+      <definition value="A pattern to be followed by resources that represent a specific proposal, plan and/or order for some sort of action or service."/>
+      <min value="0"/>
+      <max value="*"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act[moodCode&lt;=DEFN]"/>
+      </mapping>
+    </element>
+    <element id="Definition.identifier">
+      <path value="Definition.identifier"/>
+      <short value="Business Identifer for definition/protocol"/>
+      <definition value="Identifiers assigned to this request by the requester, performer and other systems."/>
+      <requirements value="Allows identification of the definition as it is known by various participating systems and in a way that remains consistent across servers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".identifier"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element id="Definition.definition">
+      <path value="Definition.definition"/>
+      <short value="Instantiates protocol or definition"/>
+      <definition value="A protocol, guideline, orderset or other definition that is adhered to in whole or in part by this definition."/>
+      <comments value="[The allowed reference resources may be adjusted as appropriate for the request resource]."/>
+      <requirements value="Protocols and order sets may be refinements of more generic protocols and order sets."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Definition"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=DEFN].target"/>
+      </mapping>
+    </element>
+    <element id="Definition.parent">
+      <path value="Definition.parent"/>
+      <short value="Part of referenced definition"/>
+      <definition value="A larger definition of which this particular definition is a component or step."/>
+      <comments value="[The allowed reference resources may be adjusted as appropriate for the event resource]."/>
+      <requirements value="E.g. Drug administration as part of a procedure, procedure as part of observation, etc."/>
+      <alias value="container"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Definition"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[moodCode=DEFN]"/>
+      </mapping>
+    </element>
+    <element id="Definition.replaces">
+      <path value="Definition.replaces"/>
+      <short value="Request(s) replaced by this request"/>
+      <definition value="Completed or terminated request(s) whose function is taken by this new request."/>
+      <requirements value="As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance."/>
+      <alias value="supersedes"/>
+      <alias value="prior"/>
+      <alias value="renewed order"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Definition"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=RPLC].target"/>
+      </mapping>
+    </element>
+    <element id="Definition.status">
+      <path value="Definition.status"/>
+      <short value="draft | active | withdrawn"/>
+      <definition value="The current state of the definition."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <binding>
+        <strength value="required"/>
+        <description value="Codes identifying the stage lifecycle stage of a definition"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/definition-status"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".status"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="status"/>
+      </mapping>
+    </element>
+    <element id="Definition.subject[x]">
+      <path value="Definition.subject[x]"/>
+      <short value="Type of individual the defined service is for"/>
+      <definition value="A code or group definition that describes the intended subject of instantiations of this definition."/>
+      <requirements value="Many protocols, order sets and guidelines are inted for use only with specific types of patients or subjects."/>
+      <alias value="patient"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <strength value="example"/>
+        <description value="Codes identifying the type of subject intended to be the recpient or focus of the defined action.  These should ideally be consistent across definition resources."/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="who.focus"/>
+      </mapping>
+    </element>
+    <element id="Definition.date">
+      <path value="Definition.date"/>
+      <short value="Date status first applied"/>
+      <definition value="For draft definitions, indicates the date of initial creation.  For active definitions, represents the date of activation.  For withdrawn definitions, indicates the date of withdrawal."/>
+      <alias value="created"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].time"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="when.recorded"/>
+      </mapping>
+    </element>
+    <element id="Definition.author">
+      <path value="Definition.author"/>
+      <short value="Who/what is requesting service"/>
+      <definition value="The individual or group with primary responsibility for the content of this definition."/>
+      <alias value="author"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="who.author"/>
+      </mapping>
+    </element>
+    <element id="Definition.performerType">
+      <path value="Definition.performerType"/>
+      <short value="Desired kind of service performer"/>
+      <definition value="The type of individual that is expected to act upon instances of this definition."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <strength value="example"/>
+        <description value="Identifies types of practitioners, devices or others that are intended to perform a defined action.  While the detailed constraints of relevant providers will vary by resource, some degree of consistency around recommended codes across request and definition resources would be desirable"/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRF].role[scoper.determinerCode=KIND].code"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="who.actor"/>
+      </mapping>
+    </element>
+  </snapshot>
+</StructureDefinition>

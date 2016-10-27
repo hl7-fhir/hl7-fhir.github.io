@@ -1,0 +1,71 @@
+{
+  "@context": "http://build.fhir.org/Coverage.jsonld",
+  "@context": "http://hl7.org/fhir/Coverage/7547E",
+  "Resource.id": {
+    "id.value": "7547E"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the European Health Insurance Card</div>"
+    }
+  },
+  "Coverage.status": {
+    "code.value": "active"
+  },
+  "Coverage.issuer": {
+    "Reference.identifier": {
+      "Identifier.system": {
+        "uri.value": "http://ehic.com/insurer"
+      },
+      "Identifier.value": {
+        "string.value": "123456789"
+      }
+    }
+  },
+  "Coverage.period": {
+    "Period.end": {
+      "dateTime.value": "2012-03-17"
+    }
+  },
+  "Coverage.type": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/v3/ActCode"
+    },
+    "Coding.code": {
+      "code.value": "EHCPOL"
+    },
+    "Coding.display": {
+      "string.value": "extended healthcare"
+    }
+  },
+  "Coverage.planholder": {
+    "Reference.reference": {
+      "string.value": "Patient/5"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/5"
+  },
+  "Coverage.beneficiary": {
+    "Reference.reference": {
+      "string.value": "Patient/5"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/5"
+  },
+  "Coverage.relationship": {
+    "Coding.code": {
+      "code.value": "self"
+    }
+  },
+  "Coverage.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://ehic.com/insurer/123456789/member"
+      },
+      "Identifier.value": {
+        "string.value": "A123456780"
+      }
+    }
+  ]
+}

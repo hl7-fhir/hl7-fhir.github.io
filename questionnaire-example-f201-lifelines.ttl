@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Questionnaire/f201> a fhir:Questionnaire;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f201"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>Lifelines Questionnaire 1 part 1\n  1. Do you have allergies?\n  2. General Questions:\n    2.a) What is your gender?\n    2.b) What is your date of birth?\n    2.c) What is your country of birth?\n    2.d) What is your marital status?\n    3. Intoxications:\n      3.a) Do you smoke?\n      3.b) Do you drink alcohol?</pre>\n    </div>"
+  ];
+  fhir:Questionnaire.url [ fhir:value "http://hl7.org/fhir/Questionnaire/f201"];
+  fhir:Questionnaire.status [ fhir:value "published"];
+  fhir:Questionnaire.date [ fhir:value "2010"^^xsd:gYear];
+  fhir:Questionnaire.concept [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "http://example.org/system/code/lifelines/nl" ];
+     fhir:Coding.code [ fhir:value "VL 1-1, 18-65_1.2.2" ];
+     fhir:Coding.display [ fhir:value "Lifelines Questionnaire 1 part 1" ]
+  ];
+  fhir:Questionnaire.subjectType [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:Questionnaire.item [
+     fhir:index 0;
+     fhir:Questionnaire.item.linkId [ fhir:value "1" ];
+     fhir:Questionnaire.item.text [ fhir:value "Do you have allergies?" ];
+     fhir:Questionnaire.item.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 1;
+     fhir:Questionnaire.item.linkId [ fhir:value "2" ];
+     fhir:Questionnaire.item.text [ fhir:value "General questions" ];
+     fhir:Questionnaire.item.type [ fhir:value "group" ];
+     fhir:Questionnaire.item.item [
+       fhir:index 0;
+       fhir:Questionnaire.item.linkId [ fhir:value "2.1" ];
+       fhir:Questionnaire.item.text [ fhir:value "What is your gender?" ];
+       fhir:Questionnaire.item.type [ fhir:value "string" ]
+     ], [
+       fhir:index 1;
+       fhir:Questionnaire.item.linkId [ fhir:value "2.2" ];
+       fhir:Questionnaire.item.text [ fhir:value "What is your date of birth?" ];
+       fhir:Questionnaire.item.type [ fhir:value "date" ]
+     ], [
+       fhir:index 2;
+       fhir:Questionnaire.item.linkId [ fhir:value "2.3" ];
+       fhir:Questionnaire.item.text [ fhir:value "What is your country of birth?" ];
+       fhir:Questionnaire.item.type [ fhir:value "string" ]
+     ], [
+       fhir:index 3;
+       fhir:Questionnaire.item.linkId [ fhir:value "2.4" ];
+       fhir:Questionnaire.item.text [ fhir:value "What is your marital status?" ];
+       fhir:Questionnaire.item.type [ fhir:value "string" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Questionnaire.item.linkId [ fhir:value "3" ];
+     fhir:Questionnaire.item.text [ fhir:value "Intoxications" ];
+     fhir:Questionnaire.item.type [ fhir:value "group" ];
+     fhir:Questionnaire.item.item [
+       fhir:index 0;
+       fhir:Questionnaire.item.linkId [ fhir:value "3.1" ];
+       fhir:Questionnaire.item.text [ fhir:value "Do you smoke?" ];
+       fhir:Questionnaire.item.type [ fhir:value "boolean" ]
+     ], [
+       fhir:index 1;
+       fhir:Questionnaire.item.linkId [ fhir:value "3.2" ];
+       fhir:Questionnaire.item.text [ fhir:value "Do you drink alchohol?" ];
+       fhir:Questionnaire.item.type [ fhir:value "boolean" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

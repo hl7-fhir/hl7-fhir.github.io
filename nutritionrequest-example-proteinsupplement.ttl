@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/NutritionRequest/proteinsupplement> a fhir:NutritionRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "proteinsupplement"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: proteinsupplement</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><h3>Supplements</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>ProductName</b></td><td><b>Schedule</b></td><td><b>Quantity</b></td><td><b>Instruction</b></td></tr><tr><td>*</td><td>High Protein Powder <span>(Details : {SNOMED CT code '442991000124104' = 'Adult high protein formula (product)', given as 'Adult high protein formula'}; {http://goodhealthhospital.org/supplement-type-codes code '1000' = '1000', given as 'High Protein Powder'})</span></td><td>Beneprotein</td><td>Starting Feb 10, 2015, Do at meals</td><td>1 scoop<span> (Details: UCUM code {scoop} = '{scoop}')</span></td><td>Beneprotein 1 scoop TID with meal.starting on  2015-02-10</td></tr></table></div>"
+  ];
+  fhir:NutritionRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://goodhealthhospital.org/nutrition-requests" ];
+     fhir:Identifier.value [ fhir:value "123" ]
+  ];
+  fhir:NutritionRequest.status [ fhir:value "active"];
+  fhir:NutritionRequest.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:NutritionRequest.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example>;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ];
+     fhir:Reference.display [ fhir:value "Inpatient" ]
+  ];
+  fhir:NutritionRequest.dateTime [ fhir:value "2014-09-17"^^xsd:date];
+  fhir:NutritionRequest.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+     fhir:Reference.display [ fhir:value "Dr Adam Careful" ]
+  ];
+  fhir:NutritionRequest.supplement [
+     fhir:index 0;
+     fhir:NutritionRequest.supplement.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:442991000124104;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "442991000124104" ];
+         fhir:Coding.display [ fhir:value "Adult high protein formula" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://goodhealthhospital.org/supplement-type-codes" ];
+         fhir:Coding.code [ fhir:value "1000" ];
+         fhir:Coding.display [ fhir:value "High Protein Powder" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "High Protein Powder" ]
+     ];
+     fhir:NutritionRequest.supplement.productName [ fhir:value "Beneprotein" ];
+     fhir:NutritionRequest.supplement.schedule [
+       fhir:index 0;
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2015-02-10"^^xsd:date ]
+         ];
+         fhir:Timing.repeat.when [ fhir:value "C" ]
+       ]
+     ];
+     fhir:NutritionRequest.supplement.quantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "scoop" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "{scoop}" ]
+     ];
+     fhir:NutritionRequest.supplement.instruction [ fhir:value "Beneprotein 1 scoop TID with meal.starting on  2015-02-10" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

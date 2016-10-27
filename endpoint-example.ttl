@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Endpoint/example> a fhir:Endpoint;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			Health Intersections CarePlan Hub<br/>\n			CarePlans can be uploaded to/from this loccation\n		</div>"
+  ];
+  fhir:Endpoint.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://example.org/enpoint-identifier" ];
+     fhir:Identifier.value [ fhir:value "epcp12" ]
+  ];
+  fhir:Endpoint.status [ fhir:value "active"];
+  fhir:Endpoint.name [ fhir:value "Health Intersections CarePlan Hub"];
+  fhir:Endpoint.managingOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/hl7>;
+     fhir:Reference.reference [ fhir:value "Organization/hl7" ]
+  ];
+  fhir:Endpoint.contact [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "endpointmanager@example.org" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Endpoint.period [
+     fhir:Period.start [ fhir:value "2014-09-01"^^xsd:date ]
+  ];
+  fhir:Endpoint.connectionType [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/endpoint-connection-type" ];
+     fhir:Coding.code [ fhir:value "hl7-fhir-rest" ]
+  ];
+  fhir:Endpoint.payloadType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+       fhir:Coding.code [ fhir:value "CarePlan" ]
+     ]
+  ];
+  fhir:Endpoint.payloadMimeType [
+     fhir:value "application/fhir+xml";
+     fhir:index 0
+  ];
+  fhir:Endpoint.address [ fhir:value "http://fhir3.healthintersections.com.au/open/CarePlan"];
+  fhir:Endpoint.header [
+     fhir:value "bearer-code BASGS534s4";
+     fhir:index 0
+  ];
+  fhir:Endpoint.publicKey [ fhir:value "-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqGKukO1De7zhZj6+H0qtjTkVxwTCpvKe4eCZ0 FPqri0cb2JZfXJ/DgYSF6vUpwmJG8wVQZKjeGcjDOL5UlsuusFncCzWBQ7RKNUSesmQRMSGkVb1/ 3j+skZ6UtW+5u09lHNsj6tQ51s1SPrCBkedbNf0Tp0GbMJDyR4e9T04ZZwIDAQAB -----END PUBLIC KEY-----"] .
+
+<http://hl7.org/fhir/Organization/hl7> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

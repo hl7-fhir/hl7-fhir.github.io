@@ -1,0 +1,321 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Updates - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/updates.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="implsupport-module.html"><img src="implsupport.png"/> Implementation Support</a></li>
+        <li><b>Variations between Submitted data and Retrieved data</b></li>          <!-- updates.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h2 class="self-link-parent"><span class="sectioncount">7.11<a name="7.11"> </a></span> Variations between Submitted data and Retrieved data <a href="updates.html#7.11" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+<a name="community"> </a>
+
+<p>
+Some of the time when using a FHIR interface, requests to create or update resource instances will behave 
+exactly as the initiator requested.  The desired record(s) will be created or revised within the target 
+system and a subsequent query of the data would show the exact same information as was submitted.  
+However, FHIR systems are not guaranteed to behave this way.  Without any other agreement between exchange 
+partners, FHIR systems are not obligated to store and return data as it was received.  In fact, for some 
+interoperability paradigms, they're not obligated to store any data at all.  This page discusses some of the 
+considerations around system behavior, including differences in expectations for systems interoperating using 
+REST, messaging, documents and services.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.1<a name="7.11.1"> </a></span> Data element support <a href="updates.html#7.11.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The most common reason for differences between what data is submitted to a system and what data can be extracted 
+from it is that the system doesn't support all of the data elements present in the instance received.  In the 
+base resource, no systems are required to support any particular set of extensions or even any particular subset 
+of core elements.
+</p>
+<p>
+For elements that are part of the resource, the expectation is that &quot;most&quot; systems will support the element.  
+i.e. most systems will support capturing a patient's name, gender and date of birth.  But &quot;most&quot; does not mean 
+&quot;all&quot;. It is possible to be fully FHIR conformant and claim to support the Patient resource, but be incapable 
+of storing any of those data elements.  There are use-cases where names may be unnecessary (e.g. agricultural 
+veterinary systems, anonymized reporting, etc.) and similar use-cases for almost every data element.  No FHIR 
+resource elements start off as <a href="elementdefinition-definitions.html#ElementDefinition.mustSupport">mustSupport</a> 
+and very few resource elements start off with a minimum cardinality other than &quot;0&quot;.
+</p>
+<p>
+In the case of extensions, the very nature of a concept being an extension means that the designers of the 
+specification expected that fewer than &quot;most&quot; systems would support the element, though support might vary 
+widely by context.  An extension might be used by 100% of systems in some country, discipline, etc. and not 
+used by any systems in another context.  In any event, there is no guarantee that an arbitrary 
+receiver will recognize and be able to persist any given extension.
+</p>
+<p>
+In order to know whether a particular data element is likely to be stored by a given server, a client should 
+check the <a href="capabilitystatement.html">Capability statement</a> of that server.  If, for a given resource, 
+the <a href="structuredefinition.html">StructureDefinition</a> pointed to indicates that the element or 
+extension is &quot;mustSupport=true&quot;, and the server is capable of storing and returning data in general, 
+then it would be expected that the system will be capable of storing and returning that data element.  
+(Some servers such as decision support systems might not be capable of storing or returning any received data.)
+</p>
+<p>
+All of these concerns around possibly not storing resource elements or extensions can hold whether the 
+data is sent using <a href="http.html">REST</a>, <a href="messaging.html">Messaging</a> or <a href="services.html">Services</a>.  
+However, with <a href="documents.html">documents</a>, a consuming system is expected to accept the entire 
+contents of the document without losing any information or altering it in any way.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.2<a name="7.11.2"> </a></span> System behavior <a href="updates.html#7.11.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Even if a system supports all of the data elements provided, not all systems will actually persist the data 
+received or be capable of returning it in response to a query.  <i>mustSupport</i> indicates that a system 
+supports an element but does not prescribe exactly what the system must do with supported elements.  Data might 
+be persisted, displayed, relayed, analyzed, tabulated or used in a variety of other fashions.  The behavior of a 
+given system should be unsurprising given its context, but it is still important to recognize that not all 
+systems will persist the data they receive.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.3<a name="7.11.3"> </a></span> Access permissions <a href="updates.html#7.11.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Even if a system stores a given data element, that does not mean it will always include that element when responding 
+to queries.  Systems will have access permssion rules that restrict who can see a given resource instance and, 
+occasionally, who can see a particular data element within a resource.  Systems responding to queries might 
+suppress records or may adjust the content of resource instances to exclude data elements the querying system 
+is not permitted to see.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.4<a name="7.11.4"> </a></span> Generated and inferred data <a href="updates.html#7.11.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Some servers may add additional data elements (or more commonly, extensions) based on information they 
+have generated or inferred from data in the resource, from other resources or other information of 
+which the server is aware.  i.e. an instance queried after being created or updated might have <i>more</i> 
+information present than was included on the originally submitted record
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.5<a name="7.11.5"> </a></span> Data integration <a href="updates.html#7.11.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Servers receiving updates from multiple sources may choose to be selective about what sources they 
+choose to trust for updates to certain information.  For example, a patient registry system might 
+choose to only allow updates to name, gender and date of birth from administrative systems but not 
+clinical systems.  If a system filters out patient address information from being disclosed to a 
+system when it queries, it will likely choose to not replace or eliminate the addresses it has on 
+file when it receives an update from that system.
+</p>
+<p>
+One approach commonly followed by HL7 version 2 messaging interfaces is to not update any elements 
+not included in an instance.  For example, if a Patient instance were received with no telecom or 
+contact information, all existing telecom and contact information would be retained and only those 
+elements included in the instance would be updated.  This same approach can be followed with FHIR, 
+however, unlike <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 V2 <img src="external.png" style="text-align: baseline"/></a>, FHIR does not have a defined construct to use to indicate that a particular 
+data element should explicitly be set to empty.  Systems wishing to fully emulate HL7 v2 behavior 
+will need to use an extension to mirror this behavior.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.6<a name="7.11.6"> </a></span> Ramifications of storage/retrieval variations <a href="updates.html#7.11.6" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+While changing data prior to storage or prior to returning query results is possible, it 
+should not be considered &quot;normal&quot; behavior.  It creates several challenges:
+</p>
+<ul>
+<li>
+Digital signatures will no longer be valid.  Any change to submitted data will break standard 
+signatures.  In theory, this could be mitigated by using a custom canonicalization for the 
+signature that excludes maleable elements.  However, this would require both sender and receiver 
+to agree on the alternate signature canonicalization.  The signature would still be considered 
+invalid by systems that were not party to the agreement.
+</li>
+<li>
+Workflows can be made more complex.  A system that sends a create and then sends an update 
+presuming that it has seen the most &quot;current&quot; version, could accidentally overwrite information 
+set by the server as part of the create process.
+</li>
+<li>
+Audit becomes more complicated.  The <a href="auditevent.html">AuditEvent</a> resource points 
+to a specific resource version when tracking what data was returned by a query.  If the record 
+is modified when it is returned, then the audit record will likely need to be supplemented with 
+information about what elements were filtered.
+</li>
+<li>
+Multiple views of the same information by different people (or even by the same people in 
+different contexts) may cause confusion, particularly when attempting to coordinate care across a 
+team.  Providing OperationOutcome instances containing warnings if information has been 
+suppressed may be helpful, though doing this may not be possible, depending on security 
+policy rules.
+</li>
+<li>
+If data is lost as part of the transmission process, then multiple stages of transmission 
+(or even round-tripping of data) could result in significant degradation as information 
+passes through multiple systems.
+</li>
+</ul>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.11.7<a name="7.11.7"> </a></span> Mitigation approaches for storage/retrieval variations <a href="updates.html#7.11.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+FHIR does provide a couple of mechanisms that can help with the issue 
+of a system that has received only partial data overwriting data that 
+was filtered from its record:
+</p>
+<ul>
+<li>
+For systems that enforce the use of <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19">ETags <img src="external.png" style="text-align: baseline"/></a> for 
+updates, the server can choose to not include an ETag when returning resource instances that have been modified in some way.  
+This will prevent updates from being performed.
+</li>
+<li>
+The <a href="v3/vs/SecurityIntegrityObservationValue/cs.html#SUBSETTED">SUBSETTED</a> <a href="security-labels.html">Security Label</a> 
+can be used to flag data that has had information removed.
+</li>
+</ul>
+<p>
+Note that using either of the above mechanisms may constitute a security breach in circumstances where the 
+individual or system accessing the data should not know that the record being reviewed has been 
+modified in any way.  (The presence of digital signatures would present a similar issue.)
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fupdates.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fupdates.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+    
+</body>
+</html>

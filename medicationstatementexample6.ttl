@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationStatement/example006> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example006"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example006</p><p><b>status</b>: active</p><p><b>medication</b>: Amoxicillin (product) <span>(Details : {SNOMED CT code '27658006' = 'Amoxicillin (product)', given as 'Amoxicillin (product)'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>effective</b>: Feb 1, 2014</p><p><b>informationSource</b>: <a>Peter Chalmers</a></p><p><b>dateAsserted</b>: Feb 22, 2014</p><p><b>notTaken</b>: N</p><p><b>note</b>: Father indicates they miss the occasional dose</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:27658006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "27658006" ];
+       fhir:Coding.display [ fhir:value "Amoxicillin (product)" ]
+     ]
+  ];
+  fhir:MedicationStatement.patient [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ];
+     fhir:Reference.display [ fhir:value "Donald Duck" ]
+  ];
+  fhir:MedicationStatement.effectiveDateTime [ fhir:value "2014-02-01"^^xsd:date];
+  fhir:MedicationStatement.informationSource [
+     fhir:link <http://hl7.org/fhir/RelatedPerson/peter>;
+     fhir:Reference.reference [ fhir:value "RelatedPerson/peter" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:MedicationStatement.dateAsserted [ fhir:value "2014-02-22"^^xsd:date];
+  fhir:MedicationStatement.notTaken [ fhir:value "N"];
+  fhir:MedicationStatement.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "Father indicates they miss the occasional dose" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:DosageInstruction.sequence [ fhir:value "1"^^xsd:int ];
+     fhir:DosageInstruction.text [ fhir:value "5ml three times daily" ];
+     fhir:DosageInstruction.asNeededBoolean [ fhir:value "false"^^xsd:boolean ];
+     fhir:DosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:260548002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "260548002" ];
+         fhir:Coding.display [ fhir:value "Oral" ]
+       ]
+     ];
+     fhir:DosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mL" ]
+     ];
+     fhir:DosageInstruction.maxDosePerPeriod [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "3"^^xsd:decimal ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "d" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/RelatedPerson/peter> a fhir:RelatedPerson .
+
+# -------------------------------------------------------------------------------------
+

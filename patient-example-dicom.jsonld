@@ -1,0 +1,102 @@
+{
+  "@context": "http://build.fhir.org/Patient.jsonld",
+  "@context": "http://hl7.org/fhir/Patient/dicom",
+  "Resource.id": {
+    "id.value": "dicom"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Patient MINT_TEST, ID = MINT1234. Age = 56y, Size =\n      1.83m, Weight = 72.58kg </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "uri.value": "http://nema.org/fhir/extensions#0010:1010"
+      },
+      "Extension.valueQuantity": {
+        "Quantity.value": {
+          "decimal.value": 56
+        },
+        "Quantity.unit": {
+          "string.value": "Y"
+        }
+      }
+    },
+    {
+      "Extension.url": {
+        "uri.value": "http://nema.org/fhir/extensions#0010:1020"
+      },
+      "Extension.valueQuantity": {
+        "Quantity.value": {
+          "decimal.value": 1.83
+        },
+        "Quantity.unit": {
+          "string.value": "m"
+        }
+      }
+    },
+    {
+      "Extension.url": {
+        "uri.value": "http://nema.org/fhir/extensions#0010:1030"
+      },
+      "Extension.valueQuantity": {
+        "Quantity.value": {
+          "decimal.value": 72.58
+        },
+        "Quantity.unit": {
+          "string.value": "kg"
+        }
+      }
+    }
+  ],
+  "Patient.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://nema.org/examples/patients"
+      },
+      "Identifier.value": {
+        "string.value": "MINT1234"
+      }
+    }
+  ],
+  "Patient.active": {
+    "boolean.value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.family": [
+        {
+          "string.value": "MINT_TEST"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "code.value": "male",
+    "Element.extension": [
+      {
+        "Extension.url": {
+          "uri.value": "http://nema.org/examples/extensions#gender"
+        },
+        "Extension.valueCoding": {
+          "Coding.system": {
+            "uri.value": "http://nema.org/examples/gender"
+          },
+          "Coding.code": {
+            "code.value": "M"
+          }
+        }
+      }
+    ]
+  },
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "string.value": "Organization/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/1"
+  }
+}

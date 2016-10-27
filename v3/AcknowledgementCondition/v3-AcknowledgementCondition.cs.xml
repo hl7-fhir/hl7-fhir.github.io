@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="v3-AcknowledgementCondition"/>
+  <meta>
+    <lastUpdated value="2016-03-23T00:00:00.000+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Release Date: 2016-03-23</p>
+
+      <table class="grid">
+ 
+        <tr>
+          <td>
+            <b>Level</b>
+          </td>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>AL
+            <a name="AL"> </a>
+          </td>
+          <td>Always</td>
+          <td>
+                        Always send an acknowledgement.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>ER
+            <a name="ER"> </a>
+          </td>
+          <td>Error/reject only</td>
+          <td>
+                        Send an acknowledgement for error/reject conditions only.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>NE
+            <a name="NE"> </a>
+          </td>
+          <td>Never</td>
+          <td>
+                        Never send an acknowledgement.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>SU
+            <a name="SU"> </a>
+          </td>
+          <td>Successful only</td>
+          <td>
+                        Send an acknowledgement for successful completions only.
+            <br/>
+
+                     
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/v3/AcknowledgementCondition"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.5.1050"/>
+  </identifier>
+  <version value="2016-03-23"/>
+  <name value="v3 Code System AcknowledgementCondition"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7, Inc"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-03-23T00:00:00+00:00"/>
+  <description value=" The codes identify the conditions under which accept acknowledgements are required to be returned in response to this message. Note that accept acknowledgement address two different issues at the same time: reliable transport as well as syntactical correctness"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/v3-AcknowledgementCondition"/>
+  <hierarchyMeaning value="subsumes"/>
+  <content value="complete"/>
+  <property>
+    <code value="inactive"/>
+    <uri value="http://hl7.org/fhir/concept-properties#inactive"/>
+    <description value="True if the concept is not considered active - e.g. not a valid concept any more"/>
+    <type value="boolean"/>
+  </property>
+  <concept>
+    <code value="AL"/>
+    <display value="Always"/>
+    <definition value="Always send an acknowledgement."/>
+  </concept>
+  <concept>
+    <code value="ER"/>
+    <display value="Error/reject only"/>
+    <definition value="Send an acknowledgement for error/reject conditions only."/>
+  </concept>
+  <concept>
+    <code value="NE"/>
+    <display value="Never"/>
+    <definition value="Never send an acknowledgement."/>
+  </concept>
+  <concept>
+    <code value="SU"/>
+    <display value="Successful only"/>
+    <definition value="Send an acknowledgement for successful completions only."/>
+    <property>
+      <code value="notSelectable"/>
+      <valueBoolean value="true"/>
+    </property>
+  </concept>
+</CodeSystem>

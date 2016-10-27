@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="cm-contact-point-use-v3"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>v3 map for ContactPointUse (http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v3)</h2>
+      <p>Mapping from 
+        <a href="valueset-contact-point-use.html">http://hl7.org/fhir/ValueSet/contact-point-use</a> to 
+        <a href="v3/AddressUse/vs.html">http://hl7.org/fhir/ValueSet/v3-AddressUse</a>
+      </p>
+      <p>DRAFT. Published on Oct 27, 2016 4:23:35 PM by HL7 (FHIR Project) (
+        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>, 
+        <a href="mailto:fhir@lists.hl7.org">fhir@lists.hl7.org</a>; ). 
+      </p>
+      <br/>
+      <table class="grid">
+        <tr>
+          <td colspan="1">
+            <b>Source Concept</b>
+          </td>
+          <td>
+            <b>Equivalence</b>
+          </td>
+          <td colspan="1">
+            <b>Destination Concept</b>
+          </td>
+          <td>
+            <b>Comments</b>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Code [http://hl7.org/fhir/contact-point-use]</b>
+          </td>
+          <td/>
+          <td>
+            <b>Code [http://hl7.org/fhir/v3/AddressUse]</b>
+          </td>
+          <td/>
+        </tr>
+        <tr>
+          <td>home (Home)</td>
+          <td>:equal</td>
+          <td>H (home address)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>work (Work)</td>
+          <td>:equal</td>
+          <td>WP (work place)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>temp (Temp)</td>
+          <td>:equal</td>
+          <td>TMP (temporary address)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>old (Old)</td>
+          <td>:narrower</td>
+          <td>OLD (no longer in use)</td>
+          <td>Old and Bad</td>
+        </tr>
+        <tr>
+          <td>mobile (Mobile)</td>
+          <td>:equal</td>
+          <td>MC (mobile contact))</td>
+          <td/>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v3"/>
+  <name value="v3 map for ContactPointUse"/>
+  <status value="draft"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <sourceReference>
+    <reference value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
+  </sourceReference>
+  <targetReference>
+    <reference value="http://hl7.org/fhir/ValueSet/v3-AddressUse"/>
+  </targetReference>
+  <group>
+    <source value="http://hl7.org/fhir/contact-point-use"/>
+    <target value="http://hl7.org/fhir/v3/AddressUse"/>
+    <element>
+      <code value="home"/>
+      <target>
+        <code value="H"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="work"/>
+      <target>
+        <code value="WP"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="temp"/>
+      <target>
+        <code value="TMP"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="old"/>
+      <target>
+        <code value="OLD"/>
+        <equivalence value="narrower"/>
+        <comments value="Old and Bad"/>
+      </target>
+      <target>
+        <code value="BAD"/>
+        <equivalence value="narrower"/>
+        <comments value="Old and Bad"/>
+      </target>
+    </element>
+    <element>
+      <code value="mobile"/>
+      <target>
+        <code value="MC"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

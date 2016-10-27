@@ -1,0 +1,328 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>QuestionnaireResponse - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/questionnaireresponse-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="questionnaireresponse.html">QuestionnaireResponse</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- questionnaireresponse.html / res-Detailed Descriptions / QuestionnaireResponse -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="questionnaireresponse.html">Content</a></li><li><a href="questionnaireresponse-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="questionnaireresponse-mappings.html">Mappings</a></li><li><a href="questionnaireresponse-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">2.30.9<a name="2.30.9"> </a></span> Resource QuestionnaireResponse - Detailed Descriptions <a href="questionnaireresponse-definitions.html#2.30.9" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the QuestionnaireResponse resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse"> </a><b>QuestionnaireResponse</b></td></tr>
+  <tr><td>Definition</td><td><p>A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the underlying questions.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td>Requirements</td><td><p>To support structured, hierarchical registration of data gathered using digital forms and other questionnaires.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Form; QuestionnaireAnswers</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.identifier"> </a><b>QuestionnaireResponse.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>A business identifier assigned to a particular completed (or partially completed) questionnaire.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Used for tracking, registration and other business purposes.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.basedOn"> </a><b>QuestionnaireResponse.basedOn</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the order, proposal or plan that is fulfilled in whole or in part by this Questionnaire.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="diagnosticrequest.html">DiagnosticRequest</a> | <a href="referralrequest.html">ReferralRequest</a> | <a href="careplan.html">CarePlan</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Supports traceability of authorization and confirmation of action on recommendations.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>order</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.parent"> </a><b>QuestionnaireResponse.parent</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a procedure or observation that this questionnaire was performed as part of the execution of.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="observation.html">Observation</a> | <a href="procedure.html">Procedure</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Composition of questionnaire responses will be handled by the parent questionnaire having answers that reference the child questionnaire.  For relationships to referrals, and other types of requests, use basedOn.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.questionnaire"> </a><b>QuestionnaireResponse.questionnaire</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the Questionnaire resource that defines the form for which answers are being provided.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="questionnaire.html">Questionnaire</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Needed to allow editing of the questionnaire in a manner that enforces the constraints of the original form.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Form</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.status"> </a><b>QuestionnaireResponse.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The lifecycle status of the questionnaire response as a whole.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>QuestionnaireResponseStatus: <a href="valueset-questionnaire-answers-status.html">Lifecycle status of the questionnaire response.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>The information on Questionnaire resources  may possibly be gathered during multiple sessions and altered after considered being finished. Questionnaire resources with just questions may serve as template forms, with the applicable publication statuses.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.subject"> </a><b>QuestionnaireResponse.subject</b></td></tr>
+  <tr><td>Definition</td><td><p>The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>The subject context must be known.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Patient; Focus</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.context"> </a><b>QuestionnaireResponse.context</b></td></tr>
+  <tr><td>Definition</td><td><p>The encounter or episode of care with primary association to the questionnaire.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="encounter.html">Encounter</a> | <a href="episodeofcare.html">EpisodeOfCare</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>A questionnaire that was initiated during an encounter but not fully completed during the encounter would still generally be associated with the encounter.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.author"> </a><b>QuestionnaireResponse.author</b></td></tr>
+  <tr><td>Definition</td><td><p>Person who received the answers to the questions in the QuestionnaireResponse and recorded them in the system.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="device.html">Device</a> | <a href="practitioner.html">Practitioner</a> | <a href="patient.html">Patient</a> | <a href="relatedperson.html">RelatedPerson</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Need to know who interpreted the subject's answers to the questions in the questionnaire, and selected the appropriate options for answers.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Laboratory; Service; Practitioner; Department; Company; Performer</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Mapping a subject's answers to multiple choice options and determining what to put in the textual answer is a matter of interpretation.  Authoring by device would indicate that some portion of the questionnaire had been auto-populated.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.authored"> </a><b>QuestionnaireResponse.authored</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and/or time that this version of the questionnaire response was authored.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td>Requirements</td><td><p>Clinicians need to be able to check the date that the information in the questionnaire was collected, to derive the context of the answers.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Date Created; Date published; Date Issued; Date updated</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May be different from the update time of the resource itself, because that is the status of the collection and authoring.  This element is optional to allow for systems that may not know the value, however it SHOULD be populated if possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.source"> </a><b>QuestionnaireResponse.source</b></td></tr>
+  <tr><td>Definition</td><td><p>The person who answered the questions about the subject.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a> | <a href="practitioner.html">Practitioner</a> | <a href="relatedperson.html">RelatedPerson</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>When answering questions about a subject that is minor, incapable of answering or an animal, another human source is used to answer the questions.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If not specified, no inference can be made about who provided the data.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item"> </a><b>QuestionnaireResponse.item</b></td></tr>
+  <tr><td>Definition</td><td><p>Corresponds to a group or question item from the original questionnaire.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.linkId"> </a><b>QuestionnaireResponse.item.linkId</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the item from the Questionnaire that corresponds to this item in the QuestionnaireResponse resource.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Items can repeat in the answers, so a direct 1..1 correspondence may not exist - requiring correspondence by identifier.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.text"> </a><b>QuestionnaireResponse.item.text</b></td></tr>
+  <tr><td>Definition</td><td><p>Text that is displayed above the contents of the group or as the text of the question being answered.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows the questionnaire response to be read without access to the questionnaire.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.subject"> </a><b>QuestionnaireResponse.item.subject</b></td></tr>
+  <tr><td>Definition</td><td><p>More specific subject this section's answers are about, details the subject given in QuestionnaireResponse.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Sometimes a group of answers is about a specific participant, artifact or piece of information in the patient's care or record, e.g. a specific Problem, RelatedPerson, Allergy etc.</p>
+</td></tr>
+  <tr><td>To Do</td><td>How does the questionnaire indicate where this is appropriate/necessary?</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.answer"> </a><b>QuestionnaireResponse.item.answer</b></td></tr>
+  <tr><td>Definition</td><td><p>The respondent's answer(s) to the question.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Comments</td><td><p>The value is nested because we cannot have a repeating structure that has variable type.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.answer.value_x_"> </a><b>QuestionnaireResponse.item.answer.value[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The answer (or one of the answers) provided by the respondent to the question.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="terminologies.html#unbound">QuestionnaireAnswer</a>: Code indicating the response provided for a question.</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a>|<a href="datatypes.html#decimal">decimal</a>|<a href="datatypes.html#integer">integer</a>|<a href="datatypes.html#date">date</a>|<a href="datatypes.html#dateTime">dateTime</a>|<a href="datatypes.html#instant">instant</a>|<a href="datatypes.html#time">time</a>|<a href="datatypes.html#string">string</a>|<a href="datatypes.html#uri">uri</a>|<a href="datatypes.html#Attachment">Attachment</a>|<a href="datatypes.html#Coding">Coding</a>|<a href="datatypes.html#Quantity">Quantity</a>|<a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td>Requirements</td><td><p>Ability to retain a single-valued answer to a question.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>More complex structures (Attachment, Resource and Quantity) will typically be limited to electronic forms that can expose an appropriate user interface to capture the components and enforce the constraints of a complex data type.  Additional complex types can be introduced through extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.answer.item"> </a><b>QuestionnaireResponse.item.answer.item</b></td></tr>
+  <tr><td>Definition</td><td><p>Nested groups and/or questions found within this particular answer.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#QuestionnaireResponse.item">See QuestionnaireResponse.item</a></td></tr>
+  <tr><td>Requirements</td><td><p>It is useful to have &quot;sub-questions&quot;, questions which normally appear when certain answers are given and which collect additional details.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="QuestionnaireResponse.item.item"> </a><b>QuestionnaireResponse.item.item</b></td></tr>
+  <tr><td>Definition</td><td><p>Questions or sub-groups nested beneath a question or group.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#QuestionnaireResponse.item">See QuestionnaireResponse.item</a></td></tr>
+  <tr><td>Requirements</td><td><p>Reports can consist of complex nested groups.</p>
+</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fquestionnaireresponse-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fquestionnaireresponse-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

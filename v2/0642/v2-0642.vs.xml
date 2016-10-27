@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v2-0642"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Reorder Theory Codes</p>
+
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Description</b>
+          </td>
+          <td>
+            <b>Comment</b>
+          </td>
+          <td>
+            <b>Version</b>
+          </td>
+        </tr>
+        <tr>
+          <td>D
+            <a name="D"> </a>
+          </td>
+          <td>DOP/DOQ</td>
+          <td>Corresponds to the theory that calculates the appropriate order point and recommends the quantity to order based on system parameters and historical trends.  DOP stands for Dynamic Order Point, and DOQ stands for Dynamic Order Quantity.</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>M
+            <a name="M"> </a>
+          </td>
+          <td>MIN/MAX</td>
+          <td>Corresponds to theory - the quantity recommended is the Order Quantity, less the On Hand Quantity, and less the On Order Quantity.  The Order Amount is the desired Maximum On Hand Quantity.</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>O
+            <a name="O"> </a>
+          </td>
+          <td>Override</td>
+          <td>The quantity recommended is the Order Quantity, less the On Order Quantity.  The Order Amount is the amount to order when the On Hand reaches the Order Point.</td>
+          <td>added v2.6</td>
+        </tr>
+      </table>
+
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v2-0642"/>
+  <version value="2.8.2"/>
+  <name value="v2 Reorder Theory Codes"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <publisher value="HL7, Inc"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="FHIR Value set/code system definition for HL7 v2 table 0642 ( Reorder Theory Codes)"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v2/0642"/>
+    </include>
+  </compose>
+</ValueSet>

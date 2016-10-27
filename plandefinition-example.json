@@ -1,0 +1,441 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Low Suicide Risk Order Set...</div>"
+  },
+  "contained": [
+    {
+      "resourceType": "ActivityDefinition",
+      "id": "referralToMentalHealthCare",
+      "status": "draft",
+      "description": "refer to primary care mental-health integrated care program for evaluation and treatment of mental health conditions now",
+      "category": "referral",
+      "code": {
+        "coding": [
+          {
+            "code": "306206005"
+          }
+        ]
+      },
+      "timingTiming": {
+        "_event": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqif-basic-cqlExpression",
+                "valueString": "Now()"
+              }
+            ]
+          }
+        ]
+      },
+      "participantType": [
+        "practitioner"
+      ]
+    },
+    {
+      "resourceType": "ActivityDefinition",
+      "id": "citalopramPrescription",
+      "status": "draft",
+      "category": "drug",
+      "productReference": {
+        "reference": "#citalopramMedication"
+      },
+      "dynamicValue": [
+        {
+          "path": "dosageInstruction.text",
+          "expression": "'1 tablet oral 1 time daily'"
+        },
+        {
+          "path": "dosageInstruction.timing.repeat.frequency",
+          "expression": "1"
+        },
+        {
+          "path": "dosageInstruction.timing.repeat.period",
+          "expression": "1"
+        },
+        {
+          "path": "dosageInstruction.timing.repeat.periodUnit",
+          "expression": "'d'"
+        },
+        {
+          "path": "dosageInstruction.route.coding",
+          "expression": "code '26643006' from \"http://snomed.info/sct\" display 'Oral route (qualifier value)'"
+        },
+        {
+          "path": "dosageInstruction.doseQuantity",
+          "expression": "1 '{tbl}'"
+        },
+        {
+          "path": "dispenseRequest.numberOfRepeatsAllowed",
+          "expression": "3"
+        },
+        {
+          "path": "dispenseRequest.quantity",
+          "expression": "30 '{tbl}'"
+        }
+      ]
+    },
+    {
+      "resourceType": "Medication",
+      "id": "citalopramMedication",
+      "code": {
+        "coding": [
+          {
+            "code": "200371"
+          }
+        ],
+        "text": "citalopram"
+      },
+      "product": {
+        "form": {
+          "coding": [
+            {
+              "code": "385055001",
+              "display": "Tablet dose form"
+            }
+          ],
+          "text": "Tablet dose form"
+        },
+        "ingredient": [
+          {
+            "itemReference": {
+              "reference": "#citalopramSubstance"
+            },
+            "amount": {
+              "numerator": {
+                "value": 20,
+                "unit": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "unit": "{tbl}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "Substance",
+      "id": "citalopramSubstance",
+      "code": {
+        "coding": [
+          {
+            "code": "2556"
+          }
+        ],
+        "text": "citalopram"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "value": "mmi:low-suicide-risk-order-set"
+    }
+  ],
+  "version": "1.0.0",
+  "title": "Low Suicide Risk Order Set",
+  "status": "draft",
+  "date": "2015-08-15",
+  "description": "...",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "gender"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "133936004",
+            "display": "Adult"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "87512008",
+            "display": "Mild major depression"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "40379007",
+            "display": "Major depression, recurrent, mild"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "394687007",
+            "display": "Low suicide risk"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "225337009",
+            "display": "Suicide risk assessment"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "user"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "309343006",
+            "display": "Physician"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "venue"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "440655000",
+            "display": "Outpatient environment"
+          }
+        ]
+      }
+    }
+  ],
+  "topic": [
+    {
+      "text": "Suicide risk assessment"
+    }
+  ],
+  "contributor": [
+    {
+      "type": "author",
+      "name": "Motive Medical Intelligence",
+      "contact": [
+        {
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "415-362-4007",
+              "use": "work"
+            },
+            {
+              "system": "email",
+              "value": "info@motivemi.com",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "publisher": "Motive Medical Intelligence",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "415-362-4007",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "info@motivemi.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "reference": "Library/mmi-suiciderisk-orderset-logic"
+    }
+  ],
+  "actionDefinition": [
+    {
+      "title": "Suicide Risk Assessment and Outpatient Management",
+      "actionDefinition": [
+        {
+          "title": "Consults and Referrals",
+          "groupingBehavior": "logical-group",
+          "selectionBehavior": "any",
+          "actionDefinition": [
+            {
+              "textEquivalent": "Refer to outpatient mental health program for evaluation and treatment of mental health conditions now",
+              "activityDefinition": {
+                "reference": "#referralToMentalHealthCare"
+              },
+              "dynamicValue": [
+                {
+                  "path": "timing.event",
+                  "expression": "Now()"
+                },
+                {
+                  "path": "specialty",
+                  "expression": "Code '261QM0850X' from \"urn:oid:2.16.840.1.113883.11.19462\""
+                },
+                {
+                  "path": "fulfillmentTime",
+                  "expression": "ReferralRequestFulfillmentTime"
+                },
+                {
+                  "path": "patient",
+                  "expression": "Patient"
+                },
+                {
+                  "path": "requester",
+                  "expression": "Practitioner"
+                },
+                {
+                  "path": "reason",
+                  "expression": "RiskAssessmentScore"
+                },
+                {
+                  "path": "supportingInformation",
+                  "expression": "RiskAssessment"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Medications",
+          "groupingBehavior": "logical-group",
+          "selectionBehavior": "at-most-one",
+          "actionDefinition": [
+            {
+              "title": "First-Line Antidepressants",
+              "documentation": [
+                {
+                  "type": "justification",
+                  "document": {
+                    "contentType": "text/html",
+                    "url": "http://psychiatryonline.org/pb/assets/raw/sitewide/practice_guidelines/guidelines/mdd.pdf",
+                    "title": "Practice Guideline for the Treatment of Patients with Major Depressive Disorder"
+                  }
+                }
+              ],
+              "groupingBehavior": "logical-group",
+              "selectionBehavior": "at-most-one",
+              "actionDefinition": [
+                {
+                  "title": "Selective Serotonin Reuptake Inhibitors (Choose a mazimum of one or document reasons for exception)",
+                  "documentation": [
+                    {
+                      "type": "justification",
+                      "document": {
+                        "contentType": "text/html",
+                        "url": "http://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6daeb45c-451d-b135-bf8f-2d6dff4b6b01",
+                        "title": "National Library of Medicine. DailyMed website. CITALOPRAM- citalopram hydrobromide tablet, film coated."
+                      }
+                    }
+                  ],
+                  "groupingBehavior": "logical-group",
+                  "selectionBehavior": "at-most-one",
+                  "actionDefinition": [
+                    {
+                      "textEquivalent": "citalopram 20 mg tablet 1 tablet oral 1 time daily now (30 table; 3 refills)",
+                      "activityDefinition": {
+                        "reference": "#citalopramPrescription"
+                      },
+                      "dynamicValue": [
+                        {
+                          "path": "status",
+                          "expression": "'draft'"
+                        },
+                        {
+                          "path": "patient",
+                          "expression": "Patient"
+                        },
+                        {
+                          "path": "prescriber",
+                          "expression": "Practitioner"
+                        },
+                        {
+                          "path": "reasonCode",
+                          "expression": "RiskAssessmentScore"
+                        },
+                        {
+                          "path": "reasonReference",
+                          "expression": "RiskAssessment"
+                        }
+                      ]
+                    },
+                    {
+                      "textEquivalent": "escitalopram 10 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)"
+                    },
+                    {
+                      "textEquivalent": "fluoxetine 20 mg capsule 1 capsule oral 1 time daily now (30 tablet; 3 refills)"
+                    },
+                    {
+                      "textEquivalent": "paroxetine 20 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)"
+                    },
+                    {
+                      "textEquivalent": "sertraline 50 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)"
+                    }
+                  ]
+                },
+                {
+                  "textEquivalent": "Dopamine Norepinephrine Reuptake Inhibitors (Choose a maximum of one or document reasons for exception)"
+                },
+                {
+                  "textEquivalent": "Serotonin Norepinephrine Reuptake Inhibitors (Choose a maximum of one or doument reasons for exception)"
+                },
+                {
+                  "textEquivalent": "Norepinephrine-Serotonin Modulators (Choose a maximum of one or document reasons for exception)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

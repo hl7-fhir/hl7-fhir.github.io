@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ProcessRequest/44654> a fhir:ProcessRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "44654"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ReProcess ProcessRequest resource.</div>"
+  ];
+  fhir:ProcessRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://happyvalley.com/processrequest" ];
+     fhir:Identifier.value [ fhir:value "44543" ]
+  ];
+  fhir:ProcessRequest.status [ fhir:value "active"];
+  fhir:ProcessRequest.action [ fhir:value "reprocess"];
+  fhir:ProcessRequest.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:ProcessRequest.organization [
+     fhir:link <http://hl7.org/fhir/Organization/1>;
+     fhir:Reference.reference [ fhir:value "Organization/1" ]
+  ];
+  fhir:ProcessRequest.request [
+     fhir:link <http://BenefitsInc.com/fhir/claim/12345>;
+     fhir:Reference.reference [ fhir:value "http://BenefitsInc.com/fhir/claim/12345" ]
+  ];
+  fhir:ProcessRequest.reference [ fhir:value "ABC12345G"];
+  fhir:ProcessRequest.item [
+     fhir:index 0;
+     fhir:ProcessRequest.item.sequenceLinkId [ fhir:value "1"^^xsd:int ]
+  ] .
+
+<http://hl7.org/fhir/Organization/1> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,57 @@
+﻿{
+  "@context": {
+    "MedicationStatement.identifier": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "MedicationStatement.status": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "MedicationStatement.patient": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.patient",
+      "@type": "http://hl7.org/fhir/Reference(Patient)"
+    },
+    "MedicationStatement.informationSource": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.informationSource",
+      "@type": "http://hl7.org/fhir/Reference(Patient|Practitioner|RelatedPerson|Organization)"
+    },
+    "MedicationStatement.derivedFrom": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.derivedFrom",
+      "@type": "http://hl7.org/fhir/Reference(Any)"
+    },
+    "MedicationStatement.dateAsserted": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.dateAsserted",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "MedicationStatement.notTaken": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.notTaken",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "MedicationStatement.reasonNotTaken": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.reasonNotTaken",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "MedicationStatement.reasonForUseCode": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.reasonForUseCode",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "MedicationStatement.reasonForUseReference": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.reasonForUseReference",
+      "@type": "http://hl7.org/fhir/Reference(Condition)"
+    },
+    "MedicationStatement.note": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.note",
+      "@type": "http://hl7.org/fhir/Annotation"
+    },
+    "MedicationStatement.category": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.category",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "MedicationStatement.dosage": {
+      "@id": "http://hl7.org/fhir/MedicationStatement.dosage",
+      "@type": "http://hl7.org/fhir/DosageInstruction"
+    }
+  },
+  "@id": "http://hl7.org/fhir/MedicationStatement"
+}

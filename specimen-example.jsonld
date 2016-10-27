@@ -1,0 +1,168 @@
+{
+  "@context": "http://build.fhir.org/Specimen.jsonld",
+  "@context": "http://hl7.org/fhir/Specimen/101",
+  "Resource.id": {
+    "id.value": "101"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 101</p><p><b>contained</b>: </p><p><b>identifier</b>: 23234352356</p><p><b>accessionIdentifier</b>: X352356</p><p><b>status</b>: available</p><p><b>type</b>: Venous blood specimen <span>(Details : {SNOMED CT code '122555007' = 'Venous blood specimen (specimen)', given as 'Venous blood specimen'})</span></p><p><b>subject</b>: <a>Peter Patient</a></p><p><b>receivedTime</b>: Mar 4, 2011 7:03:00 AM</p><p><b>request</b>: <a>DiagnosticRequest/example</a></p><h3>Collections</h3><table><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Quantity</b></td><td><b>Method</b></td></tr><tr><td>*</td><td><a>Practitioner/example</a></td><td>May 30, 2011 6:15:00 AM</td><td>6 mL</td><td>Line, Venous <span>(Details : {http://hl7.org/fhir/v2/0488 code 'LNV' = 'Line, Venous)</span></td></tr></table><h3>Containers</h3><table><tr><td>-</td><td><b>Identifier</b></td><td><b>Description</b></td><td><b>Type</b></td><td><b>Capacity</b></td><td><b>SpecimenQuantity</b></td><td><b>Additive[x]</b></td></tr><tr><td>*</td><td>48736-15394-75465</td><td>Green Gel tube</td><td>Vacutainer <span>(Details )</span></td><td>10 mL</td><td>6 mL</td><td>id: hep; Lithium/Li Heparin <span>(Details : {http://hl7.org/fhir/v3/EntityCode code 'HEPL' = 'Lithium/Li Heparin)</span></td></tr></table><p><b>note</b>: Specimen is grossly lipemic</p></div>"
+    }
+  },
+  "Substance": [
+    {
+      "Resource.id": {
+        "id.value": "hep"
+      },
+      "Substance.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v3/EntityCode"
+            },
+            "Coding.code": {
+              "code.value": "HEPL"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Specimen.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://ehr.acme.org/identifiers/collections"
+      },
+      "Identifier.value": {
+        "string.value": "23234352356"
+      }
+    }
+  ],
+  "Specimen.accessionIdentifier": {
+    "Identifier.system": {
+      "uri.value": "http://lab.acme.org/specimens/2011"
+    },
+    "Identifier.value": {
+      "string.value": "X352356"
+    }
+  },
+  "Specimen.status": {
+    "code.value": "available"
+  },
+  "Specimen.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "122555007"
+        },
+        "Coding.display": {
+          "string.value": "Venous blood specimen"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#122555007"
+  },
+  "Specimen.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter Patient"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Specimen.receivedTime": {
+    "dateTime.value": "2011-03-04T07:03:00Z"
+  },
+  "Specimen.request": [
+    {
+      "Reference.reference": {
+        "string.value": "DiagnosticRequest/example"
+      }
+    }
+  ],
+  "Specimen.collection": {
+    "Specimen.collection.collector": {
+      "Reference.reference": {
+        "string.value": "Practitioner/example"
+      },
+      "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+    },
+    "Specimen.collection.collectedDateTime": {
+      "dateTime.value": "2011-05-30T06:15:00Z"
+    },
+    "Specimen.collection.quantity": {
+      "Quantity.value": {
+        "decimal.value": 6
+      },
+      "Quantity.unit": {
+        "string.value": "mL"
+      }
+    },
+    "Specimen.collection.method": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/v2/0488"
+          },
+          "Coding.code": {
+            "code.value": "LNV"
+          }
+        }
+      ]
+    }
+  },
+  "Specimen.container": [
+    {
+      "Specimen.container.identifier": [
+        {
+          "Identifier.value": {
+            "string.value": "48736-15394-75465"
+          }
+        }
+      ],
+      "Specimen.container.description": {
+        "string.value": "Green Gel tube"
+      },
+      "Specimen.container.type": {
+        "CodeableConcept.text": {
+          "string.value": "Vacutainer"
+        }
+      },
+      "Specimen.container.capacity": {
+        "Quantity.value": {
+          "decimal.value": 10
+        },
+        "Quantity.unit": {
+          "string.value": "mL"
+        }
+      },
+      "Specimen.container.specimenQuantity": {
+        "Quantity.value": {
+          "decimal.value": 6
+        },
+        "Quantity.unit": {
+          "string.value": "mL"
+        }
+      },
+      "Specimen.container.additiveReference": {
+        "Reference.reference": {
+          "string.value": "#hep"
+        }
+      }
+    }
+  ],
+  "Specimen.note": [
+    {
+      "Annotation.text": {
+        "string.value": "Specimen is grossly lipemic"
+      }
+    }
+  ]
+}

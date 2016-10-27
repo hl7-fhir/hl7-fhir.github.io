@@ -1,0 +1,354 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Codesystem-nhin-purposeofuse.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/codesystem-nhin-purposeofuse.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="terminology-module.html"><img src="terminology.png"/> Terminology</a></li>        <li><a href="codesystem.html">CodeSystem</a></li>        <li><b>Example Instance</b></li>        <!-- codesystem-nhin-purposeofuse.ttl.html / resource-instance:CodeSystem / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Codesystem-nhin-purposeofuse.ttl</h1>
+
+<p>
+<a href="codesystem-nhin-purposeofuse.ttl">Raw Turtle</a>, 
+<a href="codesystem-nhin-purposeofuse.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>NHIN Purpose of Use</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/CodeSystem/nhin-purposeofuse&gt; a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;nhin-purposeofuse&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n      &lt;h2&gt;NHIN PurposeOfUse&lt;/h2&gt;\n      &lt;div&gt;\n        &lt;p&gt;This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.&lt;/p&gt;\n\n      &lt;/div&gt;\n      &lt;p&gt;This code system http://healthit.gov/nhin/purposeofuse defines the following codes:&lt;/p&gt;\n      &lt;table class=\&quot;codes\&quot;&gt;\n        &lt;tr&gt;\n          &lt;td&gt;\n            &lt;b&gt;Code&lt;/b&gt;\n          &lt;/td&gt;\n          &lt;td&gt;\n            &lt;b&gt;Display&lt;/b&gt;\n          &lt;/td&gt;\n          &lt;td&gt;\n            &lt;b&gt;Definition&lt;/b&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;TREATMENT\n            &lt;a name=\&quot;nhin-purposeofuse-TREATMENT\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Treatment&lt;/td&gt;\n          &lt;td&gt;Treatment&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;PAYMENT\n            &lt;a name=\&quot;nhin-purposeofuse-PAYMENT\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Payment&lt;/td&gt;\n          &lt;td&gt;Payment&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;OPERATIONS\n            &lt;a name=\&quot;nhin-purposeofuse-OPERATIONS\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Operations&lt;/td&gt;\n          &lt;td&gt;Healthcare Operations&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;SYSADMIN\n            &lt;a name=\&quot;nhin-purposeofuse-SYSADMIN\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Sysadmin&lt;/td&gt;\n          &lt;td&gt;System Administration&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;FRAUD\n            &lt;a name=\&quot;nhin-purposeofuse-FRAUD\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Fraud&lt;/td&gt;\n          &lt;td&gt;Fraud detection&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;PSYCHOTHERAPY\n            &lt;a name=\&quot;nhin-purposeofuse-PSYCHOTHERAPY\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Psychotherapy&lt;/td&gt;\n          &lt;td&gt;Use or disclosure of Psychotherapy Notes&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;TRAINING\n            &lt;a name=\&quot;nhin-purposeofuse-TRAINING\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Training&lt;/td&gt;\n          &lt;td&gt;Use or disclosure by the covered entity for its own training programs&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;LEGAL\n            &lt;a name=\&quot;nhin-purposeofuse-LEGAL\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Legal&lt;/td&gt;\n          &lt;td&gt;Use or disclosure by the covered entity to defend itself in a legal action&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;MARKETING\n            &lt;a name=\&quot;nhin-purposeofuse-MARKETING\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Marketing&lt;/td&gt;\n          &lt;td&gt;Marketing&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;DIRECTORY\n            &lt;a name=\&quot;nhin-purposeofuse-DIRECTORY\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Directory&lt;/td&gt;\n          &lt;td&gt;Use and disclosure for facility directories&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;FAMILY\n            &lt;a name=\&quot;nhin-purposeofuse-FAMILY\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Family&lt;/td&gt;\n          &lt;td&gt;Disclose to a family member, other relative, or a close personal friend of the individual&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;PRESENT\n            &lt;a name=\&quot;nhin-purposeofuse-PRESENT\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Present&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures with the individual present.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;EMERGENCY\n            &lt;a name=\&quot;nhin-purposeofuse-EMERGENCY\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Emergency&lt;/td&gt;\n          &lt;td&gt;Permission cannot practicably be provided because of the individual's incapacity or an emergency.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;DISASTER\n            &lt;a name=\&quot;nhin-purposeofuse-DISASTER\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Disaster&lt;/td&gt;\n          &lt;td&gt;Use and disclosures for disaster relief purposes.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;PUBLICHEALTH\n            &lt;a name=\&quot;nhin-purposeofuse-PUBLICHEALTH\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Public Health&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures for public health activities.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;ABUSE\n            &lt;a name=\&quot;nhin-purposeofuse-ABUSE\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Abuse&lt;/td&gt;\n          &lt;td&gt;Disclosures about victims of abuse, neglect or domestic violence.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;OVERSIGHT\n            &lt;a name=\&quot;nhin-purposeofuse-OVERSIGHT\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Oversight&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures for health oversight activities.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;JUDICIAL\n            &lt;a name=\&quot;nhin-purposeofuse-JUDICIAL\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Judicial&lt;/td&gt;\n          &lt;td&gt;Disclosures for judicial and administrative proceedings.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;LAW\n            &lt;a name=\&quot;nhin-purposeofuse-LAW\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Law Enforcement&lt;/td&gt;\n          &lt;td&gt;Disclosures for law enforcement purposes.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;DECEASED\n            &lt;a name=\&quot;nhin-purposeofuse-DECEASED\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Deceased&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures about decedents.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;DONATION\n            &lt;a name=\&quot;nhin-purposeofuse-DONATION\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Donation&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures for cadaveric organ,  eye or tissue donation purposes&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;RESEARCH\n            &lt;a name=\&quot;nhin-purposeofuse-RESEARCH\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Research&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures for research purposes.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;THREAT\n            &lt;a name=\&quot;nhin-purposeofuse-THREAT\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Threat&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures to avert a serious threat to health or safety.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;GOVERNMENT\n            &lt;a name=\&quot;nhin-purposeofuse-GOVERNMENT\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Government&lt;/td&gt;\n          &lt;td&gt;Uses and disclosures for specialized government functions.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;WORKERSCOMP\n            &lt;a name=\&quot;nhin-purposeofuse-WORKERSCOMP\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Worker's Comp&lt;/td&gt;\n          &lt;td&gt;Disclosures for workers' compensation.&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;COVERAGE\n            &lt;a name=\&quot;nhin-purposeofuse-COVERAGE\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Coverage&lt;/td&gt;\n          &lt;td&gt;Disclosures for insurance or disability coverage determination&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt;REQUEST\n            &lt;a name=\&quot;nhin-purposeofuse-REQUEST\&quot;&gt; &lt;/a&gt;\n          &lt;/td&gt;\n          &lt;td&gt;Request&lt;/td&gt;\n          &lt;td&gt;Request of the Individual&lt;/td&gt;\n        &lt;/tr&gt;\n      &lt;/table&gt;\n    &lt;/div&gt;&quot;
+  ];
+  fhir:CodeSystem.url [ fhir:value &quot;http://healthit.gov/nhin/purposeofuse&quot;];
+  fhir:CodeSystem.version [ fhir:value &quot;2.0&quot;];
+  fhir:CodeSystem.name [ fhir:value &quot;NHIN PurposeOfUse&quot;];
+  fhir:CodeSystem.status [ fhir:value &quot;active&quot;];
+  fhir:CodeSystem.experimental [ fhir:value &quot;false&quot;^^xsd:boolean];
+  fhir:CodeSystem.publisher [ fhir:value &quot;Nationwide Health Information Network (NHIN)&quot;];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;other&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;https://www.healthit.gov/sites/default/files/nhin-authorization-framework-production-specification-v2.0-1.pdf&quot; ]
+     ]
+  ];
+  fhir:CodeSystem.date [ fhir:value &quot;2010-01-29&quot;^^xsd:date];
+  fhir:CodeSystem.description [ fhir:value &quot;This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.&quot;];
+  fhir:CodeSystem.caseSensitive [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value &quot;http://hl7.org/fhir/ValueSet/nhin-purposeofuse&quot;];
+  fhir:CodeSystem.content [ fhir:value &quot;complete&quot;];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;TREATMENT&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Treatment&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Treatment&quot; ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;PAYMENT&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Payment&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Payment&quot; ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;OPERATIONS&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Operations&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Healthcare Operations&quot; ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;SYSADMIN&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Sysadmin&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;System Administration&quot; ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;FRAUD&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Fraud&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Fraud detection&quot; ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;PSYCHOTHERAPY&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Psychotherapy&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Use or disclosure of Psychotherapy Notes&quot; ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;TRAINING&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Training&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Use or disclosure by the covered entity for its own training programs&quot; ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;LEGAL&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Legal&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Use or disclosure by the covered entity to defend itself in a legal action&quot; ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;MARKETING&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Marketing&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Marketing&quot; ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;DIRECTORY&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Directory&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Use and disclosure for facility directories&quot; ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;FAMILY&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Family&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Disclose to a family member, other relative, or a close personal friend of the individual&quot; ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;PRESENT&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Present&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures with the individual present.&quot; ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;EMERGENCY&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Emergency&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Permission cannot practicably be provided because of the individual's incapacity or an emergency.&quot; ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;DISASTER&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Disaster&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Use and disclosures for disaster relief purposes.&quot; ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;PUBLICHEALTH&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Public Health&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures for public health activities.&quot; ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;ABUSE&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Abuse&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Disclosures about victims of abuse, neglect or domestic violence.&quot; ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;OVERSIGHT&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Oversight&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures for health oversight activities.&quot; ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;JUDICIAL&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Judicial&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Disclosures for judicial and administrative proceedings.&quot; ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;LAW&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Law Enforcement&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Disclosures for law enforcement purposes.&quot; ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;DECEASED&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Deceased&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures about decedents.&quot; ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;DONATION&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Donation&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures for cadaveric organ,  eye or tissue donation purposes&quot; ]
+  ], [
+     fhir:index 21;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;RESEARCH&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Research&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures for research purposes.&quot; ]
+  ], [
+     fhir:index 22;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;THREAT&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Threat&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures to avert a serious threat to health or safety.&quot; ]
+  ], [
+     fhir:index 23;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;GOVERNMENT&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Government&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Uses and disclosures for specialized government functions.&quot; ]
+  ], [
+     fhir:index 24;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;WORKERSCOMP&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Worker's Comp&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Disclosures for workers' compensation.&quot; ]
+  ], [
+     fhir:index 25;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;COVERAGE&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Coverage&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Disclosures for insurance or disability coverage determination&quot; ]
+  ], [
+     fhir:index 26;
+     fhir:CodeSystem.concept.code [ fhir:value &quot;REQUEST&quot; ];
+     fhir:CodeSystem.concept.display [ fhir:value &quot;Request&quot; ];
+     fhir:CodeSystem.concept.definition [ fhir:value &quot;Request of the Individual&quot; ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:24+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fcodesystem-nhin-purposeofuse.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fcodesystem-nhin-purposeofuse.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,427 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Dataelement-example.xml - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/dataelement-example.xml.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="dataelement.html">DataElement</a></li>        <li><b>Example Instance</b></li>        <!-- dataelement-example.xml.html / resource-instance:DataElement / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Dataelement-example.xml</h1>
+
+<p>
+<a href="dataelement-example.xml">Raw XML</a> (<a href="dataelement-example.canonical.xml">canonical form</a>)
+</p>
+
+
+<div class="example">
+<p>Patient gender represented as an data element (id = &quot;gender&quot;)</p>
+<pre class="xml">
+<span class="xmltag">&lt;<a href="dataelement-definitions.html" class="xmltag">DataElement</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://hl7.org/fhir</span>"</span><span class="xmltag">&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">gender</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">generated</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://www.w3.org/1999/xhtml</span>"</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">p</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">b</a></span><span class="xmltag">&gt;</span><b>Gender Code</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">b</a>&gt;</span><b>: The code representing the gender of a person
+      
+      
+      
+      </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">p</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">table</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">tbody</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">tr</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">th</a></span><span class="xmltag">&gt;</span><b>Code</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">th</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">th</a></span><span class="xmltag">&gt;</span><b>Display</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">th</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">th</a></span><span class="xmltag">&gt;</span><b>Definition</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">th</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">tr</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">tr</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>0</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>Unknown</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>Not known, not observed, not recorded, or refused.</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">tr</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">tr</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>1</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>Male</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>A person who belongs to the sex that normally produces sperm. The term is used to indicate
+               biological sex distinctions, cultural gender role distinctions, or both.</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">tr</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">tr</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>2</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>Female</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>A person who belongs to the sex that normally produces ova. The term is used to indicate
+               biological sex distinctions, or cultural gender role distinctions, or both.</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">tr</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">tr</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>3</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>Not specified</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">td</a></span><span class="xmltag">&gt;</span><b>Not specified</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">td</a>&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">tr</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">tbody</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">table</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">ul</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">li</a></span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">ul</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;ValueSet</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.url" class="xmltag">url</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://example.org/2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.version" class="xmltag">version</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1.0</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Gender Code</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">active</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.description" class="xmltag">description</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">All codes representing the gender of a person.</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose" class="xmltag">compose</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include" class="xmltag">include</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://example.ncit.nci.nih.gov</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C17998</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Unknown</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a>&gt;</span><b>
+          </b><span class="xmlcomment">&lt;!--                  &lt;definition value=&quot;Not known, not observed, not recorded, or refused.
+           &quot;/&gt;      --&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C20197</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Male</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a>&gt;</span><b>
+          </b><span class="xmlcomment">&lt;!--                  &lt;definition value=&quot;A person who belongs to the sex that normally produces
+           sperm. The term is used to indicate biological sex distinctions, cultural gender role
+           distinctions, or both.&quot;/&gt;      --&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C16576</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Female</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a>&gt;</span><b>
+          </b><span class="xmlcomment">&lt;!--                  &lt;definition value=&quot;A person who belongs to the sex that normally produces
+           ova. The term is used to indicate biological sex distinctions, or cultural gender role
+           distinctions, or both.&quot;/&gt;      --&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C38046</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Not specified</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose.include.concept" class="xmltag">concept</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose.include" class="xmltag">include</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose" class="xmltag">compose</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/ValueSet&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;ValueSet</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmlcomment">&lt;!--                  &lt;definition value=&quot;Not specified&quot;/&gt;      --&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2179414-permitted</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">active</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose" class="xmltag">compose</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include" class="xmltag">include</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.compose.include.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://example.org/fhir/2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose.include" class="xmltag">include</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.compose" class="xmltag">compose</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/ValueSet&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;ConceptMap</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2179414-cm</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">active</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.source[x]" class="xmltag">sourceReference</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">#2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.source[x]" class="xmltag">sourceReference</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.target[x]" class="xmltag">targetReference</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">#2179414-permitted</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.target[x]" class="xmltag">targetReference</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group" class="xmltag">group</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.source" class="xmltag">source</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://example.org/fhir/2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.target" class="xmltag">target</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://example.org/fhir/2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C17998</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">0</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.equivalence" class="xmltag">equivalence</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">equal</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C20197</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.equivalence" class="xmltag">equivalence</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">equal</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C16576</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.equivalence" class="xmltag">equivalence</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">equal</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">C38046</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">3</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.group.element.target.equivalence" class="xmltag">equivalence</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">equal</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element.target" class="xmltag">target</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group.element" class="xmltag">element</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.group" class="xmltag">group</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/ConceptMap&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="dataelement-definitions.html#DataElement.identifier" class="xmltag">identifier</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.value" class="xmltag">value</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2179650</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="dataelement-definitions.html#DataElement.identifier" class="xmltag">identifier</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="dataelement-definitions.html#DataElement.version" class="xmltag">version</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">1.0</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="dataelement-definitions.html#DataElement.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">active</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="dataelement-definitions.html#DataElement.publisher" class="xmltag">publisher</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">DCP</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="dataelement-definitions.html#DataElement.name" class="xmltag">name</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Gender Code</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--  
+  &lt;useContext&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/FBPP&quot;/&gt;
+      &lt;display value=&quot;FBPP Pooled Database&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/PhenX&quot;/&gt;
+      &lt;display value=&quot;Demographics&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/EligibilityCriteria&quot;/&gt;
+      &lt;display value=&quot;Pt. Administrative&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/UAMSClinicalResearch&quot;/&gt;
+      &lt;display value=&quot;UAMS New CDEs&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/PhenX&quot;/&gt;
+      &lt;display value=&quot;Substance Abuse and &quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Category&quot;/&gt;
+      &lt;display value=&quot;CSAERS Adverse Event&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/PhenX&quot;/&gt;
+      &lt;display value=&quot;Core: Tier 1&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Category&quot;/&gt;
+      &lt;display value=&quot;Case Report Forms&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Category&quot;/&gt;
+      &lt;display value=&quot;CSAERS Review Set&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Demonstration%20Applications&quot;/&gt;
+      &lt;display value=&quot;CIAF&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/NIDA%20CTN%20Usage&quot;/&gt;
+      &lt;display value=&quot;Clinical Research&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/NIDA%20CTN%20Usage&quot;/&gt;
+      &lt;display value=&quot;Electronic Health Re&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Condition&quot;/&gt;
+      &lt;display value=&quot;Barretts Esophagus&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Condition&quot;/&gt;
+      &lt;display value=&quot;Bladder Cancer&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Condition&quot;/&gt;
+      &lt;display value=&quot;Oral Leukoplakia&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;coding&gt;
+      &lt;system value=&quot;http://example.org/Condition&quot;/&gt;
+      &lt;display value=&quot;Sulindac for Breast&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/useContext&gt;
+    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="dataelement-definitions.html#DataElement.element" class="xmltag">element</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;extension</span><span class="xmlattr"> url="<span class="xmlattrvalue">http://hl7.org/fhir/StructureDefinition/minLength</span>"</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltagred">&lt;valueInteger</span><span class="xmlattr"> value="<span class="xmlattrvalue">1</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/extension&gt;</span><b>
+    </b><span class="xmltagred">&lt;extension</span><span class="xmlattr"> url="<span class="xmlattrvalue">http://hl7.org/fhir/StructureDefinition/elementdefinition-question</span>"</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltagred">&lt;valueString</span><span class="xmlattr"> value="<span class="xmlattrvalue">Gender</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/extension&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.path" class="xmltag">path</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Gender</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.definition" class="xmltag">definition</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">The code representing the gender of a person.</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.type" class="xmltag">type</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.type.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">CodeableConcept</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="elementdefinition-definitions.html#ElementDefinition.type" class="xmltag">type</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.maxLength" class="xmltag">maxLength</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">13</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.binding" class="xmltag">binding</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.binding.strength" class="xmltag">strength</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">required</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="elementdefinition-definitions.html#ElementDefinition.binding.valueSet[x]" class="xmltag">valueSetReference</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltagred">&lt;extension</span><span class="xmlattr"> url="<span class="xmlattrvalue">http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset</span>"</span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltagred">&lt;valueReference</span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">#2179414-permitted</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/valueReference&gt;</span><b>
+        </b><span class="xmltag">&lt;/extension&gt;</span><b>
+        </b><span class="xmltagred">&lt;extension</span><span class="xmlattr"> url="<span class="xmlattrvalue">http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap</span>"</span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltagred">&lt;valueReference</span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">#2179414-cm</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/valueReference&gt;</span><b>
+        </b><span class="xmltag">&lt;/extension&gt;</span><b>
+        </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">#2179414</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="elementdefinition-definitions.html#ElementDefinition.binding.valueSet[x]" class="xmltag">valueSetReference</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="elementdefinition-definitions.html#ElementDefinition.binding" class="xmltag">binding</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="dataelement-definitions.html#DataElement.element" class="xmltag">element</a>&gt;</span><b>
+</b><span class="xmltag">&lt;/<a href="dataelement-definitions.html" class="xmltag">DataElement</a>&gt;</span></pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdataelement-example.xml.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdataelement-example.xml.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

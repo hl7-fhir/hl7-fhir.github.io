@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticRequest/di> a fhir:DiagnosticRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "di"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: di</p><p><b>status</b>: active</p><p><b>stage</b>: Original Order <span>(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)</span></p><p><b>code</b>: Chest CT <span>(Details : {LOINC code '24627-2' = 'Chest CT)</span></p><p><b>subject</b>: <a>Patient/dicom</a></p><p><b>occurrence</b>: May 8, 2013 9:33:27 AM</p><p><b>requester</b>: <a>Dr. Adam Careful</a></p><p><b>reason</b>: Check for metastatic disease <span>(Details )</span></p></div>"
+  ];
+  fhir:DiagnosticRequest.status [ fhir:value "active"];
+  fhir:DiagnosticRequest.stage [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/request-stage" ];
+       fhir:Coding.code [ fhir:value "original-order" ]
+     ]
+  ];
+  fhir:DiagnosticRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:24627-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "24627-2" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Chest CT" ]
+  ];
+  fhir:DiagnosticRequest.subject [
+     fhir:link <http://hl7.org/fhir/Patient/dicom>;
+     fhir:Reference.reference [ fhir:value "Patient/dicom" ]
+  ];
+  fhir:DiagnosticRequest.occurrenceDateTime [ fhir:value "2013-05-08T09:33:27+07:00"^^xsd:dateTime];
+  fhir:DiagnosticRequest.requester [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+     fhir:Reference.display [ fhir:value "Dr. Adam Careful" ]
+  ];
+  fhir:DiagnosticRequest.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Check for metastatic disease" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/dicom> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

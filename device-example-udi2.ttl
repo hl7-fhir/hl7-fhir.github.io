@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Device/example-udi2> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-udi2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-udi2</p><p><b>udiCarrier</b>: Universal Device Identifier = =+05037=/A9999XYZ100T0474=,000025=A99971312345600=&gt;014032=}013032</p><p><b>status</b>: not-available</p><p><b>type</b>: DI = A9999XYZ100T0474 <span>(Details : {http://hl7.org/fhir/NamingSystem/iccbba-other-di code 'A9999XYZ100T0474' = 'A9999XYZ100T0474)</span></p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>manufactureDate</b>: Feb 1, 2013</p><p><b>expirationDate</b>: Feb 1, 2014</p><p><b>model</b>: Bone,Putty Demineralized</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+  ];
+  fhir:extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/device-din" ];
+     fhir:Extension.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/NamingSystem/iccbba-din" ];
+       fhir:Identifier.value [ fhir:value "A99971312345600" ]
+     ]
+  ];
+  fhir:Device.udiCarrier [
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+         fhir:Coding.code [ fhir:value "UDI" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/NamingSystem/fda-udi" ];
+     fhir:Identifier.value [ fhir:value "=+05037=/A9999XYZ100T0474=,000025=A99971312345600=>014032=}013032" ]
+  ];
+  fhir:Device.status [ fhir:value "not-available"];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/NamingSystem/iccbba-other-di" ];
+       fhir:Coding.code [ fhir:value "A9999XYZ100T0474" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "DI = A9999XYZ100T0474" ]
+  ];
+  fhir:Device.manufacturer [ fhir:value "Acme Devices, Inc"];
+  fhir:Device.manufactureDate [ fhir:value "2013-02-01"^^xsd:date];
+  fhir:Device.expirationDate [ fhir:value "2014-02-01"^^xsd:date];
+  fhir:Device.model [ fhir:value "Bone,Putty Demineralized"];
+  fhir:Device.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

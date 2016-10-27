@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ReferralRequest/example> a fhir:ReferralRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Referral to Dr Dave for Beverly weaver to have grommets inserted in her r) ear</div>"
+  ];
+  fhir:ReferralRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://orionhealth.com/fhir/apps/referralids" ];
+     fhir:Identifier.value [ fhir:value "ret4421" ]
+  ];
+  fhir:ReferralRequest.status [ fhir:value "active"];
+  fhir:ReferralRequest.category [ fhir:value "request"];
+  fhir:ReferralRequest.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://orionhealth.com/fhir/apps/referraltypes" ];
+       fhir:Coding.code [ fhir:value "rfs" ];
+       fhir:Coding.display [ fhir:value "Referral for service" ]
+     ]
+  ];
+  fhir:ReferralRequest.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://orionhealth.com/fhir/apps/prioritycodes" ];
+       fhir:Coding.code [ fhir:value "med" ];
+       fhir:Coding.display [ fhir:value "Medium" ]
+     ]
+  ];
+  fhir:ReferralRequest.patient [
+     fhir:link <https://fhir.orionhealth.com/blaze/fhir/Patient/77662>;
+     fhir:Reference.reference [ fhir:value "https://fhir.orionhealth.com/blaze/fhir/Patient/77662" ];
+     fhir:Reference.display [ fhir:value "Beverly Weaver" ]
+  ];
+  fhir:ReferralRequest.authored [ fhir:value "2014-02-14"^^xsd:date];
+  fhir:ReferralRequest.requester [
+     fhir:link <https://fhir.orionhealth.com/blaze/fhir/Practitioner/77272>;
+     fhir:Reference.reference [ fhir:value "https://fhir.orionhealth.com/blaze/fhir/Practitioner/77272" ];
+     fhir:Reference.display [ fhir:value "Serena Shrink" ]
+  ];
+  fhir:ReferralRequest.specialty [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://orionhealth.com/fhir/apps/specialties" ];
+       fhir:Coding.code [ fhir:value "ent" ];
+       fhir:Coding.display [ fhir:value "ENT" ]
+     ]
+  ];
+  fhir:ReferralRequest.recipient [
+     fhir:index 0;
+     fhir:link <https://fhir.orionhealth.com/blaze/fhir/Practitioner/76597>;
+     fhir:Reference.reference [ fhir:value "https://fhir.orionhealth.com/blaze/fhir/Practitioner/76597" ];
+     fhir:Reference.display [ fhir:value "Dr Dave" ]
+  ];
+  fhir:ReferralRequest.reason [
+     fhir:CodeableConcept.text [ fhir:value "For consideration of Grommets" ]
+  ];
+  fhir:ReferralRequest.description [ fhir:value "In the past 2 years Beverly has had 6 instances of r) sided Otitis media. She is     falling behind her peers at school, and displaying some learning difficulties."];
+  fhir:ReferralRequest.serviceRequested [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:172676009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "172676009" ];
+       fhir:Coding.display [ fhir:value "Myringotomy and insertion of tympanic ventilation tube" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Insertion of grommets" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

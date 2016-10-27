@@ -1,0 +1,191 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Questionnaire/gcs> a fhir:Questionnaire;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gcs"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: gcs</p><p><b>contained</b>: , , </p><p><b>url</b>: <a>http://hl7.org/fhir/Questionnaire/gcs</a></p><p><b>status</b>: draft</p><p><b>date</b>: Aug 3, 2015</p><p><b>publisher</b>: FHIR Project team</p><p><b>title</b>: Glasgow Coma Score</p><p><b>concept</b>: Glasgow coma score total (Details: LOINC code 9269-2 = 'Glasgow coma score total', stated as 'null')</p><p><b>subjectType</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.1</p><p><b>concept</b>: Glasgow coma score verbal (Details: LOINC code 9270-0 = 'Glasgow coma score verbal', stated as 'null')</p><p><b>type</b>: choice</p><p><b>options</b>: id: verbal; http://loinc.org/ValueSet/LL356-7; name: GCS Verbal Value Set; status: active; description: LOINC ANSWER LIST    (LL356-7)</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.2</p><p><b>concept</b>: Glasgow coma score motor (Details: LOINC code 9268-4 = 'Glasgow coma score motor', stated as 'null')</p><p><b>type</b>: choice</p><p><b>options</b>: id: motor; http://loinc.org/ValueSet/LL357-5; name: GCS Motor Value Set; status: active; description: LOINC ANSWER LIST    (LL357-5)</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.3</p><p><b>concept</b>: Glasgow coma score eye opening (Details: LOINC code 9267-6 = 'Glasgow coma score eye opening', stated as 'null')</p><p><b>type</b>: choice</p><p><b>options</b>: id: eye; http://loinc.org/ValueSet/LL355-9; name: GCS Eye Value Set; status: active; description: LOINC ANSWER LIST    (LL355-9)</p></blockquote></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:ValueSet;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "motor" ];
+     fhir:ValueSet.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://loinc.org" ];
+       fhir:Identifier.value [ fhir:value "http://loinc.org/ValueSet/LL357-5" ]
+     ];
+     fhir:ValueSet.name [ fhir:value "GCS Motor Value Set" ];
+     fhir:ValueSet.status [ fhir:value "active" ];
+     fhir:ValueSet.description [ fhir:value "LOINC ANSWER LIST    (LL357-5)" ];
+     fhir:ValueSet.compose [
+       fhir:ValueSet.compose.include [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6562-8" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "No motor response" ]
+         ], [
+           fhir:index 1;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6563-6" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Extension to pain" ]
+         ], [
+           fhir:index 2;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6564-4" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Flexion to pain" ]
+         ], [
+           fhir:index 3;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6565-1" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Withdrawl from pain" ]
+         ], [
+           fhir:index 4;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6566-9" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Localizing pain" ]
+         ], [
+           fhir:index 5;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6567-7" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Obeys commands" ]
+         ]
+       ]
+     ]
+  ], [
+     a fhir:ValueSet;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "verbal" ];
+     fhir:ValueSet.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://loinc.org" ];
+       fhir:Identifier.value [ fhir:value "http://loinc.org/ValueSet/LL356-7" ]
+     ];
+     fhir:ValueSet.name [ fhir:value "GCS Verbal Value Set" ];
+     fhir:ValueSet.status [ fhir:value "active" ];
+     fhir:ValueSet.description [ fhir:value "LOINC ANSWER LIST    (LL356-7)" ];
+     fhir:ValueSet.compose [
+       fhir:ValueSet.compose.include [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6557-8" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "No verbal response (>2yrs); no vocal response (<=2yrs)" ]
+         ], [
+           fhir:index 1;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6558-6" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Incomprehensible sounds" ]
+         ], [
+           fhir:index 2;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6559-4" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Inappropriate words" ]
+         ], [
+           fhir:index 3;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6560-2" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Confused" ]
+         ], [
+           fhir:index 4;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6561-0" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Oriented" ]
+         ]
+       ]
+     ]
+  ], [
+     a fhir:ValueSet;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "eye" ];
+     fhir:ValueSet.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://loinc.org" ];
+       fhir:Identifier.value [ fhir:value "http://loinc.org/ValueSet/LL355-9" ]
+     ];
+     fhir:ValueSet.name [ fhir:value "GCS Eye Value Set" ];
+     fhir:ValueSet.status [ fhir:value "active" ];
+     fhir:ValueSet.description [ fhir:value "LOINC ANSWER LIST    (LL355-9)" ];
+     fhir:ValueSet.compose [
+       fhir:ValueSet.compose.include [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6553-7" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "No eye opening" ]
+         ], [
+           fhir:index 1;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6554-5" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye opening to pain" ]
+         ], [
+           fhir:index 2;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6555-2" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye opening to verbal command" ]
+         ], [
+           fhir:index 3;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6556-0" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Eyes open spontaneously" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:Questionnaire.url [ fhir:value "http://hl7.org/fhir/Questionnaire/gcs"];
+  fhir:Questionnaire.status [ fhir:value "draft"];
+  fhir:Questionnaire.date [ fhir:value "2015-08-03"^^xsd:date];
+  fhir:Questionnaire.publisher [ fhir:value "FHIR Project team"];
+  fhir:Questionnaire.title [ fhir:value "Glasgow Coma Score"];
+  fhir:Questionnaire.concept [
+     fhir:index 0;
+     fhir:concept loinc:9269-2;
+     fhir:Coding.system [ fhir:value "http://loinc.org" ];
+     fhir:Coding.code [ fhir:value "9269-2" ]
+  ];
+  fhir:Questionnaire.subjectType [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:Questionnaire.item [
+     fhir:index 0;
+     fhir:Questionnaire.item.linkId [ fhir:value "1.1" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:9270-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "9270-0" ]
+     ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.options [
+       fhir:Reference.reference [ fhir:value "#verbal" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Questionnaire.item.linkId [ fhir:value "1.2" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:9268-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "9268-4" ]
+     ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.options [
+       fhir:Reference.reference [ fhir:value "#motor" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Questionnaire.item.linkId [ fhir:value "1.3" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:9267-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "9267-6" ]
+     ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.options [
+       fhir:Reference.reference [ fhir:value "#eye" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

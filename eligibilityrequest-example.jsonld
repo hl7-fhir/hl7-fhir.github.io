@@ -1,0 +1,60 @@
+{
+  "@context": "http://build.fhir.org/EligibilityRequest.jsonld",
+  "@context": "http://hl7.org/fhir/EligibilityRequest/52345",
+  "Resource.id": {
+    "id.value": "52345"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the EligibilityRequest</div>"
+    }
+  },
+  "EligibilityRequest.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://happyvalley.com/elegibilityrequest"
+      },
+      "Identifier.value": {
+        "string.value": "52345"
+      }
+    }
+  ],
+  "EligibilityRequest.status": {
+    "code.value": "active"
+  },
+  "EligibilityRequest.created": {
+    "dateTime.value": "2014-08-16"
+  },
+  "EligibilityRequest.insurer": {
+    "Reference.reference": {
+      "string.value": "Organization/2"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "EligibilityRequest.organization": {
+    "Reference.reference": {
+      "string.value": "Organization/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "EligibilityRequest.priority": {
+    "Coding.code": {
+      "code.value": "normal"
+    }
+  },
+  "EligibilityRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "EligibilityRequest.coverage": {
+    "Reference.reference": {
+      "string.value": "Coverage/9876B1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Coverage/9876B1"
+  }
+}

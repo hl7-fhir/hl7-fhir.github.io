@@ -1,0 +1,532 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<StructureMap> AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# A Map of relationships between 2 structures that can be used to transform data
+<StructureMap> CLOSED {
+    a [fhir:StructureMap];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:DomainResource.text @<Narrative>?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @<Resource>*;  # Contained, inline Resources
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.url @<uri>;           # Logical uri to reference this 
+                                            # structure map (globally unique) 
+    fhir:StructureMap.identifier @<Identifier>*;  # Additional identifier for the 
+                                            # structure map 
+    fhir:StructureMap.version @<string>?;   # Business version of the structure 
+                                            # map 
+    fhir:StructureMap.name @<string>;       # Name for this structure map 
+                                            # (Computer friendly) 
+    fhir:StructureMap.title @<string>?;     # Name for this structure map (Human 
+                                            # friendly) 
+    fhir:StructureMap.status @<code> AND
+    	{fhir:value @fhirvs:publication-status};  # draft | active | retired
+    fhir:StructureMap.experimental @<boolean>?;  # If for testing purposes, not real 
+                                            # usage 
+    fhir:StructureMap.publisher @<string>?;  # Name of the publisher 
+                                            # (Organization or individual) 
+    fhir:StructureMap.contact @<ContactDetail>*;  # Contact details for the publisher
+    fhir:StructureMap.date @<dateTime>?;    # Date this was last changed
+    fhir:StructureMap.description @<markdown>?;  # Natural language description of 
+                                            # the structure map 
+    fhir:StructureMap.useContext @<UsageContext>*;  # Content intends to support these 
+                                            # contexts 
+    fhir:StructureMap.jurisdiction @<CodeableConcept>*;  # Intended jurisdiction for 
+                                            # structure map (if applicable) 
+    fhir:StructureMap.purpose @<markdown>?;  # Why this structure map is defined
+    fhir:StructureMap.copyright @<markdown>?;  # Use and/or publishing restrictions
+    fhir:StructureMap.structure @<StructureMap.structure>*;  # Structure Definition used by this 
+                                            # map 
+    fhir:StructureMap.import @<uri>*;       # Other maps used by this map 
+                                            # (canonical URLs) 
+    fhir:StructureMap.group @<StructureMap.group>+;  # Named sections for reader 
+                                            # convenience 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Named sections for reader convenience
+<StructureMap.group> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.group.name @<id>;     # Descriptive name for a user
+    fhir:StructureMap.group.extends @<id>?;  # Another group that this group adds 
+                                            # rules to 
+    fhir:StructureMap.group.documentation @<string>?;  # Documentation for this group
+    fhir:StructureMap.group.input @<StructureMap.group.input>+;  # Named instance provided when 
+                                            # invoking the map 
+    fhir:StructureMap.group.rule @<StructureMap.group.rule>+;  # Transform Rule from source to 
+                                            # target 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Structure Definition used by this map
+<StructureMap.structure> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.structure.url @<uri>;  # Canonical URL for structure 
+                                            # definition 
+    fhir:StructureMap.structure.mode @<code> AND
+    	{fhir:value @fhirvs:map-model-mode};  # source | queried | target | 
+                                            # produced 
+    fhir:StructureMap.structure.documentation @<string>?;  # Documentation on use of structure
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Named instance provided when invoking the map
+<StructureMap.group.input> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.group.input.name @<id>;  # Name for this instance of data
+    fhir:StructureMap.group.input.type @<string>?;  # Type for this instance of data
+    fhir:StructureMap.group.input.mode @<code> AND
+    	{fhir:value @fhirvs:map-input-mode};  # source | target
+    fhir:StructureMap.group.input.documentation @<string>?;  # Documentation for this instance of 
+                                            # data 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Transform Rule from source to target
+<StructureMap.group.rule> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.group.rule.name @<id>;  # Name of the rule for internal 
+                                            # references 
+    fhir:StructureMap.group.rule.source @<StructureMap.group.rule.source>+;  # Source inputs to the mapping
+    fhir:StructureMap.group.rule.target @<StructureMap.group.rule.target>*;  # Content to create because of this 
+                                            # mapping rule 
+    fhir:StructureMap.group.rule.rule @<StructureMap.group.rule>*;  # Rules contained in this rule
+    fhir:StructureMap.group.rule.dependent @<StructureMap.group.rule.dependent>*;  # Which other rules to apply in the 
+                                            # context of this rule 
+    fhir:StructureMap.group.rule.documentation @<string>?;  # Documentation for this instance of 
+                                            # data 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Content to create because of this mapping rule
+<StructureMap.group.rule.target> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.group.rule.target.context @<id>?;  # Type or variable this rule applies 
+                                            # to 
+    fhir:StructureMap.group.rule.target.contextType @<code> AND
+    	{fhir:value @fhirvs:map-context-type}?;  # type | variable
+    fhir:StructureMap.group.rule.target.element @<string>?;  # Field to create in the context
+    fhir:StructureMap.group.rule.target.variable @<id>?;  # Named context for field, if 
+                                            # desired, and a field is specified 
+    fhir:StructureMap.group.rule.target.listMode @<code> AND
+    	{fhir:value @fhirvs:map-list-mode}*;  # first | share | last
+    fhir:StructureMap.group.rule.target.listRuleId @<id>?;  # Internal rule reference for shared 
+                                            # list items 
+    fhir:StructureMap.group.rule.target.transform @<code> AND
+    	{fhir:value @fhirvs:map-transform}?;  # create | copy +
+    fhir:StructureMap.group.rule.target.parameter @<StructureMap.group.rule.target.parameter>*;  # Parameters to the transform
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Source inputs to the mapping
+<StructureMap.group.rule.source> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.group.rule.source.required @<boolean>;  # Whether this rule applies if the 
+                                            # source isn't found 
+    fhir:StructureMap.group.rule.source.context @<id>;  # Type or variable this rule applies 
+                                            # to 
+    fhir:StructureMap.group.rule.source.contextType @<code> AND
+    	{fhir:value @fhirvs:map-context-type};  # type | variable
+    fhir:StructureMap.group.rule.source.element @<string>?;  # Optional field for this source
+    fhir:StructureMap.group.rule.source.listMode @<code> AND
+    	{fhir:value @fhirvs:map-list-mode}?;  # first | share | last
+    fhir:StructureMap.group.rule.source.variable @<id>?;  # Named context for field, if a 
+                                            # field is specified 
+    fhir:StructureMap.group.rule.source.condition @<string>?;  # FluentPath expression  - must be 
+                                            # true or the rule does not apply 
+    fhir:StructureMap.group.rule.source.check @<string>?;  # FluentPath expression  - must be 
+                                            # true or the mapping engine throws 
+                                            # an error instead of completing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Which other rules to apply in the context of this rule
+<StructureMap.group.rule.dependent> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:StructureMap.group.rule.dependent.name @<id>;  # Name of a rule or group to apply
+    fhir:StructureMap.group.rule.dependent.variable @<string>+;  # Names of variables to pass to the 
+                                            # rule or group 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Parameters to the transform
+<StructureMap.group.rule.target.parameter> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    (                                       # Parameter value - variable or 
+                                            # literal 
+        fhir:StructureMap.group.rule.target.parameter.valueId @<id>  |
+        fhir:StructureMap.group.rule.target.parameter.valueString @<string>  |
+        fhir:StructureMap.group.rule.target.parameter.valueBoolean @<boolean>  |
+        fhir:StructureMap.group.rule.target.parameter.valueInteger @<integer>  |
+        fhir:StructureMap.group.rule.target.parameter.valueDecimal @<decimal> 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Primitive Type dateTime
+<dateTime> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Metadata about a resource
+<Meta> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @<id>?;             # Version specific identifier
+    fhir:Meta.lastUpdated @<instant>?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @<uri>*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @<Coding>*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @<Coding>*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+<Resource> {a .+;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# Primitive Type integer
+<integer> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:int MININCLUSIVE "-2147483648"^^xsd:int MAXINCLUSIVE "2147483647"^^xsd:int?;  # Primitive value for integer
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type uri
+<uri> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# Contact information
+<ContactDetail> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:ContactDetail.name @<string>?;     # Name of an individual to contact
+    fhir:ContactDetail.telecom @<ContactPoint>*;  # Contact details for individual or 
+                                            # organization 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An identifier intended for computation
+<Identifier> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @<code> AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @<CodeableConcept>?;  # Description of identifier
+    fhir:Identifier.system @<uri>?;         # The namespace for the identifier
+    fhir:Identifier.value @<string>?;       # The value that is unique
+    fhir:Identifier.period @<Period>?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @<Reference>?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type boolean
+<boolean> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+<Narrative> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @<code> AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Describes the context of use for a knowledge resource
+<UsageContext> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:UsageContext.code @<Coding>;       # Type of context being specified
+    (                                       # Value that defines the context
+        fhir:UsageContext.valueCodeableConcept @<CodeableConcept>  |
+        fhir:UsageContext.valueQuantity @<Quantity>  |
+        fhir:UsageContext.valueRange @<Range> 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type markdown
+<markdown> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for markdown
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+<decimal> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+<CodeableConcept> CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @<Coding>*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @<string>?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+<instant> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Details of a Technology mediated contact point (phone, fax, email, etc.)
+<ContactPoint> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:ContactPoint.system @<code> AND
+    	{fhir:value @fhirvs:contact-point-system}?;  # phone | fax | email | pager | other
+    fhir:ContactPoint.value @<string>?;     # The actual contact point details
+    fhir:ContactPoint.use @<code> AND
+    	{fhir:value @fhirvs:contact-point-use}?;  # home | work | temp | old | mobile 
+                                            # - purpose of this contact point 
+    fhir:ContactPoint.rank @<positiveInt>?;  # Specify preferred order of use (1 
+                                            # = highest) 
+    fhir:ContactPoint.period @<Period>?;    # Time period when the contact point 
+                                            # was/is in use 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+<Coding> CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @<uri>?;             # Identity of the terminology system
+    fhir:Coding.version @<string>?;         # Version of the system - if relevant
+    fhir:Coding.code @<code>?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @<string>?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @<boolean>?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+<Reference> CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @<string>?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @<Identifier>?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @<string>?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+<Period> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @<dateTime>?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @<dateTime>?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A measured or measurable amount
+<Quantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Set of values bounded by low and high
+<Range> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Range.low @<SimpleQuantity>?;      # Low limit
+    fhir:Range.high @<SimpleQuantity>?;     # High limit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type positiveInt
+<positiveInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:positiveInteger?;        # Primitive value for positiveInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A fixed quantity (no comparator)
+<SimpleQuantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+#---------------------- Value Sets ------------------------
+
+# How the referenced structure is used in this mapping
+fhirvs:map-model-mode ["source" "queried" "target" "produced"]
+
+# Mode for this instance of data
+fhirvs:map-input-mode ["source" "target"]
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use ["usual" "official" "temp" "secondary"]
+
+# How to interpret the context
+fhirvs:map-context-type ["type" "variable"]
+
+# How the Quantity should be understood and represented.
+fhirvs:quantity-comparator ["<" "<=" ">=" ">"]
+
+# The status of a resource narrative
+fhirvs:narrative-status ["generated" "extensions" "additional" "empty"]
+
+# The lifecycle status of a Value Set or Concept Map.
+fhirvs:publication-status ["draft" "active" "retired"]
+
+# If field is a list, how to manage the list
+fhirvs:map-list-mode ["first" "share" "last"]
+
+# How data is copied / created
+fhirvs:map-transform ["create" "copy" "truncate" "escape" "cast" "append" "translate" "reference" "dateOp" "uuid" "pointer" "evaluate" "cc" "c" "qty" "id" "cp"]
+
+# Use of contact point
+fhirvs:contact-point-use ["home" "work" "temp" "old" "mobile"]
+
+# Telecommunications form for contact point
+fhirvs:contact-point-system ["phone" "fax" "email" "pager" "other"]

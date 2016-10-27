@@ -1,0 +1,34 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Slot/3> a fhir:Slot;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			25 Dec 2013 9:30am - 9:45am: <b>Unavailable</b> Physiotherapy<br/>\n			Dr Careful is out of the office\n		</div>"
+  ];
+  fhir:Slot.serviceCategory [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "17" ];
+       fhir:Coding.display [ fhir:value "General Practice" ]
+     ]
+  ];
+  fhir:Slot.schedule [
+     fhir:link <http://hl7.org/fhir/Schedule/example>;
+     fhir:Reference.reference [ fhir:value "Schedule/example" ]
+  ];
+  fhir:Slot.status [ fhir:value "busy-unavailable"];
+  fhir:Slot.start [ fhir:value "2013-12-25T09:30:00Z"^^xsd:dateTime];
+  fhir:Slot.end [ fhir:value "2013-12-25T09:45:00Z"^^xsd:dateTime];
+  fhir:Slot.comment [ fhir:value "Dr Careful is out of the office"] .
+
+<http://hl7.org/fhir/Schedule/example> a fhir:Schedule .
+
+# -------------------------------------------------------------------------------------
+

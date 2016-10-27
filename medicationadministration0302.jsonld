@@ -1,0 +1,273 @@
+{
+  "@context": "http://build.fhir.org/MedicationAdministration.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationAdministration/medadmin0302",
+  "Resource.id": {
+    "id.value": "medadmin0302"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0302</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0317</p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>effectiveTime</b>: Jan 15, 2015 4:30:00 AM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0322</a></p><p><b>reasonGiven</b>: Given as Ordered <span>(Details : {http://hl7.org/fhir/reason-medication-given code 'b' = 'Given as Ordered', given as 'Given as Ordered'})</span></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Site[x]</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>KCl 20 mEq in 1 L 0.9%NS IV at 100 ml/hr</td><td>Structure of ligament of left superior vena cava <span>(Details : {SNOMED CT code '6073002' = 'Structure of ligament of left superior vena cava', given as 'Structure of ligament of left superior vena cava'})</span></td><td>Intravenous route (qualifier value) <span>(Details : {SNOMED CT code '47625008' = 'Intravenous route (qualifier value)', given as 'Intravenous route (qualifier value)'})</span></td><td>Continuous infusion <span>(Details )</span></td><td>20 mEq<span> (Details: UCUM code mEq = 'mEq')</span></td><td>100 mL<span> (Details: UCUM code mL = 'mL')</span>/1 h<span> (Details: UCUM code h = 'h')</span></td></tr></table></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0317"
+      },
+      "Medication.product": {
+        "Medication.product.form": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "385219001"
+              },
+              "Coding.display": {
+                "string.value": "Injection Solution (qualifier value)"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "string.value": "Injection Solution (qualifier value)"
+          },
+          "Resource.concept": "http://snomed.info/sct#385219001"
+        },
+        "Medication.product.ingredient": [
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "Coding.code": {
+                    "code.value": "204520"
+                  },
+                  "Coding.display": {
+                    "string.value": "Potassium Chloride"
+                  }
+                }
+              ]
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 2
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mEq"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 1
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mL"
+                }
+              }
+            }
+          },
+          {
+            "Medication.product.ingredient.itemCodeableConcept": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "uri.value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "Coding.code": {
+                    "code.value": "313002"
+                  },
+                  "Coding.display": {
+                    "string.value": "Sodium Chloride 0.9% injectable solution"
+                  }
+                }
+              ]
+            },
+            "Medication.product.ingredient.amount": {
+              "Ratio.numerator": {
+                "Quantity.value": {
+                  "decimal.value": 0.9
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "g"
+                }
+              },
+              "Ratio.denominator": {
+                "Quantity.value": {
+                  "decimal.value": 100
+                },
+                "Quantity.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Quantity.code": {
+                  "code.value": "mL"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationAdministration.status": {
+    "code.value": "completed"
+  },
+  "MedicationAdministration.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0317"
+    }
+  },
+  "MedicationAdministration.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationAdministration.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/f001"
+    },
+    "Reference.display": {
+      "string.value": "encounter who leads to this prescription"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "MedicationAdministration.effectiveTimePeriod": {
+    "Period.start": {
+      "dateTime.value": "2015-01-15T04:30:00+01:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2015-01-15T14:30:00+01:00"
+    }
+  },
+  "MedicationAdministration.performer": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "string.value": "Patrick Pump"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationAdministration.prescription": {
+    "Reference.reference": {
+      "string.value": "MedicationRequest/medrx0322"
+    },
+    "Resource.reference": "http://hl7.org/fhir//MedicationRequest/medrx0322"
+  },
+  "MedicationAdministration.reasonGiven": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/reason-medication-given"
+          },
+          "Coding.code": {
+            "code.value": "b"
+          },
+          "Coding.display": {
+            "string.value": "Given as Ordered"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationAdministration.dosage": {
+    "MedicationAdministration.dosage.text": {
+      "string.value": "KCl 20 mEq in 1 L 0.9%NS IV at 100 ml/hr"
+    },
+    "MedicationAdministration.dosage.siteCodeableConcept": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "6073002"
+          },
+          "Coding.display": {
+            "string.value": "Structure of ligament of left superior vena cava"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#6073002"
+    },
+    "MedicationAdministration.dosage.route": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "47625008"
+          },
+          "Coding.display": {
+            "string.value": "Intravenous route (qualifier value)"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#47625008"
+    },
+    "MedicationAdministration.dosage.method": {
+      "CodeableConcept.text": {
+        "string.value": "Continuous infusion"
+      }
+    },
+    "MedicationAdministration.dosage.dose": {
+      "Quantity.value": {
+        "decimal.value": 20
+      },
+      "Quantity.unit": {
+        "string.value": "mEq"
+      },
+      "Quantity.system": {
+        "uri.value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "code.value": "mEq"
+      }
+    },
+    "MedicationAdministration.dosage.rateRatio": {
+      "Ratio.numerator": {
+        "Quantity.value": {
+          "decimal.value": 100
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mL"
+        }
+      },
+      "Ratio.denominator": {
+        "Quantity.value": {
+          "decimal.value": 1
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "h"
+        }
+      }
+    }
+  }
+}

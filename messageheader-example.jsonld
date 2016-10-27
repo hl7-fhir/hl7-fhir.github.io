@@ -1,0 +1,109 @@
+{
+  "@context": "http://build.fhir.org/MessageHeader.jsonld",
+  "@context": "http://hl7.org/fhir/MessageHeader/1cbdfb97-5859-48a4-8301-d54eab818d68",
+  "Resource.id": {
+    "id.value": "1cbdfb97-5859-48a4-8301-d54eab818d68"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Update Person resource for Peter James CHALMERS (Jim), MRN: 12345 (Acme Healthcare)</p>\n    </div>"
+    }
+  },
+  "MessageHeader.timestamp": {
+    "instant.value": "2012-01-04T09:10:14Z"
+  },
+  "MessageHeader.event": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/message-type"
+    },
+    "Coding.code": {
+      "code.value": "admin-update"
+    }
+  },
+  "MessageHeader.response": {
+    "MessageHeader.response.identifier": {
+      "id.value": "5015fe84-8e76-4526-89d8-44b322e8d4fb"
+    },
+    "MessageHeader.response.code": {
+      "code.value": "ok"
+    }
+  },
+  "MessageHeader.source": {
+    "MessageHeader.source.name": {
+      "string.value": "Acme Central Patient Registry"
+    },
+    "MessageHeader.source.software": {
+      "string.value": "FooBar Patient Manager"
+    },
+    "MessageHeader.source.version": {
+      "string.value": "3.1.45.AABB"
+    },
+    "MessageHeader.source.contact": {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "+1 (555) 123 4567"
+      }
+    },
+    "MessageHeader.source.endpoint": {
+      "uri.value": "llp:10.11.12.13:5432"
+    }
+  },
+  "MessageHeader.destination": [
+    {
+      "MessageHeader.destination.name": {
+        "string.value": "Acme Message Gateway"
+      },
+      "MessageHeader.destination.target": {
+        "Reference.reference": {
+          "string.value": "Device/example"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Device/example"
+      },
+      "MessageHeader.destination.endpoint": {
+        "uri.value": "llp:10.11.12.14:5432"
+      }
+    }
+  ],
+  "MessageHeader.enterer": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "MessageHeader.author": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "MessageHeader.responsible": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "MessageHeader.reason": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/message-reasons-encounter"
+        },
+        "Coding.code": {
+          "code.value": "admit"
+        }
+      }
+    ]
+  },
+  "MessageHeader.data": [
+    {
+      "Reference.reference": {
+        "string.value": "Patient/example"
+      }
+    }
+  ]
+}

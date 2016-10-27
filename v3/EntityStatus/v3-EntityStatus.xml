@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v3-EntityStatus"/>
+  <meta>
+    <lastUpdated value="2016-03-23T00:00:00.000+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Release Date: 2016-03-23</p>
+
+      <table class="grid">
+ 
+        <tr>
+          <td>
+            <b>Level</b>
+          </td>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>normal
+            <a name="normal"> </a>
+          </td>
+          <td>normal</td>
+          <td>
+                        The &#39;typical&#39; state. Excludes &quot;nullified&quot; which represents the termination state of an Entity record instance that was created in error.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>2</td>
+          <td>  active
+            <a name="active"> </a>
+          </td>
+          <td>active</td>
+          <td>
+                        The state representing the fact that the Entity record is currently active.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>2</td>
+          <td>  inactive
+            <a name="inactive"> </a>
+          </td>
+          <td>inactive</td>
+          <td>
+                        
+                           Definition: The state representing the fact that the entity is inactive.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>2</td>
+          <td>  terminated
+            <a name="terminated"> </a>
+          </td>
+          <td>terminated</td>
+          <td>
+                        The state representing the normal termination of an Entity record.
+            <br/>
+
+                     
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>1</td>
+          <td>nullified
+            <a name="nullified"> </a>
+          </td>
+          <td>nullified</td>
+          <td>
+                        The state representing the termination of an Entity record instance that was created in error.
+            <br/>
+
+                     
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v3-EntityStatus"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.1.11.16005"/>
+  </identifier>
+  <version value="2016-03-23"/>
+  <name value="v3 Code System EntityStatus"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7, Inc"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-03-23"/>
+  <description value=" Codes representing the defined possible states of an Entity, as defined by the Entity class state machine."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/EntityStatus"/>
+    </include>
+  </compose>
+</ValueSet>

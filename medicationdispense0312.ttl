@@ -1,0 +1,126 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0312> a fhir:MedicationDispense;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "meddisp0312"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0312</p><p><b>contained</b>: </p><p><b>status</b>: on-hold</p><p><b>medication</b>: Tylenol PM. Generated Summary: id: med0309; Tylenol PM <span>(Details : {http://hl7.org/fhir/sid/ndc code '50580-506-02' = '50580-506-02', given as 'Tylenol PM'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0310</a></p><p><b>type</b>: First Fill <span>(Details : {http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType code 'FF' = 'FF', given as 'First Fill'})</span></p><p><b>quantity</b>: 100 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm/ code TAB = 'TAB')</span></p><p><b>daysSupply</b>: 30 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>whenHandedOver</b>: Jan 15, 2015 4:20:00 PM</p><p><b>dosageInstruction</b>: </p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "med0309" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/ndc" ];
+         fhir:Coding.code [ fhir:value "50580-506-02" ];
+         fhir:Coding.display [ fhir:value "Tylenol PM" ]
+       ]
+     ]
+  ];
+  fhir:MedicationDispense.status [ fhir:value "on-hold"];
+  fhir:MedicationDispense.medicationReference [
+     fhir:Reference.reference [ fhir:value "#med0309" ];
+     fhir:Reference.display [ fhir:value "Tylenol PM" ]
+  ];
+  fhir:MedicationDispense.patient [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ];
+     fhir:Reference.display [ fhir:value "Donald Duck" ]
+  ];
+  fhir:MedicationDispense.dispenser [
+     fhir:link <http://hl7.org/fhir/Practitioner/f006>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f006" ];
+     fhir:Reference.display [ fhir:value "Rob van den Berk" ]
+  ];
+  fhir:MedicationDispense.authorizingPrescription [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/MedicationRequest/medrx0310>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medrx0310" ]
+  ];
+  fhir:MedicationDispense.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType" ];
+       fhir:Coding.code [ fhir:value "FF" ];
+       fhir:Coding.display [ fhir:value "First Fill" ]
+     ]
+  ];
+  fhir:MedicationDispense.quantity [
+     fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ];
+     fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm/" ];
+     fhir:Quantity.code [ fhir:value "TAB" ]
+  ];
+  fhir:MedicationDispense.daysSupply [
+     fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "Day" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "d" ]
+  ];
+  fhir:MedicationDispense.whenPrepared [ fhir:value "2015-01-15T10:20:00Z"^^xsd:dateTime];
+  fhir:MedicationDispense.whenHandedOver [ fhir:value "2015-01-15T16:20:00Z"^^xsd:dateTime];
+  fhir:MedicationDispense.dosageInstruction [
+     fhir:index 0;
+     fhir:DosageInstruction.sequence [ fhir:value "1"^^xsd:int ];
+     fhir:DosageInstruction.text [ fhir:value "Take 1-2 tablets once daily at bedtime as needed for restless legs" ];
+     fhir:DosageInstruction.additionalInstructions [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Take at bedtime" ]
+     ];
+     fhir:DosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:DosageInstruction.asNeededCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:32914008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "32914008" ];
+         fhir:Coding.display [ fhir:value "Restless Legs" ]
+       ]
+     ];
+     fhir:DosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral Route" ]
+       ]
+     ];
+     fhir:DosageInstruction.doseRange [
+       fhir:Range.low [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "TAB" ];
+         fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm" ];
+         fhir:Quantity.code [ fhir:value "TAB" ]
+       ];
+       fhir:Range.high [
+         fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "TAB" ];
+         fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm" ];
+         fhir:Quantity.code [ fhir:value "TAB" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f006> a fhir:Practitioner .
+
+<http://hl7.org/fhir/MedicationRequest/medrx0310> a fhir:MedicationRequest .
+
+# -------------------------------------------------------------------------------------
+

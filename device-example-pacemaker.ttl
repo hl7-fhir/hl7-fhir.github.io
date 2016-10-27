@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Device/example-pacemaker> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-pacemaker"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-pacemaker</p><p><b>identifier</b>: 1234-5678-90AB-CDEF</p><p><b>type</b>: Performance pace maker for high octane patients <span>(Details : {http://acme.com/devices code 'octane2014' = 'octane2014', given as 'Performance pace maker for high octane patients'})</span></p><p><b>lotNumber</b>: 1234-5678</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>model</b>: PM/Octane 2014</p><p><b>patient</b>: <a>Patient/example</a></p><p><b>contact</b>: ph: ext 4352</p></div>"
+  ];
+  fhir:Device.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://acme.com/devices/pacemakers/octane/serial" ];
+     fhir:Identifier.value [ fhir:value "1234-5678-90AB-CDEF" ]
+  ];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://acme.com/devices" ];
+       fhir:Coding.code [ fhir:value "octane2014" ];
+       fhir:Coding.display [ fhir:value "Performance pace maker for high octane patients" ]
+     ]
+  ];
+  fhir:Device.lotNumber [ fhir:value "1234-5678"];
+  fhir:Device.manufacturer [ fhir:value "Acme Devices, Inc"];
+  fhir:Device.model [ fhir:value "PM/Octane 2014"];
+  fhir:Device.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Device.contact [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "ext 4352" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

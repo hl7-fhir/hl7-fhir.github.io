@@ -1,0 +1,571 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Devicemetric.shex - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/devicemetric.shex.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="datatypes.html">Data Types</a></li>        <li><b>Profile</b></li>        <!-- devicemetric.shex.html / profile-instance:type:DeviceMetric / Type-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Devicemetric.shex</h1>
+
+<p>
+<a href="devicemetric.shex">Raw ShEx</a>
+</p>
+
+<div class="example">
+<p>ShEx statement for devicemetric</p>
+<pre class="shex">
+PREFIX fhir: &lt;http://hl7.org/fhir/&gt; 
+PREFIX fhirvs: &lt;http://hl7.org/fhir/ValueSet/&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; 
+BASE &lt;http://hl7.org/fhir/shape/&gt;
+
+start=@&lt;DeviceMetric&gt; AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# Measurement, calculation or setting capability of a medical device
+&lt;DeviceMetric&gt; CLOSED {
+    a [fhir:DeviceMetric];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @&lt;id&gt;?;                # Logical id of this artifact
+    fhir:Resource.meta @&lt;Meta&gt;?;            # Metadata about the resource
+    fhir:Resource.implicitRules @&lt;uri&gt;?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @&lt;code&gt;?;        # Language of the resource content
+    fhir:DomainResource.text @&lt;Narrative&gt;?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @&lt;Resource&gt;*;  # Contained, inline Resources
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:DeviceMetric.type @&lt;CodeableConcept&gt;;  # Type of metric
+    fhir:DeviceMetric.identifier @&lt;Identifier&gt;;  # Unique identifier of this 
+                                            # DeviceMetric 
+    fhir:DeviceMetric.unit @&lt;CodeableConcept&gt;?;  # Unit of metric
+    fhir:DeviceMetric.source @&lt;Reference&gt;?;  # Describes the link to the source 
+                                            # Device 
+    fhir:DeviceMetric.parent @&lt;Reference&gt;?;  # Describes the link to the parent 
+                                            # DeviceComponent 
+    fhir:DeviceMetric.operationalStatus @&lt;code&gt; AND
+    	{fhir:value @fhirvs:metric-operational-status}?;  # on | off | standby
+    fhir:DeviceMetric.color @&lt;code&gt; AND
+    	{fhir:value @fhirvs:metric-color}?;  # black | red | green | yellow | 
+                                            # blue | magenta | cyan | white 
+    fhir:DeviceMetric.category @&lt;code&gt; AND
+    	{fhir:value @fhirvs:metric-category};  # measurement | setting | 
+                                            # calculation | unspecified 
+    fhir:DeviceMetric.measurementPeriod @&lt;Timing&gt;?;  # Describes the measurement 
+                                            # repetition time 
+    fhir:DeviceMetric.calibration @&lt;DeviceMetric.calibration&gt;*;  # Describes the calibrations that 
+                                            # have been performed or that are 
+                                            # required to be performed 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Describes the calibrations that have been performed or that are required to be performed
+&lt;DeviceMetric.calibration&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @&lt;Extension&gt;*;   # Extensions that cannot be ignored
+    fhir:DeviceMetric.calibration.type @&lt;code&gt; AND
+    	{fhir:value @fhirvs:metric-calibration-type}?;  # unspecified | offset | gain | 
+                                            # two-point 
+    fhir:DeviceMetric.calibration.state @&lt;code&gt; AND
+    	{fhir:value @fhirvs:metric-calibration-state}?;  # not-calibrated | 
+                                            # calibration-required | calibrated 
+                                            # | unspecified 
+    fhir:DeviceMetric.calibration.time @&lt;instant&gt;?;  # Describes the time last 
+                                            # calibration has been performed 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Metadata about a resource
+&lt;Meta&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @&lt;id&gt;?;             # Version specific identifier
+    fhir:Meta.lastUpdated @&lt;instant&gt;?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @&lt;uri&gt;*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @&lt;Coding&gt;*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @&lt;Coding&gt;*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+&lt;code&gt; CLOSED {
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+&lt;string&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+&lt;Reference&gt; CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @&lt;string&gt;?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @&lt;Identifier&gt;?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @&lt;string&gt;?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+&lt;Resource&gt; {a .+;
+    fhir:Resource.id @&lt;id&gt;?;                # Logical id of this artifact
+    fhir:Resource.meta @&lt;Meta&gt;?;            # Metadata about the resource
+    fhir:Resource.implicitRules @&lt;uri&gt;?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @&lt;code&gt;?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# Primitive Type uri
+&lt;uri&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+&lt;instant&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+&lt;Extension&gt; {fhir:extension @&lt;Extension&gt;*;
+    fhir:index xsd:integer?
+}
+
+# An identifier intended for computation
+&lt;Identifier&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @&lt;code&gt; AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @&lt;CodeableConcept&gt;?;  # Description of identifier
+    fhir:Identifier.system @&lt;uri&gt;?;         # The namespace for the identifier
+    fhir:Identifier.value @&lt;string&gt;?;       # The value that is unique
+    fhir:Identifier.period @&lt;Period&gt;?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @&lt;Reference&gt;?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+&lt;Narrative&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @&lt;code&gt; AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+&lt;id&gt; CLOSED {
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A timing schedule that specifies an event that may occur multiple times
+&lt;Timing&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Timing.event @&lt;dateTime&gt;*;         # When the event occurs
+    fhir:Timing.repeat @&lt;Timing.repeat&gt;?;   # When the event is to occur
+    fhir:Timing.code @&lt;CodeableConcept&gt;?;   # BID | TID | QID | AM | PM | QD | 
+                                            # QOD | Q4H | Q6H + 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+&lt;CodeableConcept&gt; CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @&lt;Coding&gt;*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @&lt;string&gt;?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type dateTime
+&lt;dateTime&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+&lt;Period&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @&lt;dateTime&gt;?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @&lt;dateTime&gt;?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+&lt;Coding&gt; CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @&lt;uri&gt;?;             # Identity of the terminology system
+    fhir:Coding.version @&lt;string&gt;?;         # Version of the system - if relevant
+    fhir:Coding.code @&lt;code&gt;?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @&lt;string&gt;?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @&lt;boolean&gt;?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type boolean
+&lt;boolean&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# When the event is to occur
+&lt;Timing.repeat&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    (                                       # Length/Range of lengths, or (Start 
+                                            # and/or end) limits 
+        fhir:Timing.repeat.boundsDuration @&lt;Duration&gt;  |
+        fhir:Timing.repeat.boundsRange @&lt;Range&gt;  |
+        fhir:Timing.repeat.boundsPeriod @&lt;Period&gt; 
+    )?;
+    fhir:Timing.repeat.count @&lt;integer&gt;?;   # Number of times to repeat
+    fhir:Timing.repeat.countMax @&lt;integer&gt;?;  # Maximum number of times to repeat
+    fhir:Timing.repeat.duration @&lt;decimal&gt;?;  # How long when it happens
+    fhir:Timing.repeat.durationMax @&lt;decimal&gt;?;  # How long when it happens (Max)
+    fhir:Timing.repeat.durationUnit @&lt;code&gt; AND
+    	{fhir:value @fhirvs:units-of-time}?;  # s | min | h | d | wk | mo | a - 
+                                            # unit of time (UCUM) 
+    fhir:Timing.repeat.frequency @&lt;integer&gt;?;  # Event occurs frequency times per 
+                                            # period 
+    fhir:Timing.repeat.frequencyMax @&lt;integer&gt;?;  # Event occurs up to frequencyMax 
+                                            # times per period 
+    fhir:Timing.repeat.period @&lt;decimal&gt;?;  # Event occurs frequency times per 
+                                            # period 
+    fhir:Timing.repeat.periodMax @&lt;decimal&gt;?;  # Upper limit of period (3-4 hours)
+    fhir:Timing.repeat.periodUnit @&lt;code&gt; AND
+    	{fhir:value @fhirvs:units-of-time}?;  # s | min | h | d | wk | mo | a - 
+                                            # unit of time (UCUM) 
+    fhir:Timing.repeat.when @&lt;code&gt; AND
+    	{fhir:value @fhirvs:event-timing}?;  # Regular life events the event is 
+                                            # tied to 
+    fhir:Timing.repeat.offset @&lt;unsignedInt&gt;?;  # Minutes from event (before or 
+                                            # after) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A length of time
+&lt;Duration&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @&lt;decimal&gt;?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @&lt;code&gt; AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # &lt; | &lt;= | &gt;= | &gt; - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @&lt;string&gt;?;          # Unit representation
+    fhir:Quantity.system @&lt;uri&gt;?;           # System that defines coded unit form
+    fhir:Quantity.code @&lt;code&gt;?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type integer
+&lt;integer&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:int MININCLUSIVE &quot;-2147483648&quot;^^xsd:int MAXINCLUSIVE &quot;2147483647&quot;^^xsd:int?;  # Primitive value for integer
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Set of values bounded by low and high
+&lt;Range&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Range.low @&lt;SimpleQuantity&gt;?;      # Low limit
+    fhir:Range.high @&lt;SimpleQuantity&gt;?;     # High limit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type unsignedInt
+&lt;unsignedInt&gt; CLOSED {
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:nonNegativeInteger?;     # Primitive value for unsignedInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+&lt;decimal&gt; CLOSED {
+    fhir:Element.id @&lt;id&gt;?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A fixed quantity (no comparator)
+&lt;SimpleQuantity&gt; CLOSED {
+    fhir:Element.id @&lt;string&gt;?;             # xml:id (or equivalent in JSON)
+    fhir:extension @&lt;Extension&gt;*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @&lt;decimal&gt;?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.unit @&lt;string&gt;?;          # Unit representation
+    fhir:Quantity.system @&lt;uri&gt;?;           # System that defines coded unit form
+    fhir:Quantity.code @&lt;code&gt;?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+#---------------------- Value Sets ------------------------
+
+# Describes the category of the metric.
+fhirvs:metric-category [&quot;measurement&quot; &quot;setting&quot; &quot;calculation&quot; &quot;unspecified&quot;]
+
+# Describes the typical color of representation.
+fhirvs:metric-color [&quot;black&quot; &quot;red&quot; &quot;green&quot; &quot;yellow&quot; &quot;blue&quot; &quot;magenta&quot; &quot;cyan&quot; &quot;white&quot;]
+
+# Describes the state of a metric calibration.
+fhirvs:metric-calibration-state [&quot;not-calibrated&quot; &quot;calibration-required&quot; &quot;calibrated&quot; &quot;unspecified&quot;]
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use [&quot;usual&quot; &quot;official&quot; &quot;temp&quot; &quot;secondary&quot;]
+
+# How the Quantity should be understood and represented.
+fhirvs:quantity-comparator [&quot;&lt;&quot; &quot;&lt;=&quot; &quot;&gt;=&quot; &quot;&gt;&quot;]
+
+# Describes the operational status of the DeviceMetric.
+fhirvs:metric-operational-status [&quot;on&quot; &quot;off&quot; &quot;standby&quot;]
+
+# The status of a resource narrative
+fhirvs:narrative-status [&quot;generated&quot; &quot;extensions&quot; &quot;additional&quot; &quot;empty&quot;]
+
+# Describes the type of a metric calibration.
+fhirvs:metric-calibration-type [&quot;unspecified&quot; &quot;offset&quot; &quot;gain&quot; &quot;two-point&quot;]
+
+# Real world event that the relating to the schedule.
+fhirvs:event-timing [&quot;HS&quot; &quot;WAKE&quot; &quot;C&quot; &quot;CM&quot; &quot;CD&quot; &quot;CV&quot; &quot;AC&quot; &quot;ACM&quot; &quot;ACD&quot; &quot;ACV&quot; &quot;PC&quot; &quot;PCM&quot; &quot;PCD&quot; &quot;PCV&quot;]
+
+# A unit of time (units from UCUM).
+fhirvs:units-of-time [&quot;s&quot; &quot;min&quot; &quot;h&quot; &quot;d&quot; &quot;wk&quot; &quot;mo&quot; &quot;a&quot;]
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+ShEx files are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdevicemetric.shex.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdevicemetric.shex.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

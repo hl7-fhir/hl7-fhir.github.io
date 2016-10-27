@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="search-xpath-usage"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>XPathUsageType</h2>
+      <div>
+        <p>How a search parameter relates to the set of elements returned by evaluating its xpath query.</p>
+
+      </div>
+      <p>This code system http://hl7.org/fhir/search-xpath-usage defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>normal
+            <a name="search-xpath-usage-normal"> </a>
+          </td>
+          <td>Normal</td>
+          <td>The search parameter is derived directly from the selected nodes based on the type definitions.</td>
+        </tr>
+        <tr>
+          <td>phonetic
+            <a name="search-xpath-usage-phonetic"> </a>
+          </td>
+          <td>Phonetic</td>
+          <td>The search parameter is derived by a phonetic transform from the selected nodes.</td>
+        </tr>
+        <tr>
+          <td>nearby
+            <a name="search-xpath-usage-nearby"> </a>
+          </td>
+          <td>Nearby</td>
+          <td>The search parameter is based on a spatial transform of the selected nodes.</td>
+        </tr>
+        <tr>
+          <td>distance
+            <a name="search-xpath-usage-distance"> </a>
+          </td>
+          <td>Distance</td>
+          <td>The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.</td>
+        </tr>
+        <tr>
+          <td>other
+            <a name="search-xpath-usage-other"> </a>
+          </td>
+          <td>Other</td>
+          <td>The interpretation of the xpath statement is unknown (and can&#39;t be automated).</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/search-xpath-usage"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.1.332"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="XPathUsageType"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="How a search parameter relates to the set of elements returned by evaluating its xpath query."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/search-xpath-usage"/>
+  <content value="complete"/>
+  <concept>
+    <code value="normal"/>
+    <display value="Normal"/>
+    <definition value="The search parameter is derived directly from the selected nodes based on the type definitions."/>
+  </concept>
+  <concept>
+    <code value="phonetic"/>
+    <display value="Phonetic"/>
+    <definition value="The search parameter is derived by a phonetic transform from the selected nodes."/>
+  </concept>
+  <concept>
+    <code value="nearby"/>
+    <display value="Nearby"/>
+    <definition value="The search parameter is based on a spatial transform of the selected nodes."/>
+  </concept>
+  <concept>
+    <code value="distance"/>
+    <display value="Distance"/>
+    <definition value="The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle."/>
+  </concept>
+  <concept>
+    <code value="other"/>
+    <display value="Other"/>
+    <definition value="The interpretation of the xpath statement is unknown (and can&#39;t be automated)."/>
+  </concept>
+</CodeSystem>

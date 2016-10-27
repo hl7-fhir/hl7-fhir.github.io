@@ -1,0 +1,243 @@
+{
+  "@context": "http://build.fhir.org/Questionnaire.jsonld",
+  "@context": "http://hl7.org/fhir/Questionnaire/bb",
+  "Resource.id": {
+    "id.value": "bb"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n        <b>Birth details - To be completed by health professional</b>\n  Name of child: ____________________________________\n            Sex: __\n            \n  Neonatal Information\n    Birth Weight (kg): ___________\n    Birth Length (cm): ___________\n    Vitamin K given  : __\n             1st dose: ___________\n             2nd dose: ___________\n    Hep B given      : __\n      Date given     : ___________\n    Abnormalities noted at birth:\n      _______________________________________________\n      </pre>\n    </div>"
+    }
+  },
+  "Questionnaire.url": {
+    "uri.value": "http://hl7.org/fhir/Questionnaire/bb"
+  },
+  "Questionnaire.status": {
+    "code.value": "draft"
+  },
+  "Questionnaire.date": {
+    "dateTime.value": "2013-02-19"
+  },
+  "Questionnaire.publisher": {
+    "string.value": "New South Wales Department of Health"
+  },
+  "Questionnaire.title": {
+    "string.value": "NSW Government My Personal Health Record"
+  },
+  "Questionnaire.subjectType": [
+    {
+      "code.value": "Patient"
+    }
+  ],
+  "Questionnaire.item": [
+    {
+      "Questionnaire.item.linkId": {
+        "string.value": "birthDetails"
+      },
+      "Questionnaire.item.text": {
+        "string.value": "Birth details - To be completed by health professional"
+      },
+      "Questionnaire.item.type": {
+        "code.value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.type": {
+            "code.value": "group"
+          },
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "nameOfChild"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Name of child"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "string"
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "sex"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Sex"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "choice"
+              },
+              "Questionnaire.item.option": [
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "F"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "M"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "neonatalInformation"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "Neonatal Information"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "group"
+          },
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "birthWeight"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Birth weight (kg)"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "decimal"
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "birthLength"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Birth length (cm)"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "decimal"
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "vitaminKgiven"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Vitamin K given"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "choice"
+              },
+              "Questionnaire.item.option": [
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "INJECTION"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "INTRAVENOUS"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "code.value": "ORAL"
+                    }
+                  }
+                }
+              ],
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "string.value": "vitaminKgivenDoses"
+                  },
+                  "Questionnaire.item.type": {
+                    "code.value": "group"
+                  },
+                  "Questionnaire.item.enableWhen": [
+                    {
+                      "Questionnaire.item.enableWhen.question": {
+                        "string.value": "vitaminKgiven"
+                      },
+                      "Questionnaire.item.enableWhen.hasAnswer": {
+                        "boolean.value": true
+                      }
+                    }
+                  ],
+                  "Questionnaire.item.item": [
+                    {
+                      "Questionnaire.item.linkId": {
+                        "string.value": "vitaminiKDose1"
+                      },
+                      "Questionnaire.item.text": {
+                        "string.value": "1st dose"
+                      },
+                      "Questionnaire.item.type": {
+                        "code.value": "dateTime"
+                      }
+                    },
+                    {
+                      "Questionnaire.item.linkId": {
+                        "string.value": "vitaminiKDose2"
+                      },
+                      "Questionnaire.item.text": {
+                        "string.value": "2nd dose"
+                      },
+                      "Questionnaire.item.type": {
+                        "code.value": "dateTime"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "hepBgiven"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Hep B given y / n"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "boolean"
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "string.value": "hepBgivenDate"
+                  },
+                  "Questionnaire.item.text": {
+                    "string.value": "Date given"
+                  },
+                  "Questionnaire.item.type": {
+                    "code.value": "date"
+                  }
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "string.value": "abnormalitiesAtBirth"
+              },
+              "Questionnaire.item.text": {
+                "string.value": "Abnormalities noted at birth"
+              },
+              "Questionnaire.item.type": {
+                "code.value": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

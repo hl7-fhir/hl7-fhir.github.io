@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Questionnaire/bb> a fhir:Questionnaire;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bb"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n        <b>Birth details - To be completed by health professional</b>\n  Name of child: ____________________________________\n            Sex: __\n            \n  Neonatal Information\n    Birth Weight (kg): ___________\n    Birth Length (cm): ___________\n    Vitamin K given  : __\n             1st dose: ___________\n             2nd dose: ___________\n    Hep B given      : __\n      Date given     : ___________\n    Abnormalities noted at birth:\n      _______________________________________________\n      </pre>\n    </div>"
+  ];
+  fhir:Questionnaire.url [ fhir:value "http://hl7.org/fhir/Questionnaire/bb"];
+  fhir:Questionnaire.status [ fhir:value "draft"];
+  fhir:Questionnaire.date [ fhir:value "2013-02-19"^^xsd:date];
+  fhir:Questionnaire.publisher [ fhir:value "New South Wales Department of Health"];
+  fhir:Questionnaire.title [ fhir:value "NSW Government My Personal Health Record"];
+  fhir:Questionnaire.subjectType [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:Questionnaire.item [
+     fhir:index 0;
+     fhir:Questionnaire.item.linkId [ fhir:value "birthDetails" ];
+     fhir:Questionnaire.item.text [ fhir:value "Birth details - To be completed by health professional" ];
+     fhir:Questionnaire.item.type [ fhir:value "group" ];
+     fhir:Questionnaire.item.item [
+       fhir:index 0;
+       fhir:Questionnaire.item.type [ fhir:value "group" ];
+       fhir:Questionnaire.item.item [
+         fhir:index 0;
+         fhir:Questionnaire.item.linkId [ fhir:value "nameOfChild" ];
+         fhir:Questionnaire.item.text [ fhir:value "Name of child" ];
+         fhir:Questionnaire.item.type [ fhir:value "string" ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.linkId [ fhir:value "sex" ];
+         fhir:Questionnaire.item.text [ fhir:value "Sex" ];
+         fhir:Questionnaire.item.type [ fhir:value "choice" ];
+         fhir:Questionnaire.item.option [
+           fhir:index 0;
+           fhir:Questionnaire.item.option.valueCoding [
+             fhir:Coding.code [ fhir:value "F" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:Questionnaire.item.option.valueCoding [
+             fhir:Coding.code [ fhir:value "M" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Questionnaire.item.linkId [ fhir:value "neonatalInformation" ];
+       fhir:Questionnaire.item.text [ fhir:value "Neonatal Information" ];
+       fhir:Questionnaire.item.type [ fhir:value "group" ];
+       fhir:Questionnaire.item.item [
+         fhir:index 0;
+         fhir:Questionnaire.item.linkId [ fhir:value "birthWeight" ];
+         fhir:Questionnaire.item.text [ fhir:value "Birth weight (kg)" ];
+         fhir:Questionnaire.item.type [ fhir:value "decimal" ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.linkId [ fhir:value "birthLength" ];
+         fhir:Questionnaire.item.text [ fhir:value "Birth length (cm)" ];
+         fhir:Questionnaire.item.type [ fhir:value "decimal" ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.linkId [ fhir:value "vitaminKgiven" ];
+         fhir:Questionnaire.item.text [ fhir:value "Vitamin K given" ];
+         fhir:Questionnaire.item.type [ fhir:value "choice" ];
+         fhir:Questionnaire.item.option [
+           fhir:index 0;
+           fhir:Questionnaire.item.option.valueCoding [
+             fhir:Coding.code [ fhir:value "INJECTION" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:Questionnaire.item.option.valueCoding [
+             fhir:Coding.code [ fhir:value "INTRAVENOUS" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:Questionnaire.item.option.valueCoding [
+             fhir:Coding.code [ fhir:value "ORAL" ]
+           ]
+         ];
+         fhir:Questionnaire.item.item [
+           fhir:index 0;
+           fhir:Questionnaire.item.linkId [ fhir:value "vitaminKgivenDoses" ];
+           fhir:Questionnaire.item.type [ fhir:value "group" ];
+           fhir:Questionnaire.item.enableWhen [
+             fhir:index 0;
+             fhir:Questionnaire.item.enableWhen.question [ fhir:value "vitaminKgiven" ];
+             fhir:Questionnaire.item.enableWhen.hasAnswer [ fhir:value "true"^^xsd:boolean ]
+           ];
+           fhir:Questionnaire.item.item [
+             fhir:index 0;
+             fhir:Questionnaire.item.linkId [ fhir:value "vitaminiKDose1" ];
+             fhir:Questionnaire.item.text [ fhir:value "1st dose" ];
+             fhir:Questionnaire.item.type [ fhir:value "dateTime" ]
+           ], [
+             fhir:index 1;
+             fhir:Questionnaire.item.linkId [ fhir:value "vitaminiKDose2" ];
+             fhir:Questionnaire.item.text [ fhir:value "2nd dose" ];
+             fhir:Questionnaire.item.type [ fhir:value "dateTime" ]
+           ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.linkId [ fhir:value "hepBgiven" ];
+         fhir:Questionnaire.item.text [ fhir:value "Hep B given y / n" ];
+         fhir:Questionnaire.item.type [ fhir:value "boolean" ];
+         fhir:Questionnaire.item.item [
+           fhir:index 0;
+           fhir:Questionnaire.item.linkId [ fhir:value "hepBgivenDate" ];
+           fhir:Questionnaire.item.text [ fhir:value "Date given" ];
+           fhir:Questionnaire.item.type [ fhir:value "date" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Questionnaire.item.linkId [ fhir:value "abnormalitiesAtBirth" ];
+         fhir:Questionnaire.item.text [ fhir:value "Abnormalities noted at birth" ];
+         fhir:Questionnaire.item.type [ fhir:value "string" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

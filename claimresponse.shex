@@ -1,0 +1,443 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<ClaimResponse> AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# Remittance resource
+<ClaimResponse> CLOSED {
+    a [fhir:ClaimResponse];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:DomainResource.text @<Narrative>?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @<Resource>*;  # Contained, inline Resources
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.identifier @<Identifier>*;  # Response  number
+    fhir:ClaimResponse.status @<code> AND
+    	{fhir:value @fhirvs:claimresponse-status};  # active | cancelled | draft | 
+                                            # entered-in-error 
+    fhir:ClaimResponse.request @<Reference>?;  # Id of resource triggering 
+                                            # adjudication 
+    fhir:ClaimResponse.ruleset @<Coding>?;  # Resource version
+    fhir:ClaimResponse.originalRuleset @<Coding>?;  # Original version
+    fhir:ClaimResponse.created @<dateTime>?;  # Creation date
+    fhir:ClaimResponse.organization @<Reference>?;  # Insurer
+    fhir:ClaimResponse.requestProvider @<Reference>?;  # Responsible practitioner
+    fhir:ClaimResponse.requestOrganization @<Reference>?;  # Responsible organization
+    fhir:ClaimResponse.outcome @<Coding>?;  # complete | error | partial
+    fhir:ClaimResponse.disposition @<string>?;  # Disposition Message
+    fhir:ClaimResponse.payeeType @<Coding>?;  # Party to be paid any benefits 
+                                            # payable 
+    fhir:ClaimResponse.item @<ClaimResponse.item>*;  # Line items
+    fhir:ClaimResponse.addItem @<ClaimResponse.addItem>*;  # Insurer added line items
+    fhir:ClaimResponse.error @<ClaimResponse.error>*;  # Processing errors
+    fhir:ClaimResponse.totalCost @<Money>?;  # Total Cost of service from the 
+                                            # Claim 
+    fhir:ClaimResponse.unallocDeductable @<Money>?;  # Unallocated deductible
+    fhir:ClaimResponse.totalBenefit @<Money>?;  # Total benefit payable for the Claim
+    fhir:ClaimResponse.payment @<ClaimResponse.payment>?;  # Payment details, if paid
+    fhir:ClaimResponse.reserved @<Coding>?;  # Funds reserved status
+    fhir:ClaimResponse.form @<Coding> AND
+    	{fhir:value @fhirvs:forms}?;  # Printed Form Identifier
+    fhir:ClaimResponse.note @<ClaimResponse.note>*;  # Processing notes
+    fhir:ClaimResponse.coverage @<ClaimResponse.coverage>*;  # Insurance or medical plan
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Insurer added line items
+<ClaimResponse.addItem> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.addItem.sequenceLinkId @<positiveInt>*;  # Service instances
+    fhir:ClaimResponse.addItem.revenue @<Coding>?;  # Revenue or cost center code
+    fhir:ClaimResponse.addItem.category @<Coding>?;  # Type of service or product
+    fhir:ClaimResponse.addItem.service @<Coding>?;  # Group, Service or Product
+    fhir:ClaimResponse.addItem.modifier @<Coding>*;  # Service/Product billing modifiers
+    fhir:ClaimResponse.addItem.fee @<Money>?;  # Professional fee or Product charge
+    fhir:ClaimResponse.addItem.noteNumber @<positiveInt>*;  # List of note numbers which apply
+    fhir:ClaimResponse.addItem.adjudication @<ClaimResponse.item.adjudication>*;  # Added items adjudication
+    fhir:ClaimResponse.addItem.detail @<ClaimResponse.addItem.detail>*;  # Added items details
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Insurance or medical plan
+<ClaimResponse.coverage> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.coverage.sequence @<positiveInt>;  # Service instance identifier
+    fhir:ClaimResponse.coverage.focal @<boolean>;  # Is the focal Coverage
+    fhir:ClaimResponse.coverage.coverage @<Reference>;  # Insurance information
+    fhir:ClaimResponse.coverage.businessArrangement @<string>?;  # Business agreement
+    fhir:ClaimResponse.coverage.preAuthRef @<string>*;  # Pre-Authorization/Determination 
+                                            # Reference 
+    fhir:ClaimResponse.coverage.claimResponse @<Reference>?;  # Adjudication results
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Payment details, if paid
+<ClaimResponse.payment> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.payment.type @<Coding>?;  # Partial or Complete
+    fhir:ClaimResponse.payment.adjustment @<Money>?;  # Payment adjustment for non-Claim 
+                                            # issues 
+    fhir:ClaimResponse.payment.adjustmentReason @<Coding>?;  # Reason for Payment adjustment
+    fhir:ClaimResponse.payment.date @<date>?;  # Expected data of Payment
+    fhir:ClaimResponse.payment.amount @<Money>?;  # Payment amount
+    fhir:ClaimResponse.payment.identifier @<Identifier>?;  # Payment identifier
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Processing errors
+<ClaimResponse.error> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.error.sequenceLinkId @<positiveInt>?;  # Item sequence number
+    fhir:ClaimResponse.error.detailSequenceLinkId @<positiveInt>?;  # Detail sequence number
+    fhir:ClaimResponse.error.subdetailSequenceLinkId @<positiveInt>?;  # Subdetail sequence number
+    fhir:ClaimResponse.error.code @<Coding>;  # Error code detailing processing 
+                                            # issues 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Line items
+<ClaimResponse.item> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.item.sequenceLinkId @<positiveInt>;  # Service instance
+    fhir:ClaimResponse.item.noteNumber @<positiveInt>*;  # List of note numbers which apply
+    fhir:ClaimResponse.item.adjudication @<ClaimResponse.item.adjudication>*;  # Adjudication details
+    fhir:ClaimResponse.item.detail @<ClaimResponse.item.detail>*;  # Detail line items
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Processing notes
+<ClaimResponse.note> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.note.number @<positiveInt>?;  # Note Number for this note
+    fhir:ClaimResponse.note.type @<Coding> AND
+    	{fhir:value @fhirvs:note-type}?;  # display | print | printoper
+    fhir:ClaimResponse.note.text @<string>?;  # Note explanatory text
+    fhir:ClaimResponse.note.language @<Coding>?;  # Language
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Added items details
+<ClaimResponse.addItem.detail> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.addItem.detail.revenue @<Coding>?;  # Revenue or cost center code
+    fhir:ClaimResponse.addItem.detail.category @<Coding>?;  # Type of service or product
+    fhir:ClaimResponse.addItem.detail.service @<Coding>?;  # Service or Product
+    fhir:ClaimResponse.addItem.detail.modifier @<Coding>*;  # Service/Product billing modifiers
+    fhir:ClaimResponse.addItem.detail.fee @<Money>?;  # Professional fee or Product charge
+    fhir:ClaimResponse.addItem.detail.noteNumber @<positiveInt>*;  # List of note numbers which apply
+    fhir:ClaimResponse.addItem.detail.adjudication @<ClaimResponse.item.adjudication>*;  # Added items detail adjudication
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Adjudication details
+<ClaimResponse.item.adjudication> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.item.adjudication.category @<Coding>;  # Adjudication category such as 
+                                            # co-pay, eligible, benefit, etc. 
+    fhir:ClaimResponse.item.adjudication.reason @<Coding>?;  # Adjudication reason
+    fhir:ClaimResponse.item.adjudication.amount @<Money>?;  # Monetary amount
+    fhir:ClaimResponse.item.adjudication.value @<decimal>?;  # Non-monetary value
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Detail line items
+<ClaimResponse.item.detail> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.item.detail.sequenceLinkId @<positiveInt>;  # Service instance
+    fhir:ClaimResponse.item.detail.noteNumber @<positiveInt>*;  # List of note numbers which apply
+    fhir:ClaimResponse.item.detail.adjudication @<ClaimResponse.item.adjudication>*;  # Detail adjudication
+    fhir:ClaimResponse.item.detail.subDetail @<ClaimResponse.item.detail.subDetail>*;  # Subdetail line items
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Subdetail line items
+<ClaimResponse.item.detail.subDetail> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:ClaimResponse.item.detail.subDetail.sequenceLinkId @<positiveInt>;  # Service instance
+    fhir:ClaimResponse.item.detail.subDetail.noteNumber @<positiveInt>*;  # List of note numbers which apply
+    fhir:ClaimResponse.item.detail.subDetail.adjudication @<ClaimResponse.item.adjudication>*;  # Subdetail adjudication
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Primitive Type dateTime
+<dateTime> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type date
+<date> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date?;  # Primitive value for date
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Metadata about a resource
+<Meta> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @<id>?;             # Version specific identifier
+    fhir:Meta.lastUpdated @<instant>?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @<uri>*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @<Coding>*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @<Coding>*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+<Reference> CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @<string>?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @<Identifier>?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @<string>?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+<Resource> {a .+;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# Primitive Type uri
+<uri> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# An amount of economic utility in some recognised currency
+<Money> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An identifier intended for computation
+<Identifier> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @<code> AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @<CodeableConcept>?;  # Description of identifier
+    fhir:Identifier.system @<uri>?;         # The namespace for the identifier
+    fhir:Identifier.value @<string>?;       # The value that is unique
+    fhir:Identifier.period @<Period>?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @<Reference>?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type boolean
+<boolean> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+<Narrative> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @<code> AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+<Coding> CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @<uri>?;             # Identity of the terminology system
+    fhir:Coding.version @<string>?;         # Version of the system - if relevant
+    fhir:Coding.code @<code>?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @<string>?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @<boolean>?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type positiveInt
+<positiveInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:positiveInteger?;        # Primitive value for positiveInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+<decimal> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+<Period> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @<dateTime>?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @<dateTime>?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+<instant> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+<CodeableConcept> CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @<Coding>*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @<string>?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+#---------------------- Value Sets ------------------------
+
+# A code specifying the state of the resource instance.
+fhirvs:claimresponse-status ["active" "cancelled" "draft" "entered-in-error"]
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use ["usual" "official" "temp" "secondary"]
+
+# How the Quantity should be understood and represented.
+fhirvs:quantity-comparator ["<" "<=" ">=" ">"]
+
+# The status of a resource narrative
+fhirvs:narrative-status ["generated" "extensions" "additional" "empty"]
+
+# This value set includes a sample set of Forms codes.
+fhirvs:forms ["1" "2"]
+
+# The presentation types of notes.
+fhirvs:note-type ["display" "print" "printoper"]

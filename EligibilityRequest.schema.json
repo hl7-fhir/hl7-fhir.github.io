@@ -1,0 +1,129 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/EligibilityRequest",
+  "$ref": "#/definitions/EligibilityRequest",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "EligibilityRequest": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json#/definitions/DomainResource"
+        },
+        {
+          "description": "This resource provides the insurance eligibility details from the insurer regarding a specified coverage and optionally some class of service.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a EligibilityRequest resource",
+              "type": "string",
+              "enum": [
+                "EligibilityRequest"
+              ]
+            },
+            "identifier": {
+              "description": "The Response business identifier.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json#/definitions/Identifier"
+              }
+            },
+            "status": {
+              "description": "The status of the resource instance.",
+              "enum": [
+                "active",
+                "cancelled",
+                "draft",
+                "entered-in-error"
+              ],
+              "type": "string"
+            },
+            "_status": {
+              "description": "Extensions for status",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "ruleset": {
+              "description": "The version of the style of resource contents. This should be mapped to the allowable profiles for this and supporting resources.",
+              "$ref": "Coding.schema.json#/definitions/Coding"
+            },
+            "originalRuleset": {
+              "description": "The style (standard) and version of the original material which was converted into this resource.",
+              "$ref": "Coding.schema.json#/definitions/Coding"
+            },
+            "created": {
+              "description": "The date when this resource was created.",
+              "type": "string",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            },
+            "_created": {
+              "description": "Extensions for created",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "insurer": {
+              "description": "The Insurer who is target  of the request.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "provider": {
+              "description": "The practitioner who is responsible for the services rendered to the patient.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "organization": {
+              "description": "The organization which is responsible for the services rendered to the patient.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "priority": {
+              "description": "Immediate (STAT), best effort (NORMAL), deferred (DEFER).",
+              "$ref": "Coding.schema.json#/definitions/Coding"
+            },
+            "enterer": {
+              "description": "Person who created the invoice/claim/pre-determination or pre-authorization.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "facility": {
+              "description": "Facility where the services were provided.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "patient": {
+              "description": "Patient Resource.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "coverage": {
+              "description": "Financial instrument by which payment information for health care.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "businessArrangement": {
+              "description": "The contract number of a business agreement which describes the terms and conditions.",
+              "type": "string"
+            },
+            "_businessArrangement": {
+              "description": "Extensions for businessArrangement",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "servicedDate": {
+              "description": "The date or dates when the enclosed suite of services were performed or completed.",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?",
+              "type": "string"
+            },
+            "_servicedDate": {
+              "description": "Extensions for servicedDate",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "servicedPeriod": {
+              "description": "The date or dates when the enclosed suite of services were performed or completed.",
+              "$ref": "Period.schema.json#/definitions/Period"
+            },
+            "benefitCategory": {
+              "description": "Dental, Vision, Medical, Pharmacy, Rehab etc.",
+              "$ref": "Coding.schema.json#/definitions/Coding"
+            },
+            "benefitSubCategory": {
+              "description": "Dental: basic, major, ortho; Vision exam, glasses, contacts; etc.",
+              "$ref": "Coding.schema.json#/definitions/Coding"
+            }
+          },
+          "required": [
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

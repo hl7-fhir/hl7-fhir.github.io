@@ -1,0 +1,370 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Observation-genetics - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/observation-genetics"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="diagnostics-module.html"><img src="diagnostics.jpg"/> Diagnostics</a></li>        <li><a href="observation.html">Observation</a></li>        <li><a href="observation-genetics.html">Profile</a></li>        <li><b>Observation for Genetics</b></li>          <!-- observation-genetics.html / profile:Observation/observation-genetics / Observation for Genetics -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h2 class="self-link-parent"><span class="sectioncount">10.1.13<a name="10.1.13"> </a></span> Observation for Genetics <a href="observation-genetics.html#10.1.13" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+
+<head>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+
+<h3 class="self-link-parent"><span class="sectioncount">10.1.13.1<a name="10.1.13.1"> </a></span> Overview <a href="observation-genetics.html#10.1.13.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Observation-genetics-profile extends <a href="observation.html">Observation</a> resource to enable reporting of structured genetic test results. In addition, the genetics profile contextualizes well established standards from the field of clinical genetics into the standards of healthcare (e.g. HGNC - HUGO Gene Nomenclature Committee's international standard for gene names, symbols, and identifiers).
+</p>
+<p>
+<h4 class="self-link-parent"><span class="sectioncount">10.1.13.1.1<a name="10.1.13.1.1"> </a></span> Genetic Standards and Resources include: <a href="observation-genetics.html#10.1.13.1.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+			<ul>
+				<li>Variant Databases: <a href="http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi">dbSNP <img src="external.png" style="text-align: baseline"/></a> , <a href="http://www.ncbi.nlm.nih.gov/clinvar/">ClinVar <img src="external.png" style="text-align: baseline"/></a>, and <a href="http://cancer.sanger.ac.uk/cosmic/">COSMIC <img src="external.png" style="text-align: baseline"/></a> </li>
+				<li>Reference Sequences: <a href="http://www.ncbi.nlm.nih.gov/refseq/">RefSeq <img src="external.png" style="text-align: baseline"/></a> and <a href="http://www.ensembl.org/index.html">ENSEMBL <img src="external.png" style="text-align: baseline"/></a> </li>
+				<li> Gene Symbols and Identifiers: <a href="http://www.genenames.org">HGNC <img src="external.png" style="text-align: baseline"/></a> - Human Genee Nomenclature Committee</li>
+				<li>Variant Nomenclature: <a href="http://www.hgvs.org">HGVS <img src="external.png" style="text-align: baseline"/></a> nomenclature from the Human Genome Variantion Society</li>
+                <li>Locus: <a href="http://www.ncbi.nlm.nih.gov/gene">Gene <img src="external.png" style="text-align: baseline"/></a></li>
+			</ul>
+</p>
+<h3 class="self-link-parent"><span class="sectioncount">10.1.13.2<a name="10.1.13.2"> </a></span> Scope and Usage <a href="observation-genetics.html#10.1.13.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The Observation-genetics profile supports reporting of a DNA variant at the genomic, cDNA, and protein change level. In addition, a condition context may be provided, as AssessedCondition. For large genomic tests, a condition may be used as an input into the analytic pipeline to aid in the identification of clinically relevant variants related to the test order. It is strongly encouraged to provide all available information in this profile for any reported variants, because receiving systems (e.g. discovery research, outcomes analysis, and public health reporting) may use this information to normalize variants over time or across sources.  However, these data should not be used to dynamically correct/change variant representations for clinical use outside of the laboratory, due to insufficient information.
+
+</p>
+<p>
+Implementers should be aware that semantic equivalency of results of genetic variants cannot be guaranteed unless there is an agreed upon standard between sending and receiving systems.
+</p>
+<p>
+This FHIR genomics work is based on work of the HL7 Clinical Genomics Workgroup and modeled based on the Domain Analysis Model and SMART on FHIR Genomics as published in JAMIA 2015 (http://jamia.oxfordjournals.org/content/early/2015/07/21/jamia.ocv045.long).
+</p>
+<p>
+The HL7 Clinical Genomics Work Group emphasizes the importance of transmitting structured genetic findings within the clinical, translational, and research environments fully integrated with other clinical data, in order to drive outcomes analysis, operational decision making, discovery research, and public health reporting. The standard doesn't currently cover the reporting of clinically relevant negative or wild type results within genetic data portion of the message.
+</p>
+<p>
+    <a href="https://www.hl7.org/documentcenter/public_temp_65DE7F6D-1C23-BA17-0CB30D7343EDE16D/wg/clingenomics/docs/V3DAM_CG_CLINSEQ_R1_O1_2013JAN.pdf">Here <img src="external.png" style="text-align: baseline"/></a> is the document of HL7 Version 3 Domain Analysis Model where the examples used in genetics profile are from (Page 5).
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">10.1.13.3<a name="10.1.13.3"> </a></span> Interpretation <a href="observation-genetics.html#10.1.13.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>Extension - geneticsInterpretation points to an Observation entity. In this Observation entity, Observation.component is used for recording clinical interpretations for variation.  </p>
+<p>Here is a LOINC panel that could be supported by Observation.component:</p>
+
+<table border="1" style="width:100%">
+	<caption>LOINC Codes</caption>
+	<tr>
+		<th><span style="white-space: nowrap">LOINC #</span></th>
+		<th>Component</th>
+		<th>Description/Comments</th>
+	</tr>
+	<tr>
+		<td><span style="white-space: nowrap">51963-7</span></td>
+		<td>Medication Assessed</td>
+		<td>A coded medication accessed in a pharmacogenetic test (recommend RxNorm).</td>
+	</tr>
+	<tr>
+		<td><span style="white-space: nowrap">51964-5</span></td>
+		<td>Drug Efficacy Analysis Overall Interpretation</td>
+		<td>Overall predicted phenotype for drug efficacy for all DNA Sequence Variations identified in a single case. LOINC Answer List values can be seen in table below.</td>
+	</tr>
+	<tr>
+		<td><span style="white-space: nowrap">51967-8</span></td>
+		<td>Genetic disease assessed</td>
+		<td>A coded disease which is associated with the region of DNA covered by the genetic test (recommend SNOMED).</td>
+	</tr>
+	<tr>
+		<td><span style="white-space: nowrap">51969-4</span></td>
+		<td>Genetic analysis summary report</td>
+		<td>Narrative report in disease diagnostic-based format, which is used for pharmacogenomic reporting as well and disease risk or diagnosis. These reports currently follow the same formatting recommendations.</td>
+	</tr>
+	<tr>
+		<td><span style="white-space: nowrap">51971-0</span></td>
+		<td>Drug metabolism analysis overall interpretation</td>
+		<td>Overall predicted phenotype for drug metabolism for all DNA Sequence Variations identified in a single case. LOINC Answer List values can be seen in table below.</td>
+	</tr>
+	<tr>
+		<td><span style="white-space: nowrap">53039-4</span></td>
+		<td>Genetic Disease Analysis Overall Carrier Interpretation</td>
+		<td>Carrier Identification interpretation of all identified DNA Sequence Variations along with any known clinical information for the benefit of aiding clinicians in understanding the results overall. LOINC Answer List values can be seen in table below.</td>
+	</tr>
+</table>
+
+<table border="1" style="width:100%">
+	<caption>LOINC Answer Lists</caption>
+	<tr>
+		<th>LOINC Code</th>
+		<th>Sequence</th>
+		<th>Answer text</th>
+		<th>LOINC answer code</th>
+	</tr>
+	<tr>
+		<td rowspan="5"><span style="white-space: nowrap">51964-5</span></td>
+		<td>1</td>
+	  <td>Responsive</td>
+		<td><span style="white-space: nowrap">LA6677-4</span></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Resistant</td>
+		<td><span style="white-space: nowrap">LA6676-6</span></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Negative</td>
+		<td><span style="white-space: nowrap">LA6577-6</span></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Inconclusive</td>
+		<td><span style="white-space: nowrap">LA9663-1</span></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Failure</td>
+		<td><span style="white-space: nowrap">LA9664-9</span></td>
+	</tr>
+	<tr>
+		<td rowspan="5"><span style="white-space: nowrap">51971-0</span></td>
+		<td>1</td>
+		<td><span style="white-space: nowrap">Ultrarapid metabolizer</span></td>
+		<td><span style="white-space: nowrap">LA10315-2</span></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><span style="white-space: nowrap">Extensive metabolizer</span></td>
+		<td><span style="white-space: nowrap">LA10316-0</span></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><span style="white-space: nowrap">Intermediate metabolizer</span></td>
+		<td><span style="white-space: nowrap">LA10317-8</span></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><span style="white-space: nowrap">Poor metabolizer</span></td>
+		<td><span style="white-space: nowrap">LA9657-3</span></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Inconclusive</td>
+		<td><span style="white-space: nowrap">LA9663-1</span></td>
+	</tr>
+	<tr>
+		<td rowspan="4"><span style="white-space: nowrap">53039-4</span></td>
+		<td>1</td>
+		<td>Carrier</td>
+		<td><span style="white-space: nowrap">LA10314-5</span></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Negative</td>
+		<td><span style="white-space: nowrap">LA6577-6</span></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Inconclusive</td>
+		<td><span style="white-space: nowrap">LA9663-1</span></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Failure</td>
+		<td><span style="white-space: nowrap">LA9664-9</span></td>
+	</tr>
+</table>
+
+
+<p> In addition, in this Observation entity, Observation.related is used to link itself with Observation-genetics profile. Observation.related.type is 'derived-from' as it provides clinical interpretation for variation recoreded in Observation-genetics entity.
+</p>
+
+
+<a name="content"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">10.1.13.4</span> Content <a href="observation-genetics.html#content" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<table class="lines"><tr><td colspan="2"><b>Profiles</b>: </td></tr><tr><td><a href="observationforgenetics.html">ObservationForGenetics</a></td><td>Describes how the observation resource is used to report structured genetic test results</td></tr><tr><td colspan="2"><b>Extensions</b>: </td></tr><tr><td><a name="extension-observation-geneticsTranscriptReferenceSequenceId"/><a href="extension-observation-geneticstranscriptreferencesequenceid.html">observation-geneticsTranscriptReferenceSequenceId</a></td><td><b>Transcript reference sequence ID</b> : <p>Identifier for the transcribed reference sequence that is part of the genetic reference sequence that gets converted to messenger RNA. A transcript is an RNA synthesized on a DNA or RNA template by an RNA polymerase (<a href="http://www.sequenceontology.org/browser/current_svn/term/SO:0000673">SO:0000673 <img src="external.png" style="text-align: baseline"/></a>).</p>
+</td></tr><tr><td><a name="extension-observation-geneticsProteinReferenceSequenceId"/><a href="extension-observation-geneticsproteinreferencesequenceid.html">observation-geneticsProteinReferenceSequenceId</a></td><td><b>Protein reference sequence ID</b> : <p>Reference identifier for protein transcript, with version, from NCBI's RefSeq or ENSEMBL. A protein is a sequence of amino acids linked by peptide bonds which may lack appreciable tertiary structure and may not be liable to irreversible denaturation (<a href="http://www.sequenceontology.org/browser/current_svn/term/SO:0000104">SO:0000104 <img src="external.png" style="text-align: baseline"/></a>).</p>
+</td></tr><tr><td><a name="extension-observation-geneticsDNASequenceVariant"/><a href="extension-observation-geneticsdnasequencevariant.html">observation-geneticsDNASequenceVariant</a></td><td><b>DNA sequence variant</b> : <p>A' is a variant (mutation) of A = definition every instance of A' is either an immediate mutation of some instance of A, or there is a chain of immediate mutation processes linking A' to some instance of A (<a href="http://www.sequenceontology.org/browser/current_svn/term/variant_of">variant_of <img src="external.png" style="text-align: baseline"/></a>). This element is the Human Genome Variation Society (HGVS) nomenclature for a single or set of DNA sequence variant(s) identified in testing. Reference sequence ID used for HGVS naming must be anotated.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsDNAVariantId"/><a href="extension-observation-geneticsdnavariantid.html">observation-geneticsDNAVariantId</a></td><td><b>DNA sequence variant ID</b> : <p>Identifier for DNA sequence variant.  If a germline variant, ClinVar or dbSNP identifier should be used.  If a somatic variant, COSMIC identifier should be used, unless in ClinVar then either maybe used. Need to provide the code system used (ClinVar, dbSNP, COSMIC).</p>
+</td></tr><tr><td><a name="extension-observation-geneticsDNASequenceVariantType"/><a href="extension-observation-geneticsdnasequencevarianttype.html">observation-geneticsDNASequenceVariantType</a></td><td><b>DNA sequence variant type</b> : <p>Codified type for associated DNA sequence variant. DNA sequence variants use the HGVS notation, which implies the DNA sequence variant type.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsAminoAcidChange"/><a href="extension-observation-geneticsaminoacidchange.html">observation-geneticsAminoAcidChange</a></td><td><b>Amino acid change</b> : <p>Human Genome Variation Society (HGVS) nomenclature for an amino acid change. Reference sequence ID used for HGVS naming must be anotated. An amino acid is a sequence feature that corresponds to a single amino acid residue in a polypeptide (<a href="http://www.sequenceontology.org/browser/current_svn/term/SO:0001237">SO:0001237 <img src="external.png" style="text-align: baseline"/></a>).</p>
+</td></tr><tr><td><a name="extension-observation-geneticsAminoAcidChangeType"/><a href="extension-observation-geneticsaminoacidchangetype.html">observation-geneticsAminoAcidChangeType</a></td><td><b>Amino Acid Change Type</b> : <p>Codified type for associated Amino Acid Change.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsGene"/><a href="extension-observation-geneticsgene.html">observation-geneticsGene</a></td><td><b>HGNC gene symbol</b> : <p>A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene may include regulatory regions, transcribed regions and/or other functional sequence regions (<a href="http://www.sequenceontology.org/browser/current_svn/term/SO:0000704">SO:0000704 <img src="external.png" style="text-align: baseline"/></a>). This element is the official gene symbol approved by the HGNC, which is a short abbreviated form of the gene name (<a href="http://www.genenames.org">HGNC <img src="external.png" style="text-align: baseline"/></a>).</p>
+</td></tr><tr><td><a name="extension-observation-geneticsDNARegionName"/><a href="extension-observation-geneticsdnaregionname.html">observation-geneticsDNARegionName</a></td><td><b>DNA region name</b> : <p>A human readable name for the region of interest. Typically Exon #, Intron # or other. NOTE: This is not standardized and is mainly for convenience and display purposes.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsAlleleName"/><a href="extension-observation-geneticsallelename.html">observation-geneticsAlleleName</a></td><td><b>Name of allele</b> : <p>An allele is one of a set of coexisting sequence variants of a gene (<a href="http://www.sequenceontology.org/browser/current_svn/term/SO:0001023">SO:0001023 <img src="external.png" style="text-align: baseline"/></a>). This element is the common name for the allele.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsAllelicState"/><a href="extension-observation-geneticsallelicstate.html">observation-geneticsAllelicState</a></td><td><b>The level of occurrence of a single DNA sequence variant within a set of chromosomes: Heteroplasmic / Homoplasmic / Homozygous / Heterozygous / Hemizygous</b> : <p>The level of occurrence of a single DNA Sequence Variant within a set of chromosomes. Heterozygous indicates the DNA sequence variant is only present in one of the two genes contained in homologous chromosomes. Homozygous indicates the DNA Sequence Variant is present in both genes contained in homologous chromosomes. Hemizygous indicates the DNA Sequence Variant exists in the only single copy of a gene in a non- homologous chromosome (the male X and Y chromosome are non-homologous). Hemiplasmic indicates that the DNA Sequence Variant is present in some but not all of the copies of mitochondrial DNA. Homoplasmic indicates that the DNA Sequence Variant is present in all of the copies of mitochondrial DNA.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsAllelicFrequency"/><a href="extension-observation-geneticsallelicfrequency.html">observation-geneticsAllelicFrequency</a></td><td><b>Allele frequency</b> : <p>A physical quality which inheres to the allele by virtue of the number instances of the allele within a population.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsCopyNumberEvent"/><a href="extension-observation-geneticscopynumberevent.html">observation-geneticsCopyNumberEvent</a></td><td><b>Copy number variation</b> : <p>A variation that increases or decreases the copy number of a given region (<a href="http://www.sequenceontology.org/browser/current_svn/term/SO:0001019">SO:0001019 <img src="external.png" style="text-align: baseline"/></a>). Values: amplification/deletion/LOH.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsGenomicSourceClass"/><a href="extension-observation-geneticsgenomicsourceclass.html">observation-geneticsGenomicSourceClass</a></td><td><b>Genomic source class</b> : <p>Source of sample used to determine the sequence in sequencing lab -- germline, somatic, prenatal.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsPhaseSet"/><a href="extension-observation-geneticsphaseset.html">observation-geneticsPhaseSet</a></td><td><b>Phase set identifier (UUID/OID)</b> : <p>Chromosomal phase set identifier (UUID/OID). All sequences with the same PhaseSet identifier are asserted to be on the same chromosome (cis).</p>
+</td></tr><tr><td><a name="extension-observation-geneticsSequence"/><a href="extension-observation-geneticssequence.html">observation-geneticsSequence</a></td><td><b>Sequence</b> : <p>Refers to the Sequence resource, representing raw genetics data.</p>
+</td></tr><tr><td><a name="extension-observation-geneticsInterpretation"/><a href="extension-observation-geneticsinterpretation.html">observation-geneticsInterpretation</a></td><td><b>Clinical interpretations for variant</b> : <p>Clinical Interpretations for variant. It's a reference to an Observation resource.</p>
+</td></tr></table><a name="search"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">10.1.13.5</span> Search Parameters <a href="observation-genetics.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>Search parameters defined by this package. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td><td><b>Source</b></td></tr>
+<tr><td>amino-acid-change</td><td><a href="search.html#string">string</a></td><td>HGVS Protein Change</td><td/><td><a href="observation-genetics-Observation-amino-acid-change.xml.html">XML</a> / <a href="observation-genetics-Observation-amino-acid-change.json.html">JSON</a></td></tr>
+<tr><td>dna-variant</td><td><a href="search.html#string">string</a></td><td>HGVS DNA variant</td><td/><td><a href="observation-genetics-Observation-dna-variant.xml.html">XML</a> / <a href="observation-genetics-Observation-dna-variant.json.html">JSON</a></td></tr>
+<tr><td>gene-amino-acid-change</td><td><a href="search.html#string">string</a></td><td>HGNC gene symbol and HGVS Protein change</td><td/><td><a href="observation-genetics-Observation-gene-amino-acid-change.xml.html">XML</a> / <a href="observation-genetics-Observation-gene-amino-acid-change.json.html">JSON</a></td></tr>
+<tr><td>gene-dnavariant</td><td><a href="search.html#string">string</a></td><td>HGNC gene symbol and HGVS DNA Variant</td><td/><td><a href="observation-genetics-Observation-gene-dnavariant.xml.html">XML</a> / <a href="observation-genetics-Observation-gene-dnavariant.json.html">JSON</a></td></tr>
+<tr><td>gene-identifier</td><td><a href="search.html#token">token</a></td><td>HGNC gene symbol and identifier</td><td/><td><a href="observation-genetics-Observation-gene-identifier.xml.html">XML</a> / <a href="observation-genetics-Observation-gene-identifier.json.html">JSON</a></td></tr>
+</table>
+
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fobservation-genetics&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fobservation-genetics">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

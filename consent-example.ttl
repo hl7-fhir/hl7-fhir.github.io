@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Consent/consent-example-basic> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consent-example-basic"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <p>\n	Authorize Normal access for Treatment\n	</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have all of the PHI collected at the Good Health Psychiatric Hospital \n   available for normal treatment use.\n   </p>\n   </div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.dateTime [ fhir:value "2016-05-11"^^xsd:date];
+  fhir:Consent.period [
+     fhir:Period.start [ fhir:value "1964-01-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2016-01-01"^^xsd:date ]
+  ];
+  fhir:Consent.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Consent.organization [
+     fhir:link <http://hl7.org/fhir/Organization/Infoway>;
+     fhir:Reference.reference [ fhir:value "Organization/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Consent.sourceAttachment [
+     fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak." ]
+  ];
+  fhir:Consent.policy [ fhir:value "http://goodhealth.org/consent/policy/opt-out"] .
+
+<http://hl7.org/fhir/Patient/f001> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/Infoway> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

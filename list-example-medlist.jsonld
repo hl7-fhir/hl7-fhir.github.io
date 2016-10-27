@@ -1,0 +1,98 @@
+{
+  "@context": "http://build.fhir.org/List.jsonld",
+  "@context": "http://hl7.org/fhir/List/med-list",
+  "Resource.id": {
+    "id.value": "med-list"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Add hydroxocobalamin</p>\n      <p>Cancel Morphine Sulphate</p>\n    </div>"
+    }
+  },
+  "List.status": {
+    "code.value": "current"
+  },
+  "List.mode": {
+    "code.value": "changes"
+  },
+  "List.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "182836005"
+        },
+        "Coding.display": {
+          "string.value": "Review of medication"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Medication Review"
+    },
+    "Resource.concept": "http://snomed.info/sct#182836005"
+  },
+  "List.date": {
+    "dateTime.value": "2013-11-20T23:10:23+11:00"
+  },
+  "List.source": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "List.entry": [
+    {
+      "List.entry.flag": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://nehta.gov.au/codes/medications/changetype"
+            },
+            "Coding.code": {
+              "code.value": "01"
+            },
+            "Coding.display": {
+              "string.value": "Prescribed"
+            }
+          }
+        ]
+      },
+      "List.entry.item": {
+        "Reference.display": {
+          "string.value": "hydroxocobalamin"
+        }
+      }
+    },
+    {
+      "List.entry.flag": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://nehta.gov.au/codes/medications/changetype"
+            },
+            "Coding.code": {
+              "code.value": "02"
+            },
+            "Coding.display": {
+              "string.value": "Cancelled"
+            }
+          }
+        ]
+      },
+      "List.entry.deleted": {
+        "boolean.value": true
+      },
+      "List.entry.item": {
+        "Reference.display": {
+          "string.value": "Morphine Sulfate"
+        }
+      }
+    }
+  ]
+}

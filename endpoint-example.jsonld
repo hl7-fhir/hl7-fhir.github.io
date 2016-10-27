@@ -1,0 +1,93 @@
+{
+  "@context": "http://build.fhir.org/Endpoint.jsonld",
+  "@context": "http://hl7.org/fhir/Endpoint/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\tHealth Intersections CarePlan Hub<br/>\n\t\t\tCarePlans can be uploaded to/from this loccation\n\t\t</div>"
+    }
+  },
+  "Endpoint.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://example.org/enpoint-identifier"
+      },
+      "Identifier.value": {
+        "string.value": "epcp12"
+      }
+    }
+  ],
+  "Endpoint.status": {
+    "code.value": "active"
+  },
+  "Endpoint.name": {
+    "string.value": "Health Intersections CarePlan Hub"
+  },
+  "Endpoint.managingOrganization": {
+    "Reference.reference": {
+      "string.value": "Organization/hl7"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/hl7"
+  },
+  "Endpoint.contact": [
+    {
+      "ContactPoint.system": {
+        "code.value": "email"
+      },
+      "ContactPoint.value": {
+        "string.value": "endpointmanager@example.org"
+      },
+      "ContactPoint.use": {
+        "code.value": "work"
+      }
+    }
+  ],
+  "Endpoint.period": {
+    "Period.start": {
+      "dateTime.value": "2014-09-01"
+    }
+  },
+  "Endpoint.connectionType": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/endpoint-connection-type"
+    },
+    "Coding.code": {
+      "code.value": "hl7-fhir-rest"
+    }
+  },
+  "Endpoint.payloadType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/resource-types"
+          },
+          "Coding.code": {
+            "code.value": "CarePlan"
+          }
+        }
+      ]
+    }
+  ],
+  "Endpoint.payloadMimeType": [
+    {
+      "code.value": "application/fhir+xml"
+    }
+  ],
+  "Endpoint.address": {
+    "uri.value": "http://fhir3.healthintersections.com.au/open/CarePlan"
+  },
+  "Endpoint.header": [
+    {
+      "string.value": "bearer-code BASGS534s4"
+    }
+  ],
+  "Endpoint.publicKey": {
+    "string.value": "-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqGKukO1De7zhZj6+H0qtjTkVxwTCpvKe4eCZ0 FPqri0cb2JZfXJ/DgYSF6vUpwmJG8wVQZKjeGcjDOL5UlsuusFncCzWBQ7RKNUSesmQRMSGkVb1/ 3j+skZ6UtW+5u09lHNsj6tQ51s1SPrCBkedbNf0Tp0GbMJDyR4e9T04ZZwIDAQAB -----END PUBLIC KEY-----"
+  }
+}

@@ -1,0 +1,81 @@
+﻿{
+  "@context": {
+    "ClinicalImpression.identifier": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "ClinicalImpression.status": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "ClinicalImpression.code": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.code",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ClinicalImpression.description": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.description",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "ClinicalImpression.subject": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.subject",
+      "@type": "http://hl7.org/fhir/Reference(Patient|Group)"
+    },
+    "ClinicalImpression.assessor": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.assessor",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner)"
+    },
+    "ClinicalImpression.date": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.date",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "ClinicalImpression.context": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.context",
+      "@type": "http://hl7.org/fhir/Reference(Encounter|EpisodeOfCare)"
+    },
+    "ClinicalImpression.previous": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.previous",
+      "@type": "http://hl7.org/fhir/Reference(ClinicalImpression)"
+    },
+    "ClinicalImpression.problem": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.problem",
+      "@type": "http://hl7.org/fhir/Reference(Condition|AllergyIntolerance)"
+    },
+    "ClinicalImpression.investigation": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.investigation",
+      "@type": "http://hl7.org/fhir/"
+    },
+    "ClinicalImpression.protocol": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.protocol",
+      "@type": "http://hl7.org/fhir/uri"
+    },
+    "ClinicalImpression.summary": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.summary",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "ClinicalImpression.finding": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.finding",
+      "@type": "http://hl7.org/fhir/"
+    },
+    "ClinicalImpression.prognosisCodeableConcept": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.prognosisCodeableConcept",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "ClinicalImpression.prognosisReference": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.prognosisReference",
+      "@type": "http://hl7.org/fhir/Reference(RiskAssessment)"
+    },
+    "ClinicalImpression.plan": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.plan",
+      "@type": "http://hl7.org/fhir/Reference(CarePlan|Appointment|CommunicationRequest|DeviceUseRequest|DiagnosticRequest|MedicationRequest|NutritionRequest|ProcedureRequest|ProcessRequest|ReferralRequest|VisionPrescription)"
+    },
+    "ClinicalImpression.action": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.action",
+      "@type": "http://hl7.org/fhir/Reference(ReferralRequest|ProcedureRequest|Procedure|MedicationRequest|DiagnosticRequest|NutritionRequest|DeviceUseRequest|Appointment)"
+    },
+    "ClinicalImpression.note": {
+      "@id": "http://hl7.org/fhir/ClinicalImpression.note",
+      "@type": "http://hl7.org/fhir/Annotation"
+    }
+  },
+  "@id": "http://hl7.org/fhir/ClinicalImpression"
+}

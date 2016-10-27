@@ -1,0 +1,592 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>DeviceUseStatement - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/deviceusestatement.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="workflow-module.html"><img src="workflow.png"/> Workflow</a></li>        <li><b>DeviceUseStatement</b></li>          <!-- deviceusestatement.html / resource / DeviceUseStatement -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="deviceusestatement-examples.html">Examples</a></li><li><a href="deviceusestatement-definitions.html">Detailed Descriptions</a></li><li><a href="deviceusestatement-mappings.html">Mappings</a></li><li><a href="deviceusestatement-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">12.9<a name="12.9"> </a></span> Resource DeviceUseStatement - Content <a href="deviceusestatement.html#12.9" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<p style="background-color: salmon; border:1px solid maroon; padding: 5px;">This resource is <a href="timelines.html#levels">marked as a draft</a>.</p>
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/orders/index.cfm" _target="blank">Orders and Observations <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 0</td><td><a href="compartmentdefinition.html">Compartments</a>: <a href="compartmentdefinition-device.html">Device</a>, <a href="compartmentdefinition-patient.html">Patient</a></td></tr>
+</table>
+
+
+
+<p> 
+A record of a device being used by a patient where the record is the result of a report from the patient or another clinician. 
+</p>
+
+
+<div>
+<a name="scope"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">12.9.1</span> Scope and Usage <a href="deviceusestatement.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+  <!-- Describes some of the situations/use cases intended to be managed with the resource. May include a child div for "Storyboards" and "Related Specifications". The purpose of this section is to help implementers understand why the resource is needed and how it might be used. -->
+        <b>These resources have not yet undergone proper review by PC, CQI, CDS, and OO. At this time, 
+            they are to be considered only as draft resource proposals for potential submission.</b>
+</p>
+   <p><strong>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="workflow.html">Workflow</a>.   It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow pattern for <a href="workflow.html#event"><em>event</em> resources</a>.</strong></p>
+
+
+    <p>
+        This resource records the use of a healthcare-related device by a patient. The record is the 
+        result of a report of use by the patient or another provider. The resource can be used to note 
+        the use of an assistive device such as a wheelchair or hearing aid, a contraceptive such an 
+        intra-uterine device, or other implanted devices such as a pacemaker.
+    </p>
+</div>
+
+<div>
+<a name="bnr"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">12.9.2</span> Boundaries and Relationships <a href="deviceusestatement.html#bnr" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+This resource is different from DeviceUseRequest which records a request to use the device. This also is distinct from the Procedure resource 
+which may describe the implantation or explantation of a device.
+</p>
+</div>
+
+  <!-- (optional):
+<div>
+<h2>Background and Context</h2>
+<p>
+Provides additional detail on exactly how the resource is to be used
+</p>
+</div> -->
+
+
+
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">12.9.3</span> 
+Resource Content
+ <a href="deviceusestatement.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="deviceusestatement"> </a>
+<a name="DeviceUseStatement"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement" title="DeviceUseStatement : A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.">DeviceUseStatement</a><a name="DeviceUseStatement"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Record of use of a device</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite_x_" title="DeviceUseStatement.bodySite[x] : Indicates the site on the subject's body where the device was used ( i.e. the target site).">bodySite[x]</a><a name="DeviceUseStatement.bodySite_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Target body site</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <span title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.">bodySiteCodeableConcept</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> bodySiteReference</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="bodysite.html">BodySite</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="DeviceUseStatement.whenUsed : The time period over which the device was used.">whenUsed</a><a name="DeviceUseStatement.whenUsed"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Period device was used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="DeviceUseStatement.device : The details of the device used.">device</a><a name="DeviceUseStatement.device"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="device.html">Device</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Reference to device used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="DeviceUseStatement.identifier : An external identifier for this statement such as an IRI.">identifier</a><a name="DeviceUseStatement.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">External identifier for this record</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="DeviceUseStatement.indication : Reason or justification for the use of the device.">indication</a><a name="DeviceUseStatement.indication"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Why device was used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="DeviceUseStatement.notes : Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.">notes</a><a name="DeviceUseStatement.notes"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Addition details (comments, instructions)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="DeviceUseStatement.recordedOn : The time at which the statement was made/recorded.">recordedOn</a><a name="DeviceUseStatement.recordedOn"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When statement was recorded</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="DeviceUseStatement.subject : The patient who used the device.">subject</a><a name="DeviceUseStatement.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="patient.html">Patient</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Patient using device</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.timing_x_" title="DeviceUseStatement.timing[x] : How often the device was used.">timing[x]</a><a name="DeviceUseStatement.timing_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">How often  the device was used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> timingTiming</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Timing">Timing</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <span title="A time period defined by a start and end date and optionally time.">timingPeriod</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <span title="A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.">timingDateTime</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.0" version="1.1" height="172.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="286.0" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="162.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="286.0" style="stroke:dimgrey;stroke-width:1"/><text x="143.0" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">DeviceUseStatement<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite_x_"><title>Indicates the site on the subject's body where the device was used ( i.e. the target site)</title>bodySite[x]</a> : <a xlink:href="formats.html#umlchoice">Type</a> [0..1] « <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a xlink:href="references.html#Reference">Reference</a>(<a xlink:href="bodysite.html#BodySite">BodySite</a>) »</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed"><title>The time period over which the device was used</title>whenUsed</a> : <a xlink:href="datatypes.html#Period">Period</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.device"><title>The details of the device used</title>device</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="device.html#Device">Device</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.identifier"><title>An external identifier for this statement such as an IRI</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.indication"><title>Reason or justification for the use of the device</title>indication</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..*]</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.notes"><title>Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement</title>notes</a> : <a xlink:href="datatypes.html#string">string</a> [0..*]</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn"><title>The time at which the statement was made/recorded</title>recordedOn</a> : <a xlink:href="datatypes.html#dateTime">dateTime</a> [0..1]</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.subject"><title>The patient who used the device</title>subject</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="patient.html#Patient">Patient</a> »</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.timing_x_"><title>How often the device was used</title>timing[x]</a> : <a xlink:href="formats.html#umlchoice">Type</a> [0..1] « <a xlink:href="datatypes.html#Timing">Timing</a>|<a xlink:href="datatypes.html#Period">Period</a>|<a xlink:href="datatypes.html#dateTime">dateTime</a> »</text></g></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement" title="A record of a device being used by a patient where the record is the result of a report from the patient or another clinician." class="dict"><b>DeviceUseStatement</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite[x]" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict"><b>bodySite[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="references.html#Reference">Reference</a>(<a href="bodysite.html#BodySite">BodySite</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Target body site</a></span><span style="color: Gray"> --&gt;</span>&lt;/bodySite[x]&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="The time period over which the device was used." class="dict"><b>whenUsed</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Period device was used</a></span><span style="color: Gray"> --&gt;</span>&lt;/whenUsed&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="The details of the device used." class="dict"><b>device</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="device.html#Device">Device</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Reference to device used</a></span><span style="color: Gray"> --&gt;</span>&lt;/device&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="An external identifier for this statement such as an IRI." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">External identifier for this record</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="Reason or justification for the use of the device." class="dict"><b>indication</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Why device was used</a></span><span style="color: Gray"> --&gt;</span>&lt;/indication&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement." class="dict"><b>notes</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Addition details (comments, instructions)</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="The time at which the statement was made/recorded." class="dict"><b>recordedOn</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When statement was recorded</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="The patient who used the device." class="dict"><b>subject</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Patient using device</a></span><span style="color: Gray"> --&gt;</span>&lt;/subject&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timing[x]" title="How often the device was used." class="dict"><b>timing[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a>|<a href="datatypes.html#Period">Period</a>|<a href="datatypes.html#dateTime">dateTime</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">How often  the device was used</a></span><span style="color: Gray"> --&gt;</span>&lt;/timing[x]&gt;
+&lt;/DeviceUseStatement&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement" title="A record of a device being used by a patient where the record is the result of a report from the patient or another clinician." class="dict"><b>DeviceUseStatement</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  <span style="color: Gray">// bodySite[x]: <span style="color: navy; opacity: 0.8">Target body site</span>. One of these 2:</span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteCodeableConcept" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">bodySiteCodeableConcept</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> },
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteReference" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">bodySiteReference</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="bodysite.html#BodySite">BodySite</a>)</span> },
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="The time period over which the device was used." class="dict">whenUsed</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Period device was used</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="The details of the device used." class="dict">device</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="device.html#Device">Device</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Reference to device used</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="An external identifier for this statement such as an IRI." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">External identifier for this record</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="Reason or justification for the use of the device." class="dict">indication</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Why device was used</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement." class="dict">notes</a>&quot; : [&quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Addition details (comments, instructions)</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="The time at which the statement was made/recorded." class="dict">recordedOn</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When statement was recorded</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="The patient who used the device." class="dict">subject</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Patient using device</a></span>
+  <span style="color: Gray">// timing[x]: <span style="color: navy; opacity: 0.8">How often  the device was used</span>. One of these 3:</span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingTiming" title="How often the device was used." class="dict">timingTiming</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a></span> }
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingPeriod" title="How often the device was used." class="dict">timingPeriod</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> }
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingDateTime" title="How often the device was used." class="dict">timingDateTime</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement" title="A record of a device being used by a patient where the record is the result of a report from the patient or another clinician." class="dict"><b>DeviceUseStatement</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  # <a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite[x]" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">DeviceUseStatement.bodySite[x]</a><a name="ttl-bodySite[x]"> </a>: 0..1 <span style="color: navy">Target body site</span>. One of these 2
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteCodeableConcept" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">DeviceUseStatement.bodySiteCodeableConcept</a><a name="ttl-bodySiteCodeableConcept"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteReference" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">DeviceUseStatement.bodySiteReference</a><a name="ttl-bodySiteReference"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="bodysite.html#BodySite">BodySite</a>) ]
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="The time period over which the device was used." class="dict">DeviceUseStatement.whenUsed</a><a name="ttl-whenUsed"> </a>[ <a href="datatypes.html#Period">Period</a> ]; # 0..1 <span style="color: navy">Period device was used</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="The details of the device used." class="dict">DeviceUseStatement.device</a><a name="ttl-device"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="device.html#Device">Device</a>) ]; # 1..1 <span style="color: navy">Reference to device used</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="An external identifier for this statement such as an IRI." class="dict">DeviceUseStatement.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">External identifier for this record</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="Reason or justification for the use of the device." class="dict">DeviceUseStatement.indication</a><a name="ttl-indication"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ], ... ; # 0..* <span style="color: navy">Why device was used</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement." class="dict">DeviceUseStatement.notes</a><a name="ttl-notes"> </a>[ <a href="datatypes.html#string">string</a> ], ... ; # 0..* <span style="color: navy">Addition details (comments, instructions)</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="The time at which the statement was made/recorded." class="dict">DeviceUseStatement.recordedOn</a><a name="ttl-recordedOn"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]; # 0..1 <span style="color: navy">When statement was recorded</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="The patient who used the device." class="dict">DeviceUseStatement.subject</a><a name="ttl-subject"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>) ]; # 1..1 <span style="color: navy">Patient using device</span>
+  # <a href="deviceusestatement-definitions.html#DeviceUseStatement.timing[x]" title="How often the device was used." class="dict">DeviceUseStatement.timing[x]</a><a name="ttl-timing[x]"> </a>: 0..1 <span style="color: navy">How often  the device was used</span>. One of these 3
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingTiming" title="How often the device was used." class="dict">DeviceUseStatement.timingTiming</a><a name="ttl-timingTiming"> </a>[ <a href="datatypes.html#Timing">Timing</a> ]
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingPeriod" title="How often the device was used." class="dict">DeviceUseStatement.timingPeriod</a><a name="ttl-timingPeriod"> </a>[ <a href="datatypes.html#Period">Period</a> ]
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingDateTime" title="How often the device was used." class="dict">DeviceUseStatement.timingDateTime</a><a name="ttl-timingDateTime"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">DeviceUseStatement</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement" title="DeviceUseStatement : A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.">DeviceUseStatement</a><a name="DeviceUseStatement"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Record of use of a device</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite_x_" title="DeviceUseStatement.bodySite[x] : Indicates the site on the subject's body where the device was used ( i.e. the target site).">bodySite[x]</a><a name="DeviceUseStatement.bodySite_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Target body site</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <span title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.">bodySiteCodeableConcept</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> bodySiteReference</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="bodysite.html">BodySite</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="DeviceUseStatement.whenUsed : The time period over which the device was used.">whenUsed</a><a name="DeviceUseStatement.whenUsed"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Period device was used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="DeviceUseStatement.device : The details of the device used.">device</a><a name="DeviceUseStatement.device"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="device.html">Device</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Reference to device used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="DeviceUseStatement.identifier : An external identifier for this statement such as an IRI.">identifier</a><a name="DeviceUseStatement.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">External identifier for this record</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="DeviceUseStatement.indication : Reason or justification for the use of the device.">indication</a><a name="DeviceUseStatement.indication"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Why device was used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="DeviceUseStatement.notes : Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.">notes</a><a name="DeviceUseStatement.notes"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Addition details (comments, instructions)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="DeviceUseStatement.recordedOn : The time at which the statement was made/recorded.">recordedOn</a><a name="DeviceUseStatement.recordedOn"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When statement was recorded</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="DeviceUseStatement.subject : The patient who used the device.">subject</a><a name="DeviceUseStatement.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="patient.html">Patient</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Patient using device</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="deviceusestatement-definitions.html#DeviceUseStatement.timing_x_" title="DeviceUseStatement.timing[x] : How often the device was used.">timing[x]</a><a name="DeviceUseStatement.timing_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">How often  the device was used</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> timingTiming</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Timing">Timing</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <span title="A time period defined by a start and end date and optionally time.">timingPeriod</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <span title="A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.">timingDateTime</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.0" version="1.1" height="172.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="286.0" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="162.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="286.0" style="stroke:dimgrey;stroke-width:1"/><text x="143.0" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">DeviceUseStatement<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite_x_"><title>Indicates the site on the subject's body where the device was used ( i.e. the target site)</title>bodySite[x]</a> : <a xlink:href="formats.html#umlchoice">Type</a> [0..1] « <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a xlink:href="references.html#Reference">Reference</a>(<a xlink:href="bodysite.html#BodySite">BodySite</a>) »</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed"><title>The time period over which the device was used</title>whenUsed</a> : <a xlink:href="datatypes.html#Period">Period</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.device"><title>The details of the device used</title>device</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="device.html#Device">Device</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.identifier"><title>An external identifier for this statement such as an IRI</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.indication"><title>Reason or justification for the use of the device</title>indication</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..*]</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.notes"><title>Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement</title>notes</a> : <a xlink:href="datatypes.html#string">string</a> [0..*]</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn"><title>The time at which the statement was made/recorded</title>recordedOn</a> : <a xlink:href="datatypes.html#dateTime">dateTime</a> [0..1]</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.subject"><title>The patient who used the device</title>subject</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="patient.html#Patient">Patient</a> »</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="deviceusestatement-definitions.html#DeviceUseStatement.timing_x_"><title>How often the device was used</title>timing[x]</a> : <a xlink:href="formats.html#umlchoice">Type</a> [0..1] « <a xlink:href="datatypes.html#Timing">Timing</a>|<a xlink:href="datatypes.html#Period">Period</a>|<a xlink:href="datatypes.html#dateTime">dateTime</a> »</text></g></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement" title="A record of a device being used by a patient where the record is the result of a report from the patient or another clinician." class="dict"><b>DeviceUseStatement</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite[x]" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict"><b>bodySite[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="references.html#Reference">Reference</a>(<a href="bodysite.html#BodySite">BodySite</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Target body site</a></span><span style="color: Gray"> --&gt;</span>&lt;/bodySite[x]&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="The time period over which the device was used." class="dict"><b>whenUsed</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Period device was used</a></span><span style="color: Gray"> --&gt;</span>&lt;/whenUsed&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="The details of the device used." class="dict"><b>device</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="device.html#Device">Device</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Reference to device used</a></span><span style="color: Gray"> --&gt;</span>&lt;/device&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="An external identifier for this statement such as an IRI." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">External identifier for this record</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="Reason or justification for the use of the device." class="dict"><b>indication</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Why device was used</a></span><span style="color: Gray"> --&gt;</span>&lt;/indication&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement." class="dict"><b>notes</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Addition details (comments, instructions)</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="The time at which the statement was made/recorded." class="dict"><b>recordedOn</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When statement was recorded</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="The patient who used the device." class="dict"><b>subject</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Patient using device</a></span><span style="color: Gray"> --&gt;</span>&lt;/subject&gt;
+ &lt;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timing[x]" title="How often the device was used." class="dict"><b>timing[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a>|<a href="datatypes.html#Period">Period</a>|<a href="datatypes.html#dateTime">dateTime</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">How often  the device was used</a></span><span style="color: Gray"> --&gt;</span>&lt;/timing[x]&gt;
+&lt;/DeviceUseStatement&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement" title="A record of a device being used by a patient where the record is the result of a report from the patient or another clinician." class="dict"><b>DeviceUseStatement</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  <span style="color: Gray">// bodySite[x]: <span style="color: navy; opacity: 0.8">Target body site</span>. One of these 2:</span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteCodeableConcept" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">bodySiteCodeableConcept</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> },
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteReference" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">bodySiteReference</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="bodysite.html#BodySite">BodySite</a>)</span> },
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="The time period over which the device was used." class="dict">whenUsed</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Period device was used</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="The details of the device used." class="dict">device</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="device.html#Device">Device</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Reference to device used</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="An external identifier for this statement such as an IRI." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">External identifier for this record</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="Reason or justification for the use of the device." class="dict">indication</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Why device was used</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement." class="dict">notes</a>&quot; : [&quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Addition details (comments, instructions)</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="The time at which the statement was made/recorded." class="dict">recordedOn</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When statement was recorded</a></span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="The patient who used the device." class="dict">subject</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Patient using device</a></span>
+  <span style="color: Gray">// timing[x]: <span style="color: navy; opacity: 0.8">How often  the device was used</span>. One of these 3:</span>
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingTiming" title="How often the device was used." class="dict">timingTiming</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a></span> }
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingPeriod" title="How often the device was used." class="dict">timingPeriod</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> }
+  &quot;<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingDateTime" title="How often the device was used." class="dict">timingDateTime</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement" title="A record of a device being used by a patient where the record is the result of a report from the patient or another clinician." class="dict"><b>DeviceUseStatement</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  # <a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySite[x]" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">DeviceUseStatement.bodySite[x]</a><a name="ttl-bodySite[x]"> </a>: 0..1 <span style="color: navy">Target body site</span>. One of these 2
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteCodeableConcept" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">DeviceUseStatement.bodySiteCodeableConcept</a><a name="ttl-bodySiteCodeableConcept"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.bodySiteReference" title="Indicates the site on the subject's body where the device was used ( i.e. the target site)." class="dict">DeviceUseStatement.bodySiteReference</a><a name="ttl-bodySiteReference"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="bodysite.html#BodySite">BodySite</a>) ]
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.whenUsed" title="The time period over which the device was used." class="dict">DeviceUseStatement.whenUsed</a><a name="ttl-whenUsed"> </a>[ <a href="datatypes.html#Period">Period</a> ]; # 0..1 <span style="color: navy">Period device was used</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.device" title="The details of the device used." class="dict">DeviceUseStatement.device</a><a name="ttl-device"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="device.html#Device">Device</a>) ]; # 1..1 <span style="color: navy">Reference to device used</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.identifier" title="An external identifier for this statement such as an IRI." class="dict">DeviceUseStatement.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">External identifier for this record</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.indication" title="Reason or justification for the use of the device." class="dict">DeviceUseStatement.indication</a><a name="ttl-indication"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ], ... ; # 0..* <span style="color: navy">Why device was used</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.notes" title="Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement." class="dict">DeviceUseStatement.notes</a><a name="ttl-notes"> </a>[ <a href="datatypes.html#string">string</a> ], ... ; # 0..* <span style="color: navy">Addition details (comments, instructions)</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.recordedOn" title="The time at which the statement was made/recorded." class="dict">DeviceUseStatement.recordedOn</a><a name="ttl-recordedOn"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]; # 0..1 <span style="color: navy">When statement was recorded</span>
+  fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.subject" title="The patient who used the device." class="dict">DeviceUseStatement.subject</a><a name="ttl-subject"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>) ]; # 1..1 <span style="color: navy">Patient using device</span>
+  # <a href="deviceusestatement-definitions.html#DeviceUseStatement.timing[x]" title="How often the device was used." class="dict">DeviceUseStatement.timing[x]</a><a name="ttl-timing[x]"> </a>: 0..1 <span style="color: navy">How often  the device was used</span>. One of these 3
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingTiming" title="How often the device was used." class="dict">DeviceUseStatement.timingTiming</a><a name="ttl-timingTiming"> </a>[ <a href="datatypes.html#Timing">Timing</a> ]
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingPeriod" title="How often the device was used." class="dict">DeviceUseStatement.timingPeriod</a><a name="ttl-timingPeriod"> </a>[ <a href="datatypes.html#Period">Period</a> ]
+    fhir:<a href="deviceusestatement-definitions.html#DeviceUseStatement.timingDateTime" title="How often the device was used." class="dict">DeviceUseStatement.timingDateTime</a><a name="ttl-timingDateTime"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">DeviceUseStatement</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="deviceusestatement.profile.xml.html">XML</a>, <a href="deviceusestatement.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="deviceusestatement.xsd">Schema</a>/<a href="deviceusestatement.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="DeviceUseStatement.schema.json">Schema</a>, <a href="deviceusestatement.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+
+
+
+
+
+  <!-- insert xhtml content here -->
+    <p>
+        <b>Notes to reviewers:</b>
+    </p>
+    <p>
+        <i>At this time, the code bindings are placeholders to be fleshed out upon further review by the community.</i>
+    </p>
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">12.9.4</span> Search Parameters <a href="deviceusestatement.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>device</td><td><a href="search.html#reference">reference</a></td><td>Search by device</td><td>DeviceUseStatement.device<br/>(<a href="device.html">Device</a>)</td></tr>
+<tr><td>patient</td><td><a href="search.html#reference">reference</a></td><td>Search by subject - a patient</td><td>DeviceUseStatement.subject<br/>(<a href="patient.html">Patient</a>)</td></tr>
+<tr><td>subject</td><td><a href="search.html#reference">reference</a></td><td>Search by subject</td><td>DeviceUseStatement.subject<br/>(<a href="patient.html">Patient</a>)</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdeviceusestatement.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdeviceusestatement.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

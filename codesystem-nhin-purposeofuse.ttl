@@ -1,0 +1,172 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/nhin-purposeofuse> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "nhin-purposeofuse"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>NHIN PurposeOfUse</h2>\n      <div>\n        <p>This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.</p>\n\n      </div>\n      <p>This code system http://healthit.gov/nhin/purposeofuse defines the following codes:</p>\n      <table class=\"codes\">\n        <tr>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td>TREATMENT\n            <a name=\"nhin-purposeofuse-TREATMENT\"> </a>\n          </td>\n          <td>Treatment</td>\n          <td>Treatment</td>\n        </tr>\n        <tr>\n          <td>PAYMENT\n            <a name=\"nhin-purposeofuse-PAYMENT\"> </a>\n          </td>\n          <td>Payment</td>\n          <td>Payment</td>\n        </tr>\n        <tr>\n          <td>OPERATIONS\n            <a name=\"nhin-purposeofuse-OPERATIONS\"> </a>\n          </td>\n          <td>Operations</td>\n          <td>Healthcare Operations</td>\n        </tr>\n        <tr>\n          <td>SYSADMIN\n            <a name=\"nhin-purposeofuse-SYSADMIN\"> </a>\n          </td>\n          <td>Sysadmin</td>\n          <td>System Administration</td>\n        </tr>\n        <tr>\n          <td>FRAUD\n            <a name=\"nhin-purposeofuse-FRAUD\"> </a>\n          </td>\n          <td>Fraud</td>\n          <td>Fraud detection</td>\n        </tr>\n        <tr>\n          <td>PSYCHOTHERAPY\n            <a name=\"nhin-purposeofuse-PSYCHOTHERAPY\"> </a>\n          </td>\n          <td>Psychotherapy</td>\n          <td>Use or disclosure of Psychotherapy Notes</td>\n        </tr>\n        <tr>\n          <td>TRAINING\n            <a name=\"nhin-purposeofuse-TRAINING\"> </a>\n          </td>\n          <td>Training</td>\n          <td>Use or disclosure by the covered entity for its own training programs</td>\n        </tr>\n        <tr>\n          <td>LEGAL\n            <a name=\"nhin-purposeofuse-LEGAL\"> </a>\n          </td>\n          <td>Legal</td>\n          <td>Use or disclosure by the covered entity to defend itself in a legal action</td>\n        </tr>\n        <tr>\n          <td>MARKETING\n            <a name=\"nhin-purposeofuse-MARKETING\"> </a>\n          </td>\n          <td>Marketing</td>\n          <td>Marketing</td>\n        </tr>\n        <tr>\n          <td>DIRECTORY\n            <a name=\"nhin-purposeofuse-DIRECTORY\"> </a>\n          </td>\n          <td>Directory</td>\n          <td>Use and disclosure for facility directories</td>\n        </tr>\n        <tr>\n          <td>FAMILY\n            <a name=\"nhin-purposeofuse-FAMILY\"> </a>\n          </td>\n          <td>Family</td>\n          <td>Disclose to a family member, other relative, or a close personal friend of the individual</td>\n        </tr>\n        <tr>\n          <td>PRESENT\n            <a name=\"nhin-purposeofuse-PRESENT\"> </a>\n          </td>\n          <td>Present</td>\n          <td>Uses and disclosures with the individual present.</td>\n        </tr>\n        <tr>\n          <td>EMERGENCY\n            <a name=\"nhin-purposeofuse-EMERGENCY\"> </a>\n          </td>\n          <td>Emergency</td>\n          <td>Permission cannot practicably be provided because of the individual's incapacity or an emergency.</td>\n        </tr>\n        <tr>\n          <td>DISASTER\n            <a name=\"nhin-purposeofuse-DISASTER\"> </a>\n          </td>\n          <td>Disaster</td>\n          <td>Use and disclosures for disaster relief purposes.</td>\n        </tr>\n        <tr>\n          <td>PUBLICHEALTH\n            <a name=\"nhin-purposeofuse-PUBLICHEALTH\"> </a>\n          </td>\n          <td>Public Health</td>\n          <td>Uses and disclosures for public health activities.</td>\n        </tr>\n        <tr>\n          <td>ABUSE\n            <a name=\"nhin-purposeofuse-ABUSE\"> </a>\n          </td>\n          <td>Abuse</td>\n          <td>Disclosures about victims of abuse, neglect or domestic violence.</td>\n        </tr>\n        <tr>\n          <td>OVERSIGHT\n            <a name=\"nhin-purposeofuse-OVERSIGHT\"> </a>\n          </td>\n          <td>Oversight</td>\n          <td>Uses and disclosures for health oversight activities.</td>\n        </tr>\n        <tr>\n          <td>JUDICIAL\n            <a name=\"nhin-purposeofuse-JUDICIAL\"> </a>\n          </td>\n          <td>Judicial</td>\n          <td>Disclosures for judicial and administrative proceedings.</td>\n        </tr>\n        <tr>\n          <td>LAW\n            <a name=\"nhin-purposeofuse-LAW\"> </a>\n          </td>\n          <td>Law Enforcement</td>\n          <td>Disclosures for law enforcement purposes.</td>\n        </tr>\n        <tr>\n          <td>DECEASED\n            <a name=\"nhin-purposeofuse-DECEASED\"> </a>\n          </td>\n          <td>Deceased</td>\n          <td>Uses and disclosures about decedents.</td>\n        </tr>\n        <tr>\n          <td>DONATION\n            <a name=\"nhin-purposeofuse-DONATION\"> </a>\n          </td>\n          <td>Donation</td>\n          <td>Uses and disclosures for cadaveric organ,  eye or tissue donation purposes</td>\n        </tr>\n        <tr>\n          <td>RESEARCH\n            <a name=\"nhin-purposeofuse-RESEARCH\"> </a>\n          </td>\n          <td>Research</td>\n          <td>Uses and disclosures for research purposes.</td>\n        </tr>\n        <tr>\n          <td>THREAT\n            <a name=\"nhin-purposeofuse-THREAT\"> </a>\n          </td>\n          <td>Threat</td>\n          <td>Uses and disclosures to avert a serious threat to health or safety.</td>\n        </tr>\n        <tr>\n          <td>GOVERNMENT\n            <a name=\"nhin-purposeofuse-GOVERNMENT\"> </a>\n          </td>\n          <td>Government</td>\n          <td>Uses and disclosures for specialized government functions.</td>\n        </tr>\n        <tr>\n          <td>WORKERSCOMP\n            <a name=\"nhin-purposeofuse-WORKERSCOMP\"> </a>\n          </td>\n          <td>Worker's Comp</td>\n          <td>Disclosures for workers' compensation.</td>\n        </tr>\n        <tr>\n          <td>COVERAGE\n            <a name=\"nhin-purposeofuse-COVERAGE\"> </a>\n          </td>\n          <td>Coverage</td>\n          <td>Disclosures for insurance or disability coverage determination</td>\n        </tr>\n        <tr>\n          <td>REQUEST\n            <a name=\"nhin-purposeofuse-REQUEST\"> </a>\n          </td>\n          <td>Request</td>\n          <td>Request of the Individual</td>\n        </tr>\n      </table>\n    </div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://healthit.gov/nhin/purposeofuse"];
+  fhir:CodeSystem.version [ fhir:value "2.0"];
+  fhir:CodeSystem.name [ fhir:value "NHIN PurposeOfUse"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.publisher [ fhir:value "Nationwide Health Information Network (NHIN)"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.healthit.gov/sites/default/files/nhin-authorization-framework-production-specification-v2.0-1.pdf" ]
+     ]
+  ];
+  fhir:CodeSystem.date [ fhir:value "2010-01-29"^^xsd:date];
+  fhir:CodeSystem.description [ fhir:value "This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/nhin-purposeofuse"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "TREATMENT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Treatment" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Treatment" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "PAYMENT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Payment" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Payment" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "OPERATIONS" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Operations" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Healthcare Operations" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "SYSADMIN" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sysadmin" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "System Administration" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "FRAUD" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Fraud" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Fraud detection" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "PSYCHOTHERAPY" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Psychotherapy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Use or disclosure of Psychotherapy Notes" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "TRAINING" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Training" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Use or disclosure by the covered entity for its own training programs" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "LEGAL" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Legal" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Use or disclosure by the covered entity to defend itself in a legal action" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "MARKETING" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Marketing" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Marketing" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "DIRECTORY" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Directory" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Use and disclosure for facility directories" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "FAMILY" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Family" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disclose to a family member, other relative, or a close personal friend of the individual" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "PRESENT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Present" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures with the individual present." ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "EMERGENCY" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Emergency" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Permission cannot practicably be provided because of the individual's incapacity or an emergency." ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "DISASTER" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Disaster" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Use and disclosures for disaster relief purposes." ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "PUBLICHEALTH" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Public Health" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures for public health activities." ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "ABUSE" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Abuse" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disclosures about victims of abuse, neglect or domestic violence." ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "OVERSIGHT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Oversight" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures for health oversight activities." ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "JUDICIAL" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Judicial" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disclosures for judicial and administrative proceedings." ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "LAW" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Law Enforcement" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disclosures for law enforcement purposes." ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "DECEASED" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Deceased" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures about decedents." ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "DONATION" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Donation" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures for cadaveric organ,  eye or tissue donation purposes" ]
+  ], [
+     fhir:index 21;
+     fhir:CodeSystem.concept.code [ fhir:value "RESEARCH" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Research" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures for research purposes." ]
+  ], [
+     fhir:index 22;
+     fhir:CodeSystem.concept.code [ fhir:value "THREAT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Threat" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures to avert a serious threat to health or safety." ]
+  ], [
+     fhir:index 23;
+     fhir:CodeSystem.concept.code [ fhir:value "GOVERNMENT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Government" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Uses and disclosures for specialized government functions." ]
+  ], [
+     fhir:index 24;
+     fhir:CodeSystem.concept.code [ fhir:value "WORKERSCOMP" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Worker's Comp" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disclosures for workers' compensation." ]
+  ], [
+     fhir:index 25;
+     fhir:CodeSystem.concept.code [ fhir:value "COVERAGE" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Coverage" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disclosures for insurance or disability coverage determination" ]
+  ], [
+     fhir:index 26;
+     fhir:CodeSystem.concept.code [ fhir:value "REQUEST" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Request" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Request of the Individual" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

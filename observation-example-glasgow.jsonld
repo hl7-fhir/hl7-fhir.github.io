@@ -1,0 +1,404 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/glasgow",
+  "Resource.id": {
+    "id.value": "glasgow"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: glasgow</p><p><b>contained</b>: , , </p><p><b>status</b>: final</p><p><b>code</b>: Glasgow Coma Scale , (GCS) <span>(Details : {LOINC code '9269-2' = 'Glasgow coma score total', given as 'Glasgow coma score total'})</span></p><p><b>subject</b>: <a>Peter James Chalmers</a></p><p><b>effective</b>: Dec 11, 2014 4:44:16 AM</p><p><b>value</b>: 13 {score}<span> (Details: UCUM code {score} = '{score}')</span></p><blockquote><p><b>referenceRange</b></p><p><b>high</b>: 8 {score}<span> (Details: UCUM code {score} = '{score}')</span></p><p><b>meaning</b>: Severe TBI <span>(Details )</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 9 {score}<span> (Details: UCUM code {score} = '{score}')</span></p><p><b>high</b>: 12 {score}<span> (Details: UCUM code {score} = '{score}')</span></p><p><b>meaning</b>: Moderate TBI <span>(Details )</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 13 {score}<span> (Details: UCUM code {score} = '{score}')</span></p><p><b>meaning</b>: Mild TBI <span>(Details )</span></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: derived-from</p><p><b>target</b>: Motor score. Generated Summary: id: motor; status: final; GCS motor <span>(Details : {LOINC code '9268-4' = 'Glasgow coma score motor', given as 'Glasgow coma score motor'})</span>; ????; effective: Dec 11, 2014 4:44:16 AM; 5 (Localizes painful stimuli) <span>(Details : {http:/acme.ec/gcsmotor code '5' = '5', given as 'Localizes painful stimuli'}; {LOINC code 'LA6566-9' = 'Localizing pain', given as 'Localizing pain'})</span></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: derived-from</p><p><b>target</b>: Verbal score. Generated Summary: id: verbal; status: final; Verbal <span>(Details : {LOINC code '9270-0' = 'Glasgow coma score verbal', given as 'Glasgow coma score verbal'})</span>; ????; effective: Dec 11, 2014 4:44:16 AM; 4 (Confused, disoriented) <span>(Details : {http:/acme.ec/gcsverbal code '4' = '4', given as 'Confused, disoriented'}; {LOINC code 'LA6560-2' = 'Confused', given as 'Confused'})</span></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: derived-from</p><p><b>target</b>: Eyes score. Generated Summary: id: eyes; status: final; Eyes <span>(Details : {LOINC code '9267-6' = 'Glasgow coma score eye opening', given as 'Glasgow coma score eye opening'})</span>; ????; effective: Dec 11, 2014 4:44:16 AM; 4 (Opens eyes spontaneously) <span>(Details : {http:/acme.ec/gcseye code '4' = '4', given as 'Opens eyes spontaneously'}; {LOINC code 'LA6556-0' = 'Eyes open spontaneously', given as 'Eyes open spontaneously'})</span></p></blockquote></div>"
+    }
+  },
+  "Observation": [
+    {
+      "Resource.id": {
+        "id.value": "motor"
+      },
+      "Observation.status": {
+        "code.value": "final"
+      },
+      "Observation.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "9268-4"
+            },
+            "Coding.display": {
+              "string.value": "Glasgow coma score motor"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "GCS motor"
+        },
+        "Resource.concept": "http://loinc.org/owl#9268-4"
+      },
+      "Observation.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Observation.effectiveDateTime": {
+        "dateTime.value": "2014-12-11T04:44:16Z"
+      },
+      "Observation.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ec/gcsmotor"
+            },
+            "Coding.code": {
+              "code.value": "5"
+            },
+            "Coding.display": {
+              "string.value": "Localizes painful stimuli"
+            }
+          },
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 5
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "LA6566-9"
+            },
+            "Coding.display": {
+              "string.value": "Localizing pain"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "5 (Localizes painful stimuli)"
+        },
+        "Resource.concept": "http://loinc.org/owl#LA6566-9"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "verbal"
+      },
+      "Observation.status": {
+        "code.value": "final"
+      },
+      "Observation.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "9270-0"
+            },
+            "Coding.display": {
+              "string.value": "Glasgow coma score verbal"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Verbal"
+        },
+        "Resource.concept": "http://loinc.org/owl#9270-0"
+      },
+      "Observation.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Observation.effectiveDateTime": {
+        "dateTime.value": "2014-12-11T04:44:16Z"
+      },
+      "Observation.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ec/gcsverbal"
+            },
+            "Coding.code": {
+              "code.value": "4"
+            },
+            "Coding.display": {
+              "string.value": "Confused, disoriented"
+            }
+          },
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 4
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "LA6560-2"
+            },
+            "Coding.display": {
+              "string.value": "Confused"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "4 (Confused, disoriented)"
+        },
+        "Resource.concept": "http://loinc.org/owl#LA6560-2"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "eyes"
+      },
+      "Observation.status": {
+        "code.value": "final"
+      },
+      "Observation.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "9267-6"
+            },
+            "Coding.display": {
+              "string.value": "Glasgow coma score eye opening"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Eyes"
+        },
+        "Resource.concept": "http://loinc.org/owl#9267-6"
+      },
+      "Observation.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Observation.effectiveDateTime": {
+        "dateTime.value": "2014-12-11T04:44:16Z"
+      },
+      "Observation.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ec/gcseye"
+            },
+            "Coding.code": {
+              "code.value": "4"
+            },
+            "Coding.display": {
+              "string.value": "Opens eyes spontaneously"
+            }
+          },
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 4
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "LA6556-0"
+            },
+            "Coding.display": {
+              "string.value": "Eyes open spontaneously"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "4 (Opens eyes spontaneously)"
+        },
+        "Resource.concept": "http://loinc.org/owl#LA6556-0"
+      }
+    }
+  ],
+  "Observation.status": {
+    "code.value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "9269-2"
+        },
+        "Coding.display": {
+          "string.value": "Glasgow coma score total"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Glasgow Coma Scale , (GCS)"
+    },
+    "Resource.concept": "http://loinc.org/owl#9269-2"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter James Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.effectiveDateTime": {
+    "dateTime.value": "2014-12-11T04:44:16Z"
+  },
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "decimal.value": 13
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "{score}"
+    }
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "decimal.value": 8
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "{score}"
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.text": {
+            "string.value": "Severe TBI"
+          }
+        }
+      ]
+    },
+    {
+      "Observation.referenceRange.low": {
+        "Quantity.value": {
+          "decimal.value": 9
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "{score}"
+        }
+      },
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "decimal.value": 12
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "{score}"
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.text": {
+            "string.value": "Moderate TBI"
+          }
+        }
+      ]
+    },
+    {
+      "Observation.referenceRange.low": {
+        "Quantity.value": {
+          "decimal.value": 13
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "{score}"
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.text": {
+            "string.value": "Mild TBI"
+          }
+        }
+      ]
+    }
+  ],
+  "Observation.related": [
+    {
+      "Observation.related.type": {
+        "code.value": "derived-from"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "#motor"
+        },
+        "Reference.display": {
+          "string.value": "Motor score"
+        }
+      }
+    },
+    {
+      "Observation.related.type": {
+        "code.value": "derived-from"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "#verbal"
+        },
+        "Reference.display": {
+          "string.value": "Verbal score"
+        }
+      }
+    },
+    {
+      "Observation.related.type": {
+        "code.value": "derived-from"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "string.value": "#eyes"
+        },
+        "Reference.display": {
+          "string.value": "Eyes score"
+        }
+      }
+    }
+  ]
+}

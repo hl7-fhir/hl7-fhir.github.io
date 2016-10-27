@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CareTeam/example> a fhir:CareTeam;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care Team</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Practitioner;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "pr1" ];
+     fhir:Practitioner.name [
+       fhir:index 0;
+       fhir:HumanName.family [
+         fhir:value "Dietician";
+         fhir:index 0
+       ];
+       fhir:HumanName.given [
+         fhir:value "Dorothy";
+         fhir:index 0
+       ]
+     ];
+     fhir:Practitioner.role [
+       fhir:index 0;
+       fhir:Practitioner.role.specialty [
+         fhir:index 0;
+         fhir:CodeableConcept.text [ fhir:value "Dietician" ]
+       ]
+     ]
+  ];
+  fhir:CareTeam.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+  ];
+  fhir:CareTeam.period [
+     fhir:Period.end [ fhir:value "2013-01-01"^^xsd:date ]
+  ];
+  fhir:CareTeam.participant [
+     fhir:index 0;
+     fhir:CareTeam.participant.role [
+       fhir:CodeableConcept.text [ fhir:value "responsiblePerson" ]
+     ];
+     fhir:CareTeam.participant.member [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ];
+       fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CareTeam.participant.role [
+       fhir:CodeableConcept.text [ fhir:value "adviser" ]
+     ];
+     fhir:CareTeam.participant.member [
+       fhir:Reference.reference [ fhir:value "#pr1" ];
+       fhir:Reference.display [ fhir:value "Dorothy Dietition" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient, fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

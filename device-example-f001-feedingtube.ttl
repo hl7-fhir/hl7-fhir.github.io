@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Device/f001> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f001"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: 12345</p><p><b>udiCarrier</b>: (01)00000123000017(10)ABC123(17)120415</p><p><b>status</b>: available</p><p><b>type</b>: Feeding tube, device <span>(Details : {SNOMED CT code '25062003' = 'Feeding tube, device (physical object)', given as 'Feeding tube, device'})</span></p><p><b>manufactureDate</b>: Aug 8, 2015</p><p><b>expirationDate</b>: Aug 8, 2020</p><p><b>owner</b>: <a>Organization/2.16.840.1.113883.19.5</a></p><p><b>location</b>: Central Supply</p></div>"
+  ];
+  fhir:Device.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http:/goodhealthhospital/identifier/devices" ];
+     fhir:Identifier.value [ fhir:value "12345" ]
+  ];
+  fhir:Device.udiCarrier [
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.3.3719" ];
+     fhir:Identifier.value [ fhir:value "(01)00000123000017(10)ABC123(17)120415" ]
+  ];
+  fhir:Device.status [ fhir:value "available"];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:25062003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "25062003" ];
+       fhir:Coding.display [ fhir:value "Feeding tube, device" ]
+     ]
+  ];
+  fhir:Device.manufactureDate [ fhir:value "2015-08-08"^^xsd:date];
+  fhir:Device.expirationDate [ fhir:value "2020-08-08"^^xsd:date];
+  fhir:Device.owner [
+     fhir:link <http://hl7.org/fhir/Organization/2.16.840.1.113883.19.5>;
+     fhir:Reference.reference [ fhir:value "Organization/2.16.840.1.113883.19.5" ]
+  ];
+  fhir:Device.location [
+     fhir:Reference.display [ fhir:value "Central Supply" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/2.16.840.1.113883.19.5> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

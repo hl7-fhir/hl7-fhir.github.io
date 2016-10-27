@@ -1,0 +1,352 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<AllergyIntolerance> AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# Allergy or Intolerance (generally: Risk of adverse reaction to a substance)
+<AllergyIntolerance> CLOSED {
+    a [fhir:AllergyIntolerance];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:DomainResource.text @<Narrative>?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @<Resource>*;  # Contained, inline Resources
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:AllergyIntolerance.identifier @<Identifier>*;  # External ids for this item
+    fhir:AllergyIntolerance.status @<code> AND
+    	{fhir:value @fhirvs:allergy-intolerance-status}?;  # active | active-confirmed | 
+                                            # inactive | resolved | refuted | 
+                                            # entered-in-error 
+    fhir:AllergyIntolerance.type @<code> AND
+    	{fhir:value @fhirvs:allergy-intolerance-type}?;  # allergy | intolerance - Underlying 
+                                            # mechanism (if known) 
+    fhir:AllergyIntolerance.category @<code> AND
+    	{fhir:value @fhirvs:allergy-intolerance-category}?;  # food | medication | biologic | 
+                                            # environment 
+    fhir:AllergyIntolerance.criticality @<code> AND
+    	{fhir:value @fhirvs:allergy-intolerance-criticality}?;  # low | high | unable-to-assess
+    fhir:AllergyIntolerance.code @<CodeableConcept>?;  # Allergy or intolerance code
+    fhir:AllergyIntolerance.patient @<Reference>;  # Who the sensitivity is for
+    fhir:AllergyIntolerance.onset @<dateTime>?;  # Date(/time) when manifestations 
+                                            # showed 
+    fhir:AllergyIntolerance.attestedDate @<dateTime>?;  # Date record was believed accurate
+    fhir:AllergyIntolerance.recorder        # Who recorded the sensitivity
+    (   @<PractitionerReference> OR
+        @<PatientReference>
+    )?;
+    fhir:AllergyIntolerance.reporter        # Source of the information about 
+                                            # the allergy 
+    (   @<PatientReference> OR
+        @<RelatedPersonReference> OR
+        @<PractitionerReference>
+    )?;
+    fhir:AllergyIntolerance.lastOccurrence @<dateTime>?;  # Date(/time) of last known 
+                                            # occurrence of a reaction 
+    fhir:AllergyIntolerance.note @<Annotation>*;  # Additional text not captured in 
+                                            # other fields 
+    fhir:AllergyIntolerance.reaction @<AllergyIntolerance.reaction>*;  # Adverse Reaction Events linked to 
+                                            # exposure to substance 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Adverse Reaction Events linked to exposure to substance
+<AllergyIntolerance.reaction> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:AllergyIntolerance.reaction.substance @<CodeableConcept>?;  # Specific substance or 
+                                            # pharmaceutical product considered 
+                                            # to be responsible for event 
+    fhir:AllergyIntolerance.reaction.certainty @<code> AND
+    	{fhir:value @fhirvs:reaction-event-certainty}?;  # unlikely | likely | confirmed | 
+                                            # unknown 
+    fhir:AllergyIntolerance.reaction.manifestation @<CodeableConcept>+;  # Clinical symptoms/signs associated 
+                                            # with the Event 
+    fhir:AllergyIntolerance.reaction.description @<string>?;  # Description of the event as a whole
+    fhir:AllergyIntolerance.reaction.onset @<dateTime>?;  # Date(/time) when manifestations 
+                                            # showed 
+    fhir:AllergyIntolerance.reaction.severity @<code> AND
+    	{fhir:value @fhirvs:reaction-event-severity}?;  # mild | moderate | severe (of event 
+                                            # as a whole) 
+    fhir:AllergyIntolerance.reaction.exposureRoute @<CodeableConcept>?;  # How the subject was exposed to the 
+                                            # substance 
+    fhir:AllergyIntolerance.reaction.note @<Annotation>*;  # Text about event not captured in 
+                                            # other fields 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Primitive Type dateTime
+<dateTime> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Metadata about a resource
+<Meta> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @<id>?;             # Version specific identifier
+    fhir:Meta.lastUpdated @<instant>?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @<uri>*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @<Coding>*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @<Coding>*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+<Reference> CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @<string>?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @<Identifier>?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @<string>?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+<Resource> {a .+;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# Primitive Type uri
+<uri> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Text node with attribution
+<Annotation> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    (                                       # Individual responsible for the 
+                                            # annotation 
+        fhir:Annotation.authorReference @<Reference>  |
+        fhir:Annotation.authorReference @<Reference>  |
+        fhir:Annotation.authorReference @<Reference>  |
+        fhir:Annotation.authorString @<string> 
+    )?;
+    fhir:Annotation.time @<dateTime>?;      # When the annotation was made
+    fhir:Annotation.text @<string>;         # The annotation  - text content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# An identifier intended for computation
+<Identifier> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @<code> AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @<CodeableConcept>?;  # Description of identifier
+    fhir:Identifier.system @<uri>?;         # The namespace for the identifier
+    fhir:Identifier.value @<string>?;       # The value that is unique
+    fhir:Identifier.period @<Period>?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @<Reference>?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+<Narrative> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @<code> AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+<CodeableConcept> CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @<Coding>*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @<string>?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+<Period> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @<dateTime>?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @<dateTime>?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+<instant> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+<Coding> CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @<uri>?;             # Identity of the terminology system
+    fhir:Coding.version @<string>?;         # Version of the system - if relevant
+    fhir:Coding.code @<code>?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @<string>?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @<boolean>?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type boolean
+<boolean> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+<PractitionerReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Practitioner> OR CLOSED {a fhir:Practitioner}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Practitioner> {
+    a [fhir:Practitioner];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<PatientReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Patient> OR CLOSED {a fhir:Patient}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Patient> {
+    a [fhir:Patient];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<RelatedPersonReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<RelatedPerson> OR CLOSED {a fhir:RelatedPerson}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<RelatedPerson> {
+    a [fhir:RelatedPerson];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+#---------------------- Value Sets ------------------------
+
+# Identification of the underlying physiological mechanism for a Reaction Risk.
+fhirvs:allergy-intolerance-type ["allergy" "intolerance"]
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use ["usual" "official" "temp" "secondary"]
+
+# The status of a resource narrative
+fhirvs:narrative-status ["generated" "extensions" "additional" "empty"]
+
+# Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.
+fhirvs:allergy-intolerance-criticality ["low" "high" "unable-to-assess"]
+
+# Statement about the degree of clinical certainty that a specific substance was the cause of the manifestation in an reaction event.
+fhirvs:reaction-event-certainty ["unlikely" "likely" "confirmed" "unknown"]
+
+# Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.
+fhirvs:allergy-intolerance-status ["active" "active-confirmed" "inactive" "resolved" "refuted" "entered-in-error"]
+
+# Category of an identified substance.
+fhirvs:allergy-intolerance-category ["food" "medication" "biologic" "environment"]
+
+# Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.
+fhirvs:reaction-event-severity ["mild" "moderate" "severe"]

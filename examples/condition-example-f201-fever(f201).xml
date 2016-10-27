@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+  <id value="f201"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>category</b>: Problem <span>(Details : {SNOMED CT code &#39;55607006&#39; = &#39;Problem (finding)&#39;, given as &#39;Problem&#39;}; {http://hl7.org/fhir/condition-category code &#39;problem-list-item&#39; = &#39;Problem List Item)</span></p><p><b>severity</b>: Mild <span>(Details : {SNOMED CT code &#39;255604002&#39; = &#39;Mild (qualifier value)&#39;, given as &#39;Mild&#39;})</span></p><p><b>code</b>: Fever <span>(Details : {SNOMED CT code &#39;386661006&#39; = &#39;Fever (finding)&#39;, given as &#39;Fever&#39;})</span></p><p><b>bodySite</b>: Entire body as a whole <span>(Details : {SNOMED CT code &#39;38266002&#39; = &#39;Entire body as a whole&#39;, given as &#39;Entire body as a whole&#39;})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>context</b>: <a>Encounter/f201</a></p><p><b>onset</b>: Apr 2, 2013</p><p><b>dateRecorded</b>: Apr 4, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p><h3>Evidences</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>degrees C <span>(Details : {SNOMED CT code &#39;258710007&#39; = &#39;Degrees Celsius (qualifier value)&#39;, given as &#39;degrees C&#39;})</span></td><td><a>Temperature</a></td></tr></table></div></text><clinicalStatus value="active"/>
+  <verificationStatus value="confirmed"/>
+  <category>
+    <!--  The fever is a mild problem  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55607006"/>
+      <display value="Problem"/>
+    </coding>
+    <coding>
+      <system value="http://hl7.org/fhir/condition-category"/>
+      <code value="problem-list-item"/>
+    </coding>
+  </category>
+  <severity>
+    <!--  The fever is mild   -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="255604002"/>
+      <display value="Mild"/>
+    </coding>
+  </severity>
+  <code>
+    <!--  The problem is a fever  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="386661006"/>
+      <display value="Fever"/>
+    </coding>
+  </code>
+  <bodySite>
+    <!--  Fever applies to whole body  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="38266002"/>
+      <display value="Entire body as a whole"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <!--  It entails Roel's problem  -->
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <context>
+    <reference value="Encounter/f201"/>
+  </context>
+  <onsetDateTime value="2013-04-02"/>
+  <dateRecorded value="2013-04-04"/>
+  <asserter>
+    <reference value="Practitioner/f201"/>
+  </asserter>
+  <evidence>
+    <!--  Problem is confirmed by 39 degrees Celsius  -->
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="258710007"/>
+        <display value="degrees C"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="Observation/f202"/>
+      <display value="Temperature"/>
+    </detail>
+  </evidence>
+</Condition>

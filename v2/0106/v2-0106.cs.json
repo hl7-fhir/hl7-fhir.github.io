@@ -1,0 +1,103 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "v2-0106",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Query/response format code</p>\r\n<table class=\"grid\"><tr><td><b>Code</b></td><td><b>Description</b></td><td><b>Deutsch (German)</b></td><td><b>Nederlands (Dutch)</b></td><td><b>Comment</b></td><td><b>Version</b></td></tr><tr><td>D<a name=\"D\"> </a></td><td>Response is in display format</td><td>Antwort im Anzeige-Format</td><td>Antwoord is in weergavestructuur</td><td>deprecated</td><td>added v2.2, removed after v2.6</td></tr><tr><td>R<a name=\"R\"> </a></td><td>Response is in record-oriented format</td><td>Antwort im datensatzorientierten Format</td><td>Antwoord is in record-georiënteerde structuur</td><td>deprecated</td><td>from v2.1, removed after v2.6</td></tr><tr><td>T<a name=\"T\"> </a></td><td>Response is in tabular format</td><td></td><td>Antwoord is in tabelstructuur</td><td>deprecated</td><td>added v2.3, removed after v2.6</td></tr></table>\r\n</div>"
+  },
+  "url": "http://hl7.org/fhir/v2/0106",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:oid:2.16.840.1.133883.18.43"
+  },
+  "version": "2.8.2",
+  "name": "v2 Query/response format code",
+  "status": "active",
+  "experimental": true,
+  "publisher": "HL7, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR Value set/code system definition for HL7 v2 table 0106 ( Query/response format code)",
+  "caseSensitive": false,
+  "valueSet": "http://hl7.org/fhir/ValueSet/v2-0106",
+  "content": "complete",
+  "property": [
+    {
+      "code": "deprecated",
+      "uri": "http://hl7.org/fhir/concept-properties#deprecated",
+      "description": "The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged",
+      "type": "dateTime"
+    }
+  ],
+  "concept": [
+    {
+      "code": "D",
+      "display": "Response is in display format",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Antwort im Anzeige-Format"
+        },
+        {
+          "language": "nl",
+          "value": "Antwoord is in weergavestructuur"
+        }
+      ],
+      "property": [
+        {
+          "code": "deprecated",
+          "valueDateTime": "2007-10"
+        }
+      ]
+    },
+    {
+      "code": "R",
+      "display": "Response is in record-oriented format",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Antwort im datensatzorientierten Format"
+        },
+        {
+          "language": "nl",
+          "value": "Antwoord is in record-georiënteerde structuur"
+        }
+      ],
+      "property": [
+        {
+          "code": "deprecated",
+          "valueDateTime": "2007-10"
+        }
+      ]
+    },
+    {
+      "code": "T",
+      "display": "Response is in tabular format",
+      "designation": [
+        {
+          "language": "nl",
+          "value": "Antwoord is in tabelstructuur"
+        }
+      ],
+      "property": [
+        {
+          "code": "deprecated",
+          "valueDateTime": "2007-10"
+        }
+      ]
+    }
+  ]
+}

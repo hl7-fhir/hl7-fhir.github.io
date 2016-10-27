@@ -1,0 +1,177 @@
+{
+  "@context": "http://build.fhir.org/CarePlan.jsonld",
+  "@context": "http://hl7.org/fhir/CarePlan/f003",
+  "Resource.id": {
+    "id.value": "f003"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f003</p><p><b>contained</b>: , </p><p><b>identifier</b>: CP3953 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>period</b>: Mar 8, 2013 9:00:10 AM --&gt; Mar 8, 2013 9:30:10 AM</p><p><b>modified</b>: Jun 27, 2013 9:30:10 AM</p><p><b>careTeam</b>: id: careteam</p><p><b>addresses</b>: <a>?????</a></p><p><b>goal</b>: id: goal; status: achieved; Retropharyngeal abscess removal <span>(Details )</span>; P. van de Heuvel; Annotation: goal accomplished without complications</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td><td><b>Scheduled[x]</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>Procedure <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'procedure' = 'Procedure)</span></td><td>Incision of retropharyngeal abscess <span>(Details : {SNOMED CT code '172960003' = 'Incision of retropharyngeal abscess (procedure)', given as 'Incision of retropharyngeal abscess'})</span></td><td>completed</td><td>true</td><td>2011-06-27T09:30:10+01:00</td><td><a>E.M. van den broek</a></td></tr></table></blockquote></div>"
+    }
+  },
+  "CareTeam": [
+    {
+      "Resource.id": {
+        "id.value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "string.value": "Practitioner/f001"
+            },
+            "Reference.display": {
+              "string.value": "E.M. van den broek"
+            },
+            "Resource.reference": "http://hl7.org/fhir//Practitioner/f001"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "id.value": "goal"
+      },
+      "Goal.status": {
+        "code.value": "achieved"
+      },
+      "Goal.description": {
+        "CodeableConcept.text": {
+          "string.value": "Retropharyngeal abscess removal"
+        }
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/f001"
+        },
+        "Reference.display": {
+          "string.value": "P. van de Heuvel"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+      },
+      "Goal.note": [
+        {
+          "Annotation.text": {
+            "string.value": "goal accomplished without complications"
+          }
+        }
+      ]
+    }
+  ],
+  "CarePlan.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/zorgportal/identifiers/careplans"
+      },
+      "Identifier.value": {
+        "string.value": "CP3953"
+      }
+    }
+  ],
+  "CarePlan.status": {
+    "code.value": "completed"
+  },
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f001"
+    },
+    "Reference.display": {
+      "string.value": "P. van de Heuvel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "dateTime.value": "2013-03-08T09:00:10+01:00"
+    },
+    "Period.end": {
+      "dateTime.value": "2013-03-08T09:30:10+01:00"
+    }
+  },
+  "CarePlan.modified": {
+    "dateTime.value": "2013-06-27T09:30:10+01:00"
+  },
+  "CarePlan.careTeam": [
+    {
+      "Reference.reference": {
+        "string.value": "#careteam"
+      }
+    }
+  ],
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "string.value": "Condition/f201"
+      },
+      "Reference.display": {
+        "string.value": "?????"
+      }
+    }
+  ],
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "string.value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "code.value": "procedure"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "172960003"
+              },
+              "Coding.display": {
+                "string.value": "Incision of retropharyngeal abscess"
+              }
+            }
+          ],
+          "Resource.concept": "http://snomed.info/sct#172960003"
+        },
+        "CarePlan.activity.detail.status": {
+          "code.value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "boolean.value": true
+        },
+        "CarePlan.activity.detail.scheduledString": {
+          "string.value": "2011-06-27T09:30:10+01:00"
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "string.value": "Practitioner/f001"
+            },
+            "Reference.display": {
+              "string.value": "E.M. van den broek"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

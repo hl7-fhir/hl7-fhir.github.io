@@ -1,0 +1,427 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/PlanDefinition/example> a fhir:PlanDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Low Suicide Risk Order Set...</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:ActivityDefinition;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "referralToMentalHealthCare" ];
+     fhir:ActivityDefinition.status [ fhir:value "draft" ];
+     fhir:ActivityDefinition.description [ fhir:value "refer to primary care mental-health integrated care program for evaluation and treatment of mental health conditions now" ];
+     fhir:ActivityDefinition.category [ fhir:value "referral" ];
+     fhir:ActivityDefinition.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "306206005" ]
+       ]
+     ];
+     fhir:ActivityDefinition.timingTiming [
+       fhir:Timing.event [
+         fhir:index 0;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/cqif-basic-cqlExpression" ];
+           fhir:Extension.valueString [ fhir:value "Now()" ]
+         ]
+       ]
+     ];
+     fhir:ActivityDefinition.participantType [
+       fhir:value "practitioner";
+       fhir:index 0
+     ]
+  ], [
+     a fhir:ActivityDefinition;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "citalopramPrescription" ];
+     fhir:ActivityDefinition.status [ fhir:value "draft" ];
+     fhir:ActivityDefinition.category [ fhir:value "drug" ];
+     fhir:ActivityDefinition.productReference [
+       fhir:Reference.reference [ fhir:value "#citalopramMedication" ]
+     ];
+     fhir:ActivityDefinition.dynamicValue [
+       fhir:index 0;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dosageInstruction.text" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "'1 tablet oral 1 time daily'" ]
+     ], [
+       fhir:index 1;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dosageInstruction.timing.repeat.frequency" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "1" ]
+     ], [
+       fhir:index 2;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dosageInstruction.timing.repeat.period" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "1" ]
+     ], [
+       fhir:index 3;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dosageInstruction.timing.repeat.periodUnit" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "'d'" ]
+     ], [
+       fhir:index 4;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dosageInstruction.route.coding" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "code '26643006' from \"http://snomed.info/sct\" display 'Oral route (qualifier value)'" ]
+     ], [
+       fhir:index 5;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dosageInstruction.doseQuantity" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "1 '{tbl}'" ]
+     ], [
+       fhir:index 6;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dispenseRequest.numberOfRepeatsAllowed" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "3" ]
+     ], [
+       fhir:index 7;
+       fhir:ActivityDefinition.dynamicValue.path [ fhir:value "dispenseRequest.quantity" ];
+       fhir:ActivityDefinition.dynamicValue.expression [ fhir:value "30 '{tbl}'" ]
+     ]
+  ], [
+     a fhir:Medication;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "citalopramMedication" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "200371" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "citalopram" ]
+     ];
+     fhir:Medication.product [
+       fhir:Medication.product.form [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.code [ fhir:value "385055001" ];
+           fhir:Coding.display [ fhir:value "Tablet dose form" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Tablet dose form" ]
+       ];
+       fhir:Medication.product.ingredient [
+         fhir:index 0;
+         fhir:Medication.product.ingredient.itemReference [
+           fhir:Reference.reference [ fhir:value "#citalopramSubstance" ]
+         ];
+         fhir:Medication.product.ingredient.amount [
+           fhir:Ratio.numerator [
+             fhir:Quantity.value [ fhir:value "20"^^xsd:decimal ];
+             fhir:Quantity.unit [ fhir:value "mg" ]
+           ];
+           fhir:Ratio.denominator [
+             fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+             fhir:Quantity.unit [ fhir:value "{tbl}" ]
+           ]
+         ]
+       ]
+     ]
+  ], [
+     a fhir:Substance;
+     fhir:index 3;
+     fhir:Resource.id [ fhir:value "citalopramSubstance" ];
+     fhir:Substance.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "2556" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "citalopram" ]
+     ]
+  ];
+  fhir:PlanDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "mmi:low-suicide-risk-order-set" ]
+  ];
+  fhir:PlanDefinition.version [ fhir:value "1.0.0"];
+  fhir:PlanDefinition.title [ fhir:value "Low Suicide Risk Order Set"];
+  fhir:PlanDefinition.status [ fhir:value "draft"];
+  fhir:PlanDefinition.date [ fhir:value "2015-08-15"^^xsd:date];
+  fhir:PlanDefinition.description [ fhir:value "..."];
+  fhir:PlanDefinition.useContext [
+     fhir:index 0;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "gender" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:133936004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "133936004" ];
+         fhir:Coding.display [ fhir:value "Adult" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:87512008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "87512008" ];
+         fhir:Coding.display [ fhir:value "Mild major depression" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:40379007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "40379007" ];
+         fhir:Coding.display [ fhir:value "Major depression, recurrent, mild" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:394687007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "394687007" ];
+         fhir:Coding.display [ fhir:value "Low suicide risk" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:225337009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "225337009" ];
+         fhir:Coding.display [ fhir:value "Suicide risk assessment" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "user" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:309343006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "309343006" ];
+         fhir:Coding.display [ fhir:value "Physician" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "venue" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:440655000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "440655000" ];
+         fhir:Coding.display [ fhir:value "Outpatient environment" ]
+       ]
+     ]
+  ];
+  fhir:PlanDefinition.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Suicide risk assessment" ]
+  ];
+  fhir:PlanDefinition.contributor [
+     fhir:index 0;
+     fhir:Contributor.type [ fhir:value "author" ];
+     fhir:Contributor.name [ fhir:value "Motive Medical Intelligence" ];
+     fhir:Contributor.contact [
+       fhir:index 0;
+       fhir:ContactDetail.telecom [
+         fhir:index 0;
+         fhir:ContactPoint.system [ fhir:value "phone" ];
+         fhir:ContactPoint.value [ fhir:value "415-362-4007" ];
+         fhir:ContactPoint.use [ fhir:value "work" ]
+       ], [
+         fhir:index 1;
+         fhir:ContactPoint.system [ fhir:value "email" ];
+         fhir:ContactPoint.value [ fhir:value "info@motivemi.com" ];
+         fhir:ContactPoint.use [ fhir:value "work" ]
+       ]
+     ]
+  ];
+  fhir:PlanDefinition.publisher [ fhir:value "Motive Medical Intelligence"];
+  fhir:PlanDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "415-362-4007" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "info@motivemi.com" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ];
+  fhir:PlanDefinition.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/mmi-suiciderisk-orderset-logic>;
+     fhir:Reference.reference [ fhir:value "Library/mmi-suiciderisk-orderset-logic" ]
+  ];
+  fhir:PlanDefinition.actionDefinition [
+     fhir:index 0;
+     fhir:PlanDefinition.actionDefinition.title [ fhir:value "Suicide Risk Assessment and Outpatient Management" ];
+     fhir:PlanDefinition.actionDefinition.actionDefinition [
+       fhir:index 0;
+       fhir:PlanDefinition.actionDefinition.title [ fhir:value "Consults and Referrals" ];
+       fhir:PlanDefinition.actionDefinition.groupingBehavior [ fhir:value "logical-group" ];
+       fhir:PlanDefinition.actionDefinition.selectionBehavior [ fhir:value "any" ];
+       fhir:PlanDefinition.actionDefinition.actionDefinition [
+         fhir:index 0;
+         fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "Refer to outpatient mental health program for evaluation and treatment of mental health conditions now" ];
+         fhir:PlanDefinition.actionDefinition.activityDefinition [
+           fhir:Reference.reference [ fhir:value "#referralToMentalHealthCare" ]
+         ];
+         fhir:PlanDefinition.actionDefinition.dynamicValue [
+           fhir:index 0;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "timing.event" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Now()" ]
+         ], [
+           fhir:index 1;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "specialty" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Code '261QM0850X' from \"urn:oid:2.16.840.1.113883.11.19462\"" ]
+         ], [
+           fhir:index 2;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "fulfillmentTime" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "ReferralRequestFulfillmentTime" ]
+         ], [
+           fhir:index 3;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "patient" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Patient" ]
+         ], [
+           fhir:index 4;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "requester" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Practitioner" ]
+         ], [
+           fhir:index 5;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "reason" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "RiskAssessmentScore" ]
+         ], [
+           fhir:index 6;
+           fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "supportingInformation" ];
+           fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "RiskAssessment" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:PlanDefinition.actionDefinition.title [ fhir:value "Medications" ];
+       fhir:PlanDefinition.actionDefinition.groupingBehavior [ fhir:value "logical-group" ];
+       fhir:PlanDefinition.actionDefinition.selectionBehavior [ fhir:value "at-most-one" ];
+       fhir:PlanDefinition.actionDefinition.actionDefinition [
+         fhir:index 0;
+         fhir:PlanDefinition.actionDefinition.title [ fhir:value "First-Line Antidepressants" ];
+         fhir:PlanDefinition.actionDefinition.documentation [
+           fhir:index 0;
+           fhir:RelatedArtifact.type [ fhir:value "justification" ];
+           fhir:RelatedArtifact.document [
+             fhir:Attachment.contentType [ fhir:value "text/html" ];
+             fhir:Attachment.url [ fhir:value "http://psychiatryonline.org/pb/assets/raw/sitewide/practice_guidelines/guidelines/mdd.pdf" ];
+             fhir:Attachment.title [ fhir:value "Practice Guideline for the Treatment of Patients with Major Depressive Disorder" ]
+           ]
+         ];
+         fhir:PlanDefinition.actionDefinition.groupingBehavior [ fhir:value "logical-group" ];
+         fhir:PlanDefinition.actionDefinition.selectionBehavior [ fhir:value "at-most-one" ];
+         fhir:PlanDefinition.actionDefinition.actionDefinition [
+           fhir:index 0;
+           fhir:PlanDefinition.actionDefinition.title [ fhir:value "Selective Serotonin Reuptake Inhibitors (Choose a mazimum of one or document reasons for exception)" ];
+           fhir:PlanDefinition.actionDefinition.documentation [
+             fhir:index 0;
+             fhir:RelatedArtifact.type [ fhir:value "justification" ];
+             fhir:RelatedArtifact.document [
+               fhir:Attachment.contentType [ fhir:value "text/html" ];
+               fhir:Attachment.url [ fhir:value "http://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6daeb45c-451d-b135-bf8f-2d6dff4b6b01" ];
+               fhir:Attachment.title [ fhir:value "National Library of Medicine. DailyMed website. CITALOPRAM- citalopram hydrobromide tablet, film coated." ]
+             ]
+           ];
+           fhir:PlanDefinition.actionDefinition.groupingBehavior [ fhir:value "logical-group" ];
+           fhir:PlanDefinition.actionDefinition.selectionBehavior [ fhir:value "at-most-one" ];
+           fhir:PlanDefinition.actionDefinition.actionDefinition [
+             fhir:index 0;
+             fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "citalopram 20 mg tablet 1 tablet oral 1 time daily now (30 table; 3 refills)" ];
+             fhir:PlanDefinition.actionDefinition.activityDefinition [
+               fhir:Reference.reference [ fhir:value "#citalopramPrescription" ]
+             ];
+             fhir:PlanDefinition.actionDefinition.dynamicValue [
+               fhir:index 0;
+               fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "status" ];
+               fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "'draft'" ]
+             ], [
+               fhir:index 1;
+               fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "patient" ];
+               fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Patient" ]
+             ], [
+               fhir:index 2;
+               fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "prescriber" ];
+               fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "Practitioner" ]
+             ], [
+               fhir:index 3;
+               fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "reasonCode" ];
+               fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "RiskAssessmentScore" ]
+             ], [
+               fhir:index 4;
+               fhir:PlanDefinition.actionDefinition.dynamicValue.path [ fhir:value "reasonReference" ];
+               fhir:PlanDefinition.actionDefinition.dynamicValue.expression [ fhir:value "RiskAssessment" ]
+             ]
+           ], [
+             fhir:index 1;
+             fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "escitalopram 10 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)" ]
+           ], [
+             fhir:index 2;
+             fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "fluoxetine 20 mg capsule 1 capsule oral 1 time daily now (30 tablet; 3 refills)" ]
+           ], [
+             fhir:index 3;
+             fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "paroxetine 20 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)" ]
+           ], [
+             fhir:index 4;
+             fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "sertraline 50 mg tablet 1 tablet oral 1 time daily now (30 tablet; 3 refills)" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "Dopamine Norepinephrine Reuptake Inhibitors (Choose a maximum of one or document reasons for exception)" ]
+         ], [
+           fhir:index 2;
+           fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "Serotonin Norepinephrine Reuptake Inhibitors (Choose a maximum of one or doument reasons for exception)" ]
+         ], [
+           fhir:index 3;
+           fhir:PlanDefinition.actionDefinition.textEquivalent [ fhir:value "Norepinephrine-Serotonin Modulators (Choose a maximum of one or document reasons for exception)" ]
+         ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Library/mmi-suiciderisk-orderset-logic> a fhir:Library .
+
+# -------------------------------------------------------------------------------------
+

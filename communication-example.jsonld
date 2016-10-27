@@ -1,0 +1,85 @@
+{
+  "@context": "http://build.fhir.org/Communication.jsonld",
+  "@context": "http://hl7.org/fhir/Communication/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient has very high serum potassium</div>"
+    }
+  },
+  "Communication.identifier": [
+    {
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "string.value": "Paging System"
+        }
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:1.3.4.5.6.7"
+      },
+      "Identifier.value": {
+        "string.value": "2345678901"
+      }
+    }
+  ],
+  "Communication.status": {
+    "code.value": "completed"
+  },
+  "Communication.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://acme.org/messagetypes"
+        },
+        "Coding.code": {
+          "code.value": "Alert"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Alert"
+    }
+  },
+  "Communication.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "Communication.sent": {
+    "dateTime.value": "2014-12-12T18:01:10-08:00"
+  },
+  "Communication.sender": {
+    "Reference.reference": {
+      "string.value": "Device/f001"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Device/f001"
+  },
+  "Communication.recipient": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/21"
+      }
+    }
+  ],
+  "Communication.payload": [
+    {
+      "Communication.payload.contentString": {
+        "string.value": "Patient 1 has a very high serum potassium value (7.2 mmol/L on 2014-Dec-12 at 5:55 pm)"
+      }
+    },
+    {
+      "Communication.payload.contentReference": {
+        "Reference.reference": {
+          "string.value": "Observation/643666aa12f"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Observation/643666aa12f"
+      }
+    }
+  ]
+}

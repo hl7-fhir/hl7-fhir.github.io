@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="usage-context-type"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>UsageContextType</h2>
+      <div>
+        <p>A code the specifies a type of context being specified by a usage context</p>
+
+      </div>
+      <p>This code system http://hl7.org/fhir/usage-context-type defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>gender
+            <a name="usage-context-type-gender"> </a>
+          </td>
+          <td>Gender</td>
+          <td>The gender of the patient. For this context type, the value should be a code taken from the [AdministrativeGender](valueset-administrative-gender.html) value set</td>
+        </tr>
+        <tr>
+          <td>age
+            <a name="usage-context-type-age"> </a>
+          </td>
+          <td>Age Range</td>
+          <td>The age of the patient. For this context type, the value should be a range the specifies the applicable ages or a code from the MeSH value set AgeGroupObservationValue</td>
+        </tr>
+        <tr>
+          <td>focus
+            <a name="usage-context-type-focus"> </a>
+          </td>
+          <td>Clinical Focus</td>
+          <td>The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test interpretation, medication ordering.</td>
+        </tr>
+        <tr>
+          <td>user
+            <a name="usage-context-type-user"> </a>
+          </td>
+          <td>User Type</td>
+          <td>The clinical speciality of the context in which the patient is bring treated - For example, PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional, Prescriber, etc... taken from the NUCC Health Care provider taxonomyCode system (OID: 2.16.840.1.113883.6.101).</td>
+        </tr>
+        <tr>
+          <td>workflow
+            <a name="usage-context-type-workflow"> </a>
+          </td>
+          <td>Workflow Setting</td>
+          <td>The settings in which the artifact is intended for use. For example, admission, pre-op, etc</td>
+        </tr>
+        <tr>
+          <td>task
+            <a name="usage-context-type-task"> </a>
+          </td>
+          <td>Workflow Task</td>
+          <td>The context for the clinical task(s) represented by this artifact. Can be any task context represented by the HL7 ActTaskCode value set (OID: 2.16.840.1.113883.1.11.19846). General categories include: order entry, patient documentation and patient information review.</td>
+        </tr>
+        <tr>
+          <td>venue
+            <a name="usage-context-type-venue"> </a>
+          </td>
+          <td>Clinical Venue</td>
+          <td>The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home, Nursing home. The code value may originate from either the HL7 ActEncounter (OID: 2.16.840.1.113883.1.11.13955) or NUCC non-individual provider codes OID: 2.16.840.1.113883.1.11.19465.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/usage-context-type"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.1.0"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="UsageContextType"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="A code the specifies a type of context being specified by a usage context"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/usage-context-type"/>
+  <content value="complete"/>
+  <concept>
+    <code value="gender"/>
+    <display value="Gender"/>
+    <definition value="The gender of the patient. For this context type, the value should be a code taken from the [AdministrativeGender](valueset-administrative-gender.html) value set"/>
+  </concept>
+  <concept>
+    <code value="age"/>
+    <display value="Age Range"/>
+    <definition value="The age of the patient. For this context type, the value should be a range the specifies the applicable ages or a code from the MeSH value set AgeGroupObservationValue"/>
+  </concept>
+  <concept>
+    <code value="focus"/>
+    <display value="Clinical Focus"/>
+    <definition value="The clinical concept(s) addressed by the artifact. For example, disease, diagnostic test interpretation, medication ordering."/>
+  </concept>
+  <concept>
+    <code value="user"/>
+    <display value="User Type"/>
+    <definition value="The clinical speciality of the context in which the patient is bring treated - For example, PCP, Patient, Cardiologist, Behavioral Professional, Oral Health Professional, Prescriber, etc... taken from the NUCC Health Care provider taxonomyCode system (OID: 2.16.840.1.113883.6.101)."/>
+  </concept>
+  <concept>
+    <code value="workflow"/>
+    <display value="Workflow Setting"/>
+    <definition value="The settings in which the artifact is intended for use. For example, admission, pre-op, etc"/>
+  </concept>
+  <concept>
+    <code value="task"/>
+    <display value="Workflow Task"/>
+    <definition value="The context for the clinical task(s) represented by this artifact. Can be any task context represented by the HL7 ActTaskCode value set (OID: 2.16.840.1.113883.1.11.19846). General categories include: order entry, patient documentation and patient information review."/>
+  </concept>
+  <concept>
+    <code value="venue"/>
+    <display value="Clinical Venue"/>
+    <definition value="The venue in which an artifact could be used. For example, Outpatient, Inpatient, Home, Nursing home. The code value may originate from either the HL7 ActEncounter (OID: 2.16.840.1.113883.1.11.13955) or NUCC non-individual provider codes OID: 2.16.840.1.113883.1.11.19465."/>
+  </concept>
+</CodeSystem>

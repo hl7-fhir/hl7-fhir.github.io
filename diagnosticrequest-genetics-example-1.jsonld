@@ -1,0 +1,73 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticRequest.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticRequest/og-example1",
+  "Resource.id": {
+    "id.value": "og-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: og-example1</p><p><b>status</b>: active</p><p><b>stage</b>: Original Order <span>(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)</span></p><p><b>code</b>: ABCB4 gene mutation analysis <span>(Details : {LOINC code '49874-1' = 'ABCB4 gene mutation analysis in Blood or Tissue by Molecular genetics method Narrative)</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>context</b>: <a>Encounter/example</a></p><p><b>occurrence</b>: May 12, 2014 4:16:00 PM</p><p><b>requester</b>: <a>Practitioner/example</a></p><p><b>performer</b>: <a>Practitioner/example</a></p></div>"
+    }
+  },
+  "DiagnosticRequest.status": {
+    "code.value": "active"
+  },
+  "DiagnosticRequest.stage": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/request-stage"
+        },
+        "Coding.code": {
+          "code.value": "original-order"
+        }
+      }
+    ]
+  },
+  "DiagnosticRequest.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "49874-1"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "ABCB4 gene mutation analysis"
+    },
+    "Resource.concept": "http://loinc.org/owl#49874-1"
+  },
+  "DiagnosticRequest.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "DiagnosticRequest.context": {
+    "Reference.reference": {
+      "string.value": "Encounter/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "DiagnosticRequest.occurrenceDateTime": {
+    "dateTime.value": "2014-05-12T16:16:00-07:00"
+  },
+  "DiagnosticRequest.requester": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "DiagnosticRequest.performer": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  }
+}

@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:CapabilityStatement;
+  fhir:Resource.id [ fhir:value "base2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://hl7.org/fhir/CapabilityStatement/base2"];
+  fhir:CapabilityStatement.version [ fhir:value "1.7.0-10082"];
+  fhir:CapabilityStatement.name [ fhir:value "Base FHIR Capability Statement (Empty)"];
+  fhir:CapabilityStatement.status [ fhir:value "draft"];
+  fhir:CapabilityStatement.experimental [ fhir:value "true"];
+  fhir:CapabilityStatement.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:CapabilityStatement.publisher [ fhir:value "FHIR Project Team"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This is the base Capability Statement for FHIR. It represents a server that provides the none of the functionality defined by FHIR. It is provided to use as a template for system designers to build their own Capability Statements from. A capability statement has to contain something, so this contains a read of a Capability Statement"];
+  fhir:CapabilityStatement.kind [ fhir:value "capability"];
+  fhir:CapabilityStatement.software [
+     fhir:CapabilityStatement.name [ fhir:value "Insert your softwware name here..." ]
+  ];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "1.7.0"];
+  fhir:CapabilityStatement.acceptUnknown [ fhir:value "no"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.documentation [ fhir:value "An empty Capability Statement" ];
+     fhir:CapabilityStatement.security [
+       fhir:CapabilityStatement.cors [ fhir:value "true" ];
+       fhir:CapabilityStatement.service [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/restful-security-service" ];
+           fhir:Coding.code [ fhir:value "SMART-on-FHIR" ];
+           fhir:Coding.display [ fhir:value "SMART-on-FHIR" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "See http://docs.smarthealthit.org/" ]
+       ];
+       fhir:CapabilityStatement.description [ fhir:value "This is the Capability Statement to declare that the server supports SMART-on-FHIR. See the SMART-on-FHIR docs for the extension that would go with such a server" ]
+     ];
+     fhir:CapabilityStatement.resource [
+       fhir:index 0;
+       fhir:CapabilityStatement.type [ fhir:value "CapabilityStatement" ];
+       fhir:CapabilityStatement.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.code [ fhir:value "read" ];
+         fhir:CapabilityStatement.documentation [ fhir:value "Read CapabilityStatement Resource" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

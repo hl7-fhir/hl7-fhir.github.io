@@ -1,0 +1,62 @@
+{
+  "@context": "http://build.fhir.org/AllergyIntolerance.jsonld",
+  "@context": "http://hl7.org/fhir/AllergyIntolerance/fishallergy",
+  "Resource.id": {
+    "id.value": "fishallergy"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "additional"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>allergy is to fresh fish. Tolerates canned fish</p>\n      <p>recordedDate:2015-08-06T00:00:00-06:00</p>\n      <p>substance:Fish - dietary (substance)</p>\n    </div>"
+    }
+  },
+  "AllergyIntolerance.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://acme.com/ids/patients/risks"
+      },
+      "Identifier.value": {
+        "string.value": "49476535"
+      }
+    }
+  ],
+  "AllergyIntolerance.category": {
+    "code.value": "food"
+  },
+  "AllergyIntolerance.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "227037002"
+        },
+        "Coding.display": {
+          "string.value": "Fish - dietary (substance)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Allergic to fresh fish. Tolerates canned fish"
+    },
+    "Resource.concept": "http://snomed.info/sct#227037002"
+  },
+  "AllergyIntolerance.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "AllergyIntolerance.attestedDate": {
+    "dateTime.value": "2015-08-06T15:37:31-06:00"
+  },
+  "AllergyIntolerance.recorder": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  }
+}

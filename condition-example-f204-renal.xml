@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+  <id value="f204"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f204</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: differential</p><p><b>category</b>: Problem <span>(Details : {SNOMED CT code &#39;55607006&#39; = &#39;Problem (finding)&#39;, given as &#39;Problem&#39;}; {http://hl7.org/fhir/condition-category code &#39;problem-list-item&#39; = &#39;Problem List Item)</span></p><p><b>severity</b>: Severe <span>(Details : {SNOMED CT code &#39;24484000&#39; = &#39;Severe (severity modifier) (qualifier value)&#39;, given as &#39;Severe&#39;})</span></p><p><b>code</b>: Acute renal insufficiency specified as due to procedure <span>(Details : {SNOMED CT code &#39;36225005&#39; = &#39;Acute renal failure due to procedure (disorder)&#39;, given as &#39;Acute renal insufficiency specified as due to procedure&#39;})</span></p><p><b>bodySite</b>: Kidney <span>(Details : {SNOMED CT code &#39;181414000&#39; = &#39;Entire kidney (body structure)&#39;, given as &#39;Kidney&#39;})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>context</b>: <a>Roel&#39;s encounter on March eleventh</a></p><p><b>onset</b>: Mar 11, 2013</p><p><b>abatement</b>: Mar 20, 2013</p><p><b>dateRecorded</b>: Mar 11, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p><h3>Stages</h3><table><tr><td>-</td><td><b>Summary</b></td></tr><tr><td>*</td><td>Temporary <span>(Details : {SNOMED CT code &#39;14803004&#39; = &#39;Transitory (qualifier value)&#39;, given as &#39;Temporary&#39;})</span></td></tr></table></div></text><clinicalStatus value="active"/>
+  <verificationStatus value="differential"/>
+  <category>
+    <!--  Renal insufficiency could become a severe problem  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55607006"/>
+      <display value="Problem"/>
+    </coding>
+    <coding>
+      <system value="http://hl7.org/fhir/condition-category"/>
+      <code value="problem-list-item"/>
+    </coding>
+  </category>
+  <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="24484000"/>
+      <display value="Severe"/>
+    </coding>
+  </severity>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="36225005"/>
+      <display value="Acute renal insufficiency specified as due to procedure"/>
+    </coding>
+  </code>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="181414000"/>
+      <display value="Kidney"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <!--  It entails Roel's problem  -->
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <context>
+    <reference value="Encounter/f203"/>
+    <display value="Roel&#39;s encounter on March eleventh"/>
+  </context>
+  <onsetDateTime value="2013-03-11"/>
+  <abatementDateTime value="2013-03-20"/>
+  <dateRecorded value="2013-03-11"/>
+  <asserter>
+    <reference value="Practitioner/f201"/>
+  </asserter>
+  <stage>
+    <!--  The problem is temporary and will not become permanent renal insufficiency  -->
+    <summary>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="14803004"/>
+        <display value="Temporary"/>
+      </coding>
+    </summary>
+  </stage>
+</Condition>

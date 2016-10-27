@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DetectedIssue/ddi> a fhir:DetectedIssue;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ddi"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Severity: High</b> - Risk of internal bleeding</p>\n      <p>Those who take acetaminophen along with the widely used blood-thinning drug warfarin may face the risk of serious internal bleeding. People on warfarin who take acetaminophen for at least seven days in a row should be closely watched for bleeding.</p>\n      <ul>\n        <li><a href=\"MedicationStatement/tylenol\">500 mg Acetaminophen tablet 1/day, PRN since 2010</a></li>\n        <li><a href=\"MedicationRequest/warfarin\">Warfarin 1 MG TAB prescribed Jan. 5, 2014</a></li>\n      </ul>\n      <p>Mitigation: Jan 5, 2014 by Dr. Adam Careful: </p>\n      <p>Asked patient to discontinue regular use of Tylenol and to consult with clinician if they need to resume to allow appropriate INR monitoring</p>\n    </div>"
+  ];
+  fhir:DetectedIssue.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "DRG" ];
+       fhir:Coding.display [ fhir:value "Drug Interaction Alert" ]
+     ]
+  ];
+  fhir:DetectedIssue.severity [ fhir:value "high"];
+  fhir:DetectedIssue.implicated [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/MedicationStatement/tylenol>;
+     fhir:Reference.reference [ fhir:value "MedicationStatement/tylenol" ];
+     fhir:Reference.display [ fhir:value "500 mg Acetaminophen tablet 1/day, PRN since 2010" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/MedicationRequest/warfarin>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/warfarin" ];
+     fhir:Reference.display [ fhir:value "Warfarin 1 MG TAB prescribed Jan. 5, 2014" ]
+  ];
+  fhir:DetectedIssue.detail [ fhir:value "Risk of internal bleeding.  Those who take acetaminophen along with the widely used blood-thinning drug warfarin may face the risk of serious internal bleeding. People on warfarin who take acetaminophen for at least seven days in a row should be closely watched for bleeding."];
+  fhir:DetectedIssue.date [ fhir:value "2014-01-05"^^xsd:date];
+  fhir:DetectedIssue.author [
+     fhir:link <http://hl7.org/fhir/Device/dsp>;
+     fhir:Reference.reference [ fhir:value "Device/dsp" ]
+  ];
+  fhir:DetectedIssue.mitigation [
+     fhir:index 0;
+     fhir:DetectedIssue.mitigation.action [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+         fhir:Coding.code [ fhir:value "13" ];
+         fhir:Coding.display [ fhir:value "Stopped Concurrent Therapy" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Asked patient to discontinue regular use of Tylenol and to consult with clinician if they need to resume to allow appropriate INR monitoring" ]
+     ];
+     fhir:DetectedIssue.mitigation.date [ fhir:value "2014-01-05"^^xsd:date ];
+     fhir:DetectedIssue.mitigation.author [
+       fhir:link <http://hl7.org/fhir/Practitioner/example>;
+       fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+       fhir:Reference.display [ fhir:value "Dr. Adam Careful" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/MedicationStatement/tylenol> a fhir:MedicationStatement .
+
+<http://hl7.org/fhir/MedicationRequest/warfarin> a fhir:MedicationRequest .
+
+<http://hl7.org/fhir/Device/dsp> a fhir:Device .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

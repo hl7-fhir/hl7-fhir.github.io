@@ -1,0 +1,83 @@
+{
+  "resourceType": "Encounter",
+  "id": "f202",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>identifier</b>: Encounter_Roel_20130128 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>type</b>: Chemotherapy <span>(Details : {SNOMED CT code '367336001' = 'Chemotherapy (procedure)', given as 'Chemotherapy'})</span></p><p><b>priority</b>: Urgent <span>(Details : {SNOMED CT code '103391001' = 'Urgency (qualifier value)', given as 'Urgent'})</span></p><p><b>patient</b>: <a>Roel</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/f201</a></td></tr></table><p><b>length</b>: 56 minutes<span> (Details: UCUM code min = 'min')</span></p><p><b>reason</b>: The patient is treated for a tumor. <span>(Details )</span></p><p><b>indication</b>: <a>Roel's TPF chemotherapy on January 28th, 2013</a></p><p><b>serviceProvider</b>: <a>Organization/f201</a></p></div>"
+  },
+  "identifier": [
+    {
+      "use": "temp",
+      "value": "Encounter_Roel_20130128"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "system": "http://hl7.org/fhir/v3/ActCode",
+    "code": "AMB",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "367336001",
+          "display": "Chemotherapy"
+        }
+      ]
+    }
+  ],
+  "priority": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "103391001",
+        "display": "Urgent"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "Practitioner/f201"
+      }
+    }
+  ],
+  "length": {
+    "value": 56,
+    "unit": "minutes",
+    "system": "http://unitsofmeasure.org",
+    "code": "min"
+  },
+  "reason": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/encounter-primaryDiagnosis",
+          "valuePositiveInt": 2
+        }
+      ],
+      "text": "The patient is treated for a tumor."
+    }
+  ],
+  "indication": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/encounter-primaryDiagnosis",
+          "valuePositiveInt": 1
+        }
+      ],
+      "reference": "Procedure/f201",
+      "display": "Roel's TPF chemotherapy on January 28th, 2013"
+    }
+  ],
+  "serviceProvider": {
+    "reference": "Organization/f201"
+  }
+}

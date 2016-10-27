@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Encounter/home> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "home"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Location;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "home" ];
+     fhir:Location.description [ fhir:value "Client's home" ];
+     fhir:Location.mode [ fhir:value "kind" ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+     fhir:Coding.code [ fhir:value "HH" ];
+     fhir:Coding.display [ fhir:value "home health" ]
+  ];
+  fhir:Encounter.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.period [
+       fhir:Period.start [ fhir:value "2015-01-17T16:00:00+10:00"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2015-01-17T16:30:00+10:00"^^xsd:dateTime ]
+     ];
+     fhir:Encounter.participant.individual [
+       fhir:link <http://hl7.org/fhir/Practitioner/example>;
+       fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+       fhir:Reference.display [ fhir:value "Dr Adam Careful" ]
+     ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2015-01-17T16:00:00+10:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-01-17T16:30:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:Reference.reference [ fhir:value "#home" ];
+       fhir:Reference.display [ fhir:value "Client's home" ]
+     ];
+     fhir:Encounter.location.status [ fhir:value "completed" ];
+     fhir:Encounter.location.period [
+       fhir:Period.start [ fhir:value "2015-01-17T16:00:00+10:00"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2015-01-17T16:30:00+10:00"^^xsd:dateTime ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

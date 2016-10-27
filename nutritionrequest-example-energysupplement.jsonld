@@ -1,0 +1,167 @@
+{
+  "@context": "http://build.fhir.org/NutritionRequest.jsonld",
+  "@context": "http://hl7.org/fhir/NutritionRequest/energysupplement",
+  "Resource.id": {
+    "id.value": "energysupplement"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: energysupplement</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><p><b>allergyIntolerance</b>: <a>Cashew Nuts</a></p><p><b>foodPreferenceModifier</b>: Kosher <span>(Details : {http://hl7.org/fhir/diet code 'kosher' = 'Kosher)</span></p><p><b>excludeFoodModifier</b>: Cashew Nut <span>(Details : {SNOMED CT code '227493005' = 'Cashew nut (substance)', given as 'Cashew Nut'})</span></p><h3>Supplements</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>ProductName</b></td><td><b>Schedule</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>Adult high energy drink <span>(Details : {SNOMED CT code '442971000124100' = 'Adult high energy formula (product)', given as 'Adult high energy formula'}; {http://goodhealthhospital.org/supplement-type-codes code '1010' = '1010', given as 'Adult high energy drink'})</span></td><td>Ensure</td><td>Starting Feb 10, 2015, Do 3 per 1 days</td><td>1 8 oz can</td></tr></table></div>"
+    }
+  },
+  "NutritionRequest.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://goodhealthhospital.org/nutrition-requests"
+      },
+      "Identifier.value": {
+        "string.value": "123"
+      }
+    }
+  ],
+  "NutritionRequest.status": {
+    "code.value": "active"
+  },
+  "NutritionRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "NutritionRequest.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/example"
+    },
+    "Reference.display": {
+      "string.value": "Inpatient"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "NutritionRequest.dateTime": {
+    "dateTime.value": "2014-09-17"
+  },
+  "NutritionRequest.orderer": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "string.value": "Dr Adam Careful"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "NutritionRequest.allergyIntolerance": [
+    {
+      "Reference.reference": {
+        "string.value": "AllergyIntolerance/example"
+      },
+      "Reference.display": {
+        "string.value": "Cashew Nuts"
+      }
+    }
+  ],
+  "NutritionRequest.foodPreferenceModifier": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/diet"
+          },
+          "Coding.code": {
+            "code.value": "kosher"
+          }
+        }
+      ]
+    }
+  ],
+  "NutritionRequest.excludeFoodModifier": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.version": {
+            "string.value": "20140730"
+          },
+          "Coding.code": {
+            "code.value": "227493005"
+          },
+          "Coding.display": {
+            "string.value": "Cashew Nut"
+          }
+        }
+      ]
+    }
+  ],
+  "NutritionRequest.supplement": [
+    {
+      "NutritionRequest.supplement.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "442971000124100"
+            },
+            "Coding.display": {
+              "string.value": "Adult high energy formula"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://goodhealthhospital.org/supplement-type-codes"
+            },
+            "Coding.code": {
+              "code.value": "1010"
+            },
+            "Coding.display": {
+              "string.value": "Adult high energy drink"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Adult high energy drink"
+        },
+        "Resource.concept": "http://snomed.info/sct#442971000124100"
+      },
+      "NutritionRequest.supplement.productName": {
+        "string.value": "Ensure"
+      },
+      "NutritionRequest.supplement.schedule": [
+        {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "dateTime.value": "2015-02-10"
+              }
+            },
+            "Timing.repeat.frequency": {
+              "integer.value": 3
+            },
+            "Timing.repeat.period": {
+              "decimal.value": 1
+            },
+            "Timing.repeat.periodUnit": {
+              "code.value": "d"
+            }
+          }
+        }
+      ],
+      "NutritionRequest.supplement.quantity": {
+        "Quantity.value": {
+          "decimal.value": 1
+        },
+        "Quantity.unit": {
+          "string.value": "8 oz can"
+        }
+      }
+    }
+  ]
+}

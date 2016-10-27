@@ -1,0 +1,1767 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Allergyintolerance-questionnaire.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/allergyintolerance-questionnaire.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="clinicalsummary-module.html"><img src="clinical.png"/> Clinical Summary</a></li>        <li><a href="allergyintolerance.html">AllergyIntolerance</a></li>        <li><b>Generated Questionnaire</b></li>        <!-- allergyintolerance-questionnaire.json.html / resource-questionnaire:AllergyIntolerance / Questionnaire-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Allergyintolerance-questionnaire.json</h1>
+
+<p>
+<a href="allergyintolerance-questionnaire.json">Raw JSON</a> (<a href="allergyintolerance-questionnaire.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>Generated Questionnaire for AllergyIntolerance</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Questionnaire&quot;,
+  &quot;id&quot;: &quot;qs1&quot;,
+  &quot;contained&quot;: [
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;vs2&quot;,
+      &quot;name&quot;: &quot;Type options for AllergyIntolerance.recorder&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;Type options for AllergyIntolerance.recorder&quot;,
+      &quot;expansion&quot;: {
+        &quot;identifier&quot;: &quot;urn:uuid:4242b414-1139-4bd5-86a7-dee228d354e1&quot;,
+        &quot;timestamp&quot;: &quot;2016-10-27T16:26:35+00:00&quot;,
+        &quot;contains&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Practitioner&quot;,
+            &quot;display&quot;: &quot;Practitioner&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Patient&quot;,
+            &quot;display&quot;: &quot;Patient&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;vs3&quot;,
+      &quot;name&quot;: &quot;Type options for AllergyIntolerance.reporter&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;Type options for AllergyIntolerance.reporter&quot;,
+      &quot;expansion&quot;: {
+        &quot;identifier&quot;: &quot;urn:uuid:b7410626-4452-4961-bc91-5e9ff6b03791&quot;,
+        &quot;timestamp&quot;: &quot;2016-10-27T16:26:35+00:00&quot;,
+        &quot;contains&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Patient&quot;,
+            &quot;display&quot;: &quot;Patient&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;RelatedPerson&quot;,
+            &quot;display&quot;: &quot;RelatedPerson&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Practitioner&quot;,
+            &quot;display&quot;: &quot;Practitioner&quot;
+          }
+        ]
+      }
+    }
+  ],
+  &quot;identifier&quot;: [
+    {
+      &quot;system&quot;: &quot;urn:ietf:rfc:3986&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;date&quot;: &quot;2016-10-27T16:23:35+00:00&quot;,
+  &quot;publisher&quot;: &quot;Health Level Seven International (Patient Care)&quot;,
+  &quot;item&quot;: [
+    {
+      &quot;linkId&quot;: &quot;AllergyIntolerance&quot;,
+      &quot;text&quot;: &quot;Allergy or Intolerance (generally: Risk of adverse reaction to a substance)&quot;,
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;required&quot;: false,
+      &quot;repeats&quot;: true,
+      &quot;item&quot;: [
+        {
+          &quot;text&quot;: &quot;Substances include, but are not limited to: a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings.&quot;,
+          &quot;type&quot;: &quot;display&quot;
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+              &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                  {
+                    &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                    &quot;code&quot;: &quot;flyover&quot;,
+                    &quot;display&quot;: &quot;Fly-over&quot;
+                  }
+                ]
+              }
+            }
+          ],
+          &quot;text&quot;: &quot;Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.&quot;,
+          &quot;type&quot;: &quot;display&quot;
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;string&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.id&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.id.value&quot;,
+              &quot;text&quot;: &quot;Logical id of this artifact&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.meta&quot;,
+          &quot;text&quot;: &quot;Metadata about the resource&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;uri&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.implicitRules&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.implicitRules.value&quot;,
+              &quot;text&quot;: &quot;A set of rules under which this content was created&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.language&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.language.value&quot;,
+              &quot;text&quot;: &quot;language&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.text&quot;,
+          &quot;text&quot;: &quot;Text summary of the resource, for human interpretation&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \&quot;text blob\&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;AllergyIntolerance.contained&quot;,
+          &quot;text&quot;: &quot;Contained, inline Resources&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;AllergyIntolerance.extension&quot;,
+          &quot;text&quot;: &quot;Additional Content defined by implementations&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;AllergyIntolerance.modifierExtension&quot;,
+          &quot;text&quot;: &quot;Extensions that cannot be ignored&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Identifier&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.identifier&quot;,
+          &quot;text&quot;: &quot;External ids for this item&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;This records identifiers associated with this allergy/intolerance concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.identifier.label&quot;,
+              &quot;text&quot;: &quot;label:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.identifier.system&quot;,
+              &quot;text&quot;: &quot;system:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.identifier.value&quot;,
+              &quot;text&quot;: &quot;value:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.status&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product). Decision support would typically raise alerts for 'active' and 'active-confirmed' (and potetially 'resolved') and ignore a 'refuted' reaction. In particular, 'refuted' may be useful for reconciliation of the Adverse Reaction List. Some implementations may choose to make this field mandatory.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.status.value&quot;,
+              &quot;text&quot;: &quot;status&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.type&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Identification of the underlying physiological mechanism for the reaction risk. Allergic (typically immune-mediated) reactions have been traditionally regarded as an indicator for potential escalation to significant future risk. Contemporary knowledge suggests that some reactions previously thought to be immune-mediated are, in fact, non-immune, but in some cases can still pose a life threatening risk. It is acknowledged that many clinicians may not be in a position to distinguish the mechanism of a particular reaction. Often the term \&quot;allergy\&quot; is used rather generically and may overlap with the use of \&quot;intolerance\&quot; - in practice the boundaries between these two concepts may not be well-defined or understood. This data element is included nevertheless, because many legacy systems have captured this attribute. Immunologic testing may provide supporting evidence for the basis of the reaction and the causative substance, but no tests are 100% sensitive or specific for sensitivity to a particular substance. If, as is commonly the case, it is unclear whether the reaction is due to an allergy or an intolerance, then the type element should be omitted from the resource.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.type.value&quot;,
+              &quot;text&quot;: &quot;type&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.category&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Category of the identified substance. This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the substance where coding systems are used, and is effectively redundant in that situation.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.category.value&quot;,
+              &quot;text&quot;: &quot;category&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.criticality&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance. The default criticality value for any propensity to an adverse reaction should be 'Low Risk', indicating at the very least a relative contraindication to deliberate or voluntary exposure to the substance. 'High Risk' is flagged if the clinician has identified a propensity for a more serious or potentially life-threatening reaction, such as anaphylaxis, and implies an absolute contraindication to deliberate or voluntary exposure to the substance. If this element is missing, the criticality is unknown (though it may be known elsewhere).&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.criticality.value&quot;,
+              &quot;text&quot;: &quot;criticality&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;CodeableConcept&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.code&quot;,
+          &quot;text&quot;: &quot;Allergy or intolerance code&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Code for an allergy or intolerance statement (either a positive or a negated/excluded statement).  This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., \&quot;Latex\&quot;), an allergy or intolerance condition (e.g., \&quot;Latex allergy\&quot;), or a negated/excluded code for a specific substance or class (e.g., \&quot;No latex allergy\&quot;) or a general or categorical negated statement (e.g.,  \&quot;No known allergy\&quot;, \&quot;No known drug allergies\&quot;). It is strongly recommended that this element be populated using a terminology, where possible. For example, some terminologies used include RxNorm, SNOMED CT, DM+D, NDFRT, ICD-9, IDC-10, UNI, ATC and CPT. Plain text should only be used if there is no appropriate terminology available. Additional details can be specified in the text.\r\rWhen a substance or product code is specified for the 'code' element, the \&quot;default\&quot; semantic context is that this is a positive statement of an allergy or intolerance (depending on the value of the 'type' element, if present) condition to the specified substance/product.  In the corresponding SNOMED CT allergy model, the specified substance/product is the target (destination) of the \&quot;Causative agent\&quot; relationship.\r\rThe 'substanceExposureRisk' extension is available as a structured and more flexible alternative to the 'code' element for making positive or negative allergy or intolerance statements.  This extension provides the capability to make \&quot;no known allergy\&quot; (or \&quot;no risk of adverse reaction\&quot;) statements regarding any coded substance/product (including cases when a pre-coordinated \&quot;no allergy to x\&quot; concept for that substance/product does not exist).  If the 'substanceExposureRisk' extension is present, the AllergyIntolerance.code element SHALL be omitted.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.code.coding&quot;,
+              &quot;text&quot;: &quot;code:&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.code.text&quot;,
+              &quot;text&quot;: &quot;text:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Reference&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.patient&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: true,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The patient who has the allergy or intolerance.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                  &quot;valueCode&quot;: &quot;Patient&quot;
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.patient.value&quot;,
+              &quot;text&quot;: &quot;Who the sensitivity is for&quot;,
+              &quot;type&quot;: &quot;reference&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;datetime&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.onset&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Record of the date and/or time of the onset of the Allergy or Intolerance.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.onset.value&quot;,
+              &quot;text&quot;: &quot;Date(/time) when manifestations showed&quot;,
+              &quot;type&quot;: &quot;dateTime&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;datetime&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.attestedDate&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Indicates the most recent date on which the recorder has asserted that the information represented by this AllergyIntolerance record is accurate. This is typically the date of last change, but it's possible to update this date without changing any other data if you just want to say 'this allergy/intolerance record is up to date as of now.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.attestedDate.value&quot;,
+              &quot;text&quot;: &quot;Date record was believed accurate&quot;,
+              &quot;type&quot;: &quot;dateTime&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.recorder&quot;,
+          &quot;text&quot;: &quot;Who recorded the sensitivity&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Individual who recorded the record and takes responsibility for its content.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.recorder._type&quot;,
+              &quot;text&quot;: &quot;type&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#vs2&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.recorder._Practitioner&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Practitioner&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;AllergyIntolerance.recorder._Practitioner.value&quot;,
+                      &quot;text&quot;: &quot;Practitioner&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.recorder._Patient&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Patient&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;AllergyIntolerance.recorder._Patient.value&quot;,
+                      &quot;text&quot;: &quot;Patient&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.reporter&quot;,
+          &quot;text&quot;: &quot;Source of the information about the allergy&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The source of the information about the allergy that is recorded. The recorder takes repsonsibility for the content, but can reference the source from where they got it.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._type&quot;,
+              &quot;text&quot;: &quot;type&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#vs3&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._Patient&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Patient&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._Patient.value&quot;,
+                      &quot;text&quot;: &quot;Patient&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._RelatedPerson&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;RelatedPerson&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._RelatedPerson.value&quot;,
+                      &quot;text&quot;: &quot;RelatedPerson&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._Practitioner&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Practitioner&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;AllergyIntolerance.reporter._Practitioner.value&quot;,
+                      &quot;text&quot;: &quot;Practitioner&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;datetime&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.lastOccurrence&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Represents the date and/or time of the last known occurrence of a reaction event. This date may be replicated by one of the Onset of Reaction dates. Where a textual representation of the date of last occurrence is required e.g. 'In Childhood, '10 years ago' the Comment element should be used.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.lastOccurrence.value&quot;,
+              &quot;text&quot;: &quot;Date(/time) of last known occurrence of a reaction&quot;,
+              &quot;type&quot;: &quot;dateTime&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Annotation&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;AllergyIntolerance.note&quot;,
+          &quot;text&quot;: &quot;Additional text not captured in other fields&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Additional narrative about the propensity for the Adverse Reaction, not captured in other fields. For example: including reason for flagging a seriousness of 'High Risk'; and instructions related to future exposure or administration of the substance, such as administration within an Intensive Care Unit or under corticosteroid cover. The notes should be related to an allergy or intolerance as a condition in general and not related to any particular episode of it. For episode notes and descriptions, use AllergyIntolerance.event.description and  AllergyIntolerance.event.notes.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;AllergyIntolerance.reaction&quot;,
+          &quot;text&quot;: &quot;Adverse Reaction Events linked to exposure to substance&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Details about each adverse reaction event linked to exposure to the identified substance.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;string&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.id&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.id.value&quot;,
+                  &quot;text&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.extension&quot;,
+              &quot;text&quot;: &quot;Additional Content defined by implementations&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.modifierExtension&quot;,
+              &quot;text&quot;: &quot;Extensions that cannot be ignored&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;CodeableConcept&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.substance&quot;,
+              &quot;text&quot;: &quot;Specific substance or pharmaceutical product considered to be responsible for event&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Identification of the specific substance (or pharmaceutical product) considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'. Coding of the specific substance (or pharmaceutical product) with a terminology capable of triggering decision support should be used wherever possible.  The 'code' element allows for the use of a specific substance or pharmaceutical product, or a group or class of substances. In the case of an allergy or intolerance to a class of substances, (for example, \&quot;penicillins\&quot;), the 'reaction.substance' element could be used to code the specific substance that was identifed as having caused the reaction (for example, \&quot;amoxycillin\&quot;). Duplication of the value in the 'code' and 'reaction.substance' elements is acceptable when a specific substance has been recorded in 'code'.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.substance.coding&quot;,
+                  &quot;text&quot;: &quot;code:&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.substance.text&quot;,
+                  &quot;text&quot;: &quot;text:&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;code&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.certainty&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.certainty.value&quot;,
+                  &quot;text&quot;: &quot;certainty&quot;,
+                  &quot;type&quot;: &quot;choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;CodeableConcept&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.manifestation&quot;,
+              &quot;text&quot;: &quot;Clinical symptoms/signs associated with the Event&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: true,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Clinical symptoms and/or signs that are observed or associated with the adverse reaction event. Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.  Terminologies commonly used include, but are not limited to, SNOMED CT or ICD10.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.manifestation.coding&quot;,
+                  &quot;text&quot;: &quot;code:&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.manifestation.text&quot;,
+                  &quot;text&quot;: &quot;text:&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;string&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.description&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Text description about the reaction as a whole, including details of the manifestation if required. Use the description to provide any details of a particular event of the occurred reaction such as circumstances, reaction specifics, what happened before/after. Information, related to the event, but not describing a particular care should be captured in the comment field. For example: at the age of four, the patient was given penicillin for strep throat and subsequently developed severe hives.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.description.value&quot;,
+                  &quot;text&quot;: &quot;Description of the event as a whole&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;datetime&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.onset&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Record of the date and/or time of the onset of the Reaction.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.onset.value&quot;,
+                  &quot;text&quot;: &quot;Date(/time) when manifestations showed&quot;,
+                  &quot;type&quot;: &quot;dateTime&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;code&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.severity&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations. It is acknowledged that this assessment is very subjective. There may be some some specific practice domains where objective scales have been applied. Objective scales can be included in this model as extensions.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.severity.value&quot;,
+                  &quot;text&quot;: &quot;severity&quot;,
+                  &quot;type&quot;: &quot;choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;CodeableConcept&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.exposureRoute&quot;,
+              &quot;text&quot;: &quot;How the subject was exposed to the substance&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Identification of the route by which the subject was exposed to the substance. Coding of the route of exposure with a terminology should be used wherever possible.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.exposureRoute.coding&quot;,
+                  &quot;text&quot;: &quot;code:&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                },
+                {
+                  &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.exposureRoute.text&quot;,
+                  &quot;text&quot;: &quot;text:&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;Annotation&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;AllergyIntolerance.reaction.note&quot;,
+              &quot;text&quot;: &quot;Text about event not captured in other fields&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Additional text about the adverse reaction event not captured in other fields. Use this field to record information indirectly related to a particular event and not captured in the description. For example: Clinical records are no longer available, recorded based on information provided to the patient by her mother and her mother is deceased.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fallergyintolerance-questionnaire.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fallergyintolerance-questionnaire.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

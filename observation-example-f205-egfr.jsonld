@@ -1,0 +1,226 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/f205",
+  "Resource.id": {
+    "id.value": "f205"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f205</p><p><b>identifier</b>: 1304-03720-eGFR</p><p><b>status</b>: final</p><p><b>code</b>: Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD) <span>(Details : {LOINC code '33914-3' = 'Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)', given as 'Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>issued</b>: Apr 4, 2013 2:34:00 PM</p><p><b>performer</b>: <a>Luigi Maas</a></p><p><b>interpretation</b>: interpretation of results should be assigned based upon the level of kindey function <span>(Details )</span></p><p><b>comment</b>: GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)....</p><p><b>method</b>: MDRD <span>(Details : {SNOMED CT code '702668005' = '702668005', given as 'MDRD'})</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Glomerular filtration rate/1.73 sq M predicted among blacks [Volume Rate/?Area] in Serum or Plasma by Creatinine-based formula (MDRD) <span>(Details : {LOINC code '48643-1' = 'Glomerular filtration rate/1.73 sq M predicted among blacks by Creatinine-based formula (MDRD)', given as 'Glomerular filtration rate/1.73 sq M predicted among blacks [Volume Rate/?Area] in Serum or Plasma by Creatinine-based formula (MDRD)'})</span></p><p><b>value</b>: &gt;60 mL/min/1.73m2<span> (Details: UCUM code mL/min/{1.73_m2} = 'mL/min/{1.73_m2}')</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Glomerular filtration rate/1.73 sq M predicted among non-blacks [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD) <span>(Details : {LOINC code '48642-3' = 'Glomerular filtration rate/1.73 sq M predicted among non-blacks by Creatinine-based formula (MDRD)', given as 'Glomerular filtration rate/1.73 sq M predicted among non-blacks [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)'})</span></p><p><b>value</b>: 60 mL/min/1.73m2<span> (Details: UCUM code mL/min/{1.73_m2} = 'mL/min/{1.73_m2}')</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+    }
+  },
+  "Observation.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "https://intranet.aumc.nl/labvalues"
+      },
+      "Identifier.value": {
+        "string.value": "1304-03720-eGFR"
+      }
+    }
+  ],
+  "Observation.status": {
+    "code.value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "33914-3"
+        },
+        "Coding.display": {
+          "string.value": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#33914-3"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f201"
+    },
+    "Reference.display": {
+      "string.value": "Roel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Observation.issued": {
+    "instant.value": "2013-04-04T14:34:00+01:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/f202"
+      },
+      "Reference.display": {
+        "string.value": "Luigi Maas"
+      }
+    }
+  ],
+  "Observation.interpretation": {
+    "CodeableConcept.text": {
+      "string.value": "interpretation of results should be assigned based upon the level of kindey function"
+    }
+  },
+  "Observation.comment": {
+    "string.value": "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
+  },
+  "Observation.method": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/id"
+        },
+        "Coding.code": {
+          "code.value": "702668005"
+        },
+        "Coding.display": {
+          "string.value": "MDRD"
+        }
+      }
+    ]
+  },
+  "Observation.component": [
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "48643-1"
+            },
+            "Coding.display": {
+              "string.value": "Glomerular filtration rate/1.73 sq M predicted among blacks [Volume Rate/?Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#48643-1"
+      },
+      "Observation.component.valueQuantity": {
+        "Quantity.value": {
+          "decimal.value": 60
+        },
+        "Quantity.comparator": {
+          "code.value": ">"
+        },
+        "Quantity.unit": {
+          "string.value": "mL/min/1.73m2"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mL/min/{1.73_m2}"
+        }
+      },
+      "Observation.component.referenceRange": [
+        {
+          "Observation.referenceRange.low": {
+            "Quantity.value": {
+              "decimal.value": 60
+            },
+            "Quantity.unit": {
+              "string.value": "mL/min/1.73m2"
+            },
+            "Quantity.system": {
+              "uri.value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "code.value": "mL/min/{1.73_m2}"
+            }
+          },
+          "Observation.referenceRange.age": {
+            "Range.low": {
+              "Quantity.value": {
+                "decimal.value": 18
+              },
+              "Quantity.unit": {
+                "string.value": "yrs"
+              },
+              "Quantity.system": {
+                "uri.value": "http://unitsofmeasure.org"
+              },
+              "Quantity.code": {
+                "code.value": "a"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "48642-3"
+            },
+            "Coding.display": {
+              "string.value": "Glomerular filtration rate/1.73 sq M predicted among non-blacks [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#48642-3"
+      },
+      "Observation.component.valueQuantity": {
+        "Quantity.value": {
+          "decimal.value": 60
+        },
+        "Quantity.unit": {
+          "string.value": "mL/min/1.73m2"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mL/min/{1.73_m2}"
+        }
+      },
+      "Observation.component.referenceRange": [
+        {
+          "Observation.referenceRange.low": {
+            "Quantity.value": {
+              "decimal.value": 60
+            },
+            "Quantity.unit": {
+              "string.value": "mL/min/1.73m2"
+            },
+            "Quantity.system": {
+              "uri.value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "code.value": "mL/min/{1.73_m2}"
+            }
+          },
+          "Observation.referenceRange.age": {
+            "Range.low": {
+              "Quantity.value": {
+                "decimal.value": 18
+              },
+              "Quantity.unit": {
+                "string.value": "yrs"
+              },
+              "Quantity.system": {
+                "uri.value": "http://unitsofmeasure.org"
+              },
+              "Quantity.code": {
+                "code.value": "a"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

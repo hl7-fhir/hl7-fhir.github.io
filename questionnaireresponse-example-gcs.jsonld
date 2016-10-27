@@ -1,0 +1,137 @@
+{
+  "@context": "http://build.fhir.org/QuestionnaireResponse.jsonld",
+  "@context": "http://hl7.org/fhir/QuestionnaireResponse/gcs",
+  "Resource.id": {
+    "id.value": "gcs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: gcs</p><p><b>questionnaire</b>: <a>Questionnaire/gcs</a></p><p><b>status</b>: completed</p><p><b>subject</b>: <a>Peter James Chalmers</a></p><p><b>authored</b>: Dec 11, 2014 4:44:16 AM</p><p><b>source</b>: <a>Practitioner/f007</a></p><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.1</p><h3>Answers</h3><table><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Confused (Details: LOINC code LA6560-2 = 'Confused', stated as 'Confused')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.2</p><h3>Answers</h3><table><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Localizing pain (Details: LOINC code LA6566-9 = 'Localizing pain', stated as 'Localizing pain')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.3</p><h3>Answers</h3><table><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Eyes open spontaneously (Details: LOINC code LA6556-0 = 'Eyes open spontaneously', stated as 'Eyes open spontaneously')</td></tr></table></blockquote></div>"
+    }
+  },
+  "QuestionnaireResponse.questionnaire": {
+    "Reference.reference": {
+      "string.value": "Questionnaire/gcs"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Questionnaire/gcs"
+  },
+  "QuestionnaireResponse.status": {
+    "code.value": "completed"
+  },
+  "QuestionnaireResponse.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter James Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "QuestionnaireResponse.authored": {
+    "dateTime.value": "2014-12-11T04:44:16Z"
+  },
+  "QuestionnaireResponse.source": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "1.1"
+      },
+      "QuestionnaireResponse.item.answer": [
+        {
+          "QuestionnaireResponse.item.answer.valueCoding": {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 4
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "LA6560-2"
+            },
+            "Coding.display": {
+              "string.value": "Confused"
+            },
+            "Resource.concept": "http://loinc.org/owl#LA6560-2"
+          }
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "1.2"
+      },
+      "QuestionnaireResponse.item.answer": [
+        {
+          "QuestionnaireResponse.item.answer.valueCoding": {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 5
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "LA6566-9"
+            },
+            "Coding.display": {
+              "string.value": "Localizing pain"
+            },
+            "Resource.concept": "http://loinc.org/owl#LA6566-9"
+          }
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "string.value": "1.3"
+      },
+      "QuestionnaireResponse.item.answer": [
+        {
+          "QuestionnaireResponse.item.answer.valueCoding": {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 4
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "LA6556-0"
+            },
+            "Coding.display": {
+              "string.value": "Eyes open spontaneously"
+            },
+            "Resource.concept": "http://loinc.org/owl#LA6556-0"
+          }
+        }
+      ]
+    }
+  ]
+}

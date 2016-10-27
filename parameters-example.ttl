@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "start" ];
+     fhir:Parameters.parameter.valueDate [ fhir:value "2010-01-01"^^xsd:date ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "end" ];
+     fhir:Parameters.parameter.resource [
+       a fhir:Binary;
+       fhir:index 0;
+       fhir:Binary.contentType [ fhir:value "text/plain" ];
+       fhir:Binary.content [ fhir:value "VGhpcyBpcyBhIHRlc3QgZXhhbXBsZQ=="^^xsd:base64Binary ]
+     ]
+  ]] .
+
+# -------------------------------------------------------------------------------------
+

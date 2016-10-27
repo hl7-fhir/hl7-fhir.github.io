@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "MessageHeader-process-message"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"];
+  fhir:OperationDefinition.name [ fhir:value "Process Message"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "This operation accepts a message, processes it according to the definition of the event in the message header, and returns a one or more response messages.  This  operation is described in detail [on the messaging page](messaging.html#process)"];
+  fhir:OperationDefinition.code [ fhir:value "process-message"];
+  fhir:OperationDefinition.comment [ fhir:value "This operation does not use the parameters resource; the parameters \"async\" and \"response-url\" always go in the URL, if they are used, and the message parameter is always the body of the HTTP message"];
+  fhir:OperationDefinition.resource [
+     fhir:value "MessageHeader";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "true"];
+  fhir:OperationDefinition.type [ fhir:value "false"];
+  fhir:OperationDefinition.instance [ fhir:value "false"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "content" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The message to process (or, if using asynchronous messaging, it may be a response message to accept)" ];
+     fhir:OperationDefinition.type [ fhir:value "Bundle" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "async" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "If 'true' the message is processed using the asynchronous messaging pattern" ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "response-url" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A URL to submit response messages to, if asynchronous messaging is being used, and if the MessageHeader.source.endpoint is not the appropriate place to submit responses" ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A response message, if synchronous messaging is being used (mandatory in this case). For asynchronous messaging, there is no return value" ];
+     fhir:OperationDefinition.type [ fhir:value "Bundle" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

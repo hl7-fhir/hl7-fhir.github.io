@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Medication/med0305> a fhir:Medication;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "med0305"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0305</p><p><b>contained</b>: </p><p><b>code</b>: Timoptic 5mg/ml solution <span>(Details : {http://hl7.org/fhir/sid/ndc code '2501-813-16' = '2501-813-16', given as 'Timoptic 5mg/ml solution'})</span></p><p><b>isBrand</b>: true</p><p><b>manufacturer</b>: id: org5; name: Aton Pharma Inc</p><blockquote><p><b>product</b></p><p><b>form</b>: Opthalmic Solution (qualifier value) <span>(Details : {SNOMED CT code '75359005' = 'Timolol maleate', given as 'Opthalmic Solution (qualifier value)'})</span></p><h3>Ingredients</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Timolol Maleate (substance) <span>(Details : {SNOMED CT code '75359005' = 'Timolol maleate', given as 'Timolol Maleate (substance)'})</span></td><td>5 mg<span> (Details: UCUM code mg = 'mg')</span>/1 mL<span> (Details: UCUM code mL = 'mL')</span></td></tr></table><h3>Batches</h3><table><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>May 22, 2017</td></tr></table></blockquote><blockquote><p><b>package</b></p><p><b>container</b>: Bottle - unit of product usage (qualifier value) <span>(Details : {SNOMED CT code '419672006' = 'Bottle - unit of product usage (qualifier value)', given as 'Bottle - unit of product usage (qualifier value)'})</span></p><h3>Contents</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Timolol maleate 0.5% opthalmic solution (product) <span>(Details : {SNOMED CT code '376877002' = 'Timolol maleate 0.5% ophthalmic solution (product)', given as 'Timolol maleate 0.5% opthalmic solution (product)'})</span></td><td>10 mL<span> (Details: UCUM code mL = 'mL')</span></td></tr></table></blockquote></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Organization;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "org5" ];
+     fhir:Organization.name [ fhir:value "Aton Pharma Inc" ]
+  ];
+  fhir:Medication.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/ndc" ];
+       fhir:Coding.code [ fhir:value "2501-813-16" ];
+       fhir:Coding.display [ fhir:value "Timoptic 5mg/ml solution" ]
+     ]
+  ];
+  fhir:Medication.isBrand [ fhir:value "true"^^xsd:boolean];
+  fhir:Medication.manufacturer [
+     fhir:Reference.reference [ fhir:value "#org5" ]
+  ];
+  fhir:Medication.product [
+     fhir:Medication.product.form [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:75359005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "75359005" ];
+         fhir:Coding.display [ fhir:value "Opthalmic Solution (qualifier value)" ]
+       ]
+     ];
+     fhir:Medication.product.ingredient [
+       fhir:index 0;
+       fhir:Medication.product.ingredient.itemCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:75359005;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "75359005" ];
+           fhir:Coding.display [ fhir:value "Timolol Maleate (substance)" ]
+         ]
+       ];
+       fhir:Medication.product.ingredient.amount [
+         fhir:Ratio.numerator [
+           fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "mg" ]
+         ];
+         fhir:Ratio.denominator [
+           fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "mL" ]
+         ]
+       ]
+     ];
+     fhir:Medication.product.batch [
+       fhir:index 0;
+       fhir:Medication.product.batch.lotNumber [ fhir:value "9494788" ];
+       fhir:Medication.product.batch.expirationDate [ fhir:value "2017-05-22"^^xsd:date ]
+     ]
+  ];
+  fhir:Medication.package [
+     fhir:Medication.package.container [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:419672006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "419672006" ];
+         fhir:Coding.display [ fhir:value "Bottle - unit of product usage (qualifier value)" ]
+       ]
+     ];
+     fhir:Medication.package.content [
+       fhir:index 0;
+       fhir:Medication.package.content.itemCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:376877002;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "376877002" ];
+           fhir:Coding.display [ fhir:value "Timolol maleate 0.5% opthalmic solution (product)" ]
+         ]
+       ];
+       fhir:Medication.package.content.amount [
+         fhir:Quantity.value [ fhir:value "10"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "mL" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

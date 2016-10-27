@@ -1,0 +1,421 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>DocumentReference - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/documentreference-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="documentreference.html">DocumentReference</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- documentreference.html / res-Detailed Descriptions / DocumentReference -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="documentreference.html">Content</a></li><li><a href="documentreference-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="documentreference-mappings.html">Mappings</a></li><li><a href="documentreference-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">2.37.7<a name="2.37.7"> </a></span> Resource DocumentReference - Detailed Descriptions <a href="documentreference-definitions.html#2.37.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the DocumentReference resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="DocumentReference"> </a><b>DocumentReference</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a document .</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Usually, this is used for documents other than those defined by FHIR.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.masterIdentifier"> </a><b>DocumentReference.masterIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Document identifier as assigned by the source of the document. This identifier is specific to this version of the document. This unique identifier may be used elsewhere to identify this version of the document.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>The structure and format of this Id shall be consistent with the specification corresponding to the formatCode attribute. (e.g. for a DICOM standard document a 64 character numeric UID, for an HL7 CDA format a serialization of the CDA Document Id extension and root in the form &quot;oid^extension&quot;, where OID is a 64 digits max, and the Id is a 16 UTF-8 char max. If the OID is coded without the extension then the '^' character shall not be included.).</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>CDA Document Id extension and root.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.identifier"> </a><b>DocumentReference.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Other identifiers associated with the document, including version independent identifiers.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.subject"> </a><b>DocumentReference.subject</b></td></tr>
+  <tr><td>Definition</td><td><p>Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a> | <a href="practitioner.html">Practitioner</a> | <a href="group.html">Group</a> | <a href="device.html">Device</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.type"> </a><b>DocumentReference.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Document Type Value Set: <a href="valueset-c80-doc-typecodes.html">Precise type of clinical document.</a> (<a href="terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Key metadata element describing the document, used in searching/filtering.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.class"> </a><b>DocumentReference.class</b></td></tr>
+  <tr><td>Definition</td><td><p>A categorization for the type of document referenced - helps for indexing and searching. This may be implied by or derived from the code specified in the DocumentReference.type.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Document Class Value Set: <a href="valueset-c80-doc-classcodes.html">High-level kind of a clinical document at a macro level.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Helps humans to assess whether the document is of interest when viewing a list of documents.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>kind</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This is a metadata field from <a href="http://wiki.ihe.net/index.php?title=Mobile_access_to_Health_Documents_(MHD)">XDS/MHD <img src="external.png" style="text-align: baseline"/></a>.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.author"> </a><b>DocumentReference.author</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies who is responsible for adding the information to the document.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a> | <a href="device.html">Device</a> | <a href="patient.html">Patient</a> | <a href="relatedperson.html">RelatedPerson</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Not necessarily who did the actual data entry (i.e. typist) it in or who was the source (informant).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.custodian"> </a><b>DocumentReference.custodian</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the organization or group who is responsible for ongoing maintenance of and access to the document.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="organization.html">Organization</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Identifies the logical organization to go to find the current version, where to report issues, etc. This is different from the physical location of the document, which is the technical location of the document, which host may be delegated to the management of some other organization.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.authenticator"> </a><b>DocumentReference.authenticator</b></td></tr>
+  <tr><td>Definition</td><td><p>Which person or organization authenticates that this document is valid.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Represents a participant within the author institution who has legally authenticated or attested the document. Legal authentication implies that a document has been signed manually or electronically by the legal Authenticator.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.created"> </a><b>DocumentReference.created</b></td></tr>
+  <tr><td>Definition</td><td><p>When the document was created.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Creation time is used for tracking, organizing versions and searching. This is the creation time of the document, not the source material on which it is based.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.indexed"> </a><b>DocumentReference.indexed</b></td></tr>
+  <tr><td>Definition</td><td><p>When the document reference was created.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#instant">instant</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Referencing/indexing time is used for tracking, organizing versions and searching.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.status"> </a><b>DocumentReference.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of this document reference.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>DocumentReferenceStatus: <a href="valueset-document-reference-status.html">The status of the document reference.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This is the status of the DocumentReference object, which might be independent from the docStatus element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.docStatus"> </a><b>DocumentReference.docStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the underlying document.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>CompositionStatus: <a href="valueset-composition-status.html">Status of the underlying document.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The document that is pointed to might be in various lifecycle states.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.relatesTo"> </a><b>DocumentReference.relatesTo</b></td></tr>
+  <tr><td>Definition</td><td><p>Relationships that this document has with other document references that already exist.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.relatesTo.code"> </a><b>DocumentReference.relatesTo.code</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of relationship that this document has with anther document.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>DocumentRelationshipType: <a href="valueset-document-relationship-type.html">The type of relationship between documents.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If this document appends another document, then the document cannot be fully understood without also accessing the referenced document.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.relatesTo.target"> </a><b>DocumentReference.relatesTo.target</b></td></tr>
+  <tr><td>Definition</td><td><p>The target document of this relationship.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="documentreference.html">DocumentReference</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.description"> </a><b>DocumentReference.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Human-readable description of the source document. This is sometimes known as the &quot;title&quot;.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Helps humans to assess whether the document is of interest.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a &quot;consultation&quot; or &quot;progress note&quot;).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.securityLabel"> </a><b>DocumentReference.securityLabel</b></td></tr>
+  <tr><td>Definition</td><td><p>A set of Security-Tag codes specifying the level of privacy/security of the Document. Note that DocumentReference.meta.security contains the security labels of the &quot;reference&quot; to the document, while DocumentReference.securityLabel contains a snapshot of the security labels on the document the reference refers to.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>All Security Labels: <a href="valueset-security-labels.html">Security Labels from the Healthcare Privacy and Security Classification System.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Use of the Health Care Privacy/Security Classification (HCS) system of security-tag use is recommended.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The confidentiality codes can carry multiple vocabulary items. HL7 has developed an understanding of security and privacy tags that might be desirable in a Document Sharing environment, called HL7 Healthcare Privacy and Security Classification System (HCS). The following specification is recommended but not mandated, as the vocabulary bindings are an administrative domain responsibility. The use of this method is up to the policy domain such as the XDS Affinity Domain or other Trust Domain where all parties including sender and recipients are trusted to appropriately tag and enforce.   In the HL7 Healthcare Privacy and Security Classification (HCS) there are code systems specific to Confidentiality, Sensitivity, Integrity, and Handling Caveats. Some values would come from a local vocabulary as they are related to workflow roles and special projects.</p>
+</td></tr>
+  <tr><td>To Do</td><td>This was embedded in the comments, but made no sense, so I moved it here:
+
+[1..1] Confidentiality Security Classification Label Field [0..*] Sensitivity Security Category Label Field [0..*] Compartment Security Category Label Field [0..*] Integrity Security Category Label Field [0..*] Handling Caveat Security Category Field In the HL7 Healthcare Privacy and Security Classification System.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.content"> </a><b>DocumentReference.content</b></td></tr>
+  <tr><td>Definition</td><td><p>The document and format referenced. There may be multiple content element repetitions, each with a different format.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.content.attachment"> </a><b>DocumentReference.content.attachment</b></td></tr>
+  <tr><td>Definition</td><td><p>The document or url of the document along with critical metadata to prove content has integrity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Attachment">Attachment</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.content.format"> </a><b>DocumentReference.content.format</b></td></tr>
+  <tr><td>Definition</td><td><p>An identifier of the document encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>DocumentReference Format Code Set: <a href="valueset-formatcodes.html">Document Format Codes.</a> (<a href="terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Note that while IHE mostly issues URNs for format types, not all documents can be identified by a URI.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context"> </a><b>DocumentReference.context</b></td></tr>
+  <tr><td>Definition</td><td><p>The clinical context in which the document was prepared.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>These values are primarily added to help with searching for interesting/relevant documents.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.encounter"> </a><b>DocumentReference.context.encounter</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the clinical encounter or type of care that the document content is associated with.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="encounter.html">Encounter</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.event"> </a><b>DocumentReference.context.event</b></td></tr>
+  <tr><td>Definition</td><td><p>This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a &quot;History and Physical Report&quot; in which the procedure being documented is necessarily a &quot;History and Physical&quot; act.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>v3 Code System ActCode: <a href="v3/ActCode/vs.html">This list of codes represents the main clinical acts being documented.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>An event can further specialize the act inherent in the type, such as  where it is simply &quot;Procedure Report&quot; and the procedure was a &quot;colonoscopy&quot;. If one or more event codes are included, they shall not conflict with the values inherent in the class or type elements as such a conflict would create an ambiguous situation.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.period"> </a><b>DocumentReference.context.period</b></td></tr>
+  <tr><td>Definition</td><td><p>The time period over which the service that is described by the document was provided.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Period">Period</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.facilityType"> </a><b>DocumentReference.context.facilityType</b></td></tr>
+  <tr><td>Definition</td><td><p>The kind of facility where the patient was seen.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Facility Type Code Value Set: <a href="valueset-c80-facilitycodes.html">XDS Facility Type.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.practiceSetting"> </a><b>DocumentReference.context.practiceSetting</b></td></tr>
+  <tr><td>Definition</td><td><p>This property may convey specifics about the practice setting where the content was created, often reflecting the clinical specialty.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Practice Setting Code Value Set: <a href="valueset-c80-practice-codes.html">Additional details about where the content was created (e.g. clinical specialty).</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>This is an important piece of metadata that providers often rely upon to quickly sort and/or filter out to find specific content.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The value set for this content has an example binding because it is a value set decided by community policy. Other examples exist for consideration: * HITSP created the table HITSP/C80 Table 2-148 Clinical Specialty Value Set (a value set based upon SNOMED CT which is referenced by Direct (XDR and XDM for Direct Messaging Specification, Version 1), as well as Nationwide Health Information Network (NHIN).  Query for Documents, Web Service Interface Specification, V 3.0, 07/27/2011 * ELGA (Austria) (ELGA CDA Implementie-rungsleitfäden Registrierung von CDA Dokumenten für ELGA mit IHE Cross-Enterprise Document Sharing: XDS Metadaten (XDSDocumentEntry), [1.2.40.0.34.7.6.3] * XDS Connect-a-thon practiceSettingCode.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.sourcePatientInfo"> </a><b>DocumentReference.context.sourcePatientInfo</b></td></tr>
+  <tr><td>Definition</td><td><p>The Patient Information as known when the document was published. May be a reference to a version specific, or contained.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.related"> </a><b>DocumentReference.context.related</b></td></tr>
+  <tr><td>Definition</td><td><p>Related identifiers or resources associated with the DocumentReference.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May be identifiers or resources that caused the DocumentReference or referenced Document to be created.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.related.identifier"> </a><b>DocumentReference.context.related.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Related identifier to this DocumentReference. If both id and ref are present they shall refer to the same thing.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Order numbers, accession numbers, XDW workflow numbers.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="DocumentReference.context.related.ref"> </a><b>DocumentReference.context.related.ref</b></td></tr>
+  <tr><td>Definition</td><td><p>Related Resource to this DocumentReference. If both id and ref are present they shall refer to the same thing.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Order, DiagnosticRequest,  Procedure, EligibilityRequest, etc.</p>
+</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdocumentreference-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdocumentreference-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,296 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Encounter-example-f002-lung.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/encounter-example-f002-lung.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="encounter.html">Encounter</a></li>        <li><b>Example Instance</b></li>        <!-- encounter-example-f002-lung.ttl.html / resource-instance:Encounter / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Encounter-example-f002-lung.ttl</h1>
+
+<p>
+<a href="encounter-example-f002-lung.ttl">Raw Turtle</a>, 
+<a href="encounter-example-f002-lung.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Real-world encounter example</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Encounter/f002&gt; a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;f002&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: f002&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: v3251 (OFFICIAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Patient-initiated encounter &lt;span&gt;(Details : {SNOMED CT code '270427003' = 'Patient-initiated encounter (procedure)', given as 'Patient-initiated encounter'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;priority&lt;/b&gt;: Urgent &lt;span&gt;(Details : {SNOMED CT code '103391001' = 'Urgency (qualifier value)', given as 'Urgent'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a&gt;P. van de Heuvel&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Individual&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;a&gt;M.I.M Versteegh&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;length&lt;/b&gt;: 140 min&lt;span&gt; (Details: UCUM code min = 'min')&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reason&lt;/b&gt;: Partial lobectomy of lung &lt;span&gt;(Details : {SNOMED CT code '34068001' = 'Heart valve replacement (procedure)', given as 'Partial lobectomy of lung'})&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Hospitalizations&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;PreAdmissionIdentifier&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;AdmitSource&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;DischargeDisposition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;98682 (OFFICIAL)&lt;/td&gt;&lt;td&gt;Referral by radiologist &lt;span&gt;(Details : {SNOMED CT code '305997006' = 'Referral by radiologist (procedure)', given as 'Referral by radiologist'})&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Discharge to home &lt;span&gt;(Details : {SNOMED CT code '306689006' = 'Discharge to home (procedure)', given as 'Discharge to home'})&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;serviceProvider&lt;/b&gt;: &lt;a&gt;BMC&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  fhir:Encounter.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value &quot;official&quot; ];
+     fhir:Identifier.system [ fhir:value &quot;http://www.bmc.nl/zorgportal/identifiers/encounters&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;v3251&quot; ]
+  ];
+  fhir:Encounter.status [ fhir:value &quot;finished&quot;];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v3/ActCode&quot; ];
+     fhir:Coding.code [ fhir:value &quot;AMB&quot; ];
+     fhir:Coding.display [ fhir:value &quot;ambulatory&quot; ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:270427003;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;270427003&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Patient-initiated encounter&quot; ]
+     ]
+  ];
+  fhir:Encounter.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:103391001;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;103391001&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Urgent&quot; ]
+     ]
+  ];
+  fhir:Encounter.patient [
+     fhir:link &lt;http://hl7.org/fhir/Patient/f001&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Patient/f001&quot; ];
+     fhir:Reference.display [ fhir:value &quot;P. van de Heuvel&quot; ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.individual [
+       fhir:link &lt;http://hl7.org/fhir/Practitioner/f003&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Practitioner/f003&quot; ];
+       fhir:Reference.display [ fhir:value &quot;M.I.M Versteegh&quot; ]
+     ]
+  ];
+  fhir:Encounter.length [
+     fhir:Quantity.value [ fhir:value &quot;140&quot;^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value &quot;min&quot; ];
+     fhir:Quantity.system [ fhir:value &quot;http://unitsofmeasure.org&quot; ];
+     fhir:Quantity.code [ fhir:value &quot;min&quot; ]
+  ];
+  fhir:Encounter.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:34068001;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;34068001&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Partial lobectomy of lung&quot; ]
+     ]
+  ];
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.preAdmissionIdentifier [
+       fhir:Identifier.use [ fhir:value &quot;official&quot; ];
+       fhir:Identifier.system [ fhir:value &quot;http://www.bmc.nl/zorgportal/identifiers/pre-admissions&quot; ];
+       fhir:Identifier.value [ fhir:value &quot;98682&quot; ]
+     ];
+     fhir:Encounter.hospitalization.admitSource [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:305997006;
+         fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+         fhir:Coding.code [ fhir:value &quot;305997006&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Referral by radiologist&quot; ]
+       ]
+     ];
+     fhir:Encounter.hospitalization.dischargeDisposition [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:306689006;
+         fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+         fhir:Coding.code [ fhir:value &quot;306689006&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Discharge to home&quot; ]
+       ]
+     ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link &lt;http://hl7.org/fhir/Organization/f001&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/f001&quot; ];
+     fhir:Reference.display [ fhir:value &quot;BMC&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/f001&gt; a fhir:Patient .
+
+&lt;http://hl7.org/fhir/Practitioner/f003&gt; a fhir:Practitioner .
+
+&lt;http://hl7.org/fhir/Organization/f001&gt; a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fencounter-example-f002-lung.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fencounter-example-f002-lung.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

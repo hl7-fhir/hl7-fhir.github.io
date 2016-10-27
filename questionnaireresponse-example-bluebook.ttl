@@ -1,0 +1,138 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/QuestionnaireResponse/bb> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bb"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n        Cathy Jones, female. Birth weight 3.25 kg at 44.3 cm. \n        Injection of Vitamin K given on 1972-11-30 (first dose) and 1972-12-11 (second dose)\n        Note: Was able to speak Chinese at birth.\n      </pre>\n    </div>"
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:link <http://hl7.org/fhir/Patient/1>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/Patient/1" ]
+  ];
+  fhir:QuestionnaireResponse.author [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/Practitioner/example" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2013-02-19T14:15:00+10:00"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "birthDetails" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Birth details - To be completed by health professional" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "nameOfChild" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Name of child" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Cathy Jones" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "sex" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Sex" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueCoding [
+             fhir:Coding.code [ fhir:value "f" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "neonatalInformation" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Neonatal Information" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "birthWeight" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Birth weight (kg)" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueDecimal [ fhir:value "3.25"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "birthLength" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Birth length (cm)" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueDecimal [ fhir:value "44.3"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "vitaminKgiven" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Vitamin K given" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueCoding [
+             fhir:Coding.code [ fhir:value "INJECTION" ]
+           ];
+           fhir:QuestionnaireResponse.item.answer.item [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.linkId [ fhir:value "vitaminKgivenDoses" ];
+             fhir:QuestionnaireResponse.item.item [
+               fhir:index 0;
+               fhir:QuestionnaireResponse.item.linkId [ fhir:value "vitaminKDose1" ];
+               fhir:QuestionnaireResponse.item.text [ fhir:value "1st dose" ];
+               fhir:QuestionnaireResponse.item.answer [
+                 fhir:index 0;
+                 fhir:QuestionnaireResponse.item.answer.valueDate [ fhir:value "1972-11-30"^^xsd:date ]
+               ]
+             ], [
+               fhir:index 1;
+               fhir:QuestionnaireResponse.item.linkId [ fhir:value "vitaminKDose2" ];
+               fhir:QuestionnaireResponse.item.text [ fhir:value "2nd dose" ];
+               fhir:QuestionnaireResponse.item.answer [
+                 fhir:index 0;
+                 fhir:QuestionnaireResponse.item.answer.valueDate [ fhir:value "1972-12-11"^^xsd:date ]
+               ]
+             ]
+           ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "hepBgiven" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Hep B given y / n" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueBoolean [ fhir:value "true"^^xsd:boolean ];
+           fhir:QuestionnaireResponse.item.answer.item [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.linkId [ fhir:value "hepBgivenDate" ];
+             fhir:QuestionnaireResponse.item.item [
+               fhir:index 0;
+               fhir:QuestionnaireResponse.item.text [ fhir:value "Date given" ];
+               fhir:QuestionnaireResponse.item.answer [
+                 fhir:index 0;
+                 fhir:QuestionnaireResponse.item.answer.valueDate [ fhir:value "1972-12-04"^^xsd:date ]
+               ]
+             ]
+           ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "abnormalitiesAtBirth" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Abnormalities noted at birth" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Already able to speak Chinese" ]
+         ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/1> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

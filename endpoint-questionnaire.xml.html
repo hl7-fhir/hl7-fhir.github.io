@@ -1,0 +1,846 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Endpoint-questionnaire.xml - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/endpoint-questionnaire.xml.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="endpoint.html">Endpoint</a></li>        <li><b>Generated Questionnaire</b></li>        <!-- endpoint-questionnaire.xml.html / resource-questionnaire:Endpoint / Questionnaire-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Endpoint-questionnaire.xml</h1>
+
+<p>
+<a href="endpoint-questionnaire.xml">Raw XML</a> (<a href="endpoint-questionnaire.canonical.xml">canonical form</a>)
+</p>
+
+
+<div class="example">
+<p>Generated Questionnaire for Endpoint</p>
+<pre class="json">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;Questionnaire xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;qs1&quot;/&gt;
+  &lt;identifier&gt;
+    &lt;system value=&quot;urn:ietf:rfc:3986&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;status value=&quot;draft&quot;/&gt;
+  &lt;date value=&quot;2016-10-27T16:23:35+00:00&quot;/&gt;
+  &lt;publisher value=&quot;Health Level Seven International (Patient Administration)&quot;/&gt;
+  &lt;item&gt;
+    &lt;linkId value=&quot;Endpoint&quot;/&gt;
+    &lt;text value=&quot;The technical details of an endpoint that can be used for electronic services&quot;/&gt;
+    &lt;type value=&quot;group&quot;/&gt;
+    &lt;required value=&quot;false&quot;/&gt;
+    &lt;repeats value=&quot;true&quot;/&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+        &lt;valueCodeableConcept&gt;
+          &lt;coding&gt;
+            &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+            &lt;code value=&quot;flyover&quot;/&gt;
+            &lt;display value=&quot;Fly-over&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/valueCodeableConcept&gt;
+      &lt;/extension&gt;
+      &lt;text value=&quot;The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.&quot;/&gt;
+      &lt;type value=&quot;display&quot;/&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;string&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.id&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.id.value&quot;/&gt;
+        &lt;text value=&quot;Logical id of this artifact&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.meta&quot;/&gt;
+      &lt;text value=&quot;Metadata about the resource&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;uri&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.implicitRules&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.implicitRules.value&quot;/&gt;
+        &lt;text value=&quot;A set of rules under which this content was created&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;code&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.language&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.language.value&quot;/&gt;
+        &lt;text value=&quot;language&quot;/&gt;
+        &lt;type value=&quot;choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.text&quot;/&gt;
+      &lt;text value=&quot;Text summary of the resource, for human interpretation&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &amp;quot;clinically safe&amp;quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &amp;quot;text blob&amp;quot; or where text is additionally entered raw or narrated and encoded in formation is added later.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;linkId value=&quot;Endpoint.contained&quot;/&gt;
+      &lt;text value=&quot;Contained, inline Resources&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;linkId value=&quot;Endpoint.extension&quot;/&gt;
+      &lt;text value=&quot;Additional Content defined by implementations&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;linkId value=&quot;Endpoint.modifierExtension&quot;/&gt;
+      &lt;text value=&quot;Extensions that cannot be ignored&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;Identifier&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.identifier&quot;/&gt;
+      &lt;text value=&quot;Identifies this endpoint across multiple systems&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;Identifier for the organization that is used to identify the endpoint across multiple disparate systems.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.identifier.label&quot;/&gt;
+        &lt;text value=&quot;label:&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.identifier.system&quot;/&gt;
+        &lt;text value=&quot;system:&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.identifier.value&quot;/&gt;
+        &lt;text value=&quot;value:&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;code&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.status&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;true&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;active | suspended | error | off | test.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.status.value&quot;/&gt;
+        &lt;text value=&quot;status&quot;/&gt;
+        &lt;type value=&quot;choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;string&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.name&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;A friendly name that this endpoint can be referred to with.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.name.value&quot;/&gt;
+        &lt;text value=&quot;A name that this endpoint can be identified by&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;Reference&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.managingOrganization&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The organization that manages this endpoint (even if technically another organisation is hosting this in the cloud, it is the organisation associated with the data). This property is not typically used when searching for Endpoint resources for usage. The typical usage is via the reference from an aplicable Organization/Location/Practitioner resource, which is where the context is provided. Multiple Locations may reference a single endpoint, and don&amp;#39;t have to be within the same organization resource, but most likely within the same organizational heirarchy.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;&gt;
+          &lt;valueCode value=&quot;Organization&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;&gt;
+          &lt;valueString value=&quot;subject=$subj&amp;amp;patient=$subj&amp;amp;encounter=$encounter&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;linkId value=&quot;Endpoint.managingOrganization.value&quot;/&gt;
+        &lt;text value=&quot;Organization that manages this endpoint (may not be the organization that exposes the endpoint)&quot;/&gt;
+        &lt;type value=&quot;reference&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;ContactPoint&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.contact&quot;/&gt;
+      &lt;text value=&quot;Contact details for source (e.g. troubleshooting)&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.contact.system&quot;/&gt;
+        &lt;text value=&quot;type:&quot;/&gt;
+        &lt;type value=&quot;choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.contact.value&quot;/&gt;
+        &lt;text value=&quot;value:&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.contact.use&quot;/&gt;
+        &lt;text value=&quot;use:&quot;/&gt;
+        &lt;type value=&quot;choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;Period&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.period&quot;/&gt;
+      &lt;text value=&quot;Interval the endpoint is expected to be operational&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The interval during which the endpoint is expected to be operational.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.period.low&quot;/&gt;
+        &lt;text value=&quot;start:&quot;/&gt;
+        &lt;type value=&quot;dateTime&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.period.end&quot;/&gt;
+        &lt;text value=&quot;end:&quot;/&gt;
+        &lt;type value=&quot;dateTime&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;Coding&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.connectionType&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;true&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook). For additional connectivity details for the protocol, extensions will be used at this point, as in the XDS example.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.connectionType.value&quot;/&gt;
+        &lt;text value=&quot;Protocol/Profile/Standard to be used with this endpoint connection&quot;/&gt;
+        &lt;type value=&quot;open-choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;CodeableConcept&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.payloadType&quot;/&gt;
+      &lt;text value=&quot;The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;true&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The payload type describes the acceptable content that can be communicated on the endpoint. The payloadFormat describes the wire format of the data, where the payloadType indicates the specific document/schema that is being transferred. E.g. DischargeSummary or CarePlan.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.payloadType.coding&quot;/&gt;
+        &lt;text value=&quot;code:&quot;/&gt;
+        &lt;type value=&quot;open-choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.payloadType.text&quot;/&gt;
+        &lt;text value=&quot;text:&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;code&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.payloadMimeType&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType). Sending the payload has obvious security consequences. The server is responsible for ensuring that the content is appropriately secured.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.payloadMimeType.value&quot;/&gt;
+        &lt;text value=&quot;payload mime type&quot;/&gt;
+        &lt;type value=&quot;choice&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;uri&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.address&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;true&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The uri that describes the actual end-point to send messages to. For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since their may be more than one, clients should avoid using relative URIs).&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.address.value&quot;/&gt;
+        &lt;text value=&quot;The technical address for conneccting to this endpoint&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;string&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.header&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;Additional headers / information to send as part of the notification. Exactly what these mean depend on the channel type. The can convey additional information to the recipient and/or meet security requirements.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.header.value&quot;/&gt;
+        &lt;text value=&quot;Usage depends on the channel type&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;&gt;
+        &lt;valueInteger value=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;&gt;
+        &lt;valueString value=&quot;string&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;linkId value=&quot;Endpoint.publicKey&quot;/&gt;
+      &lt;type value=&quot;group&quot;/&gt;
+      &lt;required value=&quot;false&quot;/&gt;
+      &lt;repeats value=&quot;true&quot;/&gt;
+      &lt;item&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;&gt;
+          &lt;valueCodeableConcept&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/questionnaire-item-control&quot;/&gt;
+              &lt;code value=&quot;flyover&quot;/&gt;
+              &lt;display value=&quot;Fly-over&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/valueCodeableConcept&gt;
+        &lt;/extension&gt;
+        &lt;text value=&quot;The public part of the &amp;#39;keys&amp;#39; allocated to an Organization by an accredited body to support secure exchange of data over the internet. To be provided by the Organization, where available.&quot;/&gt;
+        &lt;type value=&quot;display&quot;/&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+        &lt;linkId value=&quot;Endpoint.publicKey.value&quot;/&gt;
+        &lt;text value=&quot;PKI Public keys to support secure communications&quot;/&gt;
+        &lt;type value=&quot;string&quot;/&gt;
+        &lt;required value=&quot;false&quot;/&gt;
+        &lt;repeats value=&quot;false&quot;/&gt;
+      &lt;/item&gt;
+    &lt;/item&gt;
+  &lt;/item&gt;
+&lt;/Questionnaire&gt;
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fendpoint-questionnaire.xml.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fendpoint-questionnaire.xml.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

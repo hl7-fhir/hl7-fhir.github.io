@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationAdministration/medadmin0303> a fhir:MedicationAdministration;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medadmin0303"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0303</p><p><b>contained</b>: </p><p><b>status</b>: entered-in-error</p><p><b>medication</b>: id: med0303; Zosyn (piperacillin/tazobactam) 4.5gm injection <span>(Details : {http://hl7.org/fhir/sid/ndc code '0206-8862-02' = '0206-8862-02', given as 'Zosyn (piperacillin/tazobactam) 4.5gm injection'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>effectiveTime</b>: Jan 15, 2015 4:30:00 AM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0319</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>4.5 grams in D5W 250 ml. IV every 6 hours. Infuse over 30 min at 8L/min </td><td>Intravenous route (qualifier value) <span>(Details : {SNOMED CT code '47625008' = 'Intravenous route (qualifier value)', given as 'Intravenous route (qualifier value)'})</span></td><td>4.5 g<span> (Details: UCUM code g = 'g')</span></td><td>8 ml<span> (Details: UCUM code ml = 'ml')</span>/1 min<span> (Details: UCUM code min = 'min')</span></td></tr></table></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "med0303" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/ndc" ];
+         fhir:Coding.code [ fhir:value "0206-8862-02" ];
+         fhir:Coding.display [ fhir:value "Zosyn (piperacillin/tazobactam) 4.5gm injection" ]
+       ]
+     ]
+  ];
+  fhir:MedicationAdministration.status [ fhir:value "entered-in-error"];
+  fhir:MedicationAdministration.medicationReference [
+     fhir:Reference.reference [ fhir:value "#med0303" ]
+  ];
+  fhir:MedicationAdministration.patient [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ];
+     fhir:Reference.display [ fhir:value "Donald Duck" ]
+  ];
+  fhir:MedicationAdministration.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/f001>;
+     fhir:Reference.reference [ fhir:value "Encounter/f001" ];
+     fhir:Reference.display [ fhir:value "encounter who leads to this prescription" ]
+  ];
+  fhir:MedicationAdministration.effectiveTimePeriod [
+     fhir:Period.start [ fhir:value "2015-01-15T04:30:00+01:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-01-15T14:30:00+01:00"^^xsd:dateTime ]
+  ];
+  fhir:MedicationAdministration.performer [
+     fhir:link <http://hl7.org/fhir/Practitioner/f007>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f007" ];
+     fhir:Reference.display [ fhir:value "Patrick Pump" ]
+  ];
+  fhir:MedicationAdministration.prescription [
+     fhir:link <http://hl7.org/fhir/MedicationRequest/medrx0319>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medrx0319" ]
+  ];
+  fhir:MedicationAdministration.dosage [
+     fhir:MedicationAdministration.dosage.text [ fhir:value "4.5 grams in D5W 250 ml. IV every 6 hours. Infuse over 30 min at 8L/min " ];
+     fhir:MedicationAdministration.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:47625008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "47625008" ];
+         fhir:Coding.display [ fhir:value "Intravenous route (qualifier value)" ]
+       ]
+     ];
+     fhir:MedicationAdministration.dosage.dose [
+       fhir:Quantity.value [ fhir:value "4.5"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "g" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "g" ]
+     ];
+     fhir:MedicationAdministration.dosage.rateRatio [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "8"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "ml" ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "min" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/f001> a fhir:Encounter .
+
+<http://hl7.org/fhir/Practitioner/f007> a fhir:Practitioner .
+
+<http://hl7.org/fhir/MedicationRequest/medrx0319> a fhir:MedicationRequest .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="v3-ParticipationInformationGenerator"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ParticipationInformationGenerator</h2>
+      <div>
+        <p>Parties that may or should contribute or have contributed information to the Act. Such information includes information leading to the decision to perform the Act and how to perform the Act (e.g., consultant), information that the Act itself seeks to reveal (e.g., informant of clinical history), or information about what Act was performed (e.g., informant witness).</p>
+
+      </div>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include codes from 
+          <a href="../../v3/ParticipationType/cs.html">http://hl7.org/fhir/v3/ParticipationType</a> where concept  is-a  
+          <a href="../../v3/ParticipationType/cs.html#_ParticipationInformationGenerator">_ParticipationInformationGenerator</a>
+        </li>
+        <li>Exclude these codes as defined in 
+          <a href="../../v3/ParticipationType/cs.html">http://hl7.org/fhir/v3/ParticipationType</a>
+          <table class="none">
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>_ParticipationInformationGenerator</td>
+              <td>ParticipationInformationGenerator</td>
+              <td>Parties that may or should contribute or have contributed information to the Act. Such information includes information leading to the decision to perform the Act and how to perform the Act (e.g., consultant), information that the Act itself seeks to reveal (e.g., informant of clinical history), or information about what Act was performed (e.g., informant witness).</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/v3-ParticipationInformationGenerator"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.1.11.10251"/>
+  </identifier>
+  <version value="2014-03-26"/>
+  <name value="ParticipationInformationGenerator"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 v3"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value=" Parties that may or should contribute or have contributed information to the Act. Such information includes information leading to the decision to perform the Act and how to perform the Act (e.g., consultant), information that the Act itself seeks to reveal (e.g., informant of clinical history), or information about what Act was performed (e.g., informant witness)."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="_ParticipationInformationGenerator"/>
+      </filter>
+    </include>
+    <exclude>
+      <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+      <concept>
+        <code value="_ParticipationInformationGenerator"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir"> 
+  <id value="consent-signature"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: consent-signature</p><p><b>target</b>: <a>Consent/consent-example-signature</a></p><p><b>recorded</b>: May 26, 2016 12:41:10 AM</p><h3>Agents</h3><table><tr><td>-</td><td><b>Role</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Author (Details: http://hl7.org/fhir/provenance-participant-role code author = &#39;Author&#39;, stated as &#39;null&#39;)</td><td><a>Patient/72</a></td></tr></table><p><b>signature</b>: </p></div></text><target>
+    <reference value="Consent/consent-example-signature"/>
+  </target>
+ 
+  <!--   the provenance is recorded at the same time as 
+    the resource - batched together   -->
+  <recorded value="2016-05-26T00:41:10-04:00"/>
+ 
+  <agent> 
+    <role>
+      <system value="http://hl7.org/fhir/provenance-participant-role"/>
+      <code value="author"/>
+    </role>
+    <actor>
+      <reference value="Patient/72"/>
+    </actor>
+  </agent>
+  <signature>
+    <type>
+      <system value="urn:iso-astm:E1762-95:2013"/>
+      <code value="1.2.840.10065.1.12.1.1"/>
+      <display value="Author&#39;s Signature"/>
+    </type>
+    <when value="2016-05-26T00:41:10-04:00"/>
+    <whoReference>
+      <reference value="Patient/72"/>
+    </whoReference>
+    <contentType value="application/signature+xml"/>
+    <blob value="dGhpcyBibG9iIGlzIHNuaXBwZWQ="/>
+  </signature>
+</Provenance>

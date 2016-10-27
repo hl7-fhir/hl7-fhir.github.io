@@ -1,0 +1,2135 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Consent.profile.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/consent.profile.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="secpriv-module.html"><img src="secpriv.jpg"/> Security and Privacy</a></li>          <li><a href="consent.html">Consent</a></li>        <li><b>Profile Instance</b></li>        <!-- consent.profile.json.html / profile-instance:resource:Consent / Profile-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Consent.profile.json</h1>
+
+<p>
+<a href="consent.profile.json">Raw JSON</a> (<a href="consent.profile.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>StructureDefinition for consent</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;StructureDefinition&quot;,
+  &quot;id&quot;: &quot;Consent&quot;,
+  &quot;meta&quot;: {
+    &quot;lastUpdated&quot;: &quot;2016-10-27T16:23:35.748+00:00&quot;
+  },
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div&gt;!-- Snipped for Brevity --&gt;&lt;/div&gt;&quot;
+  },
+  &quot;extension&quot;: [
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm&quot;,
+      &quot;valueInteger&quot;: 0
+    }
+  ],
+  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Consent&quot;,
+  &quot;name&quot;: &quot;Consent&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;publisher&quot;: &quot;Health Level Seven International (Community Based Collaborative Care)&quot;,
+  &quot;contact&quot;: [
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;http://hl7.org/fhir&quot;
+        }
+      ]
+    },
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;http://www.hl7.org/Special/committees/cbcc/index.cfm&quot;
+        }
+      ]
+    }
+  ],
+  &quot;date&quot;: &quot;2016-10-27T16:23:35+00:00&quot;,
+  &quot;description&quot;: &quot;Base StructureDefinition for Consent Resource&quot;,
+  &quot;fhirVersion&quot;: &quot;1.7.0&quot;,
+  &quot;mapping&quot;: [
+    {
+      &quot;identity&quot;: &quot;rim&quot;,
+      &quot;uri&quot;: &quot;http://hl7.org/v3&quot;,
+      &quot;name&quot;: &quot;RIM Mapping&quot;
+    },
+    {
+      &quot;identity&quot;: &quot;w5&quot;,
+      &quot;uri&quot;: &quot;http://hl7.org/fhir/w5&quot;,
+      &quot;name&quot;: &quot;W5 Mapping&quot;
+    },
+    {
+      &quot;identity&quot;: &quot;v2&quot;,
+      &quot;uri&quot;: &quot;http://hl7.org/v2&quot;,
+      &quot;name&quot;: &quot;HL7 v2 Mapping&quot;
+    }
+  ],
+  &quot;kind&quot;: &quot;resource&quot;,
+  &quot;abstract&quot;: false,
+  &quot;type&quot;: &quot;Consent&quot;,
+  &quot;baseDefinition&quot;: &quot;http://hl7.org/fhir/StructureDefinition/DomainResource&quot;,
+  &quot;derivation&quot;: &quot;specialization&quot;,
+  &quot;snapshot&quot;: {
+    &quot;element&quot;: [
+      {
+        &quot;id&quot;: &quot;Consent&quot;,
+        &quot;path&quot;: &quot;Consent&quot;,
+        &quot;short&quot;: &quot;A healthcare consumer’s policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time&quot;,
+        &quot;definition&quot;: &quot;A record of a healthcare consumer’s policy choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.&quot;,
+        &quot;comments&quot;: &quot;Broadly, there are 3 key areas of consent for patients: Consent around sharing information (aka Privacy Consent Directive - Authorization to Collect, Use, or Disclose information), consent for specific treatment, or kinds of treatment, and general advance care directives.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;constraint&quot;: [
+          {
+            &quot;key&quot;: &quot;dom-2&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;If the resource is contained in another resource, it SHALL NOT contain nested Resources&quot;,
+            &quot;expression&quot;: &quot;contained.contained.empty()&quot;,
+            &quot;xpath&quot;: &quot;not(parent::f:contained and f:contained)&quot;,
+            &quot;source&quot;: &quot;DomainResource&quot;
+          },
+          {
+            &quot;key&quot;: &quot;dom-1&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;If the resource is contained in another resource, it SHALL NOT contain any narrative&quot;,
+            &quot;expression&quot;: &quot;contained.text.empty()&quot;,
+            &quot;xpath&quot;: &quot;not(parent::f:contained and f:text)&quot;,
+            &quot;source&quot;: &quot;DomainResource&quot;
+          },
+          {
+            &quot;key&quot;: &quot;dom-4&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated&quot;,
+            &quot;expression&quot;: &quot;contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()&quot;,
+            &quot;xpath&quot;: &quot;not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))&quot;,
+            &quot;source&quot;: &quot;DomainResource&quot;
+          },
+          {
+            &quot;key&quot;: &quot;dom-3&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource&quot;,
+            &quot;expression&quot;: &quot;contained.where(('#'+id in %resource.descendants().reference).not()).empty()&quot;,
+            &quot;xpath&quot;: &quot;not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))&quot;,
+            &quot;source&quot;: &quot;DomainResource&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Entity. Role, or Act&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;FinancialConsent&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;infrastructure.information&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.id&quot;,
+        &quot;path&quot;: &quot;Consent.id&quot;,
+        &quot;short&quot;: &quot;Logical id of this artifact&quot;,
+        &quot;definition&quot;: &quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.&quot;,
+        &quot;comments&quot;: &quot;The only time that a resource does not have an id is when it is being submitted to the server using a create operation.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;id&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.meta&quot;,
+        &quot;path&quot;: &quot;Consent.meta&quot;,
+        &quot;short&quot;: &quot;Metadata about the resource&quot;,
+        &quot;definition&quot;: &quot;The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.meta&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Meta&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.implicitRules&quot;,
+        &quot;path&quot;: &quot;Consent.implicitRules&quot;,
+        &quot;short&quot;: &quot;A set of rules under which this content was created&quot;,
+        &quot;definition&quot;: &quot;A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.&quot;,
+        &quot;comments&quot;: &quot;Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.implicitRules&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.language&quot;,
+        &quot;path&quot;: &quot;Consent.language&quot;,
+        &quot;short&quot;: &quot;Language of the resource content&quot;,
+        &quot;definition&quot;: &quot;The base language in which the resource is written.&quot;,
+        &quot;comments&quot;: &quot;Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.language&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet&quot;,
+              &quot;valueReference&quot;: {
+                &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/all-languages&quot;
+              }
+            }
+          ],
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;A human language.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/languages&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.text&quot;,
+        &quot;path&quot;: &quot;Consent.text&quot;,
+        &quot;short&quot;: &quot;Text summary of the resource, for human interpretation&quot;,
+        &quot;definition&quot;: &quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.&quot;,
+        &quot;comments&quot;: &quot;Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \&quot;text blob\&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.&quot;,
+        &quot;alias&quot;: [
+          &quot;narrative&quot;,
+          &quot;html&quot;,
+          &quot;xhtml&quot;,
+          &quot;display&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.text&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Narrative&quot;
+          }
+        ],
+        &quot;condition&quot;: [
+          &quot;dom-1&quot;
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Act.text?&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.contained&quot;,
+        &quot;path&quot;: &quot;Consent.contained&quot;,
+        &quot;short&quot;: &quot;Contained, inline Resources&quot;,
+        &quot;definition&quot;: &quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.&quot;,
+        &quot;comments&quot;: &quot;This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot;,
+        &quot;alias&quot;: [
+          &quot;inline resources&quot;,
+          &quot;anonymous resources&quot;,
+          &quot;contained resources&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.contained&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Resource&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.extension&quot;,
+        &quot;path&quot;: &quot;Consent.extension&quot;,
+        &quot;short&quot;: &quot;Additional Content defined by implementations&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.modifierExtension&quot;,
+        &quot;path&quot;: &quot;Consent.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.identifier&quot;,
+        &quot;path&quot;: &quot;Consent.identifier&quot;,
+        &quot;short&quot;: &quot;Identifier for this record (external references)&quot;,
+        &quot;definition&quot;: &quot;Unique identifier for this copy of the Consent Statement.&quot;,
+        &quot;comments&quot;: &quot;This identifier is identifies this copy of the consent. Where this identifier is also used elsewhere as the identifier for a consent record (e.g. a CDA consent document) then the consent details are expected to be the same.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Identifier&quot;
+          }
+        ],
+        &quot;exampleIdentifier&quot;: {
+          &quot;system&quot;: &quot;urn:ietf:rfc:3986&quot;,
+          &quot;value&quot;: &quot;Local eCMS identifier&quot;
+        },
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.id&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;id&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.status&quot;,
+        &quot;path&quot;: &quot;Consent.status&quot;,
+        &quot;short&quot;: &quot;draft | proposed | active | rejected | inactive | entered-in-error&quot;,
+        &quot;definition&quot;: &quot;Indicates the current state of this consent.&quot;,
+        &quot;comments&quot;: &quot;This is the status of this consent at the time it was issued / created / indexed.&quot;,
+        &quot;requirements&quot;: &quot;The Consent Directive that is pointed to might be in various lifecycle states, e.g., a revoked Consent Directive.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;Indicates the status of the consent&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-status&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;v2&quot;,
+            &quot;map&quot;: &quot;HL7 Table 0498 - Consent Status&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.statusCode&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;status&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.category&quot;,
+        &quot;path&quot;: &quot;Consent.category&quot;,
+        &quot;short&quot;: &quot;Classification of the consent statement - for indexing/retrieval&quot;,
+        &quot;definition&quot;: &quot;A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;A classification of the type of consents found in a consent statement&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-category&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;CNTRCT&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;class&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.dateTime&quot;,
+        &quot;path&quot;: &quot;Consent.dateTime&quot;,
+        &quot;short&quot;: &quot;When this Consent was created or indexed&quot;,
+        &quot;definition&quot;: &quot;When this  Consent was issued / created / indexed.&quot;,
+        &quot;comments&quot;: &quot;This is not the time of the original consent, but the time that this statement was made or derived.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;dateTime&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;FinancialConsent effectiveTime&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;when.recorded&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.period&quot;,
+        &quot;path&quot;: &quot;Consent.period&quot;,
+        &quot;short&quot;: &quot;Period that this consent applies&quot;,
+        &quot;definition&quot;: &quot;Relevant time or time-period when this Consent is applicable.&quot;,
+        &quot;comments&quot;: &quot;This can be a subset of the period of the original statement.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Period&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;all date ranges included&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;FinancialConsent activityTime&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;when.done&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.patient&quot;,
+        &quot;path&quot;: &quot;Consent.patient&quot;,
+        &quot;short&quot;: &quot;Who the consent applies to&quot;,
+        &quot;definition&quot;: &quot;The patient/healthcare consumer to whom this consent applies.&quot;,
+        &quot;comments&quot;: &quot;Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Role&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.focus&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.consentor&quot;,
+        &quot;path&quot;: &quot;Consent.consentor&quot;,
+        &quot;short&quot;: &quot;Who is agreeing to the policy and exceptions&quot;,
+        &quot;definition&quot;: &quot;The patient/consumer that is responsible for agreeing to the consent represented by this resource. This is the person (usually) that agreed to the policy, along with the exceptions, e.g. the persion who takes responsibility for the agreement. In the signature this corresponds to the role \&quot;Consent Signature\&quot;.&quot;,
+        &quot;comments&quot;: &quot;Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.actor&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.organization&quot;,
+        &quot;path&quot;: &quot;Consent.organization&quot;,
+        &quot;short&quot;: &quot;Organization that manages the consent&quot;,
+        &quot;definition&quot;: &quot;The organization that manages the consent, and the framework within which it is executed.&quot;,
+        &quot;alias&quot;: [
+          &quot;custodian&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.witness&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.source[x]&quot;,
+        &quot;path&quot;: &quot;Consent.source[x]&quot;,
+        &quot;short&quot;: &quot;Source from which this consent is taken&quot;,
+        &quot;definition&quot;: &quot;The source on which this consent statement is based. The source might be a scanned original paper form, or a reference to a consent that links back to such a source, a reference to a document repository (e.g. XDS) that stores the original consent document.&quot;,
+        &quot;comments&quot;: &quot;The source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Attachment&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Identifier&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Consent&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/DocumentReference&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Contract&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.policy&quot;,
+        &quot;path&quot;: &quot;Consent.policy&quot;,
+        &quot;short&quot;: &quot;Policy that this consents to&quot;,
+        &quot;definition&quot;: &quot;A reference to the policy that this consents to. Policies may be organizational, but are often defined jurisdictionally, or in law.&quot;,
+        &quot;comments&quot;: &quot;If the policy reference is not known, the resource cannot be processed. Where the reference is absent, there is no particular policy other than what is expressed directly in the consent resource.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.recipient&quot;,
+        &quot;path&quot;: &quot;Consent.recipient&quot;,
+        &quot;short&quot;: &quot;Whose access is controlled by the policy&quot;,
+        &quot;definition&quot;: &quot;Actor whose access is controlled by this consent under the terms of the policy and exceptions.&quot;,
+        &quot;comments&quot;: &quot;The Consent recipient is the person/organization who is being granted or denied permission according to the stated policy.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Device&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Group&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/CareTeam&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;There is no specific actor who is the focus of the consent&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.actor&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.purpose&quot;,
+        &quot;path&quot;: &quot;Consent.purpose&quot;,
+        &quot;short&quot;: &quot;Context of activities for which the agreement is made&quot;,
+        &quot;definition&quot;: &quot;The context of the activities a user is taking - why the user is accessing the data - that are controlled by this consent.&quot;,
+        &quot;comments&quot;: &quot;This element is for discoverability / documentation, and does not modify or qualify the policy (e.g. the policy itself describes the purposes for which it applies).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/v3-PurposeOfUse&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except&quot;,
+        &quot;extension&quot;: [
+          {
+            &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name&quot;,
+            &quot;valueString&quot;: &quot;Except&quot;
+          }
+        ],
+        &quot;path&quot;: &quot;Consent.except&quot;,
+        &quot;short&quot;: &quot;Additional rule -  addition or removal of permissions&quot;,
+        &quot;definition&quot;: &quot;An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;constraint&quot;: [
+          {
+            &quot;key&quot;: &quot;ele-1&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;All FHIR elements must have a @value or children&quot;,
+            &quot;expression&quot;: &quot;children().count() &gt; id.count()&quot;,
+            &quot;xpath&quot;: &quot;@value|f:*|h:div&quot;,
+            &quot;source&quot;: &quot;Element&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.id&quot;,
+        &quot;path&quot;: &quot;Consent.except.id&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+        &quot;definition&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.extension&quot;,
+        &quot;path&quot;: &quot;Consent.except.extension&quot;,
+        &quot;short&quot;: &quot;Additional Content defined by implementations&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.modifierExtension&quot;,
+        &quot;path&quot;: &quot;Consent.except.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;,
+          &quot;modifiers&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;BackboneElement.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.type&quot;,
+        &quot;path&quot;: &quot;Consent.except.type&quot;,
+        &quot;short&quot;: &quot;deny | permit&quot;,
+        &quot;definition&quot;: &quot;Action  to take - permit or deny - when the exception conditions are met.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;How an exception is statement is applied, as adding additional consent, or removing consent&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-except-type&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.period&quot;,
+        &quot;path&quot;: &quot;Consent.except.period&quot;,
+        &quot;short&quot;: &quot;Timeframe for data controlled by this exception&quot;,
+        &quot;definition&quot;: &quot;The timeframe in which data is controlled by this exception.&quot;,
+        &quot;comments&quot;: &quot;This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Period&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor&quot;,
+        &quot;short&quot;: &quot;Who|what controlled by this exception (or group, by role)&quot;,
+        &quot;definition&quot;: &quot;Who or what is controlled by this Exception. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;There is no specific actor associated with the exception&quot;,
+        &quot;constraint&quot;: [
+          {
+            &quot;key&quot;: &quot;ele-1&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;All FHIR elements must have a @value or children&quot;,
+            &quot;expression&quot;: &quot;children().count() &gt; id.count()&quot;,
+            &quot;xpath&quot;: &quot;@value|f:*|h:div&quot;,
+            &quot;source&quot;: &quot;Element&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.id&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.id&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+        &quot;definition&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.extension&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.extension&quot;,
+        &quot;short&quot;: &quot;Additional Content defined by implementations&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.modifierExtension&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;,
+          &quot;modifiers&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;BackboneElement.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.role&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.role&quot;,
+        &quot;short&quot;: &quot;How the actor is/was involved&quot;,
+        &quot;definition&quot;: &quot;How the individual is or was involved in the resourcescontent that is described in the exception.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;How an actor is involved in the consent considerations&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-actor-role&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.reference&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.reference&quot;,
+        &quot;short&quot;: &quot;Resource for the actor (or group, by role)&quot;,
+        &quot;definition&quot;: &quot;The resource that identifies the actor. To identify a actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Device&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Group&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/CareTeam&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.action&quot;,
+        &quot;path&quot;: &quot;Consent.except.action&quot;,
+        &quot;short&quot;: &quot;Actions controlled by this exception&quot;,
+        &quot;definition&quot;: &quot;Actions controlled by this Exception.&quot;,
+        &quot;comments&quot;: &quot;Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is 'read'.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;all actions&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Detailed codes for the consent action.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-action&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.securityLabel&quot;,
+        &quot;path&quot;: &quot;Consent.except.securityLabel&quot;,
+        &quot;short&quot;: &quot;Security Labels that define affected resources&quot;,
+        &quot;definition&quot;: &quot;A set of security labels that define which resources are controlled by this exception. If more than one label is specified, all resources must have all the specified labels.&quot;,
+        &quot;comments&quot;: &quot;If the consent specifies a security label of \&quot;R\&quot; then it applies to all resources that are labelled \&quot;R\&quot; or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. Not all of the security labels make sense for use in this element (may define a narrower value set?).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;Security Labels from the Healthcare Privacy and Security Classification System.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/security-labels&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.purpose&quot;,
+        &quot;path&quot;: &quot;Consent.except.purpose&quot;,
+        &quot;short&quot;: &quot;Context of activities covered by this exception&quot;,
+        &quot;definition&quot;: &quot;The context of the activities a user is taking - why the user is accessing the data - that are controlled by this exception.&quot;,
+        &quot;comments&quot;: &quot;E.g. if the purpose is 'research', then the operational context must be research, in order for the consent to apply. Not all of the security labels make sense for use in this element (may define a narrower value set?).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/v3-PurposeOfUse&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.class&quot;,
+        &quot;path&quot;: &quot;Consent.except.class&quot;,
+        &quot;short&quot;: &quot;e.g. Resource Type, Profile, or CDA etc&quot;,
+        &quot;definition&quot;: &quot;The class of information covered by this exception. The type can be a FHIR resource type, a profile on a type, or a CDA document, or some other type that indicates what sort of information the consent relates to.&quot;,
+        &quot;comments&quot;: &quot;Multiple types are or'ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;The class (type) of information a consent rule covers&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-content-class&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.code&quot;,
+        &quot;path&quot;: &quot;Consent.except.code&quot;,
+        &quot;short&quot;: &quot;e.g. LOINC or SNOMED CT code, etc in the content&quot;,
+        &quot;definition&quot;: &quot;If this code is found in an instance, then the exception applies. TODO: where do you not have to look? This is a problematic element.&quot;,
+        &quot;comments&quot;: &quot;Typical use of this is a Document code with class = CDA.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;If this code is found in an instance, then the exception applies&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-content-code&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data&quot;,
+        &quot;path&quot;: &quot;Consent.except.data&quot;,
+        &quot;short&quot;: &quot;Data controlled by this exception&quot;,
+        &quot;definition&quot;: &quot;The resources controlled by this exception, if specific resources are referenced.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;all data&quot;,
+        &quot;constraint&quot;: [
+          {
+            &quot;key&quot;: &quot;ele-1&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;All FHIR elements must have a @value or children&quot;,
+            &quot;expression&quot;: &quot;children().count() &gt; id.count()&quot;,
+            &quot;xpath&quot;: &quot;@value|f:*|h:div&quot;,
+            &quot;source&quot;: &quot;Element&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Role&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.id&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.id&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+        &quot;definition&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.extension&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.extension&quot;,
+        &quot;short&quot;: &quot;Additional Content defined by implementations&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.modifierExtension&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;,
+          &quot;modifiers&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;BackboneElement.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.meaning&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.meaning&quot;,
+        &quot;short&quot;: &quot;instance | related | dependents&quot;,
+        &quot;definition&quot;: &quot;How the resource reference is interpreted when testing consent restrictions.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;How a resource reference is interpreted when testing consent restrictions&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-data-meaning&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.reference&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.reference&quot;,
+        &quot;short&quot;: &quot;The actual data reference&quot;,
+        &quot;definition&quot;: &quot;A reference to a specific resource that defines which resources are covered by this consent.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      }
+    ]
+  },
+  &quot;differential&quot;: {
+    &quot;element&quot;: [
+      {
+        &quot;id&quot;: &quot;Consent&quot;,
+        &quot;path&quot;: &quot;Consent&quot;,
+        &quot;short&quot;: &quot;A healthcare consumer’s policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time&quot;,
+        &quot;definition&quot;: &quot;A record of a healthcare consumer’s policy choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.&quot;,
+        &quot;comments&quot;: &quot;Broadly, there are 3 key areas of consent for patients: Consent around sharing information (aka Privacy Consent Directive - Authorization to Collect, Use, or Disclose information), consent for specific treatment, or kinds of treatment, and general advance care directives.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;FinancialConsent&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;infrastructure.information&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.identifier&quot;,
+        &quot;path&quot;: &quot;Consent.identifier&quot;,
+        &quot;short&quot;: &quot;Identifier for this record (external references)&quot;,
+        &quot;definition&quot;: &quot;Unique identifier for this copy of the Consent Statement.&quot;,
+        &quot;comments&quot;: &quot;This identifier is identifies this copy of the consent. Where this identifier is also used elsewhere as the identifier for a consent record (e.g. a CDA consent document) then the consent details are expected to be the same.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Identifier&quot;
+          }
+        ],
+        &quot;exampleIdentifier&quot;: {
+          &quot;system&quot;: &quot;urn:ietf:rfc:3986&quot;,
+          &quot;value&quot;: &quot;Local eCMS identifier&quot;
+        },
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.id&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;id&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.status&quot;,
+        &quot;path&quot;: &quot;Consent.status&quot;,
+        &quot;short&quot;: &quot;draft | proposed | active | rejected | inactive | entered-in-error&quot;,
+        &quot;definition&quot;: &quot;Indicates the current state of this consent.&quot;,
+        &quot;comments&quot;: &quot;This is the status of this consent at the time it was issued / created / indexed.&quot;,
+        &quot;requirements&quot;: &quot;The Consent Directive that is pointed to might be in various lifecycle states, e.g., a revoked Consent Directive.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;Indicates the status of the consent&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-status&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;v2&quot;,
+            &quot;map&quot;: &quot;HL7 Table 0498 - Consent Status&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.statusCode&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;status&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.category&quot;,
+        &quot;path&quot;: &quot;Consent.category&quot;,
+        &quot;short&quot;: &quot;Classification of the consent statement - for indexing/retrieval&quot;,
+        &quot;definition&quot;: &quot;A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;A classification of the type of consents found in a consent statement&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-category&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;CNTRCT&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;class&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.dateTime&quot;,
+        &quot;path&quot;: &quot;Consent.dateTime&quot;,
+        &quot;short&quot;: &quot;When this Consent was created or indexed&quot;,
+        &quot;definition&quot;: &quot;When this  Consent was issued / created / indexed.&quot;,
+        &quot;comments&quot;: &quot;This is not the time of the original consent, but the time that this statement was made or derived.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;dateTime&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;FinancialConsent effectiveTime&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;when.recorded&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.period&quot;,
+        &quot;path&quot;: &quot;Consent.period&quot;,
+        &quot;short&quot;: &quot;Period that this consent applies&quot;,
+        &quot;definition&quot;: &quot;Relevant time or time-period when this Consent is applicable.&quot;,
+        &quot;comments&quot;: &quot;This can be a subset of the period of the original statement.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Period&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;all date ranges included&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;FinancialConsent activityTime&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;when.done&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.patient&quot;,
+        &quot;path&quot;: &quot;Consent.patient&quot;,
+        &quot;short&quot;: &quot;Who the consent applies to&quot;,
+        &quot;definition&quot;: &quot;The patient/healthcare consumer to whom this consent applies.&quot;,
+        &quot;comments&quot;: &quot;Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Role&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.focus&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.consentor&quot;,
+        &quot;path&quot;: &quot;Consent.consentor&quot;,
+        &quot;short&quot;: &quot;Who is agreeing to the policy and exceptions&quot;,
+        &quot;definition&quot;: &quot;The patient/consumer that is responsible for agreeing to the consent represented by this resource. This is the person (usually) that agreed to the policy, along with the exceptions, e.g. the persion who takes responsibility for the agreement. In the signature this corresponds to the role \&quot;Consent Signature\&quot;.&quot;,
+        &quot;comments&quot;: &quot;Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.actor&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.organization&quot;,
+        &quot;path&quot;: &quot;Consent.organization&quot;,
+        &quot;short&quot;: &quot;Organization that manages the consent&quot;,
+        &quot;definition&quot;: &quot;The organization that manages the consent, and the framework within which it is executed.&quot;,
+        &quot;alias&quot;: [
+          &quot;custodian&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.witness&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.source[x]&quot;,
+        &quot;path&quot;: &quot;Consent.source[x]&quot;,
+        &quot;short&quot;: &quot;Source from which this consent is taken&quot;,
+        &quot;definition&quot;: &quot;The source on which this consent statement is based. The source might be a scanned original paper form, or a reference to a consent that links back to such a source, a reference to a document repository (e.g. XDS) that stores the original consent document.&quot;,
+        &quot;comments&quot;: &quot;The source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Attachment&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Identifier&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Consent&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/DocumentReference&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Contract&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.policy&quot;,
+        &quot;path&quot;: &quot;Consent.policy&quot;,
+        &quot;short&quot;: &quot;Policy that this consents to&quot;,
+        &quot;definition&quot;: &quot;A reference to the policy that this consents to. Policies may be organizational, but are often defined jurisdictionally, or in law.&quot;,
+        &quot;comments&quot;: &quot;If the policy reference is not known, the resource cannot be processed. Where the reference is absent, there is no particular policy other than what is expressed directly in the consent resource.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.recipient&quot;,
+        &quot;path&quot;: &quot;Consent.recipient&quot;,
+        &quot;short&quot;: &quot;Whose access is controlled by the policy&quot;,
+        &quot;definition&quot;: &quot;Actor whose access is controlled by this consent under the terms of the policy and exceptions.&quot;,
+        &quot;comments&quot;: &quot;The Consent recipient is the person/organization who is being granted or denied permission according to the stated policy.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Device&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Group&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/CareTeam&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;There is no specific actor who is the focus of the consent&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.actor&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.purpose&quot;,
+        &quot;path&quot;: &quot;Consent.purpose&quot;,
+        &quot;short&quot;: &quot;Context of activities for which the agreement is made&quot;,
+        &quot;definition&quot;: &quot;The context of the activities a user is taking - why the user is accessing the data - that are controlled by this consent.&quot;,
+        &quot;comments&quot;: &quot;This element is for discoverability / documentation, and does not modify or qualify the policy (e.g. the policy itself describes the purposes for which it applies).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/v3-PurposeOfUse&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except&quot;,
+        &quot;extension&quot;: [
+          {
+            &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name&quot;,
+            &quot;valueString&quot;: &quot;Except&quot;
+          }
+        ],
+        &quot;path&quot;: &quot;Consent.except&quot;,
+        &quot;short&quot;: &quot;Additional rule -  addition or removal of permissions&quot;,
+        &quot;definition&quot;: &quot;An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.type&quot;,
+        &quot;path&quot;: &quot;Consent.except.type&quot;,
+        &quot;short&quot;: &quot;deny | permit&quot;,
+        &quot;definition&quot;: &quot;Action  to take - permit or deny - when the exception conditions are met.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;How an exception is statement is applied, as adding additional consent, or removing consent&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-except-type&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.period&quot;,
+        &quot;path&quot;: &quot;Consent.except.period&quot;,
+        &quot;short&quot;: &quot;Timeframe for data controlled by this exception&quot;,
+        &quot;definition&quot;: &quot;The timeframe in which data is controlled by this exception.&quot;,
+        &quot;comments&quot;: &quot;This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Period&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor&quot;,
+        &quot;short&quot;: &quot;Who|what controlled by this exception (or group, by role)&quot;,
+        &quot;definition&quot;: &quot;Who or what is controlled by this Exception. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;There is no specific actor associated with the exception&quot;,
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.role&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.role&quot;,
+        &quot;short&quot;: &quot;How the actor is/was involved&quot;,
+        &quot;definition&quot;: &quot;How the individual is or was involved in the resourcescontent that is described in the exception.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;How an actor is involved in the consent considerations&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-actor-role&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.actor.reference&quot;,
+        &quot;path&quot;: &quot;Consent.except.actor.reference&quot;,
+        &quot;short&quot;: &quot;Resource for the actor (or group, by role)&quot;,
+        &quot;definition&quot;: &quot;The resource that identifies the actor. To identify a actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Device&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Group&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/CareTeam&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;
+          },
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.action&quot;,
+        &quot;path&quot;: &quot;Consent.except.action&quot;,
+        &quot;short&quot;: &quot;Actions controlled by this exception&quot;,
+        &quot;definition&quot;: &quot;Actions controlled by this Exception.&quot;,
+        &quot;comments&quot;: &quot;Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is 'read'.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;all actions&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Detailed codes for the consent action.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-action&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.securityLabel&quot;,
+        &quot;path&quot;: &quot;Consent.except.securityLabel&quot;,
+        &quot;short&quot;: &quot;Security Labels that define affected resources&quot;,
+        &quot;definition&quot;: &quot;A set of security labels that define which resources are controlled by this exception. If more than one label is specified, all resources must have all the specified labels.&quot;,
+        &quot;comments&quot;: &quot;If the consent specifies a security label of \&quot;R\&quot; then it applies to all resources that are labelled \&quot;R\&quot; or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. Not all of the security labels make sense for use in this element (may define a narrower value set?).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;Security Labels from the Healthcare Privacy and Security Classification System.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/security-labels&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.purpose&quot;,
+        &quot;path&quot;: &quot;Consent.except.purpose&quot;,
+        &quot;short&quot;: &quot;Context of activities covered by this exception&quot;,
+        &quot;definition&quot;: &quot;The context of the activities a user is taking - why the user is accessing the data - that are controlled by this exception.&quot;,
+        &quot;comments&quot;: &quot;E.g. if the purpose is 'research', then the operational context must be research, in order for the consent to apply. Not all of the security labels make sense for use in this element (may define a narrower value set?).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/v3-PurposeOfUse&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.class&quot;,
+        &quot;path&quot;: &quot;Consent.except.class&quot;,
+        &quot;short&quot;: &quot;e.g. Resource Type, Profile, or CDA etc&quot;,
+        &quot;definition&quot;: &quot;The class of information covered by this exception. The type can be a FHIR resource type, a profile on a type, or a CDA document, or some other type that indicates what sort of information the consent relates to.&quot;,
+        &quot;comments&quot;: &quot;Multiple types are or'ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;The class (type) of information a consent rule covers&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-content-class&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.code&quot;,
+        &quot;path&quot;: &quot;Consent.except.code&quot;,
+        &quot;short&quot;: &quot;e.g. LOINC or SNOMED CT code, etc in the content&quot;,
+        &quot;definition&quot;: &quot;If this code is found in an instance, then the exception applies. TODO: where do you not have to look? This is a problematic element.&quot;,
+        &quot;comments&quot;: &quot;Typical use of this is a Document code with class = CDA.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;If this code is found in an instance, then the exception applies&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-content-code&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data&quot;,
+        &quot;path&quot;: &quot;Consent.except.data&quot;,
+        &quot;short&quot;: &quot;Data controlled by this exception&quot;,
+        &quot;definition&quot;: &quot;The resources controlled by this exception, if specific resources are referenced.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;meaningWhenMissing&quot;: &quot;all data&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Role&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.meaning&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.meaning&quot;,
+        &quot;short&quot;: &quot;instance | related | dependents&quot;,
+        &quot;definition&quot;: &quot;How the resource reference is interpreted when testing consent restrictions.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;How a resource reference is interpreted when testing consent restrictions&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/consent-data-meaning&quot;
+          }
+        }
+      },
+      {
+        &quot;id&quot;: &quot;Consent.except.data.reference&quot;,
+        &quot;path&quot;: &quot;Consent.except.data.reference&quot;,
+        &quot;short&quot;: &quot;The actual data reference&quot;,
+        &quot;definition&quot;: &quot;A reference to a specific resource that defines which resources are covered by this consent.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;targetProfile&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      }
+    ]
+  }
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconsent.profile.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconsent.profile.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

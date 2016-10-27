@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="snomedct"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>SNOMED CT (all versions)</h2>
+      <div>
+        <p>SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).</p>
+
+      </div>
+      <p>
+        <b>Copyright Statement:</b> © 2002-2016 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. &quot;SNOMED&quot; and &quot;SNOMED CT&quot; are registered trademarks of the IHTSDO http://www.ihtsdo.org/snomed-ct/get-snomed-ct
+      </p>
+      <p>
+        <b>Properties</b>
+      </p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>URL</b>
+          </td>
+          <td>
+            <b>Description</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+        </tr>
+        <tr>
+          <td>inactive</td>
+          <td>http://snomed.info/field/Concept.active</td>
+          <td>Whether the code is active or not (defaults to false)</td>
+          <td>boolean</td>
+        </tr>
+        <tr>
+          <td>sufficientlyDefined</td>
+          <td>http://.........?</td>
+          <td>True if the description logic definition of the concept includes sufficient conditions (i.e., if the concept is not primitive).</td>
+          <td>boolean</td>
+        </tr>
+        <tr>
+          <td>parent</td>
+          <td>http://.........?</td>
+          <td>A SNOMED CT concept id that has the target of a direct is-a relationship from the concept</td>
+          <td>code</td>
+        </tr>
+        <tr>
+          <td>child</td>
+          <td>http://.........?</td>
+          <td>A SNOMED CT concept id that has a direct is-a relationship to the concept</td>
+          <td>code</td>
+        </tr>
+        <tr>
+          <td>moduleId</td>
+          <td>http://snomed.info/field/Concept.moduleId</td>
+          <td>The SNOMED CT concept id of the module that the concept belongs to.</td>
+          <td>code</td>
+        </tr>
+        <tr>
+          <td>normalForm</td>
+          <td>http://.........?</td>
+          <td>Generated Normal form expression for the provided code or expression, with terms</td>
+          <td>string</td>
+        </tr>
+        <tr>
+          <td>normalFormTerse</td>
+          <td>http://.........?</td>
+          <td>Generated Normal form expression for the provided code or expression, conceptIds only</td>
+          <td>string</td>
+        </tr>
+        <tr>
+          <td>Laterality</td>
+          <td>http://snomed.info/id/272741003</td>
+          <td/>
+          <td>code</td>
+        </tr>
+      </table>
+      <p>
+        <b>Filters</b>
+      </p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Description</b>
+          </td>
+          <td>
+            <b>operator</b>
+          </td>
+          <td>
+            <b>Value</b>
+          </td>
+        </tr>
+        <tr>
+          <td>concept</td>
+          <td>Filter that includes concepts based on their logical definition. e.g. [concept] [is-a] [x] - include all concepts with an is-a relationship to concept x, or [concept] [in] [x]- include all concepts in the reference set identified by concept x</td>
+          <td>is-a in </td>
+          <td>A SNOMED CT code</td>
+        </tr>
+        <tr>
+          <td>expression</td>
+          <td>The result of the filter is the result of executing the given SNOMED CT Expression Constraint</td>
+          <td>= </td>
+          <td>A SNOMED CT ECL expression (see...?)</td>
+        </tr>
+        <tr>
+          <td>expressions</td>
+          <td>Whether post-coordinated expressions are included in the value set</td>
+          <td>= </td>
+          <td>true or false</td>
+        </tr>
+      </table>
+      <p>This code system http://snomed.info/sct defines many codes, but they are not represented here</p>
+    </div>
+  </text>
+  <url value="http://snomed.info/sct"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.6.96"/>
+  </identifier>
+  <name value="SNOMED_CT"/>
+  <title value="SNOMED CT (all versions)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="IHTSDO"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://ihtsdo.org"/>
+    </telecom>
+  </contact>
+  <description value="SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO)."/>
+  <copyright value="© 2002-2016 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. &quot;SNOMED&quot; and &quot;SNOMED CT&quot; are registered trademarks of the IHTSDO http://www.ihtsdo.org/snomed-ct/get-snomed-ct"/>
+  <caseSensitive value="false"/>
+  <hierarchyMeaning value="subsumes"/>
+  <compositional value="true"/>
+  <versionNeeded value="false"/>
+  <content value="not-present"/>
+  <filter>
+    <code value="concept"/>
+    <description value="Filter that includes concepts based on their logical definition. e.g. [concept] [is-a] [x] - include all concepts with an is-a relationship to concept x, or [concept] [in] [x]- include all concepts in the reference set identified by concept x"/>
+    <operator value="is-a"/>
+    <operator value="in"/>
+    <value value="A SNOMED CT code"/>
+  </filter>
+  <filter>
+    <code value="expression"/>
+    <description value="The result of the filter is the result of executing the given SNOMED CT Expression Constraint"/>
+    <operator value="="/>
+    <value value="A SNOMED CT ECL expression (see...?)"/>
+  </filter>
+  <filter>
+    <code value="expressions"/>
+    <description value="Whether post-coordinated expressions are included in the value set"/>
+    <operator value="="/>
+    <value value="true or false"/>
+  </filter>
+  <property>
+    <code value="inactive"/>
+    <uri value="http://snomed.info/field/Concept.active"/>
+    <description value="Whether the code is active or not (defaults to false)"/>
+    <type value="boolean"/>
+  </property>
+  <property>
+    <code value="sufficientlyDefined"/>
+    <uri value="http://.........?"/>
+    <description value="True if the description logic definition of the concept includes sufficient conditions (i.e., if the concept is not primitive)."/>
+    <type value="boolean"/>
+  </property>
+  <property>
+    <code value="parent"/>
+    <uri value="http://.........?"/>
+    <description value="A SNOMED CT concept id that has the target of a direct is-a relationship from the concept"/>
+    <type value="code"/>
+  </property>
+  <property>
+    <code value="child"/>
+    <uri value="http://.........?"/>
+    <description value="A SNOMED CT concept id that has a direct is-a relationship to the concept"/>
+    <type value="code"/>
+  </property>
+  <property>
+    <code value="moduleId"/>
+    <uri value="http://snomed.info/field/Concept.moduleId"/>
+    <description value="The SNOMED CT concept id of the module that the concept belongs to."/>
+    <type value="code"/>
+  </property>
+  <property>
+    <code value="normalForm"/>
+    <uri value="http://.........?"/>
+    <description value="Generated Normal form expression for the provided code or expression, with terms"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="normalFormTerse"/>
+    <uri value="http://.........?"/>
+    <description value="Generated Normal form expression for the provided code or expression, conceptIds only"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="Laterality"/>
+    <uri value="http://snomed.info/id/272741003"/>
+    <type value="code"/>
+  </property>
+</CodeSystem>

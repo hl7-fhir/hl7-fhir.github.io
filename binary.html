@@ -1,0 +1,589 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Binary - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/binary.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><b>Binary</b></li>          <!-- binary.html / resource / Binary -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="binary-examples.html">Examples</a></li><li><a href="binary-definitions.html">Detailed Descriptions</a></li><li><a href="binary-mappings.html">Mappings</a></li><li><a href="binary-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">2.34<a name="2.34"> </a></span> Resource Binary - Content <a href="binary.html#2.34" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 1</td><td><a href="compartmentdefinition.html">Compartments</a>: Not linked to any defined compartments</td></tr>
+</table>
+
+
+
+<p> 
+A binary resource can contain any content, whether text, image, pdf, zip archive, etc. 
+</p>
+
+
+<div>
+<a name="scope"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.34.1</span> Scope and Usage <a href="binary.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+There are situations where it is useful or required to handle pure binary content using the same framework as other 
+resources. Typically, this is when the binary content is referred to from other FHIR Resources. 
+Using the same framework means that the existing servers, security arrangements, code libraries etc. 
+can handle additional related content. Typically, Binary resources are used for handling content such as:
+</p>
+<ul>
+ <li><a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDA <img src="external.png" style="text-align: baseline"/></a> Documents (i.e. with XDS)</li>
+ <li>PDF Documents</li>
+ <li>Images (the Media resource is preferred for handling images, but not possible when the content is already binary - XDS)</li>
+</ul>
+<p>
+A binary resource can contain any content, whether text, image, pdf, zip archive, etc. These 
+resources are served in their native form on the rest interface, but can also be represented in XML or JSON, 
+such as when including these resources in a bundle (used when it is convenient to include these in the 
+feed directly rather than leaving them by reference).
+</p>
+</div>
+
+<div>
+<a name="bnr"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.34.2</span> Boundaries and Relationships <a href="binary.html#bnr" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+This resource is generally used as the target of a <a href="documentreference.html">Document Reference</a> or an <a href="datatypes.html#Attachment">Attachment</a>, when a FHIR server finds it convenient to manage the content within the same overall REST framework as the other resources.
+</p>
+</div>
+
+
+
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.34.3</span> 
+Resource Content
+ <a href="binary.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="binary"> </a>
+<a name="Binary"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="binary-definitions.html#Binary" title="Binary : A binary resource can contain any content, whether text, image, pdf, zip archive, etc.">Binary</a><a name="Binary"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="resource.html">Resource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Pure binary content defined by some other format than FHIR</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="binary-definitions.html#Binary.contentType" title="Binary.contentType : MimeType of the binary content represented as a standard MimeType (BCP 13).">contentType</a><a name="Binary.contentType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">MimeType of the binary content<br/><a href="http://www.rfc-editor.org/bcp/bcp13.txt" title="The mime type of an attachment. Any valid mime type is allowed.">MimeType <img src="external.png" style="text-align: baseline"/></a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="binary-definitions.html#Binary.content" title="Binary.content : The actual content, base64 encoded.">content</a><a name="Binary.content"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#base64Binary">base64Binary</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The actual content</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="267.20000000000005" version="1.1" height="74.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="167.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="167.20000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="83.60000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Binary<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="resource.html">Resource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="binary-definitions.html#Binary.contentType"><title>MimeType of the binary content represented as a standard MimeType (BCP 13)</title>contentType</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="http://www.rfc-editor.org/bcp/bcp13.txt"><title>The mime type of an attachment. Any valid mime type is allowed. (Strength=Required)</title>MimeType</a>! »</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="binary-definitions.html#Binary.content"><title>The actual content, base64 encoded</title>content</a> : <a xlink:href="datatypes.html#base64Binary">base64Binary</a> [1..1]</text></g></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="binary-definitions.html#Binary" title="A binary resource can contain any content, whether text, image, pdf, zip archive, etc." class="dict"><b>Binary</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;<a href="binary-definitions.html#Binary.contentType" title="MimeType of the binary content represented as a standard MimeType (BCP 13)." class="dict"><b>contentType</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType of the binary content <img src="external.png" style="text-align: baseline"/></a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="binary-definitions.html#Binary.content" title="The actual content, base64 encoded." class="dict"><b>content</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#base64Binary">base64Binary</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The actual content</a></span><span style="color: Gray"> --&gt;</span>
+&lt;/Binary&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="binary-definitions.html#Binary" title="A binary resource can contain any content, whether text, image, pdf, zip archive, etc." class="dict"><b>Binary</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  &quot;<a href="binary-definitions.html#Binary.contentType" title="MimeType of the binary content represented as a standard MimeType (BCP 13)." class="dict">contentType</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType of the binary content <img src="external.png" style="text-align: baseline"/></a></span>
+  &quot;<a href="binary-definitions.html#Binary.content" title="The actual content, base64 encoded." class="dict">content</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#base64Binary">base64Binary</a></span>&gt;&quot; <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The actual content</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="binary-definitions.html#Binary" title="A binary resource can contain any content, whether text, image, pdf, zip archive, etc." class="dict"><b>Binary</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  fhir:<a href="binary-definitions.html#Binary.contentType" title="MimeType of the binary content represented as a standard MimeType (BCP 13)." class="dict">Binary.contentType</a><a name="ttl-contentType"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">MimeType of the binary content</span>
+  fhir:<a href="binary-definitions.html#Binary.content" title="The actual content, base64 encoded." class="dict">Binary.content</a><a name="ttl-content"> </a>[ <a href="datatypes.html#base64Binary">base64Binary</a> ]; # 1..1 <span style="color: navy">The actual content</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Binary</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="binary-definitions.html#Binary" title="Binary : A binary resource can contain any content, whether text, image, pdf, zip archive, etc.">Binary</a><a name="Binary"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="resource.html">Resource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Pure binary content defined by some other format than FHIR</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="binary-definitions.html#Binary.contentType" title="Binary.contentType : MimeType of the binary content represented as a standard MimeType (BCP 13).">contentType</a><a name="Binary.contentType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">MimeType of the binary content<br/><a href="http://www.rfc-editor.org/bcp/bcp13.txt" title="The mime type of an attachment. Any valid mime type is allowed.">MimeType <img src="external.png" style="text-align: baseline"/></a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="binary-definitions.html#Binary.content" title="Binary.content : The actual content, base64 encoded.">content</a><a name="Binary.content"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#base64Binary">base64Binary</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The actual content</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="267.20000000000005" version="1.1" height="74.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="167.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="167.20000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="83.60000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Binary<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="resource.html">Resource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="binary-definitions.html#Binary.contentType"><title>MimeType of the binary content represented as a standard MimeType (BCP 13)</title>contentType</a> : <a xlink:href="datatypes.html#code">code</a> [1..1] « <a xlink:href="http://www.rfc-editor.org/bcp/bcp13.txt"><title>The mime type of an attachment. Any valid mime type is allowed. (Strength=Required)</title>MimeType</a>! »</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="binary-definitions.html#Binary.content"><title>The actual content, base64 encoded</title>content</a> : <a xlink:href="datatypes.html#base64Binary">base64Binary</a> [1..1]</text></g></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="binary-definitions.html#Binary" title="A binary resource can contain any content, whether text, image, pdf, zip archive, etc." class="dict"><b>Binary</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;<a href="binary-definitions.html#Binary.contentType" title="MimeType of the binary content represented as a standard MimeType (BCP 13)." class="dict"><b>contentType</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType of the binary content <img src="external.png" style="text-align: baseline"/></a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="binary-definitions.html#Binary.content" title="The actual content, base64 encoded." class="dict"><b>content</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#base64Binary">base64Binary</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The actual content</a></span><span style="color: Gray"> --&gt;</span>
+&lt;/Binary&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="binary-definitions.html#Binary" title="A binary resource can contain any content, whether text, image, pdf, zip archive, etc." class="dict"><b>Binary</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  &quot;<a href="binary-definitions.html#Binary.contentType" title="MimeType of the binary content represented as a standard MimeType (BCP 13)." class="dict">contentType</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType of the binary content <img src="external.png" style="text-align: baseline"/></a></span>
+  &quot;<a href="binary-definitions.html#Binary.content" title="The actual content, base64 encoded." class="dict">content</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#base64Binary">base64Binary</a></span>&gt;&quot; <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The actual content</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="binary-definitions.html#Binary" title="A binary resource can contain any content, whether text, image, pdf, zip archive, etc." class="dict"><b>Binary</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  fhir:<a href="binary-definitions.html#Binary.contentType" title="MimeType of the binary content represented as a standard MimeType (BCP 13)." class="dict">Binary.contentType</a><a name="ttl-contentType"> </a>[ <a href="datatypes.html#code">code</a> ]; # 1..1 <span style="color: navy">MimeType of the binary content</span>
+  fhir:<a href="binary-definitions.html#Binary.content" title="The actual content, base64 encoded." class="dict">Binary.content</a><a name="ttl-content"> </a>[ <a href="datatypes.html#base64Binary">base64Binary</a> ]; # 1..1 <span style="color: navy">The actual content</span>
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Binary</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="binary.profile.xml.html">XML</a>, <a href="binary.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="binary.xsd">Schema</a>/<a href="binary.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="Binary.schema.json">Schema</a>, <a href="binary.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.34.3.1</span> 
+Terminology Bindings
+ <a href="binary.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="MimeType">Binary.contentType </td><td valign="top">The mime type of an attachment. Any valid mime type is allowed.</td><td><a href="terminologies.html#required">Required</a></td><td valign="top"><a href="http://www.rfc-editor.org/bcp/bcp13.txt">BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049) <img src="external.png" style="text-align: baseline"/></a>  <!-- g --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+<a name="rest"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.34.3.2</span> Serving Binary Resources using the RESTful API <a href="binary.html#rest" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Binary resources behave slightly differently to all other resources on the RESTful API.
+Specifically, when a read request is made for the binary resource that doesn't explicitly
+specify the FHIR content types &quot;application/fhir+xml&quot; or &quot;application/fhir+json&quot;, then 
+the content should be returned using the content type stated in the resource. 
+e.g. if the content type in the resource is &quot;application/pdf&quot;, then the content should
+be returned as a PDF directly. 
+</p>
+<p>
+Note that due to the way the web infrastructure works, it is not possible to make blanket
+rules about the relationship between the &quot;Accept&quot; field in the HTTP request, and the 
+return type, which is why there is no hard rule about this. However the intent is that
+unless specifically requested, the FHIR XML/JSON representation is not returned. 
+</p>
+<p>
+Note that in the native binary representation, the normal resource <a href="resource.html#meta">metadata</a> 
+is not available directly, though some of it is replicated in the HTTP response headers.
+</p>
+<p>
+When a binary is written the server (<a href="http.html#create">create</a>/<a href="http.html#update">update</a> - POST or PUT),
+the data is accepted as is and treated as a the binary content of a <code>Binary</code>, including when the content type is &quot;application/fhir+xml&quot; or &quot;application/fhir+json&quot;,
+except for the special case where the content is actually a <code>Binary</code> resource.
+</p>
+<p>
+Note that when client requests a binary resource using a generic mime type (application/xml, text/xml, or application/json),
+the server SHOULD return the content directly if the content-type format matches the 
+requested mime type (e.g. if the Accept header is appplication/json, and the <code>contentType</code>
+is vnd.xacml+json). However servers may not always be able to interpret mime types correctly,
+and clients SHOULD be prepared to receive either format.
+</p>
+<p>
+Note that the _summary parameter does not apply when the mime type is not one of the stanard FHIR content types.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.34.3.3<a name="2.34.3.3"> </a></span> Security Considerations <a href="binary.html#2.34.3.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Binary resources are not constrained, and therefore can be of any content type and encoding. 
+Therefore extra care needs to be taken to validate the content of the Binary resource against 
+malicious or malformed content. For more details see <a href="security.html#narrative">Security of Narrative</a>.
+</p>
+  <!-- <a name="binary"> </a>
+<h3>Binary Support</h3>
+<p>
+FHIR servers can choose to support <a href="compartmentdefinition.html">Binary Resources</a>
+at the end-point [base]/Binary. The binary end-point accepts
+any kind of content, such as images and other media, documents (CDA, 
+PDF, Word etc.), plain text, XML or anything else, and stores the 
+content as is, along with the content type provided by the HTTP headers. 
+</p>
+<p>
+Binary resources function with the same interactions as described
+above. The _format  parameter has no meaning when used with binary 
+resources: they are always represented using their original content type.
+</p>
+<p>
+Note that on GET, POST, and PUT operations, the HTTP content-type
+header is the mime type of the binary resource, and the HTTP body is
+the resource in its binary form. (The <a href="xml.html#binary">XML</a> 
+and <a href="json.html#binary">JSON</a> Bundle Representations for binary 
+resources are only used in bundles). 
+</p>
+<div class="example">
+<p>
+Here is the request and response to a read operation on a CDA document:
+</p>
+<pre>
+GET /[path]/Binary/4 HTTP/1.1
+Host: [server]
+Accept: */*
+
+HTTP/1.1 200 OK
+Content-Type: text/xml
+Access-Control-Allow-Origin: *
+Last-Modified: Thu, 24 Oct 2013 00:41:55 +0000
+ETag: 1
+
+&lt;ClinicalDocument xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+  xmlns=&quot;urn:hl7-org:v3&quot;xmlns:cda=&quot;urn:hl7-org:v3&quot;&gt;
+...  [snip] ...
+&lt;/ClinicalDocument&gt;
+</pre>
+</div>
+
+<p>
+Searching Binary resources may use the following parameters:
+</p>
+
+<table class="list">
+<tbody><tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>_id</td><td><a href="search.html#token">token</a></td><td>The logical resource id associated with the resource (must be supported by all servers)</td></tr>
+<tr><td>size</td><td><a href="search.html#number">number</a></td><td>Size of the resource in bytes</td></tr>
+<tr><td>contenttype</td><td><a href="search.html#token">token</a></td><td>Content Type of the resource</td></tr>
+</tbody></table> -->
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.34.4</span> Search Parameters <a href="binary.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>contenttype</td><td><a href="search.html#token">token</a></td><td>MimeType of the binary content</td><td>Binary.contentType</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fbinary.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fbinary.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

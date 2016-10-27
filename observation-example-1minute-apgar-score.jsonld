@@ -1,0 +1,443 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/1minute-apgar-score",
+  "Resource.id": {
+    "id.value": "1minute-apgar-score"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 1minute-apgar-score</p><p><b>status</b>: final</p><p><b>category</b>: Survey <span>(Details : {http://hl7.org/fhir/observation-category code 'survey' = 'Survey', given as 'Survey'})</span></p><p><b>code</b>: 1 minute Apgar Score <span>(Details : {LOINC code '9272-6' = '1 minute Apgar Score', given as '1 minute Apgar Score'}; {SNOMED CT code '169895004' = 'Apgar at 1 minute', given as 'Apgar at 1 minute'})</span></p><p><b>subject</b>: <a>Patient/infant</a></p><p><b>effective</b>: May 18, 2016 10:33:22 PM</p><p><b>performer</b>: <a>Practitioner/example</a></p><p><b>value</b>: 0 {score}<span> (Details: UCUM code {score} = '{score}')</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Apgar color score <span>(Details : {LOINC code '32406-1' = '1 minute Apgar Color', given as '1 minute Apgar Color'}; {SNOMED CT code '249227004' = 'Apgar color score (observable entity)', given as 'Apgar color score'})</span></p><p><b>value</b>: 0. The baby's whole body is completely bluish-gray or pale <span>(Details : {http://loinc.org/la code 'LA6722-8' = 'LA6722-8', given as 'The baby's whole body is completely bluish-gray or pale'}; {http:/acme.ped/apgarcolor code '0' = '0)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar respiratory effort score <span>(Details : {LOINC code '32407-9' = '1 minute Apgar Heart rate', given as '1 minute Apgar Heart Rate'}; {SNOMED CT code '249223000' = 'Apgar heart rate score (observable entity)', given as 'Apgar heart rate score'})</span></p><p><b>value</b>: 0. No heart rate <span>(Details : {http://loinc.org/la code 'LA6716-0' = 'LA6716-0', given as 'No heart rate'}; {http:/acme.ped/apgarheartrate code '0' = '0)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar response to stimulus score <span>(Details : {LOINC code '32409-5' = '1 minute Apgar Reflex irritability', given as '1 minute Apgar Reflex Irritability'}; {SNOMED CT code '249226008' = 'Apgar response to stimulus score (observable entity)', given as 'Apgar response to stimulus score'})</span></p><p><b>value</b>: 0. No response to airways being suctioned <span>(Details : {http://loinc.org/la code 'LA6719-4' = 'LA6719-4', given as 'No response to airways being suctioned'}; {http:/acme.ped/apgarreflexirritability code '0' = '0)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar muscle tone score <span>(Details : {LOINC code '32408-7' = '1 minute Apgar Muscle tone', given as '1 minute Apgar Muscle Tone'}; {SNOMED CT code '249225007' = 'Apgar muscle tone score (observable entity)', given as 'Apgar muscle tone score'})</span></p><p><b>value</b>: 0. Limp; no movement <span>(Details : {http://loinc.org/la code 'LA6713-7' = 'LA6713-7', given as 'Limp; no movement'}; {http:/acme.ped/apgarmuscletone code '0' = '0)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar respiratory effort score <span>(Details : {LOINC code '32410-3' = '1 minute Apgar Respiratory effort', given as '1 minute Apgar Respiratory effort'}; {SNOMED CT code '249224006' = 'Apgar respiratory effort score (observable entity)', given as 'Apgar respiratory effort score'})</span></p><p><b>value</b>: 0. Not breathing <span>(Details : {http://loinc.org/la code 'LA6725-1' = 'LA6725-1', given as 'Not breathing'}; {http:/acme.ped/apgarrespiratoryeffort code '0' = '0)</span></p></blockquote></div>"
+    }
+  },
+  "Observation.status": {
+    "code.value": "final"
+  },
+  "Observation.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/observation-category"
+          },
+          "Coding.code": {
+            "code.value": "survey"
+          },
+          "Coding.display": {
+            "string.value": "Survey"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "string.value": "Survey"
+      }
+    }
+  ],
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "9272-6"
+        },
+        "Coding.display": {
+          "string.value": "1 minute Apgar Score"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "169895004"
+        },
+        "Coding.display": {
+          "string.value": "Apgar at 1 minute"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "1 minute Apgar Score"
+    },
+    "Resource.concept": "http://loinc.org/owl#9272-6",
+    "Resource.concept": "http://snomed.info/sct#169895004"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/infant"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/infant"
+  },
+  "Observation.effectiveDateTime": {
+    "dateTime.value": "2016-05-18T22:33:22Z"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/example"
+      }
+    }
+  ],
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "decimal.value": 0
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "{score}"
+    }
+  },
+  "Observation.component": [
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "32406-1"
+            },
+            "Coding.display": {
+              "string.value": "1 minute Apgar Color"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "249227004"
+            },
+            "Coding.display": {
+              "string.value": "Apgar color score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Apgar color score"
+        },
+        "Resource.concept": "http://loinc.org/owl#32406-1",
+        "Resource.concept": "http://snomed.info/sct#249227004"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 0
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "code.value": "LA6722-8"
+            },
+            "Coding.display": {
+              "string.value": "The baby's whole body is completely bluish-gray or pale"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ped/apgarcolor"
+            },
+            "Coding.code": {
+              "code.value": "0"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "0. The baby's whole body is completely bluish-gray or pale"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "32407-9"
+            },
+            "Coding.display": {
+              "string.value": "1 minute Apgar Heart Rate"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "249223000"
+            },
+            "Coding.display": {
+              "string.value": "Apgar heart rate score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Apgar respiratory effort score"
+        },
+        "Resource.concept": "http://loinc.org/owl#32407-9",
+        "Resource.concept": "http://snomed.info/sct#249223000"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 0
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "code.value": "LA6716-0"
+            },
+            "Coding.display": {
+              "string.value": "No heart rate"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ped/apgarheartrate"
+            },
+            "Coding.code": {
+              "code.value": "0"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "0. No heart rate"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "32409-5"
+            },
+            "Coding.display": {
+              "string.value": "1 minute Apgar Reflex Irritability"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "249226008"
+            },
+            "Coding.display": {
+              "string.value": "Apgar response to stimulus score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Apgar response to stimulus score"
+        },
+        "Resource.concept": "http://loinc.org/owl#32409-5",
+        "Resource.concept": "http://snomed.info/sct#249226008"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 0
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "code.value": "LA6719-4"
+            },
+            "Coding.display": {
+              "string.value": "No response to airways being suctioned"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ped/apgarreflexirritability"
+            },
+            "Coding.code": {
+              "code.value": "0"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "0. No response to airways being suctioned"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "32408-7"
+            },
+            "Coding.display": {
+              "string.value": "1 minute Apgar Muscle Tone"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "249225007"
+            },
+            "Coding.display": {
+              "string.value": "Apgar muscle tone score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Apgar muscle tone score"
+        },
+        "Resource.concept": "http://loinc.org/owl#32408-7",
+        "Resource.concept": "http://snomed.info/sct#249225007"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 0
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "code.value": "LA6713-7"
+            },
+            "Coding.display": {
+              "string.value": "Limp; no movement"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ped/apgarmuscletone"
+            },
+            "Coding.code": {
+              "code.value": "0"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "0. Limp; no movement"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "32410-3"
+            },
+            "Coding.display": {
+              "string.value": "1 minute Apgar Respiratory effort"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "249224006"
+            },
+            "Coding.display": {
+              "string.value": "Apgar respiratory effort score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "Apgar respiratory effort score"
+        },
+        "Resource.concept": "http://loinc.org/owl#32410-3",
+        "Resource.concept": "http://snomed.info/sct#249224006"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "uri.value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "decimal.value": 0
+                }
+              }
+            ],
+            "Coding.system": {
+              "uri.value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "code.value": "LA6725-1"
+            },
+            "Coding.display": {
+              "string.value": "Not breathing"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http:/acme.ped/apgarrespiratoryeffort"
+            },
+            "Coding.code": {
+              "code.value": "0"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "string.value": "0. Not breathing"
+        }
+      }
+    }
+  ]
+}

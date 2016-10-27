@@ -1,0 +1,337 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ValueSet - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/valueset-operations.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="terminology-module.html"><img src="terminology.png"/> Terminology</a></li>        <li><a href="valueset.html">ValueSet</a></li>        <li><b>Operations</b></li>          <!-- valueset.html / res-Operations / ValueSet -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="valueset.html">Content</a></li><li><a href="valueset-examples.html">Examples</a></li><li><a href="valueset-definitions.html">Detailed Descriptions</a></li><li><a href="valueset-mappings.html">Mappings</a></li><li><a href="valueset-profiles.html">Profiles &amp; Extensions</a></li><li class="active"><a href="#">Operations</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">4.7.16<a name="4.7.16"> </a></span> Resource ValueSet - Operations <a href="valueset-operations.html#4.7.16" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+This resource has 2 operations associated with it:
+</p>
+<table class="list">
+<tr><td><a href="#expand">$expand</a></td><td>Value Set Expansion</td></tr>
+<tr><td><a href="#validate-code">$validate-code</a></td><td>Value Set based Validation</td></tr>
+</table>
+
+<p>
+For more information about operations, including how they are invoked, see <a href="operations.html">Operations</a>.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">4.7.16.1<a name="4.7.16.1"> </a></span> Value Set Expansion<a name="expand"> </a> <a href="valueset-operations.html#4.7.16.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation.   If the operation is not called at the instance level, one of the in parameters identifier, context or valueset must be provided.  An expanded value set will be returned, or an OperationOutcome with an error message.</p>
+
+<p><a href="operation-valueset-expand.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/ValueSet/$expand</p>
+<p>URL: [base]/ValueSet/[id]/$expand</p>
+<table class="grid">
+<tr><td colspan="6"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>identifier</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>A logical value set identifier (i.e. ValueSet.url). The server must know the value set (e.g. it is defined explicitly in the server's value sets, or it is defined implicitly by some code system known to the server</p>
+</td></tr><tr><td>valueSet</td><td>0..1</td><td><a href="valueset.html">ValueSet</a></td><td/><td/><td><p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion</p>
+</td></tr><tr><td>context</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>The context of the value set, so that the server can resolve this to a value set to expand. The recommended format for this URI is [Structure Definition URL]#[name or path into structure definition] e.g. http://hl7.org/fhir/StructureDefinition/observation-hspc-height-hspcheight#Observation.interpretation. Other forms may be used but are not defined. This form is only useable if the terminology server also has access to the profile registry that the server is using, but can be used to delegate the mapping from an application context to a binding at run-time</p>
+</td></tr><tr><td>filter</td><td>0..1</td><td><a href="datatypes.html#string">string</a></td><td/><td/><td><p>A text filter that is applied to restrict the codes that are returned (this is useful in a UI context). The interpretation of this is delegated to the server in order to allow to determine the most optimal search approach for the context</p>
+</td></tr><tr><td>profile</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>A reference to an external definition that provides additional control information about how the expansion is performed.  At this time, there is no agreed format or functionality for the target of this URI. The <a href="http://www.nlm.nih.gov/vsac/support/authorguidelines/updatingvaluesets.html">VSAC Documentation <img src="external.png" style="text-align: baseline"/></a> provides one example of the use of this parameter.  Implementers using this element will need to agree on an appropriate mechanism for use within their interoperability community.  Known uses for profile include: * whether to return the value set content logical definition with the expansion * whether to include inactive concepts</p>
+</td></tr><tr><td>date</td><td>0..1</td><td><a href="datatypes.html#dateTime">dateTime</a></td><td/><td/><td><p>The date for which the expansion should be generated.  if a date is provided, it means that the server should use the value set / code system definitions as they were on the given date, or return an error if this is not possible.  Normally, the date is the current conditions (which is the default value) but under some circumstances, systems need to generate an expansion as it would have been in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.</p>
+</td></tr><tr><td>offset</td><td>0..1</td><td><a href="datatypes.html#integer">integer</a></td><td/><td/><td><p>Paging support - where to start if a subset is desired (default = 0)</p>
+</td></tr><tr><td>count</td><td>0..1</td><td><a href="datatypes.html#integer">integer</a></td><td/><td/><td><p>Paging support - how many codes should be provided in a partial view. Paging only applies to flat expansions - servers ignore paging if the expansion is not flat.  If count = 0, the client is asking how large the expansion is. Servers SHOULD honor this request for hierarchical expansions as well, and simply return the overall count</p>
+</td></tr><tr><td>includeDesignations</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>Controls whether concept designations are to be included or excluded in value set expansions. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>includeDefinition</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>Controls whether the value set definition is included or excluded in value set expansions. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>activeOnly</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>Controls whether inactive concepts are included or excluded in value set expansions. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>excludeNested</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>Controls whether or not the value set expansion includes nested codes (i.e. ValueSet.expansion.contains.contains). Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>excludeNotForUI</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>Controls whether or not the value set expansion includes codes which cannot be displayed in user interfaces. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>excludePostCoordinated</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>Controls whether or not the value set expansion includes post coordinated codes. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>displayLanguage</td><td>0..1</td><td><a href="datatypes.html#code">code</a></td><td/><td/><td><p>Specifies the language to be used for description in the expansions i.e. the language to be used for ValueSet.expansion.contains.display. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td>limitedExpansion</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>If the value set being expanded is incomplete (because it is too big to expand), return a limited expansion (a subset) with an indicator that expansion is incomplete. Overrides the value in the expansion profile if there is one</p>
+</td></tr><tr><td colspan="6"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="valueset.html">ValueSet</a></td><td/><td/><td><p>The result of the expansion</p>
+<p>Note: as this the only out parameter, it is a resource, and it has the name 'return', the result of this operation is returned directly as a resource</p></td></tr></table>
+<p>The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used.   Clients can work through large flat expansions in a set of pages (partial views of the full expansion) instead of just getting the full expansion in a single exchange by using offset and count parameters. Servers are not obliged to support paging, but if they do, SHALL support both the offset and count parameters. Hierarchical expansions are not subject to paging and servers simply return the entire expansion.  Different servers may return different results from expanding a value set for the following reasons:  * The underlying code systems are different (e.g. different versions, possibly with different defined behavior) * The server optimizes filter includes differently, such as sorting by code frequency * Servers introduce arbitrary groups to assist a user to navigate the lists based either on extensions in the definition, or additional knowledge available to the server</p>
+<p>When a server cannot correctly expand a value set because it does not fully understand the code systems (e.g. it has the wrong version, or incomplete definitions) then it SHALL return an error. If the value set itself is unbounded due to the inclusion of post-coordinated value sets (e.g. SNOMED CT, UCUM), then the extension <a href="extension-valueset-unclosed.html">http://hl7.org/fhir/StructureDefinition/valueset-unclosed</a> can be used to indicate that the expansion is incomplete</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.7.16.1.1<a name="4.7.16.1.1"> </a></span> Examples <a href="valueset-operations.html#4.7.16.1.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Expanding a value set that is already registered on the server as &quot;23&quot;, with a text filter of &quot;abdo&quot; (Request):</p>
+<pre>
+GET [base]/ValueSet/23/$expand?filter=abdo
+</pre>
+<p>Expanding a value set that is specififed by the client (using JSON) (Request):</p>
+<pre>
+POST [base]/ValueSet/23/$expand
+[other headers]
+
+{
+  &quot;resourceType&quot; : &quot;Parameters&quot;,
+  &quot;parameter&quot; : [
+     {
+     &quot;name&quot; : &quot;valueSet&quot;,
+     &quot;resource&quot; : {
+       &quot;resourceType&quot; : &quot;ValueSet&quot;,
+     [value set details]
+     }
+   }
+  ]
+}
+</pre>
+<p>Response:</p>
+<pre>
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;ValueSet xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;!-- the server SHOULD populate the id with a newly created UUID
+    so clients can easily track a particular expansion  --&gt;
+  &lt;id value=&quot;43770626-f685-4ba8-8d66-fb63e674c467&quot;/&gt;
+  &lt;!-- no need for meta, though it is allowed for security labels, profiles --&gt;
+
+  &lt;!-- other value set details --&gt;
+  &lt;expansion&gt;
+    &lt;!-- when expanded --&gt;
+    &lt;timestamp value=&quot;20141203T08:50:00+11:00&quot;/&gt;
+  &lt;contains&gt;
+    &lt;!-- expansion contents --&gt;
+  &lt;/contains&gt;
+  &lt;/expansion&gt;
+&lt;/ValueSet&gt;
+</pre>
+<p>&nbsp;</p><h3 class="self-link-parent"><span class="sectioncount">4.7.16.2<a name="4.7.16.2"> </a></span> Value Set based Validation<a name="validate-code"> </a> <a href="valueset-operations.html#4.7.16.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>Validate that a coded value is in the set of codes allowed by a value set.   If the operation is not called at the instance level, one of the in parameters &quot;identifier&quot; or &quot;valueset&quot; must be provided.  One (and only one) of the in parameters (code, coding, codeableConcept) must be provided.  The operation returns a result (true / false), an error message, and the recommended display for the code</p>
+
+<p><a href="operation-valueset-validate-code.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/ValueSet/$validate-code</p>
+<p>URL: [base]/ValueSet/[id]/$validate-code</p>
+<table class="grid">
+<tr><td colspan="6"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>identifier</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>A logical value set identifier (i.e. ValueSet.url). The server must know the value set (e.g. it is defined explicitly in the server's value sets, or it is defined implicitly by some code system known to the server</p>
+</td></tr><tr><td>context</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>The context of the value set, so that the server can resolve this to a value set to validate against. The recommended format for this URI is [Structure Definition URL]#[name or path into structure definition] e.g. http://hl7.org/fhir/StructureDefinition/observation-hspc-height-hspcheight#Observation.interpretation. Other forms may be used but are not defined. This form is only useable if the terminology server also has access to the profile registry that the server is using, but can be used to delegate the mapping from an application context to a binding at run-time</p>
+</td></tr><tr><td>valueSet</td><td>0..1</td><td><a href="valueset.html">ValueSet</a></td><td/><td/><td><p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion. This parameter is used when the client wants the server to expand a value set that is not stored on the server</p>
+</td></tr><tr><td>code</td><td>0..1</td><td><a href="datatypes.html#code">code</a></td><td/><td/><td><p>The code that is to be validated. If a code is provided, a system must be provided</p>
+</td></tr><tr><td>system</td><td>0..1</td><td><a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>The system for the code that is to be validated</p>
+</td></tr><tr><td>version</td><td>0..1</td><td><a href="datatypes.html#string">string</a></td><td/><td/><td><p>The version of the system, if one was provided in the source data</p>
+</td></tr><tr><td>display</td><td>0..1</td><td><a href="datatypes.html#string">string</a></td><td/><td/><td><p>The display associated with the code, if provided. If a display is provided a code must be provided. If no display is provided, the server cannot validate the display value, but may choose to return a recommended display name in an extension in the outcome. Whether displays are case sensitive is code system dependent</p>
+</td></tr><tr><td>coding</td><td>0..1</td><td><a href="datatypes.html#Coding">Coding</a></td><td/><td/><td><p>A coding to validate</p>
+</td></tr><tr><td>codeableConcept</td><td>0..1</td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td/><td/><td><p>A full codeableConcept to validate. The server returns true if one of the coding values is in the value set, and may also validate that the codings are not in conflict with each other if more than one is present</p>
+</td></tr><tr><td>date</td><td>0..1</td><td><a href="datatypes.html#dateTime">dateTime</a></td><td/><td/><td><p>The date for which the validation should be checked. Normally, this is the current conditions (which is the default values) but under some circumstances, systems need to validate that a correct code was used at some point in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.</p>
+</td></tr><tr><td>abstract</td><td>0..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>if true, then an abstract code is allowed to be used in the context of the code that is being validated. Typically, abstract codes are allowed to be used in value set specifications (e.g. any code that is subsumed by an abstract code). If false (which is the default value), then only concrete codes as defined by the value set are allowed</p>
+</td></tr><tr><td colspan="6"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>result</td><td>1..1</td><td><a href="datatypes.html#boolean">boolean</a></td><td/><td/><td><p>True if the concept details supplied are valid</p>
+</td></tr><tr><td>message</td><td>0..1</td><td><a href="datatypes.html#string">string</a></td><td/><td/><td><p>Error details, if result = false. If this is provided when result = true, the message carries hints and warnings</p>
+</td></tr><tr><td>display</td><td>0..1</td><td><a href="datatypes.html#string">string</a></td><td/><td/><td><p>A valid display for the concept if the system wishes to display this to a user</p>
+</td></tr></table>
+
+<h4 class="self-link-parent"><span class="sectioncount">4.7.16.2.1<a name="4.7.16.2.1"> </a></span> Examples <a href="valueset-operations.html#4.7.16.2.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>Simple validation of a code/system against a known value set (Request):</p>
+<pre>
+GET [base]/ValueSet/23/$validate-code?system=http://loinc.org&amp;code=1963-8&amp;display=test
+</pre>
+<p>Validate a CodeableConcept against a client specified value set (Request):</p>
+<pre>
+POST [base]/ValueSet/$validate-code
+[other headers]
+
+{
+  &quot;ResourceType&quot; : &quot;Parameters&quot;,
+  &quot;parameter&quot; : [
+    {
+    &quot;name&quot; : &quot;coding&quot;,
+    &quot;valueCodeableConcept&quot; : {
+      &quot;coding&quot; : {
+        &quot;system&quot; : &quot;http://loinc.org&quot;,
+          &quot;code&quot; : &quot;1963-8&quot;,
+      &quot;display&quot; : &quot;test&quot;
+      }
+    }
+  },
+  {
+    &quot;name&quot; : &quot;valueSet&quot;,
+    &quot;resource&quot;: {
+      &quot;resourceType&quot; : &quot;ValueSet&quot;,
+    [etc]
+    }
+  }
+  ]
+}
+</pre>
+<p>Test whether a Snomed Concept 399211009 (History of myocardial infarction) is subsumed by 22298006 (Myocardial infarction) (Request):</p>
+<pre>
+
+GET [base]/ValueSet/$validate-code?system=http://snomed.info/sct&amp;code=399211009&amp;identifier=http://snomed.info/sct?fhir_vs%3Disa/22298006
+</pre>
+<p>Response:</p>
+<pre>
+HTTP/1.1 200 OK
+[other headers]
+
+{
+  &quot;resourceType&quot; : &quot;Parameters&quot;,
+  &quot;parameter&quot; : [
+    {
+    &quot;name&quot; : &quot;result&quot;,
+    &quot;valueBoolean&quot; : &quot;false&quot;
+  },
+  {
+    &quot;name&quot; : &quot;message&quot;,
+    &quot;valueString&quot; : &quot;The display \&quot;test\&quot; is incorrect&quot;
+  },
+  {
+    &quot;name&quot; : &quot;display&quot;,
+    &quot;valueString&quot; : &quot;Bicarbonate [Moles/volume] in Serum&quot;
+  }
+  ]
+}
+</pre>
+<p>&nbsp;</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:25+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fvalueset-operations.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fvalueset-operations.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

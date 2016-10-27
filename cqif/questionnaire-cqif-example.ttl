@@ -1,0 +1,223 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Questionnaire/questionnaire-cqif-example> a fhir:Questionnaire;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "questionnaire-cqif-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/cqif-questionnaire";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">PHQ-9 Questionnaire with dynamic logic</div>"
+  ];
+  fhir:extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/cqif-basic-library" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://hl7.org/fhir/Library/phq-9-logic>;
+       fhir:Reference.reference [ fhir:value "Library/phq-9-logic" ]
+     ]
+  ];
+  fhir:Questionnaire.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "phq-9" ]
+  ];
+  fhir:Questionnaire.version [ fhir:value "1.0.0"];
+  fhir:Questionnaire.status [ fhir:value "draft"];
+  fhir:Questionnaire.title [ fhir:value "Patient Health Questionnaire (PHQ-9)"];
+  fhir:Questionnaire.concept [
+     fhir:index 0;
+     fhir:concept loinc:44249-1;
+     fhir:Coding.system [ fhir:value "http://loinc.org" ];
+     fhir:Coding.code [ fhir:value "44249-1" ];
+     fhir:Coding.display [ fhir:value "PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9" ]
+  ];
+  fhir:Questionnaire.subjectType [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:Questionnaire.item [
+     fhir:index 0;
+     fhir:Questionnaire.item.linkId [ fhir:value "LittleInterest" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44250-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44250-9" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Little interest or pleasure in doing things" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Questionnaire.item.linkId [ fhir:value "FeelingDown" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44255-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44255-8" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Feeling down, depressed, or hopeless" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Questionnaire.item.linkId [ fhir:value "TroubleSleeping" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44259-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44259-0" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Trouble falling or staying asleep" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Questionnaire.item.linkId [ fhir:value "FeelingTired" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44254-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44254-1" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Feeling tired or having little energy" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Questionnaire.item.linkId [ fhir:value "BadAppetite" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44251-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44251-7" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Poor appetite or overeating" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Questionnaire.item.linkId [ fhir:value "FeelingBadAboutSelf" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44258-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44258-2" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Feeling bad about yourself - or that you are a failure or have let yourself or your family down" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Questionnaire.item.linkId [ fhir:value "TroubleConcentrating" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44252-5;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44252-5" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Trouble concentrating on things, such as reading the newspaper or watching television" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Questionnaire.item.linkId [ fhir:value "MovingSpeaking" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44253-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44253-3" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/cqif-basic-calculatedValue" ];
+       fhir:Extension.valueString [ fhir:value "CalculateTotalScore" ]
+     ];
+     fhir:Questionnaire.item.linkId [ fhir:value "TotalScore" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44261-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44261-6" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "Total score" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDepressionAnswersList" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Questionnaire.item.linkId [ fhir:value "Difficulty" ];
+     fhir:Questionnaire.item.concept [
+       fhir:index 0;
+       fhir:concept loinc:44256-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "44256-6" ]
+     ];
+     fhir:Questionnaire.item.text [ fhir:value "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people" ];
+     fhir:Questionnaire.item.type [ fhir:value "choice" ];
+     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+     fhir:Questionnaire.item.options [
+       fhir:link <http://hl7.org/fhir/ValueSet/LOINCDifficultyAnswersList>;
+       fhir:Reference.reference [ fhir:value "ValueSet/LOINCDifficultyAnswersList" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Library/phq-9-logic> a fhir:Library .
+
+<http://hl7.org/fhir/ValueSet/LOINCDepressionAnswersList> a fhir:ValueSet, fhir:ValueSet, fhir:ValueSet, fhir:ValueSet, fhir:ValueSet, fhir:ValueSet, fhir:ValueSet, fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/LOINCDifficultyAnswersList> a fhir:ValueSet .
+
+# -------------------------------------------------------------------------------------
+

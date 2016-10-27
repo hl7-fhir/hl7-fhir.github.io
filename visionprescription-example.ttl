@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/VisionPrescription/33123> a fhir:VisionPrescription;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "33123"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n	  <p>OD -2.00 SPH         +2.00 add    0.5 p.d. BD</p>\n      <p>OS -1.00 -0.50 x 180 +2.00 add    0.5 p.d. BU</p>\n    </div>"
+  ];
+  fhir:VisionPrescription.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.happysight.com/prescription" ];
+     fhir:Identifier.value [ fhir:value "15013" ]
+  ];
+  fhir:VisionPrescription.status [ fhir:value "active"];
+  fhir:VisionPrescription.dateWritten [ fhir:value "2014-06-15"^^xsd:date];
+  fhir:VisionPrescription.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:VisionPrescription.prescriber [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:VisionPrescription.dispense [
+     fhir:index 0;
+     fhir:VisionPrescription.dispense.product [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ex-visionprescriptionproduct" ];
+       fhir:Coding.code [ fhir:value "lens" ]
+     ];
+     fhir:VisionPrescription.dispense.eye [ fhir:value "right" ];
+     fhir:VisionPrescription.dispense.sphere [ fhir:value "-2.00"^^xsd:decimal ];
+     fhir:VisionPrescription.dispense.prism [ fhir:value "0.5"^^xsd:decimal ];
+     fhir:VisionPrescription.dispense.base [ fhir:value "down" ];
+     fhir:VisionPrescription.dispense.add [ fhir:value "2.00"^^xsd:decimal ]
+  ], [
+     fhir:index 1;
+     fhir:VisionPrescription.dispense.product [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ex-visionprescriptionproduct" ];
+       fhir:Coding.code [ fhir:value "lens" ]
+     ];
+     fhir:VisionPrescription.dispense.eye [ fhir:value "left" ];
+     fhir:VisionPrescription.dispense.sphere [ fhir:value "-1.00"^^xsd:decimal ];
+     fhir:VisionPrescription.dispense.cylinder [ fhir:value "-0.50"^^xsd:decimal ];
+     fhir:VisionPrescription.dispense.axis [ fhir:value "180"^^xsd:int ];
+     fhir:VisionPrescription.dispense.prism [ fhir:value "0.5"^^xsd:decimal ];
+     fhir:VisionPrescription.dispense.base [ fhir:value "up" ];
+     fhir:VisionPrescription.dispense.add [ fhir:value "2.00"^^xsd:decimal ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

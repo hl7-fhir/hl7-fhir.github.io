@@ -1,0 +1,115 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/Media",
+  "$ref": "#/definitions/Media",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "Media": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json#/definitions/DomainResource"
+        },
+        {
+          "description": "A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a Media resource",
+              "type": "string",
+              "enum": [
+                "Media"
+              ]
+            },
+            "identifier": {
+              "description": "Identifiers associated with the image - these may include identifiers for the image itself, identifiers for the context of its collection (e.g. series ids) and context ids such as accession numbers or other workflow identifiers.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json#/definitions/Identifier"
+              }
+            },
+            "type": {
+              "description": "Whether the media is a photo (still image), an audio recording, or a video recording.",
+              "enum": [
+                "photo",
+                "video",
+                "audio"
+              ],
+              "type": "string"
+            },
+            "_type": {
+              "description": "Extensions for type",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "subtype": {
+              "description": "Details of the type of the media - usually, how it was acquired (what type of device). If images sourced from a DICOM system, are wrapped in a Media resource, then this is the modality.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "view": {
+              "description": "The name of the imaging view e.g. Lateral or Antero-posterior (AP).",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "subject": {
+              "description": "Who/What this Media is a record of.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "operator": {
+              "description": "The person who administered the collection of the image.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "deviceName": {
+              "description": "The name of the device / manufacturer of the device  that was used to make the recording.",
+              "type": "string"
+            },
+            "_deviceName": {
+              "description": "Extensions for deviceName",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "height": {
+              "description": "Height of the image in pixels (photo/video).",
+              "type": "number",
+              "pattern": "[1-9][0-9]*"
+            },
+            "_height": {
+              "description": "Extensions for height",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "width": {
+              "description": "Width of the image in pixels (photo/video).",
+              "type": "number",
+              "pattern": "[1-9][0-9]*"
+            },
+            "_width": {
+              "description": "Extensions for width",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "frames": {
+              "description": "The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.",
+              "type": "number",
+              "pattern": "[1-9][0-9]*"
+            },
+            "_frames": {
+              "description": "Extensions for frames",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "duration": {
+              "description": "The duration of the recording in seconds - for audio and video.",
+              "type": "number",
+              "pattern": "[0]|([1-9][0-9]*)"
+            },
+            "_duration": {
+              "description": "Extensions for duration",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "content": {
+              "description": "The actual content of the media - inline or by direct reference to the media source file.",
+              "$ref": "Attachment.schema.json#/definitions/Attachment"
+            }
+          },
+          "required": [
+            "content",
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

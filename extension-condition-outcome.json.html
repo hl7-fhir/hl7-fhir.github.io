@@ -1,0 +1,408 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Extension-condition-outcome.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/extension-condition-outcome.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="clinicalsummary-module.html"><img src="clinical.png"/> Clinical Summary</a></li>
+        <li><a href="condition.html">Condition</a></li>        <li><b>Extension</b></li>        <!-- extension-condition-outcome.json.html / extension / http://hl7.org/fhir/StructureDefinition/condition-outcome-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Extension-condition-outcome.json</h1>
+
+<p>
+<a href="extension-condition-outcome.json">Raw JSON</a> (<a href="extension-condition-outcome.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>A consequence of the Condition</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;StructureDefinition&quot;,
+  &quot;id&quot;: &quot;condition-outcome&quot;,
+  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/condition-outcome&quot;,
+  &quot;name&quot;: &quot;A consequence of the Condition&quot;,
+  &quot;title&quot;: &quot;Outcome&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;publisher&quot;: &quot;Health Level Seven, Inc. - FHIR WG&quot;,
+  &quot;contact&quot;: [
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;HL7&quot;
+        }
+      ]
+    }
+  ],
+  &quot;date&quot;: &quot;2015-02-21&quot;,
+  &quot;description&quot;: &quot;A result of the condition. The \&quot;Cause of death\&quot; for a patient is typically captured as an Observation.  The \&quot;outcome\&quot; doesn't imply causality.  Some outcomes may not be assessable until the condition.clinicalStatus is no longer active.&quot;,
+  &quot;fhirVersion&quot;: &quot;1.7.0&quot;,
+  &quot;mapping&quot;: [
+    {
+      &quot;identity&quot;: &quot;rim&quot;,
+      &quot;uri&quot;: &quot;http://hl7.org/v3&quot;,
+      &quot;name&quot;: &quot;RIM Mapping&quot;
+    }
+  ],
+  &quot;kind&quot;: &quot;complex-type&quot;,
+  &quot;abstract&quot;: false,
+  &quot;contextType&quot;: &quot;resource&quot;,
+  &quot;context&quot;: [
+    &quot;Condition&quot;
+  ],
+  &quot;type&quot;: &quot;Extension&quot;,
+  &quot;baseDefinition&quot;: &quot;http://hl7.org/fhir/StructureDefinition/Extension&quot;,
+  &quot;derivation&quot;: &quot;constraint&quot;,
+  &quot;snapshot&quot;: {
+    &quot;element&quot;: [
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition&quot;,
+        &quot;path&quot;: &quot;Extension&quot;,
+        &quot;short&quot;: &quot;A consequence of the Condition&quot;,
+        &quot;definition&quot;: &quot;A result of the condition. The \&quot;Cause of death\&quot; for a patient is typically captured as an Observation.  The \&quot;outcome\&quot; doesn't imply causality.  Some outcomes may not be assessable until the condition.clinicalStatus is no longer active.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;condition&quot;: [
+          &quot;ele-1&quot;
+        ],
+        &quot;constraint&quot;: [
+          {
+            &quot;key&quot;: &quot;ele-1&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;All FHIR elements must have a @value or children&quot;,
+            &quot;expression&quot;: &quot;children().count() &gt; id.count()&quot;,
+            &quot;xpath&quot;: &quot;@value|f:*|h:div&quot;,
+            &quot;source&quot;: &quot;Element&quot;
+          },
+          {
+            &quot;key&quot;: &quot;ext-1&quot;,
+            &quot;severity&quot;: &quot;error&quot;,
+            &quot;human&quot;: &quot;Must have either extensions or value[x], not both&quot;,
+            &quot;expression&quot;: &quot;extension.exists() != value.exists()&quot;,
+            &quot;xpath&quot;: &quot;exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])&quot;,
+            &quot;source&quot;: &quot;Extension&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.id&quot;,
+        &quot;path&quot;: &quot;Extension.id&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+        &quot;definition&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.extension:extension&quot;,
+        &quot;path&quot;: &quot;Extension.extension&quot;,
+        &quot;sliceName&quot;: &quot;extension&quot;,
+        &quot;short&quot;: &quot;Extension&quot;,
+        &quot;definition&quot;: &quot;An Extension&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;0&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.url&quot;,
+        &quot;path&quot;: &quot;Extension.url&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;identifies the meaning of the extension&quot;,
+        &quot;definition&quot;: &quot;Source of the definition for the extension code - a logical name or a URL.&quot;,
+        &quot;comments&quot;: &quot;The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Extension.url&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;fixedUri&quot;: &quot;http://hl7.org/fhir/StructureDefinition/condition-outcome&quot;,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.valueCodeableConcept&quot;,
+        &quot;path&quot;: &quot;Extension.valueCodeableConcept&quot;,
+        &quot;short&quot;: &quot;Value of extension&quot;,
+        &quot;definition&quot;: &quot;Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Extension.value[x]&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Codes that describe the assessed outcome of the condition.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/condition-outcome&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;differential&quot;: {
+    &quot;element&quot;: [
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition&quot;,
+        &quot;path&quot;: &quot;Extension&quot;,
+        &quot;short&quot;: &quot;A consequence of the Condition&quot;,
+        &quot;definition&quot;: &quot;A result of the condition. The \&quot;Cause of death\&quot; for a patient is typically captured as an Observation.  The \&quot;outcome\&quot; doesn't imply causality.  Some outcomes may not be assessable until the condition.clinicalStatus is no longer active.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.extension:extension&quot;,
+        &quot;path&quot;: &quot;Extension.extension&quot;,
+        &quot;sliceName&quot;: &quot;extension&quot;,
+        &quot;max&quot;: &quot;0&quot;
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.url&quot;,
+        &quot;path&quot;: &quot;Extension.url&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;fixedUri&quot;: &quot;http://hl7.org/fhir/StructureDefinition/condition-outcome&quot;
+      },
+      {
+        &quot;id&quot;: &quot;Extension:aconsequenceofthecondition.value[x]&quot;,
+        &quot;path&quot;: &quot;Extension.value[x]&quot;,
+        &quot;min&quot;: 1,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;CodeableConcept&quot;
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Codes that describe the assessed outcome of the condition.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/condition-outcome&quot;
+          }
+        }
+      }
+    ]
+  }
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fextension-condition-outcome.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fextension-condition-outcome.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

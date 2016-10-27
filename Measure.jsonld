@@ -1,0 +1,149 @@
+﻿{
+  "@context": {
+    "Measure.url": {
+      "@id": "http://hl7.org/fhir/Measure.url",
+      "@type": "http://hl7.org/fhir/uri"
+    },
+    "Measure.identifier": {
+      "@id": "http://hl7.org/fhir/Measure.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "Measure.version": {
+      "@id": "http://hl7.org/fhir/Measure.version",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.name": {
+      "@id": "http://hl7.org/fhir/Measure.name",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.title": {
+      "@id": "http://hl7.org/fhir/Measure.title",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.status": {
+      "@id": "http://hl7.org/fhir/Measure.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "Measure.experimental": {
+      "@id": "http://hl7.org/fhir/Measure.experimental",
+      "@type": "http://hl7.org/fhir/boolean"
+    },
+    "Measure.date": {
+      "@id": "http://hl7.org/fhir/Measure.date",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "Measure.description": {
+      "@id": "http://hl7.org/fhir/Measure.description",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.purpose": {
+      "@id": "http://hl7.org/fhir/Measure.purpose",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.usage": {
+      "@id": "http://hl7.org/fhir/Measure.usage",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.approvalDate": {
+      "@id": "http://hl7.org/fhir/Measure.approvalDate",
+      "@type": "http://hl7.org/fhir/date"
+    },
+    "Measure.lastReviewDate": {
+      "@id": "http://hl7.org/fhir/Measure.lastReviewDate",
+      "@type": "http://hl7.org/fhir/date"
+    },
+    "Measure.effectivePeriod": {
+      "@id": "http://hl7.org/fhir/Measure.effectivePeriod",
+      "@type": "http://hl7.org/fhir/Period"
+    },
+    "Measure.useContext": {
+      "@id": "http://hl7.org/fhir/Measure.useContext",
+      "@type": "http://hl7.org/fhir/UsageContext"
+    },
+    "Measure.jurisdiction": {
+      "@id": "http://hl7.org/fhir/Measure.jurisdiction",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "Measure.topic": {
+      "@id": "http://hl7.org/fhir/Measure.topic",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "Measure.contributor": {
+      "@id": "http://hl7.org/fhir/Measure.contributor",
+      "@type": "http://hl7.org/fhir/Contributor"
+    },
+    "Measure.publisher": {
+      "@id": "http://hl7.org/fhir/Measure.publisher",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.contact": {
+      "@id": "http://hl7.org/fhir/Measure.contact",
+      "@type": "http://hl7.org/fhir/ContactDetail"
+    },
+    "Measure.copyright": {
+      "@id": "http://hl7.org/fhir/Measure.copyright",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.relatedArtifact": {
+      "@id": "http://hl7.org/fhir/Measure.relatedArtifact",
+      "@type": "http://hl7.org/fhir/RelatedArtifact"
+    },
+    "Measure.library": {
+      "@id": "http://hl7.org/fhir/Measure.library",
+      "@type": "http://hl7.org/fhir/Reference(Library)"
+    },
+    "Measure.disclaimer": {
+      "@id": "http://hl7.org/fhir/Measure.disclaimer",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.scoring": {
+      "@id": "http://hl7.org/fhir/Measure.scoring",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "Measure.type": {
+      "@id": "http://hl7.org/fhir/Measure.type",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "Measure.riskAdjustment": {
+      "@id": "http://hl7.org/fhir/Measure.riskAdjustment",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.rateAggregation": {
+      "@id": "http://hl7.org/fhir/Measure.rateAggregation",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.rationale": {
+      "@id": "http://hl7.org/fhir/Measure.rationale",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.clinicalRecommendationStatement": {
+      "@id": "http://hl7.org/fhir/Measure.clinicalRecommendationStatement",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.improvementNotation": {
+      "@id": "http://hl7.org/fhir/Measure.improvementNotation",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.definition": {
+      "@id": "http://hl7.org/fhir/Measure.definition",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.guidance": {
+      "@id": "http://hl7.org/fhir/Measure.guidance",
+      "@type": "http://hl7.org/fhir/markdown"
+    },
+    "Measure.set": {
+      "@id": "http://hl7.org/fhir/Measure.set",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "Measure.group": {
+      "@id": "http://hl7.org/fhir/Measure.group",
+      "@type": "http://hl7.org/fhir/"
+    },
+    "Measure.supplementalData": {
+      "@id": "http://hl7.org/fhir/Measure.supplementalData",
+      "@type": "http://hl7.org/fhir/"
+    }
+  },
+  "@id": "http://hl7.org/fhir/Measure"
+}

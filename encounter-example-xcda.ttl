@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Encounter/xcda> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "xcda"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: xcda</p><p><b>identifier</b>: 1234213.52345873 (OFFICIAL)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>patient</b>: <a>Patient/xcda</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/xcda1</a></td></tr></table><p><b>reason</b>: Arm <span>(Details : {http://ihe.net/xds/connectathon/eventCodes code 'T-D8200' = 'T-D8200', given as 'Arm'})</span></p></div>"
+  ];
+  fhir:Encounter.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://healthcare.example.org/identifiers/enocunter" ];
+     fhir:Identifier.value [ fhir:value "1234213.52345873" ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+     fhir:Coding.code [ fhir:value "AMB" ];
+     fhir:Coding.display [ fhir:value "ambulatory" ]
+  ];
+  fhir:Encounter.patient [
+     fhir:link <http://hl7.org/fhir/Patient/xcda>;
+     fhir:Reference.reference [ fhir:value "Patient/xcda" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://hl7.org/fhir/Practitioner/xcda1>;
+       fhir:Reference.reference [ fhir:value "Practitioner/xcda1" ]
+     ]
+  ];
+  fhir:Encounter.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://ihe.net/xds/connectathon/eventCodes" ];
+       fhir:Coding.code [ fhir:value "T-D8200" ];
+       fhir:Coding.display [ fhir:value "Arm" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/xcda> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/xcda1> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

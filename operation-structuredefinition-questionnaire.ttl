@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "StructureDefinition-questionnaire"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/StructureDefinition-questionnaire"];
+  fhir:OperationDefinition.name [ fhir:value "Build Questionnaire"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "Generates a [[[Questionnaire]]] instance  based on a specified [[[StructureDefinition]]], creating questions for each core element or extension element found in the [[[StructureDefinition]]].    If the operation is not called at the instance level, one of the *identifier*, *profile* or *url* 'in' parameters must be provided. If more than one is specified, servers may raise an error or may resolve with the parameter of their choice. If called at the instance level, these parameters will be ignored. The response will contain a [[[Questionnaire]]] instance based on the specified [[[StructureDefinition]]] and/or an [[[OperationOutcome]]] resource with errors or warnings.  Nested groups are used to handle complex structures and data types.  If the 'supportedOnly' parameter is set to true, only those elements marked as \"must support\" will be included.  This operation is intended to enable auto-generation of simple interfaces for arbitrary profiles.  The 'questionnaire' approach to data entry has limitations that will make it less optimal than custom-defined interfaces.  However, this function may be useful for simple applications or for systems that wish to support \"non-core\" resources with minimal development effort."];
+  fhir:OperationDefinition.code [ fhir:value "questionnaire"];
+  fhir:OperationDefinition.comment [ fhir:value "**Open Issue**: Ideally, extensions should be populated in the generated [[[Questionnaire]]] that will support taking [[[QuestionnaireResponse]]] resources generated from the Questionnaire and turning them back into the appropriate resources."];
+  fhir:OperationDefinition.resource [
+     fhir:value "StructureDefinition";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "true"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "identifier" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "A logical profile identifier (i.e. 'StructureDefinition.identifier''). The server must know the profile or be able to retrieve it from other known repositories." ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "profile" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The [[[StructureDefinition]]] is provided directly as part of the request. Servers may choose not to accept profiles in this fashion" ];
+     fhir:OperationDefinition.type [ fhir:value "string" ];
+     fhir:OperationDefinition.searchType [ fhir:value "token" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "url" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The profile's official URL (i.e. 'StructureDefinition.url'). The server must know the profile or be able to retrieve it from other known repositories." ];
+     fhir:OperationDefinition.type [ fhir:value "uri" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "supportedOnly" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "If true, the questionnaire will only include those elements marked as \"mustSupport='true'\" in the StructureDefinition." ];
+     fhir:OperationDefinition.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The questionnaire form generated based on the StructureDefinition." ];
+     fhir:OperationDefinition.type [ fhir:value "Questionnaire" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

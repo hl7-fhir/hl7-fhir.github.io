@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="name-v3-representation"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>NameRepresentationUse</h2>
+      <div>
+        <p>A set of codes for each different representation of a name</p>
+
+      </div>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="v3/EntityNameUse/cs.html">http://hl7.org/fhir/v3/EntityNameUse</a>
+          <table class="none">
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>ABC</td>
+              <td>Alphabetic</td>
+              <td>Alphabetic transcription of name (Japanese: romaji)</td>
+            </tr>
+            <tr>
+              <td>IDE</td>
+              <td>Ideographic</td>
+              <td>Ideographic representation of name (e.g., Japanese kanji, Chinese characters)</td>
+            </tr>
+            <tr>
+              <td>SYL</td>
+              <td>Syllabic</td>
+              <td>Syllabic transcription of name (e.g., Japanese kana, Korean hangul)</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/name-v3-representation"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.2.910"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="NameRepresentationUse"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="A set of codes for each different representation of a name"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/EntityNameUse"/>
+      <concept>
+        <code value="ABC"/>
+      </concept>
+      <concept>
+        <code value="IDE"/>
+      </concept>
+      <concept>
+        <code value="SYL"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

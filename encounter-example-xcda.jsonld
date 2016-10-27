@@ -1,0 +1,75 @@
+{
+  "@context": "http://build.fhir.org/Encounter.jsonld",
+  "@context": "http://hl7.org/fhir/Encounter/xcda",
+  "Resource.id": {
+    "id.value": "xcda"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: xcda</p><p><b>identifier</b>: 1234213.52345873 (OFFICIAL)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>patient</b>: <a>Patient/xcda</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/xcda1</a></td></tr></table><p><b>reason</b>: Arm <span>(Details : {http://ihe.net/xds/connectathon/eventCodes code 'T-D8200' = 'T-D8200', given as 'Arm'})</span></p></div>"
+    }
+  },
+  "Encounter.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://healthcare.example.org/identifiers/enocunter"
+      },
+      "Identifier.value": {
+        "string.value": "1234213.52345873"
+      }
+    }
+  ],
+  "Encounter.status": {
+    "code.value": "finished"
+  },
+  "Encounter.class": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/v3/ActCode"
+    },
+    "Coding.code": {
+      "code.value": "AMB"
+    },
+    "Coding.display": {
+      "string.value": "ambulatory"
+    }
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/xcda"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/xcda"
+  },
+  "Encounter.participant": [
+    {
+      "Encounter.participant.individual": {
+        "Reference.reference": {
+          "string.value": "Practitioner/xcda1"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/xcda1"
+      }
+    }
+  ],
+  "Encounter.reason": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://ihe.net/xds/connectathon/eventCodes"
+          },
+          "Coding.code": {
+            "code.value": "T-D8200"
+          },
+          "Coding.display": {
+            "string.value": "Arm"
+          }
+        }
+      ]
+    }
+  ]
+}

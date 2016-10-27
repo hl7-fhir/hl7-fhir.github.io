@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationAdministration xmlns="http://hl7.org/fhir"> 
+  <id value="medadmin0305"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0305</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0306; Adcetris <span>(Details : {http://hl7.org/fhir/sid/ndc code &#39;51144-050-01&#39; = &#39;51144-050-01&#39;, given as &#39;Adcetris&#39;})</span>; isBrand</p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>effectiveTime</b>: Jan 15, 2015 4:30:00 AM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0316</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>1.8 mg/kg IV infusion over 30 minutes</td><td>Intravenous <span>(Details : {SNOMED CT code &#39;255560000&#39; = &#39;Intravenous (qualifier value)&#39;, given as &#39;Intravenous&#39;})</span></td><td>1.8 mg/kg<span> (Details: UCUM code mg/kg = &#39;mg/kg&#39;)</span></td><td>20 min<span> (Details: UCUM code min = &#39;min&#39;)</span></td></tr></table></div></text><contained>
+    <Medication>
+        <id value="med0306"/>
+        <code>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/ndc"/>
+            <code value="51144-050-01"/>
+            <display value="Adcetris"/>
+          </coding>
+        </code>
+        <isBrand value="true"/>
+        <manufacturer>
+          <reference value="Organization/mmanu"/>
+        </manufacturer>
+        <product>
+          <form>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="421637006"/>
+              <display value="Lyophilized powder for injectable solution (qualifier value) "/>
+            </coding>
+          </form>
+          <batch>
+            <lotNumber value="12345"/>
+            <expirationDate value="2019-10-31"/>
+          </batch>
+        </product>
+      
+    </Medication>
+  </contained>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="#med0306"/> 
+  </medicationReference>
+ <patient>
+   <reference value="Patient/pat1"/>
+   <display value="Donald Duck"/> 
+  </patient>
+  <encounter> 
+    <reference value="Encounter/f001"/>
+    <display value="encounter who leads to this prescription"/>
+  </encounter>
+ <effectiveTimePeriod>
+  <start value="2015-01-15T04:30:00+01:00"/>
+   <end value="2015-01-15T14:30:00+01:00"/>
+</effectiveTimePeriod>
+  <performer>
+    <reference value="Practitioner/f007"/>
+    <display value="Patrick Pump"/>
+  </performer>
+  <prescription>
+    <reference value="MedicationRequest/medrx0316"/>
+  </prescription>
+  <dosage>
+    <text value="1.8 mg/kg IV infusion over 30 minutes"/>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="255560000"/>
+        <display value="Intravenous"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="1.8"/>
+      <unit value="mg/kg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/kg"/> 
+    </dose>
+    <rateQuantity>
+      <value value="20"/>
+      <unit value="min"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="min"/> 
+    </rateQuantity>
+  </dosage>
+</MedicationAdministration>

@@ -1,0 +1,337 @@
+{
+  "@context": "http://build.fhir.org/MedicationRequest.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationRequest/medrx0302",
+  "Resource.id": {
+    "id.value": "medrx0302"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx0302</p><p><b>contained</b>: </p><p><b>identifier</b>: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>stage</b>: original-order <span>(Details : {[not stated] code 'original-order' = 'original-order)</span></p><p><b>medication</b>: id: med0320; Azithromycin 250mg capsule (product) <span>(Details : {SNOMED CT code '324252006' = 'Azithromycin 250mg capsule (product)', given as 'Azithromycin 250mg capsule (product)'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>reasonCode</b>: Traveller's Diarrhea (disorder) <span>(Details : {SNOMED CT code '11840006' = 'Traveler's diarrhea', given as 'Traveller's Diarrhea (disorder)'})</span></p><p><b>note</b>: Patient told to take with food</p><p><b>dosageInstruction</b>: , </p><h3>DispenseRequests</h3><table><tr><td>-</td><td><b>ValidityPeriod</b></td><td><b>NumberOfRepeatsAllowed</b></td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td></tr><tr><td>*</td><td>Jan 15, 2015 --&gt; Jan 15, 2016</td><td>1</td><td>6 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = 'TAB')</span></td><td>5 days<span> (Details: UCUM code d = 'd')</span></td></tr></table><h3>Substitutions</h3><table><tr><td>-</td><td><b>Allowed</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>formulary policy <span>(Details : {http://hl7.org/fhir code 'FP' = 'FP', given as 'formulary policy'})</span></td></tr></table></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0320"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "324252006"
+            },
+            "Coding.display": {
+              "string.value": "Azithromycin 250mg capsule (product)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#324252006"
+      }
+    }
+  ],
+  "MedicationRequest.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "string.value": "12345689"
+      }
+    }
+  ],
+  "MedicationRequest.status": {
+    "code.value": "active"
+  },
+  "MedicationRequest.stage": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "code.value": "original-order"
+        }
+      }
+    ]
+  },
+  "MedicationRequest.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0320"
+    }
+  },
+  "MedicationRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationRequest.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/f001"
+    },
+    "Reference.display": {
+      "string.value": "encounter who leads to this prescription"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "MedicationRequest.dateWritten": {
+    "dateTime.value": "2015-01-15"
+  },
+  "MedicationRequest.prescriber": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "string.value": "Patrick Pump"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationRequest.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "11840006"
+          },
+          "Coding.display": {
+            "string.value": "Traveller's Diarrhea (disorder)"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationRequest.note": [
+    {
+      "Annotation.text": {
+        "string.value": "Patient told to take with food"
+      }
+    }
+  ],
+  "MedicationRequest.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "Two tablets at once"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "311504000"
+              },
+              "Coding.display": {
+                "string.value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral Route"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "421521009"
+            },
+            "Coding.display": {
+              "string.value": "Swallow - dosing instruction imperative (qualifier value)"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#421521009"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 2
+        },
+        "Quantity.unit": {
+          "string.value": "TAB"
+        },
+        "Quantity.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+        },
+        "Quantity.code": {
+          "code.value": "TAB"
+        }
+      }
+    },
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 2
+      },
+      "DosageInstruction.text": {
+        "string.value": "One tablet daily for 4 days"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "code.value": "311504000"
+              },
+              "Coding.display": {
+                "string.value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 4
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "26643006"
+            },
+            "Coding.display": {
+              "string.value": "Oral Route"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#26643006"
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 1
+        },
+        "Quantity.unit": {
+          "string.value": "TAB"
+        },
+        "Quantity.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+        },
+        "Quantity.code": {
+          "code.value": "TAB"
+        }
+      }
+    }
+  ],
+  "MedicationRequest.dispenseRequest": {
+    "MedicationRequest.dispenseRequest.validityPeriod": {
+      "Period.start": {
+        "dateTime.value": "2015-01-15"
+      },
+      "Period.end": {
+        "dateTime.value": "2016-01-15"
+      }
+    },
+    "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed": {
+      "positiveInt.value": 1
+    },
+    "MedicationRequest.dispenseRequest.quantity": {
+      "Quantity.value": {
+        "decimal.value": 6
+      },
+      "Quantity.unit": {
+        "string.value": "TAB"
+      },
+      "Quantity.system": {
+        "uri.value": "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm"
+      },
+      "Quantity.code": {
+        "code.value": "TAB"
+      }
+    },
+    "MedicationRequest.dispenseRequest.expectedSupplyDuration": {
+      "Quantity.value": {
+        "decimal.value": 5
+      },
+      "Quantity.unit": {
+        "string.value": "days"
+      },
+      "Quantity.system": {
+        "uri.value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "code.value": "d"
+      }
+    }
+  },
+  "MedicationRequest.substitution": {
+    "MedicationRequest.substitution.allowed": {
+      "boolean.value": true
+    },
+    "MedicationRequest.substitution.reason": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir"
+          },
+          "Coding.code": {
+            "code.value": "FP"
+          },
+          "Coding.display": {
+            "string.value": "formulary policy"
+          }
+        }
+      ]
+    }
+  }
+}

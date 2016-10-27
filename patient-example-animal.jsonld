@@ -1,0 +1,168 @@
+{
+  "@context": "http://build.fhir.org/Patient.jsonld",
+  "@context": "http://hl7.org/fhir/Patient/animal",
+  "Resource.id": {
+    "id.value": "animal"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <table>\n        \n        <tbody>\n          \n          <tr>\n            \n            <td>Id</td>\n            \n            <td>Kenzi (Dog: Golden Retriever)</td>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>Owner</td>\n            \n            <td>Peter Chalmers, 534 Erewhon, Pleasantville, Vic, 3999</td>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>Contacts</td>\n            \n            <td>Work: (03) 5555 6473</td>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>Id</td>\n            \n            <td>Dog Tag: 1234123 (Maroondah City Council)</td>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n    \n    </div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "string.value": "Dog Tag"
+        }
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.maroondah.vic.gov.au/AnimalRegFees.aspx"
+      },
+      "Identifier.value": {
+        "string.value": "1234123"
+      },
+      "Identifier.period": {
+        "Period.start": {
+          "dateTime.value": "2010-05-31"
+        }
+      },
+      "Identifier.assigner": {
+        "Reference.display": {
+          "string.value": "Maroondah City Council"
+        }
+      }
+    }
+  ],
+  "Patient.active": {
+    "boolean.value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "code.value": "usual"
+      },
+      "HumanName.given": [
+        {
+          "string.value": "Kenzi"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "code.value": "female"
+  },
+  "Patient.birthDate": {
+    "date.value": "2010-03-23"
+  },
+  "Patient.contact": [
+    {
+      "Patient.contact.relationship": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "uri.value": "http://hl7.org/fhir/patient-contact-relationship"
+              },
+              "Coding.code": {
+                "code.value": "owner"
+              }
+            }
+          ]
+        }
+      ],
+      "Patient.contact.name": {
+        "HumanName.family": [
+          {
+            "string.value": "Chalmers"
+          }
+        ],
+        "HumanName.given": [
+          {
+            "string.value": "Peter"
+          },
+          {
+            "string.value": "James"
+          }
+        ]
+      },
+      "Patient.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "phone"
+          },
+          "ContactPoint.value": {
+            "string.value": "(03) 5555 6473"
+          },
+          "ContactPoint.use": {
+            "code.value": "work"
+          }
+        }
+      ]
+    }
+  ],
+  "Patient.animal": {
+    "Patient.animal.species": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/animal-species"
+          },
+          "Coding.code": {
+            "code.value": "canislf"
+          },
+          "Coding.display": {
+            "string.value": "Dog"
+          }
+        }
+      ]
+    },
+    "Patient.animal.breed": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "58108001"
+          },
+          "Coding.display": {
+            "string.value": "Golden retriever"
+          }
+        },
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/animal-breed"
+          },
+          "Coding.code": {
+            "code.value": "gret"
+          },
+          "Coding.display": {
+            "string.value": "Golden Retriever"
+          }
+        }
+      ],
+      "Resource.concept": "http://snomed.info/sct#58108001"
+    },
+    "Patient.animal.genderStatus": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/animal-genderstatus"
+          },
+          "Coding.code": {
+            "code.value": "neutered"
+          }
+        }
+      ]
+    }
+  },
+  "Patient.managingOrganization": {
+    "Reference.display": {
+      "string.value": "Pete's Vetinary Services"
+    }
+  }
+}

@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Terminologies-v2 - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/terminologies-v2.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="terminology-module.html"><img src="terminology.png"/> Terminology</a></li>        <li><a href="terminologies-systems.html">Code Systems</a></li>        <li><b>V2 Tables</b></li>          <!-- terminologies-v2.html / v2Vocab / V2 Tables -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="terminologies.html">Using Codes</a></li><li><a href="terminologies-systems.html">Code Systems</a></li><li><a href="terminologies-valuesets.html">Value Sets</a></li><li><a href="terminologies-conceptmaps.html">Concept Maps</a></li><li><a href="identifier-registry.html">Identifier Systems</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">?.?<a name="?.?"> </a></span> HL7 Version 2 Table Namespaces <a href="terminologies-v2.html#?.?" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+<p>
+These system namespaces are defined for use in FHIR when 
+representing codes that were defined as part of the <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 v2 <img src="external.png" style="text-align: baseline"/></a> tables 
+in FHIR instances. So if you are representing the code &quot;M&quot; from
+table 0001 in HL7 v2.3.1 in a FHIR instance, then you would use 
+the system &quot;http://hl7.org/fhir/v2/0001&quot;.
+</p>
+<p>
+There are a number of subtle but serious issues with using 
+tables defined for HL7 v2 as code systems, so some of these 
+tables are mapped to a different namespace for each version.
+All of these namespaces are subject to further change as 
+additional review of the tables proceeds.
+</p>
+
+<table class="grid">
+ <tr><td><b>URI</b> (all prefixed with http://hl7.org/fhir/v2/)</td><td><b>ID</b></td><td><b>OID</b></td></tr>
+ <tr><td><a href="v2/0001/index.html">0001</a></td><td>Administrative Sex</td><td/></tr>
+ <tr><td><a href="v2/0002/index.html">0002</a></td><td>Marital Status</td><td/></tr>
+ <tr><td><a href="v2/0003/index.html">0003</a></td><td>Event Type</td><td/></tr>
+ <tr><td><a href="v2/0004/index.html">0004</a></td><td>Patient Class</td><td/></tr>
+ <tr><td>0006</td><td>ReligionVersion Dependent. Use one of:<ul> <li><a href="v2/0006/2.1/index.html">2.1+</a></li> <li><a href="v2/0006/2.4/index.html">2.4+</a></li></ul></td><td/></tr>
+ <tr><td><a href="v2/0007/index.html">0007</a></td><td>Admission Type</td><td/></tr>
+ <tr><td><a href="v2/0008/index.html">0008</a></td><td>Acknowledgment code</td><td/></tr>
+ <tr><td><a href="v2/0009/index.html">0009</a></td><td>Ambulatory Status</td><td/></tr>
+ <tr><td><a href="v2/0012/index.html">0012</a></td><td>STOCK LOCATION</td><td/></tr>
+ <tr><td><a href="v2/0017/index.html">0017</a></td><td>Transaction Type</td><td/></tr>
+ <tr><td><a href="v2/0023/index.html">0023</a></td><td>Admit Source</td><td/></tr>
+ <tr><td><a href="v2/0027/index.html">0027</a></td><td>Priority</td><td/></tr>
+ <tr><td><a href="v2/0033/index.html">0033</a></td><td>ROUTE</td><td/></tr>
+ <tr><td><a href="v2/0034/index.html">0034</a></td><td>SITE ADMINISTERED</td><td/></tr>
+ <tr><td><a href="v2/0038/index.html">0038</a></td><td>Order status</td><td/></tr>
+ <tr><td><a href="v2/0043/index.html">0043</a></td><td>Condition Code</td><td/></tr>
+ <tr><td><a href="v2/0048/index.html">0048</a></td><td>What subject filter</td><td/></tr>
+ <tr><td><a href="v2/0052/index.html">0052</a></td><td>Diagnosis Type</td><td/></tr>
+ <tr><td><a href="v2/0061/index.html">0061</a></td><td>Check Digit Scheme</td><td/></tr>
+ <tr><td><a href="v2/0062/index.html">0062</a></td><td>Event Reason</td><td/></tr>
+ <tr><td><a href="v2/0063/index.html">0063</a></td><td>Relationship</td><td/></tr>
+ <tr><td><a href="v2/0065/index.html">0065</a></td><td>Specimen Action Code</td><td/></tr>
+ <tr><td><a href="v2/0066/index.html">0066</a></td><td>Employment Status</td><td/></tr>
+ <tr><td><a href="v2/0069/index.html">0069</a></td><td>Hospital Service</td><td/></tr>
+ <tr><td><a href="v2/0070/index.html">0070</a></td><td>Specimen Source Codes</td><td/></tr>
+ <tr><td><a href="v2/0074/index.html">0074</a></td><td>Diagnostic Service Section ID</td><td/></tr>
+ <tr><td><a href="v2/0076/index.html">0076</a></td><td>Message Type</td><td/></tr>
+ <tr><td><a href="v2/0078/index.html">0078</a></td><td>Interpretation Codes</td><td/></tr>
+ <tr><td><a href="v2/0080/index.html">0080</a></td><td>Nature of Abnormal Testing</td><td/></tr>
+ <tr><td><a href="v2/0083/index.html">0083</a></td><td>Outlier Type</td><td/></tr>
+ <tr><td><a href="v2/0085/index.html">0085</a></td><td>Observation Result Status Codes Interpretation</td><td/></tr>
+ <tr><td><a href="v2/0091/index.html">0091</a></td><td>Query Priority</td><td/></tr>
+ <tr><td><a href="v2/0092/index.html">0092</a></td><td>Re-Admission Indicator</td><td/></tr>
+ <tr><td><a href="v2/0098/index.html">0098</a></td><td>Type of Agreement</td><td/></tr>
+ <tr><td><a href="v2/0100/index.html">0100</a></td><td>Invocation event</td><td/></tr>
+ <tr><td><a href="v2/0102/index.html">0102</a></td><td>Delayed acknowledgment type</td><td/></tr>
+ <tr><td><a href="v2/0103/index.html">0103</a></td><td>Processing ID</td><td/></tr>
+ <tr><td><a href="v2/0104/index.html">0104</a></td><td>Version ID</td><td/></tr>
+ <tr><td><a href="v2/0105/index.html">0105</a></td><td>Source of Comment</td><td/></tr>
+ <tr><td><a href="v2/0106/index.html">0106</a></td><td>Query/response format code</td><td/></tr>
+ <tr><td><a href="v2/0107/index.html">0107</a></td><td>Deferred response type</td><td/></tr>
+ <tr><td><a href="v2/0108/index.html">0108</a></td><td>Query results level</td><td/></tr>
+ <tr><td><a href="v2/0109/index.html">0109</a></td><td>Report priority</td><td/></tr>
+ <tr><td><a href="v2/0116/index.html">0116</a></td><td>Bed Status</td><td/></tr>
+ <tr><td><a href="v2/0119/index.html">0119</a></td><td>Order Control Codes</td><td/></tr>
+ <tr><td><a href="v2/0121/index.html">0121</a></td><td>Response Flag</td><td/></tr>
+ <tr><td><a href="v2/0122/index.html">0122</a></td><td>Charge Type</td><td/></tr>
+ <tr><td><a href="v2/0123/index.html">0123</a></td><td>Result Status</td><td/></tr>
+ <tr><td><a href="v2/0124/index.html">0124</a></td><td>Transportation Mode</td><td/></tr>
+ <tr><td><a href="v2/0126/index.html">0126</a></td><td>Quantity Limited Request</td><td/></tr>
+ <tr><td><a href="v2/0127/index.html">0127</a></td><td>Allergen Type</td><td/></tr>
+ <tr><td><a href="v2/0128/index.html">0128</a></td><td>Allergy Severity</td><td/></tr>
+ <tr><td><a href="v2/0130/index.html">0130</a></td><td>Visit User Code</td><td/></tr>
+ <tr><td><a href="v2/0131/index.html">0131</a></td><td>Contact Role</td><td/></tr>
+ <tr><td><a href="v2/0133/index.html">0133</a></td><td>Procedure Practitioner Identifier Code Type</td><td/></tr>
+ <tr><td><a href="v2/0135/index.html">0135</a></td><td>Assignment of Benefits</td><td/></tr>
+ <tr><td><a href="v2/0136/index.html">0136</a></td><td>Yes/no Indicator</td><td/></tr>
+ <tr><td><a href="v2/0137/index.html">0137</a></td><td>Mail Claim Party</td><td/></tr>
+ <tr><td><a href="v2/0140/index.html">0140</a></td><td>Military Service</td><td/></tr>
+ <tr><td><a href="v2/0141/index.html">0141</a></td><td>Military Rank/Grade</td><td/></tr>
+ <tr><td><a href="v2/0142/index.html">0142</a></td><td>Military Status</td><td/></tr>
+ <tr><td><a href="v2/0144/index.html">0144</a></td><td>Eligibility Source</td><td/></tr>
+ <tr><td><a href="v2/0145/index.html">0145</a></td><td>Room Type</td><td/></tr>
+ <tr><td><a href="v2/0146/index.html">0146</a></td><td>Amount Type</td><td/></tr>
+ <tr><td><a href="v2/0147/index.html">0147</a></td><td>Policy Type</td><td/></tr>
+ <tr><td><a href="v2/0148/index.html">0148</a></td><td>Money or Percentage Indicator</td><td/></tr>
+ <tr><td><a href="v2/0149/index.html">0149</a></td><td>Day Type</td><td/></tr>
+ <tr><td><a href="v2/0150/index.html">0150</a></td><td>Certification Patient Type</td><td/></tr>
+ <tr><td><a href="v2/0153/index.html">0153</a></td><td>Value Code</td><td/></tr>
+ <tr><td><a href="v2/0155/index.html">0155</a></td><td>Accept/Application Acknowledgment Conditions</td><td/></tr>
+ <tr><td><a href="v2/0156/index.html">0156</a></td><td>Which date/time qualifier</td><td/></tr>
+ <tr><td><a href="v2/0157/index.html">0157</a></td><td>Which date/time status qualifier</td><td/></tr>
+ <tr><td><a href="v2/0158/index.html">0158</a></td><td>Date/time selection qualifier</td><td/></tr>
+ <tr><td><a href="v2/0159/index.html">0159</a></td><td>Diet Code Specification Type</td><td/></tr>
+ <tr><td><a href="v2/0160/index.html">0160</a></td><td>Tray Type</td><td/></tr>
+ <tr><td><a href="v2/0161/index.html">0161</a></td><td>Allow Substitution</td><td/></tr>
+ <tr><td><a href="v2/0162/index.html">0162</a></td><td>Route of Administration</td><td/></tr>
+ <tr><td><a href="v2/0163/index.html">0163</a></td><td>Body Site</td><td/></tr>
+ <tr><td><a href="v2/0164/index.html">0164</a></td><td>Administration Device</td><td/></tr>
+ <tr><td><a href="v2/0165/index.html">0165</a></td><td>Administration Method</td><td/></tr>
+ <tr><td><a href="v2/0166/index.html">0166</a></td><td>RX Component Type</td><td/></tr>
+ <tr><td><a href="v2/0167/index.html">0167</a></td><td>Substitution Status</td><td/></tr>
+ <tr><td><a href="v2/0168/index.html">0168</a></td><td>Processing Priority</td><td/></tr>
+ <tr><td><a href="v2/0169/index.html">0169</a></td><td>Reporting Priority</td><td/></tr>
+ <tr><td><a href="v2/0170/index.html">0170</a></td><td>Derived Specimen</td><td/></tr>
+ <tr><td><a href="v2/0173/index.html">0173</a></td><td>Coordination of Benefits</td><td/></tr>
+ <tr><td><a href="v2/0174/index.html">0174</a></td><td>Nature of Service/Test/Observation</td><td/></tr>
+ <tr><td><a href="v2/0175/index.html">0175</a></td><td>Master File Identifier Code</td><td/></tr>
+ <tr><td><a href="v2/0177/index.html">0177</a></td><td>Confidentiality Code</td><td/></tr>
+ <tr><td><a href="v2/0178/index.html">0178</a></td><td>File Level Event Code</td><td/></tr>
+ <tr><td><a href="v2/0179/index.html">0179</a></td><td>Response Level</td><td/></tr>
+ <tr><td><a href="v2/0180/index.html">0180</a></td><td>Record-level Event Code</td><td/></tr>
+ <tr><td><a href="v2/0181/index.html">0181</a></td><td>MFN Record-level Error Return</td><td/></tr>
+ <tr><td><a href="v2/0183/index.html">0183</a></td><td>Active/Inactive</td><td/></tr>
+ <tr><td><a href="v2/0185/index.html">0185</a></td><td>Preferred Method of Contact</td><td/></tr>
+ <tr><td><a href="v2/0187/index.html">0187</a></td><td>Provider Billing</td><td/></tr>
+ <tr><td><a href="v2/0189/index.html">0189</a></td><td>Ethnic Group</td><td/></tr>
+ <tr><td><a href="v2/0190/index.html">0190</a></td><td>Address Type</td><td/></tr>
+ <tr><td><a href="v2/0191/index.html">0191</a></td><td>Type of Referenced Data</td><td/></tr>
+ <tr><td><a href="v2/0193/index.html">0193</a></td><td>Amount Class</td><td/></tr>
+ <tr><td><a href="v2/0200/index.html">0200</a></td><td>Name Type</td><td/></tr>
+ <tr><td><a href="v2/0201/index.html">0201</a></td><td>Telecommunication Use Code</td><td/></tr>
+ <tr><td><a href="v2/0202/index.html">0202</a></td><td>Telecommunication Equipment Type</td><td/></tr>
+ <tr><td><a href="v2/0203/index.html">0203</a></td><td>Identifier Type</td><td/></tr>
+ <tr><td><a href="v2/0204/index.html">0204</a></td><td>Organizational Name Type</td><td/></tr>
+ <tr><td><a href="v2/0205/index.html">0205</a></td><td>Price Type</td><td/></tr>
+ <tr><td><a href="v2/0206/index.html">0206</a></td><td>Segment Action Code</td><td/></tr>
+ <tr><td><a href="v2/0207/index.html">0207</a></td><td>Processing Mode</td><td/></tr>
+ <tr><td><a href="v2/0208/index.html">0208</a></td><td>Query Response Status</td><td/></tr>
+ <tr><td><a href="v2/0209/index.html">0209</a></td><td>Relational Operator</td><td/></tr>
+ <tr><td><a href="v2/0210/index.html">0210</a></td><td>Relational Conjunction</td><td/></tr>
+ <tr><td><a href="v2/0211/index.html">0211</a></td><td>Alternate Character Sets</td><td/></tr>
+ <tr><td><a href="v2/0213/index.html">0213</a></td><td>Purge Status Code</td><td/></tr>
+ <tr><td><a href="v2/0214/index.html">0214</a></td><td>Special Program Code</td><td/></tr>
+ <tr><td><a href="v2/0215/index.html">0215</a></td><td>Publicity Code</td><td/></tr>
+ <tr><td><a href="v2/0216/index.html">0216</a></td><td>Patient Status Code</td><td/></tr>
+ <tr><td><a href="v2/0217/index.html">0217</a></td><td>Visit Priority Code</td><td/></tr>
+ <tr><td><a href="v2/0220/index.html">0220</a></td><td>Living Arrangement</td><td/></tr>
+ <tr><td><a href="v2/0223/index.html">0223</a></td><td>Living Dependency</td><td/></tr>
+ <tr><td><a href="v2/0224/index.html">0224</a></td><td>Transport Arranged</td><td/></tr>
+ <tr><td><a href="v2/0225/index.html">0225</a></td><td>Escort Required</td><td/></tr>
+ <tr><td><a href="v2/0227/index.html">0227</a></td><td>Manufacturers of Vaccines (code=MVX)</td><td/></tr>
+ <tr><td><a href="v2/0228/index.html">0228</a></td><td>Diagnosis Classification</td><td/></tr>
+ <tr><td><a href="v2/0229/index.html">0229</a></td><td>DRG Payor</td><td/></tr>
+ <tr><td><a href="v2/0230/index.html">0230</a></td><td>Procedure Functional Type</td><td/></tr>
+ <tr><td><a href="v2/0231/index.html">0231</a></td><td>Student Status</td><td/></tr>
+ <tr><td><a href="v2/0232/index.html">0232</a></td><td>- Insurance Company Contact Reason</td><td/></tr>
+ <tr><td><a href="v2/0234/index.html">0234</a></td><td>Report Timing</td><td/></tr>
+ <tr><td><a href="v2/0235/index.html">0235</a></td><td>Report Source</td><td/></tr>
+ <tr><td><a href="v2/0236/index.html">0236</a></td><td>Event Reported To</td><td/></tr>
+ <tr><td><a href="v2/0237/index.html">0237</a></td><td>Event Qualification</td><td/></tr>
+ <tr><td><a href="v2/0238/index.html">0238</a></td><td>Event Seriousness</td><td/></tr>
+ <tr><td><a href="v2/0239/index.html">0239</a></td><td>Event Expected</td><td/></tr>
+ <tr><td><a href="v2/0240/index.html">0240</a></td><td>Event Consequence</td><td/></tr>
+ <tr><td><a href="v2/0241/index.html">0241</a></td><td>Patient Outcome</td><td/></tr>
+ <tr><td><a href="v2/0242/index.html">0242</a></td><td>Primary Observer's Qualification</td><td/></tr>
+ <tr><td><a href="v2/0243/index.html">0243</a></td><td>Identity May Be Divulged</td><td/></tr>
+ <tr><td><a href="v2/0247/index.html">0247</a></td><td>Status of Evaluation</td><td/></tr>
+ <tr><td><a href="v2/0248/index.html">0248</a></td><td>Product Source</td><td/></tr>
+ <tr><td><a href="v2/0250/index.html">0250</a></td><td>Relatedness Assessment</td><td/></tr>
+ <tr><td><a href="v2/0251/index.html">0251</a></td><td>Action Taken in Response to the Event</td><td/></tr>
+ <tr><td><a href="v2/0252/index.html">0252</a></td><td>Causality Observations</td><td/></tr>
+ <tr><td><a href="v2/0253/index.html">0253</a></td><td>Indirect Exposure Mechanism</td><td/></tr>
+ <tr><td><a href="v2/0254/index.html">0254</a></td><td>Kind of Quantity</td><td/></tr>
+ <tr><td><a href="v2/0255/index.html">0255</a></td><td>Duration Categories</td><td/></tr>
+ <tr><td><a href="v2/0256/index.html">0256</a></td><td>Time Delay Post Challenge</td><td/></tr>
+ <tr><td><a href="v2/0257/index.html">0257</a></td><td>Nature of Challenge</td><td/></tr>
+ <tr><td><a href="v2/0258/index.html">0258</a></td><td>Relationship Modifier</td><td/></tr>
+ <tr><td><a href="v2/0259/index.html">0259</a></td><td>Modality</td><td/></tr>
+ <tr><td><a href="v2/0260/index.html">0260</a></td><td>Patient Location Type</td><td/></tr>
+ <tr><td><a href="v2/0261/index.html">0261</a></td><td>Location Equipment</td><td/></tr>
+ <tr><td><a href="v2/0262/index.html">0262</a></td><td>Privacy Level</td><td/></tr>
+ <tr><td><a href="v2/0263/index.html">0263</a></td><td>Level of Care</td><td/></tr>
+ <tr><td><a href="v2/0265/index.html">0265</a></td><td>Specialty Type</td><td/></tr>
+ <tr><td><a href="v2/0267/index.html">0267</a></td><td>Days of the Week</td><td/></tr>
+ <tr><td><a href="v2/0268/index.html">0268</a></td><td>Override</td><td/></tr>
+ <tr><td><a href="v2/0269/index.html">0269</a></td><td>Charge On Indicator</td><td/></tr>
+ <tr><td><a href="v2/0270/index.html">0270</a></td><td>Document Type</td><td/></tr>
+ <tr><td><a href="v2/0271/index.html">0271</a></td><td>Document Completion Status</td><td/></tr>
+ <tr><td><a href="v2/0272/index.html">0272</a></td><td>Document Confidentiality Status</td><td/></tr>
+ <tr><td><a href="v2/0273/index.html">0273</a></td><td>Document Availability Status</td><td/></tr>
+ <tr><td><a href="v2/0275/index.html">0275</a></td><td>Document Storage Status</td><td/></tr>
+ <tr><td><a href="v2/0276/index.html">0276</a></td><td>Appointment reason codes</td><td/></tr>
+ <tr><td><a href="v2/0277/index.html">0277</a></td><td>Appointment Type Codes</td><td/></tr>
+ <tr><td><a href="v2/0278/index.html">0278</a></td><td>Filler status codes</td><td/></tr>
+ <tr><td><a href="v2/0279/index.html">0279</a></td><td>Allow Substitution Codes</td><td/></tr>
+ <tr><td><a href="v2/0280/index.html">0280</a></td><td>Referral Priority</td><td/></tr>
+ <tr><td><a href="v2/0281/index.html">0281</a></td><td>Referral Type</td><td/></tr>
+ <tr><td><a href="v2/0282/index.html">0282</a></td><td>Referral Disposition</td><td/></tr>
+ <tr><td><a href="v2/0283/index.html">0283</a></td><td>Referral Status</td><td/></tr>
+ <tr><td><a href="v2/0284/index.html">0284</a></td><td>Referral Category</td><td/></tr>
+ <tr><td><a href="v2/0286/index.html">0286</a></td><td>Provider Role</td><td/></tr>
+ <tr><td><a href="v2/0287/index.html">0287</a></td><td>Problem/Goal Action Code</td><td/></tr>
+ <tr><td><a href="v2/0290/index.html">0290</a></td><td>MIME base64 encoding characters</td><td/></tr>
+ <tr><td><a href="v2/0291/index.html">0291</a></td><td>Subtype of Referenced Data</td><td/></tr>
+ <tr><td><a href="v2/0292/index.html">0292</a></td><td>Vaccines Administered (code = CVX) (parenteral, un</td><td/></tr>
+ <tr><td><a href="v2/0294/index.html">0294</a></td><td>Time Selection Criteria Parameter Class Codes</td><td/></tr>
+ <tr><td><a href="v2/0298/index.html">0298</a></td><td>CP Range Type</td><td/></tr>
+ <tr><td><a href="v2/0299/index.html">0299</a></td><td>Encoding</td><td/></tr>
+ <tr><td><a href="v2/0301/index.html">0301</a></td><td>Universal ID Type</td><td/></tr>
+ <tr><td><a href="v2/0305/index.html">0305</a></td><td>Person Location Type</td><td/></tr>
+ <tr><td><a href="v2/0309/index.html">0309</a></td><td>Coverage Type</td><td/></tr>
+ <tr><td><a href="v2/0311/index.html">0311</a></td><td>Job Status</td><td/></tr>
+ <tr><td><a href="v2/0315/index.html">0315</a></td><td>Living Will Code</td><td/></tr>
+ <tr><td><a href="v2/0316/index.html">0316</a></td><td>Organ Donor Code</td><td/></tr>
+ <tr><td><a href="v2/0317/index.html">0317</a></td><td>Annotations</td><td/></tr>
+ <tr><td><a href="v2/0321/index.html">0321</a></td><td>Dispense Method</td><td/></tr>
+ <tr><td><a href="v2/0322/index.html">0322</a></td><td>Completion Status</td><td/></tr>
+ <tr><td><a href="v2/0323/index.html">0323</a></td><td>Action Code</td><td/></tr>
+ <tr><td><a href="v2/0324/index.html">0324</a></td><td>Location Characteristic ID</td><td/></tr>
+ <tr><td><a href="v2/0325/index.html">0325</a></td><td>Location Relationship ID</td><td/></tr>
+ <tr><td><a href="v2/0326/index.html">0326</a></td><td>Visit Indicator</td><td/></tr>
+ <tr><td><a href="v2/0329/index.html">0329</a></td><td>Quantity Method</td><td/></tr>
+ <tr><td><a href="v2/0330/index.html">0330</a></td><td>Marketing Basis</td><td/></tr>
+ <tr><td><a href="v2/0331/index.html">0331</a></td><td>Facility Type</td><td/></tr>
+ <tr><td><a href="v2/0332/index.html">0332</a></td><td>Source Type</td><td/></tr>
+ <tr><td><a href="v2/0334/index.html">0334</a></td><td>Disabled Person Code</td><td/></tr>
+ <tr><td><a href="v2/0335/index.html">0335</a></td><td>Repeat Pattern</td><td/></tr>
+ <tr><td><a href="v2/0336/index.html">0336</a></td><td>Referral Reason</td><td/></tr>
+ <tr><td><a href="v2/0337/index.html">0337</a></td><td>Certification Status</td><td/></tr>
+ <tr><td><a href="v2/0338/index.html">0338</a></td><td>Practitioner ID Number Type</td><td/></tr>
+ <tr><td><a href="v2/0339/index.html">0339</a></td><td>Advanced Beneficiary Notice Code</td><td/></tr>
+ <tr><td><a href="v2/0344/index.html">0344</a></td><td>Patient's Relationship to Insured</td><td/></tr>
+ <tr><td><a href="v2/0350/index.html">0350</a></td><td>Occurrence Code</td><td/></tr>
+ <tr><td><a href="v2/0351/index.html">0351</a></td><td>Occurrence Span</td><td/></tr>
+ <tr><td><a href="v2/0354/index.html">0354</a></td><td>Message Structure</td><td/></tr>
+ <tr><td><a href="v2/0355/index.html">0355</a></td><td>Primary Key Value Type</td><td/></tr>
+ <tr><td><a href="v2/0356/index.html">0356</a></td><td>Alternate Character Set Handling Scheme</td><td/></tr>
+ <tr><td><a href="v2/0357/index.html">0357</a></td><td>Message Error Condition Codes</td><td/></tr>
+ <tr><td><a href="v2/0359/index.html">0359</a></td><td>Diagnosis Priority</td><td/></tr>
+ <tr><td>0360</td><td>Degree/License/CertificateVersion Dependent. Use one of:<ul> <li><a href="v2/0360/2.3.1/index.html">2.3.1+</a></li> <li><a href="v2/0360/2.7/index.html">2.7+</a></li></ul></td><td/></tr>
+ <tr><td><a href="v2/0363/index.html">0363</a></td><td>Assigning Authority</td><td/></tr>
+ <tr><td><a href="v2/0364/index.html">0364</a></td><td>Comment Type</td><td/></tr>
+ <tr><td><a href="v2/0365/index.html">0365</a></td><td>Equipment State</td><td/></tr>
+ <tr><td><a href="v2/0366/index.html">0366</a></td><td>Local/Remote Control State</td><td/></tr>
+ <tr><td><a href="v2/0367/index.html">0367</a></td><td>Alert Level</td><td/></tr>
+ <tr><td><a href="v2/0368/index.html">0368</a></td><td>Remote Control Command</td><td/></tr>
+ <tr><td><a href="v2/0369/index.html">0369</a></td><td>Specimen Role</td><td/></tr>
+ <tr><td><a href="v2/0370/index.html">0370</a></td><td>Container Status</td><td/></tr>
+ <tr><td><a href="v2/0371/index.html">0371</a></td><td>Additive/Preservative</td><td/></tr>
+ <tr><td><a href="v2/0372/index.html">0372</a></td><td>Specimen Component</td><td/></tr>
+ <tr><td><a href="v2/0373/index.html">0373</a></td><td>Treatment</td><td/></tr>
+ <tr><td><a href="v2/0374/index.html">0374</a></td><td>System Induced Contaminants</td><td/></tr>
+ <tr><td><a href="v2/0375/index.html">0375</a></td><td>Artificial Blood</td><td/></tr>
+ <tr><td><a href="v2/0376/index.html">0376</a></td><td>Special Handling Code</td><td/></tr>
+ <tr><td><a href="v2/0377/index.html">0377</a></td><td>Other Environmental Factors</td><td/></tr>
+ <tr><td><a href="v2/0383/index.html">0383</a></td><td>Substance Status</td><td/></tr>
+ <tr><td><a href="v2/0384/index.html">0384</a></td><td>Substance Type</td><td/></tr>
+ <tr><td><a href="v2/0387/index.html">0387</a></td><td>Command Response</td><td/></tr>
+ <tr><td><a href="v2/0388/index.html">0388</a></td><td>Processing Type</td><td/></tr>
+ <tr><td><a href="v2/0389/index.html">0389</a></td><td>Analyte Repeat Status</td><td/></tr>
+ <tr><td>0391</td><td>Segment GroupVersion Dependent. Use one of:<ul> <li><a href="v2/0391/2.4/index.html">2.4+</a></li> <li><a href="v2/0391/2.6/index.html">2.6+</a></li></ul></td><td/></tr>
+ <tr><td><a href="v2/0392/index.html">0392</a></td><td>Match Reason</td><td/></tr>
+ <tr><td><a href="v2/0393/index.html">0393</a></td><td>Match Algorithms</td><td/></tr>
+ <tr><td><a href="v2/0394/index.html">0394</a></td><td>Response Modality</td><td/></tr>
+ <tr><td><a href="v2/0395/index.html">0395</a></td><td>Modify Indicator</td><td/></tr>
+ <tr><td><a href="v2/0396/index.html">0396</a></td><td>Coding System</td><td/></tr>
+ <tr><td><a href="v2/0397/index.html">0397</a></td><td>Sequencing</td><td/></tr>
+ <tr><td><a href="v2/0398/index.html">0398</a></td><td>Continuation Style Code</td><td/></tr>
+ <tr><td><a href="v2/0401/index.html">0401</a></td><td>Government Reimbursement Program</td><td/></tr>
+ <tr><td><a href="v2/0402/index.html">0402</a></td><td>School Type</td><td/></tr>
+ <tr><td><a href="v2/0403/index.html">0403</a></td><td>Language Ability</td><td/></tr>
+ <tr><td><a href="v2/0404/index.html">0404</a></td><td>Language Proficiency</td><td/></tr>
+ <tr><td><a href="v2/0406/index.html">0406</a></td><td>Organization Unit Type</td><td/></tr>
+ <tr><td><a href="v2/0409/index.html">0409</a></td><td>Application Change Type</td><td/></tr>
+ <tr><td><a href="v2/0411/index.html">0411</a></td><td>Supplemental Service Information Values</td><td/></tr>
+ <tr><td><a href="v2/0415/index.html">0415</a></td><td>Transfer Type</td><td/></tr>
+ <tr><td><a href="v2/0416/index.html">0416</a></td><td>Procedure DRG Type</td><td/></tr>
+ <tr><td><a href="v2/0417/index.html">0417</a></td><td>Tissue Type Code</td><td/></tr>
+ <tr><td><a href="v2/0418/index.html">0418</a></td><td>Procedure Priority</td><td/></tr>
+ <tr><td><a href="v2/0421/index.html">0421</a></td><td>Severity of Illness Code</td><td/></tr>
+ <tr><td><a href="v2/0422/index.html">0422</a></td><td>Triage Code</td><td/></tr>
+ <tr><td><a href="v2/0423/index.html">0423</a></td><td>Case Category Code</td><td/></tr>
+ <tr><td><a href="v2/0424/index.html">0424</a></td><td>Gestation Category Code</td><td/></tr>
+ <tr><td><a href="v2/0425/index.html">0425</a></td><td>Newborn Code</td><td/></tr>
+ <tr><td><a href="v2/0426/index.html">0426</a></td><td>Blood Product Code</td><td/></tr>
+ <tr><td><a href="v2/0427/index.html">0427</a></td><td>Risk Management Incident Code</td><td/></tr>
+ <tr><td><a href="v2/0428/index.html">0428</a></td><td>Incident Type Code</td><td/></tr>
+ <tr><td><a href="v2/0429/index.html">0429</a></td><td>Production Class Code</td><td/></tr>
+ <tr><td><a href="v2/0430/index.html">0430</a></td><td>Mode of Arrival Code</td><td/></tr>
+ <tr><td><a href="v2/0431/index.html">0431</a></td><td>Recreational Drug Use Code</td><td/></tr>
+ <tr><td><a href="v2/0432/index.html">0432</a></td><td>Admission Level of Care Code</td><td/></tr>
+ <tr><td><a href="v2/0433/index.html">0433</a></td><td>Precaution Code</td><td/></tr>
+ <tr><td><a href="v2/0434/index.html">0434</a></td><td>Patient Condition Code</td><td/></tr>
+ <tr><td><a href="v2/0435/index.html">0435</a></td><td>Advance Directive Code</td><td/></tr>
+ <tr><td><a href="v2/0436/index.html">0436</a></td><td>Sensitivity to Causative Agent Code</td><td/></tr>
+ <tr><td><a href="v2/0437/index.html">0437</a></td><td>Alert Device Code</td><td/></tr>
+ <tr><td><a href="v2/0438/index.html">0438</a></td><td>Allergy Clinical Status</td><td/></tr>
+ <tr><td><a href="v2/0440/index.html">0440</a></td><td>Data Types</td><td/></tr>
+ <tr><td><a href="v2/0441/index.html">0441</a></td><td>Immunization Registry Status</td><td/></tr>
+ <tr><td><a href="v2/0442/index.html">0442</a></td><td>Location Service Code</td><td/></tr>
+ <tr><td><a href="v2/0443/index.html">0443</a></td><td>Provider Role</td><td/></tr>
+ <tr><td><a href="v2/0444/index.html">0444</a></td><td>Name Assembly Order</td><td/></tr>
+ <tr><td><a href="v2/0445/index.html">0445</a></td><td>Identity Reliability Code</td><td/></tr>
+ <tr><td><a href="v2/0450/index.html">0450</a></td><td>Event Type</td><td/></tr>
+ <tr><td><a href="v2/0452/index.html">0452</a></td><td>Health Care Provider Type Code</td><td/></tr>
+ <tr><td><a href="v2/0453/index.html">0453</a></td><td>Health Care Provider Classification</td><td/></tr>
+ <tr><td><a href="v2/0454/index.html">0454</a></td><td>Health Care Provider Area of Specialization</td><td/></tr>
+ <tr><td><a href="v2/0455/index.html">0455</a></td><td>Type of Bill Code</td><td/></tr>
+ <tr><td><a href="v2/0456/index.html">0456</a></td><td>Revenue code</td><td/></tr>
+ <tr><td><a href="v2/0457/index.html">0457</a></td><td>Overall Claim Disposition Code</td><td/></tr>
+ <tr><td><a href="v2/0459/index.html">0459</a></td><td>Reimbursement Action Code</td><td/></tr>
+ <tr><td><a href="v2/0460/index.html">0460</a></td><td>Denial or Rejection Code</td><td/></tr>
+ <tr><td><a href="v2/0465/index.html">0465</a></td><td>Name/Address Representation</td><td/></tr>
+ <tr><td><a href="v2/0466/index.html">0466</a></td><td>Ambulatory Payment Classification Code</td><td/></tr>
+ <tr><td><a href="v2/0468/index.html">0468</a></td><td>Payment Adjustment Code</td><td/></tr>
+ <tr><td><a href="v2/0469/index.html">0469</a></td><td>Packaging Status Code</td><td/></tr>
+ <tr><td><a href="v2/0470/index.html">0470</a></td><td>- Reimbursement Type Code</td><td/></tr>
+ <tr><td><a href="v2/0472/index.html">0472</a></td><td>TQ Conjunction ID</td><td/></tr>
+ <tr><td><a href="v2/0473/index.html">0473</a></td><td>Formulary Status</td><td/></tr>
+ <tr><td><a href="v2/0474/index.html">0474</a></td><td>Organization Unit Type</td><td/></tr>
+ <tr><td><a href="v2/0475/index.html">0475</a></td><td>Charge Type Reason</td><td/></tr>
+ <tr><td><a href="v2/0477/index.html">0477</a></td><td>Controlled Substance Schedule</td><td/></tr>
+ <tr><td><a href="v2/0478/index.html">0478</a></td><td>Formulary Status</td><td/></tr>
+ <tr><td><a href="v2/0480/index.html">0480</a></td><td>Pharmacy Order Types</td><td/></tr>
+ <tr><td><a href="v2/0482/index.html">0482</a></td><td>Order Type</td><td/></tr>
+ <tr><td><a href="v2/0483/index.html">0483</a></td><td>Authorization Mode</td><td/></tr>
+ <tr><td><a href="v2/0484/index.html">0484</a></td><td>Dispense Type</td><td/></tr>
+ <tr><td><a href="v2/0485/index.html">0485</a></td><td>Extended Priority Codes</td><td/></tr>
+ <tr><td><a href="v2/0487/index.html">0487</a></td><td>Specimen Type</td><td/></tr>
+ <tr><td><a href="v2/0488/index.html">0488</a></td><td>Specimen Collection Method</td><td/></tr>
+ <tr><td><a href="v2/0489/index.html">0489</a></td><td>Risk Codes</td><td/></tr>
+ <tr><td><a href="v2/0490/index.html">0490</a></td><td>Specimen Reject Reason</td><td/></tr>
+ <tr><td><a href="v2/0491/index.html">0491</a></td><td>Specimen Quality</td><td/></tr>
+ <tr><td><a href="v2/0492/index.html">0492</a></td><td>Specimen Appropriateness</td><td/></tr>
+ <tr><td><a href="v2/0493/index.html">0493</a></td><td>Specimen Condition</td><td/></tr>
+ <tr><td><a href="v2/0494/index.html">0494</a></td><td>Specimen Child Role</td><td/></tr>
+ <tr><td><a href="v2/0495/index.html">0495</a></td><td>Body Site Modifier</td><td/></tr>
+ <tr><td><a href="v2/0496/index.html">0496</a></td><td>Consent Type</td><td/></tr>
+ <tr><td><a href="v2/0497/index.html">0497</a></td><td>Consent Mode</td><td/></tr>
+ <tr><td><a href="v2/0498/index.html">0498</a></td><td>Consent Status</td><td/></tr>
+ <tr><td><a href="v2/0499/index.html">0499</a></td><td>Consent Bypass Reason</td><td/></tr>
+ <tr><td><a href="v2/0500/index.html">0500</a></td><td>Consent Disclosure Level</td><td/></tr>
+ <tr><td><a href="v2/0501/index.html">0501</a></td><td>Consent Non-Disclosure Reason</td><td/></tr>
+ <tr><td><a href="v2/0502/index.html">0502</a></td><td>Non-Subject Consenter Reason</td><td/></tr>
+ <tr><td><a href="v2/0503/index.html">0503</a></td><td>Sequence/Results Flag</td><td/></tr>
+ <tr><td><a href="v2/0504/index.html">0504</a></td><td>Sequence Condition Code</td><td/></tr>
+ <tr><td><a href="v2/0505/index.html">0505</a></td><td>Cyclic Entry/Exit Indicator</td><td/></tr>
+ <tr><td><a href="v2/0506/index.html">0506</a></td><td>Service Request Relationship</td><td/></tr>
+ <tr><td><a href="v2/0507/index.html">0507</a></td><td>Observation Result Handling</td><td/></tr>
+ <tr><td><a href="v2/0508/index.html">0508</a></td><td>Blood Product Processing Requirements</td><td/></tr>
+ <tr><td><a href="v2/0510/index.html">0510</a></td><td>Blood Product Dispense Status</td><td/></tr>
+ <tr><td><a href="v2/0511/index.html">0511</a></td><td>BP Observation Status Codes Interpretation</td><td/></tr>
+ <tr><td><a href="v2/0513/index.html">0513</a></td><td>Blood Product Transfusion/Disposition Status</td><td/></tr>
+ <tr><td><a href="v2/0514/index.html">0514</a></td><td>Transfusion Adverse Reaction</td><td/></tr>
+ <tr><td><a href="v2/0516/index.html">0516</a></td><td>Error Severity</td><td/></tr>
+ <tr><td><a href="v2/0517/index.html">0517</a></td><td>Inform Person Code</td><td/></tr>
+ <tr><td><a href="v2/0518/index.html">0518</a></td><td>Override Type</td><td/></tr>
+ <tr><td><a href="v2/0520/index.html">0520</a></td><td>Message Waiting Priority</td><td/></tr>
+ <tr><td><a href="v2/0523/index.html">0523</a></td><td>Computation Type</td><td/></tr>
+ <tr><td><a href="v2/0524/index.html">0524</a></td><td>Sequence condition</td><td/></tr>
+ <tr><td><a href="v2/0527/index.html">0527</a></td><td>Calendar Alignment</td><td/></tr>
+ <tr><td><a href="v2/0528/index.html">0528</a></td><td>Event Related Period</td><td/></tr>
+ <tr><td><a href="v2/0529/index.html">0529</a></td><td>Precision</td><td/></tr>
+ <tr><td><a href="v2/0530/index.html">0530</a></td><td>Organization, Agency, Department</td><td/></tr>
+ <tr><td><a href="v2/0534/index.html">0534</a></td><td>Notify Clergy Code</td><td/></tr>
+ <tr><td><a href="v2/0535/index.html">0535</a></td><td>Signature Code</td><td/></tr>
+ <tr><td><a href="v2/0536/index.html">0536</a></td><td>Certificate Status</td><td/></tr>
+ <tr><td><a href="v2/0538/index.html">0538</a></td><td>Institution Relationship Type</td><td/></tr>
+ <tr><td><a href="v2/0540/index.html">0540</a></td><td>Inactive Reason Code</td><td/></tr>
+ <tr><td><a href="v2/0544/index.html">0544</a></td><td>Container Condition</td><td/></tr>
+ <tr><td><a href="v2/0547/index.html">0547</a></td><td>Jurisdictional Breadth</td><td/></tr>
+ <tr><td><a href="v2/0548/index.html">0548</a></td><td>Signatory's Relationship to Subject</td><td/></tr>
+ <tr><td><a href="v2/0550/index.html">0550</a></td><td>Body Parts</td><td/></tr>
+ <tr><td><a href="v2/0553/index.html">0553</a></td><td>Invoice Control Code</td><td/></tr>
+ <tr><td><a href="v2/0554/index.html">0554</a></td><td>Invoice Reason Codes</td><td/></tr>
+ <tr><td><a href="v2/0555/index.html">0555</a></td><td>Invoice Type</td><td/></tr>
+ <tr><td><a href="v2/0556/index.html">0556</a></td><td>Benefit Group</td><td/></tr>
+ <tr><td><a href="v2/0557/index.html">0557</a></td><td>Payee Type</td><td/></tr>
+ <tr><td><a href="v2/0558/index.html">0558</a></td><td>Payee Relationship to Invoice</td><td/></tr>
+ <tr><td><a href="v2/0559/index.html">0559</a></td><td>Product/Service Status</td><td/></tr>
+ <tr><td><a href="v2/0561/index.html">0561</a></td><td>Product/Services Clarification Codes</td><td/></tr>
+ <tr><td><a href="v2/0562/index.html">0562</a></td><td>Processing Consideration Codes</td><td/></tr>
+ <tr><td><a href="v2/0564/index.html">0564</a></td><td>Adjustment Category Code</td><td/></tr>
+ <tr><td><a href="v2/0565/index.html">0565</a></td><td>Provider Adjustment Reason Code</td><td/></tr>
+ <tr><td><a href="v2/0566/index.html">0566</a></td><td>Blood Unit Type</td><td/></tr>
+ <tr><td><a href="v2/0569/index.html">0569</a></td><td>Adjustment Action</td><td/></tr>
+ <tr><td><a href="v2/0570/index.html">0570</a></td><td>Payment Method Code</td><td/></tr>
+ <tr><td><a href="v2/0571/index.html">0571</a></td><td>Invoice Processing Results Status</td><td/></tr>
+ <tr><td><a href="v2/0572/index.html">0572</a></td><td>Tax status</td><td/></tr>
+ <tr><td><a href="v2/0615/index.html">0615</a></td><td>User Authentication Credential Type Code</td><td/></tr>
+ <tr><td><a href="v2/0616/index.html">0616</a></td><td>Address Expiration Reason</td><td/></tr>
+ <tr><td><a href="v2/0617/index.html">0617</a></td><td>Address Usage</td><td/></tr>
+ <tr><td><a href="v2/0618/index.html">0618</a></td><td>Protection Code</td><td/></tr>
+ <tr><td><a href="v2/0625/index.html">0625</a></td><td>Item Status Codes</td><td/></tr>
+ <tr><td><a href="v2/0634/index.html">0634</a></td><td>Item Importance Codes</td><td/></tr>
+ <tr><td><a href="v2/0642/index.html">0642</a></td><td>Reorder Theory Codes</td><td/></tr>
+ <tr><td><a href="v2/0651/index.html">0651</a></td><td>Labor Calculation Type</td><td/></tr>
+ <tr><td><a href="v2/0653/index.html">0653</a></td><td>Date Format</td><td/></tr>
+ <tr><td><a href="v2/0657/index.html">0657</a></td><td>Device Type</td><td/></tr>
+ <tr><td><a href="v2/0659/index.html">0659</a></td><td>Lot Control</td><td/></tr>
+ <tr><td><a href="v2/0667/index.html">0667</a></td><td>Device Data State</td><td/></tr>
+ <tr><td><a href="v2/0669/index.html">0669</a></td><td>Load Status</td><td/></tr>
+ <tr><td><a href="v2/0682/index.html">0682</a></td><td>Device Status</td><td/></tr>
+ <tr><td><a href="v2/0702/index.html">0702</a></td><td>Cycle Type</td><td/></tr>
+ <tr><td><a href="v2/0717/index.html">0717</a></td><td>Access Restriction Value</td><td/></tr>
+ <tr><td><a href="v2/0719/index.html">0719</a></td><td>Access Restriction Reason Code</td><td/></tr>
+ <tr><td><a href="v2/0725/index.html">0725</a></td><td>Mood Codes</td><td/></tr>
+ <tr><td><a href="v2/0728/index.html">0728</a></td><td>CCL Value</td><td/></tr>
+ <tr><td><a href="v2/0731/index.html">0731</a></td><td>DRG Diagnosis Determination Status</td><td/></tr>
+ <tr><td><a href="v2/0734/index.html">0734</a></td><td>Grouper Status</td><td/></tr>
+ <tr><td><a href="v2/0739/index.html">0739</a></td><td>DRG Status Patient</td><td/></tr>
+ <tr><td><a href="v2/0742/index.html">0742</a></td><td>DRG Status Financial Calculation</td><td/></tr>
+ <tr><td><a href="v2/0749/index.html">0749</a></td><td>DRG Grouping Status</td><td/></tr>
+ <tr><td><a href="v2/0755/index.html">0755</a></td><td>Status Weight At Birth</td><td/></tr>
+ <tr><td><a href="v2/0757/index.html">0757</a></td><td>DRG Status Respiration Minutes</td><td/></tr>
+ <tr><td><a href="v2/0759/index.html">0759</a></td><td>Status Admission</td><td/></tr>
+ <tr><td><a href="v2/0761/index.html">0761</a></td><td>DRG Procedure Determination Status</td><td/></tr>
+ <tr><td><a href="v2/0763/index.html">0763</a></td><td>DRG Procedure Relevance</td><td/></tr>
+ <tr><td><a href="v2/0776/index.html">0776</a></td><td>Item Status</td><td/></tr>
+ <tr><td><a href="v2/0778/index.html">0778</a></td><td>Item Type</td><td/></tr>
+ <tr><td><a href="v2/0790/index.html">0790</a></td><td>Approving Regulatory Agency</td><td/></tr>
+ <tr><td><a href="v2/0793/index.html">0793</a></td><td>Ruling Act</td><td/></tr>
+ <tr><td><a href="v2/0806/index.html">0806</a></td><td>Sterilization Type</td><td/></tr>
+ <tr><td><a href="v2/0818/index.html">0818</a></td><td>Package</td><td/></tr>
+ <tr><td><a href="v2/0834/index.html">0834</a></td><td>MIME Types</td><td/></tr>
+ <tr><td><a href="v2/0868/index.html">0868</a></td><td>Telecommunication Expiration Reason</td><td/></tr>
+ <tr><td><a href="v2/0871/index.html">0871</a></td><td>Supply Risk Codes</td><td/></tr>
+ <tr><td><a href="v2/0881/index.html">0881</a></td><td>Role Executing Physician</td><td/></tr>
+ <tr><td><a href="v2/0882/index.html">0882</a></td><td>Medical Role Executing Physician</td><td/></tr>
+ <tr><td><a href="v2/0894/index.html">0894</a></td><td>Side of body</td><td/></tr>
+ <tr><td><a href="v2/0895/index.html">0895</a></td><td>Present On Admission (POA) Indicator</td><td/></tr>
+ <tr><td><a href="v2/0904/index.html">0904</a></td><td>Security Check Scheme</td><td/></tr>
+ <tr><td><a href="v2/0905/index.html">0905</a></td><td>Shipment Status</td><td/></tr>
+ <tr><td><a href="v2/0906/index.html">0906</a></td><td>ActPriority</td><td/></tr>
+ <tr><td><a href="v2/0907/index.html">0907</a></td><td>Confidentiality</td><td/></tr>
+ <tr><td><a href="v2/0909/index.html">0909</a></td><td>Patient Results Release Categorization Scheme</td><td/></tr>
+ <tr><td><a href="v2/0912/index.html">0912</a></td><td>Participation</td><td/></tr>
+ <tr><td><a href="v2/0914/index.html">0914</a></td><td>Root Cause</td><td/></tr>
+ <tr><td><a href="v2/0916/index.html">0916</a></td><td>Relevant Clincial Information</td><td/></tr>
+ <tr><td><a href="v2/0917/index.html">0917</a></td><td>Bolus Type</td><td/></tr>
+ <tr><td><a href="v2/0918/index.html">0918</a></td><td>PCA Type</td><td/></tr>
+ <tr><td><a href="v2/0919/index.html">0919</a></td><td>Exclusive Test</td><td/></tr>
+ <tr><td><a href="v2/0920/index.html">0920</a></td><td>Preferred Specimen/Attribute Status</td><td/></tr>
+ <tr><td><a href="v2/0921/index.html">0921</a></td><td>Certification Type Code</td><td/></tr>
+ <tr><td><a href="v2/0922/index.html">0922</a></td><td>Certification Category Code</td><td/></tr>
+ <tr><td><a href="v2/0923/index.html">0923</a></td><td>Process Interruption</td><td/></tr>
+ <tr><td><a href="v2/0924/index.html">0924</a></td><td>Cumulative Dosage Limit UoM</td><td/></tr>
+ <tr><td><a href="v2/0925/index.html">0925</a></td><td>Phlebotomy Issue</td><td/></tr>
+ <tr><td><a href="v2/0926/index.html">0926</a></td><td>Phlebotomy Status</td><td/></tr>
+ <tr><td><a href="v2/0927/index.html">0927</a></td><td>Arm Stick</td><td/></tr>
+ <tr><td><a href="v2/0933/index.html">0933</a></td><td>Intended Procedure Type</td><td/></tr>
+ <tr><td><a href="v2/0935/index.html">0935</a></td><td>Process Interruption Reason</td><td/></tr>
+ <tr><td><a href="v2/4000/index.html">4000</a></td><td>Name/address representation</td><td/></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fterminologies-v2.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fterminologies-v2.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+
+</html>

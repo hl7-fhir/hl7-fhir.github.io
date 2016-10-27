@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+  <id value="med0304"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0304</p><p><b>contained</b>: </p><p><b>code</b>: Myleran 2mg tablet, film coated <span>(Details : {http://hl7.org/fhir/sid/ndc code &#39;76388-713-25&#39; = &#39;76388-713-25&#39;, given as &#39;Myleran 2mg tablet, film coated&#39;})</span></p><p><b>isBrand</b>: true</p><p><b>manufacturer</b>: id: org6; name: Aspen Global Inc</p><blockquote><p><b>product</b></p><p><b>form</b>: Film-coated tablet (qualifier value) <span>(Details : {SNOMED CT code &#39;385057009&#39; = &#39;Film-coated tablet&#39;, given as &#39;Film-coated tablet (qualifier value)&#39;})</span></p><h3>Ingredients</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Busulfan (substance) <span>(Details : {SNOMED CT code &#39;387138002&#39; = &#39;Busulfan (substance)&#39;, given as &#39;Busulfan (substance)&#39;})</span></td><td>2 mg<span> (Details: UCUM code mg = &#39;mg&#39;)</span>/1 Tab<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code Tab = &#39;Tab&#39;)</span></td></tr></table><h3>Batches</h3><table><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>May 22, 2017</td></tr></table></blockquote><blockquote><p><b>package</b></p><p><b>container</b>: Bottle - unit of product usage (qualifier value) <span>(Details : {SNOMED CT code &#39;419672006&#39; = &#39;Bottle - unit of product usage (qualifier value)&#39;, given as &#39;Bottle - unit of product usage (qualifier value)&#39;})</span></p><h3>Contents</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Myleran 2mg tablet, film coated <span>(Details : {http://hl7.org/fhir/sid/ndc code &#39;76388-713-25&#39; = &#39;76388-713-25&#39;, given as &#39;Myleran 2mg tablet, film coated&#39;})</span></td><td>25 Tab<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code Tab = &#39;Tab&#39;)</span></td></tr></table></blockquote></div></text><contained>
+    <Organization>
+      <id value="org6"/>
+      <name value="Aspen Global Inc"/>
+    </Organization>
+  </contained>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/ndc"/>
+      <code value="76388-713-25"/>
+      <display value="Myleran 2mg tablet, film coated"/>
+    </coding>
+  </code>
+  <isBrand value="true"/>
+  <manufacturer>
+    <reference value="#org6"/>
+  </manufacturer>
+  <product>
+    <form>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="385057009"/>
+        <display value="Film-coated tablet (qualifier value)"/>
+      </coding>
+    </form>
+    <ingredient>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="387138002"/>
+          <display value="Busulfan (substance)"/>
+        </coding>
+      </itemCodeableConcept>
+      <amount>
+        <numerator>
+          <value value="2"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+          <code value="Tab"/>
+        </denominator>
+      </amount>
+    </ingredient>
+    <batch>
+      <lotNumber value="9494788"/>
+      <expirationDate value="2017-05-22"/>
+    </batch> 
+  </product>
+  <package>
+    <container>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="419672006"/>
+        <display value="Bottle - unit of product usage (qualifier value)"/>
+      </coding>
+    </container>
+    <content>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/sid/ndc"/>
+          <code value="76388-713-25"/>
+          <display value="Myleran 2mg tablet, film coated"/>
+        </coding>
+      </itemCodeableConcept>
+      <amount>
+        <value value="25"/>
+        <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+        <code value="Tab"/>
+      </amount>
+    </content>
+  </package>
+</Medication>

@@ -1,0 +1,276 @@
+{
+  "@context": "http://build.fhir.org/DataElement.jsonld",
+  "@context": "http://hl7.org/fhir/DataElement/gender",
+  "Resource.id": {
+    "id.value": "gender"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Gender Code</b>: The code representing the gender of a person\n      \n      \n      \n      </p>\n\t\t\t<table>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Code</th>\n\t\t\t\t\t\t<th>Display</th>\n\t\t\t\t\t\t<th>Definition</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>0</td>\n\t\t\t\t\t\t<td>Unknown</td>\n\t\t\t\t\t\t<td>Not known, not observed, not recorded, or refused.</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>1</td>\n\t\t\t\t\t\t<td>Male</td>\n\t\t\t\t\t\t<td>A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>2</td>\n\t\t\t\t\t\t<td>Female</td>\n\t\t\t\t\t\t<td>A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>3</td>\n\t\t\t\t\t\t<td>Not specified</td>\n\t\t\t\t\t\t<td>Not specified</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t<ul>\n\t\t\t\t<li/>\n\t\t\t</ul>\n\t\t</div>"
+    }
+  },
+  "ValueSet": [
+    {
+      "Resource.id": {
+        "id.value": "2179414"
+      },
+      "ValueSet.url": {
+        "uri.value": "http://example.org/2179414"
+      },
+      "ValueSet.version": {
+        "string.value": "1.0"
+      },
+      "ValueSet.name": {
+        "string.value": "Gender Code"
+      },
+      "ValueSet.status": {
+        "code.value": "active"
+      },
+      "ValueSet.description": {
+        "markdown.value": "All codes representing the gender of a person."
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "uri.value": "http://example.ncit.nci.nih.gov"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "code.value": "C17998"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "string.value": "Unknown"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "code.value": "C20197"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "string.value": "Male"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "code.value": "C16576"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "string.value": "Female"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "code.value": "C38046"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "string.value": "Not specified"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "2179414-permitted"
+      },
+      "ValueSet.status": {
+        "code.value": "active"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "uri.value": "http://example.org/fhir/2179414"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "2179414-cm"
+      },
+      "ConceptMap.status": {
+        "code.value": "active"
+      },
+      "ConceptMap.sourceReference": {
+        "Reference.reference": {
+          "string.value": "#2179414"
+        }
+      },
+      "ConceptMap.targetReference": {
+        "Reference.reference": {
+          "string.value": "#2179414-permitted"
+        }
+      },
+      "ConceptMap.group": [
+        {
+          "ConceptMap.group.source": {
+            "uri.value": "http://example.org/fhir/2179414"
+          },
+          "ConceptMap.group.target": {
+            "uri.value": "http://example.org/fhir/2179414"
+          },
+          "ConceptMap.group.element": [
+            {
+              "ConceptMap.group.element.code": {
+                "code.value": "C17998"
+              },
+              "ConceptMap.group.element.target": [
+                {
+                  "ConceptMap.group.element.target.code": {
+                    "code.value": "0"
+                  },
+                  "ConceptMap.group.element.target.equivalence": {
+                    "code.value": "equal"
+                  }
+                }
+              ]
+            },
+            {
+              "ConceptMap.group.element.code": {
+                "code.value": "C20197"
+              },
+              "ConceptMap.group.element.target": [
+                {
+                  "ConceptMap.group.element.target.code": {
+                    "code.value": "1"
+                  },
+                  "ConceptMap.group.element.target.equivalence": {
+                    "code.value": "equal"
+                  }
+                }
+              ]
+            },
+            {
+              "ConceptMap.group.element.code": {
+                "code.value": "C16576"
+              },
+              "ConceptMap.group.element.target": [
+                {
+                  "ConceptMap.group.element.target.code": {
+                    "code.value": "2"
+                  },
+                  "ConceptMap.group.element.target.equivalence": {
+                    "code.value": "equal"
+                  }
+                }
+              ]
+            },
+            {
+              "ConceptMap.group.element.code": {
+                "code.value": "C38046"
+              },
+              "ConceptMap.group.element.target": [
+                {
+                  "ConceptMap.group.element.target.code": {
+                    "code.value": "3"
+                  },
+                  "ConceptMap.group.element.target.equivalence": {
+                    "code.value": "equal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "DataElement.identifier": [
+    {
+      "Identifier.value": {
+        "string.value": "2179650"
+      }
+    }
+  ],
+  "DataElement.version": {
+    "string.value": "1.0"
+  },
+  "DataElement.status": {
+    "code.value": "active"
+  },
+  "DataElement.publisher": {
+    "string.value": "DCP"
+  },
+  "DataElement.name": {
+    "string.value": "Gender Code"
+  },
+  "DataElement.element": [
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://hl7.org/fhir/StructureDefinition/minLength"
+          },
+          "Extension.valueInteger": {
+            "integer.value": 1
+          }
+        },
+        {
+          "Extension.url": {
+            "uri.value": "http://hl7.org/fhir/StructureDefinition/elementdefinition-question"
+          },
+          "Extension.valueString": {
+            "string.value": "Gender"
+          }
+        }
+      ],
+      "ElementDefinition.path": {
+        "string.value": "Gender"
+      },
+      "ElementDefinition.definition": {
+        "markdown.value": "The code representing the gender of a person."
+      },
+      "ElementDefinition.type": [
+        {
+          "ElementDefinition.type.code": {
+            "uri.value": "CodeableConcept"
+          }
+        }
+      ],
+      "ElementDefinition.maxLength": {
+        "integer.value": 13
+      },
+      "ElementDefinition.binding": {
+        "ElementDefinition.binding.strength": {
+          "code.value": "required"
+        },
+        "ElementDefinition.binding.valueSetReference": {
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "uri.value": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset"
+              },
+              "Extension.valueReference": {
+                "Reference.reference": {
+                  "string.value": "#2179414-permitted"
+                }
+              }
+            },
+            {
+              "Extension.url": {
+                "uri.value": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap"
+              },
+              "Extension.valueReference": {
+                "Reference.reference": {
+                  "string.value": "#2179414-cm"
+                }
+              }
+            }
+          ],
+          "Reference.reference": {
+            "string.value": "#2179414"
+          }
+        }
+      }
+    }
+  ]
+}

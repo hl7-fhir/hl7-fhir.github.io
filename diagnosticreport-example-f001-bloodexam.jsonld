@@ -1,0 +1,232 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticReport.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticReport/f001",
+  "Resource.id": {
+    "id.value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>contained</b>: </p><p><b>identifier</b>: nr1239044 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>category</b>: Haematology test <span>(Details : {SNOMED CT code '252275004' = 'Hematology test (procedure)', given as 'Haematology test'}; {http://hl7.org/fhir/v2/0074 code 'HM' = 'Hematology)</span></p><p><b>code</b>: Complete blood count (hemogram) panel - Blood by Automated count <span>(Details : {LOINC code '58410-2' = 'Complete blood count (hemogram) panel - Blood by Automated count', given as 'Complete blood count (hemogram) panel - Blood by Automated count'})</span></p><p><b>subject</b>: <a>P. van den Heuvel</a></p><p><b>effective</b>: Apr 2, 2013</p><p><b>issued</b>: May 15, 2013 7:32:52 PM</p><p><b>performer</b>: <a>Burgers University Medical Centre</a></p><p><b>request</b>: id: req; Extensions: todo; L2381; Original Order <span>(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)</span>; Complete blood count (hemogram) panel - Blood by Automated count <span>(Details : {LOINC code '58410-2' = 'Complete blood count (hemogram) panel - Blood by Automated count', given as 'Complete blood count (hemogram) panel - Blood by Automated count'})</span>; P. van den Heuvel; ????; E.van den Broek; Annotation: patient almost fainted during procedure</p><p><b>result</b>: </p><ul><li><a>Observation/f001</a></li><li><a>Observation/f002</a></li><li><a>Observation/f003</a></li><li><a>Observation/f004</a></li><li><a>Observation/f005</a></li></ul><p><b>conclusion</b>: Core lab</p></div>"
+    }
+  },
+  "DiagnosticRequest": [
+    {
+      "Resource.id": {
+        "id.value": "req"
+      },
+      "DomainResource.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://example.org/bodysitecode"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "uri.value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "code.value": "14975008"
+                },
+                "Coding.display": {
+                  "string.value": "Forearm structure"
+                }
+              }
+            ],
+            "Resource.concept": "http://snomed.info/sct#14975008"
+          }
+        }
+      ],
+      "DiagnosticRequest.identifier": [
+        {
+          "Identifier.system": {
+            "uri.value": "http://www.bmc.nl/zorgportal/identifiers/labresults"
+          },
+          "Identifier.value": {
+            "string.value": "L2381"
+          }
+        }
+      ],
+      "DiagnosticRequest.stage": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/request-stage"
+            },
+            "Coding.code": {
+              "code.value": "original-order"
+            }
+          }
+        ]
+      },
+      "DiagnosticRequest.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "58410-2"
+            },
+            "Coding.display": {
+              "string.value": "Complete blood count (hemogram) panel - Blood by Automated count"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#58410-2"
+      },
+      "DiagnosticRequest.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/f001"
+        },
+        "Reference.display": {
+          "string.value": "P. van den Heuvel"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+      },
+      "DiagnosticRequest.context": {
+        "Reference.reference": {
+          "string.value": "Encounter/f001"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Encounter/f001"
+      },
+      "DiagnosticRequest.requester": {
+        "Reference.reference": {
+          "string.value": "Practitioner/f001"
+        },
+        "Reference.display": {
+          "string.value": "E.van den Broek"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/f001"
+      },
+      "DiagnosticRequest.note": [
+        {
+          "Annotation.text": {
+            "string.value": "patient almost fainted during procedure"
+          }
+        }
+      ]
+    }
+  ],
+  "DiagnosticReport.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/zorgportal/identifiers/reports"
+      },
+      "Identifier.value": {
+        "string.value": "nr1239044"
+      }
+    }
+  ],
+  "DiagnosticReport.status": {
+    "code.value": "final"
+  },
+  "DiagnosticReport.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "252275004"
+        },
+        "Coding.display": {
+          "string.value": "Haematology test"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0074"
+        },
+        "Coding.code": {
+          "code.value": "HM"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#252275004"
+  },
+  "DiagnosticReport.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "58410-2"
+        },
+        "Coding.display": {
+          "string.value": "Complete blood count (hemogram) panel - Blood by Automated count"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#58410-2"
+  },
+  "DiagnosticReport.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f001"
+    },
+    "Reference.display": {
+      "string.value": "P. van den Heuvel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "DiagnosticReport.effectiveDateTime": {
+    "dateTime.value": "2013-04-02"
+  },
+  "DiagnosticReport.issued": {
+    "instant.value": "2013-05-15T19:32:52+01:00"
+  },
+  "DiagnosticReport.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Organization/f001"
+      },
+      "Reference.display": {
+        "string.value": "Burgers University Medical Centre"
+      }
+    }
+  ],
+  "DiagnosticReport.request": [
+    {
+      "Reference.reference": {
+        "string.value": "#req"
+      }
+    }
+  ],
+  "DiagnosticReport.result": [
+    {
+      "Reference.reference": {
+        "string.value": "Observation/f001"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "Observation/f002"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "Observation/f003"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "Observation/f004"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "Observation/f005"
+      }
+    }
+  ],
+  "DiagnosticReport.conclusion": {
+    "string.value": "Core lab"
+  }
+}

@@ -1,0 +1,622 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>RelatedPerson - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/relatedperson.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><b>RelatedPerson</b></li>          <!-- relatedperson.html / resource / RelatedPerson -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="relatedperson-examples.html">Examples</a></li><li><a href="relatedperson-definitions.html">Detailed Descriptions</a></li><li><a href="relatedperson-mappings.html">Mappings</a></li><li><a href="relatedperson-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">8.2<a name="8.2"> </a></span> Resource RelatedPerson - Content <a href="relatedperson.html#8.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/pafm/index.cfm" _target="blank">Patient Administration <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 1</td><td><a href="compartmentdefinition.html">Compartments</a>: <a href="compartmentdefinition-patient.html">Patient</a>, <a href="compartmentdefinition-relatedperson.html">RelatedPerson</a></td></tr>
+</table>
+
+
+
+<p> 
+Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process. 
+</p>
+
+
+<div>
+<a name="scope"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">8.2.1</span> Scope and Usage <a href="relatedperson.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+RelatedPersons typically have a personal or non-healthcare-specific professional relationship to the patient. A RelatedPerson 
+resource is primarily used for attribution of information, 
+since RelatedPersons are often a source of information about the patient. 
+For keeping information about people for contact purposes for a patient, use a Patient's Contact element. 
+Some individuals may serve as both a Patient's Contact and a Related Person.
+</p>
+<p>
+Example RelatedPersons are:
+</p>
+<ul>
+<li>A patient's wife or husband</li>
+<li>A patient's relatives or friends</li>
+<li>A neighbor bringing a patient to the hospital</li>
+<li>The owner or trainer of a horse</li>
+<li>A patient's attorney or guardian</li>
+<li>A Guide Dog</li>
+</ul>
+</div>
+
+<div>
+<h2 class="self-link-parent"><span class="sectioncount">8.2.2<a name="8.2.2"> </a></span> Boundaries and Relationships <a href="relatedperson.html#8.2.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+	The primary distinction between a Practitioner and a RelatedPerson is based on whether:
+</p>
+<ul>
+<li>
+	The person/animal operates on behalf of the care delivery organization over multiple patients (Practitioner) or,
+</li>
+<li>
+	Where the person/animal is not associated with the organization, and instead is
+	allocated tasks specifically for the RelatedPerson's Patient (RelatedPerson).
+</li>
+</ul>
+<p>
+	A standard extension <a href="extension-practitioner-animalspecies.html">animalSpecies</a> can be used to indicate the species of a service animal.
+</p>
+</div>
+
+
+<p>This resource is referenced by <a href="activitygroup.html">ActivityGroup</a>, <a href="allergyintolerance.html">AllergyIntolerance</a>, <a href="appointment.html">Appointment</a>, <a href="appointmentresponse.html">AppointmentResponse</a>, <a href="auditevent.html">AuditEvent</a>, <a href="basic.html">Basic</a>, <a href="careplan.html">CarePlan</a>, <a href="careteam.html">CareTeam</a>, <a href="claim.html">Claim</a>, <a href="communication.html">Communication</a>, <a href="communicationrequest.html">CommunicationRequest</a>, <a href="composition.html">Composition</a>, <a href="consent.html">Consent</a>, <a href="contract.html">Contract</a>, <a href="coverage.html">Coverage</a>, <a href="deviceuserequest.html">DeviceUseRequest</a>, <a href="diagnosticrequest.html">DiagnosticRequest</a>, <a href="documentmanifest.html">DocumentManifest</a>, <a href="documentreference.html">DocumentReference</a>, <a href="encounter.html">Encounter</a>, <a href="explanationofbenefit.html">ExplanationOfBenefit</a>, <a href="goal.html">Goal</a>, <a href="guidanceresponse.html">GuidanceResponse</a>, <a href="imagingmanifest.html">ImagingManifest</a>, <a href="medicationadministration.html">MedicationAdministration</a>, <a href="medicationstatement.html">MedicationStatement</a>, <a href="observation.html">Observation</a>, <a href="patient.html">Patient</a>, <a href="person.html">Person</a>, <a href="procedure.html">Procedure</a>, <a href="procedurerequest.html">ProcedureRequest</a>, <a href="provenance.html">Provenance</a>, <a href="questionnaireresponse.html">QuestionnaireResponse</a>, <a href="schedule.html">Schedule</a> and <a href="task.html">Task</a></p>
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">8.2.3</span> 
+Resource Content
+ <a href="relatedperson.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="relatedperson"> </a>
+<a name="RelatedPerson"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson" title="RelatedPerson : Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.">RelatedPerson</a><a name="RelatedPerson"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">An person that is related to a patient, but who is not a direct target of care</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.identifier" title="RelatedPerson.identifier : Identifier for a person within a particular scope.">identifier</a><a name="RelatedPerson.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A human identifier for this person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.active" title="RelatedPerson.active : Whether this related person record is in active use.">active</a><a name="RelatedPerson.active"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Whether this related person's record is in active use</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.patient" title="RelatedPerson.patient : The patient this person is related to.">patient</a><a name="RelatedPerson.patient"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="patient.html">Patient</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The patient this person is related to</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.relationship" title="RelatedPerson.relationship : The nature of the relationship between a patient and the related person.">relationship</a><a name="RelatedPerson.relationship"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The nature of the relationship<br/><a href="valueset-relatedperson-relationshiptype.html" title="The nature of the relationship between a patient and the related person">PatientRelationshipType</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.name" title="RelatedPerson.name : A name associated with the person.">name</a><a name="RelatedPerson.name"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#HumanName">HumanName</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A name associated with the person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.telecom" title="RelatedPerson.telecom : A contact detail for the person, e.g. a telephone number or an email address.">telecom</a><a name="RelatedPerson.telecom"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A contact detail for the person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.gender" title="RelatedPerson.gender : Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.">gender</a><a name="RelatedPerson.gender"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">male | female | other | unknown<br/><a href="valueset-administrative-gender.html" title="The gender of a person used for administrative purposes.">AdministrativeGender</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="RelatedPerson.birthDate : The date on which the related person was born.">birthDate</a><a name="RelatedPerson.birthDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The date on which the related person was born</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.address" title="RelatedPerson.address : Address where the related person can be contacted or visited.">address</a><a name="RelatedPerson.address"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Address">Address</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Address where the related person can be contacted or visited</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.photo" title="RelatedPerson.photo : Image of the person.">photo</a><a name="RelatedPerson.photo"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Attachment">Attachment</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Image of the person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.period" title="RelatedPerson.period : The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown.">period</a><a name="RelatedPerson.period"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Period of time that this relationship is considered valid</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.0" version="1.1" height="200.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="286.0" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="190.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="286.0" style="stroke:dimgrey;stroke-width:1"/><text x="143.0" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">RelatedPerson<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.identifier"><title>Identifier for a person within a particular scope</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.active"><title>Whether this related person record is in active use (this element modifies the meaning of other elements)</title>active</a> : <a xlink:href="datatypes.html#boolean">boolean</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.patient"><title>The patient this person is related to</title>patient</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="patient.html#Patient">Patient</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.relationship"><title>The nature of the relationship between a patient and the related person</title>relationship</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="valueset-relatedperson-relationshiptype.html"><title>The nature of the relationship between a patient and the related person (Strength=Extensible)</title>PatientRelationshipType</a>+ »</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.name"><title>A name associated with the person</title>name</a> : <a xlink:href="datatypes.html#HumanName">HumanName</a> [0..*]</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.telecom"><title>A contact detail for the person, e.g. a telephone number or an email address</title>telecom</a> : <a xlink:href="datatypes.html#ContactPoint">ContactPoint</a> [0..*]</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.gender"><title>Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes</title>gender</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-administrative-gender.html"><title>The gender of a person used for administrative purposes. (Strength=Required)</title>AdministrativeGender</a>! »</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.birthDate"><title>The date on which the related person was born</title>birthDate</a> : <a xlink:href="datatypes.html#date">date</a> [0..1]</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.address"><title>Address where the related person can be contacted or visited</title>address</a> : <a xlink:href="datatypes.html#Address">Address</a> [0..*]</text><text x="6.0" y="168.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.photo"><title>Image of the person</title>photo</a> : <a xlink:href="datatypes.html#Attachment">Attachment</a> [0..*]</text><text x="6.0" y="182.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.period"><title>The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown</title>period</a> : <a xlink:href="datatypes.html#Period">Period</a> [0..1]</text></g></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="relatedperson-definitions.html#RelatedPerson" title="Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process." class="dict"><b>RelatedPerson</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.identifier" title="Identifier for a person within a particular scope." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A human identifier for this person</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.active" title="Whether this related person record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>active</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Whether this related person's record is in active use</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.patient" title="The patient this person is related to." class="dict"><b>patient</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The patient this person is related to</a></span><span style="color: Gray"> --&gt;</span>&lt;/patient&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.relationship" title="The nature of the relationship between a patient and the related person." class="dict"><b>relationship</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-relatedperson-relationshiptype.html">The nature of the relationship</a></span><span style="color: Gray"> --&gt;</span>&lt;/relationship&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.name" title="A name associated with the person." class="dict"><b>name</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#HumanName">HumanName</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A name associated with the person</a></span><span style="color: Gray"> --&gt;</span>&lt;/name&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.telecom" title="A contact detail for the person, e.g. a telephone number or an email address." class="dict"><b>telecom</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A contact detail for the person</a></span><span style="color: Gray"> --&gt;</span>&lt;/telecom&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.gender" title="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." class="dict"><b>gender</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-administrative-gender.html">male | female | other | unknown</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="The date on which the related person was born." class="dict"><b>birthDate</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The date on which the related person was born</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.address" title="Address where the related person can be contacted or visited." class="dict"><b>address</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Address where the related person can be contacted or visited</a></span><span style="color: Gray"> --&gt;</span>&lt;/address&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.photo" title="Image of the person." class="dict"><b>photo</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Image of the person</a></span><span style="color: Gray"> --&gt;</span>&lt;/photo&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.period" title="The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown." class="dict"><b>period</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Period of time that this relationship is considered valid</a></span><span style="color: Gray"> --&gt;</span>&lt;/period&gt;
+&lt;/RelatedPerson&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="relatedperson-definitions.html#RelatedPerson" title="Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process." class="dict"><b>RelatedPerson</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.identifier" title="Identifier for a person within a particular scope." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A human identifier for this person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.active" title="Whether this related person record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">active</span></a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Whether this related person's record is in active use</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.patient" title="The patient this person is related to." class="dict">patient</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The patient this person is related to</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.relationship" title="The nature of the relationship between a patient and the related person." class="dict">relationship</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-relatedperson-relationshiptype.html">The nature of the relationship</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.name" title="A name associated with the person." class="dict">name</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#HumanName">HumanName</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A name associated with the person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.telecom" title="A contact detail for the person, e.g. a telephone number or an email address." class="dict">telecom</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A contact detail for the person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.gender" title="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." class="dict">gender</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-administrative-gender.html">male | female | other | unknown</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="The date on which the related person was born." class="dict">birthDate</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The date on which the related person was born</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.address" title="Address where the related person can be contacted or visited." class="dict">address</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Address where the related person can be contacted or visited</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.photo" title="Image of the person." class="dict">photo</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Image of the person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.period" title="The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown." class="dict">period</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> } <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Period of time that this relationship is considered valid</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="relatedperson-definitions.html#RelatedPerson" title="Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process." class="dict"><b>RelatedPerson</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.identifier" title="Identifier for a person within a particular scope." class="dict">RelatedPerson.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">A human identifier for this person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.active" title="Whether this related person record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">RelatedPerson.active</span></a><a name="ttl-active"> </a>[ <a href="datatypes.html#boolean">boolean</a> ]; # 0..1 <span style="color: navy">Whether this related person's record is in active use</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.patient" title="The patient this person is related to." class="dict">RelatedPerson.patient</a><a name="ttl-patient"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>) ]; # 1..1 <span style="color: navy">The patient this person is related to</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.relationship" title="The nature of the relationship between a patient and the related person." class="dict">RelatedPerson.relationship</a><a name="ttl-relationship"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">The nature of the relationship</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.name" title="A name associated with the person." class="dict">RelatedPerson.name</a><a name="ttl-name"> </a>[ <a href="datatypes.html#HumanName">HumanName</a> ], ... ; # 0..* <span style="color: navy">A name associated with the person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.telecom" title="A contact detail for the person, e.g. a telephone number or an email address." class="dict">RelatedPerson.telecom</a><a name="ttl-telecom"> </a>[ <a href="datatypes.html#ContactPoint">ContactPoint</a> ], ... ; # 0..* <span style="color: navy">A contact detail for the person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.gender" title="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." class="dict">RelatedPerson.gender</a><a name="ttl-gender"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">male | female | other | unknown</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="The date on which the related person was born." class="dict">RelatedPerson.birthDate</a><a name="ttl-birthDate"> </a>[ <a href="datatypes.html#date">date</a> ]; # 0..1 <span style="color: navy">The date on which the related person was born</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.address" title="Address where the related person can be contacted or visited." class="dict">RelatedPerson.address</a><a name="ttl-address"> </a>[ <a href="datatypes.html#Address">Address</a> ], ... ; # 0..* <span style="color: navy">Address where the related person can be contacted or visited</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.photo" title="Image of the person." class="dict">RelatedPerson.photo</a><a name="ttl-photo"> </a>[ <a href="datatypes.html#Attachment">Attachment</a> ], ... ; # 0..* <span style="color: navy">Image of the person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.period" title="The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown." class="dict">RelatedPerson.period</a><a name="ttl-period"> </a>[ <a href="datatypes.html#Period">Period</a> ]; # 0..1 <span style="color: navy">Period of time that this relationship is considered valid</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">RelatedPerson</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">RelatedPerson.active</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">RelatedPerson.relationship</td>
+    <td class="diff-right">Change binding strength from required to extensible</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">RelatedPerson.name</td>
+    <td class="diff-right">Max Cardinality changed from 1 to *</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson" title="RelatedPerson : Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.">RelatedPerson</a><a name="RelatedPerson"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">An person that is related to a patient, but who is not a direct target of care</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.identifier" title="RelatedPerson.identifier : Identifier for a person within a particular scope.">identifier</a><a name="RelatedPerson.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A human identifier for this person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.active" title="RelatedPerson.active : Whether this related person record is in active use.">active</a><a name="RelatedPerson.active"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Whether this related person's record is in active use</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.patient" title="RelatedPerson.patient : The patient this person is related to.">patient</a><a name="RelatedPerson.patient"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="patient.html">Patient</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The patient this person is related to</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.relationship" title="RelatedPerson.relationship : The nature of the relationship between a patient and the related person.">relationship</a><a name="RelatedPerson.relationship"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The nature of the relationship<br/><a href="valueset-relatedperson-relationshiptype.html" title="The nature of the relationship between a patient and the related person">PatientRelationshipType</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.name" title="RelatedPerson.name : A name associated with the person.">name</a><a name="RelatedPerson.name"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#HumanName">HumanName</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A name associated with the person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.telecom" title="RelatedPerson.telecom : A contact detail for the person, e.g. a telephone number or an email address.">telecom</a><a name="RelatedPerson.telecom"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A contact detail for the person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.gender" title="RelatedPerson.gender : Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.">gender</a><a name="RelatedPerson.gender"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">male | female | other | unknown<br/><a href="valueset-administrative-gender.html" title="The gender of a person used for administrative purposes.">AdministrativeGender</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="RelatedPerson.birthDate : The date on which the related person was born.">birthDate</a><a name="RelatedPerson.birthDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The date on which the related person was born</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.address" title="RelatedPerson.address : Address where the related person can be contacted or visited.">address</a><a name="RelatedPerson.address"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Address">Address</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Address where the related person can be contacted or visited</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.photo" title="RelatedPerson.photo : Image of the person.">photo</a><a name="RelatedPerson.photo"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Attachment">Attachment</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Image of the person</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="relatedperson-definitions.html#RelatedPerson.period" title="RelatedPerson.period : The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown.">period</a><a name="RelatedPerson.period"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Period of time that this relationship is considered valid</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386.0" version="1.1" height="200.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="286.0" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="190.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="286.0" style="stroke:dimgrey;stroke-width:1"/><text x="143.0" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">RelatedPerson<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.identifier"><title>Identifier for a person within a particular scope</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.active"><title>Whether this related person record is in active use (this element modifies the meaning of other elements)</title>active</a> : <a xlink:href="datatypes.html#boolean">boolean</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.patient"><title>The patient this person is related to</title>patient</a> : <a xlink:href="references.html#Reference">Reference</a> [1..1] « <a xlink:href="patient.html#Patient">Patient</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.relationship"><title>The nature of the relationship between a patient and the related person</title>relationship</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="valueset-relatedperson-relationshiptype.html"><title>The nature of the relationship between a patient and the related person (Strength=Extensible)</title>PatientRelationshipType</a>+ »</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.name"><title>A name associated with the person</title>name</a> : <a xlink:href="datatypes.html#HumanName">HumanName</a> [0..*]</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.telecom"><title>A contact detail for the person, e.g. a telephone number or an email address</title>telecom</a> : <a xlink:href="datatypes.html#ContactPoint">ContactPoint</a> [0..*]</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.gender"><title>Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes</title>gender</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-administrative-gender.html"><title>The gender of a person used for administrative purposes. (Strength=Required)</title>AdministrativeGender</a>! »</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.birthDate"><title>The date on which the related person was born</title>birthDate</a> : <a xlink:href="datatypes.html#date">date</a> [0..1]</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.address"><title>Address where the related person can be contacted or visited</title>address</a> : <a xlink:href="datatypes.html#Address">Address</a> [0..*]</text><text x="6.0" y="168.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.photo"><title>Image of the person</title>photo</a> : <a xlink:href="datatypes.html#Attachment">Attachment</a> [0..*]</text><text x="6.0" y="182.0" fill="black" class="diagram-class-detail"><a xlink:href="relatedperson-definitions.html#RelatedPerson.period"><title>The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown</title>period</a> : <a xlink:href="datatypes.html#Period">Period</a> [0..1]</text></g></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="relatedperson-definitions.html#RelatedPerson" title="Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process." class="dict"><b>RelatedPerson</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.identifier" title="Identifier for a person within a particular scope." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A human identifier for this person</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.active" title="Whether this related person record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>active</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Whether this related person's record is in active use</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.patient" title="The patient this person is related to." class="dict"><b>patient</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The patient this person is related to</a></span><span style="color: Gray"> --&gt;</span>&lt;/patient&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.relationship" title="The nature of the relationship between a patient and the related person." class="dict"><b>relationship</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-relatedperson-relationshiptype.html">The nature of the relationship</a></span><span style="color: Gray"> --&gt;</span>&lt;/relationship&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.name" title="A name associated with the person." class="dict"><b>name</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#HumanName">HumanName</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A name associated with the person</a></span><span style="color: Gray"> --&gt;</span>&lt;/name&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.telecom" title="A contact detail for the person, e.g. a telephone number or an email address." class="dict"><b>telecom</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A contact detail for the person</a></span><span style="color: Gray"> --&gt;</span>&lt;/telecom&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.gender" title="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." class="dict"><b>gender</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-administrative-gender.html">male | female | other | unknown</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="The date on which the related person was born." class="dict"><b>birthDate</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The date on which the related person was born</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.address" title="Address where the related person can be contacted or visited." class="dict"><b>address</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Address where the related person can be contacted or visited</a></span><span style="color: Gray"> --&gt;</span>&lt;/address&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.photo" title="Image of the person." class="dict"><b>photo</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Image of the person</a></span><span style="color: Gray"> --&gt;</span>&lt;/photo&gt;
+ &lt;<a href="relatedperson-definitions.html#RelatedPerson.period" title="The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown." class="dict"><b>period</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Period of time that this relationship is considered valid</a></span><span style="color: Gray"> --&gt;</span>&lt;/period&gt;
+&lt;/RelatedPerson&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="relatedperson-definitions.html#RelatedPerson" title="Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process." class="dict"><b>RelatedPerson</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.identifier" title="Identifier for a person within a particular scope." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A human identifier for this person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.active" title="Whether this related person record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">active</span></a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#boolean">boolean</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Whether this related person's record is in active use</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.patient" title="The patient this person is related to." class="dict">patient</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>)</span> }, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The patient this person is related to</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.relationship" title="The nature of the relationship between a patient and the related person." class="dict">relationship</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-relatedperson-relationshiptype.html">The nature of the relationship</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.name" title="A name associated with the person." class="dict">name</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#HumanName">HumanName</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A name associated with the person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.telecom" title="A contact detail for the person, e.g. a telephone number or an email address." class="dict">telecom</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A contact detail for the person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.gender" title="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." class="dict">gender</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-administrative-gender.html">male | female | other | unknown</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="The date on which the related person was born." class="dict">birthDate</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#date">date</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The date on which the related person was born</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.address" title="Address where the related person can be contacted or visited." class="dict">address</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Address where the related person can be contacted or visited</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.photo" title="Image of the person." class="dict">photo</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Attachment">Attachment</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Image of the person</a></span>
+  &quot;<a href="relatedperson-definitions.html#RelatedPerson.period" title="The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown." class="dict">period</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Period">Period</a></span> } <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Period of time that this relationship is considered valid</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="relatedperson-definitions.html#RelatedPerson" title="Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process." class="dict"><b>RelatedPerson</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.identifier" title="Identifier for a person within a particular scope." class="dict">RelatedPerson.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">A human identifier for this person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.active" title="Whether this related person record is in active use (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">RelatedPerson.active</span></a><a name="ttl-active"> </a>[ <a href="datatypes.html#boolean">boolean</a> ]; # 0..1 <span style="color: navy">Whether this related person's record is in active use</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.patient" title="The patient this person is related to." class="dict">RelatedPerson.patient</a><a name="ttl-patient"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>) ]; # 1..1 <span style="color: navy">The patient this person is related to</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.relationship" title="The nature of the relationship between a patient and the related person." class="dict">RelatedPerson.relationship</a><a name="ttl-relationship"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">The nature of the relationship</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.name" title="A name associated with the person." class="dict">RelatedPerson.name</a><a name="ttl-name"> </a>[ <a href="datatypes.html#HumanName">HumanName</a> ], ... ; # 0..* <span style="color: navy">A name associated with the person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.telecom" title="A contact detail for the person, e.g. a telephone number or an email address." class="dict">RelatedPerson.telecom</a><a name="ttl-telecom"> </a>[ <a href="datatypes.html#ContactPoint">ContactPoint</a> ], ... ; # 0..* <span style="color: navy">A contact detail for the person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.gender" title="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." class="dict">RelatedPerson.gender</a><a name="ttl-gender"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">male | female | other | unknown</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.birthDate" title="The date on which the related person was born." class="dict">RelatedPerson.birthDate</a><a name="ttl-birthDate"> </a>[ <a href="datatypes.html#date">date</a> ]; # 0..1 <span style="color: navy">The date on which the related person was born</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.address" title="Address where the related person can be contacted or visited." class="dict">RelatedPerson.address</a><a name="ttl-address"> </a>[ <a href="datatypes.html#Address">Address</a> ], ... ; # 0..* <span style="color: navy">Address where the related person can be contacted or visited</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.photo" title="Image of the person." class="dict">RelatedPerson.photo</a><a name="ttl-photo"> </a>[ <a href="datatypes.html#Attachment">Attachment</a> ], ... ; # 0..* <span style="color: navy">Image of the person</span>
+  fhir:<a href="relatedperson-definitions.html#RelatedPerson.period" title="The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown." class="dict">RelatedPerson.period</a><a name="ttl-period"> </a>[ <a href="datatypes.html#Period">Period</a> ]; # 0..1 <span style="color: navy">Period of time that this relationship is considered valid</span>
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">RelatedPerson</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">RelatedPerson.active</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">RelatedPerson.relationship</td>
+    <td class="diff-right">Change binding strength from required to extensible</td>
+  </tr>
+  <tr class="diff-entry">
+    <td class="diff-left">RelatedPerson.name</td>
+    <td class="diff-right">Max Cardinality changed from 1 to *</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="relatedperson.profile.xml.html">XML</a>, <a href="relatedperson.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="relatedperson.xsd">Schema</a>/<a href="relatedperson.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="RelatedPerson.schema.json">Schema</a>, <a href="relatedperson.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">8.2.3.1</span> 
+Terminology Bindings
+ <a href="relatedperson.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="PatientRelationshipType">RelatedPerson.relationship </td><td valign="top">The nature of the relationship between a patient and the related person</td><td><a href="terminologies.html#extensible">Extensible</a></td><td valign="top"><a href="valueset-relatedperson-relationshiptype.html">PatientRelationshipType</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="AdministrativeGender">RelatedPerson.gender </td><td valign="top">The gender of a person used for administrative purposes.</td><td><a href="terminologies.html#required">Required</a></td><td valign="top"><a href="valueset-administrative-gender.html">AdministrativeGender</a>  <!-- b --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">8.2.4</span> Search Parameters <a href="relatedperson.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>active</td><td><a href="search.html#token">token</a></td><td>Wheter the related person record is active</td><td>RelatedPerson.active</td></tr>
+<tr><td>address</td><td><a href="search.html#string">string</a></td><td>A server defined search that may match any of the string fields in the Address, including line, city, state, country, postalCode, and/or text</td><td>RelatedPerson.address</td></tr>
+<tr><td>address-city</td><td><a href="search.html#string">string</a></td><td>A city specified in an address</td><td>RelatedPerson.address.city</td></tr>
+<tr><td>address-country</td><td><a href="search.html#string">string</a></td><td>A country specified in an address</td><td>RelatedPerson.address.country</td></tr>
+<tr><td>address-postalcode</td><td><a href="search.html#string">string</a></td><td>A postal code specified in an address</td><td>RelatedPerson.address.postalCode</td></tr>
+<tr><td>address-state</td><td><a href="search.html#string">string</a></td><td>A state specified in an address</td><td>RelatedPerson.address.state</td></tr>
+<tr><td>address-use</td><td><a href="search.html#token">token</a></td><td>A use code specified in an address</td><td>RelatedPerson.address.use</td></tr>
+<tr><td>birthdate</td><td><a href="search.html#date">date</a></td><td>The Related Person's date of birth</td><td>RelatedPerson.birthDate</td></tr>
+<tr><td>email</td><td><a href="search.html#token">token</a></td><td>A value in an email contact</td><td>RelatedPerson.telecom(system=email)</td></tr>
+<tr><td>gender</td><td><a href="search.html#token">token</a></td><td>Gender of the person</td><td>RelatedPerson.gender</td></tr>
+<tr><td>identifier</td><td><a href="search.html#token">token</a></td><td>An Identifier of the RelatedPerson</td><td>RelatedPerson.identifier</td></tr>
+<tr><td>name</td><td><a href="search.html#string">string</a></td><td>A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text</td><td>RelatedPerson.name</td></tr>
+<tr><td>patient</td><td><a href="search.html#reference">reference</a></td><td>The patient this person is related to</td><td>RelatedPerson.patient<br/>(<a href="patient.html">Patient</a>)</td></tr>
+<tr><td>phone</td><td><a href="search.html#token">token</a></td><td>A value in a phone contact</td><td>RelatedPerson.telecom(system=phone)</td></tr>
+<tr><td>phonetic</td><td><a href="search.html#string">string</a></td><td>A portion of name using some kind of phonetic matching algorithm</td><td>RelatedPerson.name</td></tr>
+<tr><td>telecom</td><td><a href="search.html#token">token</a></td><td>The value in any kind of contact</td><td>RelatedPerson.telecom</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Frelatedperson.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Frelatedperson.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

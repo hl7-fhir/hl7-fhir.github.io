@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationAdministration/medadmin0306> a fhir:MedicationAdministration;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medadmin0306"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0306</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0306; Azithromycin 250mg capsule (product) <span>(Details : {SNOMED CT code '324252006' = 'Azithromycin 250mg capsule (product)', given as 'Azithromycin 250mg capsule (product)'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>effectiveTime</b>: Jan 15, 2015 4:30:00 AM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0302</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>Two tablets at once</td><td>Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></td><td>Swallow - dosing instruction imperative (qualifier value) <span>(Details : {SNOMED CT code '421521009' = 'Swallow - dosing instruction imperative (qualifier value)', given as 'Swallow - dosing instruction imperative (qualifier value)'})</span></td><td>2 TAB<span> (Details: http://hl7.org/fhir/ValueSet/v3-orderableDrugForm code TAB = 'TAB')</span></td></tr></table></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "med0306" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:324252006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "324252006" ];
+         fhir:Coding.display [ fhir:value "Azithromycin 250mg capsule (product)" ]
+       ]
+     ]
+  ];
+  fhir:MedicationAdministration.status [ fhir:value "completed"];
+  fhir:MedicationAdministration.medicationReference [
+     fhir:Reference.reference [ fhir:value "#med0306" ]
+  ];
+  fhir:MedicationAdministration.patient [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ];
+     fhir:Reference.display [ fhir:value "Donald Duck" ]
+  ];
+  fhir:MedicationAdministration.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/f001>;
+     fhir:Reference.reference [ fhir:value "Encounter/f001" ];
+     fhir:Reference.display [ fhir:value "encounter who leads to this prescription" ]
+  ];
+  fhir:MedicationAdministration.effectiveTimePeriod [
+     fhir:Period.start [ fhir:value "2015-01-15T04:30:00+01:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-01-15T14:30:00+01:00"^^xsd:dateTime ]
+  ];
+  fhir:MedicationAdministration.performer [
+     fhir:link <http://hl7.org/fhir/Practitioner/f007>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f007" ];
+     fhir:Reference.display [ fhir:value "Patrick Pump" ]
+  ];
+  fhir:MedicationAdministration.prescription [
+     fhir:link <http://hl7.org/fhir/MedicationRequest/medrx0302>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medrx0302" ]
+  ];
+  fhir:MedicationAdministration.dosage [
+     fhir:MedicationAdministration.dosage.text [ fhir:value "Two tablets at once" ];
+     fhir:MedicationAdministration.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral Route" ]
+       ]
+     ];
+     fhir:MedicationAdministration.dosage.method [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:421521009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "421521009" ];
+         fhir:Coding.display [ fhir:value "Swallow - dosing instruction imperative (qualifier value)" ]
+       ]
+     ];
+     fhir:MedicationAdministration.dosage.dose [
+       fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "TAB" ];
+       fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/ValueSet/v3-orderableDrugForm" ];
+       fhir:Quantity.code [ fhir:value "TAB" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/f001> a fhir:Encounter .
+
+<http://hl7.org/fhir/Practitioner/f007> a fhir:Practitioner .
+
+<http://hl7.org/fhir/MedicationRequest/medrx0302> a fhir:MedicationRequest .
+
+# -------------------------------------------------------------------------------------
+

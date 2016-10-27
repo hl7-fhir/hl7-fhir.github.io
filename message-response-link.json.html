@@ -1,0 +1,386 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Message-response-link.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/message-response-link.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="messageheader.html">MessageHeader</a></li>        <li><b>Example Instance</b></li>        <!-- message-response-link.json.html / resource-instance:MessageHeader / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Message-response-link.json</h1>
+
+<p>
+<a href="message-response-link.json">Raw JSON</a> (<a href="message-response-link.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>A response to a request to link two patients</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Bundle&quot;,
+  &quot;id&quot;: &quot;3a0707d3-549e-4467-b8b8-5a2ab3800efe&quot;,
+  &quot;type&quot;: &quot;message&quot;,
+  &quot;entry&quot;: [
+    {
+      &quot;fullUrl&quot;: &quot;urn:uuid:d9d296d8-5afd-42e1-a0ce-3344e0e003ed&quot;,
+      &quot;resource&quot;: {
+        &quot;resourceType&quot;: &quot;MessageHeader&quot;,
+        &quot;id&quot;: &quot;caf609cf-c3a7-4be3-a3aa-356b9bb69d4f&quot;,
+        &quot;text&quot;: {
+          &quot;status&quot;: &quot;generated&quot;,
+          &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n             \n            &lt;p&gt;This message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)&lt;/p&gt;\n           \n          &lt;/div&gt;&quot;
+        },
+        &quot;timestamp&quot;: &quot;2015-07-14T11:15:33+10:00&quot;,
+        &quot;event&quot;: {
+          &quot;system&quot;: &quot;http://hl7.org/fhir/message-events&quot;,
+          &quot;code&quot;: &quot;patient-link&quot;
+        },
+        &quot;response&quot;: {
+          &quot;identifier&quot;: &quot;efdd254b-0e09-4164-883e-35cf3871715f&quot;,
+          &quot;code&quot;: &quot;ok&quot;,
+          &quot;details&quot;: {
+            &quot;reference&quot;: &quot;OperationOutcome/03f9aa7d-b395-47b9-84e0-053678b6e4e3&quot;
+          }
+        },
+        &quot;source&quot;: {
+          &quot;endpoint&quot;: &quot;http://acme.com/ehr/fhir&quot;
+        },
+        &quot;destination&quot;: [
+          {
+            &quot;endpoint&quot;: &quot;http://example.org/clients/ehr-lite&quot;
+          }
+        ],
+        &quot;receiver&quot;: {
+          &quot;reference&quot;: &quot;http://acme.com/ehr/fhir/Practitioner/2323-33-4&quot;
+        },
+        &quot;data&quot;: [
+          {
+            &quot;reference&quot;: &quot;http://acme.com/ehr/fhir/Patient/pat1&quot;
+          },
+          {
+            &quot;reference&quot;: &quot;http://acme.com/ehr/fhir/Patient/pat12&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;fullUrl&quot;: &quot;urn:uuid:03f9aa7d-b395-47b9-84e0-053678b6e4e3&quot;,
+      &quot;resource&quot;: {
+        &quot;resourceType&quot;: &quot;OperationOutcome&quot;,
+        &quot;id&quot;: &quot;03f9aa7d-b395-47b9-84e0-053678b6e4e3&quot;,
+        &quot;text&quot;: {
+          &quot;status&quot;: &quot;generated&quot;,
+          &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n            MPI approval rating: 80%\n          &lt;/div&gt;&quot;
+        },
+        &quot;issue&quot;: [
+          {
+            &quot;severity&quot;: &quot;information&quot;,
+            &quot;code&quot;: &quot;informational&quot;,
+            &quot;details&quot;: {
+              &quot;text&quot;: &quot;MPI approval rating: 80%&quot;
+            }
+          }
+        ]
+      }
+    },
+    {
+      &quot;fullUrl&quot;: &quot;http://acme.com/ehr/fhir/Patient/pat1&quot;,
+      &quot;resource&quot;: {
+        &quot;resourceType&quot;: &quot;Patient&quot;,
+        &quot;id&quot;: &quot;pat1&quot;,
+        &quot;text&quot;: {
+          &quot;status&quot;: &quot;generated&quot;,
+          &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n            \n            &lt;p&gt;Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321&lt;/p&gt;\n          \n          &lt;/div&gt;&quot;
+        },
+        &quot;identifier&quot;: [
+          {
+            &quot;use&quot;: &quot;usual&quot;,
+            &quot;type&quot;: {
+              &quot;coding&quot;: [
+                {
+                  &quot;system&quot;: &quot;http://hl7.org/fhir/v2/0203&quot;,
+                  &quot;code&quot;: &quot;MR&quot;
+                }
+              ]
+            },
+            &quot;system&quot;: &quot;urn:oid:0.1.2.3.4.5.6.7&quot;,
+            &quot;value&quot;: &quot;654321&quot;
+          }
+        ],
+        &quot;active&quot;: true,
+        &quot;name&quot;: [
+          {
+            &quot;use&quot;: &quot;official&quot;,
+            &quot;family&quot;: [
+              &quot;Donald&quot;
+            ],
+            &quot;given&quot;: [
+              &quot;Duck&quot;
+            ]
+          }
+        ],
+        &quot;gender&quot;: &quot;male&quot;,
+        &quot;contact&quot;: [
+          {
+            &quot;relationship&quot;: [
+              {
+                &quot;coding&quot;: [
+                  {
+                    &quot;system&quot;: &quot;http://hl7.org/fhir/patient-contact-relationship&quot;,
+                    &quot;code&quot;: &quot;owner&quot;
+                  }
+                ]
+              }
+            ],
+            &quot;organization&quot;: {
+              &quot;reference&quot;: &quot;Organization/1&quot;,
+              &quot;display&quot;: &quot;Walt Disney Corporation&quot;
+            }
+          }
+        ],
+        &quot;managingOrganization&quot;: {
+          &quot;reference&quot;: &quot;Organization/1&quot;,
+          &quot;display&quot;: &quot;ACME Healthcare, Inc&quot;
+        },
+        &quot;link&quot;: [
+          {
+            &quot;other&quot;: {
+              &quot;reference&quot;: &quot;Patient/pat2&quot;
+            },
+            &quot;type&quot;: &quot;seealso&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;fullUrl&quot;: &quot;http://acme.com/ehr/fhir/Patient/pat12&quot;,
+      &quot;resource&quot;: {
+        &quot;resourceType&quot;: &quot;Patient&quot;,
+        &quot;id&quot;: &quot;pat2&quot;,
+        &quot;text&quot;: {
+          &quot;status&quot;: &quot;generated&quot;,
+          &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n            \n            &lt;p&gt;Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456&lt;/p&gt;\n          \n          &lt;/div&gt;&quot;
+        },
+        &quot;identifier&quot;: [
+          {
+            &quot;use&quot;: &quot;usual&quot;,
+            &quot;type&quot;: {
+              &quot;coding&quot;: [
+                {
+                  &quot;system&quot;: &quot;http://hl7.org/fhir/v2/0203&quot;,
+                  &quot;code&quot;: &quot;MR&quot;
+                }
+              ]
+            },
+            &quot;system&quot;: &quot;urn:oid:0.1.2.3.4.5.6.7&quot;,
+            &quot;value&quot;: &quot;123456&quot;
+          }
+        ],
+        &quot;active&quot;: true,
+        &quot;name&quot;: [
+          {
+            &quot;use&quot;: &quot;official&quot;,
+            &quot;family&quot;: [
+              &quot;Donald&quot;
+            ],
+            &quot;given&quot;: [
+              &quot;Duck&quot;,
+              &quot;D&quot;
+            ]
+          }
+        ],
+        &quot;gender&quot;: &quot;other&quot;,
+        &quot;_gender&quot;: {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://example.org/Profile/administrative-status&quot;,
+              &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                  {
+                    &quot;system&quot;: &quot;http://hl7.org/fhir/v2/0001&quot;,
+                    &quot;code&quot;: &quot;A&quot;,
+                    &quot;display&quot;: &quot;Ambiguous&quot;
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        &quot;managingOrganization&quot;: {
+          &quot;reference&quot;: &quot;Organization/1&quot;,
+          &quot;display&quot;: &quot;ACME Healthcare, Inc&quot;
+        },
+        &quot;link&quot;: [
+          {
+            &quot;other&quot;: {
+              &quot;reference&quot;: &quot;Patient/pat1&quot;
+            },
+            &quot;type&quot;: &quot;seealso&quot;
+          }
+        ]
+      }
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fmessage-response-link.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fmessage-response-link.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

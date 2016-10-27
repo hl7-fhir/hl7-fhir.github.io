@@ -1,0 +1,318 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Devicecomponent-example.xml - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/devicecomponent-example.xml.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="devicecomponent.html">DeviceComponent</a></li>        <li><b>Example Instance</b></li>        <!-- devicecomponent-example.xml.html / resource-instance:DeviceComponent / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Devicecomponent-example.xml</h1>
+
+<p>
+<a href="devicecomponent-example.xml">Raw XML</a> (<a href="devicecomponent-example.canonical.xml">canonical form</a>)
+</p>
+
+
+<div class="example">
+<p>General DeviceComponent example (id = &quot;example&quot;)</p>
+<pre class="xml">
+<span class="xmltag">&lt;<a href="devicecomponent-definitions.html" class="xmltag">DeviceComponent</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://hl7.org/fhir</span>"</span><span class="xmltag">&gt;</span><b>
+  </b><span class="xmlcomment">&lt;!--   
+    &lt;Simple_MDS xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsd:noNamespaceSchemaLocation=&quot;D
+  IM.xsd&quot; Handle=&quot;0&quot; System-Id=&quot;ID 13.1&quot; Mds-Status=&quot;disconnected&quot; object_id=&quot;MDC_MOC_VMS_MDS_SIMP&quot;
+   Class=&quot;MDC_MOC_VMS_MDS_SIMP&quot;&gt;
+      &lt;Nomenclature-Version object_id=&quot;MDC_ATTR_NOM_VERS&quot; nom-minor-version=&quot;0&quot;&gt;
+        &lt;nom-major-version majorVersion1=&quot;true&quot;/&gt;
+      &lt;/Nomenclature-Version&gt;
+      &lt;System-Model object_id=&quot;MDC_ATTR_ID_MODEL&quot; manufacturer=&quot;Center4MI&quot; model-number=&quot;2-0-14&quot;/&gt;
+      &lt;System-Type object_id=&quot;MDC_ATTR_SYS_TYPE&quot; partition=&quot;nom-part-obj&quot; code=&quot;MDC_DEV_ANALY_SAT_O2_MD
+  S&quot;/&gt;
+      &lt;Locale object_id=&quot;MDC_ATTR_LOCALE&quot; charset=&quot;ISO-10646-UCS-2&quot; country=&quot;US&quot; Language=&quot;en&quot;/&gt;
+      &lt;VMD Handle=&quot;20&quot; object_id=&quot;MDC_MOC_VMO_VMD&quot; Class=&quot;MDC_MOC_VMO_VMD&quot;&gt;
+        &lt;Type object_id=&quot;MDC_ATTR_ID_TYPE&quot; partition=&quot;nom-part-obj&quot; code=&quot;MDC_DEV_ANALY_SAT_O2_VMD&quot;/&gt;
+        &lt;VMD-Status vmd-standby=&quot;true&quot;/&gt;
+        &lt;Channel Handle=&quot;22&quot; object_id=&quot;MDC_MOC_VMO_CHAN&quot; Class=&quot;MDC_MOC_VMO_CHAN&quot; Physical-Channel-No=&quot;
+  1&quot; Logical-Channel-No=&quot;1&quot; Channel-Id=&quot;MDC_DEV_ANALY_SAT_O2_CHAN&quot;&gt;
+          &lt;Type object_id=&quot;MDC_ATTR_ID_TYPE&quot; partition=&quot;nom-part-obj&quot; code=&quot;MDC_DEV_ANALY_SAT_O2_CHAN&quot;/&gt;
+          &lt;Channel-Status chan-standby=&quot;true&quot;/&gt; 
+          &lt;Numeric Handle=&quot;221&quot; object_id=&quot;MDC_MOC_VMO_METRIC_NU&quot; Class=&quot;MDC_MOC_VMO_METRIC_NU&quot;
+   Nu-Measure-Resolution=&quot;0&quot; Metric-Id=&quot;MDC_PULS_OXIM_SAT_O2&quot;&gt;
+            &lt;Type object_id=&quot;MDC_ATTR_ID_TYPE&quot; partition=&quot;nom-part-metric&quot; code=&quot;MDC_PULS_OXIM_SAT_O2&quot;/&gt;
+            &lt;Metric-Specification object_id=&quot;MDC_ATTR_METRIC_SPECN&quot; update-period=&quot;8192&quot; category=&quot;auto-me
+  asurement&quot;&gt;
+              &lt;relevance rv-unspec=&quot;true&quot;/&gt; 
+              &lt;access upd-periodic=&quot;true&quot; acc-scan=&quot;true&quot; sc-opt-normal=&quot;true&quot;/&gt;
+              &lt;structure object_id=&quot;NA1&quot; ms-comp-no=&quot;0&quot; ms-struct=&quot;simple&quot;/&gt;
+            &lt;/Metric-Specification&gt;
+            &lt;Nu-Observed-Value object_id=&quot;MDC_ATTR_NU_VAL_OBS&quot; value=&quot;0&quot; unit-code=&quot;MDC_DIM_PERCENT&quot;
+   metric-id=&quot;MDC_PULS_OXIM_SAT_O2&quot;&gt;
+              &lt;state not-available=&quot;true&quot;/&gt;
+            &lt;/Nu-Observed-Value&gt;
+          &lt;/Numeric&gt;
+          &lt;Numeric Handle=&quot;222&quot; object_id=&quot;MDC_MOC_VMO_METRIC_NU&quot; Class=&quot;MDC_MOC_VMO_METRIC_NU&quot;
+   Nu-Measure-Resolution=&quot;0&quot; Metric-Id=&quot;MDC_BLD_PERF_INDEX&quot;&gt;
+            &lt;Type object_id=&quot;MDC_ATTR_ID_TYPE&quot; partition=&quot;nom-part-metric&quot; code=&quot;MDC_BLD_PERF_INDEX&quot;/&gt;
+            &lt;Metric-Specification object_id=&quot;MDC_ATTR_METRIC_SPECN&quot; update-period=&quot;8192&quot; category=&quot;auto-me
+  asurement&quot;&gt;
+              &lt;relevance rv-unspec=&quot;true&quot;/&gt; 
+              &lt;access upd-periodic=&quot;true&quot; acc-scan=&quot;true&quot; sc-opt-normal=&quot;true&quot;/&gt;
+              &lt;structure object_id=&quot;NA1&quot; ms-comp-no=&quot;0&quot; ms-struct=&quot;simple&quot;/&gt;
+            &lt;/Metric-Specification&gt;
+            &lt;Nu-Observed-Value object_id=&quot;MDC_ATTR_NU_VAL_OBS&quot; value=&quot;0&quot; unit-code=&quot;MDC_DIM_MILLI_L_PER_MI
+  N&quot; metric-id=&quot;MDC_BLD_PERF_INDEX&quot;&gt;
+              &lt;state not-available=&quot;true&quot;/&gt;
+            &lt;/Nu-Observed-Value&gt;
+          &lt;/Numeric&gt;
+        &lt;/Channel&gt;
+        &lt;Channel Handle=&quot;33&quot; object_id=&quot;MDC_MOC_VMO_CHAN&quot; Class=&quot;MDC_MOC_VMO_CHAN&quot; Physical-Channel-No=&quot;
+  2&quot; Logical-Channel-No=&quot;2&quot; Channel-Id=&quot;MDC_DEV_PULS_CHAN&quot;&gt;
+          &lt;Type object_id=&quot;MDC_ATTR_ID_TYPE&quot; partition=&quot;nom-part-obj&quot; code=&quot;MDC_DEV_PULS_CHAN&quot;/&gt;
+          &lt;Channel-Status chan-standby=&quot;true&quot;/&gt; 
+          &lt;Numeric Handle=&quot;333&quot; object_id=&quot;MDC_MOC_VMO_METRIC_NU&quot;  Class=&quot;MDC_MOC_VMO_METRIC_NU&quot;
+   Nu-Measure-Resolution=&quot;0&quot; Metric-Id=&quot;MDC_PULS_OXIM_PULS_RATE&quot;&gt;
+            &lt;Type object_id=&quot;MDC_ATTR_ID_TYPE&quot; partition=&quot;nom-part-metric&quot; code=&quot;MDC_PULS_OXIM_PULS_RATE&quot;/
+  &gt;
+            &lt;Metric-Specification object_id=&quot;MDC_ATTR_METRIC_SPECN&quot; update-period=&quot;8192&quot; category=&quot;auto-me
+  asurement&quot;&gt;
+              &lt;relevance rv-unspec=&quot;true&quot;/&gt; 
+              &lt;access upd-periodic=&quot;true&quot; acc-scan=&quot;true&quot; sc-opt-normal=&quot;true&quot;/&gt;
+              &lt;structure object_id=&quot;NA1&quot; ms-comp-no=&quot;0&quot; ms-struct=&quot;simple&quot;/&gt;
+            &lt;/Metric-Specification&gt;
+            &lt;Nu-Observed-Value object_id=&quot;MDC_ATTR_NU_VAL_OBS&quot; value=&quot;0&quot; unit-code=&quot;MDC_DIM_BEAT_PER_MIN&quot;
+   metric-id=&quot;MDC_PULS_OXIM_PULS_RATE&quot;&gt;
+              &lt;state not-available=&quot;true&quot;/&gt;
+            &lt;/Nu-Observed-Value&gt;
+          &lt;/Numeric&gt;
+        &lt;/Channel&gt;
+      &lt;/VMD&gt;
+    &lt;/Simple_MDS&gt;
+    --&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">example</span>"</span><span class="xmltag">/&gt;</span><b> 
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.status" class="xmltag">status</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">generated</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a></span><span class="xmlattr"> xmlns="<span class="xmlattrvalue">http://www.w3.org/1999/xhtml</span>"</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="narrative.html" class="xmltag">p</a></span><span class="xmltag">&gt;</span><b>Example of a simple MDS from a pulse oximeter containment tree</b><span class="xmltag">&lt;/<a href="narrative.html" class="xmltag">p</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="narrative-definitions.html#Narrative.div" class="xmltag">div</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.text" class="xmltag">text</a>&gt;</span><b>
+
+  </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;Device</span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="resource-definitions.html#Resource.id" class="xmltag">id</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">d1</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.identifier" class="xmltag">identifier</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.type" class="xmltag">type</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a></span><span class="xmltag">&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://hl7.org/fhir/identifier-type</span>"</span><span class="xmltag">/&gt;</span><b>
+            </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">SNO</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#Identifier.type" class="xmltag">type</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.value" class="xmltag">value</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">ID 13.1</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.identifier" class="xmltag">identifier</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.identifier" class="xmltag">identifier</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.type" class="xmltag">type</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Global Medical Device Nomenclature</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#Identifier.type" class="xmltag">type</a>&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">urn:iso:std:iso:11073:10101</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.value" class="xmltag">value</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2000</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.identifier" class="xmltag">identifier</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.type" class="xmltag">type</a></span><span class="xmltag">&gt;</span><b>
+        </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a></span><span class="xmltag">&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">urn:iso:std:iso:11073:10101</span>"</span><span class="xmltag">/&gt;</span><b> 
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2000</span>"</span><span class="xmltag">/&gt;</span><b>
+          </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">MDC_DEV_ANALY_SAT_O2_MDS</span>"</span><span class="xmltag">/&gt;</span><b>
+        </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained.type" class="xmltag">type</a>&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.manufacturer" class="xmltag">manufacturer</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Center4MI</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="domainresource-definitions.html#DomainResource.contained.model" class="xmltag">model</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2-0-14</span>"</span><span class="xmltag">/&gt;</span><b>      
+    </b><span class="xmltag">&lt;/Device&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="domainresource-definitions.html#DomainResource.contained" class="xmltag">contained</a>&gt;</span><b>
+  
+  </b><span class="xmltag">&lt;<a href="devicecomponent-definitions.html#DeviceComponent.type" class="xmltag">type</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">urn:iso:std:iso:11073:10101</span>"</span><span class="xmltag">/&gt;</span><b> 
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2000</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">MDC_DEV_ANALY_SAT_O2_MDS</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="devicecomponent-definitions.html#DeviceComponent.type" class="xmltag">type</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="devicecomponent-definitions.html#DeviceComponent.identifier" class="xmltag">identifier</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.type" class="xmltag">type</a></span><span class="xmltag">&gt;</span><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.text" class="xmltag">text</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">Handle ID</span>"</span><span class="xmltag">/&gt;</span><span class="xmltag">&lt;/<a href="datatypes-definitions.html#Identifier.type" class="xmltag">type</a>&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Identifier.value" class="xmltag">value</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">0</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="devicecomponent-definitions.html#DeviceComponent.identifier" class="xmltag">identifier</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="devicecomponent-definitions.html#DeviceComponent.lastSystemChange" class="xmltag">lastSystemChange</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">2014-10-07T14:45:00Z</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="devicecomponent-definitions.html#DeviceComponent.source" class="xmltag">source</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltagred">&lt;reference</span><span class="xmlattr"> value="<span class="xmlattrvalue">#d1</span>"</span><span class="xmltag">/&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="devicecomponent-definitions.html#DeviceComponent.source" class="xmltag">source</a>&gt;</span><b>  
+  </b><span class="xmltag">&lt;<a href="devicecomponent-definitions.html#DeviceComponent.operationalStatus" class="xmltag">operationalStatus</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">urn:iso:std:iso:11073:10101</span>"</span><span class="xmltag">/&gt;</span><b> 
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">0</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.display" class="xmltag">display</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">disconnected</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="devicecomponent-definitions.html#DeviceComponent.operationalStatus" class="xmltag">operationalStatus</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;<a href="devicecomponent-definitions.html#DeviceComponent.languageCode" class="xmltag">languageCode</a></span><span class="xmltag">&gt;</span><b>
+    </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a></span><span class="xmltag">&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.system" class="xmltag">system</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">http://tools.ietf.org/html/bcp47</span>"</span><span class="xmltag">/&gt;</span><b>
+      </b><span class="xmltag">&lt;<a href="datatypes-definitions.html#Coding.code" class="xmltag">code</a></span><span class="xmlattr"> value="<span class="xmlattrvalue">en-US</span>"</span><span class="xmltag">/&gt;</span><b>
+    </b><span class="xmltag">&lt;/<a href="datatypes-definitions.html#CodeableConcept.coding" class="xmltag">coding</a>&gt;</span><b>
+  </b><span class="xmltag">&lt;/<a href="devicecomponent-definitions.html#DeviceComponent.languageCode" class="xmltag">languageCode</a>&gt;</span><b>
+</b><span class="xmltag">&lt;/<a href="devicecomponent-definitions.html" class="xmltag">DeviceComponent</a>&gt;</span></pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fdevicecomponent-example.xml.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fdevicecomponent-example.xml.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

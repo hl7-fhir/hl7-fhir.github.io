@@ -1,0 +1,99 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/CareTeam",
+  "$ref": "#/definitions/CareTeam",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "CareTeam": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json#/definitions/DomainResource"
+        },
+        {
+          "description": "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a CareTeam resource",
+              "type": "string",
+              "enum": [
+                "CareTeam"
+              ]
+            },
+            "identifier": {
+              "description": "This records identifiers associated with this care team that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json#/definitions/Identifier"
+              }
+            },
+            "status": {
+              "description": "Indicates whether the care team is currently active, suspended, inactive, or entered in error.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "type": {
+              "description": "Identifies what kind of team.  This is to support differentiation between multiple co-existing teams, such as care plan team, episode of care team, longitudinal care team.",
+              "type": "array",
+              "items": {
+                "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+              }
+            },
+            "name": {
+              "description": "Name of the care team.",
+              "type": "string"
+            },
+            "_name": {
+              "description": "Extensions for name",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "subject": {
+              "description": "Identifies the patient or group whose intended care is handled by the team.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "period": {
+              "description": "Indicates when the team did (or is intended to) come into effect and end.",
+              "$ref": "Period.schema.json#/definitions/Period"
+            },
+            "participant": {
+              "description": "Identifies all people and organizations who are expected to be involved in the care team.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CareTeam_Participant"
+              }
+            },
+            "managingOrganization": {
+              "description": "The organization responsible for the care team.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            }
+          },
+          "required": [
+            "resourceType"
+          ]
+        }
+      ]
+    },
+    "CareTeam_Participant": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json#/definitions/BackboneElement"
+        },
+        {
+          "description": "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.",
+          "properties": {
+            "role": {
+              "description": "Indicates specific responsibility of an individual within the care team, such as \"Primary physician\", \"Team coordinator\", \"Caregiver\", etc.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "member": {
+              "description": "The specific person or organization who is participating/expected to participate in the care team.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "period": {
+              "description": "Indicates when the specific member or organization did (or is intended to) come into effect and end.",
+              "$ref": "Period.schema.json#/definitions/Period"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "@context": "http://build.fhir.org/OperationOutcome.jsonld",
+  "@context": "http://hl7.org/fhir/OperationOutcome/allok",
+  "Resource.id": {
+    "id.value": "allok"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "additional"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>All OK</p>\n    </div>"
+    }
+  },
+  "OperationOutcome.issue": [
+    {
+      "OperationOutcome.issue.severity": {
+        "code.value": "information"
+      },
+      "OperationOutcome.issue.code": {
+        "code.value": "informational"
+      },
+      "OperationOutcome.issue.details": {
+        "CodeableConcept.text": {
+          "string.value": "All OK"
+        }
+      }
+    }
+  ]
+}

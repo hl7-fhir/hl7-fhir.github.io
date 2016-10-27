@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="type-restful-interaction"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>TypeRestfulInteraction</h2>
+      <div>
+        <p>Operations supported by REST at the type or instance level.</p>
+
+      </div>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="codesystem-restful-interaction.html">http://hl7.org/fhir/restful-interaction</a>
+          <table class="none">
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>read</td>
+              <td>read</td>
+              <td>Read the current state of the resource.</td>
+            </tr>
+            <tr>
+              <td>vread</td>
+              <td>vread</td>
+              <td>Read the state of a specific version of the resource.</td>
+            </tr>
+            <tr>
+              <td>update</td>
+              <td>update</td>
+              <td>Update an existing resource by its id (or create it if it is new).</td>
+            </tr>
+            <tr>
+              <td>delete</td>
+              <td>delete</td>
+              <td>Delete a resource.</td>
+            </tr>
+            <tr>
+              <td>history-instance</td>
+              <td>history-instance</td>
+              <td>Retrieve the change history for a particular resource.</td>
+            </tr>
+            <tr>
+              <td>history-type</td>
+              <td>history-type</td>
+              <td>Retrieve the change history for a all resources of a particular type.</td>
+            </tr>
+            <tr>
+              <td>create</td>
+              <td>create</td>
+              <td>Create a new resource with a server assigned id.</td>
+            </tr>
+            <tr>
+              <td>search-type</td>
+              <td>search-type</td>
+              <td>Search all resources of the specified type based on some filter criteria.</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/type-restful-interaction"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.2.83"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="TypeRestfulInteraction"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="Operations supported by REST at the type or instance level."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/restful-interaction"/>
+      <concept>
+        <code value="read"/>
+      </concept>
+      <concept>
+        <code value="vread"/>
+      </concept>
+      <concept>
+        <code value="update"/>
+      </concept>
+      <concept>
+        <code value="delete"/>
+      </concept>
+      <concept>
+        <code value="history-instance"/>
+      </concept>
+      <concept>
+        <code value="history-type"/>
+      </concept>
+      <concept>
+        <code value="create"/>
+      </concept>
+      <concept>
+        <code value="search-type"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

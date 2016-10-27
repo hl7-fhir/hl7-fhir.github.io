@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+  <id value="f203"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>category</b>: Problem <span>(Details : {SNOMED CT code &#39;55607006&#39; = &#39;Problem (finding)&#39;, given as &#39;Problem&#39;}; {http://hl7.org/fhir/condition-category code &#39;problem-list-item&#39; = &#39;Problem List Item)</span></p><p><b>severity</b>: Moderate to severe <span>(Details : {SNOMED CT code &#39;371924009&#39; = &#39;Moderate to severe (qualifier value)&#39;, given as &#39;Moderate to severe&#39;})</span></p><p><b>code</b>: Bacterial sepsis <span>(Details : {SNOMED CT code &#39;10001005&#39; = &#39;Bacterial sepsis (disorder)&#39;, given as &#39;Bacterial sepsis&#39;})</span></p><p><b>bodySite</b>: Pulmonary vascular structure <span>(Details : {SNOMED CT code &#39;281158006&#39; = &#39;Pulmonary vascular structure (body structure)&#39;, given as &#39;Pulmonary vascular structure&#39;})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>context</b>: <a>Roel&#39;s encounter on March eleventh</a></p><p><b>onset</b>: Mar 8, 2013</p><p><b>dateRecorded</b>: Mar 11, 2013</p><p><b>asserter</b>: <a>Practitioner/f201</a></p><h3>Evidences</h3><table><tr><td>-</td><td><b>Detail</b></td></tr><tr><td>*</td><td><a>Diagnostic report for Roel&#39;s sepsis</a></td></tr></table></div></text><clinicalStatus value="active"/>
+  <verificationStatus value="confirmed"/>
+  <category>
+    <!--  Bacterial sepsis is certainly a moderate to severe problem  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55607006"/>
+      <display value="Problem"/>
+    </coding>
+    <coding>
+      <system value="http://hl7.org/fhir/condition-category"/>
+      <code value="problem-list-item"/>
+    </coding>
+  </category>
+  <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="371924009"/>
+      <display value="Moderate to severe"/>
+    </coding>
+  </severity>
+  <code>
+    <!--  The problem is bacterial sepsis  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="10001005"/>
+      <display value="Bacterial sepsis"/>
+    </coding>
+  </code>
+  <bodySite>
+    <!--  Location is intravascular pulmonary  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="281158006"/>
+      <display value="Pulmonary vascular structure"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <!--  It entails Roel's problem  -->
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <context>
+    <reference value="Encounter/f203"/>
+    <display value="Roel&#39;s encounter on March eleventh"/>
+  </context>
+  <onsetDateTime value="2013-03-08"/>
+  <dateRecorded value="2013-03-11"/>
+  <asserter>
+    <reference value="Practitioner/f201"/>
+  </asserter>
+  <evidence>
+    <detail>
+      <reference value="DiagnosticReport/f202"/>
+      <display value="Diagnostic report for Roel&#39;s sepsis"/>
+    </detail>
+  </evidence>
+</Condition>

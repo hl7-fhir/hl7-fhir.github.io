@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Operation-valueset-expand - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/operation-valueset-expand.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="operationdefinition.html">OperationDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- operation-valueset-expand.html / resource-instance:OperationDefinition / Operation Definition-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Operation-valueset-expand</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="operation-valueset-expand.xml.html">XML</a> or <a href="operation-valueset-expand.json.html">JSON</a> format. 
+</p>
+
+<hr/>
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Value Set Expansion</h2><p>OPERATION: Value Set Expansion</p><div><p>The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation.   If the operation is not called at the instance level, one of the in parameters identifier, context or valueset must be provided.  An expanded value set will be returned, or an OperationOutcome with an error message.</p>
+</div><p>URL: [base]/ValueSet/$expand</p><p>URL: [base]/ValueSet/[id]/$expand</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td>uri</td><td/><td><div><p>A logical value set identifier (i.e. ValueSet.url). The server must know the value set (e.g. it is defined explicitly in the server's value sets, or it is defined implicitly by some code system known to the server</p>
+</div></td></tr><tr><td>IN</td><td>valueSet</td><td>0..1</td><td>ValueSet</td><td/><td><div><p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion</p>
+</div></td></tr><tr><td>IN</td><td>context</td><td>0..1</td><td>uri</td><td/><td><div><p>The context of the value set, so that the server can resolve this to a value set to expand. The recommended format for this URI is [Structure Definition URL]#[name or path into structure definition] e.g. http://hl7.org/fhir/StructureDefinition/observation-hspc-height-hspcheight#Observation.interpretation. Other forms may be used but are not defined. This form is only useable if the terminology server also has access to the profile registry that the server is using, but can be used to delegate the mapping from an application context to a binding at run-time</p>
+</div></td></tr><tr><td>IN</td><td>filter</td><td>0..1</td><td>string</td><td/><td><div><p>A text filter that is applied to restrict the codes that are returned (this is useful in a UI context). The interpretation of this is delegated to the server in order to allow to determine the most optimal search approach for the context</p>
+</div></td></tr><tr><td>IN</td><td>profile</td><td>0..1</td><td>uri</td><td/><td><div><p>A reference to an external definition that provides additional control information about how the expansion is performed.  At this time, there is no agreed format or functionality for the target of this URI. The <a href="http://www.nlm.nih.gov/vsac/support/authorguidelines/updatingvaluesets.html">VSAC Documentation</a> provides one example of the use of this parameter.  Implementers using this element will need to agree on an appropriate mechanism for use within their interoperability community.  Known uses for profile include: * whether to return the value set content logical definition with the expansion * whether to include inactive concepts</p>
+</div></td></tr><tr><td>IN</td><td>date</td><td>0..1</td><td>dateTime</td><td/><td><div><p>The date for which the expansion should be generated.  if a date is provided, it means that the server should use the value set / code system definitions as they were on the given date, or return an error if this is not possible.  Normally, the date is the current conditions (which is the default value) but under some circumstances, systems need to generate an expansion as it would have been in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.</p>
+</div></td></tr><tr><td>IN</td><td>offset</td><td>0..1</td><td>integer</td><td/><td><div><p>Paging support - where to start if a subset is desired (default = 0)</p>
+</div></td></tr><tr><td>IN</td><td>count</td><td>0..1</td><td>integer</td><td/><td><div><p>Paging support - how many codes should be provided in a partial view. Paging only applies to flat expansions - servers ignore paging if the expansion is not flat.  If count = 0, the client is asking how large the expansion is. Servers SHOULD honor this request for hierarchical expansions as well, and simply return the overall count</p>
+</div></td></tr><tr><td>IN</td><td>includeDesignations</td><td>0..1</td><td>boolean</td><td/><td><div><p>Controls whether concept designations are to be included or excluded in value set expansions. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>includeDefinition</td><td>0..1</td><td>boolean</td><td/><td><div><p>Controls whether the value set definition is included or excluded in value set expansions. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>activeOnly</td><td>0..1</td><td>boolean</td><td/><td><div><p>Controls whether inactive concepts are included or excluded in value set expansions. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>excludeNested</td><td>0..1</td><td>boolean</td><td/><td><div><p>Controls whether or not the value set expansion includes nested codes (i.e. ValueSet.expansion.contains.contains). Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>excludeNotForUI</td><td>0..1</td><td>boolean</td><td/><td><div><p>Controls whether or not the value set expansion includes codes which cannot be displayed in user interfaces. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>excludePostCoordinated</td><td>0..1</td><td>boolean</td><td/><td><div><p>Controls whether or not the value set expansion includes post coordinated codes. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>displayLanguage</td><td>0..1</td><td>code</td><td/><td><div><p>Specifies the language to be used for description in the expansions i.e. the language to be used for ValueSet.expansion.contains.display. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>IN</td><td>limitedExpansion</td><td>0..1</td><td>boolean</td><td/><td><div><p>If the value set being expanded is incomplete (because it is too big to expand), return a limited expansion (a subset) with an indicator that expansion is incomplete. Overrides the value in the expansion profile if there is one</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td>ValueSet</td><td/><td><div><p>The result of the expansion</p>
+</div></td></tr></table><div><p>The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used.   Clients can work through large flat expansions in a set of pages (partial views of the full expansion) instead of just getting the full expansion in a single exchange by using offset and count parameters. Servers are not obliged to support paging, but if they do, SHALL support both the offset and count parameters. Hierarchical expansions are not subject to paging and servers simply return the entire expansion.  Different servers may return different results from expanding a value set for the following reasons:  * The underlying code systems are different (e.g. different versions, possibly with different defined behavior) * The server optimizes filter includes differently, such as sorting by code frequency * Servers introduce arbitrary groups to assist a user to navigate the lists based either on extensions in the definition, or additional knowledge available to the server</p>
+<p>When a server cannot correctly expand a value set because it does not fully understand the code systems (e.g. it has the wrong version, or incomplete definitions) then it SHALL return an error. If the value set itself is unbounded due to the inclusion of post-coordinated value sets (e.g. SNOMED CT, UCUM), then the extension <a href="extension-valueset-unclosed.html">http://hl7.org/fhir/StructureDefinition/valueset-unclosed</a> can be used to indicate that the expansion is incomplete</p>
+</div></div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:25+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Foperation-valueset-expand.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Foperation-valueset-expand.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

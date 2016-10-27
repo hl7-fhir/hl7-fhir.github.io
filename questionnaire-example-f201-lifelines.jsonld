@@ -1,0 +1,147 @@
+{
+  "@context": "http://build.fhir.org/Questionnaire.jsonld",
+  "@context": "http://hl7.org/fhir/Questionnaire/f201",
+  "Resource.id": {
+    "id.value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>Lifelines Questionnaire 1 part 1\n  1. Do you have allergies?\n  2. General Questions:\n    2.a) What is your gender?\n    2.b) What is your date of birth?\n    2.c) What is your country of birth?\n    2.d) What is your marital status?\n    3. Intoxications:\n      3.a) Do you smoke?\n      3.b) Do you drink alcohol?</pre>\n    </div>"
+    }
+  },
+  "Questionnaire.url": {
+    "uri.value": "http://hl7.org/fhir/Questionnaire/f201"
+  },
+  "Questionnaire.status": {
+    "code.value": "published"
+  },
+  "Questionnaire.date": {
+    "dateTime.value": "2010"
+  },
+  "Questionnaire.concept": [
+    {
+      "Coding.system": {
+        "uri.value": "http://example.org/system/code/lifelines/nl"
+      },
+      "Coding.code": {
+        "code.value": "VL 1-1, 18-65_1.2.2"
+      },
+      "Coding.display": {
+        "string.value": "Lifelines Questionnaire 1 part 1"
+      }
+    }
+  ],
+  "Questionnaire.subjectType": [
+    {
+      "code.value": "Patient"
+    }
+  ],
+  "Questionnaire.item": [
+    {
+      "Questionnaire.item.linkId": {
+        "string.value": "1"
+      },
+      "Questionnaire.item.text": {
+        "string.value": "Do you have allergies?"
+      },
+      "Questionnaire.item.type": {
+        "code.value": "boolean"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "string.value": "2"
+      },
+      "Questionnaire.item.text": {
+        "string.value": "General questions"
+      },
+      "Questionnaire.item.type": {
+        "code.value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "2.1"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "What is your gender?"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "string"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "2.2"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "What is your date of birth?"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "date"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "2.3"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "What is your country of birth?"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "string"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "2.4"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "What is your marital status?"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "string"
+          }
+        }
+      ]
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "string.value": "3"
+      },
+      "Questionnaire.item.text": {
+        "string.value": "Intoxications"
+      },
+      "Questionnaire.item.type": {
+        "code.value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "3.1"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "Do you smoke?"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "boolean"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "string.value": "3.2"
+          },
+          "Questionnaire.item.text": {
+            "string.value": "Do you drink alchohol?"
+          },
+          "Questionnaire.item.type": {
+            "code.value": "boolean"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="appointmentstatus"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>AppointmentStatus</h2>
+      <div>
+        <p>The free/busy status of an appointment.</p>
+
+      </div>
+      <p>This code system http://hl7.org/fhir/appointmentstatus defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>proposed
+            <a name="appointmentstatus-proposed"> </a>
+          </td>
+          <td>Proposed</td>
+          <td>None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time may not be set yet.</td>
+        </tr>
+        <tr>
+          <td>pending
+            <a name="appointmentstatus-pending"> </a>
+          </td>
+          <td>Pending</td>
+          <td>Some or all of the participant(s) have not finalized their acceptance of the appointment request.</td>
+        </tr>
+        <tr>
+          <td>booked
+            <a name="appointmentstatus-booked"> </a>
+          </td>
+          <td>Booked</td>
+          <td>All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.</td>
+        </tr>
+        <tr>
+          <td>arrived
+            <a name="appointmentstatus-arrived"> </a>
+          </td>
+          <td>Arrived</td>
+          <td>Some of the patients have arrived.</td>
+        </tr>
+        <tr>
+          <td>fulfilled
+            <a name="appointmentstatus-fulfilled"> </a>
+          </td>
+          <td>Fulfilled</td>
+          <td>This appointment has completed and may have resulted in an encounter.</td>
+        </tr>
+        <tr>
+          <td>cancelled
+            <a name="appointmentstatus-cancelled"> </a>
+          </td>
+          <td>Cancelled</td>
+          <td>The appointment has been cancelled.</td>
+        </tr>
+        <tr>
+          <td>noshow
+            <a name="appointmentstatus-noshow"> </a>
+          </td>
+          <td>No Show</td>
+          <td>Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).</td>
+        </tr>
+        <tr>
+          <td>entered-in-error
+            <a name="appointmentstatus-entered-in-error"> </a>
+          </td>
+          <td>Entered in error</td>
+          <td>This instance should not have been part of this patient&#39;s medical record.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/appointmentstatus"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.1.284"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="AppointmentStatus"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="The free/busy status of an appointment."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/appointmentstatus"/>
+  <content value="complete"/>
+  <concept>
+    <code value="proposed"/>
+    <display value="Proposed"/>
+    <definition value="None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time may not be set yet."/>
+  </concept>
+  <concept>
+    <code value="pending"/>
+    <display value="Pending"/>
+    <definition value="Some or all of the participant(s) have not finalized their acceptance of the appointment request."/>
+  </concept>
+  <concept>
+    <code value="booked"/>
+    <display value="Booked"/>
+    <definition value="All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified."/>
+  </concept>
+  <concept>
+    <code value="arrived"/>
+    <display value="Arrived"/>
+    <definition value="Some of the patients have arrived."/>
+  </concept>
+  <concept>
+    <code value="fulfilled"/>
+    <display value="Fulfilled"/>
+    <definition value="This appointment has completed and may have resulted in an encounter."/>
+  </concept>
+  <concept>
+    <code value="cancelled"/>
+    <display value="Cancelled"/>
+    <definition value="The appointment has been cancelled."/>
+  </concept>
+  <concept>
+    <code value="noshow"/>
+    <display value="No Show"/>
+    <definition value="Some or all of the participant(s) have not/did not appear for the appointment (usually the patient)."/>
+  </concept>
+  <concept>
+    <code value="entered-in-error"/>
+    <display value="Entered in error"/>
+    <definition value="This instance should not have been part of this patient&#39;s medical record."/>
+  </concept>
+</CodeSystem>

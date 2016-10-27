@@ -1,0 +1,2804 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Consent-questionnaire.json - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/consent-questionnaire.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="secpriv-module.html"><img src="secpriv.jpg"/> Security and Privacy</a></li>        <li><a href="consent.html">Consent</a></li>        <li><b>Generated Questionnaire</b></li>        <!-- consent-questionnaire.json.html / resource-questionnaire:Consent / Questionnaire-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Consent-questionnaire.json</h1>
+
+<p>
+<a href="consent-questionnaire.json">Raw JSON</a> (<a href="consent-questionnaire.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>Generated Questionnaire for Consent</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Questionnaire&quot;,
+  &quot;id&quot;: &quot;qs1&quot;,
+  &quot;contained&quot;: [
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;vs2&quot;,
+      &quot;name&quot;: &quot;Type options for Consent.consentor&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;Type options for Consent.consentor&quot;,
+      &quot;expansion&quot;: {
+        &quot;identifier&quot;: &quot;urn:uuid:4b6406c8-1b98-45e3-b8ae-e3cdbcf6676a&quot;,
+        &quot;timestamp&quot;: &quot;2016-10-27T16:26:53+00:00&quot;,
+        &quot;contains&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Organization&quot;,
+            &quot;display&quot;: &quot;Organization&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Patient&quot;,
+            &quot;display&quot;: &quot;Patient&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Practitioner&quot;,
+            &quot;display&quot;: &quot;Practitioner&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;RelatedPerson&quot;,
+            &quot;display&quot;: &quot;RelatedPerson&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;vs3&quot;,
+      &quot;name&quot;: &quot;Type options for Consent.source[x]&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;Type options for Consent.source[x]&quot;,
+      &quot;expansion&quot;: {
+        &quot;identifier&quot;: &quot;urn:uuid:e89d6c7f-6e93-47dc-9e3c-5eed313f4d75&quot;,
+        &quot;timestamp&quot;: &quot;2016-10-27T16:26:53+00:00&quot;,
+        &quot;contains&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/data-types&quot;,
+            &quot;code&quot;: &quot;Attachment&quot;,
+            &quot;display&quot;: &quot;Attachment&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/data-types&quot;,
+            &quot;code&quot;: &quot;Identifier&quot;,
+            &quot;display&quot;: &quot;Identifier&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Consent&quot;,
+            &quot;display&quot;: &quot;Consent&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;DocumentReference&quot;,
+            &quot;display&quot;: &quot;DocumentReference&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Contract&quot;,
+            &quot;display&quot;: &quot;Contract&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;QuestionnaireResponse&quot;,
+            &quot;display&quot;: &quot;QuestionnaireResponse&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;vs4&quot;,
+      &quot;name&quot;: &quot;Type options for Consent.recipient&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;Type options for Consent.recipient&quot;,
+      &quot;expansion&quot;: {
+        &quot;identifier&quot;: &quot;urn:uuid:c552cf13-d59f-4ea4-bc6e-71d6ba8777e0&quot;,
+        &quot;timestamp&quot;: &quot;2016-10-27T16:26:53+00:00&quot;,
+        &quot;contains&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Device&quot;,
+            &quot;display&quot;: &quot;Device&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Group&quot;,
+            &quot;display&quot;: &quot;Group&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Organization&quot;,
+            &quot;display&quot;: &quot;Organization&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Patient&quot;,
+            &quot;display&quot;: &quot;Patient&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Practitioner&quot;,
+            &quot;display&quot;: &quot;Practitioner&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;RelatedPerson&quot;,
+            &quot;display&quot;: &quot;RelatedPerson&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;CareTeam&quot;,
+            &quot;display&quot;: &quot;CareTeam&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;vs5&quot;,
+      &quot;name&quot;: &quot;Type options for Consent.except.actor.reference&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;Type options for Consent.except.actor.reference&quot;,
+      &quot;expansion&quot;: {
+        &quot;identifier&quot;: &quot;urn:uuid:f2349478-ac0c-49cf-b28e-b98594d43a7b&quot;,
+        &quot;timestamp&quot;: &quot;2016-10-27T16:26:53+00:00&quot;,
+        &quot;contains&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Device&quot;,
+            &quot;display&quot;: &quot;Device&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Group&quot;,
+            &quot;display&quot;: &quot;Group&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;CareTeam&quot;,
+            &quot;display&quot;: &quot;CareTeam&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Organization&quot;,
+            &quot;display&quot;: &quot;Organization&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Patient&quot;,
+            &quot;display&quot;: &quot;Patient&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;Practitioner&quot;,
+            &quot;display&quot;: &quot;Practitioner&quot;
+          },
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/resource-types&quot;,
+            &quot;code&quot;: &quot;RelatedPerson&quot;,
+            &quot;display&quot;: &quot;RelatedPerson&quot;
+          }
+        ]
+      }
+    }
+  ],
+  &quot;identifier&quot;: [
+    {
+      &quot;system&quot;: &quot;urn:ietf:rfc:3986&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;date&quot;: &quot;2016-10-27T16:23:35+00:00&quot;,
+  &quot;publisher&quot;: &quot;Health Level Seven International (Community Based Collaborative Care)&quot;,
+  &quot;item&quot;: [
+    {
+      &quot;linkId&quot;: &quot;Consent&quot;,
+      &quot;text&quot;: &quot;A healthcare consumer’s policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time&quot;,
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;required&quot;: false,
+      &quot;repeats&quot;: true,
+      &quot;item&quot;: [
+        {
+          &quot;text&quot;: &quot;Broadly, there are 3 key areas of consent for patients: Consent around sharing information (aka Privacy Consent Directive - Authorization to Collect, Use, or Disclose information), consent for specific treatment, or kinds of treatment, and general advance care directives.&quot;,
+          &quot;type&quot;: &quot;display&quot;
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+              &quot;valueCodeableConcept&quot;: {
+                &quot;coding&quot;: [
+                  {
+                    &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                    &quot;code&quot;: &quot;flyover&quot;,
+                    &quot;display&quot;: &quot;Fly-over&quot;
+                  }
+                ]
+              }
+            }
+          ],
+          &quot;text&quot;: &quot;A record of a healthcare consumer’s policy choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.&quot;,
+          &quot;type&quot;: &quot;display&quot;
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;string&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.id&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.id.value&quot;,
+              &quot;text&quot;: &quot;Logical id of this artifact&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.meta&quot;,
+          &quot;text&quot;: &quot;Metadata about the resource&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;uri&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.implicitRules&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.implicitRules.value&quot;,
+              &quot;text&quot;: &quot;A set of rules under which this content was created&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.language&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.language.value&quot;,
+              &quot;text&quot;: &quot;language&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.text&quot;,
+          &quot;text&quot;: &quot;Text summary of the resource, for human interpretation&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \&quot;text blob\&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Consent.contained&quot;,
+          &quot;text&quot;: &quot;Contained, inline Resources&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Consent.extension&quot;,
+          &quot;text&quot;: &quot;Additional Content defined by implementations&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Consent.modifierExtension&quot;,
+          &quot;text&quot;: &quot;Extensions that cannot be ignored&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Identifier&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.identifier&quot;,
+          &quot;text&quot;: &quot;Identifier for this record (external references)&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Unique identifier for this copy of the Consent Statement. This identifier is identifies this copy of the consent. Where this identifier is also used elsewhere as the identifier for a consent record (e.g. a CDA consent document) then the consent details are expected to be the same.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.identifier.label&quot;,
+              &quot;text&quot;: &quot;label:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.identifier.system&quot;,
+              &quot;text&quot;: &quot;system:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.identifier.value&quot;,
+              &quot;text&quot;: &quot;value:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;code&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.status&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: true,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Indicates the current state of this consent. This is the status of this consent at the time it was issued / created / indexed.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.status.value&quot;,
+              &quot;text&quot;: &quot;status&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;CodeableConcept&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.category&quot;,
+          &quot;text&quot;: &quot;Classification of the consent statement - for indexing/retrieval&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.category.coding&quot;,
+              &quot;text&quot;: &quot;code:&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.category.text&quot;,
+              &quot;text&quot;: &quot;text:&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;datetime&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.dateTime&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;When this  Consent was issued / created / indexed. This is not the time of the original consent, but the time that this statement was made or derived.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.dateTime.value&quot;,
+              &quot;text&quot;: &quot;When this Consent was created or indexed&quot;,
+              &quot;type&quot;: &quot;dateTime&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Period&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.period&quot;,
+          &quot;text&quot;: &quot;Period that this consent applies&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Relevant time or time-period when this Consent is applicable. This can be a subset of the period of the original statement.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.period.low&quot;,
+              &quot;text&quot;: &quot;start:&quot;,
+              &quot;type&quot;: &quot;dateTime&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.period.end&quot;,
+              &quot;text&quot;: &quot;end:&quot;,
+              &quot;type&quot;: &quot;dateTime&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Reference&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.patient&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: true,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The patient/healthcare consumer to whom this consent applies. Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                  &quot;valueCode&quot;: &quot;Patient&quot;
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.patient.value&quot;,
+              &quot;text&quot;: &quot;Who the consent applies to&quot;,
+              &quot;type&quot;: &quot;reference&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Consent.consentor&quot;,
+          &quot;text&quot;: &quot;Who is agreeing to the policy and exceptions&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The patient/consumer that is responsible for agreeing to the consent represented by this resource. This is the person (usually) that agreed to the policy, along with the exceptions, e.g. the persion who takes responsibility for the agreement. In the signature this corresponds to the role \&quot;Consent Signature\&quot;. Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.consentor._type&quot;,
+              &quot;text&quot;: &quot;type&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#vs2&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.consentor._Organization&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Organization&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.consentor._Organization.value&quot;,
+                      &quot;text&quot;: &quot;Organization&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.consentor._Patient&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Patient&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.consentor._Patient.value&quot;,
+                      &quot;text&quot;: &quot;Patient&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.consentor._Practitioner&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Practitioner&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.consentor._Practitioner.value&quot;,
+                      &quot;text&quot;: &quot;Practitioner&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.consentor._RelatedPerson&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;RelatedPerson&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.consentor._RelatedPerson.value&quot;,
+                      &quot;text&quot;: &quot;RelatedPerson&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Reference&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.organization&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The organization that manages the consent, and the framework within which it is executed.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                  &quot;valueCode&quot;: &quot;Organization&quot;
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.organization.value&quot;,
+              &quot;text&quot;: &quot;Organization that manages the consent&quot;,
+              &quot;type&quot;: &quot;reference&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.source[x]&quot;,
+          &quot;text&quot;: &quot;Source from which this consent is taken&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The source on which this consent statement is based. The source might be a scanned original paper form, or a reference to a consent that links back to such a source, a reference to a document repository (e.g. XDS) that stores the original consent document. The source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.source[x]._type&quot;,
+              &quot;text&quot;: &quot;type&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#vs3&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Attachment&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.source[x]._Attachment&quot;,
+                  &quot;text&quot;: &quot;Attachment&quot;,
+                  &quot;type&quot;: &quot;group&quot;
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Identifier&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.source[x]._Identifier&quot;,
+                  &quot;text&quot;: &quot;Identifier&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;linkId&quot;: &quot;Consent.source[x]._Identifier.label&quot;,
+                      &quot;text&quot;: &quot;label:&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.source[x]._Identifier.system&quot;,
+                      &quot;text&quot;: &quot;system:&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.source[x]._Identifier.value&quot;,
+                      &quot;text&quot;: &quot;value:&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.source[x]._Consent&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Consent&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.source[x]._Consent.value&quot;,
+                      &quot;text&quot;: &quot;Consent&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.source[x]._DocumentReference&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;DocumentReference&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.source[x]._DocumentReference.value&quot;,
+                      &quot;text&quot;: &quot;DocumentReference&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.source[x]._Contract&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Contract&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.source[x]._Contract.value&quot;,
+                      &quot;text&quot;: &quot;Contract&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.source[x]._QuestionnaireResponse&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;QuestionnaireResponse&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.source[x]._QuestionnaireResponse.value&quot;,
+                      &quot;text&quot;: &quot;QuestionnaireResponse&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 1
+            },
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;uri&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.policy&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: true,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;A reference to the policy that this consents to. Policies may be organizational, but are often defined jurisdictionally, or in law. If the policy reference is not known, the resource cannot be processed. Where the reference is absent, there is no particular policy other than what is expressed directly in the consent resource.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.policy.value&quot;,
+              &quot;text&quot;: &quot;Policy that this consents to&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Consent.recipient&quot;,
+          &quot;text&quot;: &quot;Whose access is controlled by the policy&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;Actor whose access is controlled by this consent under the terms of the policy and exceptions. The Consent recipient is the person/organization who is being granted or denied permission according to the stated policy.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.recipient._type&quot;,
+              &quot;text&quot;: &quot;type&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#vs4&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._Device&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Device&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._Device.value&quot;,
+                      &quot;text&quot;: &quot;Device&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._Group&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Group&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._Group.value&quot;,
+                      &quot;text&quot;: &quot;Group&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._Organization&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Organization&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._Organization.value&quot;,
+                      &quot;text&quot;: &quot;Organization&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._Patient&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Patient&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._Patient.value&quot;,
+                      &quot;text&quot;: &quot;Patient&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._Practitioner&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Practitioner&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._Practitioner.value&quot;,
+                      &quot;text&quot;: &quot;Practitioner&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._RelatedPerson&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;RelatedPerson&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._RelatedPerson.value&quot;,
+                      &quot;text&quot;: &quot;RelatedPerson&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.recipient._CareTeam&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;CareTeam&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.recipient._CareTeam.value&quot;,
+                      &quot;text&quot;: &quot;CareTeam&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+              &quot;valueString&quot;: &quot;Coding&quot;
+            }
+          ],
+          &quot;linkId&quot;: &quot;Consent.purpose&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;The context of the activities a user is taking - why the user is accessing the data - that are controlled by this consent. This element is for discoverability / documentation, and does not modify or qualify the policy (e.g. the policy itself describes the purposes for which it applies).&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.purpose.value&quot;,
+              &quot;text&quot;: &quot;Context of activities for which the agreement is made&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: false
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Consent.except&quot;,
+          &quot;text&quot;: &quot;Additional rule -  addition or removal of permissions&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: false,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                  &quot;valueCodeableConcept&quot;: {
+                    &quot;coding&quot;: [
+                      {
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                        &quot;code&quot;: &quot;flyover&quot;,
+                        &quot;display&quot;: &quot;Fly-over&quot;
+                      }
+                    ]
+                  }
+                }
+              ],
+              &quot;text&quot;: &quot;An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;string&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.id&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.id.value&quot;,
+                  &quot;text&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.except.extension&quot;,
+              &quot;text&quot;: &quot;Additional Content defined by implementations&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.except.modifierExtension&quot;,
+              &quot;text&quot;: &quot;Extensions that cannot be ignored&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;code&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.type&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: true,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Action  to take - permit or deny - when the exception conditions are met.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.type.value&quot;,
+                  &quot;text&quot;: &quot;type&quot;,
+                  &quot;type&quot;: &quot;choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;Period&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.period&quot;,
+              &quot;text&quot;: &quot;Timeframe for data controlled by this exception&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;The timeframe in which data is controlled by this exception. This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.period.low&quot;,
+                  &quot;text&quot;: &quot;start:&quot;,
+                  &quot;type&quot;: &quot;dateTime&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.period.end&quot;,
+                  &quot;text&quot;: &quot;end:&quot;,
+                  &quot;type&quot;: &quot;dateTime&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.except.actor&quot;,
+              &quot;text&quot;: &quot;Who|what controlled by this exception (or group, by role)&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Who or what is controlled by this Exception. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;string&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.except.actor.id&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.except.actor.id.value&quot;,
+                      &quot;text&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.actor.extension&quot;,
+                  &quot;text&quot;: &quot;Additional Content defined by implementations&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.actor.modifierExtension&quot;,
+                  &quot;text&quot;: &quot;Extensions that cannot be ignored&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;CodeableConcept&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.except.actor.role&quot;,
+                  &quot;text&quot;: &quot;How the actor is/was involved&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: true,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;How the individual is or was involved in the resourcescontent that is described in the exception.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.except.actor.role.coding&quot;,
+                      &quot;text&quot;: &quot;code:&quot;,
+                      &quot;type&quot;: &quot;open-choice&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.except.actor.role.text&quot;,
+                      &quot;text&quot;: &quot;text:&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.except.actor.reference&quot;,
+                  &quot;text&quot;: &quot;Resource for the actor (or group, by role)&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: true,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;The resource that identifies the actor. To identify a actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.except.actor.reference._type&quot;,
+                      &quot;text&quot;: &quot;type&quot;,
+                      &quot;type&quot;: &quot;choice&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false,
+                      &quot;options&quot;: {
+                        &quot;reference&quot;: &quot;#vs5&quot;
+                      },
+                      &quot;item&quot;: [
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._Device&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;Device&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._Device.value&quot;,
+                              &quot;text&quot;: &quot;Device&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        },
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._Group&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;Group&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._Group.value&quot;,
+                              &quot;text&quot;: &quot;Group&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        },
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._CareTeam&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;CareTeam&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._CareTeam.value&quot;,
+                              &quot;text&quot;: &quot;CareTeam&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        },
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._Organization&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;Organization&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._Organization.value&quot;,
+                              &quot;text&quot;: &quot;Organization&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        },
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._Patient&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;Patient&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._Patient.value&quot;,
+                              &quot;text&quot;: &quot;Patient&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        },
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._Practitioner&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;Practitioner&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._Practitioner.value&quot;,
+                              &quot;text&quot;: &quot;Practitioner&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        },
+                        {
+                          &quot;extension&quot;: [
+                            {
+                              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                              &quot;valueString&quot;: &quot;Reference&quot;
+                            }
+                          ],
+                          &quot;linkId&quot;: &quot;Consent.except.actor.reference._RelatedPerson&quot;,
+                          &quot;type&quot;: &quot;group&quot;,
+                          &quot;item&quot;: [
+                            {
+                              &quot;extension&quot;: [
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                                  &quot;valueCode&quot;: &quot;RelatedPerson&quot;
+                                },
+                                {
+                                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                                  &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                                }
+                              ],
+                              &quot;linkId&quot;: &quot;Consent.except.actor.reference._RelatedPerson.value&quot;,
+                              &quot;text&quot;: &quot;RelatedPerson&quot;,
+                              &quot;type&quot;: &quot;reference&quot;,
+                              &quot;required&quot;: false,
+                              &quot;repeats&quot;: false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;CodeableConcept&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.action&quot;,
+              &quot;text&quot;: &quot;Actions controlled by this exception&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;Actions controlled by this Exception. Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is 'read'.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.action.coding&quot;,
+                  &quot;text&quot;: &quot;code:&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.action.text&quot;,
+                  &quot;text&quot;: &quot;text:&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;Coding&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.securityLabel&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;A set of security labels that define which resources are controlled by this exception. If more than one label is specified, all resources must have all the specified labels. If the consent specifies a security label of \&quot;R\&quot; then it applies to all resources that are labelled \&quot;R\&quot; or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. Not all of the security labels make sense for use in this element (may define a narrower value set?).&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.securityLabel.value&quot;,
+                  &quot;text&quot;: &quot;Security Labels that define affected resources&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;Coding&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.purpose&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;The context of the activities a user is taking - why the user is accessing the data - that are controlled by this exception. E.g. if the purpose is 'research', then the operational context must be research, in order for the consent to apply. Not all of the security labels make sense for use in this element (may define a narrower value set?).&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.purpose.value&quot;,
+                  &quot;text&quot;: &quot;Context of activities covered by this exception&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;Coding&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.class&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;The class of information covered by this exception. The type can be a FHIR resource type, a profile on a type, or a CDA document, or some other type that indicates what sort of information the consent relates to. Multiple types are or'ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.class.value&quot;,
+                  &quot;text&quot;: &quot;e.g. Resource Type, Profile, or CDA etc&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                  &quot;valueString&quot;: &quot;Coding&quot;
+                }
+              ],
+              &quot;linkId&quot;: &quot;Consent.except.code&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;If this code is found in an instance, then the exception applies. TODO: where do you not have to look? This is a problematic element. Typical use of this is a Document code with class = CDA.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.code.value&quot;,
+                  &quot;text&quot;: &quot;e.g. LOINC or SNOMED CT code, etc in the content&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: false
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;Consent.except.data&quot;,
+              &quot;text&quot;: &quot;Data controlled by this exception&quot;,
+              &quot;type&quot;: &quot;group&quot;,
+              &quot;required&quot;: false,
+              &quot;repeats&quot;: true,
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                      &quot;valueCodeableConcept&quot;: {
+                        &quot;coding&quot;: [
+                          {
+                            &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                            &quot;code&quot;: &quot;flyover&quot;,
+                            &quot;display&quot;: &quot;Fly-over&quot;
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  &quot;text&quot;: &quot;The resources controlled by this exception, if specific resources are referenced.&quot;,
+                  &quot;type&quot;: &quot;display&quot;
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;string&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.except.data.id&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.except.data.id.value&quot;,
+                      &quot;text&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.data.extension&quot;,
+                  &quot;text&quot;: &quot;Additional Content defined by implementations&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;Consent.except.data.modifierExtension&quot;,
+                  &quot;text&quot;: &quot;Extensions that cannot be ignored&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: false,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;code&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.except.data.meaning&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: true,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;How the resource reference is interpreted when testing consent restrictions.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    },
+                    {
+                      &quot;linkId&quot;: &quot;Consent.except.data.meaning.value&quot;,
+                      &quot;text&quot;: &quot;meaning&quot;,
+                      &quot;type&quot;: &quot;choice&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+                      &quot;valueInteger&quot;: 1
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType&quot;,
+                      &quot;valueString&quot;: &quot;Reference&quot;
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;Consent.except.data.reference&quot;,
+                  &quot;type&quot;: &quot;group&quot;,
+                  &quot;required&quot;: true,
+                  &quot;repeats&quot;: true,
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+                          &quot;valueCodeableConcept&quot;: {
+                            &quot;coding&quot;: [
+                              {
+                                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                                &quot;code&quot;: &quot;flyover&quot;,
+                                &quot;display&quot;: &quot;Fly-over&quot;
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      &quot;text&quot;: &quot;A reference to a specific resource that defines which resources are covered by this consent.&quot;,
+                      &quot;type&quot;: &quot;display&quot;
+                    },
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource&quot;,
+                          &quot;valueCode&quot;: &quot;Resource&quot;
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter&quot;,
+                          &quot;valueString&quot;: &quot;subject=$subj&amp;patient=$subj&amp;encounter=$encounter&quot;
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;Consent.except.data.reference.value&quot;,
+                      &quot;text&quot;: &quot;The actual data reference&quot;,
+                      &quot;type&quot;: &quot;reference&quot;,
+                      &quot;required&quot;: false,
+                      &quot;repeats&quot;: false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconsent-questionnaire.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconsent-questionnaire.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

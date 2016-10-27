@@ -1,0 +1,1487 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ActReason - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/v3/ActReason/cs.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="../.././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../.././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="../.././assets/css/project.css"/>
+  <link rel="stylesheet" href="../.././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="../.././assets/js/html5shiv.js"></script>
+  <script src="../.././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="../.././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="../.././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="../.././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="../.././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="../.././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="../.././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="../.././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../.././index.html">Home</a></li>
+              <li><a href="../.././modules.html">Getting Started</a></li>
+              <li><a href="../.././documentation.html">Documentation</a></li>
+              <li><a href="../.././resourcelist.html">Resources</a></li>
+              <li><a href="../.././profilelist.html">Profiles</a></li>
+              <li><a href="../.././extensibility-registry.html">Extensions</a></li>
+              <li><a href="../.././operationslist.html">Operations</a></li>
+              <li><a href="../.././servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="../../terminology-module.html"><img src="../../terminology.png"/> Terminology</a></li>        <li><a href="../../terminologies-valuesets.html">Value Sets</a></li>        <li><b/></li>          <!-- ActReason.html / v3Vocab / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="../../terminologies.html">Using Codes</a></li><li><a href="../../terminologies-systems.html">Code Systems</a></li><li><a href="../../terminologies-valuesets.html">Value Sets</a></li><li><a href="../../terminologies-conceptmaps.html">Concept Maps</a></li><li><a href="../../identifier-registry.html">Identifier Systems</a></li></ul>
+
+
+<h1 class="self-link-parent"><span class="sectioncount">4.3.2.8<a name="4.3.2.8"> </a></span> HL7 v3 Code System ActReason <a href="cs.html#4.3.2.8" title="link to here" class="self-link"><img src="../../assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<p>
+This code system (http://hl7.org/fhir/v3/ActReason) is defined as part of HL7 v3. 
+</p>
+<p><b>Summary</b></p>
+<table class="grid">
+ <tr><td>Defining URL:</td><td><code>http://hl7.org/fhir/v3/ActReason</code></td></tr>
+ <tr><td>Name:</td><td>v3 Code System ActReason</td></tr>
+ <tr><td>Definition:</td><td> A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type &quot;has reason&quot; linking to another Act.  Examples:
+Example reasons that might qualify for being coded in this field might be: &quot;routine requirement&quot;, &quot;infectious disease reporting requirement&quot;, &quot;on patient request&quot;, &quot;required by law&quot;.</td></tr>
+ <tr><td>OID:</td><td>2.16.840.1.113883.5.8 (for OID based terminology systems)</td></tr>
+
+ <tr><td>Source Resource</td><td><a href="v3-ActReason.cs.xml.html">XML</a> / <a href="v3-ActReason.cs.json.html">JSON</a></td></tr>
+</table>
+
+<p>
+This Code system is used in the following value sets:
+</p>
+<ul>
+ <li><a href="../../v3/SubstanceAdminSubstitutionReason/vs.html">SubstanceAdminSubstitutionReason</a> (No Description Provided)</li>
+ <li><a href="../../v3/ActReason/vs.html">v3 Code System ActReason</a> ( A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type &quot;has reason&quot; linking to another Act.  Examples:
+Example reasons that might qualify for being coded in this field might be: &quot;routine requirement&quot;, &quot;infectious disease reporting requirement&quot;, &quot;on patient request&quot;, &quot;required by law&quot;.)</li>
+ <li><a href="../../valueset-no-immunization-reason.html">Immunization Reasons for Not Immunizing Codes</a> (The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the medication process, in particular the process and reasons for dispensing. This value set is provided as a suggestive example.)</li>
+ <li><a href="../../v3/PurposeOfUse/vs.html">PurposeOfUse</a> ( Supports communication of purpose of use at a general level.)</li>
+ <li><a href="../../v3/GeneralPurposeOfUse/vs.html">GeneralPurposeOfUse</a> ( Supports communication of purpose of use at a general level.)</li>
+</ul>
+
+
+<a name="definition"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">4.3.2.8.1</span> Code System Content <a href="cs.html#definition" title="link to here" class="self-link"><img src="../../assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>Release Date: 2016-03-23</p>
+<table class="grid">
+ <tr><td><b>Level</b></td><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActAccommodationReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActAccommodationReason">&nbsp;</a></td><td>
+                        Identifies the reason the patient is assigned to this accommodation type<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ACCREQNA<a name="ACCREQNA"> </a></td><td>Accommodation Requested Not Available</td><td>
+                        Accommodation requested is not available.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FLRCNV<a name="FLRCNV"> </a></td><td>Floor Convenience</td><td>
+                        Accommodation is assigned for floor convenience.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;MEDNEC<a name="MEDNEC"> </a></td><td>Medical Necessity</td><td>
+                        Required for medical reasons(s).<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PAT<a name="PAT"> </a></td><td>Patient request</td><td>
+                        The Patient requested the action<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActCoverageReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActCoverageReason">&nbsp;</a></td><td>
+                        
+                           Description:Codes used to specify reasons or criteria relating to coverage provided under a policy or program.  May be used to convey reasons pertaining to coverage contractual provisions, including criteria for eligibility, coverage limitations, coverage maximums, or financial participation required of covered parties.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_EligibilityActReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_EligibilityActReasonCode">&nbsp;</a></td><td>
+                        Identifies the reason or rational for why a person is eligibile for benefits under an insurance policy or progam. <br/>
+
+                        
+                           Examples:  A person is a claimant under an automobile insurance policy are client deceased &amp; adopted client has been given a new policy identifier.  A new employee is eligible for health insurance as an employment benefit.  A person meets a government program eligibility criteria for financial, age or health status.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: grey"><i>(_ActIneligibilityReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActIneligibilityReason">&nbsp;</a></td><td>
+                        Identifies the reason or rational for why a person is not eligibile for benefits under an insurance policy.<br/>
+
+                        Examples are client deceased &amp; adopted client has been given a new policy identifier.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COVSUS<a name="COVSUS"> </a></td><td>coverage suspended</td><td>
+                        When a client has no contact with the health system for an extended period, coverage is suspended.  Client will be reinstated to original start date upon proof of identification, residency etc.<br/>
+
+                        Example: Coverage may be suspended during a strike situation, when employer benefits for employees are not covered (i.e. not in effect).<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DECSD<a name="DECSD"> </a></td><td>deceased</td><td>
+                        Client deceased.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REGERR<a name="REGERR"> </a></td><td>registered in error</td><td>
+                        Client was registered in error.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: grey"><i>(_CoverageEligibilityReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_CoverageEligibilityReason">&nbsp;</a></td><td>
+                        Definition: Identifies the reason or rational for why a person is eligibile for benefits under an insurance policy or progam. <br/>
+
+                        
+                           Examples:  A person is a claimant under an automobile insurance policy are client deceased &amp; adopted client has been given a new policy identifier.  A new employee is eligible for health insurance as an employment benefit.  A person meets a government program eligibility criteria for financial, age or health status.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGE<a name="AGE"> </a></td><td>age eligibility</td><td>
+                        A person becomes eligible for a program based on age.<br/>
+
+                        
+                           Example:  In the U.S., a person who is 65 years of age or older is eligible for Medicare. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRIME<a name="CRIME"> </a></td><td>crime victim</td><td>
+                        A person becomes eligible for insurance or a program because of crime related health condition or injury. <br/>
+
+                        
+                           Example:  A person is a claimant under the U.S. Crime Victims Compensation program.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DIS<a name="DIS"> </a></td><td>disability</td><td>
+                        A person becomes a claimant under a disability income insurance policy or a disability rehabilitation program because of a health condition or injury which limits the person's ability to earn an income or function without institutionalization. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMPLOY<a name="EMPLOY"> </a></td><td>employment benefit</td><td>
+                        A person becomes eligible for insurance provided as an employment benefit based on employment status.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FINAN<a name="FINAN"> </a></td><td>financial eligibility</td><td>
+                        A person becomes eligible for a program based on financial criteria.<br/>
+
+                        
+                           Example:  A person whose family income is below a financial threshold for eligibility for Medicaid or SCHIP.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HEALTH<a name="HEALTH"> </a></td><td>health status</td><td>
+                        A person becomes eligible for a program because of a qualifying health condition or injury. <br/>
+
+                        
+                           Examples:  A person is determined to have a qualifying health conditions include pregnancy, HIV/AIDs, tuberculosis, end stage renal disease, breast or cervical cancer, or other condition requiring specialized health services, hospice, institutional or community based care provided under a program<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MULTI<a name="MULTI"> </a></td><td>multiple criteria eligibility</td><td>
+                        A person becomes eligible for a program based on more than one criterion.<br/>
+
+                        
+                           Examples:  In the U.S., a child whose familiy income meets Medicaid financial thresholds and whose age is less than 18 is eligible for the Early and Periodic Screening, Diagnostic, and Treatment program (EPSDT).  A person whose family income meets Medicaid financial thresholds and whose age is 65 years or older is eligible for Medicaid and Medicare, and are referred to as dual eligibles.  <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PNC<a name="PNC"> </a></td><td>property and casualty condition</td><td>
+                        A person becomes a claimant under a property and casualty insurance policy because of a related health condition or injury resulting from a circumstance covered under the terms of the policy. <br/>
+
+                        
+                           Example:  A person is a claimant under a homeowners insurance policy because of an injury sustained on the policyholderaTMs premises.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUTORY<a name="STATUTORY"> </a></td><td>statutory eligibility</td><td>
+                        A person becomes eligible for a program based on statutory criteria.<br/>
+
+                        
+                           Examples:  A person is a member of an indigenous group, a veteran of military service, or  in the U.S., a recipient of adoption assistance and foster care under Title IV-E of the Social Security. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VEHIC<a name="VEHIC"> </a></td><td>motor vehicle accident victim</td><td>
+                        A person becomes a claimant under a motor vehicle accident insurance because of a motor vehicle accident related health condition or injury. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WORK<a name="WORK"> </a></td><td>work related</td><td>
+                        A person becomes eligible for insurance or a program because of a work related health condition or injury. <br/>
+
+                        
+                           Example:  A person is a claimant under the U.S. Black Lung Program.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActInformationManagementReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActInformationManagementReason">&nbsp;</a></td><td>
+                        
+                           Description:The rationale or purpose for an act relating to information management, such as archiving information for the purpose of complying with an enterprise data retention policy. <br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_ActHealthInformationManagementReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActHealthInformationManagementReason">&nbsp;</a></td><td>
+                        
+                           Description:The rationale or purpose for an act relating to health information management, such as archiving information for the purpose of complying with an organization policy or jurisdictional law relating to  data retention.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: grey"><i>(_ActConsentInformationAccessOverrideReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActConsentInformationAccessOverrideReason">&nbsp;</a></td><td>
+                        To perform one or more operations on information to which the patient has not consented as deemed necessary by authorized entities for providing care in the best interest of the patient; providing immediately needed health care for an emergent condition;  or for protecting public or third party safety.<br/>
+
+                        
+                           Usage Notes: Used to convey the reason that a provider or other entity may or has accessed personal healthcare information.  Typically, this involves overriding the subject's consent directives.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OVRER<a name="OVRER"> </a></td><td>emergency treatment override</td><td>
+                        To perform one or more operations on information to which the patient has not consented by authorized entities for treating a condition which poses an immediate threat to the patient's health and which requires immediate medical intervention.<br/>
+
+                        
+                           Usage Notes: The patient is unable to provide consent, but the provider determines they have an urgent healthcare related reason to access the record. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OVRPJ<a name="OVRPJ"> </a></td><td>professional judgment override</td><td>
+                        To perform one or more operations on information to which the patient declined to consent for providing health care.<br/>
+
+                        
+                           Usage Notes: The patient, while able to give consent, has not.  However the provider believes it is in the patient's interest to access the record without patient consent. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OVRPS<a name="OVRPS"> </a></td><td>public safety override</td><td>
+                        To perform one or more operations on information to which the patient has not consented for public safety reasons.<br/>
+
+                        
+                           Usage Notes: The patient, while able to give consent, has not.  However, the provider believes that access to masked patient information is justified because of concerns related to public safety. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OVRTPS<a name="OVRTPS"> </a></td><td>third party safety override</td><td>
+                        To perform one or more operations on information to which the patient has not consented for third party safety.  <br/>
+
+                        
+                           Usage Notes: The patient, while able to give consent, has not.  However, the provider believes that access to masked patient information is justified because of concerns related to the health and safety of one or more third parties. <br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PurposeOfUse<a name="PurposeOfUse"> </a></td><td>purpose of use</td><td>
+                        Reason for performing one or more operations on information, which may be permitted by source system's security policy in accordance with one or more privacy policies and consent directives.<br/>
+
+                        
+                           Usage Notes: The rationale or purpose for an act relating to the management of personal health information, such as collecting personal health information for research or public health purposes. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HMARKT<a name="HMARKT"> </a></td><td>healthcare marketing</td><td>
+                        To perform one or more operations on information for marketing services and products related to health care.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOPERAT<a name="HOPERAT"> </a></td><td>healthcare operations</td><td>
+                        To perform one or more operations on information used for conducting administrative and contractual activities related to the provision of health care. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DONAT<a name="DONAT"> </a></td><td>donation</td><td>
+                        To perform one or more operations on information used for cadaveric organ, eye or tissue donation. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FRAUD<a name="FRAUD"> </a></td><td>fraud</td><td>
+                        To perform one or more operations on information used for fraud detection and prevention processes. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GOV<a name="GOV"> </a></td><td>government</td><td>
+                        To perform one or more operations on information used within government processes. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HACCRED<a name="HACCRED"> </a></td><td>health accreditation</td><td>
+                        To perform one or more operations on information for conducting activities related to meeting accreditation criteria. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HCOMPL<a name="HCOMPL"> </a></td><td>health compliance</td><td>
+                        To perform one or more operations on information used for conducting activities required to meet a mandate.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDECD<a name="HDECD"> </a></td><td>decedent</td><td>
+                        To perform one or more operations on information used for handling deceased patient matters.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDIRECT<a name="HDIRECT"> </a></td><td>directory</td><td>
+                        To perform one or more operation operations on information used to manage a patient directory.<br/>
+
+                        
+                           Examples: 
+                        <br/>
+
+                        
+                           facility
+                           enterprise
+                           payer
+                           health information exchange patient directory
+                        
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HLEGAL<a name="HLEGAL"> </a></td><td>legal</td><td>
+                        To perform one or more operations on information for conducting activities required by legal proceeding.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUTCOMS<a name="HOUTCOMS"> </a></td><td>health outcome measure</td><td>
+                        To perform one or more operations on information used for assessing results and comparative effectiveness achieved by health care practices and interventions.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HPRGRP<a name="HPRGRP"> </a></td><td>health program reporting</td><td>
+                        To perform one or more operations on information used for conducting activities to meet program accounting requirements.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HQUALIMP<a name="HQUALIMP"> </a></td><td>health quality improvement</td><td>
+                        To perform one or more operations on information used for conducting administrative activities to improve health care quality.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HSYSADMIN<a name="HSYSADMIN"> </a></td><td>health system administration</td><td>
+                        To perform one or more operations on information to administer the electronic systems used for the delivery of health care.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MEMADMIN<a name="MEMADMIN"> </a></td><td>member administration</td><td>
+                        To perform one or more operations on information to administer health care coverage to an enrollee under a policy or program.  <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PATADMIN<a name="PATADMIN"> </a></td><td>patient administration</td><td>
+                        To perform one or more operations on information used for operational activities conducted to administer the delivery of health care to a patient.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PATSFTY<a name="PATSFTY"> </a></td><td>patient safety</td><td>
+                        To perform one or more operations on information in processes related to ensuring the safety of health care.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERFMSR<a name="PERFMSR"> </a></td><td>performance measure</td><td>
+                        To perform one or more operations on information used for monitoring performance of recommended health care practices and interventions.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RECORDMGT<a name="RECORDMGT"> </a></td><td>records management</td><td>
+                        To perform one or more operations on information used within the health records management process. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRAIN<a name="TRAIN"> </a></td><td>training</td><td>
+                        To perform one or more operations on information used in training and education. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HPAYMT<a name="HPAYMT"> </a></td><td>healthcare payment</td><td>
+                        To perform one or more operations on information for conducting financial or contractual activities related to payment for provision of health care.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLMATTCH<a name="CLMATTCH"> </a></td><td>claim attachment</td><td>
+                        To perform one or more operations on information for provision of additional clinical evidence in support of a request for coverage or payment for health services.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COVAUTH<a name="COVAUTH"> </a></td><td>coverage authorization</td><td>
+                        To perform one or more operations on information for conducting prior authorization or predetermination of coverage for services.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COVERAGE<a name="COVERAGE"> </a></td><td>coverage under policy or program</td><td>
+                        To perform one or more operations on information for conducting activities related to coverage under a program or policy.<br/>
+
+                     </td></tr>
+ <tr><td>6</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELIGDTRM<a name="ELIGDTRM"> </a></td><td>eligibility determination</td><td>
+                        To perform one or more operations on information used for conducting eligibility determination for coverage in a program or policy.  May entail review of financial status or disability assessment.<br/>
+
+                     </td></tr>
+ <tr><td>6</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELIGVER<a name="ELIGVER"> </a></td><td>eligibility verification</td><td>
+                        To perform one or more operations on information used for conducting eligibility verification of coverage in a program or policy.  May entail provider contacting coverage source (e.g., government health program such as workers compensation or health plan) for confirmation of enrollment, eligibility for specific services, and any applicable copays.<br/>
+
+                     </td></tr>
+ <tr><td>6</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENROLLM<a name="ENROLLM"> </a></td><td>enrollment</td><td>
+                        To perform one or more operations on information used for enrolling a covered party in a program or policy.  May entail recording of covered party's and any dependent's demographic information and benefit choices.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REMITADV<a name="REMITADV"> </a></td><td>remittance advice</td><td>
+                        To perform one or more operations on information about the amount remitted for a health care claim.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HRESCH<a name="HRESCH"> </a></td><td>healthcare research</td><td>
+                        To perform one or more operations on information for conducting scientific investigations to obtain health care knowledge. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLINTRCH<a name="CLINTRCH"> </a></td><td>clinical trial research</td><td>
+                        To perform one or more operations on information for conducting scientific investigations in accordance with clinical trial protocols to obtain health care knowledge.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PATRQT<a name="PATRQT"> </a></td><td>patient requested</td><td>
+                        To perform one or more operations on information in response to a patient's request.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAMRQT<a name="FAMRQT"> </a></td><td>family requested</td><td>
+                        To perform one or more operations on information in response to a request by a family member authorized by the patient.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PWATRNY<a name="PWATRNY"> </a></td><td>power of attorney</td><td>
+                        To perform one or more operations on information in response to a request by a person appointed as the patient's legal representative.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUPNWK<a name="SUPNWK"> </a></td><td>support network</td><td>
+                        To perform one or more operations on information in response to a request by a person authorized by the patient.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUBHLTH<a name="PUBHLTH"> </a></td><td>public health</td><td>
+                        To perform one or more operations on information for conducting public health activities, such as the reporting of notifiable conditions.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DISASTER<a name="DISASTER"> </a></td><td>disaster</td><td>
+                        To perform one or more operations on information used for provision of immediately needed health care to a population of living subjects located in a disaster zone.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THREAT<a name="THREAT"> </a></td><td>threat</td><td>
+                        To perform one or more operations on information used to prevent injury or disease to living subjects who may be the target of violence. <br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TREAT<a name="TREAT"> </a></td><td>treatment</td><td>
+                        To perform one or more operations on information for provision of health care. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAREMGT<a name="CAREMGT"> </a></td><td>Care Management</td><td>
+                        To perform one or more operations on information for provision of health care coordination. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLINTRL<a name="CLINTRL"> </a></td><td>clinical trial</td><td>
+                        To perform health care as part of the clinical trial protocol.<br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ETREAT<a name="ETREAT"> </a></td><td>Emergency Treatment</td><td>
+                        To perform one or more operations on information for provision of immediately needed health care for an emergent condition. <br/>
+
+                     </td></tr>
+ <tr><td>5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POPHLTH<a name="POPHLTH"> </a></td><td>population health</td><td>
+                        To perform one or more operations on information for provision of health care to a population of living subjects, e.g., needle exchange program. <br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_ActInformationPrivacyReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActInformationPrivacyReason">&nbsp;</a></td><td>
+                        
+                           Description:The rationale or purpose for an act relating to the management of personal information, such as disclosing personal tax information for the purpose of complying with a court order.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;MARKT<a name="MARKT"> </a></td><td>marketing</td><td>
+                        
+                           Description:
+                        <br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;OPERAT<a name="OPERAT"> </a></td><td>operations</td><td>
+                        
+                           Description:Administrative and contractual processes required to support an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEGAL<a name="LEGAL"> </a></td><td>subpoena</td><td>
+                        
+                           Definition:To provide information as a result of a subpoena.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACCRED<a name="ACCRED"> </a></td><td>accreditation</td><td>
+                        
+                           Description:Operational activities conducted for the purposes of meeting of criteria defined by an accrediting entity for an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPL<a name="COMPL"> </a></td><td>compliance</td><td>
+                        
+                           Description:Operational activities required to meet a mandate related to an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENADMIN<a name="ENADMIN"> </a></td><td>entity administration</td><td>
+                        
+                           Description:Operational activities conducted to administer information relating to entities involves with an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUTCOMS<a name="OUTCOMS"> </a></td><td>outcome measure</td><td>
+                        
+                           Description:Operational activities conducted for the purposes of assessing the results of an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRGRPT<a name="PRGRPT"> </a></td><td>program reporting</td><td>
+                        
+                           Description:Operational activities conducted to meet program accounting requirements related to an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUALIMP<a name="QUALIMP"> </a></td><td>quality improvement</td><td>
+                        
+                           Description:Operational activities conducted for the purposes of improving the quality of an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYSADMN<a name="SYSADMN"> </a></td><td>system administration</td><td>
+                        
+                           Description:Operational activities conducted to administer the electronic systems used for an activity, product, or service<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PAYMT<a name="PAYMT"> </a></td><td>payment</td><td>
+                        
+                           Description:Administrative, financial, and contractual processes related to payment for an activity, product, or service <br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;RESCH<a name="RESCH"> </a></td><td>research</td><td>
+                        
+                           Description:Investigative activities conducted for the purposes of obtaining knowledge<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;SRVC<a name="SRVC"> </a></td><td>service</td><td>
+                        
+                           Description:Provision of a service, product, or capability to an individual or organization<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>_ActInvalidReason<a name="_ActInvalidReason"> </a></td><td>ActInvalidReason</td><td>
+                        
+                           Description: Types of reasons why a substance is invalid for use.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ADVSTORAGE<a name="ADVSTORAGE"> </a></td><td>adverse storage condition</td><td>
+                        
+                           Description: Storage conditions caused the substance to be ineffective.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;COLDCHNBRK<a name="COLDCHNBRK"> </a></td><td>cold chain break</td><td>
+                        
+                           Description: Cold chain was not maintained for the substance.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;EXPLOT<a name="EXPLOT"> </a></td><td>expired lot</td><td>
+                        
+                           Description: The lot from which the substance was drawn was expired.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;OUTSIDESCHED<a name="OUTSIDESCHED"> </a></td><td>administered outside recommended schedule or practice</td><td>
+                        The substance was administered outside of the recommended schedule or practice.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PRODRECALL<a name="PRODRECALL"> </a></td><td>product recall</td><td>
+                        
+                           Description: The substance was recalled by the manufacturer.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActInvoiceCancelReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActInvoiceCancelReason">&nbsp;</a></td><td>
+                        Domain specifies the codes used to describe reasons why a Provider is cancelling an Invoice or Invoice Grouping.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;INCCOVPTY<a name="INCCOVPTY"> </a></td><td>incorrect covered party as patient</td><td>
+                        The covered party (patient) specified with the Invoice is not correct.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;INCINVOICE<a name="INCINVOICE"> </a></td><td>incorrect billing</td><td>
+                        The billing information, specified in the Invoice Elements, is not correct.  This could include incorrect costing for items included in the Invoice.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;INCPOLICY<a name="INCPOLICY"> </a></td><td>incorrect policy</td><td>
+                        The policy specified with the Invoice is not correct.  For example, it may belong to another Adjudicator or Covered Party.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;INCPROV<a name="INCPROV"> </a></td><td>incorrect provider</td><td>
+                        The provider specified with the Invoice is not correct.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActNoImmunizationReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActNoImmunizationReason">&nbsp;</a></td><td>
+                        A coded description of the reason for why a patient did not receive a scheduled immunization.<br/>
+
+                        (important for public health strategy<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;IMMUNE<a name="IMMUNE"> </a></td><td>immunity</td><td>
+                        
+                           Definition:Testing has shown that the patient already has immunity to the agent targeted by the immunization.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;MEDPREC<a name="MEDPREC"> </a></td><td>medical precaution</td><td>
+                        
+                           Definition:The patient currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;OSTOCK<a name="OSTOCK"> </a></td><td>product out of stock</td><td>
+                        
+                           Definition:There was no supply of the product on hand to perform the service.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PATOBJ<a name="PATOBJ"> </a></td><td>patient objection</td><td>
+                        
+                           Definition:The patient or their guardian objects to receiving the vaccine.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PHILISOP<a name="PHILISOP"> </a></td><td>philosophical objection</td><td>
+                        
+                           Definition:The patient or their guardian objects to receiving the vaccine because of philosophical beliefs.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;RELIG<a name="RELIG"> </a></td><td>religious objection</td><td>
+                        
+                           Definition:The patient or their guardian objects to receiving the vaccine on religious grounds.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;VACEFF<a name="VACEFF"> </a></td><td>vaccine efficacy concerns</td><td>
+                        
+                           Definition:The intended vaccine has expired or is otherwise believed to no longer be effective.<br/>
+
+                        
+                           Example:Due to temperature exposure.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;VACSAF<a name="VACSAF"> </a></td><td>vaccine safety concerns</td><td>
+                        
+                           Definition:The patient or their guardian objects to receiving the vaccine because of concerns over its safety.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActSupplyFulfillmentRefusalReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActSupplyFulfillmentRefusalReason">&nbsp;</a></td><td>
+                        Indicates why a fulfiller refused to fulfill a supply order, and considered it important to notify other providers of their decision.  E.g. &quot;Suspect fraud&quot;, &quot;Possible abuse&quot;, &quot;Contraindicated&quot;.<br/>
+
+                        (used when capturing 'refusal to fill' annotations)<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FRR01<a name="FRR01"> </a></td><td>order stopped</td><td>
+                        
+                           Definition:The order has been stopped by the prescriber but this fact has not necessarily captured electronically.<br/>
+
+                        
+                           Example:A verbal stop, a fax, etc.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FRR02<a name="FRR02"> </a></td><td>stale-dated order</td><td>
+                        
+                           Definition:Order has not been fulfilled within a reasonable amount of time, and may not be current.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FRR03<a name="FRR03"> </a></td><td>incomplete data</td><td>
+                        
+                           Definition:Data needed to safely act on the order which was expected to become available independent of the order is not yet available<br/>
+
+                        
+                           Example:Lab results, diagnostic imaging, etc.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FRR04<a name="FRR04"> </a></td><td>product unavailable</td><td>
+                        
+                           Definition:Product not available or manufactured. Cannot supply.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FRR05<a name="FRR05"> </a></td><td>ethical/religious</td><td>
+                        
+                           Definition:The dispenser has ethical, religious or moral objections to fulfilling the order/dispensing the product.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FRR06<a name="FRR06"> </a></td><td>unable to provide care</td><td>
+                        
+                           Definition:Fulfiller not able to provide appropriate care associated with fulfilling the order.<br/>
+
+                        
+                           Example:Therapy requires ongoing monitoring by fulfiller and fulfiller will be ending practice, leaving town, unable to schedule necessary time, etc.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ClinicalResearchEventReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ClinicalResearchEventReason">&nbsp;</a></td><td>
+                        
+                           Definition:Specifies the reason that an event occurred in a clinical research study.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;RET<a name="RET"> </a></td><td>retest</td><td>
+                        
+                           Definition:The event occurred so that a test or observation performed at a prior event could be performed again due to conditions set forth in the protocol.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;SCH<a name="SCH"> </a></td><td>scheduled</td><td>
+                        
+                           Definition:The event occurred due to it being scheduled in the research protocol.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;TRM<a name="TRM"> </a></td><td>termination</td><td>
+                        
+                           Definition:The event occurred in order to terminate the subject's participation in the study.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;UNS<a name="UNS"> </a></td><td>unscheduled</td><td>
+                        
+                           Definition:The event that occurred was initiated by a study participant (e.g. the subject or the investigator), and did not occur for protocol reasons.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ClinicalResearchObservationReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ClinicalResearchObservationReason">&nbsp;</a></td><td>
+                        
+                           Definition:SSpecifies the reason that a test was performed or observation collected in a clinical research study.<br/>
+
+                        
+                           Note:This set of codes are not strictly reasons, but are used in the currently Normative standard.  Future revisions of the specification will model these as ActRelationships and thes codes may subsequently be retired.  Thus, these codes should not be used for new specifications.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;NPT<a name="NPT"> </a></td><td>non-protocol</td><td>
+                        
+                           Definition:The observation or test was neither defined or scheduled in the study protocol.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PPT<a name="PPT"> </a></td><td>per protocol</td><td>
+                        
+                           Definition:The observation or test occurred due to it being defined in the research protocol, and during an activity or event that was scheduled in the protocol.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;UPT<a name="UPT"> </a></td><td>per definition</td><td>
+                        
+                           :The observation or test occurred as defined in the research protocol, but at a point in time not specified in the study protocol.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_CombinedPharmacyOrderSuspendReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_CombinedPharmacyOrderSuspendReasonCode">&nbsp;</a></td><td>
+                        
+                           Description:Indicates why the prescription should be suspended.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ALTCHOICE<a name="ALTCHOICE"> </a></td><td>try another treatment first</td><td>
+                        
+                           Description:This therapy has been ordered as a backup to a preferred therapy.  This order will be released when and if the preferred therapy is unsuccessful.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;CLARIF<a name="CLARIF"> </a></td><td>prescription requires clarification</td><td>
+                        
+                           Description:Clarification is required before the order can be acted upon.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;DRUGHIGH<a name="DRUGHIGH"> </a></td><td>drug level too high</td><td>
+                        
+                           Description:The current level of the medication in the patient's system is too high.  The medication is suspended to allow the level to subside to a safer level.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;HOSPADM<a name="HOSPADM"> </a></td><td>admission to hospital</td><td>
+                        
+                           Description:The patient has been admitted to a care facility and their community medications are suspended until hospital discharge.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;LABINT<a name="LABINT"> </a></td><td>lab interference issues</td><td>
+                        
+                           Description:The therapy would interfere with a planned lab test and the therapy is being withdrawn until the test is completed.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;NON-AVAIL<a name="NON-AVAIL"> </a></td><td>patient not-available</td><td>
+                        
+                           Description:Patient not available for a period of time due to a scheduled therapy, leave of absence or other reason.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PREG<a name="PREG"> </a></td><td>parent is pregnant/breast feeding</td><td>
+                        
+                           Description:The patient is pregnant or breast feeding.  The therapy will be resumed when the pregnancy is complete and the patient is no longer breastfeeding.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;SALG<a name="SALG"> </a></td><td>allergy</td><td>
+                        
+                           Description:The patient is believed to be allergic to a substance that is part of the therapy and the therapy is being temporarily withdrawn to confirm.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;SDDI<a name="SDDI"> </a></td><td>drug interacts with another drug</td><td>
+                        
+                           Description:The drug interacts with a short-term treatment that is more urgently required.  This order will be resumed when the short-term treatment is complete.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;SDUPTHER<a name="SDUPTHER"> </a></td><td>duplicate therapy</td><td>
+                        
+                           Description:Another short-term co-occurring therapy fulfills the same purpose as this therapy.  This therapy will be resumed when the co-occuring therapy is complete.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;SINTOL<a name="SINTOL"> </a></td><td>suspected intolerance</td><td>
+                        
+                           Description:The patient is believed to have an intolerance to a substance that is part of the therapy and the therapy is being temporarily withdrawn to confirm.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;SURG<a name="SURG"> </a></td><td>patient scheduled for surgery</td><td>
+                        
+                           Description:The drug is contraindicated for patients receiving surgery and the patient is scheduled to be admitted for surgery in the near future.  The drug will be resumed when the patient has sufficiently recovered from the surgery.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;WASHOUT<a name="WASHOUT"> </a></td><td>waiting for old drug to wash out</td><td>
+                        
+                           Description:The patient was previously receiving a medication contraindicated with the current medication.  The current medication will remain on hold until the prior medication has been cleansed from their system.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>_ControlActNullificationReasonCode<a name="_ControlActNullificationReasonCode"> </a></td><td>ControlActNullificationReasonCode</td><td>
+                        
+                           Description:Identifies reasons for nullifying (retracting) a particular control act.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ALTD<a name="ALTD"> </a></td><td>altered decision</td><td>
+                        
+                           Description:The decision on which the recorded information was based was changed before the decision had an effect.<br/>
+
+                        
+                           Example:Aborted prescription before patient left office, released prescription before suspend took effect.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;EIE<a name="EIE"> </a></td><td>entered in error</td><td>
+                        
+                           Description:The information was recorded incorrectly or was recorded in the wrong record.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;NORECMTCH<a name="NORECMTCH"> </a></td><td>no record match</td><td>
+                        
+                           Description: There is no match for the record in the database.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ControlActNullificationRefusalReasonType)</i></span> <b><i>Abstract</i></b></td><td><a name="_ControlActNullificationRefusalReasonType">&nbsp;</a></td><td>
+                        
+                           Description: Reasons to refuse a transaction to be undone.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;INRQSTATE<a name="INRQSTATE"> </a></td><td>in requested state</td><td>
+                        The record is already in the requested state.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;NOMATCH<a name="NOMATCH"> </a></td><td>no match</td><td>
+                        
+                           Description: There is no match.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#NORECMTCH">NORECMTCH</a></td><td/><td/></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOPRODMTCH<a name="NOPRODMTCH"> </a></td><td>no product match</td><td>
+                        
+                           Description: There is no match for the product in the master file repository.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOSERMTCH<a name="NOSERMTCH"> </a></td><td>no service match</td><td>
+                        
+                           Description: There is no match for the service in the master file repository.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOVERMTCH<a name="NOVERMTCH"> </a></td><td>no version match</td><td>
+                        
+                           Description: There is no match for the record and version.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;NOPERM<a name="NOPERM"> </a></td><td>no permission</td><td>
+                        
+                           Description: There is no permission.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOUSERPERM<a name="NOUSERPERM"> </a></td><td>no user permission</td><td>
+                        
+                           Definition:The user does not have permission<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOAGNTPERM<a name="NOAGNTPERM"> </a></td><td>no agent permission</td><td>
+                        
+                           Description: The agent does not have permission.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOUSRPERM<a name="NOUSRPERM"> </a></td><td>no user permission</td><td>
+                        
+                           Description: The user does not have permission.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;WRNGVER<a name="WRNGVER"> </a></td><td>wrong version</td><td>
+                        
+                           Description: The record and version requested to update is not the current version.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ControlActReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ControlActReason">&nbsp;</a></td><td>
+                        Identifies why a specific query, request, or other trigger event occurred.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_MedicationOrderAbortReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_MedicationOrderAbortReasonCode">&nbsp;</a></td><td>
+                        
+                           Description:Indicates the reason the medication order should be aborted.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;DISCONT<a name="DISCONT"> </a></td><td>product discontinued</td><td>
+                        
+                           Description:The medication is no longer being manufactured or is otherwise no longer available.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;INEFFECT<a name="INEFFECT"> </a></td><td>ineffective</td><td>
+                        
+                           Description:The therapy has been found to not have the desired therapeutic benefit on the patient.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;MONIT<a name="MONIT"> </a></td><td>response to monitoring</td><td>
+                        
+                           Description:Monitoring the patient while taking the medication, the decision has been made that the therapy is no longer appropriate.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOREQ<a name="NOREQ"> </a></td><td>no longer required for treatment</td><td>
+                        
+                           Description:The underlying condition has been resolved or has evolved such that a different treatment is no longer needed.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOTCOVER<a name="NOTCOVER"> </a></td><td>not covered</td><td>
+                        
+                           Description:The product does not have (or no longer has) coverage under the patientaTMs insurance policy.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PREFUS<a name="PREFUS"> </a></td><td>patient refuse</td><td>
+                        
+                           Description:The patient refused to take the product.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;RECALL<a name="RECALL"> </a></td><td>product recalled</td><td>
+                        
+                           Description:The manufacturer or other agency has requested that stocks of a medication be removed from circulation.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;REPLACE<a name="REPLACE"> </a></td><td>change in order</td><td>
+                        
+                           Description:Item in current order is no longer in use as requested and a new one has/will be created to replace it.<br/>
+
+                     </td></tr>
+ <tr><td>4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOSECHG<a name="DOSECHG"> </a></td><td>change in medication/dose</td><td>
+                        
+                           Description:The medication is being re-prescribed at a different dosage.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;REPLACEFIX<a name="REPLACEFIX"> </a></td><td>error in order</td><td>
+                        
+                           Description:Current order was issued with incorrect data and a new order has/will be created to replace it.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;UNABLE<a name="UNABLE"> </a></td><td>unable to use</td><td>
+                        
+                           Description:&lt;The patient is not (or is no longer) able to use the medication in a manner prescribed.<br/>
+
+                        
+                           Example:CanaTMt swallow.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_MedicationOrderReleaseReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_MedicationOrderReleaseReasonCode">&nbsp;</a></td><td>
+                        
+                           Definition:A collection of concepts that indicate why the prescription should be released from suspended state.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;HOLDDONE<a name="HOLDDONE"> </a></td><td>suspend reason no longer applies</td><td>
+                        
+                           Definition:The original reason for suspending the medication has ended.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;HOLDINAP<a name="HOLDINAP"> </a></td><td>suspend reason inappropriate</td><td>
+                        
+                           Definition:
+                        <br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_ModifyPrescriptionReasonType)</i></span> <b><i>Abstract</i></b></td><td><a name="_ModifyPrescriptionReasonType">&nbsp;</a></td><td>
+                        Types of reason why a prescription is being changed.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;ADMINERROR<a name="ADMINERROR"> </a></td><td>administrative error in order</td><td>
+                        Order was created with incorrect data and is changed to reflect the intended accuracy of the order.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;CLINMOD<a name="CLINMOD"> </a></td><td>clinical modification</td><td>
+                        Order is changed based on a clinical reason.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;_PharmacySupplyEventAbortReason<a name="_PharmacySupplyEventAbortReason"> </a></td><td>PharmacySupplyEventAbortReason</td><td>
+                        
+                           Definition:Identifies why the dispense event was not completed.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;CONTRA<a name="CONTRA"> </a></td><td>contraindication</td><td>
+                        
+                           Definition:Contraindication identified<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;FOABORT<a name="FOABORT"> </a></td><td>order aborted</td><td>
+                        
+                           Definition:Order to be fulfilled was aborted<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;FOSUSP<a name="FOSUSP"> </a></td><td>order suspended</td><td>
+                        
+                           Definition:Order to be fulfilled was suspended<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOPICK<a name="NOPICK"> </a></td><td>not picked up</td><td>
+                        
+                           Definition:Patient did not come to get medication<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PATDEC<a name="PATDEC"> </a></td><td>patient changed mind</td><td>
+                        
+                           Definition:Patient changed their mind regarding obtaining medication<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;QUANTCHG<a name="QUANTCHG"> </a></td><td>change supply quantity</td><td>
+                        
+                           Definition:Patient requested a revised quantity of medication<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_PharmacySupplyEventStockReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_PharmacySupplyEventStockReasonCode">&nbsp;</a></td><td>
+                        
+                           Definition:A collection of concepts that indicates the reason for a &quot;bulk supply&quot; of medication.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;FLRSTCK<a name="FLRSTCK"> </a></td><td>floor stock</td><td>
+                        
+                           Definition:The bulk supply is issued to replenish a ward for local dispensing.  (Includes both mobile and fixed-location ward stocks.)<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;LTC<a name="LTC"> </a></td><td>long term care use</td><td>
+                        
+                           Definition:The bulk supply will be administered within a long term care facility.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;OFFICE<a name="OFFICE"> </a></td><td>office use</td><td>
+                        
+                           Definition:The bulk supply is intended for general clinician office use.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PHARM<a name="PHARM"> </a></td><td>pharmacy transfer</td><td>
+                        
+                           Definition:The bulk supply is being transferred to another dispensing facility to.<br/>
+
+                        
+                           Example:Alleviate a temporary shortage.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PROG<a name="PROG"> </a></td><td>program use</td><td>
+                        
+                           Definition:The bulk supply is intended for dispensing according to a specific program.<br/>
+
+                        
+                           Example:Mass immunization.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_PharmacySupplyRequestRenewalRefusalReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_PharmacySupplyRequestRenewalRefusalReasonCode">&nbsp;</a></td><td>
+                        
+                           Definition:A collection of concepts that identifies why a renewal prescription has been refused.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#DISCONT">DISCONT</a></td><td/><td/></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;ALREADYRX<a name="ALREADYRX"> </a></td><td>new prescription exists</td><td>
+                        
+                           Definition:Patient has already been given a new (renewal) prescription.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;FAMPHYS<a name="FAMPHYS"> </a></td><td>family physician must authorize further fills</td><td>
+                        
+                           Definition:Request for further authorization must be done through patient's family physician.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;MODIFY<a name="MODIFY"> </a></td><td>modified prescription exists</td><td>
+                        
+                           Definition:Therapy has been changed and new prescription issued<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NEEDAPMT<a name="NEEDAPMT"> </a></td><td>patient must make appointment</td><td>
+                        
+                           Definition:Patient must see prescriber prior to further fills.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOTAVAIL<a name="NOTAVAIL"> </a></td><td>prescriber not available</td><td>
+                        
+                           Definition:Original prescriber is no longer available to prescribe and no other prescriber has taken responsibility for the patient.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NOTPAT<a name="NOTPAT"> </a></td><td>patient no longer in this practice</td><td>
+                        
+                           Definition:Patient no longer or has never been under this prescribers care.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;ONHOLD<a name="ONHOLD"> </a></td><td>medication on hold</td><td>
+                        
+                           Definition:This medication is on hold.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;PRNA<a name="PRNA"> </a></td><td>product not available</td><td>
+                        
+                           Description:This product is not available or manufactured.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;STOPMED<a name="STOPMED"> </a></td><td>prescriber stopped medication for patient</td><td>
+                        Renewing or original prescriber informed patient to stop using the medication.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;TOOEARLY<a name="TOOEARLY"> </a></td><td>too early</td><td>
+                        
+                           Definition:The patient should have medication remaining.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_SupplyOrderAbortReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_SupplyOrderAbortReasonCode">&nbsp;</a></td><td>
+                        
+                           Definition:A collection of concepts that indicates why the prescription should no longer be allowed to be dispensed (but can still administer what is already being dispensed).<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;IMPROV<a name="IMPROV"> </a></td><td>condition improved</td><td>
+                        
+                           Definition:The patient's medical condition has nearly abated.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;INTOL<a name="INTOL"> </a></td><td>intolerance</td><td>
+                        
+                           Description:The patient has an intolerance to the medication.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NEWSTR<a name="NEWSTR"> </a></td><td>new strength</td><td>
+                        
+                           Definition:The current medication will be replaced by a new strength of the same medication.<br/>
+
+                     </td></tr>
+ <tr><td>3</td><td>&nbsp;&nbsp;&nbsp;&nbsp;NEWTHER<a name="NEWTHER"> </a></td><td>new therapy</td><td>
+                        
+                           Definition:A new therapy will be commenced when current supply exhausted.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_GenericUpdateReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_GenericUpdateReasonCode">&nbsp;</a></td><td>
+                        
+                           Description:Identifies why a change is being made to a  record.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;CHGDATA<a name="CHGDATA"> </a></td><td>information change</td><td>
+                        
+                           Description:Information has changed since the record was created.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FIXDATA<a name="FIXDATA"> </a></td><td>error correction</td><td>
+                        
+                           Description:Previously recorded information was erroneous and is being corrected.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;MDATA<a name="MDATA"> </a></td><td>merge data</td><td>
+                        Information is combined into the record.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;NEWDATA<a name="NEWDATA"> </a></td><td>new information</td><td>
+                        
+                           Description:New information has become available to supplement the record.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;UMDATA<a name="UMDATA"> </a></td><td>unmerge data</td><td>
+                        Information is separated from the record.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_PatientProfileQueryReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_PatientProfileQueryReasonCode">&nbsp;</a></td><td>
+                        
+                           Definition:A collection of concepts identifying why the patient's profile is being queried.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ADMREV<a name="ADMREV"> </a></td><td>administrative review</td><td>
+                        
+                           Definition: To evaluate for service authorization, payment, reporting, or performance/outcome measures.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#LEGAL">LEGAL</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PATCAR<a name="PATCAR"> </a></td><td>patient care</td><td>
+                        
+                           Definition:To obtain records as part of patient care.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PATREQ<a name="PATREQ"> </a></td><td>patient request query</td><td>
+                        
+                           Definition:Patient requests information from their profile.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PRCREV<a name="PRCREV"> </a></td><td>practice review</td><td>
+                        
+                           Definition:To evaluate the provider's current practice for professional-improvement reasons.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;REGUL<a name="REGUL"> </a></td><td>regulatory review</td><td>
+                        
+                           Description:Review for the purpose of regulatory compliance.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;RSRCH<a name="RSRCH"> </a></td><td>research</td><td>
+                        
+                           Definition:To provide research data, as authorized by the patient.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;VALIDATION<a name="VALIDATION"> </a></td><td>validation review</td><td>
+                        
+                           Description:To validate the patient's record.<br/>
+
+                        
+                           Example:Merging or unmerging records.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode<a name="_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode"> </a></td><td>PharmacySupplyRequestFulfillerRevisionRefusalReasonCode</td><td>
+                        
+                           Definition:Indicates why the request to transfer a prescription from one dispensing facility to another has been refused.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;LOCKED<a name="LOCKED"> </a></td><td>locked</td><td>
+                        
+                           Definition:The prescription may not be reassigned from the original pharmacy.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#NOUSERPERM">NOUSERPERM</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;UNKWNTARGET<a name="UNKWNTARGET"> </a></td><td>unknown target</td><td>
+                        
+                           Definition:The target facility does not recognize the dispensing facility.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_RefusalReasonCode)</i></span> <b><i>Abstract</i></b></td><td><a name="_RefusalReasonCode">&nbsp;</a></td><td>
+                        
+                           Description: Identifies why a request to add (or activate) a record is being refused.  Examples include the receiving system not able to match the identifier and find that record in the receiving system, having no permission, or a detected issue exists which precludes the requested action.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#NOMATCH">NOMATCH</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#NOPERM">NOPERM</a></td><td/><td/></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_SchedulingActReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_SchedulingActReason">&nbsp;</a></td><td>
+                        Reasons for cancelling or rescheduling an Appointment<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#PAT">PAT</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;BLK<a name="BLK"> </a></td><td>Unexpected Block (of Schedule)</td><td>
+                        The time slots previously allocated are now blocked and no longer available for booking Appointments<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;DEC<a name="DEC"> </a></td><td>Patient Deceased</td><td>
+                        The Patient is deceased<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FIN<a name="FIN"> </a></td><td>No Financial Backing</td><td>
+                        Patient unable to pay and not covered by insurance<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;MED<a name="MED"> </a></td><td>Medical Status Altered</td><td>
+                        The medical condition of the Patient has changed<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;MTG<a name="MTG"> </a></td><td>In an outside meeting</td><td>
+                        The Physician is in a meeting.  For example, he/she may request administrative time to talk to family after appointment<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PHY<a name="PHY"> </a></td><td>Physician request</td><td>
+                        The Physician requested the action<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>_StatusRevisionRefusalReasonCode<a name="_StatusRevisionRefusalReasonCode"> </a></td><td>StatusRevisionRefusalReasonCode</td><td>
+                        Indicates why the act revision (status update) is being refused.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#NORECMTCH">NORECMTCH</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#INRQSTATE">INRQSTATE</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#NOUSERPERM">NOUSERPERM</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FILLED<a name="FILLED"> </a></td><td>fully filled</td><td>
+                        Ordered quantity has already been completely fulfilled.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>_SubstanceAdministrationPermissionRefusalReasonCode<a name="_SubstanceAdministrationPermissionRefusalReasonCode"> </a></td><td>SubstanceAdministrationPermissionRefusalReasonCode</td><td>
+                        
+                           Definition:Indicates why the requested authorization to prescribe or dispense a medication has been refused.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#NOUSERPERM">NOUSERPERM</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PATINELIG<a name="PATINELIG"> </a></td><td>patient not eligible</td><td>
+                        
+                           Definition:Patient not eligible for drug<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PROTUNMET<a name="PROTUNMET"> </a></td><td>protocol not met</td><td>
+                        
+                           Definition:Patient does not meet required protocol<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;PROVUNAUTH<a name="PROVUNAUTH"> </a></td><td>provider not authorized</td><td>
+                        
+                           Definition:Provider is not authorized to prescribe or dispense<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_SubstanceAdminSubstitutionNotAllowedReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_SubstanceAdminSubstitutionNotAllowedReason">&nbsp;</a></td><td>
+                        Reasons why substitution of a substance administration request is not permitted.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<a href="#PAT">PAT</a></td><td/><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ALGINT<a name="ALGINT"> </a></td><td>allergy intolerance</td><td>
+                        
+                           Definition: Patient has had a prior allergic intolerance response to alternate product or one of its components.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;COMPCON<a name="COMPCON"> </a></td><td>compliance concern</td><td>
+                        
+                           Definition: Patient has compliance issues with medication such as differing appearance, flavor, size, shape or consistency.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;THERCHAR<a name="THERCHAR"> </a></td><td>therapeutic characteristics</td><td>
+                        The prescribed product has specific clinical release or other therapeutic characteristics not shared by other substitutable medications.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;TRIAL<a name="TRIAL"> </a></td><td>clinical trial drug</td><td>
+                        
+                           Definition: The specific manufactured drug is part of a clinical trial.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_SubstanceAdminSubstitutionReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_SubstanceAdminSubstitutionReason">&nbsp;</a></td><td/></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;CT<a name="CT"> </a></td><td>continuing therapy</td><td>
+                        Indicates that the decision to substitute or to not substitute was driven by a desire to maintain consistency with a pre-existing therapy.  I.e. The performer provided the same item/service as had been previously provided rather than providing exactly what was ordered, or rather than substituting with a lower-cost equivalent.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;FP<a name="FP"> </a></td><td>formulary policy</td><td>
+                        Indicates that the decision to substitute or to not substitute was driven by a policy expressed within the formulary.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;OS<a name="OS"> </a></td><td>out of stock</td><td>
+                        In the case of 'substitution', indicates that the substitution occurred because the ordered item was not in stock.  In the case of 'no substitution', indicates that a cheaper equivalent was not substituted because it was not in stock.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;RR<a name="RR"> </a></td><td>regulatory requirement</td><td>
+                        Indicates that the decision to substitute or to not substitute was driven by a jurisdictional regulatory requirement mandating or prohibiting substitution.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_TransferActReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_TransferActReason">&nbsp;</a></td><td>
+                        The explanation for why a patient is moved from one location to another within the organization<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;ER<a name="ER"> </a></td><td>Error</td><td>
+                        Moved to an error in placing the patient in the original location.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;RQ<a name="RQ"> </a></td><td>Request</td><td>
+                        Moved at the request of the patient.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td><span style="color: grey"><i>(_ActBillableServiceReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActBillableServiceReason">&nbsp;</a></td><td>
+                        
+                           Definition: This domain is used to document reasons for providing a billable service; the billable services may include both clinical services and social services.<br/>
+
+                     </td></tr>
+ <tr><td>2</td><td>&nbsp;&nbsp;<span style="color: grey"><i>(_ActBillableClinicalServiceReason)</i></span> <b><i>Abstract</i></b></td><td><a name="_ActBillableClinicalServiceReason">&nbsp;</a></td><td>
+                        Reason for Clinical Service being performed.<br/>
+
+                        This domain excludes reasons specified by diagnosed conditions.<br/>
+
+                        Examples of values from this domain include duplicate therapy and fraudulent prescription.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>BONUS<a name="BONUS"> </a></td><td/><td/></tr>
+ <tr><td>1</td><td>CHD<a name="CHD"> </a></td><td>Children only</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available only to children<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>DEP<a name="DEP"> </a></td><td>Dependents only</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available only to a subscriber's dependents.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>ECH<a name="ECH"> </a></td><td>Employee and children</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available to an employee and his or her children.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>EDU<a name="EDU"> </a></td><td/><td/></tr>
+ <tr><td>1</td><td>EMP<a name="EMP"> </a></td><td>Employee only</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available only to an employee.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>ESP<a name="ESP"> </a></td><td>Employee and spouse</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available to an employee and his or her spouse.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>FAM<a name="FAM"> </a></td><td>Family</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available to a subscriber's family.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>IND<a name="IND"> </a></td><td>Individual</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available to an individual.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>INVOICE<a name="INVOICE"> </a></td><td/><td/></tr>
+ <tr><td>1</td><td>PROA<a name="PROA"> </a></td><td/><td/></tr>
+ <tr><td>1</td><td>RECOV<a name="RECOV"> </a></td><td/><td/></tr>
+ <tr><td>1</td><td>RETRO<a name="RETRO"> </a></td><td/><td/></tr>
+ <tr><td>1</td><td>SPC<a name="SPC"> </a></td><td>Spouse and children</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available to a subscriber's spouse and children<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>SPO<a name="SPO"> </a></td><td>Spouse only</td><td>
+                        
+                           Description:The level of coverage under the policy or program is available only to a subscribers spouse<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>TRAN<a name="TRAN"> </a></td><td/><td/></tr>
+</table>
+</div>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:29+0000. <a href="../../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fv3%2FActReason%2Fcs.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fv3%2FActReason%2Fcs.html">Compare to DSTU2 <img src="../../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../../license.html"><img src="../../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="../.././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="../.././dist/js/bootstrap.min.js"> </script>
+<script src="../.././assets/js/respond.min.js"> </script>
+
+<script src="../.././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

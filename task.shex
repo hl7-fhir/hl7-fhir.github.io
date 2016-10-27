@@ -1,0 +1,926 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<Task> AND {fhir:nodeRole [fhir:treeRoot]}
+
+
+# A task to be performed
+<Task> CLOSED {
+    a [fhir:Task];
+    fhir:nodeRole [fhir:treeRoot]?;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:DomainResource.text @<Narrative>?;  # Text summary of the resource, for 
+                                            # human interpretation 
+    fhir:DomainResource.contained @<Resource>*;  # Contained, inline Resources
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:Task.identifier @<Identifier>?;    # Task Instance Identifier
+    fhir:Task.basedOn @<Reference>*;        # Request fulfilled by this task
+    fhir:Task.requisition @<Identifier>?;   # Requisition or grouper id
+    fhir:Task.parent @<Reference>*;         # Composite task
+    fhir:Task.status @<code> AND
+    	{fhir:value @fhirvs:task-status};  # draft | requested | received | 
+                                            # accepted | + 
+    fhir:Task.statusReason @<CodeableConcept>?;  # Reason for current status
+    fhir:Task.businessStatus @<CodeableConcept>?;  # E.g. "Specimen collected", "IV 
+                                            # prepped" 
+    fhir:Task.stage @<CodeableConcept>;     # proposed | planned | actionable +
+    fhir:Task.code @<CodeableConcept>?;     # Task Type
+    fhir:Task.priority @<code> AND
+    	{fhir:value @fhirvs:task-priority}?;  # low | normal | high
+    fhir:Task.description @<string>?;       # Human-readable explanation of task
+    fhir:Task.focus @<Reference>?;          # What task is acting on
+    fhir:Task.for @<Reference>?;            # Beneficiary of the Task
+    fhir:Task.context                       # Healthcare event during which this 
+                                            # task originated 
+    (   @<EncounterReference> OR
+        @<EpisodeOfCareReference>
+    )?;
+    fhir:Task.created @<dateTime>;          # Task Creation Date
+    fhir:Task.lastModified @<dateTime>;     # Task Last Modified Date
+    fhir:Task.requester                     # Task Creator
+    (   @<DeviceReference> OR
+        @<OrganizationReference> OR
+        @<PatientReference> OR
+        @<PractitionerReference> OR
+        @<RelatedPersonReference>
+    );
+    fhir:Task.owner                         # Task Owner
+    (   @<DeviceReference> OR
+        @<OrganizationReference> OR
+        @<PatientReference> OR
+        @<PractitionerReference> OR
+        @<RelatedPersonReference>
+    )?;
+    fhir:Task.performerType @<CodeableConcept>*;  # requester | dispatcher | scheduler 
+                                            # | performer | monitor | manager | 
+                                            # acquirer | reviewer 
+    fhir:Task.reason @<CodeableConcept>?;   # Why task is needed
+    fhir:Task.note @<Annotation>*;          # Comments made about the task
+    fhir:Task.fulfillment @<Task.fulfillment>?;  # Constraints on fulfillment tasks
+    fhir:Task.definition @<uri>?;           # Task Definition
+    fhir:Task.input @<Task.input>*;         # Supporting information
+    fhir:Task.output @<Task.output>*;       # Task Output
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Supporting information
+<Task.input> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:Task.input.type @<CodeableConcept>;  # Label for the input
+    (                                       # Input Value
+        fhir:Task.input.valueBase64Binary @<base64Binary>  |
+        fhir:Task.input.valueBoolean @<boolean>  |
+        fhir:Task.input.valueCode @<code>  |
+        fhir:Task.input.valueDate @<date>  |
+        fhir:Task.input.valueDateTime @<dateTime>  |
+        fhir:Task.input.valueDecimal @<decimal>  |
+        fhir:Task.input.valueId @<id>  |
+        fhir:Task.input.valueInstant @<instant>  |
+        fhir:Task.input.valueInteger @<integer>  |
+        fhir:Task.input.valueMarkdown @<markdown>  |
+        fhir:Task.input.valueOid @<oid>  |
+        fhir:Task.input.valuePositiveInt @<positiveInt>  |
+        fhir:Task.input.valueString @<string>  |
+        fhir:Task.input.valueTime @<time>  |
+        fhir:Task.input.valueUnsignedInt @<unsignedInt>  |
+        fhir:Task.input.valueUri @<uri>  |
+        fhir:Task.input.valueAddress @<Address>  |
+        fhir:Task.input.valueAge @<Age>  |
+        fhir:Task.input.valueAnnotation @<Annotation>  |
+        fhir:Task.input.valueAttachment @<Attachment>  |
+        fhir:Task.input.valueCodeableConcept @<CodeableConcept>  |
+        fhir:Task.input.valueCoding @<Coding>  |
+        fhir:Task.input.valueContactPoint @<ContactPoint>  |
+        fhir:Task.input.valueCount @<Count>  |
+        fhir:Task.input.valueDistance @<Distance>  |
+        fhir:Task.input.valueDuration @<Duration>  |
+        fhir:Task.input.valueHumanName @<HumanName>  |
+        fhir:Task.input.valueIdentifier @<Identifier>  |
+        fhir:Task.input.valueMoney @<Money>  |
+        fhir:Task.input.valuePeriod @<Period>  |
+        fhir:Task.input.valueQuantity @<Quantity>  |
+        fhir:Task.input.valueRange @<Range>  |
+        fhir:Task.input.valueRatio @<Ratio>  |
+        fhir:Task.input.valueReference @<Reference>  |
+        fhir:Task.input.valueSampledData @<SampledData>  |
+        fhir:Task.input.valueSignature @<Signature>  |
+        fhir:Task.input.valueTiming @<Timing>  |
+        fhir:Task.input.valueMeta @<Meta> 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Task Output
+<Task.output> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:Task.output.type @<CodeableConcept>;  # Output Name
+    (                                       # Output Value
+        fhir:Task.output.valueBase64Binary @<base64Binary>  |
+        fhir:Task.output.valueBoolean @<boolean>  |
+        fhir:Task.output.valueCode @<code>  |
+        fhir:Task.output.valueDate @<date>  |
+        fhir:Task.output.valueDateTime @<dateTime>  |
+        fhir:Task.output.valueDecimal @<decimal>  |
+        fhir:Task.output.valueId @<id>  |
+        fhir:Task.output.valueInstant @<instant>  |
+        fhir:Task.output.valueInteger @<integer>  |
+        fhir:Task.output.valueMarkdown @<markdown>  |
+        fhir:Task.output.valueOid @<oid>  |
+        fhir:Task.output.valuePositiveInt @<positiveInt>  |
+        fhir:Task.output.valueString @<string>  |
+        fhir:Task.output.valueTime @<time>  |
+        fhir:Task.output.valueUnsignedInt @<unsignedInt>  |
+        fhir:Task.output.valueUri @<uri>  |
+        fhir:Task.output.valueAddress @<Address>  |
+        fhir:Task.output.valueAge @<Age>  |
+        fhir:Task.output.valueAnnotation @<Annotation>  |
+        fhir:Task.output.valueAttachment @<Attachment>  |
+        fhir:Task.output.valueCodeableConcept @<CodeableConcept>  |
+        fhir:Task.output.valueCoding @<Coding>  |
+        fhir:Task.output.valueContactPoint @<ContactPoint>  |
+        fhir:Task.output.valueCount @<Count>  |
+        fhir:Task.output.valueDistance @<Distance>  |
+        fhir:Task.output.valueDuration @<Duration>  |
+        fhir:Task.output.valueHumanName @<HumanName>  |
+        fhir:Task.output.valueIdentifier @<Identifier>  |
+        fhir:Task.output.valueMoney @<Money>  |
+        fhir:Task.output.valuePeriod @<Period>  |
+        fhir:Task.output.valueQuantity @<Quantity>  |
+        fhir:Task.output.valueRange @<Range>  |
+        fhir:Task.output.valueRatio @<Ratio>  |
+        fhir:Task.output.valueReference @<Reference>  |
+        fhir:Task.output.valueSampledData @<SampledData>  |
+        fhir:Task.output.valueSignature @<Signature>  |
+        fhir:Task.output.valueTiming @<Timing>  |
+        fhir:Task.output.valueMeta @<Meta> 
+    );
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Constraints on fulfillment tasks
+<Task.fulfillment> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:modifierExtension @<Extension>*;   # Extensions that cannot be ignored
+    fhir:Task.fulfillment.repetitions @<positiveInt>?;  # How many times to repeat
+    fhir:Task.fulfillment.period @<Period>?;  # Over what time-period is 
+                                            # fulfillment sought 
+    fhir:Task.fulfillment.recipients        # For whom is fulfillment sought?
+    (   @<PatientReference> OR
+        @<PractitionerReference> OR
+        @<RelatedPersonReference> OR
+        @<GroupReference> OR
+        @<OrganizationReference>
+    )*;
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+# Primitive Type dateTime
+<dateTime> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type date
+<date> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date?;  # Primitive value for date
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Metadata about a resource
+<Meta> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Meta.versionId @<id>?;             # Version specific identifier
+    fhir:Meta.lastUpdated @<instant>?;      # When the resource version last 
+                                            # changed 
+    fhir:Meta.profile @<uri>*;              # Profiles this resource claims to 
+                                            # conform to 
+    fhir:Meta.security @<Coding>*;          # Security Labels applied to this 
+                                            # resource 
+    fhir:Meta.tag @<Coding>*;               # Tags applied to this resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An address expressed using postal conventions (as opposed to GPS or other location definition formats)
+<Address> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Address.use @<code> AND
+    	{fhir:value @fhirvs:address-use}?;  # home | work | temp | old - purpose 
+                                            # of this address 
+    fhir:Address.type @<code> AND
+    	{fhir:value @fhirvs:address-type}?;  # postal | physical | both
+    fhir:Address.text @<string>?;           # Text representation of the address
+    fhir:Address.line @<string>*;           # Street name, number, direction & 
+                                            # P.O. Box etc. 
+    fhir:Address.city @<string>?;           # Name of city, town etc.
+    fhir:Address.district @<string>?;       # District name (aka county)
+    fhir:Address.state @<string>?;          # Sub-unit of country (abbreviations 
+                                            # ok) 
+    fhir:Address.postalCode @<string>?;     # Postal code for area
+    fhir:Address.country @<string>?;        # Country (can be ISO 3166 3 letter 
+                                            # code) 
+    fhir:Address.period @<Period>?;         # Time period when address was/is in 
+                                            # use 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Content in a format defined elsewhere
+<Attachment> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Attachment.contentType @<code>?;   # Mime type of the content, with 
+                                            # charset etc. 
+    fhir:Attachment.language @<code>?;      # Human language of the content 
+                                            # (BCP-47) 
+    fhir:Attachment.data @<base64Binary>?;  # Data inline, base64ed
+    fhir:Attachment.url @<uri>?;            # Uri where the data can be found
+    fhir:Attachment.size @<unsignedInt>?;   # Number of bytes of content (if url 
+                                            # provided) 
+    fhir:Attachment.hash @<base64Binary>?;  # Hash of the data (sha-1, base64ed)
+    fhir:Attachment.title @<string>?;       # Label to display in place of the 
+                                            # data 
+    fhir:Attachment.creation @<dateTime>?;  # Date attachment was first created
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type integer
+<integer> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:int MININCLUSIVE "-2147483648"^^xsd:int MAXINCLUSIVE "2147483647"^^xsd:int?;  # Primitive value for integer
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type oid
+<oid> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for oid
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A measured or measurable amount
+<Count> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type instant
+<instant> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:dateTime?;               # Primitive value for instant
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Details of a Technology mediated contact point (phone, fax, email, etc.)
+<ContactPoint> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:ContactPoint.system @<code> AND
+    	{fhir:value @fhirvs:contact-point-system}?;  # phone | fax | email | pager | other
+    fhir:ContactPoint.value @<string>?;     # The actual contact point details
+    fhir:ContactPoint.use @<code> AND
+    	{fhir:value @fhirvs:contact-point-use}?;  # home | work | temp | old | mobile 
+                                            # - purpose of this contact point 
+    fhir:ContactPoint.rank @<positiveInt>?;  # Specify preferred order of use (1 
+                                            # = highest) 
+    fhir:ContactPoint.period @<Period>?;    # Time period when the contact point 
+                                            # was/is in use 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Name of a human - parts and usage
+<HumanName> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:HumanName.use @<code> AND
+    	{fhir:value @fhirvs:name-use}?;  # usual | official | temp | nickname 
+                                            # | anonymous | old | maiden 
+    fhir:HumanName.text @<string>?;         # Text representation of the full 
+                                            # name 
+    fhir:HumanName.family @<string>*;       # Family name (often called 
+                                            # 'Surname') 
+    fhir:HumanName.given @<string>*;        # Given names (not always 'first'). 
+                                            # Includes middle names 
+    fhir:HumanName.prefix @<string>*;       # Parts that come before the name
+    fhir:HumanName.suffix @<string>*;       # Parts that come after the name
+    fhir:HumanName.period @<Period>?;       # Time period when name was/is in use
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An amount of economic utility in some recognised currency
+<Money> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# An identifier intended for computation
+<Identifier> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Identifier.use @<code> AND
+    	{fhir:value @fhirvs:identifier-use}?;  # usual | official | temp | 
+                                            # secondary (If known) 
+    fhir:Identifier.type @<CodeableConcept>?;  # Description of identifier
+    fhir:Identifier.system @<uri>?;         # The namespace for the identifier
+    fhir:Identifier.value @<string>?;       # The value that is unique
+    fhir:Identifier.period @<Period>?;      # Time period when id is/was valid 
+                                            # for use 
+    fhir:Identifier.assigner @<Reference>?;  # Organization that issued id (may 
+                                            # be just text) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A human-readable formatted text, including images
+<Narrative> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Narrative.status @<code> AND
+    	{fhir:value @fhirvs:narrative-status};  # generated | extensions | 
+                                            # additional | empty 
+    fhir:Narrative.div xsd:string;          # Limited xhtml content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference to a code defined by a terminology system
+<Coding> CLOSED {
+    fhir:concept IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Coding.system @<uri>?;             # Identity of the terminology system
+    fhir:Coding.version @<string>?;         # Version of the system - if relevant
+    fhir:Coding.code @<code>?;              # Symbol in syntax defined by the 
+                                            # system 
+    fhir:Coding.display @<string>?;         # Representation defined by the 
+                                            # system 
+    fhir:Coding.userSelected @<boolean>?;   # If this coding was chosen directly 
+                                            # by the user 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type markdown
+<markdown> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for markdown
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A series of measurements taken by a device
+<SampledData> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:SampledData.origin @<SimpleQuantity>;  # Zero value and units
+    fhir:SampledData.period @<decimal>;     # Number of milliseconds between 
+                                            # samples 
+    fhir:SampledData.factor @<decimal>?;    # Multiply data by this before 
+                                            # adding to origin 
+    fhir:SampledData.lowerLimit @<decimal>?;  # Lower limit of detection
+    fhir:SampledData.upperLimit @<decimal>?;  # Upper limit of detection
+    fhir:SampledData.dimensions @<positiveInt>;  # Number of sample points at each 
+                                            # time point 
+    fhir:SampledData.data @<string>;        # Decimal values with spaces, or "E" 
+                                            # | "U" | "L" 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A ratio of two Quantity values - a numerator and a denominator
+<Ratio> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Ratio.numerator @<Quantity>?;      # Numerator value
+    fhir:Ratio.denominator @<Quantity>?;    # Denominator value
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type positiveInt
+<positiveInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:positiveInteger?;        # Primitive value for positiveInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A duration of time during which an organism (or a process) has existed
+<Age> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A length - a value with a unit that is a physical distance
+<Distance> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A reference from one resource to another
+<Reference> CLOSED {
+    fhir:link IRI?;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Reference.reference @<string>?;    # Literal reference, Relative, 
+                                            # internal or absolute URL 
+    fhir:Reference.identifier @<Identifier>?;  # Logical reference, when literal 
+                                            # reference is not known 
+    fhir:Reference.display @<string>?;      # Text alternative for the resource
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Base Resource
+<Resource> {a .+;
+    fhir:Resource.id @<id>?;                # Logical id of this artifact
+    fhir:Resource.meta @<Meta>?;            # Metadata about the resource
+    fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
+                                            # content was created 
+    fhir:Resource.language @<code>?;        # Language of the resource content
+    fhir:index xsd:integer?
+}
+
+# Time range defined by start and end date/time
+<Period> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @<dateTime>?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @<dateTime>?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A measured or measurable amount
+<Quantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A length of time
+<Duration> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.comparator @<code> AND
+    	{fhir:value @fhirvs:quantity-comparator}?;  # < | <= | >= | > - how to 
+                                            # understand the value 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Set of values bounded by low and high
+<Range> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Range.low @<SimpleQuantity>?;      # Low limit
+    fhir:Range.high @<SimpleQuantity>?;     # High limit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type uri
+<uri> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for uri
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Text node with attribution
+<Annotation> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    (                                       # Individual responsible for the 
+                                            # annotation 
+        fhir:Annotation.authorReference @<Reference>  |
+        fhir:Annotation.authorReference @<Reference>  |
+        fhir:Annotation.authorReference @<Reference>  |
+        fhir:Annotation.authorString @<string> 
+    )?;
+    fhir:Annotation.time @<dateTime>?;      # When the annotation was made
+    fhir:Annotation.text @<string>;         # The annotation  - text content
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# Primitive Type boolean
+<boolean> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:boolean?;                # Primitive value for boolean
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type base64Binary
+<base64Binary> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:base64Binary?;           # Primitive value for base64Binary
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.
+<Signature> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Signature.type @<Coding>+;         # Indication of the reason the 
+                                            # entity signed the object(s) 
+    fhir:Signature.when @<instant>;         # When the signature was created
+    (                                       # Who signed
+        fhir:Signature.whoUri @<uri>  |
+        fhir:Signature.whoReference @<Reference>  |
+        fhir:Signature.whoReference @<Reference>  |
+        fhir:Signature.whoReference @<Reference>  |
+        fhir:Signature.whoReference @<Reference>  |
+        fhir:Signature.whoReference @<Reference> 
+    );
+    (                                       # The party represented
+        fhir:Signature.onBehalfOfUri @<uri>  |
+        fhir:Signature.onBehalfOfReference @<Reference>  |
+        fhir:Signature.onBehalfOfReference @<Reference>  |
+        fhir:Signature.onBehalfOfReference @<Reference>  |
+        fhir:Signature.onBehalfOfReference @<Reference>  |
+        fhir:Signature.onBehalfOfReference @<Reference> 
+    )?;
+    fhir:Signature.contentType @<code>?;    # The technical format of the 
+                                            # signature 
+    fhir:Signature.blob @<base64Binary>?;   # The actual signature content (XML 
+                                            # DigSig. JWT, picture, etc.) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type unsignedInt
+<unsignedInt> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:nonNegativeInteger?;     # Primitive value for unsignedInt
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type time
+<time> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:time?;                   # Primitive value for time
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A timing schedule that specifies an event that may occur multiple times
+<Timing> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Timing.event @<dateTime>*;         # When the event occurs
+    fhir:Timing.repeat @<Timing.repeat>?;   # When the event is to occur
+    fhir:Timing.code @<CodeableConcept>?;   # BID | TID | QID | AM | PM | QD | 
+                                            # QOD | Q4H | Q6H + 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type decimal
+<decimal> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:decimal?;                # Primitive value for decimal
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Concept - reference to a terminology or just  text
+<CodeableConcept> CLOSED {
+    fhir:concept IRI*;
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:CodeableConcept.coding @<Coding>*;  # Code defined by a terminology 
+                                            # system 
+    fhir:CodeableConcept.text @<string>?;   # Plain text representation of the 
+                                            # concept 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# A fixed quantity (no comparator)
+<SimpleQuantity> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Quantity.value @<decimal>?;        # Numerical value (with implicit 
+                                            # precision) 
+    fhir:Quantity.unit @<string>?;          # Unit representation
+    fhir:Quantity.system @<uri>?;           # System that defines coded unit form
+    fhir:Quantity.code @<code>?;            # Coded form of the unit
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# When the event is to occur
+<Timing.repeat> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    (                                       # Length/Range of lengths, or (Start 
+                                            # and/or end) limits 
+        fhir:Timing.repeat.boundsDuration @<Duration>  |
+        fhir:Timing.repeat.boundsRange @<Range>  |
+        fhir:Timing.repeat.boundsPeriod @<Period> 
+    )?;
+    fhir:Timing.repeat.count @<integer>?;   # Number of times to repeat
+    fhir:Timing.repeat.countMax @<integer>?;  # Maximum number of times to repeat
+    fhir:Timing.repeat.duration @<decimal>?;  # How long when it happens
+    fhir:Timing.repeat.durationMax @<decimal>?;  # How long when it happens (Max)
+    fhir:Timing.repeat.durationUnit @<code> AND
+    	{fhir:value @fhirvs:units-of-time}?;  # s | min | h | d | wk | mo | a - 
+                                            # unit of time (UCUM) 
+    fhir:Timing.repeat.frequency @<integer>?;  # Event occurs frequency times per 
+                                            # period 
+    fhir:Timing.repeat.frequencyMax @<integer>?;  # Event occurs up to frequencyMax 
+                                            # times per period 
+    fhir:Timing.repeat.period @<decimal>?;  # Event occurs frequency times per 
+                                            # period 
+    fhir:Timing.repeat.periodMax @<decimal>?;  # Upper limit of period (3-4 hours)
+    fhir:Timing.repeat.periodUnit @<code> AND
+    	{fhir:value @fhirvs:units-of-time}?;  # s | min | h | d | wk | mo | a - 
+                                            # unit of time (UCUM) 
+    fhir:Timing.repeat.when @<code> AND
+    	{fhir:value @fhirvs:event-timing}?;  # Regular life events the event is 
+                                            # tied to 
+    fhir:Timing.repeat.offset @<unsignedInt>?;  # Minutes from event (before or 
+                                            # after) 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+<PractitionerReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Practitioner> OR CLOSED {a fhir:Practitioner}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Practitioner> {
+    a [fhir:Practitioner];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<GroupReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Group> OR CLOSED {a fhir:Group}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Group> {
+    a [fhir:Group];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<OrganizationReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Organization> OR CLOSED {a fhir:Organization}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Organization> {
+    a [fhir:Organization];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<EpisodeOfCareReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<EpisodeOfCare> OR CLOSED {a fhir:EpisodeOfCare}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<EpisodeOfCare> {
+    a [fhir:EpisodeOfCare];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<DeviceReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Device> OR CLOSED {a fhir:Device}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Device> {
+    a [fhir:Device];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<EncounterReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Encounter> OR CLOSED {a fhir:Encounter}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Encounter> {
+    a [fhir:Encounter];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<PatientReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<Patient> OR CLOSED {a fhir:Patient}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<Patient> {
+    a [fhir:Patient];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+<RelatedPersonReference> CLOSED {
+    fhir:Element.id @<id>?;
+    fhir:extension @<Extension>*;
+    fhir:link @<RelatedPerson> OR CLOSED {a fhir:RelatedPerson}?;
+    fhir:Reference.reference @<string>?;
+    fhir:Reference.display @<string>?;
+    fhir:index xsd:integer?
+}
+
+<RelatedPerson> {
+    a [fhir:RelatedPerson];
+    fhir:nodeRole [fhir:treeRoot]?
+}
+
+#---------------------- Value Sets ------------------------
+
+# The use of a human name
+fhirvs:name-use ["usual" "official" "temp" "nickname" "anonymous" "old" "maiden"]
+
+# The type of an address (physical / postal)
+fhirvs:address-type ["postal" "physical" "both"]
+
+# Identifies the purpose for this identifier, if known .
+fhirvs:identifier-use ["usual" "official" "temp" "secondary"]
+
+# The current status of the task.
+fhirvs:task-status ["draft" "requested" "received" "accepted" "rejected" "ready" "in-progress" "on-hold" "failed" "completed"]
+
+# How the Quantity should be understood and represented.
+fhirvs:quantity-comparator ["<" "<=" ">=" ">"]
+
+# The status of a resource narrative
+fhirvs:narrative-status ["generated" "extensions" "additional" "empty"]
+
+# The task's priority
+fhirvs:task-priority ["low" "normal" "high"]
+
+# The use of an address
+fhirvs:address-use ["home" "work" "temp" "old"]
+
+# Use of contact point
+fhirvs:contact-point-use ["home" "work" "temp" "old" "mobile"]
+
+# Real world event that the relating to the schedule.
+fhirvs:event-timing ["HS" "WAKE" "C" "CM" "CD" "CV" "AC" "ACM" "ACD" "ACV" "PC" "PCM" "PCD" "PCV"]
+
+# Telecommunications form for contact point
+fhirvs:contact-point-system ["phone" "fax" "email" "pager" "other"]
+
+# A unit of time (units from UCUM).
+fhirvs:units-of-time ["s" "min" "h" "d" "wk" "mo" "a"]

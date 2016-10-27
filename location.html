@@ -1,0 +1,797 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Location - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/location.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><b>Location</b></li>          <!-- location.html / resource / Location -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="location-examples.html">Examples</a></li><li><a href="location-definitions.html">Detailed Descriptions</a></li><li><a href="location-mappings.html">Mappings</a></li><li><a href="location-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">8.12<a name="8.12"> </a></span> Resource Location - Content <a href="location.html#8.12" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/pafm/index.cfm" _target="blank">Patient Administration <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 1</td><td><a href="compartmentdefinition.html">Compartments</a>: Not linked to any defined compartments</td></tr>
+</table>
+
+
+
+<p> 
+Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated. 
+</p>
+
+
+	<div>
+		
+<a name="scope"> </a>
+	<h2 class="self-link-parent"><span class="sectioncount">8.12.1</span> Scope and Usage <a href="location.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+A Location includes both incidental locations (a place which is used for healthcare without prior designation or authorization) and 
+dedicated, formally appointed locations. Locations may be private, public, mobile or fixed and scale from small 
+freezers to full hospital buildings or parking garages.
+</p>
+<p>Examples of Locations are:</p>
+<ul>
+<li>Building, ward, corridor, room or bed</li>
+<li>Mobile Clinic</li>
+<li>Freezer, incubator</li>
+<li>Vehicle or lift</li>
+<li>Home, shed, or a garage</li>
+<li>Road, parking place, a park</li>
+<li>Ambulance (generic)</li>
+<li>Ambulance (specific)</li>
+<li>Patient's Home (generic)</li>
+<li>Jurisdiction</li>
+</ul>
+  <p>
+    These locations are not intended to cover locations on a patient where something occurred
+    (i.e. a patient's broken leg), but can hapily cover the location where the patient broke the leg (the playground)
+  </p>
+</div>
+<div>
+<a name="bnr"> </a>
+	<h2 class="self-link-parent"><span class="sectioncount">8.12.2</span> Boundaries and Relationships <a href="location.html#bnr" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+  <p>
+    Locations and Organizations are very closely related resources and can often be mixed/matched/confused.<br/>
+		The Location is intended to describe the more physical structures managed/operated by an organization, whereas the Organization is intended to
+		represent the more conceptual hierarchies, such as a ward.
+	</p>
+	<p>
+		A Location is valid without an address in cases where it could be purely described by
+		a geo-coded location in remote areas, or when recorded by a device. Locations with a mode = &quot;kind&quot; would
+		also likely not have an address, as they are just a type of location, but could also have an address where 
+		they can be found at the address.<br/>
+	</p>
+	<p>
+		Another use of location could be for describing a Jurisdiction. This jurisdiction may be considered a classified boundary
+		which could be a combination of a physical boundary, and some other discriminator(s):
+	</p>
+	<ul>
+		<li>Nation - Country wide community or Federal Government (Ministry of Health)</li>
+		<li>Province or State (community or Government)</li>
+		<li>Business (throughout an enterprise)</li>
+		<li>Business scope (CDC/FDA)</li>
+		<li>Business segment (UK Pharmacy)</li>
+	</ul>
+	</div>
+
+
+<p>This resource is referenced by <a href="account.html">Account</a>, <a href="activitydefinition.html">ActivityDefinition</a>, <a href="appointment.html">Appointment</a>, <a href="appointmentresponse.html">AppointmentResponse</a>, <a href="auditevent.html">AuditEvent</a>, <a href="careplan.html">CarePlan</a>, <a href="claim.html">Claim</a>, <a href="contract.html">Contract</a>, <a href="device.html">Device</a>, <a href="deviceuserequest.html">DeviceUseRequest</a>, <a href="diagnosticreport.html">DiagnosticReport</a>, <a href="diagnosticrequest.html">DiagnosticRequest</a>, <a href="eligibilityrequest.html">EligibilityRequest</a>, <a href="encounter.html">Encounter</a>, <a href="explanationofbenefit.html">ExplanationOfBenefit</a>, <a href="flag.html">Flag</a>, <a href="healthcareservice.html">HealthcareService</a>, <a href="immunization.html">Immunization</a>, <a href="list.html">List</a>, <a href="medicationdispense.html">MedicationDispense</a>, <a href="observation.html">Observation</a>, <a href="practitioner.html">Practitioner</a>, <a href="practitionerrole.html">PractitionerRole</a>, <a href="procedure.html">Procedure</a>, <a href="provenance.html">Provenance</a>, <a href="schedule.html">Schedule</a> and <a href="supplydelivery.html">SupplyDelivery</a></p>
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">8.12.3</span> 
+Resource Content
+ <a href="location.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="location"> </a>
+<a name="Location"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-diff">R2 Diff</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="location-definitions.html#Location" title="Location : Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated.">Location</a><a name="Location"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Details and position information for a physical place</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.identifier" title="Location.identifier : Unique code or number identifying the location to its users.">identifier</a><a name="Location.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Unique code or number identifying the location to its users</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.status" title="Location.status : active | suspended | inactive.">status</a><a name="Location.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">active | suspended | inactive<br/><a href="valueset-location-status.html" title="Indicates whether the location is still in use.">LocationStatus</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.name" title="Location.name : Name of the location as used by humans. Does not need to be unique.">name</a><a name="Location.name"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Name of the location as used by humans</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.alias" title="Location.alias : A list of alternate names that the location is known as, or was known as in the past.">alias</a><a name="Location.alias"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A list of&nbsp;alternate names that the location is known as, or was known as in the past</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.description" title="Location.description : Description of the Location, which helps in finding or referencing the place.">description</a><a name="Location.description"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Additional details about the location that could be displayed as further information to identify the location beyond its name</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.mode" title="Location.mode : Indicates whether a resource instance represents a specific location or a class of locations.">mode</a><a name="Location.mode"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">instance | kind<br/><a href="valueset-location-mode.html" title="Indicates whether a resource instance represents a specific location or a class of locations.">LocationMode</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.type" title="Location.type : Indicates the type of function performed at the location.">type</a><a name="Location.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Type of function performed<br/><a href="v3/ServiceDeliveryLocationRoleType/vs.html" title="Indicates the type of function performed at the location.">ServiceDeliveryLocationRoleType</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.telecom" title="Location.telecom : The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.">telecom</a><a name="Location.telecom"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Contact details of the location</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.address" title="Location.address : Physical location.">address</a><a name="Location.address"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Address">Address</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Physical location</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.physicalType" title="Location.physicalType : Physical form of the location, e.g. building, room, vehicle, road.">physicalType</a><a name="Location.physicalType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Physical form of the location<br/><a href="valueset-location-physical-type.html" title="Physical form of the location">LocationType</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="location-definitions.html#Location.position" title="Location.position : The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).">position</a><a name="Location.position"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="backboneelement.html">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The absolute geographic location</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.position.longitude" title="Location.position.longitude : Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below).">longitude</a><a name="Location.position.longitude"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Longitude with WGS84 datum</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.position.latitude" title="Location.position.latitude : Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below).">latitude</a><a name="Location.position.latitude"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Latitude with WGS84 datum</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.position.altitude" title="Location.position.altitude : Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below).">altitude</a><a name="Location.position.altitude"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Altitude with WGS84 datum</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="location-definitions.html#Location.managingOrganization" title="Location.managingOrganization : The organization responsible for the provisioning and upkeep of the location.">managingOrganization</a><a name="Location.managingOrganization"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Organization responsible for provisioning and upkeep</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="location-definitions.html#Location.partOf" title="Location.partOf : Another Location which this Location is physically part of.">partOf</a><a name="Location.partOf"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="location.html">Location</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Another Location this one is physically part of</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="location-definitions.html#Location.endpoint" title="Location.endpoint : Technical endpoints providing access to services operated for the location.">endpoint</a><a name="Location.endpoint"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="endpoint.html">Endpoint</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Technical endpoints providing access to services operated for the location</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="724.8000000000001" version="1.1" height="228.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="290.40000000000003" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="218.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="290.40000000000003" style="stroke:dimgrey;stroke-width:1"/><text x="145.20000000000002" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Location<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.identifier"><title>Unique code or number identifying the location to its users</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.status"><title>active | suspended | inactive (this element modifies the meaning of other elements)</title>status</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-location-status.html"><title>Indicates whether the location is still in use. (Strength=Required)</title>LocationStatus</a>! »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.name"><title>Name of the location as used by humans. Does not need to be unique</title>name</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.alias"><title>A list of&nbsp;alternate names that the location is known as, or was known as in the past</title>alias</a> : <a xlink:href="datatypes.html#string">string</a> [0..*]</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.description"><title>Description of the Location, which helps in finding or referencing the place</title>description</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.mode"><title>Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)</title>mode</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-location-mode.html"><title>Indicates whether a resource instance represents a specific location or a class of locations. (Strength=Required)</title>LocationMode</a>! »</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.type"><title>Indicates the type of function performed at the location</title>type</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="v3/ServiceDeliveryLocationRoleType/vs.html"><title>Indicates the type of function performed at the location. (Strength=Extensible)</title>ServiceDeliveryLocationRoleTy...</a>+ »</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.telecom"><title>The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites</title>telecom</a> : <a xlink:href="datatypes.html#ContactPoint">ContactPoint</a> [0..*]</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.address"><title>Physical location</title>address</a> : <a xlink:href="datatypes.html#Address">Address</a> [0..1]</text><text x="6.0" y="168.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.physicalType"><title>Physical form of the location, e.g. building, room, vehicle, road</title>physicalType</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="valueset-location-physical-type.html"><title>Physical form of the location (Strength=Example)</title>LocationType</a>?? »</text><text x="6.0" y="182.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.managingOrganization"><title>The organization responsible for the provisioning and upkeep of the location</title>managingOrganization</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="organization.html#Organization">Organization</a> »</text><text x="6.0" y="196.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.partOf"><title>Another Location which this Location is physically part of</title>partOf</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="location.html#Location">Location</a> »</text><text x="6.0" y="210.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.endpoint"><title>Technical endpoints providing access to services operated for the location</title>endpoint</a> : <a xlink:href="references.html#Reference">Reference</a> [0..*] « <a xlink:href="endpoint.html#Endpoint">Endpoint</a> »</text><g><rect filter="url(#shadowA)" rx="4" ry="4" x="410.40000000000003" width="114.4" y="70.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="78.0"/><line y1="98.0" x1="410.40000000000003" y2="98.0" x2="524.8000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="467.6" y="90.0" fill="black" class="diagram-class-title">Position</text><text x="416.40000000000003" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.position.longitude"><title>Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)</title>longitude</a> : <a xlink:href="datatypes.html#decimal">decimal</a> [1..1]</text><text x="416.40000000000003" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.position.latitude"><title>Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)</title>latitude</a> : <a xlink:href="datatypes.html#decimal">decimal</a> [1..1]</text><text x="416.40000000000003" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.position.altitude"><title>Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)</title>altitude</a> : <a xlink:href="datatypes.html#decimal">decimal</a> [0..1]</text></g></g><line y1="109.0" x1="290.40000000000003" y2="109.0" x2="410.40000000000003" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.0 290.40000000000003 109.0)" style="fill:navy;stroke:navy;stroke-width:1" points="290.40000000000003,109.0 296.40000000000003,113.0 302.40000000000003,109.0 296.40000000000003,105.0 290.40000000000003,109.0"/><rect x="332.5" width="35.0" y="102.0" style="fill:white;stroke:black;stroke-width:0" height="18.0"/><text x="350.0" y="112.0" fill="black" class="diagram-class-linkage"><a xlink:href="location-definitions.html#Location.position"><title>The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)</title>position</a></text><text x="390.40000000000003" y="105.0" fill="black" class="diagram-class-linkage">[0..1]</text></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="location-definitions.html#Location" title="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." class="dict"><b>Location</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="location-definitions.html#Location.identifier" title="Unique code or number identifying the location to its users." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Unique code or number identifying the location to its users</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="location-definitions.html#Location.status" title="active | suspended | inactive (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>status</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-location-status.html">active | suspended | inactive</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.name" title="Name of the location as used by humans. Does not need to be unique." class="dict"><b>name</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Name of the location as used by humans</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.alias" title="A list of alternate names that the location is known as, or was known as in the past." class="dict"><b>alias</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A list of&nbsp;alternate names that the location is known as, or was known as in the past</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.description" title="Description of the Location, which helps in finding or referencing the place." class="dict"><b>description</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Additional details about the location that could be displayed as further information to identify the location beyond its name</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.mode" title="Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>mode</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-location-mode.html">instance | kind</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.type" title="Indicates the type of function performed at the location." class="dict"><b>type</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="v3/ServiceDeliveryLocationRoleType/vs.html">Type of function performed</a></span><span style="color: Gray"> --&gt;</span>&lt;/type&gt;
+ &lt;<a href="location-definitions.html#Location.telecom" title="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites." class="dict"><b>telecom</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Contact details of the location</a></span><span style="color: Gray"> --&gt;</span>&lt;/telecom&gt;
+ &lt;<a href="location-definitions.html#Location.address" title="Physical location." class="dict"><b>address</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Physical location</a></span><span style="color: Gray"> --&gt;</span>&lt;/address&gt;
+ &lt;<a href="location-definitions.html#Location.physicalType" title="Physical form of the location, e.g. building, room, vehicle, road." class="dict"><b>physicalType</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-location-physical-type.html">Physical form of the location</a></span><span style="color: Gray"> --&gt;</span>&lt;/physicalType&gt;
+ &lt;<a href="location-definitions.html#Location.position" title="The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)." class="dict"><b>position</b></a>&gt;  <span style="color: Gray">&lt;!-- <span style="color: brown"><b>0..1</b></span> The absolute geographic location --&gt;</span>
+  &lt;<a href="location-definitions.html#Location.position.longitude" title="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)." class="dict"><b>longitude</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Longitude with WGS84 datum</a></span><span style="color: Gray"> --&gt;</span>
+  &lt;<a href="location-definitions.html#Location.position.latitude" title="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)." class="dict"><b>latitude</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Latitude with WGS84 datum</a></span><span style="color: Gray"> --&gt;</span>
+  &lt;<a href="location-definitions.html#Location.position.altitude" title="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)." class="dict"><b>altitude</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Altitude with WGS84 datum</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;/position&gt;
+ &lt;<a href="location-definitions.html#Location.managingOrganization" title="The organization responsible for the provisioning and upkeep of the location." class="dict"><b>managingOrganization</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Organization responsible for provisioning and upkeep</a></span><span style="color: Gray"> --&gt;</span>&lt;/managingOrganization&gt;
+ &lt;<a href="location-definitions.html#Location.partOf" title="Another Location which this Location is physically part of." class="dict"><b>partOf</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="location.html#Location">Location</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Another Location this one is physically part of</a></span><span style="color: Gray"> --&gt;</span>&lt;/partOf&gt;
+ &lt;<a href="location-definitions.html#Location.endpoint" title="Technical endpoints providing access to services operated for the location." class="dict"><b>endpoint</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="endpoint.html#Endpoint">Endpoint</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Technical endpoints providing access to services operated for the location</a></span><span style="color: Gray"> --&gt;</span>&lt;/endpoint&gt;
+&lt;/Location&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="location-definitions.html#Location" title="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." class="dict"><b>Location</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="location-definitions.html#Location.identifier" title="Unique code or number identifying the location to its users." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Unique code or number identifying the location to its users</a></span>
+  &quot;<a href="location-definitions.html#Location.status" title="active | suspended | inactive (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">status</span></a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-location-status.html">active | suspended | inactive</a></span>
+  &quot;<a href="location-definitions.html#Location.name" title="Name of the location as used by humans. Does not need to be unique." class="dict">name</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Name of the location as used by humans</a></span>
+  &quot;<a href="location-definitions.html#Location.alias" title="A list of alternate names that the location is known as, or was known as in the past." class="dict">alias</a>&quot; : [&quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A list of&nbsp;alternate names that the location is known as, or was known as in the past</a></span>
+  &quot;<a href="location-definitions.html#Location.description" title="Description of the Location, which helps in finding or referencing the place." class="dict">description</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Additional details about the location that could be displayed as further information to identify the location beyond its name</a></span>
+  &quot;<a href="location-definitions.html#Location.mode" title="Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">mode</span></a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-location-mode.html">instance | kind</a></span>
+  &quot;<a href="location-definitions.html#Location.type" title="Indicates the type of function performed at the location." class="dict">type</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="v3/ServiceDeliveryLocationRoleType/vs.html">Type of function performed</a></span>
+  &quot;<a href="location-definitions.html#Location.telecom" title="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites." class="dict">telecom</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Contact details of the location</a></span>
+  &quot;<a href="location-definitions.html#Location.address" title="Physical location." class="dict">address</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Physical location</a></span>
+  &quot;<a href="location-definitions.html#Location.physicalType" title="Physical form of the location, e.g. building, room, vehicle, road." class="dict">physicalType</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-location-physical-type.html">Physical form of the location</a></span>
+  &quot;<a href="location-definitions.html#Location.position" title="The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)." class="dict">position</a>&quot; : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The absolute geographic location</a></span>
+    &quot;<a href="location-definitions.html#Location.position.longitude" title="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)." class="dict">longitude</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Longitude with WGS84 datum</a></span>
+    &quot;<a href="location-definitions.html#Location.position.latitude" title="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)." class="dict">latitude</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Latitude with WGS84 datum</a></span>
+    &quot;<a href="location-definitions.html#Location.position.altitude" title="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)." class="dict">altitude</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt; <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Altitude with WGS84 datum</a></span>
+  },
+  &quot;<a href="location-definitions.html#Location.managingOrganization" title="The organization responsible for the provisioning and upkeep of the location." class="dict">managingOrganization</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Organization responsible for provisioning and upkeep</a></span>
+  &quot;<a href="location-definitions.html#Location.partOf" title="Another Location which this Location is physically part of." class="dict">partOf</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="location.html#Location">Location</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Another Location this one is physically part of</a></span>
+  &quot;<a href="location-definitions.html#Location.endpoint" title="Technical endpoints providing access to services operated for the location." class="dict">endpoint</a>&quot; : [{ <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="endpoint.html#Endpoint">Endpoint</a>)</span> }] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Technical endpoints providing access to services operated for the location</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="location-definitions.html#Location" title="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." class="dict"><b>Location</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="location-definitions.html#Location.identifier" title="Unique code or number identifying the location to its users." class="dict">Location.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">Unique code or number identifying the location to its users</span>
+  fhir:<a href="location-definitions.html#Location.status" title="active | suspended | inactive (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Location.status</span></a><a name="ttl-status"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">active | suspended | inactive</span>
+  fhir:<a href="location-definitions.html#Location.name" title="Name of the location as used by humans. Does not need to be unique." class="dict">Location.name</a><a name="ttl-name"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Name of the location as used by humans</span>
+  fhir:<a href="location-definitions.html#Location.alias" title="A list of alternate names that the location is known as, or was known as in the past." class="dict">Location.alias</a><a name="ttl-alias"> </a>[ <a href="datatypes.html#string">string</a> ], ... ; # 0..* <span style="color: navy">A list of&nbsp;alternate names that the location is known as, or was known as in the past</span>
+  fhir:<a href="location-definitions.html#Location.description" title="Description of the Location, which helps in finding or referencing the place." class="dict">Location.description</a><a name="ttl-description"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Additional details about the location that could be displayed as further information to identify the location beyond its name</span>
+  fhir:<a href="location-definitions.html#Location.mode" title="Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Location.mode</span></a><a name="ttl-mode"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">instance | kind</span>
+  fhir:<a href="location-definitions.html#Location.type" title="Indicates the type of function performed at the location." class="dict">Location.type</a><a name="ttl-type"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">Type of function performed</span>
+  fhir:<a href="location-definitions.html#Location.telecom" title="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites." class="dict">Location.telecom</a><a name="ttl-telecom"> </a>[ <a href="datatypes.html#ContactPoint">ContactPoint</a> ], ... ; # 0..* <span style="color: navy">Contact details of the location</span>
+  fhir:<a href="location-definitions.html#Location.address" title="Physical location." class="dict">Location.address</a><a name="ttl-address"> </a>[ <a href="datatypes.html#Address">Address</a> ]; # 0..1 <span style="color: navy">Physical location</span>
+  fhir:<a href="location-definitions.html#Location.physicalType" title="Physical form of the location, e.g. building, room, vehicle, road." class="dict">Location.physicalType</a><a name="ttl-physicalType"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">Physical form of the location</span>
+  fhir:<a href="location-definitions.html#Location.position" title="The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)." class="dict">Location.position</a><a name="ttl-position"> </a>[ # 0..1 <span style="color: navy">The absolute geographic location</span>
+    fhir:<a href="location-definitions.html#Location.position.longitude" title="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)." class="dict">Location.position.longitude</a><a name="ttl-longitude"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]; # 1..1 <span style="color: navy">Longitude with WGS84 datum</span>
+    fhir:<a href="location-definitions.html#Location.position.latitude" title="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)." class="dict">Location.position.latitude</a><a name="ttl-latitude"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]; # 1..1 <span style="color: navy">Latitude with WGS84 datum</span>
+    fhir:<a href="location-definitions.html#Location.position.altitude" title="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)." class="dict">Location.position.altitude</a><a name="ttl-altitude"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]; # 0..1 <span style="color: navy">Altitude with WGS84 datum</span>
+  ];
+  fhir:<a href="location-definitions.html#Location.managingOrganization" title="The organization responsible for the provisioning and upkeep of the location." class="dict">Location.managingOrganization</a><a name="ttl-managingOrganization"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>) ]; # 0..1 <span style="color: navy">Organization responsible for provisioning and upkeep</span>
+  fhir:<a href="location-definitions.html#Location.partOf" title="Another Location which this Location is physically part of." class="dict">Location.partOf</a><a name="ttl-partOf"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="location.html#Location">Location</a>) ]; # 0..1 <span style="color: navy">Another Location this one is physically part of</span>
+  fhir:<a href="location-definitions.html#Location.endpoint" title="Technical endpoints providing access to services operated for the location." class="dict">Location.endpoint</a><a name="ttl-endpoint"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="endpoint.html#Endpoint">Endpoint</a>) ], ... ; # 0..* <span style="color: navy">Technical endpoints providing access to services operated for the location</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-diff">
+
+<div id="vdiff">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Location</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Location.alias</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Location.endpoint</td>
+    <td class="diff-right">added</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="location-definitions.html#Location" title="Location : Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated.">Location</a><a name="Location"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Details and position information for a physical place</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.identifier" title="Location.identifier : Unique code or number identifying the location to its users.">identifier</a><a name="Location.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Unique code or number identifying the location to its users</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.status" title="Location.status : active | suspended | inactive.">status</a><a name="Location.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">active | suspended | inactive<br/><a href="valueset-location-status.html" title="Indicates whether the location is still in use.">LocationStatus</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.name" title="Location.name : Name of the location as used by humans. Does not need to be unique.">name</a><a name="Location.name"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Name of the location as used by humans</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.alias" title="Location.alias : A list of alternate names that the location is known as, or was known as in the past.">alias</a><a name="Location.alias"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A list of&nbsp;alternate names that the location is known as, or was known as in the past</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.description" title="Location.description : Description of the Location, which helps in finding or referencing the place.">description</a><a name="Location.description"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Additional details about the location that could be displayed as further information to identify the location beyond its name</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.mode" title="Location.mode : Indicates whether a resource instance represents a specific location or a class of locations.">mode</a><a name="Location.mode"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">instance | kind<br/><a href="valueset-location-mode.html" title="Indicates whether a resource instance represents a specific location or a class of locations.">LocationMode</a> (<a href="terminologies.html#required" title="To be conformant, instances of this element SHALL include a code from the specified value set.">Required</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.type" title="Location.type : Indicates the type of function performed at the location.">type</a><a name="Location.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Type of function performed<br/><a href="v3/ServiceDeliveryLocationRoleType/vs.html" title="Indicates the type of function performed at the location.">ServiceDeliveryLocationRoleType</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.telecom" title="Location.telecom : The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.">telecom</a><a name="Location.telecom"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Contact details of the location</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.address" title="Location.address : Physical location.">address</a><a name="Location.address"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Address">Address</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Physical location</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.physicalType" title="Location.physicalType : Physical form of the location, e.g. building, room, vehicle, road.">physicalType</a><a name="Location.physicalType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Physical form of the location<br/><a href="valueset-location-physical-type.html" title="Physical form of the location">LocationType</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="location-definitions.html#Location.position" title="Location.position : The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).">position</a><a name="Location.position"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="backboneelement.html">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The absolute geographic location</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.position.longitude" title="Location.position.longitude : Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below).">longitude</a><a name="Location.position.longitude"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Longitude with WGS84 datum</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.position.latitude" title="Location.position.latitude : Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below).">latitude</a><a name="Location.position.latitude"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Latitude with WGS84 datum</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="location-definitions.html#Location.position.altitude" title="Location.position.altitude : Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below).">altitude</a><a name="Location.position.altitude"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Altitude with WGS84 datum</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="location-definitions.html#Location.managingOrganization" title="Location.managingOrganization : The organization responsible for the provisioning and upkeep of the location.">managingOrganization</a><a name="Location.managingOrganization"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Organization responsible for provisioning and upkeep</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="location-definitions.html#Location.partOf" title="Location.partOf : Another Location which this Location is physically part of.">partOf</a><a name="Location.partOf"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="location.html">Location</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Another Location this one is physically part of</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="location-definitions.html#Location.endpoint" title="Location.endpoint : Technical endpoints providing access to services operated for the location.">endpoint</a><a name="Location.endpoint"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="endpoint.html">Endpoint</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Technical endpoints providing access to services operated for the location</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="724.8000000000001" version="1.1" height="228.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="290.40000000000003" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="218.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="290.40000000000003" style="stroke:dimgrey;stroke-width:1"/><text x="145.20000000000002" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Location<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.identifier"><title>Unique code or number identifying the location to its users</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.status"><title>active | suspended | inactive (this element modifies the meaning of other elements)</title>status</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-location-status.html"><title>Indicates whether the location is still in use. (Strength=Required)</title>LocationStatus</a>! »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.name"><title>Name of the location as used by humans. Does not need to be unique</title>name</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.alias"><title>A list of&nbsp;alternate names that the location is known as, or was known as in the past</title>alias</a> : <a xlink:href="datatypes.html#string">string</a> [0..*]</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.description"><title>Description of the Location, which helps in finding or referencing the place</title>description</a> : <a xlink:href="datatypes.html#string">string</a> [0..1]</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.mode"><title>Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)</title>mode</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-location-mode.html"><title>Indicates whether a resource instance represents a specific location or a class of locations. (Strength=Required)</title>LocationMode</a>! »</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.type"><title>Indicates the type of function performed at the location</title>type</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="v3/ServiceDeliveryLocationRoleType/vs.html"><title>Indicates the type of function performed at the location. (Strength=Extensible)</title>ServiceDeliveryLocationRoleTy...</a>+ »</text><text x="6.0" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.telecom"><title>The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites</title>telecom</a> : <a xlink:href="datatypes.html#ContactPoint">ContactPoint</a> [0..*]</text><text x="6.0" y="154.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.address"><title>Physical location</title>address</a> : <a xlink:href="datatypes.html#Address">Address</a> [0..1]</text><text x="6.0" y="168.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.physicalType"><title>Physical form of the location, e.g. building, room, vehicle, road</title>physicalType</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a xlink:href="valueset-location-physical-type.html"><title>Physical form of the location (Strength=Example)</title>LocationType</a>?? »</text><text x="6.0" y="182.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.managingOrganization"><title>The organization responsible for the provisioning and upkeep of the location</title>managingOrganization</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="organization.html#Organization">Organization</a> »</text><text x="6.0" y="196.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.partOf"><title>Another Location which this Location is physically part of</title>partOf</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="location.html#Location">Location</a> »</text><text x="6.0" y="210.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.endpoint"><title>Technical endpoints providing access to services operated for the location</title>endpoint</a> : <a xlink:href="references.html#Reference">Reference</a> [0..*] « <a xlink:href="endpoint.html#Endpoint">Endpoint</a> »</text><g><rect filter="url(#shadowB)" rx="4" ry="4" x="410.40000000000003" width="114.4" y="70.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="78.0"/><line y1="98.0" x1="410.40000000000003" y2="98.0" x2="524.8000000000001" style="stroke:dimgrey;stroke-width:1"/><text x="467.6" y="90.0" fill="black" class="diagram-class-title">Position</text><text x="416.40000000000003" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.position.longitude"><title>Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)</title>longitude</a> : <a xlink:href="datatypes.html#decimal">decimal</a> [1..1]</text><text x="416.40000000000003" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.position.latitude"><title>Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)</title>latitude</a> : <a xlink:href="datatypes.html#decimal">decimal</a> [1..1]</text><text x="416.40000000000003" y="140.0" fill="black" class="diagram-class-detail"><a xlink:href="location-definitions.html#Location.position.altitude"><title>Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)</title>altitude</a> : <a xlink:href="datatypes.html#decimal">decimal</a> [0..1]</text></g></g><line y1="109.0" x1="290.40000000000003" y2="109.0" x2="410.40000000000003" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.0 290.40000000000003 109.0)" style="fill:navy;stroke:navy;stroke-width:1" points="290.40000000000003,109.0 296.40000000000003,113.0 302.40000000000003,109.0 296.40000000000003,105.0 290.40000000000003,109.0"/><rect x="332.5" width="35.0" y="102.0" style="fill:white;stroke:black;stroke-width:0" height="18.0"/><text x="350.0" y="112.0" fill="black" class="diagram-class-linkage"><a xlink:href="location-definitions.html#Location.position"><title>The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)</title>position</a></text><text x="390.40000000000003" y="105.0" fill="black" class="diagram-class-linkage">[0..1]</text></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="location-definitions.html#Location" title="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." class="dict"><b>Location</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="location-definitions.html#Location.identifier" title="Unique code or number identifying the location to its users." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Unique code or number identifying the location to its users</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="location-definitions.html#Location.status" title="active | suspended | inactive (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>status</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-location-status.html">active | suspended | inactive</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.name" title="Name of the location as used by humans. Does not need to be unique." class="dict"><b>name</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Name of the location as used by humans</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.alias" title="A list of alternate names that the location is known as, or was known as in the past." class="dict"><b>alias</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A list of&nbsp;alternate names that the location is known as, or was known as in the past</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.description" title="Description of the Location, which helps in finding or referencing the place." class="dict"><b>description</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Additional details about the location that could be displayed as further information to identify the location beyond its name</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.mode" title="Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>mode</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-location-mode.html">instance | kind</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="location-definitions.html#Location.type" title="Indicates the type of function performed at the location." class="dict"><b>type</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="v3/ServiceDeliveryLocationRoleType/vs.html">Type of function performed</a></span><span style="color: Gray"> --&gt;</span>&lt;/type&gt;
+ &lt;<a href="location-definitions.html#Location.telecom" title="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites." class="dict"><b>telecom</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Contact details of the location</a></span><span style="color: Gray"> --&gt;</span>&lt;/telecom&gt;
+ &lt;<a href="location-definitions.html#Location.address" title="Physical location." class="dict"><b>address</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Physical location</a></span><span style="color: Gray"> --&gt;</span>&lt;/address&gt;
+ &lt;<a href="location-definitions.html#Location.physicalType" title="Physical form of the location, e.g. building, room, vehicle, road." class="dict"><b>physicalType</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="valueset-location-physical-type.html">Physical form of the location</a></span><span style="color: Gray"> --&gt;</span>&lt;/physicalType&gt;
+ &lt;<a href="location-definitions.html#Location.position" title="The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)." class="dict"><b>position</b></a>&gt;  <span style="color: Gray">&lt;!-- <span style="color: brown"><b>0..1</b></span> The absolute geographic location --&gt;</span>
+  &lt;<a href="location-definitions.html#Location.position.longitude" title="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)." class="dict"><b>longitude</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Longitude with WGS84 datum</a></span><span style="color: Gray"> --&gt;</span>
+  &lt;<a href="location-definitions.html#Location.position.latitude" title="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)." class="dict"><b>latitude</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Latitude with WGS84 datum</a></span><span style="color: Gray"> --&gt;</span>
+  &lt;<a href="location-definitions.html#Location.position.altitude" title="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)." class="dict"><b>altitude</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Altitude with WGS84 datum</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;/position&gt;
+ &lt;<a href="location-definitions.html#Location.managingOrganization" title="The organization responsible for the provisioning and upkeep of the location." class="dict"><b>managingOrganization</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Organization responsible for provisioning and upkeep</a></span><span style="color: Gray"> --&gt;</span>&lt;/managingOrganization&gt;
+ &lt;<a href="location-definitions.html#Location.partOf" title="Another Location which this Location is physically part of." class="dict"><b>partOf</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="location.html#Location">Location</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Another Location this one is physically part of</a></span><span style="color: Gray"> --&gt;</span>&lt;/partOf&gt;
+ &lt;<a href="location-definitions.html#Location.endpoint" title="Technical endpoints providing access to services operated for the location." class="dict"><b>endpoint</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="endpoint.html#Endpoint">Endpoint</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Technical endpoints providing access to services operated for the location</a></span><span style="color: Gray"> --&gt;</span>&lt;/endpoint&gt;
+&lt;/Location&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="location-definitions.html#Location" title="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." class="dict"><b>Location</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="location-definitions.html#Location.identifier" title="Unique code or number identifying the location to its users." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Unique code or number identifying the location to its users</a></span>
+  &quot;<a href="location-definitions.html#Location.status" title="active | suspended | inactive (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">status</span></a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-location-status.html">active | suspended | inactive</a></span>
+  &quot;<a href="location-definitions.html#Location.name" title="Name of the location as used by humans. Does not need to be unique." class="dict">name</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Name of the location as used by humans</a></span>
+  &quot;<a href="location-definitions.html#Location.alias" title="A list of alternate names that the location is known as, or was known as in the past." class="dict">alias</a>&quot; : [&quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A list of&nbsp;alternate names that the location is known as, or was known as in the past</a></span>
+  &quot;<a href="location-definitions.html#Location.description" title="Description of the Location, which helps in finding or referencing the place." class="dict">description</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#string">string</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Additional details about the location that could be displayed as further information to identify the location beyond its name</a></span>
+  &quot;<a href="location-definitions.html#Location.mode" title="Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">mode</span></a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-location-mode.html">instance | kind</a></span>
+  &quot;<a href="location-definitions.html#Location.type" title="Indicates the type of function performed at the location." class="dict">type</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="v3/ServiceDeliveryLocationRoleType/vs.html">Type of function performed</a></span>
+  &quot;<a href="location-definitions.html#Location.telecom" title="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites." class="dict">telecom</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#ContactPoint">ContactPoint</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Contact details of the location</a></span>
+  &quot;<a href="location-definitions.html#Location.address" title="Physical location." class="dict">address</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Address">Address</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Physical location</a></span>
+  &quot;<a href="location-definitions.html#Location.physicalType" title="Physical form of the location, e.g. building, room, vehicle, road." class="dict">physicalType</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-location-physical-type.html">Physical form of the location</a></span>
+  &quot;<a href="location-definitions.html#Location.position" title="The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)." class="dict">position</a>&quot; : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The absolute geographic location</a></span>
+    &quot;<a href="location-definitions.html#Location.position.longitude" title="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)." class="dict">longitude</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Longitude with WGS84 datum</a></span>
+    &quot;<a href="location-definitions.html#Location.position.latitude" title="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)." class="dict">latitude</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Latitude with WGS84 datum</a></span>
+    &quot;<a href="location-definitions.html#Location.position.altitude" title="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)." class="dict">altitude</a>&quot; : &lt;<span style="color: darkgreen"><a href="datatypes.html#decimal">decimal</a></span>&gt; <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Altitude with WGS84 datum</a></span>
+  },
+  &quot;<a href="location-definitions.html#Location.managingOrganization" title="The organization responsible for the provisioning and upkeep of the location." class="dict">managingOrganization</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Organization responsible for provisioning and upkeep</a></span>
+  &quot;<a href="location-definitions.html#Location.partOf" title="Another Location which this Location is physically part of." class="dict">partOf</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="location.html#Location">Location</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Another Location this one is physically part of</a></span>
+  &quot;<a href="location-definitions.html#Location.endpoint" title="Technical endpoints providing access to services operated for the location." class="dict">endpoint</a>&quot; : [{ <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="endpoint.html#Endpoint">Endpoint</a>)</span> }] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Technical endpoints providing access to services operated for the location</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="location-definitions.html#Location" title="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." class="dict"><b>Location</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="location-definitions.html#Location.identifier" title="Unique code or number identifying the location to its users." class="dict">Location.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">Unique code or number identifying the location to its users</span>
+  fhir:<a href="location-definitions.html#Location.status" title="active | suspended | inactive (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Location.status</span></a><a name="ttl-status"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">active | suspended | inactive</span>
+  fhir:<a href="location-definitions.html#Location.name" title="Name of the location as used by humans. Does not need to be unique." class="dict">Location.name</a><a name="ttl-name"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Name of the location as used by humans</span>
+  fhir:<a href="location-definitions.html#Location.alias" title="A list of alternate names that the location is known as, or was known as in the past." class="dict">Location.alias</a><a name="ttl-alias"> </a>[ <a href="datatypes.html#string">string</a> ], ... ; # 0..* <span style="color: navy">A list of&nbsp;alternate names that the location is known as, or was known as in the past</span>
+  fhir:<a href="location-definitions.html#Location.description" title="Description of the Location, which helps in finding or referencing the place." class="dict">Location.description</a><a name="ttl-description"> </a>[ <a href="datatypes.html#string">string</a> ]; # 0..1 <span style="color: navy">Additional details about the location that could be displayed as further information to identify the location beyond its name</span>
+  fhir:<a href="location-definitions.html#Location.mode" title="Indicates whether a resource instance represents a specific location or a class of locations (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Location.mode</span></a><a name="ttl-mode"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">instance | kind</span>
+  fhir:<a href="location-definitions.html#Location.type" title="Indicates the type of function performed at the location." class="dict">Location.type</a><a name="ttl-type"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">Type of function performed</span>
+  fhir:<a href="location-definitions.html#Location.telecom" title="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites." class="dict">Location.telecom</a><a name="ttl-telecom"> </a>[ <a href="datatypes.html#ContactPoint">ContactPoint</a> ], ... ; # 0..* <span style="color: navy">Contact details of the location</span>
+  fhir:<a href="location-definitions.html#Location.address" title="Physical location." class="dict">Location.address</a><a name="ttl-address"> </a>[ <a href="datatypes.html#Address">Address</a> ]; # 0..1 <span style="color: navy">Physical location</span>
+  fhir:<a href="location-definitions.html#Location.physicalType" title="Physical form of the location, e.g. building, room, vehicle, road." class="dict">Location.physicalType</a><a name="ttl-physicalType"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">Physical form of the location</span>
+  fhir:<a href="location-definitions.html#Location.position" title="The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)." class="dict">Location.position</a><a name="ttl-position"> </a>[ # 0..1 <span style="color: navy">The absolute geographic location</span>
+    fhir:<a href="location-definitions.html#Location.position.longitude" title="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)." class="dict">Location.position.longitude</a><a name="ttl-longitude"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]; # 1..1 <span style="color: navy">Longitude with WGS84 datum</span>
+    fhir:<a href="location-definitions.html#Location.position.latitude" title="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)." class="dict">Location.position.latitude</a><a name="ttl-latitude"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]; # 1..1 <span style="color: navy">Latitude with WGS84 datum</span>
+    fhir:<a href="location-definitions.html#Location.position.altitude" title="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)." class="dict">Location.position.altitude</a><a name="ttl-altitude"> </a>[ <a href="datatypes.html#decimal">decimal</a> ]; # 0..1 <span style="color: navy">Altitude with WGS84 datum</span>
+  ];
+  fhir:<a href="location-definitions.html#Location.managingOrganization" title="The organization responsible for the provisioning and upkeep of the location." class="dict">Location.managingOrganization</a><a name="ttl-managingOrganization"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>) ]; # 0..1 <span style="color: navy">Organization responsible for provisioning and upkeep</span>
+  fhir:<a href="location-definitions.html#Location.partOf" title="Another Location which this Location is physically part of." class="dict">Location.partOf</a><a name="ttl-partOf"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="location.html#Location">Location</a>) ]; # 0..1 <span style="color: navy">Another Location this one is physically part of</span>
+  fhir:<a href="location-definitions.html#Location.endpoint" title="Technical endpoints providing access to services operated for the location." class="dict">Location.endpoint</a><a name="ttl-endpoint"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="endpoint.html#Endpoint">Endpoint</a>) ], ... ; # 0..* <span style="color: navy">Technical endpoints providing access to services operated for the location</span>
+]
+</pre>
+
+ </div>
+</div>
+
+<div id="vdiff2">
+<p><b>Changes since DSTU2</b></p>
+ <div id="diff-inner2">
+  <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Location</td>
+    <td class="diff-right"/>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Location.alias</td>
+    <td class="diff-right">added</td>
+  </tr>
+  <tr class="diff-new">
+    <td class="diff-left">Location.endpoint</td>
+    <td class="diff-right">added</td>
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="location.profile.xml.html">XML</a>, <a href="location.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="location.xsd">Schema</a>/<a href="location.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="Location.schema.json">Schema</a>, <a href="location.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>)</p>
+
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">8.12.3.1</span> 
+Terminology Bindings
+ <a href="location.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="LocationStatus">Location.status </td><td valign="top">Indicates whether the location is still in use.</td><td><a href="terminologies.html#required">Required</a></td><td valign="top"><a href="valueset-location-status.html">LocationStatus</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="LocationMode">Location.mode </td><td valign="top">Indicates whether a resource instance represents a specific location or a class of locations.</td><td><a href="terminologies.html#required">Required</a></td><td valign="top"><a href="valueset-location-mode.html">LocationMode</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="ServiceDeliveryLocationRoleType">Location.type </td><td valign="top">Indicates the type of function performed at the location.</td><td><a href="terminologies.html#extensible">Extensible</a></td><td valign="top"><a href="v3/ServiceDeliveryLocationRoleType/vs.html">ServiceDeliveryLocationRoleType</a>  <!-- b --></td> </tr>
+ <tr><td valign="top" title="LocationType">Location.physicalType </td><td valign="top">Physical form of the location</td><td><a href="terminologies.html#example">Example</a></td><td valign="top"><a href="valueset-location-physical-type.html">LocationType</a>  <!-- b --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+  <!-- insert xhtml content here -->
+<a name="notes"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">8.12.4</span> Notes <a href="location.html#notes" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<ul>
+<li>Multiple Organizations or Practitioners may provide services at a Location. These references are not kept in Location, but can be found
+in the models for <a href="organization.html">Organization</a> and <a href="practitioner.html">Practitioner</a> instead.</li>
+<li>Locations may range from whole buildings to cabinets; it is possible to relate smaller Locations to their containing bigger Location 
+using the Location.partOf element.</li>
+<li>Location.position is expressed using the same syntax, datum and reference system as used in Google Earth's KML files,
+see <a href="http://www.opengeospatial.org/standards/kml">Google/OGS's KML <img src="external.png" style="text-align: baseline"/></a>.</li>
+</ul>
+
+<a name="loc-mode"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">8.12.4.1</span> Location Mode <a href="location.html#loc-mode" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>The Location.mode element can be used to indicate whether a Location resource represents a specific (potentially identifiable) Location ('instance'), 
+or a class of Locations ('kind'). Especially Resources capturing orders, resource scheduling, plans and definitions may refer to Locations in 'kind' mode. 
+For these domains, it is often not necessary to refer to a specific Location, but rather to a class of Locations. An example of this is found in planning, 
+where we need to allocate an &quot;isolation room&quot; for a patient, or need to dispatch &quot;an ambulance&quot; at a certain time. In these cases it is not important 
+exactly which isolation room or ambulance is allocated, and it is sufficient to just indicate a 'kind' of Location.</p>
+<p>Note that 'kind' should not be used to represent Locations where an actual instance of a Location was involved, but identifying information is missing.
+E.g. when a patient arrived 'by ambulance', but it is not known by which ambulance, this should be represented using a Location in 'instance' mode with a
+missing identifier, not a Location of 'kind' ambulance.</p>
+<p>
+Some of Location's data elements are only relevant when mode is 'instance' and should not be used when mode is 'kind':<br/>
+	<i>(however this information could still be included if was relevant, such as when it is a generic item, but not globally generic, e.g. a Burgers MU ambulance)</i>
+</p>
+<ul>
+<li>Location.identifier</li>
+<li>Location.telecom</li>
+<li>Location.address</li>
+<li>Location.position</li>
+<li>Location.status</li>
+<li>Location.managingOrganization</li>
+</ul>
+
+<a name="example"> </a>
+	<h2 class="self-link-parent"><span class="sectioncount">8.12.5</span> Example Location Hierarchy <a href="location.html#example" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+	<p>
+		An example location hierarchy should help give some guidance as to one example
+		of how a location hierarchy could look within a fictitious Hospital.<br/>
+		<i>(The nesting here would be the &quot;part-of&quot; structure of the location)</i>
+	</p>
+	<pre>
+Hospital A Building C (instance)
+    East Wing (instance)
+        Level 1 (instance)
+            Reception (instance)
+            Nurses Station EM-ns1 (instance)
+                Medication Cupboard A (instance)
+            Room 1 (instance)
+                Room 1a (instance) - space in room separatable via a curtain
+                    Bed 1a (instance) - always in this room
+                Room 1b (instance)
+                    Trolley 43 (instance) - moves about
+                Room 1d (instance)
+                    Trolley 19 (instance) - moves about
+                Room 2 (instance)
+                    ...
+            Theatre EM-TA (instance)
+            Coridor (generic)
+        Level 2 (instance)
+            Reception (instance)
+                ...
+            Nurses Station EM-ns1 (instance)
+                Medication Cupboard A (instance)
+            Coridor (generic)
+Mobile Services (kind)
+    Ambulance (kind)
+        Ambulance AMB1 (instance)
+        Ambulance AMB2 (instance)
+	</pre>
+	<p>
+		<i>Note: Wards/departments are not part of this structure - these would form part of the Organizational Hierarchy.</i>
+	</p>
+  
+<a name="positional"> </a>
+    <h3 class="self-link-parent"><span class="sectioncount">8.12.5.1</span> Positional Searching <a href="location.html#positional" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+    <p>
+        Searching for locations often require that a facility is within a specified distance of a particular point.
+        For example, to locate healthcare facilities within 2kms of a clients home, or the current geo-coded
+        position of a practitioner travelling between patients (read from a mobile phone or device).
+    </p>
+<pre>
+ GET [base]/Location?near=-83.694810:42.256500&amp;near-distance=11.20||km...
+</pre>
+    <p>
+        Note: The near search parameters are not able to be used with multiples thus the multiple 
+        seperator <code> , </code> should not be used with near or near-distance.
+    </p>
+    <p>
+        The distance between the location and the provided point is often used as one of the 
+        determining factors for selection of the location. So this value is included in the results.<br/>
+        However the value cannot be inside the Location resource as it is different depending on the
+        point of reference in the search. So the distance between is included in the search section
+        of the bundle entry.
+    </p>
+<pre>
+&lt;entry&gt; 
+    &lt;resource&gt;
+        &lt;Location&gt;
+            &lt;!-- location details --&gt;
+        &lt;/Location&gt;
+    &lt;/resource&gt;
+    &lt;search&gt;
+        &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/location-distance&quot;&gt;
+            &lt;valueDistance &gt;
+                &lt;!-- The distance that this location resource is from the provided point in the query --&lt;
+                &lt;/value value=&quot;10.5&quot;/&gt;
+                &lt;/unit value=&quot;km&quot;/&gt;
+            &lt;/valueDistance&gt;
+        &lt;/extension&gt;
+    &lt;/search&gt;
+&lt;/entry&gt; 
+</pre>
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">8.12.6</span> Search Parameters <a href="location.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>address</td><td><a href="search.html#string">string</a></td><td>A (part of the) address of the location</td><td>Location.address</td></tr>
+<tr><td>address-city</td><td><a href="search.html#string">string</a></td><td>A city specified in an address</td><td>Location.address.city</td></tr>
+<tr><td>address-country</td><td><a href="search.html#string">string</a></td><td>A country specified in an address</td><td>Location.address.country</td></tr>
+<tr><td>address-postalcode</td><td><a href="search.html#string">string</a></td><td>A postal code specified in an address</td><td>Location.address.postalCode</td></tr>
+<tr><td>address-state</td><td><a href="search.html#string">string</a></td><td>A state specified in an address</td><td>Location.address.state</td></tr>
+<tr><td>address-use</td><td><a href="search.html#token">token</a></td><td>A use code specified in an address</td><td>Location.address.use</td></tr>
+<tr><td>identifier</td><td><a href="search.html#token">token</a></td><td>Unique code or number identifying the location to its users</td><td>Location.identifier</td></tr>
+<tr><td>name</td><td><a href="search.html#string">string</a></td><td>A (portion of the) name of the location or alias</td><td>Location.name, Location.alias</td></tr>
+<tr><td>near</td><td><a href="search.html#token">token</a></td><td>The coordinates expressed as [latitude]:[longitude] (using the WGS84 datum, see notes) to find locations near to (servers may search using a square rather than a circle for efficiency). 
+
+Requires the near-distance parameter to be provided also</td><td>Location.position</td></tr>
+<tr><td>near-distance</td><td><a href="search.html#quantity">quantity</a></td><td>A distance quantity to limit the near search to locations within a specific distance
+
+Requires the near parameter to be included also</td><td>Location.position</td></tr>
+<tr><td>organization</td><td><a href="search.html#reference">reference</a></td><td>Searches for locations that are managed by the provided organization</td><td>Location.managingOrganization<br/>(<a href="organization.html">Organization</a>)</td></tr>
+<tr><td>partof</td><td><a href="search.html#reference">reference</a></td><td>The location of which this location is a part</td><td>Location.partOf<br/>(<a href="location.html">Location</a>)</td></tr>
+<tr><td>status</td><td><a href="search.html#token">token</a></td><td>Searches for locations with a specific kind of status</td><td>Location.status</td></tr>
+<tr><td>type</td><td><a href="search.html#token">token</a></td><td>A code for the type of location</td><td>Location.type</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Flocation.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Flocation.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

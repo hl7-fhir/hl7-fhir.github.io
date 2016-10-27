@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Operation-valueset-validate-code - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/operation-valueset-validate-code.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="operationdefinition.html">OperationDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- operation-valueset-validate-code.html / resource-instance:OperationDefinition / Operation Definition-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Operation-valueset-validate-code</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="operation-valueset-validate-code.xml.html">XML</a> or <a href="operation-valueset-validate-code.json.html">JSON</a> format. 
+</p>
+
+<hr/>
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Value Set based Validation</h2><p>OPERATION: Value Set based Validation</p><div><p>Validate that a coded value is in the set of codes allowed by a value set.   If the operation is not called at the instance level, one of the in parameters &quot;identifier&quot; or &quot;valueset&quot; must be provided.  One (and only one) of the in parameters (code, coding, codeableConcept) must be provided.  The operation returns a result (true / false), an error message, and the recommended display for the code</p>
+</div><p>URL: [base]/ValueSet/$validate-code</p><p>URL: [base]/ValueSet/[id]/$validate-code</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td>uri</td><td/><td><div><p>A logical value set identifier (i.e. ValueSet.url). The server must know the value set (e.g. it is defined explicitly in the server's value sets, or it is defined implicitly by some code system known to the server</p>
+</div></td></tr><tr><td>IN</td><td>context</td><td>0..1</td><td>uri</td><td/><td><div><p>The context of the value set, so that the server can resolve this to a value set to validate against. The recommended format for this URI is [Structure Definition URL]#[name or path into structure definition] e.g. http://hl7.org/fhir/StructureDefinition/observation-hspc-height-hspcheight#Observation.interpretation. Other forms may be used but are not defined. This form is only useable if the terminology server also has access to the profile registry that the server is using, but can be used to delegate the mapping from an application context to a binding at run-time</p>
+</div></td></tr><tr><td>IN</td><td>valueSet</td><td>0..1</td><td>ValueSet</td><td/><td><div><p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion. This parameter is used when the client wants the server to expand a value set that is not stored on the server</p>
+</div></td></tr><tr><td>IN</td><td>code</td><td>0..1</td><td>code</td><td/><td><div><p>The code that is to be validated. If a code is provided, a system must be provided</p>
+</div></td></tr><tr><td>IN</td><td>system</td><td>0..1</td><td>uri</td><td/><td><div><p>The system for the code that is to be validated</p>
+</div></td></tr><tr><td>IN</td><td>version</td><td>0..1</td><td>string</td><td/><td><div><p>The version of the system, if one was provided in the source data</p>
+</div></td></tr><tr><td>IN</td><td>display</td><td>0..1</td><td>string</td><td/><td><div><p>The display associated with the code, if provided. If a display is provided a code must be provided. If no display is provided, the server cannot validate the display value, but may choose to return a recommended display name in an extension in the outcome. Whether displays are case sensitive is code system dependent</p>
+</div></td></tr><tr><td>IN</td><td>coding</td><td>0..1</td><td>Coding</td><td/><td><div><p>A coding to validate</p>
+</div></td></tr><tr><td>IN</td><td>codeableConcept</td><td>0..1</td><td>CodeableConcept</td><td/><td><div><p>A full codeableConcept to validate. The server returns true if one of the coding values is in the value set, and may also validate that the codings are not in conflict with each other if more than one is present</p>
+</div></td></tr><tr><td>IN</td><td>date</td><td>0..1</td><td>dateTime</td><td/><td><div><p>The date for which the validation should be checked. Normally, this is the current conditions (which is the default values) but under some circumstances, systems need to validate that a correct code was used at some point in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.</p>
+</div></td></tr><tr><td>IN</td><td>abstract</td><td>0..1</td><td>boolean</td><td/><td><div><p>if true, then an abstract code is allowed to be used in the context of the code that is being validated. Typically, abstract codes are allowed to be used in value set specifications (e.g. any code that is subsumed by an abstract code). If false (which is the default value), then only concrete codes as defined by the value set are allowed</p>
+</div></td></tr><tr><td>OUT</td><td>result</td><td>1..1</td><td>boolean</td><td/><td><div><p>True if the concept details supplied are valid</p>
+</div></td></tr><tr><td>OUT</td><td>message</td><td>0..1</td><td>string</td><td/><td><div><p>Error details, if result = false. If this is provided when result = true, the message carries hints and warnings</p>
+</div></td></tr><tr><td>OUT</td><td>display</td><td>0..1</td><td>string</td><td/><td><div><p>A valid display for the concept if the system wishes to display this to a user</p>
+</div></td></tr></table></div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:25+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Foperation-valueset-validate-code.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Foperation-valueset-validate-code.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "@context": "http://build.fhir.org/Practitioner.jsonld",
+  "@context": "http://hl7.org/fhir/Practitioner/xcda1",
+  "Resource.id": {
+    "id.value": "xcda1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: xcda1</p><p><b>identifier</b>: D234123 (OFFICIAL)</p><p><b>name</b>: Sherry Dopplemeyer </p><p><b>telecom</b>: john.doe@healthcare.example.org</p><h3>Roles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Code</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td>Cleveland Clinic</td><td>Primary Surgon <span>(Details )</span></td><td>Orthopedic <span>(Details )</span></td></tr></table></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://healthcare.example.org/identifiers/staff"
+      },
+      "Identifier.value": {
+        "string.value": "D234123"
+      }
+    }
+  ],
+  "Practitioner.name": [
+    {
+      "HumanName.family": [
+        {
+          "string.value": "Dopplemeyer"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Sherry"
+        }
+      ]
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "email"
+      },
+      "ContactPoint.value": {
+        "string.value": "john.doe@healthcare.example.org"
+      }
+    }
+  ],
+  "Practitioner.role": [
+    {
+      "Practitioner.role.organization": {
+        "Reference.display": {
+          "string.value": "Cleveland Clinic"
+        }
+      },
+      "Practitioner.role.code": {
+        "CodeableConcept.text": {
+          "string.value": "Primary Surgon"
+        }
+      },
+      "Practitioner.role.specialty": [
+        {
+          "CodeableConcept.text": {
+            "string.value": "Orthopedic"
+          }
+        }
+      ]
+    }
+  ]
+}

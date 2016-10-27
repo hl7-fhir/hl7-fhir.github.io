@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+  <id value="example-genetics-1"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-genetics-1</p><p><b>status</b>: final</p><p><b>code</b>: Genetic analysis master panel <span>(Details : {LOINC code &#39;55233-1&#39; = &#39;Genetic analysis master panel - Blood or Tissue by Molecular genetics method&#39;, given as &#39;Genetic analysis master panel&#39;})</span></p><p><b>subject</b>: <a>Molecular Lab Patient ID: HOSP-23456</a></p><p><b>issued</b>: Apr 3, 2013 3:30:10 PM</p><p><b>performer</b>: <a>Molecular Diagnostics Laboratory</a></p><p><b>value</b>: Positive <span>(Details : {SNOMED CT code &#39;10828004&#39; = &#39;Positive (qualifier value)&#39;, given as &#39;Positive&#39;})</span></p><p><b>specimen</b>: <a>Molecular Specimen ID: MLD45-Z4-1234</a></p></div></text><extension url="http://hl7.org/fhir/StructureDefinition/observation-geneticsDNASequenceVariant">
+    <valueString value="NG_007726.3:g.146252T&gt;G"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/observation-geneticsGene">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.genenames.org"/>
+        <code value="3236"/>
+        <display value="EGFR"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/observation-geneticsDNARegionName">
+    <valueString value="Exon 21"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/LOINC-48002-0-answerlist"/>
+        <code value="LA6684-0"/>
+        <display value="somatic"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="55233-1"/>
+      <display value="Genetic analysis master panel"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Molecular Lab Patient ID: HOSP-23456"/>
+  </subject>
+  <issued value="2013-04-03T15:30:10+01:00"/>
+  <performer>
+    <reference value="Practitioner/example"/>
+    <display value="Molecular Diagnostics Laboratory"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="10828004"/>
+      <display value="Positive"/>
+    </coding>
+  </valueCodeableConcept>
+  <specimen>
+    <reference value="Specimen/genetics-example1-somatic"/>
+    <display value="Molecular Specimen ID: MLD45-Z4-1234"/>
+  </specimen>
+</Observation>

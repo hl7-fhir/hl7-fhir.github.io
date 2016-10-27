@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationAdministration/medadmin0310> a fhir:MedicationAdministration;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medadmin0310"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadmin0310</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0304; Myleran 2mg tablet, film coated <span>(Details : {http://hl7.org/fhir/sid/ndc code '76388-713-25' = '76388-713-25', given as 'Myleran 2mg tablet, film coated'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>effectiveTime</b>: Jan 15, 2015 10:03:00 PM --&gt; Jan 16, 2015 2:03:00 AM</p><p><b>performer</b>: <a>Patrick Pump</a></p><p><b>prescription</b>: <a>MedicationRequest/medrx0306</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>6 mg PO daily for remission induction; adjust dosage to white blood cell (WBC) count.  With hold treatment if WBC is less than 15,000/µL; resume when WBC is greater than 50,000/µL</td><td>Oral route (qualifier value) <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral route (qualifier value)'})</span></td><td>6 mg<span> (Details: UCUM code mg = 'mg')</span></td></tr></table></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "med0304" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/ndc" ];
+         fhir:Coding.code [ fhir:value "76388-713-25" ];
+         fhir:Coding.display [ fhir:value "Myleran 2mg tablet, film coated" ]
+       ]
+     ]
+  ];
+  fhir:MedicationAdministration.status [ fhir:value "completed"];
+  fhir:MedicationAdministration.medicationReference [
+     fhir:Reference.reference [ fhir:value "#med0304" ]
+  ];
+  fhir:MedicationAdministration.patient [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ];
+     fhir:Reference.display [ fhir:value "Donald Duck" ]
+  ];
+  fhir:MedicationAdministration.effectiveTimePeriod [
+     fhir:Period.start [ fhir:value "2015-01-15T22:03:00+01:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-01-16T02:03:00+01:00"^^xsd:dateTime ]
+  ];
+  fhir:MedicationAdministration.performer [
+     fhir:link <http://hl7.org/fhir/Practitioner/f007>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f007" ];
+     fhir:Reference.display [ fhir:value "Patrick Pump" ]
+  ];
+  fhir:MedicationAdministration.prescription [
+     fhir:link <http://hl7.org/fhir/MedicationRequest/medrx0306>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medrx0306" ]
+  ];
+  fhir:MedicationAdministration.dosage [
+     fhir:MedicationAdministration.dosage.text [ fhir:value "6 mg PO daily for remission induction; adjust dosage to white blood cell (WBC) count.  With hold treatment if WBC is less than 15,000/µL; resume when WBC is greater than 50,000/µL" ];
+     fhir:MedicationAdministration.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral route (qualifier value)" ]
+       ]
+     ];
+     fhir:MedicationAdministration.dosage.dose [
+       fhir:Quantity.value [ fhir:value "6"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mg" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mg" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f007> a fhir:Practitioner .
+
+<http://hl7.org/fhir/MedicationRequest/medrx0306> a fhir:MedicationRequest .
+
+# -------------------------------------------------------------------------------------
+

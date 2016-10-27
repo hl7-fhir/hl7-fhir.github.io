@@ -1,0 +1,314 @@
+{
+  "@context": "http://build.fhir.org/DocumentReference.jsonld",
+  "@context": "http://hl7.org/fhir/DocumentReference/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>contained</b>: </p><p><b>masterIdentifier</b>: urn:oid:1.3.6.1.4.1.21367.2005.3.7</p><p><b>identifier</b>: urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234</p><p><b>subject</b>: <a>Patient/xcda</a></p><p><b>type</b>: Outpatient Note <span>(Details : {LOINC code '34108-1' = 'Outpatient Note', given as 'Outpatient Note'})</span></p><p><b>class</b>: History and Physical <span>(Details : {http://ihe.net/xds/connectathon/classCodes code 'History and Physical' = 'History and Physical', given as 'History and Physical'})</span></p><p><b>author</b>: <a>Practitioner/xcda1</a>, id: a2; Gerald Smitty </p><p><b>custodian</b>: <a>Organization/organization-example</a></p><p><b>authenticator</b>: <a>Organization/organization-example</a></p><p><b>created</b>: Dec 24, 2005 9:35:00 AM</p><p><b>indexed</b>: Dec 24, 2005 9:43:41 AM</p><p><b>status</b>: current</p><p><b>docStatus</b>: preliminary <span>(Details : {http://hl7.org/fhir/composition-status code 'preliminary' = 'Preliminary', given as 'preliminary'})</span></p><h3>RelatesTos</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td>*</td><td>appends</td><td><a>DocumentReference/example</a></td></tr></table><p><b>description</b>: Physical</p><p><b>securityLabel</b>: very restricted <span>(Details : {http://hl7.org/fhir/v3/Confidentiality code 'V' = 'very restricted', given as 'very restricted'})</span></p><h3>Contents</h3><table><tr><td>-</td><td><b>Attachment</b></td><td><b>Format</b></td></tr><tr><td>*</td><td/><td>History and Physical Specification (Details: urn:oid:1.3.6.1.4.1.19376.1.2.3 code urn:ihe:pcc:handp:2008 = 'urn:ihe:pcc:handp:2008', stated as 'History and Physical Specification')</td></tr></table><blockquote><p><b>context</b></p><p><b>encounter</b>: <a>Encounter/xcda</a></p><p><b>event</b>: Arm <span>(Details : {http://ihe.net/xds/connectathon/eventCodes code 'T-D8200' = 'T-D8200', given as 'Arm'})</span></p><p><b>period</b>: Dec 23, 2004 8:00:00 AM --&gt; Dec 23, 2004 8:01:00 AM</p><p><b>facilityType</b>: Outpatient <span>(Details : {http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes code 'Outpatient' = 'Outpatient', given as 'Outpatient'})</span></p><p><b>practiceSetting</b>: General Medicine <span>(Details : {http://www.ihe.net/xds/connectathon/practiceSettingCodes code 'General Medicine' = 'General Medicine', given as 'General Medicine'})</span></p><p><b>sourcePatientInfo</b>: <a>Patient/xcda</a></p><h3>Relateds</h3><table><tr><td>-</td><td><b>Identifier</b></td><td><b>Ref</b></td></tr><tr><td>*</td><td>urn:oid:1.3.6.1.4.1.21367.2005.3.7.2345</td><td><a>Patient/xcda</a></td></tr></table></blockquote></div>"
+    }
+  },
+  "Practitioner": [
+    {
+      "Resource.id": {
+        "id.value": "a2"
+      },
+      "Practitioner.name": [
+        {
+          "HumanName.family": [
+            {
+              "string.value": "Smitty"
+            }
+          ],
+          "HumanName.given": [
+            {
+              "string.value": "Gerald"
+            }
+          ]
+        }
+      ],
+      "Practitioner.role": [
+        {
+          "Practitioner.role.organization": {
+            "Reference.display": {
+              "string.value": "Cleveland Clinic"
+            }
+          },
+          "Practitioner.role.code": {
+            "CodeableConcept.text": {
+              "string.value": "Attending"
+            }
+          },
+          "Practitioner.role.specialty": [
+            {
+              "CodeableConcept.text": {
+                "string.value": "Orthopedic"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "DocumentReference.masterIdentifier": {
+    "Identifier.system": {
+      "uri.value": "urn:ietf:rfc:3986"
+    },
+    "Identifier.value": {
+      "string.value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7"
+    }
+  },
+  "DocumentReference.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "urn:ietf:rfc:3986"
+      },
+      "Identifier.value": {
+        "string.value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+      }
+    }
+  ],
+  "DocumentReference.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/xcda"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/xcda"
+  },
+  "DocumentReference.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "34108-1"
+        },
+        "Coding.display": {
+          "string.value": "Outpatient Note"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#34108-1"
+  },
+  "DocumentReference.class": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://ihe.net/xds/connectathon/classCodes"
+        },
+        "Coding.code": {
+          "code.value": "History and Physical"
+        },
+        "Coding.display": {
+          "string.value": "History and Physical"
+        }
+      }
+    ]
+  },
+  "DocumentReference.author": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/xcda1"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "#a2"
+      }
+    }
+  ],
+  "DocumentReference.custodian": {
+    "Reference.reference": {
+      "string.value": "Organization/organization-example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/organization-example"
+  },
+  "DocumentReference.authenticator": {
+    "Reference.reference": {
+      "string.value": "Organization/organization-example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/organization-example"
+  },
+  "DocumentReference.created": {
+    "dateTime.value": "2005-12-24T09:35:00+11:00"
+  },
+  "DocumentReference.indexed": {
+    "instant.value": "2005-12-24T09:43:41+11:00"
+  },
+  "DocumentReference.status": {
+    "code.value": "current"
+  },
+  "DocumentReference.docStatus": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/composition-status"
+        },
+        "Coding.code": {
+          "code.value": "preliminary"
+        },
+        "Coding.display": {
+          "string.value": "preliminary"
+        }
+      }
+    ]
+  },
+  "DocumentReference.relatesTo": [
+    {
+      "DocumentReference.relatesTo.code": {
+        "code.value": "appends"
+      },
+      "DocumentReference.relatesTo.target": {
+        "Reference.reference": {
+          "string.value": "DocumentReference/example"
+        },
+        "Resource.reference": "http://hl7.org/fhir//DocumentReference/example"
+      }
+    }
+  ],
+  "DocumentReference.description": {
+    "string.value": "Physical"
+  },
+  "DocumentReference.securityLabel": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://hl7.org/fhir/v3/Confidentiality"
+          },
+          "Coding.code": {
+            "code.value": "V"
+          },
+          "Coding.display": {
+            "string.value": "very restricted"
+          }
+        }
+      ]
+    }
+  ],
+  "DocumentReference.content": [
+    {
+      "DocumentReference.content.attachment": {
+        "Attachment.contentType": {
+          "code.value": "application/hl7-v3+xml"
+        },
+        "Attachment.language": {
+          "code.value": "en-US"
+        },
+        "Attachment.url": {
+          "uri.value": "http://example.org/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"
+        },
+        "Attachment.size": {
+          "unsignedInt.value": 3654
+        },
+        "Attachment.hash": {
+          "base64Binary.value": "2jmj7l5rSw0yVb/vlWAYkK/YBwk="
+        }
+      },
+      "DocumentReference.content.format": [
+        {
+          "Coding.system": {
+            "uri.value": "urn:oid:1.3.6.1.4.1.19376.1.2.3"
+          },
+          "Coding.code": {
+            "code.value": "urn:ihe:pcc:handp:2008"
+          },
+          "Coding.display": {
+            "string.value": "History and Physical Specification"
+          }
+        }
+      ]
+    }
+  ],
+  "DocumentReference.context": {
+    "DocumentReference.context.encounter": {
+      "Reference.reference": {
+        "string.value": "Encounter/xcda"
+      },
+      "Resource.reference": "http://hl7.org/fhir//Encounter/xcda"
+    },
+    "DocumentReference.context.event": [
+      {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://ihe.net/xds/connectathon/eventCodes"
+            },
+            "Coding.code": {
+              "code.value": "T-D8200"
+            },
+            "Coding.display": {
+              "string.value": "Arm"
+            }
+          }
+        ]
+      }
+    ],
+    "DocumentReference.context.period": {
+      "Period.start": {
+        "dateTime.value": "2004-12-23T08:00:00+11:00"
+      },
+      "Period.end": {
+        "dateTime.value": "2004-12-23T08:01:00+11:00"
+      }
+    },
+    "DocumentReference.context.facilityType": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes"
+          },
+          "Coding.code": {
+            "code.value": "Outpatient"
+          },
+          "Coding.display": {
+            "string.value": "Outpatient"
+          }
+        }
+      ]
+    },
+    "DocumentReference.context.practiceSetting": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://www.ihe.net/xds/connectathon/practiceSettingCodes"
+          },
+          "Coding.code": {
+            "code.value": "General Medicine"
+          },
+          "Coding.display": {
+            "string.value": "General Medicine"
+          }
+        }
+      ]
+    },
+    "DocumentReference.context.sourcePatientInfo": {
+      "Reference.reference": {
+        "string.value": "Patient/xcda"
+      },
+      "Resource.reference": "http://hl7.org/fhir//Patient/xcda"
+    },
+    "DocumentReference.context.related": [
+      {
+        "DocumentReference.context.related.identifier": {
+          "Identifier.system": {
+            "uri.value": "urn:ietf:rfc:3986"
+          },
+          "Identifier.value": {
+            "string.value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.2345"
+          }
+        },
+        "DocumentReference.context.related.ref": {
+          "Reference.reference": {
+            "string.value": "Patient/xcda"
+          },
+          "Resource.reference": "http://hl7.org/fhir//Patient/xcda"
+        }
+      }
+    ]
+  }
+}

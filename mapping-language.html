@@ -1,0 +1,486 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Mapping-language - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/mapping-language.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="implsupport-module.html"><img src="implsupport.png"/> Implementation Support</a></li>
+        <li><b>Mapping Language</b></li>          <!-- mapping-language.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+
+<div class="col-9">
+
+<h2 class="self-link-parent"><span class="sectioncount">7.8.0<a name="7.8.0"> </a></span> FHIR Mapping Language <a href="mapping-language.html#7.8.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: 0</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">n/a yet</a></td></tr></table>
+
+<p>
+The FHIR Specification includes a mapping language. The mapping language as a concrete syntax, defined
+and described in this page, and an abstract syntax, which is found in the <a href="structuremap.html">StructureMap</a> 
+resource. See also the <a href="mapping-tutorial.html">Tutorial</a>.
+</p>
+<p>
+The mapping language describes how one set of Directed Acyclic Graphs (instances) is transformed to another set of 
+directed ayclic graphs. When the instances have formal definitions that are represented as 
+<a href="structuredefinition.html">Structure Definitions</a>, the language can use additional type
+related features, though it can function without them, and therefore can function on any directed 
+acyclic graph, even if it has no typing system (or cannot have one e.g. HL7 v2).
+</p>
+<p>
+The mapping language addresses 2 very different kinds of transformations:
+</p>
+<ul>
+ <li>Structural changes between the source and target structures</li>
+ <li>Differences in formats in string (and related) primitives contained within the structures</li>
+</ul>
+<p>
+A map has 5 parts:
+</p>
+<ul>
+ <li>Metadata</li>
+ <li>References to the structures involved in the mapping</li>
+ <li>Imports: additional Maps used by this map</li>
+ <li>a series of groups, with a list of input variables</li>
+ <li>A series of transformation rules in each group</li>
+</ul>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.1<a name="7.8.0.1"> </a></span> Executing Maps <a href="mapping-language.html#7.8.0.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Maps are executed by a mapping engine. This takes one or more inputs of instances (directed acyclic graphs) and a map, and produces a set of outputs as specified by the map. 
+The exact details of the form that the instances take are a matter for the map engine / application API. This language assumes that the engine can query an element in the
+instance for it's children, it's primitive value, and (optionally) it's type. The language also assumes that the engine has application support for the following operations:
+</p>
+<ul>
+<li>ValueSet validation operation</li>
+<li>Translation operation</li>
+<li>Lookup another tree of data</li>
+<li>Create an instance tree</li>
+<li>Return the correct string format to refer to a tree (input or output)</li>
+</ul>
+<p>
+Generally, it is assumed the invocation of the engine follows some pattern like this:
+</p>
+<ul>
+<li>The host application creates the engine, and passes it a handle to the standard services</li>
+<li>The host application chooses the model map resource, and asks the engine to prepare it (load, check, cache-up etc)</li>
+<li>The host application asks the engine to execute and provides a set of resources that match defined inputs in the map</li>
+<li>Any created output will be created via the standard API</li>
+</ul>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.2<a name="7.8.0.2"> </a></span> Mapping Support API <a href="mapping-language.html#7.8.0.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.3<a name="7.8.0.3"> </a></span> General Syntax Notes <a href="mapping-language.html#7.8.0.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Mapping files are always plain text in unicode. Whitespace is any unicode whitespace, and the particular whitespace used 
+is not signicant, except that unicode end of line characters terminate a 
+comment. Comments are started by the characters &quot;//&quot;.
+</p>
+<p>
+The abstract model includes documentation for each item. The canonical
+text representation is for each item to be on it's own line, with documentation 
+at the end of the line as a comment.
+</p>
+<p>
+All names defined by the map language - group, rule and variable names - must be valid 
+<a href="datatypes.html#id">id</a> (1-64 characters, upper and lowercase letters, numbers, dashes, dots and underscores), 
+and must start with a letter. The special values 'true' and 'false' are not allowed as variable names.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.4<a name="7.8.0.4"> </a></span> Metadata <a href="mapping-language.html#7.8.0.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+The first part of the mapping syntax establishes the name of the mapping:
+</p>
+<pre>
+map &quot;[url]&quot; = &quot;[name]&quot;
+</pre>
+<p>
+The letters &quot;map&quot; are the first non-whitespace non-comment characters 
+in the source. This is followed by the canonical URL that identifies 
+the map uniquely, and then a human readable name for the map. 
+</p>
+<p>
+<i>todo: add additional metadata?</i>
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.5<a name="7.8.0.5"> </a></span> Structure Definition References <a href="mapping-language.html#7.8.0.5" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3> 
+
+<p>
+The next section of the map references the set of structure definitions
+that are used or produced by this map. 
+</p>
+<pre>
+uses &quot;[url]&quot; as [mode] // documentation
+</pre>
+<p>
+This optional section lists one or more structure definitions that the 
+map makes use of, and indicates for each structure definition, how it 
+is used. 
+</p>
+<p>
+Any kind of structure definition may be referenced, including 
+data types, resources, constaints on those, and logical models.
+</p>
+<p>
+There are 4 modes in which a structure definition may be used:
+</p>
+<ul>
+ <li><b>source</b>: One of more instances of this type are passed to the mapping engine when the mapping is executed, and serve as the source from which mapping is performed</li>
+ <li><b>queried</b>: The map may ask the (via the API, see above) for some instances of this type. For further discussion, see below</li>
+ <li><b>target</b>: One or more instances of this type are passed in, and will be populated from the source material</li>
+ <li><b>produced</b>: The map may ask (via the API, see above) for some instances of this type to be created. For further discussion, see below</li>
+</ul>
+<p>
+The simplest case, which is also relatively common, is where a single structure is converted to another single structure. in 
+this case, the map specifes one target, and one source. Such maps can be used automatically - the host application has content
+in one format, creates an empty instance of the target, and asks the mapping engine to convert. 
+</p>
+<p>
+However, many mappings are not so simple. For instance, converting from a single CDA document to FHIR typically
+creates a set of resources. In this case, there is a single target - a <a href="bundle.html">Bundle</a>, but it 
+is also useful to specify a set of other structure definitions that may be created as part of the bundle. Alternatively
+converting from one source model to another might involve looking up other information in other instances of data.
+</p>
+<p>
+It's also possible for a map not so specify any structure definition dependencies. A map that doesn't 
+indicate any structure definitions can still be used, but the type features of the map language can't be used,
+and such maps typically require special development to integrate the execution of the map into an application.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.6<a name="7.8.0.6"> </a></span> Map Imports <a href="mapping-language.html#7.8.0.6" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+This section references additional maps that are used by this map:
+</p>
+<pre>
+imports &quot;[url]&quot; // documentation
+</pre>
+<p>
+Typically, maps that are imported a type based, such as a CDA --&gt; FHIR map that makes 
+use of a CD --&gt; CodeableConcept map.
+</p>
+<p>
+How imported maps are actually used is discussed below.
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.7<a name="7.8.0.7"> </a></span> Groups <a href="mapping-language.html#7.8.0.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Each Mapping source contains one or more groups of rules. Each group
+defines a set of related mapping rules that take the same input and 
+output variables, that define exactly which instances are passed to 
+the mapping, and provides names by which they may be passed when invoking the map:
+</p>
+<pre>
+group [group-name] (extends [other-group])
+  input [name] : [type] as [mode] // documentation
+</pre>
+<p>
+Each group has a name, which is how the mapping is invoked. The first group 
+is special, in that this is the group invoked if there no name is provided (e.g.
+starting the mapping by a host application). Groups may extend other groups,
+which means that the rules in the other group also apply (typically, this is 
+used with specialising classes in an OO context). 
+</p>
+
+<p>
+Each variable parameter to the group has a name. This is the name that applications use when passing the 
+instance to the invocation engine, or that rules use when invoking the group. Inputs may have a type - and should (see the 
+discussion above), but are not required to. Input variables also have a mode, 
+which may be one of source or target (see above).
+</p>
+<p>
+There must be at least one input variable - else there's nothing to map. 
+Maps may list more that one input variable, where that's necessary. Maps
+can also list one or more target (output) variables, instances that must 
+exist in order to call the map. Note that a map can specify no output variables,
+and create output instances based on the content of the input, rather than specifying
+that they must be created in advance. 
+</p>
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.8<a name="7.8.0.8"> </a></span> Transform Rules <a href="mapping-language.html#7.8.0.8" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+The main portion of a map consists of a set of transform rules that describe 
+how source content is transformed into target content. The full format for a rule
+looks like this:
+</p>
+<pre>
+name_of_rule: for src_context.field as new_variable where condition make tgt_context.field as new_variable = create(&quot;RRoot&quot;) then by [details].
+</pre>
+<p>
+Each rule has 4 main sections:
+</p>
+<ul>
+ <li><b>Name</b>: The identity of the rule, for internal references</li>
+ <li><b>Source Content</b>: One or more elements from the source that contribute to the mapping </li>
+ <li><b>Target Transform</b>: One or more specifications of content to create in the target model </li>
+ <li><b>Dependent Rules</b>: Specifies which - if any - rules or groups to apply within the scope of the rule</li>
+</ul>
+
+<h4 class="self-link-parent"><span class="sectioncount">7.8.0.8.1<a name="7.8.0.8.1"> </a></span> Name <a href="mapping-language.html#7.8.0.8.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Each rule is assigned a name. The name is used when specifying rule links, and in traces (a record generated by the conversion engine recording the transform process).
+Names must be unique within the context of the map.
+</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">7.8.0.8.2<a name="7.8.0.8.2"> </a></span> Source Content <a href="mapping-language.html#7.8.0.8.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Each rule specifies one or more elements taken from the source that define variables that can be used 
+when specifying target content, or re-used in subsequent transform rules. Multiple source elements are
+separated by a comma, like this:
+</p>
+<pre>
+rule_name: for [source], [source], make ...
+</pre>
+<p>
+Each [source] contains the following items:
+</p>
+<pre>
+for (optional) context.element { list-option } as variable where [fluentpath] check [fluentpath]
+</pre>
+<ul>
+ <li><b>optional</b>: The keyword 'optional' indicates that the rule should still apply when there is no value that matches this source element - see below</li>
+ <li><b>context</b>: Either a variable or type that is the context in which this rule applies. Variables are not prefixed, and must be declared elsewhere in 
+   the map ('as variable' below, or in the input source variables). If the context is a type, it is prefixed by the character '@' e.g. @Patient.id</li>
+ <li><b>element</b>: An optional name of a child element of the context. If this is not provided, the source is the context. If this is provided, the rule will apply once for each element on the context that matches this name </li>
+ <li><b>list-option</b>: by default, the rule will apply once for each occurance of the element in context. The list option can override this to specify only to apply to the first, or the last, and to ignore the others</li>
+ <li><b>as variable</b>: if an element is specified, a variable name must be assigned. This variable name may be used in the target statement, and may be re-used in other rules that apply in the scope of this rule</li>
+ <li><b>where [condition]</b>: a fluent path (ref) expression that is evaluated to boolean on the context. If the expression returns false, the source element has no match</li>
+ <li><b>check [condition]</b>: a fluent path (ref) expression that is evaluated to boolean on the context. If the expression returns false, the mapping engine terminates execution with an error. Note: it's usual to have either a where or a check clause, but possible to have both. If both are provided, the where clause is evaluated first, and the check only applies if the where expression is true</li>
+</ul>
+<p>
+If all the source elements have a match (or are labeled as optional) the rule applies for the permutation of the source 
+elements (e.g. if there are 2 elements, each with 2 matches, the rule applies 4 times, one for each combination). Typically,
+if there is more than one source element, only one of the elements can repeat. 
+</p>
+<p>
+Once the source statement is evaluated, the engine performing the evaluation has a set of variables, each of which
+contains a single value. These variables are now mapped into the target structures in the target transformation.
+</p>
+<h4 class="self-link-parent"><span class="sectioncount">7.8.0.8.3<a name="7.8.0.8.3"> </a></span> Target Transform <a href="mapping-language.html#7.8.0.8.3" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Each rule specifies zero or more elements to be created in the target structure. These targets can also be assigned to variables 
+that can be used in subsequent transform rules. If no targets are specified, there are not created targets, just newly 
+defined source variables. Multiple target elements are separated by a comma, like this:
+</p>
+<pre>
+... make [target], [target] then by...
+</pre>
+<p>
+Each [target] contains the following items:
+</p>
+<pre>
+make context.element = transform_code(parameters...)  as variable {list_modes}
+</pre>
+<ul>
+ <li><b>context</b>: Either a variable or type that is the context in which the content will be created. Variables are not prefixed, and must be declared elsewhere in 
+   the map ('as variable' below, or in the input target variables). If the context is a type, it is prefixed by the character '@' e.g. @Patient.id</li>
+ <li><b>element</b>: An optional name of a child element of the context. If this is not provided, the transform rule must be 'create' - this means the creation of a new instance of data as part of the output. If this is provided, the created value will be placed into the named element</li>
+ <li><b>transform+parameters</b>: details how the content that is created is transformed from the source data. See below for possible transform codes. If no transform code is provided, then the element is autocreated. It is an error if auto-created elements are primitive types, or have more than one possible type</li>
+ <li><b>as variable</b>: a variable name may be assigned, which allows the created item to be re-used in other rules that apply in the scope of this rule</li>
+ <li><b>list_modes</b>: control how elements that repeat are managed when the transform rule is evaluated</li> 
+</ul>
+<p>
+Each time the rule is applied, the engine determines the value from the transforms, considers the list mode, if required, and creates that specified content in the target instance. Within a given transform url, the targets are processed in order, so that a transform rule may refer to a variable defined by a prior transform rule.
+</p>
+
+<p>
+The following list specifies that transforms that can be specified. Each transform takes one or more parameters:
+</p>
+<table class="grid">
+ <tr><td><b>Name</b></td><td><b>parameters</b></td><td><b>Documentation</b></td></tr>
+ <tr><td>copy</td> <td>type</td> <td>simply copy the source to the target as is (only allowed when the types in source and target match- typically for primitive types). In the concretet syntax, this is simply represented as the source variable</td></tr>
+ <tr><td>create</td> <td>source</td> <td>use the standard API to create a new instance of data. Where structure definitions have been provided, the name must be a known type of a root element. Where they haven't, the application must know the name somehow</td></tr>
+ <tr><td>truncate</td> <td>source, length</td> <td>source must be some stringy type that has some meaningful length property</td></tr>
+ <tr><td>escape</td> <td>source, format1, format2</td> <td>Change the internal escaping of a string element. Note: this is not often needed, as mostly the escaping is done on the base format</td></tr>
+ <tr><td>cast</td> <td>source, type?</td> <td>cast source from one type to another. target type can be left as implicit if there is one and only one target type known</td></tr>
+ <tr><td>append</td> <td>source...</td> <td>source is element or string - just append them all together</td></tr>
+ <tr><td>translate</td> <td>source, map_uri</td> <td>use the <a href="conceptmap-operations.html#translate">translate operation</a></td></tr>
+ <tr><td>reference</td> <td>source</td> <td>return a string that references the provided tree properly</td></tr>
+</table>
+
+<p>
+TODO: explain how optional parameters work with transforms (append only?), document list mode
+</p>
+
+<h4 class="self-link-parent"><span class="sectioncount">7.8.0.8.4<a name="7.8.0.8.4"> </a></span> Dependent Rules <a href="mapping-language.html#7.8.0.8.4" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<p>
+Once the source elements are evaluated, and any specifed targets created, the engine has a set of variables that represent source and target 
+contexts in which further mapping may occur. The set of variables includes those already defined before the rule was evaluated, as well as those newly 
+created by the evaluation of the rule. For some created elements that are primitive types, that's the end of the road - there's nothing more
+to do with them. But if either or both the source and target types are complex, there may be additional mapping rules that need to apply
+to the newly created variables.
+</p>
+<p>
+Transform rules specify what additional rules are evaluated when the rule is complete, by containing other rules:, 
+</p>
+<pre>
+ .. then {
+   .. other rules...
+ }
+</pre>
+<p>
+When a rule contains other rules, the variables from the containing rules are all available to the contained rules.
+Alternatively, a rule can nominating another group of rules from the same or an imported mapping. Each rule or group is listed by name,
+and then a set of parameters are provided.
+</p>
+
+<pre>
+ .. then rule(param, param)
+</pre>
+
+
+<h3 class="self-link-parent"><span class="sectioncount">7.8.0.9<a name="7.8.0.9"> </a></span> Formal Grammar <a href="mapping-language.html#7.8.0.9" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>todo</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fmapping-language.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fmapping-language.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+
+</html>

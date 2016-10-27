@@ -1,0 +1,36 @@
+{
+  "@context": "http://build.fhir.org/AppointmentResponse.jsonld",
+  "@context": "http://hl7.org/fhir/AppointmentResponse/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Accept Brian MRI results discussion</div>"
+    }
+  },
+  "AppointmentResponse.appointment": {
+    "Reference.reference": {
+      "string.value": "Appointment/example"
+    },
+    "Reference.display": {
+      "string.value": "Brian MRI results discussion"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Appointment/example"
+  },
+  "AppointmentResponse.actor": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter James Chalmers"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "AppointmentResponse.participantStatus": {
+    "code.value": "accepted"
+  }
+}

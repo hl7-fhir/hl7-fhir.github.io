@@ -1,0 +1,197 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value "DecisionSupportServiceModule-evaluate"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/DecisionSupportServiceModule-evaluate"];
+  fhir:OperationDefinition.name [ fhir:value "Evaluate"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2016-10-27T16:23:35+00:00"];
+  fhir:OperationDefinition.publisher [ fhir:value "HL7 (FHIR Project)"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fhir@lists.hl7.org" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The evaluate operation requests clinical decision support guidance based on a specific decision support module"];
+  fhir:OperationDefinition.code [ fhir:value "evaluate"];
+  fhir:OperationDefinition.resource [
+     fhir:value "DecisionSupportServiceModule";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "false"];
+  fhir:OperationDefinition.type [ fhir:value "false"];
+  fhir:OperationDefinition.instance [ fhir:value "true"];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value "requestId" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "An optional client-provided identifier to track the request" ];
+     fhir:OperationDefinition.type [ fhir:value "id" ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value "evaluateAtDateTime" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "An optional date and time specifying that the evaluation should be performed as though it was the given date and time. The most direct implication of this is that references to \"Now\" within the evaluation logic of the module should result in this value. In addition, wherever possible, the data accessed by the module should appear as though it was accessed at this time. The evaluateAtDateTime value may be any time in the past or future, enabling both retrospective and prospective scenarios. If no value is provided, the date and time of the request is assumed" ];
+     fhir:OperationDefinition.type [ fhir:value "dateTime" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value "inputParameters" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The input parameters for a request, if any. These parameters are defined by the module that is the target of the evaluation, and typically supply patient-independent information to the module" ];
+     fhir:OperationDefinition.type [ fhir:value "Parameters" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value "inputData" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "*" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The input data for the request. These data are defined by the data requirements of the module and typically provide patient-dependent information" ];
+     fhir:OperationDefinition.type [ fhir:value "Any" ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.name [ fhir:value "patient" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The patient in context, if any" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:OperationDefinition.name [ fhir:value "encounter" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The encounter in context, if any" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Encounter" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.name [ fhir:value "initiatingOrganization" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The organization initiating the request" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:OperationDefinition.name [ fhir:value "initiatingPerson" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The person initiating the request" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ]
+  ], [
+     fhir:index 8;
+     fhir:OperationDefinition.name [ fhir:value "userType" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The type of user initiating the request, e.g. patient, healthcare provider, or specific type of healthcare provider (physician, nurse, etc.)" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 9;
+     fhir:OperationDefinition.name [ fhir:value "userLanguage" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Preferred language of the person using the system" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 10;
+     fhir:OperationDefinition.name [ fhir:value "userTaskContext" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The task the system user is performing, e.g. laboratory results review, medication list review, etc. This information can be used to tailor decision support outputs, such as recommended information resources" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 11;
+     fhir:OperationDefinition.name [ fhir:value "receivingOrganization" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The organization that will receive the response" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:OperationDefinition.name [ fhir:value "receivingPerson" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The person in the receiving organization that will receive the response" ];
+     fhir:OperationDefinition.type [ fhir:value "Reference" ]
+  ], [
+     fhir:index 13;
+     fhir:OperationDefinition.name [ fhir:value "recipientType" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The type of individual that will consume the response content. This may be different from the requesting user type (e.g. if a clinician is getting disease management guidance for provision to a patient). E.g. patient, healthcare provider or specific type of healthcare provider (physician, nurse, etc.)" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 14;
+     fhir:OperationDefinition.name [ fhir:value "recipientLanguage" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Preferred language of the person that will consume the content" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 15;
+     fhir:OperationDefinition.name [ fhir:value "setting" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The current setting of the request (inpatient, outpatient, etc)" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 16;
+     fhir:OperationDefinition.name [ fhir:value "settingContext" ];
+     fhir:OperationDefinition.use [ fhir:value "in" ];
+     fhir:OperationDefinition.min [ fhir:value "0" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "Additional detail about the setting of the request, if any" ];
+     fhir:OperationDefinition.type [ fhir:value "CodeableConcept" ]
+  ], [
+     fhir:index 17;
+     fhir:OperationDefinition.name [ fhir:value "return" ];
+     fhir:OperationDefinition.use [ fhir:value "out" ];
+     fhir:OperationDefinition.min [ fhir:value "1" ];
+     fhir:OperationDefinition.max [ fhir:value "1" ];
+     fhir:OperationDefinition.documentation [ fhir:value "The result of the request as a GuidanceResponse resource. Output parameters, if any, will be contained in the parameters element of the response" ];
+     fhir:OperationDefinition.type [ fhir:value "GuidanceResponse" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

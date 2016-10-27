@@ -1,0 +1,106 @@
+{
+  "@context": "http://build.fhir.org/MedicationRequest.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationRequest/medrx002",
+  "Resource.id": {
+    "id.value": "medrx002"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx002</p><p><b>identifier</b>: 12345 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>stage</b>: original-order <span>(Details : {[not stated] code 'original-order' = 'original-order)</span></p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>encounter</b>: <a>encounter that leads to this prescription</a></p><p><b>dateWritten</b>: Mar 1, 2015</p><p><b>prescriber</b>: <a>Patricia Primary</a></p><p><b>reasonCode</b>: Essential hypertension (disorder) <span>(Details : {SNOMED CT code '59621000' = 'Essential hypertension (disorder)', given as 'Essential hypertension (disorder)'})</span></p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "MedicationRequest.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.bmc.nl/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "string.value": "12345"
+      }
+    }
+  ],
+  "MedicationRequest.status": {
+    "code.value": "active"
+  },
+  "MedicationRequest.stage": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "code.value": "original-order"
+        }
+      }
+    ]
+  },
+  "MedicationRequest.medicationReference": {
+    "Reference.reference": {
+      "string.value": "Medication/med0316"
+    },
+    "Reference.display": {
+      "string.value": "prescribed medication"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Medication/med0316"
+  },
+  "MedicationRequest.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationRequest.encounter": {
+    "Reference.reference": {
+      "string.value": "Encounter/f001"
+    },
+    "Reference.display": {
+      "string.value": "encounter that leads to this prescription"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "MedicationRequest.dateWritten": {
+    "dateTime.value": "2015-03-01"
+  },
+  "MedicationRequest.prescriber": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "string.value": "Patricia Primary"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationRequest.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "59621000"
+          },
+          "Coding.display": {
+            "string.value": "Essential hypertension (disorder)"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationRequest.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "Take one tablet daily as directed"
+      }
+    }
+  ]
+}

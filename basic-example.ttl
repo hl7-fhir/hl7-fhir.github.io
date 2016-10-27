@@ -1,0 +1,87 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Basic/referral> a fhir:Basic;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "referral"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Patient:</b>Roel</p>\n      <p><b>Requestor:</b>Dokter Bronsig</p>\n      <p><b>Type:</b>Consultation</p>\n      <p><b>Target Date:</b>April 1 - April 31</p>\n      <p>COMPLETED</p>\n      <b>The patient had fever peaks over the last couple of days. He is worried about these peaks.</b>\n    </div>"
+  ];
+  fhir:extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#requestingPractitioner" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://hl7.org/fhir/Practitioner/f201>;
+       fhir:Reference.reference [ fhir:value "Practitioner/f201" ];
+       fhir:Reference.display [ fhir:value "Dokter Bronsig" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#notes" ];
+     fhir:Extension.valueString [ fhir:value "The patient had fever peaks over the last couple of days. He is worried about these peaks." ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#fulfillingEncounter" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://hl7.org/fhir/Encounter/f201>;
+       fhir:Reference.reference [ fhir:value "Encounter/f201" ]
+     ]
+  ];
+  fhir:modifierExtension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#referredForService" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:11429006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "11429006" ];
+         fhir:Coding.display [ fhir:value "Consultation" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#targetDate" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2013-04-01"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2013-04-15"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#status" ];
+     fhir:Extension.valueCode [ fhir:value "complete" ]
+  ];
+  fhir:Basic.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/basic-resource-type" ];
+       fhir:Coding.code [ fhir:value "referral" ]
+     ]
+  ];
+  fhir:Basic.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:Basic.created [ fhir:value "2013-05-14"^^xsd:date];
+  fhir:Basic.author [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ] .
+
+<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Encounter/f201> a fhir:Encounter .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

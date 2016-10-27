@@ -1,0 +1,167 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticReport.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticReport/dg2",
+  "Resource.id": {
+    "id.value": "dg2"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n          \n          \n          <h3>Genetic test Report for Marry Chalmers (MRN: 12345) </h3>\n          \n          <pre>\n              Gene                DNAVariation       Status        Interpretation\n              BRCA1                                 Negative\n              BRCA2                 185delAG        Positive         Pathogenic\n          </pre>\n          <p> Method: BRACAnalysis CDx Offered by Myriad Genetic Laboratories, Inc </p>\n          <p> Issued: 2015-05-26T15:30:10+01:00</p>\n          <p> FamilyMemeberHistory: Mother </p>\n          <pre>\n              Gene                 DNAVariation      Status\n              BRCA2                 185delAG        Positive\n          </pre>\n          <p> Method: BRACAnalysis CDx Offered by Myriad Genetic Laboratories, Inc </p>\n          \n      </div>"
+    }
+  },
+  "FamilyMemberHistory": [
+    {
+      "Resource.id": {
+        "id.value": "f1-genetics"
+      },
+      "DomainResource.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-observation"
+          },
+          "Extension.valueReference": {
+            "Reference.reference": {
+              "string.value": "DiagnosticReport/dgf1"
+            },
+            "Resource.reference": "http://hl7.org/fhir//DiagnosticReport/dgf1"
+          }
+        }
+      ],
+      "FamilyMemberHistory.patient": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "FamilyMemberHistory.status": {
+        "code.value": "completed"
+      },
+      "FamilyMemberHistory.relationship": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/familial-relationship"
+            },
+            "Coding.code": {
+              "code.value": "MTH"
+            },
+            "Coding.display": {
+              "string.value": "Mother"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "uri.value": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsFamilyMemberHistory"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "string.value": "#f1-genetics"
+        }
+      }
+    }
+  ],
+  "DiagnosticReport.status": {
+    "code.value": "final"
+  },
+  "DiagnosticReport.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "15220000"
+        },
+        "Coding.display": {
+          "string.value": "Laboratory test"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0074"
+        },
+        "Coding.code": {
+          "code.value": "LAB"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#15220000"
+  },
+  "DiagnosticReport.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "55233-1"
+        },
+        "Coding.display": {
+          "string.value": "Genetic analysis master panel"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#55233-1"
+  },
+  "DiagnosticReport.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Reference.display": {
+      "string.value": "Peter James Chalmers(MRN: 12345)"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "DiagnosticReport.effectiveDateTime": {
+    "dateTime.value": "2015-05-26T15:30:10+01:00"
+  },
+  "DiagnosticReport.issued": {
+    "instant.value": "2014-05-16T10:28:00+01:00"
+  },
+  "DiagnosticReport.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/genetics-example2"
+      },
+      "Reference.display": {
+        "string.value": "Molecular Diagnostic Laboratory"
+      }
+    }
+  ],
+  "DiagnosticReport.specimen": [
+    {
+      "Reference.reference": {
+        "string.value": "Specimen/genetics-example2"
+      },
+      "Reference.display": {
+        "string.value": "Molecular Specimen ID: MLD45-Z4-1234"
+      }
+    }
+  ],
+  "DiagnosticReport.result": [
+    {
+      "Reference.reference": {
+        "string.value": "Observation/ob-genetics-3-1"
+      },
+      "Reference.display": {
+        "string.value": "Genetic analysis for BRAC -1"
+      }
+    },
+    {
+      "Reference.reference": {
+        "string.value": "Observation/ob-genetics-3-2"
+      },
+      "Reference.display": {
+        "string.value": "Genetic analysis for BRAC -2"
+      }
+    }
+  ]
+}

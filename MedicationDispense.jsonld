@@ -1,0 +1,77 @@
+﻿{
+  "@context": {
+    "MedicationDispense.identifier": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "MedicationDispense.status": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "MedicationDispense.patient": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.patient",
+      "@type": "http://hl7.org/fhir/Reference(Patient)"
+    },
+    "MedicationDispense.dispenser": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.dispenser",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner)"
+    },
+    "MedicationDispense.dispensingOrganization": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.dispensingOrganization",
+      "@type": "http://hl7.org/fhir/Reference(Organization)"
+    },
+    "MedicationDispense.authorizingPrescription": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.authorizingPrescription",
+      "@type": "http://hl7.org/fhir/Reference(MedicationRequest)"
+    },
+    "MedicationDispense.type": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.type",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "MedicationDispense.supportingInformation": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.supportingInformation",
+      "@type": "http://hl7.org/fhir/Reference(Any)"
+    },
+    "MedicationDispense.quantity": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.quantity",
+      "@type": "http://hl7.org/fhir/SimpleQuantity"
+    },
+    "MedicationDispense.daysSupply": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.daysSupply",
+      "@type": "http://hl7.org/fhir/SimpleQuantity"
+    },
+    "MedicationDispense.whenPrepared": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.whenPrepared",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "MedicationDispense.whenHandedOver": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.whenHandedOver",
+      "@type": "http://hl7.org/fhir/dateTime"
+    },
+    "MedicationDispense.destination": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.destination",
+      "@type": "http://hl7.org/fhir/Reference(Location)"
+    },
+    "MedicationDispense.receiver": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.receiver",
+      "@type": "http://hl7.org/fhir/Reference(Patient|Practitioner)"
+    },
+    "MedicationDispense.note": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.note",
+      "@type": "http://hl7.org/fhir/Annotation"
+    },
+    "MedicationDispense.dosageInstruction": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.dosageInstruction",
+      "@type": "http://hl7.org/fhir/DosageInstruction"
+    },
+    "MedicationDispense.substitution": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.substitution",
+      "@type": "http://hl7.org/fhir/"
+    },
+    "MedicationDispense.eventHistory": {
+      "@id": "http://hl7.org/fhir/MedicationDispense.eventHistory",
+      "@type": "http://hl7.org/fhir/Reference(Provenance)"
+    }
+  },
+  "@id": "http://hl7.org/fhir/MedicationDispense"
+}

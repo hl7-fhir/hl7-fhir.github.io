@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Patient/proband> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "proband"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \n        <b>Annie Proband</b>: Female, born 1966-04-04\n      </p>\n    \n    </div>"
+  ];
+  fhir:extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/us-core-race" ];
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/Race" ];
+         fhir:Coding.code [ fhir:value "2106-3" ];
+         fhir:Coding.display [ fhir:value "White" ]
+       ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "Computer-Stored Abulatory Records (COSTAR)" ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.6.117" ];
+     fhir:Identifier.value [ fhir:value "999999999" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "Boston Massachesetts General Hospital" ]
+     ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "1966-04-04"^^xsd:date];
+  fhir:Patient.deceasedBoolean [ fhir:value "false"^^xsd:boolean] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,38 @@
+{
+  "@context": "http://build.fhir.org/OperationOutcome.jsonld",
+  "@context": "http://hl7.org/fhir/OperationOutcome/101",
+  "Resource.id": {
+    "id.value": "101"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "additional"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>W is not a recognized code for Gender.</p>\n    </div>"
+    }
+  },
+  "OperationOutcome.issue": [
+    {
+      "OperationOutcome.issue.severity": {
+        "code.value": "error"
+      },
+      "OperationOutcome.issue.code": {
+        "code.value": "code-invalid"
+      },
+      "OperationOutcome.issue.details": {
+        "CodeableConcept.text": {
+          "string.value": "The code \"W\" is not known and not legal in this context"
+        }
+      },
+      "OperationOutcome.issue.diagnostics": {
+        "string.value": "Acme.Interop.FHIRProcessors.Patient.processGender line 2453"
+      },
+      "OperationOutcome.issue.location": [
+        {
+          "string.value": "/f:Person/f:gender"
+        }
+      ]
+    }
+  ]
+}

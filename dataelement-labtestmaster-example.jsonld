@@ -1,0 +1,134 @@
+{
+  "@context": "http://build.fhir.org/DataElement.jsonld",
+  "@context": "http://hl7.org/fhir/DataElement/prothrombin",
+  "Resource.id": {
+    "id.value": "prothrombin"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: prothrombin</p><p><b>identifier</b>: Prothrombin Time, PT = 11</p><p><b>status</b>: active</p><p><b>name</b>: Prothrombin Time</p><h3>Mappings</h3><table><tr><td>-</td><td><b>Identity</b></td><td><b>Uri</b></td><td><b>Name</b></td><td><b>Comment</b></td></tr><tr><td>*</td><td>loinc</td><td><a>http://loinc.org/</a></td><td>LOINC</td><td>Version 2.48 or later</td></tr></table><p><b>element</b>: todo-bundle</p></div>"
+    }
+  },
+  "DataElement.identifier": [
+    {
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "string.value": "Prothrombin Time, PT"
+        }
+      },
+      "Identifier.system": {
+        "uri.value": "http://www.CenturyHospital/Laboratory/DirectoryofServices"
+      },
+      "Identifier.value": {
+        "string.value": "11"
+      },
+      "Identifier.period": {
+        "Period.start": {
+          "dateTime.value": "2011-05-19"
+        }
+      },
+      "Identifier.assigner": {
+        "Reference.display": {
+          "string.value": "Century Hospital Laboratory"
+        }
+      }
+    }
+  ],
+  "DataElement.status": {
+    "code.value": "active"
+  },
+  "DataElement.name": {
+    "string.value": "Prothrombin Time"
+  },
+  "DataElement.mapping": [
+    {
+      "DataElement.mapping.identity": {
+        "id.value": "loinc"
+      },
+      "DataElement.mapping.uri": {
+        "uri.value": "http://loinc.org/"
+      },
+      "DataElement.mapping.name": {
+        "string.value": "LOINC"
+      },
+      "DataElement.mapping.comment": {
+        "string.value": "Version 2.48 or later"
+      }
+    }
+  ],
+  "DataElement.element": [
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "http://hl7.org/fhir/StructureDefinition/elementdefinition-allowedUnits"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "uri.value": "http://unitsofmeasure.org"
+                },
+                "Coding.version": {
+                  "string.value": "1.9"
+                },
+                "Coding.code": {
+                  "code.value": "s"
+                },
+                "Coding.display": {
+                  "string.value": "second"
+                },
+                "Coding.userSelected": {
+                  "boolean.value": true
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "string.value": "second"
+            }
+          }
+        }
+      ],
+      "ElementDefinition.path": {
+        "string.value": "prothrombin"
+      },
+      "ElementDefinition.definition": {
+        "markdown.value": "The PT test evaluates the extrinsic and common pathways of the coagulation cascade."
+      },
+      "ElementDefinition.comments": {
+        "markdown.value": "Used to screen the integrity of the extrinsic and common pathways of coagulation and to monitor warfarin anticoagulation. "
+      },
+      "ElementDefinition.requirements": {
+        "markdown.value": "This test is orderable. A plasma specimen in a 3.2% sodium citrate blue top tube is required."
+      },
+      "ElementDefinition.alias": [
+        {
+          "string.value": "Protime, PT"
+        }
+      ],
+      "ElementDefinition.type": [
+        {
+          "ElementDefinition.type.code": {
+            "uri.value": "decimal"
+          }
+        }
+      ],
+      "ElementDefinition.exampleDecimal": {
+        "decimal.value": 10.0
+      },
+      "ElementDefinition.mapping": [
+        {
+          "ElementDefinition.mapping.identity": {
+            "id.value": "loinc"
+          },
+          "ElementDefinition.mapping.map": {
+            "string.value": "5964-2"
+          }
+        }
+      ]
+    }
+  ]
+}

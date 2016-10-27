@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+  <id value="consent-example-notOrg"/>
+
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. 
+	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. 
+	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather 
+	than &quot;withhold&quot; or &quot;withdraw&quot; consent for.
+    <p>
+	specific to use-case 3) Withhold or withdraw consent for disclosure to a specific provider organization  
+	</p><p>
+    Patient &quot;P. van de Heuvel&quot; ex-spouse is a Physician that is employed by Good Health Clinic.  P. decides
+   that he would like to withdraw/withhold consent to disclose any instance of his health information 
+   to Good Health Clinic.
+   </p>
+   </div>
+  </text>
+
+  <status value="active"/>
+    
+  <dateTime value="2015-11-18"/>
+   <!--  not bound by a timeframe - Consent.period  -->
+ 
+  <patient>
+    <reference value="Patient/f001"/>
+    <display value="P. van de Heuvel"/>
+  </patient>
+
+  <!--  I assume the example given is Canada Infoway wide???  AND I assume it is desired to state that in the Consent.authority element  -->
+  <organization>
+    <reference value="Organization/Infoway"/>
+	  <display value="Canada Infoway"/>
+  </organization>
+	  
+  <!--  the text terms of the consent in lawyer speak  -->
+  <sourceAttachment>
+	   <title value="The terms of the consent in lawyer speak."/>
+	   <!--  likely use url pointer to common text  -->
+	</sourceAttachment>
+
+  <!--  this is opt-out - e.g. everything approved unless otherwise stated  -->
+  <policy value="http://hl7.org/fhir/ConsentPolicy/opt-out"/>
+
+  <except>
+    <!--  no read or write access for this org  -->
+    <type value="deny"/>
+    <actor>
+      <role>
+        <coding>
+          <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+          <code value="PRCP"/> <!--  PRCP: recipient of the information  -->
+        </coding>
+      </role>
+      <reference>
+        <reference value="Organization/2.16.840.1.113883.19.5"/>
+        <display value="Good Health Clinic"/>
+      </reference>
+	  </actor>
+    <action>
+      <coding>
+        <system value="http://hl7.org/fhir/consentaction"/>
+        <code value="access"/>
+      </coding>
+    </action> 
+    <action>
+      <coding>
+        <system value="http://hl7.org/fhir/consentaction"/>
+        <code value="correct"/>
+      </coding>
+    </action> 
+  </except>  
+
+</Consent>

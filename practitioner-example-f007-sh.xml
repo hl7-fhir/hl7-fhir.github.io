@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><Practitioner xmlns="http://hl7.org/fhir">
+  <id value="f007"/>
+    <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f007</p><p><b>identifier</b>: 874635264 (OFFICIAL), 567IUI51C154 (USUAL)</p><p><b>name</b>: Simone Heps (OFFICIAL)</p><p><b>telecom</b>: ph: 020556936(WORK), S.M.Heps@bmc.nl(WORK), fax: 0205669283(WORK)</p><p><b>address</b>: Galapagosweg 91 Den Burg 9105 PZ NLD (WORK)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: Nov 7, 1971</p><h3>Roles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Code</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td><a>BMC</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code &#39;01.000&#39; = &#39;01.000&#39;, given as &#39;Arts&#39;})</span></td><td>specialization <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code &#39;01.015&#39; = &#39;01.015&#39;, given as &#39;Physician&#39;})</span></td></tr></table></div></text><identifier>
+        <use value="official"/>
+        <system value="urn:oid:2.16.528.1.1007.3.1"/>
+        <!--   Identificatiesysteem Zorgverlener UZI   -->
+        <value value="874635264"/>
+    </identifier>
+    <identifier>
+        <use value="usual"/>
+        <system value="urn:oid:2.16.840.1.113883.2.4.6.3"/>
+        <!--   BSN identification system   -->
+        <value value="567IUI51C154"/>
+    </identifier>
+    <name>
+        <use value="official"/>
+        <family value="Heps"/>
+        <given value="Simone"/>
+        <suffix value="MD"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="020556936"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="S.M.Heps@bmc.nl"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="fax"/>
+        <value value="0205669283"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <line value="Galapagosweg 91"/>
+        <city value="Den Burg"/>
+        <postalCode value="9105 PZ"/>
+        <country value="NLD"/> <!--   ISO 3166 Codes (Countries)   -->
+    </address>
+    
+    <gender value="female"/>
+    <birthDate value="1971-11-07"/>
+
+	<role>
+	<organization>
+        <!--   deze moet gekoppeld worden aan een RESOURCE ORGANIZATION   -->
+        <reference value="Organization/f001"/>
+        <display value="BMC"/>
+    </organization>
+    <code>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.111"/>
+            <!--   "AssignedRoleType" coding system   -->
+            <code value="01.000"/>
+            <display value="Arts"/>
+        </coding>
+        <text value="Care role"/>
+    </code>
+    <specialty>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.15.111"/>
+            <!--   "AssignedRoleType" coding system   -->
+            <code value="01.015"/>
+            <display value="Physician"/>
+        </coding>
+        <text value="specialization"/>
+    </specialty>
+	</role>
+</Practitioner>

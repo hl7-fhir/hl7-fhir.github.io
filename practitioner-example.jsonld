@@ -1,0 +1,187 @@
+{
+  "@context": "http://build.fhir.org/Practitioner.jsonld",
+  "@context": "http://hl7.org/fhir/Practitioner/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Dr Adam Careful is a Referring Practitioner for Acme Hospital from 1-Jan 2012 to 31-Mar\n        2012</p>\n    </div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://www.acme.org/practitioners"
+      },
+      "Identifier.value": {
+        "string.value": "23"
+      }
+    }
+  ],
+  "Practitioner.active": {
+    "boolean.value": true
+  },
+  "Practitioner.name": [
+    {
+      "HumanName.family": [
+        {
+          "string.value": "Careful"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Adam"
+        }
+      ],
+      "HumanName.prefix": [
+        {
+          "string.value": "Dr"
+        }
+      ]
+    }
+  ],
+  "Practitioner.address": [
+    {
+      "Address.use": {
+        "code.value": "home"
+      },
+      "Address.line": [
+        {
+          "string.value": "534 Erewhon St"
+        }
+      ],
+      "Address.city": {
+        "string.value": "PleasantVille"
+      },
+      "Address.state": {
+        "string.value": "Vic"
+      },
+      "Address.postalCode": {
+        "string.value": "3999"
+      }
+    }
+  ],
+  "Practitioner.role": [
+    {
+      "Practitioner.role.organization": {
+        "Reference.reference": {
+          "string.value": "Organization/f001"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Organization/f001"
+      },
+      "Practitioner.role.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/v2/0286"
+            },
+            "Coding.code": {
+              "code.value": "RP"
+            }
+          }
+        ]
+      },
+      "Practitioner.role.identifier": [
+        {
+          "Identifier.system": {
+            "uri.value": "http://example.org/role-identifier"
+          },
+          "Identifier.value": {
+            "string.value": "52"
+          }
+        }
+      ],
+      "Practitioner.role.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "email"
+          },
+          "ContactPoint.value": {
+            "string.value": "dr.adam.careful@example.org"
+          }
+        }
+      ],
+      "Practitioner.role.period": {
+        "Period.start": {
+          "dateTime.value": "2012-01-01"
+        },
+        "Period.end": {
+          "dateTime.value": "2012-03-31"
+        }
+      },
+      "Practitioner.role.location": [
+        {
+          "Reference.reference": {
+            "string.value": "Location/1"
+          },
+          "Reference.display": {
+            "string.value": "South Wing, second floor"
+          }
+        }
+      ],
+      "Practitioner.role.healthcareService": [
+        {
+          "Reference.reference": {
+            "string.value": "HealthcareService/example"
+          }
+        }
+      ],
+      "Practitioner.role.endpoint": [
+        {
+          "Reference.reference": {
+            "string.value": "Endpoint/example"
+          }
+        }
+      ]
+    },
+    {
+      "Practitioner.role.organization": {
+        "Reference.reference": {
+          "string.value": "Organization/2"
+        },
+        "Reference.display": {
+          "string.value": "Good Health Clinic"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Organization/2"
+      },
+      "Practitioner.role.period": {
+        "Period.start": {
+          "dateTime.value": "2012-01-01"
+        }
+      }
+    }
+  ],
+  "Practitioner.qualification": [
+    {
+      "Practitioner.qualification.identifier": [
+        {
+          "Identifier.system": {
+            "uri.value": "http://example.org/UniversityIdentifier"
+          },
+          "Identifier.value": {
+            "string.value": "12345"
+          }
+        }
+      ],
+      "Practitioner.qualification.code": {
+        "CodeableConcept.text": {
+          "string.value": "Bachelor of Science"
+        }
+      },
+      "Practitioner.qualification.period": {
+        "Period.start": {
+          "dateTime.value": "1995"
+        }
+      },
+      "Practitioner.qualification.issuer": {
+        "Reference.display": {
+          "string.value": "Example University"
+        }
+      }
+    }
+  ]
+}

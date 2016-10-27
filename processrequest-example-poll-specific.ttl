@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ProcessRequest/1111> a fhir:ProcessRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "1111"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Poll ProcessRequest</div>"
+  ];
+  fhir:ProcessRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://happyvalley.com/processrequest" ];
+     fhir:Identifier.value [ fhir:value "111" ]
+  ];
+  fhir:ProcessRequest.status [ fhir:value "active"];
+  fhir:ProcessRequest.action [ fhir:value "poll"];
+  fhir:ProcessRequest.created [ fhir:value "2014-08-16"^^xsd:date];
+  fhir:ProcessRequest.organization [
+     fhir:link <http://hl7.org/fhir/Organization/1>;
+     fhir:Reference.reference [ fhir:value "Organization/1" ]
+  ];
+  fhir:ProcessRequest.request [
+     fhir:link <http://benefitco.com/oralhealthclaim/12345>;
+     fhir:Reference.reference [ fhir:value "http://benefitco.com/oralhealthclaim/12345" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/1> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

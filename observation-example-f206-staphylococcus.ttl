@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Observation/f206> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f206"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f206</p><p><b>status</b>: final</p><p><b>code</b>: Blood culture <span>(Details : {http://acmelabs.org code '104177' = '104177', given as 'Blood culture'}; {LOINC code '600-7' = 'Bacteria identified in Blood by Culture', given as 'Bacteria identified in Blood by Culture'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>issued</b>: Mar 11, 2013 10:28:00 AM</p><p><b>performer</b>: <a>Luigi Maas</a></p><p><b>value</b>: Staphylococcus aureus <span>(Details : {SNOMED CT code '3092008' = 'Staphylococcus pyogenes citreus', given as 'Staphylococcus aureus'})</span></p><p><b>interpretation</b>: Positive <span>(Details : {http://hl7.org/fhir/v2/0078 code 'POS' = 'Positive)</span></p><p><b>method</b>: Blood culture for bacteria, including anaerobic screen <span>(Details : {SNOMED CT code '104177005' = 'Blood culture for bacteria, including anaerobic screen (procedure)', given as 'Blood culture for bacteria, including anaerobic screen'})</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://acmelabs.org" ];
+       fhir:Coding.code [ fhir:value "104177" ];
+       fhir:Coding.display [ fhir:value "Blood culture" ]
+     ], [
+       fhir:index 1;
+       fhir:concept loinc:600-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "600-7" ];
+       fhir:Coding.display [ fhir:value "Bacteria identified in Blood by Culture" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:Observation.issued [ fhir:value "2013-03-11T10:28:00+01:00"^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Practitioner/f202>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f202" ];
+     fhir:Reference.display [ fhir:value "Luigi Maas" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:3092008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "3092008" ];
+       fhir:Coding.display [ fhir:value "Staphylococcus aureus" ]
+     ]
+  ];
+  fhir:Observation.interpretation [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0078" ];
+       fhir:Coding.code [ fhir:value "POS" ]
+     ]
+  ];
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:104177005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "104177005" ];
+       fhir:Coding.display [ fhir:value "Blood culture for bacteria, including anaerobic screen" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f202> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

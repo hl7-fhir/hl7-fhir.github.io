@@ -1,0 +1,465 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Xds-example.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/xds-example.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><a href="documentreference.html">DocumentReference</a></li>        <li><b>Example Instance</b></li>        <!-- xds-example.ttl.html / resource-instance:DocumentReference / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Xds-example.ttl</h1>
+
+<p>
+<a href="xds-example.ttl">Raw Turtle</a>, 
+<a href="xds-example.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>XDS example</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/owl#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Bundle/xds&gt; a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;xds&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2013-07-01T13:11:33Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:Bundle.type [ fhir:value &quot;transaction&quot;];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d&quot; ];
+     fhir:Bundle.entry.resource &lt;urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d&gt;;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value &quot;POST&quot; ];
+       fhir:Bundle.entry.request.url [ fhir:value &quot;DocumentReference&quot; ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://localhost:9556/svc/fhir/Patient/a2&quot; ];
+     fhir:Bundle.entry.resource &lt;http://localhost:9556/svc/fhir/Patient/a2&gt;;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value &quot;POST&quot; ];
+       fhir:Bundle.entry.request.url [ fhir:value &quot;Patient&quot; ];
+       fhir:Bundle.entry.request.ifNoneExist [ fhir:value &quot;Patient?identifier=http://acme.org/xds/patients!89765a87b&quot; ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://localhost:9556/svc/fhir/Practitioner/a3&quot; ];
+     fhir:Bundle.entry.resource &lt;http://localhost:9556/svc/fhir/Practitioner/a3&gt;;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value &quot;POST&quot; ];
+       fhir:Bundle.entry.request.url [ fhir:value &quot;Practitioner&quot; ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://localhost:9556/svc/fhir/Practitioner/a4&quot; ];
+     fhir:Bundle.entry.resource &lt;http://localhost:9556/svc/fhir/Practitioner/a4&gt;;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value &quot;POST&quot; ];
+       fhir:Bundle.entry.request.url [ fhir:value &quot;Practitioner&quot; ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32&quot; ];
+     fhir:Bundle.entry.resource &lt;http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32&gt;;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value &quot;POST&quot; ];
+       fhir:Bundle.entry.request.url [ fhir:value &quot;Binary&quot; ]
+     ]
+  ] .
+
+&lt;urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d&gt; a fhir:DocumentReference;
+  fhir:index 0;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2013-07-01T13:11:33Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n\n            &lt;a href=\&quot;http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32\&quot;&gt;Document: urn:oid:129.6.58.92.88336&lt;/a&gt;undefined, created 24/12/2005\n          &lt;/div&gt;&quot;
+  ];
+  fhir:DocumentReference.masterIdentifier [
+     fhir:Identifier.system [ fhir:value &quot;urn:ietf:rfc:3986&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;urn:oid:129.6.58.92.88336&quot; ]
+  ];
+  fhir:DocumentReference.subject [
+     fhir:link &lt;http://hl7.org/fhir/Patient/a2&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Patient/a2&quot; ]
+  ];
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value &quot;http://ihe.net/connectathon/classCodes&quot; ];
+       fhir:Coding.code [ fhir:value &quot;History and Physical&quot; ];
+       fhir:Coding.display [ fhir:value &quot;History and Physical&quot; ]
+     ]
+  ];
+  fhir:DocumentReference.class [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:47039-3;
+       fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+       fhir:Coding.code [ fhir:value &quot;47039-3&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Inpatient Admission history and physical note&quot; ]
+     ]
+  ];
+  fhir:DocumentReference.author [
+     fhir:index 0;
+     fhir:link &lt;http://hl7.org/fhir/Practitioner/a3&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Practitioner/a3&quot; ]
+  ], [
+     fhir:index 1;
+     fhir:link &lt;http://hl7.org/fhir/Practitioner/a4&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Practitioner/a4&quot; ]
+  ];
+  fhir:DocumentReference.created [ fhir:value &quot;2005-12-24&quot;^^xsd:date];
+  fhir:DocumentReference.indexed [ fhir:value &quot;2013-07-01T23:11:33+10:00&quot;^^xsd:dateTime];
+  fhir:DocumentReference.status [ fhir:value &quot;current&quot;];
+  fhir:DocumentReference.description [ fhir:value &quot;Physical&quot;];
+  fhir:DocumentReference.securityLabel [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v3/Confidentiality&quot; ];
+       fhir:Coding.code [ fhir:value &quot;N&quot; ];
+       fhir:Coding.display [ fhir:value &quot;normal&quot; ]
+     ]
+  ];
+  fhir:DocumentReference.content [
+     fhir:index 0;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value &quot;text/plain&quot; ];
+       fhir:Attachment.language [ fhir:value &quot;en-us&quot; ];
+       fhir:Attachment.url [ fhir:value &quot;http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32&quot; ]
+     ];
+     fhir:DocumentReference.content.format [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value &quot;urn:oid:1.3.6.1.4.1.19376.1.2.3&quot; ];
+       fhir:Coding.code [ fhir:value &quot;urn:ihe:pcc:handp:2008&quot; ]
+     ]
+  ];
+  fhir:DocumentReference.context [
+     fhir:DocumentReference.context.period [
+       fhir:Period.start [ fhir:value &quot;2004-12-23T08:00:00+10:00&quot;^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value &quot;2004-12-23T08:01:00+10:00&quot;^^xsd:dateTime ]
+     ];
+     fhir:DocumentReference.context.practiceSetting [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://ihe.net/connectathon/practiceSettingCodes&quot; ];
+         fhir:Coding.code [ fhir:value &quot;General Medicine&quot; ];
+         fhir:Coding.display [ fhir:value &quot;General Medicine&quot; ]
+       ]
+     ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/a2&gt; a fhir:Patient .
+
+&lt;http://hl7.org/fhir/Practitioner/a3&gt; a fhir:Practitioner .
+
+&lt;http://hl7.org/fhir/Practitioner/a4&gt; a fhir:Practitioner .
+
+&lt;http://localhost:9556/svc/fhir/Patient/a2&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;a2&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2013-07-01T13:11:33Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Person DOE, John, M, dob: 27/05/1956&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value &quot;usual&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;MRN&quot; ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;usual&quot; ];
+     fhir:HumanName.text [ fhir:value &quot;DOE, John&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Doe&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;John&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.birthDate [ fhir:value &quot;1956-05-27&quot;^^xsd:date] .
+
+&lt;http://localhost:9556/svc/fhir/Practitioner/a3&gt; a fhir:Practitioner;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;a3&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2013-07-01T13:11:33Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Author Gerald Smitty @ Cleveland Clinic&lt;/div&gt;&quot;
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;usual&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Smitty&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Gerald&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.role [
+     fhir:index 0;
+     fhir:Practitioner.role.organization [
+       fhir:Reference.display [ fhir:value &quot;Cleveland Clinic&quot; ]
+     ];
+     fhir:Practitioner.role.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value &quot;Attending&quot; ]
+       ]
+     ];
+     fhir:Practitioner.role.specialty [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value &quot;Orthopedic&quot; ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Practitioner.role.organization [
+       fhir:Reference.display [ fhir:value &quot;Parma Community&quot; ]
+     ]
+  ] .
+
+&lt;http://localhost:9556/svc/fhir/Practitioner/a4&gt; a fhir:Practitioner;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;a4&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2013-07-01T13:11:33Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Author Person @ Cleveland Clinic&lt;/div&gt;&quot;
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;usual&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Dopplemeyer&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Sherry&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.role [
+     fhir:index 0;
+     fhir:Practitioner.role.organization [
+       fhir:Reference.display [ fhir:value &quot;Cleveland Clinic&quot; ]
+     ];
+     fhir:Practitioner.role.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value &quot;Primary Surgon&quot; ]
+       ]
+     ];
+     fhir:Practitioner.role.specialty [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value &quot;Orthopedic&quot; ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Practitioner.role.organization [
+       fhir:Reference.display [ fhir:value &quot;Berea Community&quot; ]
+     ]
+  ] .
+
+&lt;http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32&gt; a fhir:Binary;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;1e404af3-077f-4bee-b7a6-a9be97e1ce32&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2013-07-01T13:11:33Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:Binary.contentType [ fhir:value &quot;text/plain&quot;];
+  fhir:Binary.content [ fhir:value &quot;YXNkYXNkYXNkYXNkYXNk&quot;^^xsd:base64Binary] .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fxds-example.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fxds-example.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

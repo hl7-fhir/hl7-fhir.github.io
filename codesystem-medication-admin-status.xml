@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="medication-admin-status"/>
+  <meta>
+    <lastUpdated value="2016-10-27T16:23:35.748+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>MedicationAdministrationStatus</h2>
+      <div>
+        <p>A set of codes indicating the current status of a MedicationAdministration.</p>
+
+      </div>
+      <p>This code system http://hl7.org/fhir/medication-admin-status defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>in-progress
+            <a name="medication-admin-status-in-progress"> </a>
+          </td>
+          <td>In Progress</td>
+          <td>The administration has started but has not yet completed.</td>
+        </tr>
+        <tr>
+          <td>on-hold
+            <a name="medication-admin-status-on-hold"> </a>
+          </td>
+          <td>On Hold</td>
+          <td>Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;.</td>
+        </tr>
+        <tr>
+          <td>completed
+            <a name="medication-admin-status-completed"> </a>
+          </td>
+          <td>Completed</td>
+          <td>All actions that are implied by the administration have occurred.</td>
+        </tr>
+        <tr>
+          <td>entered-in-error
+            <a name="medication-admin-status-entered-in-error"> </a>
+          </td>
+          <td>Entered in Error</td>
+          <td>The administration was entered in error and therefore nullified.</td>
+        </tr>
+        <tr>
+          <td>stopped
+            <a name="medication-admin-status-stopped"> </a>
+          </td>
+          <td>Stopped</td>
+          <td>Actions implied by the administration have been permanently halted, before all of them occurred.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/medication-admin-status"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.1.186"/>
+  </identifier>
+  <version value="1.7.0"/>
+  <name value="MedicationAdministrationStatus"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-27T16:23:35+00:00"/>
+  <description value="A set of codes indicating the current status of a MedicationAdministration."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/medication-admin-status"/>
+  <content value="complete"/>
+  <concept>
+    <code value="in-progress"/>
+    <display value="In Progress"/>
+    <definition value="The administration has started but has not yet completed."/>
+  </concept>
+  <concept>
+    <code value="on-hold"/>
+    <display value="On Hold"/>
+    <definition value="Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;."/>
+  </concept>
+  <concept>
+    <code value="completed"/>
+    <display value="Completed"/>
+    <definition value="All actions that are implied by the administration have occurred."/>
+  </concept>
+  <concept>
+    <code value="entered-in-error"/>
+    <display value="Entered in Error"/>
+    <definition value="The administration was entered in error and therefore nullified."/>
+  </concept>
+  <concept>
+    <code value="stopped"/>
+    <display value="Stopped"/>
+    <definition value="Actions implied by the administration have been permanently halted, before all of them occurred."/>
+  </concept>
+</CodeSystem>

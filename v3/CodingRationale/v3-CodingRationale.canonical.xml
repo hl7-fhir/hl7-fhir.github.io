@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir"><id value="v3-CodingRationale"/><meta><lastUpdated value="2016-03-23T00:00:00.000+00:00"/><profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/></meta><text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Release Date: 2016-03-23</p>
+<table class="grid">
+ <tr><td><b>Level</b></td><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+ <tr><td>1</td><td>O<a name="O"> </a></td><td>originally produced code</td><td>
+                        
+                           Description: Originally produced code.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>OR<a name="OR"> </a></td><td>original and required</td><td>
+                        Originally produced code, required by the specification describing the use of the coded concept.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>P<a name="P"> </a></td><td>post-coded</td><td>
+                        
+                           Description: Post-coded from free text source&lt;/description&gt;<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>PR<a name="PR"> </a></td><td>post-coded and required</td><td>
+                        Post-coded from free text source, required by the specification describing the use of the coded concept.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>R<a name="R"> </a></td><td>required</td><td>
+                        
+                           Description: Required standard code for HL7.<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>HL7<a name="HL7"> </a></td><td>HL7 Specified or Mandated</td><td>
+                        HL7 Specified or Mandated<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>SH<a name="SH"> </a></td><td>Both HL7 mandated and the original code</td><td>
+                        Both HL7 mandated and the original code (precoordination)<br/>
+
+                     </td></tr>
+ <tr><td>1</td><td>SRC<a name="SRC"> </a></td><td>Source (or original) code</td><td>
+                        Source (or original) code<br/>
+
+                     </td></tr>
+</table>
+</div></text><url value="http://hl7.org/fhir/ValueSet/v3-CodingRationale"/><identifier><system value="urn:ietf:rfc:3986"/><value value="urn:oid:2.16.840.1.113883.1.11.19250"/></identifier><version value="2016-03-23"/><name value="v3 Code System CodingRationale"/><status value="active"/><experimental value="false"/><publisher value="HL7, Inc"/><contact><telecom><system value="other"/><value value="http://hl7.org"/></telecom></contact><date value="2016-03-23"/><description value=" Identifies how to interpret the instance of the code, codeSystem value in a set of translations.  Since HL7 (or a government body) may mandate that codes from certain code systems be sent in conformant messages, other synonyms that are sent in the translation set need to be distinguished among the originally captured source, the HL7 specified code, or some future role.  When this code is NULL, it indicates that the translation is an undefined type.  When valued, this property must contain one of the following values: SRC - Source (or original) code HL7 - HL7 Specified or Mandated SH - both HL7 mandated and the original code (precoordination) There may be additional values added to this value set as we work through the use of codes in messages and determine other Use Cases requiring special interpretation of the translations."/><compose><include><system value="http://hl7.org/fhir/v3/CodingRationale"/></include></compose></ValueSet>

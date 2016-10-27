@@ -1,0 +1,799 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Backboneelement - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/backboneelement.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><b>BackboneElement</b></li>          <!-- backboneelement.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+
+  <!-- no repeating primitives in datatypes? No id's on primitives in datatypes...No dar on primitives in datatypes. It would be worthwhile to document that and the reason for it. -->
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Element</a></li><li><a href="element-definitions.html">Detailed Descriptions</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">2.26.0<a name="2.26.0"> </a></span> BackboneElement <a href="backboneelement.html#2.26.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+The base definition for elements defined as part of a resource definition. <a href="datatypes.html">Data Type</a> elements do not use this type.
+For instance, <a href="patient.html#resource">Patient.contact</a> is an element that is defined as part of the patient resource, so it automatically 
+has the type <code>BackboneElement</code>.
+</p>
+
+<p>
+Note that the descendent types of <code>BackboneElement</code> are all declared implicitly as 
+part of the definitions of the resources. 
+</p>
+
+<a name="definition"/>
+<h2 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.26.0.1</span> 
+Content
+ <a href="backboneelement.html#definition" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<div id="tabs-BackboneElement">
+ <ul>
+  <li><a href="#tabs-BackboneElement-struc">Structure</a></li>
+  <li><a href="#tabs-BackboneElement-uml">UML</a></li>
+  <li><a href="#tabs-BackboneElement-xml">XML</a></li>
+  <li><a href="#tabs-BackboneElement-json">JSON</a></li>
+  <li><a href="#tabs-BackboneElement-ttl">Turtle</a></li>
+  <li><a href="#tabs-BackboneElement-diff">R2 Diff</a></li>
+  <li><a href="#tabs-BackboneElement-all">All</a></li>
+ </ul>
+ <div id="tabs-BackboneElement-struc">
+  <div id="tbl">
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="datatypes-definitions.html#BackboneElement" title="BackboneElement : Base definition for all elements that are defined inside a resource - but not those in a data type.">BackboneElement</a><a name="BackboneElement"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Base for elements defined inside a resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="." style="background-color: white; background-color: inherit" title="Extension" class="hierarchy"/> <a href="datatypes-definitions.html#BackboneElement.modifierExtension" title="BackboneElement.modifierExtension : May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.">modifierExtension</a><a name="BackboneElement.modifierExtension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="extensibility.html#Extension">Extension</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Extensions that cannot be ignored</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-BackboneElement-uml">
+  <div id="uml">
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4" version="1.1" height="70.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1)" rx="4" ry="4" x="160.0" width="158.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="50.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="318.4" style="stroke:dimgrey;stroke-width:1"/><text x="239.2" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#backboneelement">BackboneElement</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#BackboneElement.modifierExtension"><title>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions (this element modifies the meaning of other elements)</title>modifierExtension</a> : <a xlink:href="extensibility.html#Extension">Extension</a> [0..*]</text></g></g><line y1="23.628571428571426" x1="114.4" y2="24.12967032967033" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.6295986084102693 114.4 23.628571428571426)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,23.628571428571426 122.4,29.628571428571426 122.4,17.628571428571426 114.4,23.628571428571426"/></svg>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-BackboneElement-xml">
+  <div id="xml">
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+    <pre class="spec">
+&lt;<a href="backboneelement-definitions.html#BackboneElement" title="Base definition for all elements that are defined inside a resource - but not those in a data type." class="dict"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="backboneelement-definitions.html#BackboneElement.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>modifierExtension</b></span></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="extensibility.html#Extension">Extension</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Extensions that cannot be ignored</a></span><span style="color: Gray"> --&gt;</span>&lt;/modifierExtension&gt;
+&lt;/[name]&gt;
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-BackboneElement-json">
+  <div id="json">
+   <p><b>JSON Template</b></p>   <div id="json-inner">
+    <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  // from Element: <a href="extensibility.html">extension</a>
+  (<a href="extensibility.html#modifier">Modifier Extensions</a> - see <a href="json.html#modifier">JSON page</a>)
+}
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-BackboneElement-ttl">
+  <div id="json">
+   <p><b>Turtle Template</b></p>   <div id="ttl-inner">
+    <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="backboneelement-definitions.html#BackboneElement.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">BackboneElement.modifierExtension</span></a><a name="ttl-modifierExtension"> </a>[ <a href="extensibility.html#Extension">Extension</a> ], ... ; # 0..* <span style="color: navy">Extensions that cannot be ignored</span>
+]
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-BackboneElement-diff">
+  <div id="diff">
+   <p><b>Changes since DSTU2</b></p>   <div id="diff-inner">
+    <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">BackboneElement</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-BackboneElement-all">
+  <div id="tbla">
+   <a name="tbl-BackboneElement"> </a>
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="datatypes-definitions.html#BackboneElement" title="BackboneElement : Base definition for all elements that are defined inside a resource - but not those in a data type.">BackboneElement</a><a name="BackboneElement"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Base for elements defined inside a resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="." style="background-color: white; background-color: inherit" title="Extension" class="hierarchy"/> <a href="datatypes-definitions.html#BackboneElement.modifierExtension" title="BackboneElement.modifierExtension : May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.">modifierExtension</a><a name="BackboneElement.modifierExtension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="extensibility.html#Extension">Extension</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Extensions that cannot be ignored</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+
+  <div id="umla">
+   <a name="uml-BackboneElement"> </a>
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4" version="1.1" height="70.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1b" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="160.0" width="158.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="50.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="318.4" style="stroke:dimgrey;stroke-width:1"/><text x="239.2" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#backboneelement">BackboneElement</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#BackboneElement.modifierExtension"><title>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions (this element modifies the meaning of other elements)</title>modifierExtension</a> : <a xlink:href="extensibility.html#Extension">Extension</a> [0..*]</text></g></g><line y1="23.628571428571426" x1="114.4" y2="24.12967032967033" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.6295986084102693 114.4 23.628571428571426)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,23.628571428571426 122.4,29.628571428571426 122.4,17.628571428571426 114.4,23.628571428571426"/></svg>
+   </div>
+  </div>
+
+  <div id="xmla">
+   <a name="xml-BackboneElement"> </a>
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+     <pre class="spec">
+&lt;<a href="backboneelement-definitions.html#BackboneElement" title="Base definition for all elements that are defined inside a resource - but not those in a data type." class="dict"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="backboneelement-definitions.html#BackboneElement.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>modifierExtension</b></span></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="extensibility.html#Extension">Extension</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Extensions that cannot be ignored</a></span><span style="color: Gray"> --&gt;</span>&lt;/modifierExtension&gt;
+&lt;/[name]&gt;
+</pre>
+
+
+   </div>
+  </div>
+
+  <div id="jsona">
+   <a name="json-BackboneElement"> </a>
+   <p><b>JSON Template</b></p>
+   <div id="json-inner">
+     <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  // from Element: <a href="extensibility.html">extension</a>
+  (<a href="extensibility.html#modifier">Modifier Extensions</a> - see <a href="json.html#modifier">JSON page</a>)
+}
+</pre>
+
+
+   </div>
+  </div>
+  <div id="ttla">
+   <a name="ttl-BackboneElement"> </a>
+   <p><b>Turtle Template</b></p>
+   <div id="ttl-inner">
+     <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="backboneelement-definitions.html#BackboneElement.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">BackboneElement.modifierExtension</span></a><a name="ttl-modifierExtension"> </a>[ <a href="extensibility.html#Extension">Extension</a> ], ... ; # 0..* <span style="color: navy">Extensions that cannot be ignored</span>
+]
+</pre>
+
+
+   </div>
+  </div>
+  <div id="diffa">
+   <a name="diff-BackboneElement"> </a>
+   <p><b>Changes since DSTU2</b></p>
+   <div id="diff-inner">
+     <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">BackboneElement</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<a name="summary"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.26.0.2</span> Specializations <a href="backboneelement.html#summary" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+This table lists all the specializations of <code>BackboneElement</code> that are defined, and the 
+path at which they are defined. 
+</p>
+
+<table class="none">
+ <tr><td><b>Path</b></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="activitydefinition.html">ActivityDefinition</a></td></tr>
+ <tr><td><a href="activitydefinition-definitions.html#ActivityDefinition.dynamicValue">ActivityDefinition.dynamicValue</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="activitygroup.html">ActivityGroup</a></td></tr>
+ <tr><td><a href="activitygroup-definitions.html#ActivityGroup.action">ActivityGroup.action</a></td></tr>
+ <tr><td><a href="activitygroup-definitions.html#ActivityGroup.action.relatedAction">ActivityGroup.action.relatedAction</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="allergyintolerance.html">AllergyIntolerance</a></td></tr>
+ <tr><td><a href="allergyintolerance-definitions.html#AllergyIntolerance.reaction">AllergyIntolerance.reaction</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="appointment.html">Appointment</a></td></tr>
+ <tr><td><a href="appointment-definitions.html#Appointment.participant">Appointment.participant</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="auditevent.html">AuditEvent</a></td></tr>
+ <tr><td><a href="auditevent-definitions.html#AuditEvent.agent">AuditEvent.agent</a></td></tr>
+ <tr><td><a href="auditevent-definitions.html#AuditEvent.agent.network">AuditEvent.agent.network</a></td></tr>
+ <tr><td><a href="auditevent-definitions.html#AuditEvent.source">AuditEvent.source</a></td></tr>
+ <tr><td><a href="auditevent-definitions.html#AuditEvent.entity">AuditEvent.entity</a></td></tr>
+ <tr><td><a href="auditevent-definitions.html#AuditEvent.entity.detail">AuditEvent.entity.detail</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="bundle.html">Bundle</a></td></tr>
+ <tr><td><a href="bundle-definitions.html#Bundle.link">Bundle.link</a></td></tr>
+ <tr><td><a href="bundle-definitions.html#Bundle.entry">Bundle.entry</a></td></tr>
+ <tr><td><a href="bundle-definitions.html#Bundle.entry.search">Bundle.entry.search</a></td></tr>
+ <tr><td><a href="bundle-definitions.html#Bundle.entry.request">Bundle.entry.request</a></td></tr>
+ <tr><td><a href="bundle-definitions.html#Bundle.entry.response">Bundle.entry.response</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="capabilitystatement.html">CapabilityStatement</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.software">CapabilityStatement.software</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.implementation">CapabilityStatement.implementation</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest">CapabilityStatement.rest</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security">CapabilityStatement.rest.security</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.security.certificate">CapabilityStatement.rest.security.certificate</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource">CapabilityStatement.rest.resource</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.interaction">CapabilityStatement.rest.resource.interaction</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.resource.searchParam">CapabilityStatement.rest.resource.searchParam</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.interaction">CapabilityStatement.rest.interaction</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.rest.operation">CapabilityStatement.rest.operation</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.messaging">CapabilityStatement.messaging</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.endpoint">CapabilityStatement.messaging.endpoint</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.messaging.event">CapabilityStatement.messaging.event</a></td></tr>
+ <tr><td><a href="capabilitystatement-definitions.html#CapabilityStatement.document">CapabilityStatement.document</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="careplan.html">CarePlan</a></td></tr>
+ <tr><td><a href="careplan-definitions.html#CarePlan.relatedPlan">CarePlan.relatedPlan</a></td></tr>
+ <tr><td><a href="careplan-definitions.html#CarePlan.activity">CarePlan.activity</a></td></tr>
+ <tr><td><a href="careplan-definitions.html#CarePlan.activity.detail">CarePlan.activity.detail</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="careteam.html">CareTeam</a></td></tr>
+ <tr><td><a href="careteam-definitions.html#CareTeam.participant">CareTeam.participant</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="claim.html">Claim</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.related">Claim.related</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.payee">Claim.payee</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.information">Claim.information</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.diagnosis">Claim.diagnosis</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.procedure">Claim.procedure</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.coverage">Claim.coverage</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.accident">Claim.accident</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.item">Claim.item</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.item.careTeam">Claim.item.careTeam</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.item.detail">Claim.item.detail</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.item.detail.subDetail">Claim.item.detail.subDetail</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.item.prosthesis">Claim.item.prosthesis</a></td></tr>
+ <tr><td><a href="claim-definitions.html#Claim.missingTeeth">Claim.missingTeeth</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="claimresponse.html">ClaimResponse</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.item">ClaimResponse.item</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.item.adjudication">ClaimResponse.item.adjudication</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.item.detail">ClaimResponse.item.detail</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.item.detail.subDetail">ClaimResponse.item.detail.subDetail</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.addItem">ClaimResponse.addItem</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.addItem.detail">ClaimResponse.addItem.detail</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.error">ClaimResponse.error</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.payment">ClaimResponse.payment</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.note">ClaimResponse.note</a></td></tr>
+ <tr><td><a href="claimresponse-definitions.html#ClaimResponse.coverage">ClaimResponse.coverage</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="clinicalimpression.html">ClinicalImpression</a></td></tr>
+ <tr><td><a href="clinicalimpression-definitions.html#ClinicalImpression.investigation">ClinicalImpression.investigation</a></td></tr>
+ <tr><td><a href="clinicalimpression-definitions.html#ClinicalImpression.finding">ClinicalImpression.finding</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="codesystem.html">CodeSystem</a></td></tr>
+ <tr><td><a href="codesystem-definitions.html#CodeSystem.filter">CodeSystem.filter</a></td></tr>
+ <tr><td><a href="codesystem-definitions.html#CodeSystem.property">CodeSystem.property</a></td></tr>
+ <tr><td><a href="codesystem-definitions.html#CodeSystem.concept">CodeSystem.concept</a></td></tr>
+ <tr><td><a href="codesystem-definitions.html#CodeSystem.concept.designation">CodeSystem.concept.designation</a></td></tr>
+ <tr><td><a href="codesystem-definitions.html#CodeSystem.concept.property">CodeSystem.concept.property</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="communication.html">Communication</a></td></tr>
+ <tr><td><a href="communication-definitions.html#Communication.payload">Communication.payload</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="communicationrequest.html">CommunicationRequest</a></td></tr>
+ <tr><td><a href="communicationrequest-definitions.html#CommunicationRequest.payload">CommunicationRequest.payload</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="compartmentdefinition.html">CompartmentDefinition</a></td></tr>
+ <tr><td><a href="compartmentdefinition-definitions.html#CompartmentDefinition.resource">CompartmentDefinition.resource</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="composition.html">Composition</a></td></tr>
+ <tr><td><a href="composition-definitions.html#Composition.attester">Composition.attester</a></td></tr>
+ <tr><td><a href="composition-definitions.html#Composition.event">Composition.event</a></td></tr>
+ <tr><td><a href="composition-definitions.html#Composition.section">Composition.section</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="conceptmap.html">ConceptMap</a></td></tr>
+ <tr><td><a href="conceptmap-definitions.html#ConceptMap.group">ConceptMap.group</a></td></tr>
+ <tr><td><a href="conceptmap-definitions.html#ConceptMap.group.element">ConceptMap.group.element</a></td></tr>
+ <tr><td><a href="conceptmap-definitions.html#ConceptMap.group.element.target">ConceptMap.group.element.target</a></td></tr>
+ <tr><td><a href="conceptmap-definitions.html#ConceptMap.group.element.target.dependsOn">ConceptMap.group.element.target.dependsOn</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="condition.html">Condition</a></td></tr>
+ <tr><td><a href="condition-definitions.html#Condition.stage">Condition.stage</a></td></tr>
+ <tr><td><a href="condition-definitions.html#Condition.evidence">Condition.evidence</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="consent.html">Consent</a></td></tr>
+ <tr><td><a href="consent-definitions.html#Consent.except">Consent.except</a></td></tr>
+ <tr><td><a href="consent-definitions.html#Consent.except.actor">Consent.except.actor</a></td></tr>
+ <tr><td><a href="consent-definitions.html#Consent.except.data">Consent.except.data</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="contract.html">Contract</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.agent">Contract.agent</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.signer">Contract.signer</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.valuedItem">Contract.valuedItem</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.term">Contract.term</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.term.agent">Contract.term.agent</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.term.valuedItem">Contract.term.valuedItem</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.friendly">Contract.friendly</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.legal">Contract.legal</a></td></tr>
+ <tr><td><a href="contract-definitions.html#Contract.rule">Contract.rule</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="dataelement.html">DataElement</a></td></tr>
+ <tr><td><a href="dataelement-definitions.html#DataElement.mapping">DataElement.mapping</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="detectedissue.html">DetectedIssue</a></td></tr>
+ <tr><td><a href="detectedissue-definitions.html#DetectedIssue.mitigation">DetectedIssue.mitigation</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="devicecomponent.html">DeviceComponent</a></td></tr>
+ <tr><td><a href="devicecomponent-definitions.html#DeviceComponent.productionSpecification">DeviceComponent.productionSpecification</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="devicemetric.html">DeviceMetric</a></td></tr>
+ <tr><td><a href="devicemetric-definitions.html#DeviceMetric.calibration">DeviceMetric.calibration</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="diagnosticreport.html">DiagnosticReport</a></td></tr>
+ <tr><td><a href="diagnosticreport-definitions.html#DiagnosticReport.image">DiagnosticReport.image</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="documentmanifest.html">DocumentManifest</a></td></tr>
+ <tr><td><a href="documentmanifest-definitions.html#DocumentManifest.content">DocumentManifest.content</a></td></tr>
+ <tr><td><a href="documentmanifest-definitions.html#DocumentManifest.related">DocumentManifest.related</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="documentreference.html">DocumentReference</a></td></tr>
+ <tr><td><a href="documentreference-definitions.html#DocumentReference.relatesTo">DocumentReference.relatesTo</a></td></tr>
+ <tr><td><a href="documentreference-definitions.html#DocumentReference.content">DocumentReference.content</a></td></tr>
+ <tr><td><a href="documentreference-definitions.html#DocumentReference.context">DocumentReference.context</a></td></tr>
+ <tr><td><a href="documentreference-definitions.html#DocumentReference.context.related">DocumentReference.context.related</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="eligibilityresponse.html">EligibilityResponse</a></td></tr>
+ <tr><td><a href="eligibilityresponse-definitions.html#EligibilityResponse.benefitBalance">EligibilityResponse.benefitBalance</a></td></tr>
+ <tr><td><a href="eligibilityresponse-definitions.html#EligibilityResponse.benefitBalance.financial">EligibilityResponse.benefitBalance.financial</a></td></tr>
+ <tr><td><a href="eligibilityresponse-definitions.html#EligibilityResponse.error">EligibilityResponse.error</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="encounter.html">Encounter</a></td></tr>
+ <tr><td><a href="encounter-definitions.html#Encounter.statusHistory">Encounter.statusHistory</a></td></tr>
+ <tr><td><a href="encounter-definitions.html#Encounter.participant">Encounter.participant</a></td></tr>
+ <tr><td><a href="encounter-definitions.html#Encounter.hospitalization">Encounter.hospitalization</a></td></tr>
+ <tr><td><a href="encounter-definitions.html#Encounter.location">Encounter.location</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="episodeofcare.html">EpisodeOfCare</a></td></tr>
+ <tr><td><a href="episodeofcare-definitions.html#EpisodeOfCare.statusHistory">EpisodeOfCare.statusHistory</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="expansionprofile.html">ExpansionProfile</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.fixedVersion">ExpansionProfile.fixedVersion</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.excludedSystem">ExpansionProfile.excludedSystem</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.designation">ExpansionProfile.designation</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.designation.include">ExpansionProfile.designation.include</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.designation.include.designation">ExpansionProfile.designation.include.designation</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.designation.exclude">ExpansionProfile.designation.exclude</a></td></tr>
+ <tr><td><a href="expansionprofile-definitions.html#ExpansionProfile.designation.exclude.designation">ExpansionProfile.designation.exclude.designation</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="explanationofbenefit.html">ExplanationOfBenefit</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.related">ExplanationOfBenefit.related</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.payee">ExplanationOfBenefit.payee</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.information">ExplanationOfBenefit.information</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.diagnosis">ExplanationOfBenefit.diagnosis</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.procedure">ExplanationOfBenefit.procedure</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.coverage">ExplanationOfBenefit.coverage</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.accident">ExplanationOfBenefit.accident</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.item">ExplanationOfBenefit.item</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.item.careTeam">ExplanationOfBenefit.item.careTeam</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.item.adjudication">ExplanationOfBenefit.item.adjudication</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.item.detail">ExplanationOfBenefit.item.detail</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.item.detail.subDetail">ExplanationOfBenefit.item.detail.subDetail</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.item.prosthesis">ExplanationOfBenefit.item.prosthesis</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.addItem">ExplanationOfBenefit.addItem</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.addItem.detail">ExplanationOfBenefit.addItem.detail</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.missingTeeth">ExplanationOfBenefit.missingTeeth</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.payment">ExplanationOfBenefit.payment</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.note">ExplanationOfBenefit.note</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.benefitBalance">ExplanationOfBenefit.benefitBalance</a></td></tr>
+ <tr><td><a href="explanationofbenefit-definitions.html#ExplanationOfBenefit.benefitBalance.financial">ExplanationOfBenefit.benefitBalance.financial</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="familymemberhistory.html">FamilyMemberHistory</a></td></tr>
+ <tr><td><a href="familymemberhistory-definitions.html#FamilyMemberHistory.condition">FamilyMemberHistory.condition</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="goal.html">Goal</a></td></tr>
+ <tr><td><a href="goal-definitions.html#Goal.outcome">Goal.outcome</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="group.html">Group</a></td></tr>
+ <tr><td><a href="group-definitions.html#Group.characteristic">Group.characteristic</a></td></tr>
+ <tr><td><a href="group-definitions.html#Group.member">Group.member</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="guidanceresponse.html">GuidanceResponse</a></td></tr>
+ <tr><td><a href="guidanceresponse-definitions.html#GuidanceResponse.action">GuidanceResponse.action</a></td></tr>
+ <tr><td><a href="guidanceresponse-definitions.html#GuidanceResponse.action.relatedAction">GuidanceResponse.action.relatedAction</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="healthcareservice.html">HealthcareService</a></td></tr>
+ <tr><td><a href="healthcareservice-definitions.html#HealthcareService.availableTime">HealthcareService.availableTime</a></td></tr>
+ <tr><td><a href="healthcareservice-definitions.html#HealthcareService.notAvailable">HealthcareService.notAvailable</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="imagingmanifest.html">ImagingManifest</a></td></tr>
+ <tr><td><a href="imagingmanifest-definitions.html#ImagingManifest.study">ImagingManifest.study</a></td></tr>
+ <tr><td><a href="imagingmanifest-definitions.html#ImagingManifest.study.baseLocation">ImagingManifest.study.baseLocation</a></td></tr>
+ <tr><td><a href="imagingmanifest-definitions.html#ImagingManifest.study.series">ImagingManifest.study.series</a></td></tr>
+ <tr><td><a href="imagingmanifest-definitions.html#ImagingManifest.study.series.baseLocation">ImagingManifest.study.series.baseLocation</a></td></tr>
+ <tr><td><a href="imagingmanifest-definitions.html#ImagingManifest.study.series.instance">ImagingManifest.study.series.instance</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="imagingstudy.html">ImagingStudy</a></td></tr>
+ <tr><td><a href="imagingstudy-definitions.html#ImagingStudy.baseLocation">ImagingStudy.baseLocation</a></td></tr>
+ <tr><td><a href="imagingstudy-definitions.html#ImagingStudy.series">ImagingStudy.series</a></td></tr>
+ <tr><td><a href="imagingstudy-definitions.html#ImagingStudy.series.baseLocation">ImagingStudy.series.baseLocation</a></td></tr>
+ <tr><td><a href="imagingstudy-definitions.html#ImagingStudy.series.instance">ImagingStudy.series.instance</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="immunization.html">Immunization</a></td></tr>
+ <tr><td><a href="immunization-definitions.html#Immunization.explanation">Immunization.explanation</a></td></tr>
+ <tr><td><a href="immunization-definitions.html#Immunization.reaction">Immunization.reaction</a></td></tr>
+ <tr><td><a href="immunization-definitions.html#Immunization.vaccinationProtocol">Immunization.vaccinationProtocol</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="immunizationrecommendation.html">ImmunizationRecommendation</a></td></tr>
+ <tr><td><a href="immunizationrecommendation-definitions.html#ImmunizationRecommendation.recommendation">ImmunizationRecommendation.recommendation</a></td></tr>
+ <tr><td><a href="immunizationrecommendation-definitions.html#ImmunizationRecommendation.recommendation.dateCriterion">ImmunizationRecommendation.recommendation.dateCriterion</a></td></tr>
+ <tr><td><a href="immunizationrecommendation-definitions.html#ImmunizationRecommendation.recommendation.protocol">ImmunizationRecommendation.recommendation.protocol</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="implementationguide.html">ImplementationGuide</a></td></tr>
+ <tr><td><a href="implementationguide-definitions.html#ImplementationGuide.dependency">ImplementationGuide.dependency</a></td></tr>
+ <tr><td><a href="implementationguide-definitions.html#ImplementationGuide.package">ImplementationGuide.package</a></td></tr>
+ <tr><td><a href="implementationguide-definitions.html#ImplementationGuide.package.resource">ImplementationGuide.package.resource</a></td></tr>
+ <tr><td><a href="implementationguide-definitions.html#ImplementationGuide.global">ImplementationGuide.global</a></td></tr>
+ <tr><td><a href="implementationguide-definitions.html#ImplementationGuide.page">ImplementationGuide.page</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="linkage.html">Linkage</a></td></tr>
+ <tr><td><a href="linkage-definitions.html#Linkage.item">Linkage.item</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="list.html">List</a></td></tr>
+ <tr><td><a href="list-definitions.html#List.entry">List.entry</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="location.html">Location</a></td></tr>
+ <tr><td><a href="location-definitions.html#Location.position">Location.position</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="measure.html">Measure</a></td></tr>
+ <tr><td><a href="measure-definitions.html#Measure.group">Measure.group</a></td></tr>
+ <tr><td><a href="measure-definitions.html#Measure.group.population">Measure.group.population</a></td></tr>
+ <tr><td><a href="measure-definitions.html#Measure.group.stratifier">Measure.group.stratifier</a></td></tr>
+ <tr><td><a href="measure-definitions.html#Measure.supplementalData">Measure.supplementalData</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="measurereport.html">MeasureReport</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group">MeasureReport.group</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group.population">MeasureReport.group.population</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group.stratifier">MeasureReport.group.stratifier</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group.stratifier.group">MeasureReport.group.stratifier.group</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group.stratifier.group.population">MeasureReport.group.stratifier.group.population</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group.supplementalData">MeasureReport.group.supplementalData</a></td></tr>
+ <tr><td><a href="measurereport-definitions.html#MeasureReport.group.supplementalData.group">MeasureReport.group.supplementalData.group</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="medication.html">Medication</a></td></tr>
+ <tr><td><a href="medication-definitions.html#Medication.product">Medication.product</a></td></tr>
+ <tr><td><a href="medication-definitions.html#Medication.product.ingredient">Medication.product.ingredient</a></td></tr>
+ <tr><td><a href="medication-definitions.html#Medication.product.batch">Medication.product.batch</a></td></tr>
+ <tr><td><a href="medication-definitions.html#Medication.package">Medication.package</a></td></tr>
+ <tr><td><a href="medication-definitions.html#Medication.package.content">Medication.package.content</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="medicationadministration.html">MedicationAdministration</a></td></tr>
+ <tr><td><a href="medicationadministration-definitions.html#MedicationAdministration.dosage">MedicationAdministration.dosage</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="medicationdispense.html">MedicationDispense</a></td></tr>
+ <tr><td><a href="medicationdispense-definitions.html#MedicationDispense.substitution">MedicationDispense.substitution</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="medicationrequest.html">MedicationRequest</a></td></tr>
+ <tr><td><a href="medicationrequest-definitions.html#MedicationRequest.dispenseRequest">MedicationRequest.dispenseRequest</a></td></tr>
+ <tr><td><a href="medicationrequest-definitions.html#MedicationRequest.substitution">MedicationRequest.substitution</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="messageheader.html">MessageHeader</a></td></tr>
+ <tr><td><a href="messageheader-definitions.html#MessageHeader.response">MessageHeader.response</a></td></tr>
+ <tr><td><a href="messageheader-definitions.html#MessageHeader.source">MessageHeader.source</a></td></tr>
+ <tr><td><a href="messageheader-definitions.html#MessageHeader.destination">MessageHeader.destination</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="namingsystem.html">NamingSystem</a></td></tr>
+ <tr><td><a href="namingsystem-definitions.html#NamingSystem.uniqueId">NamingSystem.uniqueId</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="nutritionrequest.html">NutritionRequest</a></td></tr>
+ <tr><td><a href="nutritionrequest-definitions.html#NutritionRequest.oralDiet">NutritionRequest.oralDiet</a></td></tr>
+ <tr><td><a href="nutritionrequest-definitions.html#NutritionRequest.oralDiet.nutrient">NutritionRequest.oralDiet.nutrient</a></td></tr>
+ <tr><td><a href="nutritionrequest-definitions.html#NutritionRequest.oralDiet.texture">NutritionRequest.oralDiet.texture</a></td></tr>
+ <tr><td><a href="nutritionrequest-definitions.html#NutritionRequest.supplement">NutritionRequest.supplement</a></td></tr>
+ <tr><td><a href="nutritionrequest-definitions.html#NutritionRequest.enteralFormula">NutritionRequest.enteralFormula</a></td></tr>
+ <tr><td><a href="nutritionrequest-definitions.html#NutritionRequest.enteralFormula.administration">NutritionRequest.enteralFormula.administration</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="observation.html">Observation</a></td></tr>
+ <tr><td><a href="observation-definitions.html#Observation.referenceRange">Observation.referenceRange</a></td></tr>
+ <tr><td><a href="observation-definitions.html#Observation.related">Observation.related</a></td></tr>
+ <tr><td><a href="observation-definitions.html#Observation.component">Observation.component</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="operationdefinition.html">OperationDefinition</a></td></tr>
+ <tr><td><a href="operationdefinition-definitions.html#OperationDefinition.parameter">OperationDefinition.parameter</a></td></tr>
+ <tr><td><a href="operationdefinition-definitions.html#OperationDefinition.parameter.binding">OperationDefinition.parameter.binding</a></td></tr>
+ <tr><td><a href="operationdefinition-definitions.html#OperationDefinition.overload">OperationDefinition.overload</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="operationoutcome.html">OperationOutcome</a></td></tr>
+ <tr><td><a href="operationoutcome-definitions.html#OperationOutcome.issue">OperationOutcome.issue</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="organization.html">Organization</a></td></tr>
+ <tr><td><a href="organization-definitions.html#Organization.contact">Organization.contact</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="patient.html">Patient</a></td></tr>
+ <tr><td><a href="patient-definitions.html#Patient.contact">Patient.contact</a></td></tr>
+ <tr><td><a href="patient-definitions.html#Patient.animal">Patient.animal</a></td></tr>
+ <tr><td><a href="patient-definitions.html#Patient.communication">Patient.communication</a></td></tr>
+ <tr><td><a href="patient-definitions.html#Patient.link">Patient.link</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="paymentreconciliation.html">PaymentReconciliation</a></td></tr>
+ <tr><td><a href="paymentreconciliation-definitions.html#PaymentReconciliation.detail">PaymentReconciliation.detail</a></td></tr>
+ <tr><td><a href="paymentreconciliation-definitions.html#PaymentReconciliation.note">PaymentReconciliation.note</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="person.html">Person</a></td></tr>
+ <tr><td><a href="person-definitions.html#Person.link">Person.link</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="plandefinition.html">PlanDefinition</a></td></tr>
+ <tr><td><a href="plandefinition-definitions.html#PlanDefinition.actionDefinition">PlanDefinition.actionDefinition</a></td></tr>
+ <tr><td><a href="plandefinition-definitions.html#PlanDefinition.actionDefinition.condition">PlanDefinition.actionDefinition.condition</a></td></tr>
+ <tr><td><a href="plandefinition-definitions.html#PlanDefinition.actionDefinition.relatedAction">PlanDefinition.actionDefinition.relatedAction</a></td></tr>
+ <tr><td><a href="plandefinition-definitions.html#PlanDefinition.actionDefinition.dynamicValue">PlanDefinition.actionDefinition.dynamicValue</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="practitioner.html">Practitioner</a></td></tr>
+ <tr><td><a href="practitioner-definitions.html#Practitioner.role">Practitioner.role</a></td></tr>
+ <tr><td><a href="practitioner-definitions.html#Practitioner.qualification">Practitioner.qualification</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="practitionerrole.html">PractitionerRole</a></td></tr>
+ <tr><td><a href="practitionerrole-definitions.html#PractitionerRole.availableTime">PractitionerRole.availableTime</a></td></tr>
+ <tr><td><a href="practitionerrole-definitions.html#PractitionerRole.notAvailable">PractitionerRole.notAvailable</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="procedure.html">Procedure</a></td></tr>
+ <tr><td><a href="procedure-definitions.html#Procedure.performer">Procedure.performer</a></td></tr>
+ <tr><td><a href="procedure-definitions.html#Procedure.focalDevice">Procedure.focalDevice</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="processrequest.html">ProcessRequest</a></td></tr>
+ <tr><td><a href="processrequest-definitions.html#ProcessRequest.item">ProcessRequest.item</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="processresponse.html">ProcessResponse</a></td></tr>
+ <tr><td><a href="processresponse-definitions.html#ProcessResponse.notes">ProcessResponse.notes</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="provenance.html">Provenance</a></td></tr>
+ <tr><td><a href="provenance-definitions.html#Provenance.agent">Provenance.agent</a></td></tr>
+ <tr><td><a href="provenance-definitions.html#Provenance.agent.relatedAgent">Provenance.agent.relatedAgent</a></td></tr>
+ <tr><td><a href="provenance-definitions.html#Provenance.entity">Provenance.entity</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="questionnaire.html">Questionnaire</a></td></tr>
+ <tr><td><a href="questionnaire-definitions.html#Questionnaire.item">Questionnaire.item</a></td></tr>
+ <tr><td><a href="questionnaire-definitions.html#Questionnaire.item.enableWhen">Questionnaire.item.enableWhen</a></td></tr>
+ <tr><td><a href="questionnaire-definitions.html#Questionnaire.item.option">Questionnaire.item.option</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="questionnaireresponse.html">QuestionnaireResponse</a></td></tr>
+ <tr><td><a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item">QuestionnaireResponse.item</a></td></tr>
+ <tr><td><a href="questionnaireresponse-definitions.html#QuestionnaireResponse.item.answer">QuestionnaireResponse.item.answer</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="riskassessment.html">RiskAssessment</a></td></tr>
+ <tr><td><a href="riskassessment-definitions.html#RiskAssessment.prediction">RiskAssessment.prediction</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="sequence.html">Sequence</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.referenceSeq">Sequence.referenceSeq</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.variant">Sequence.variant</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.quality">Sequence.quality</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.repository">Sequence.repository</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.structureVariant">Sequence.structureVariant</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.structureVariant.outer">Sequence.structureVariant.outer</a></td></tr>
+ <tr><td><a href="sequence-definitions.html#Sequence.structureVariant.inner">Sequence.structureVariant.inner</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="specimen.html">Specimen</a></td></tr>
+ <tr><td><a href="specimen-definitions.html#Specimen.collection">Specimen.collection</a></td></tr>
+ <tr><td><a href="specimen-definitions.html#Specimen.treatment">Specimen.treatment</a></td></tr>
+ <tr><td><a href="specimen-definitions.html#Specimen.container">Specimen.container</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="structuredefinition.html">StructureDefinition</a></td></tr>
+ <tr><td><a href="structuredefinition-definitions.html#StructureDefinition.mapping">StructureDefinition.mapping</a></td></tr>
+ <tr><td><a href="structuredefinition-definitions.html#StructureDefinition.snapshot">StructureDefinition.snapshot</a></td></tr>
+ <tr><td><a href="structuredefinition-definitions.html#StructureDefinition.differential">StructureDefinition.differential</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="structuremap.html">StructureMap</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.structure">StructureMap.structure</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group">StructureMap.group</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group.input">StructureMap.group.input</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group.rule">StructureMap.group.rule</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group.rule.source">StructureMap.group.rule.source</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group.rule.target">StructureMap.group.rule.target</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group.rule.target.parameter">StructureMap.group.rule.target.parameter</a></td></tr>
+ <tr><td><a href="structuremap-definitions.html#StructureMap.group.rule.dependent">StructureMap.group.rule.dependent</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="subscription.html">Subscription</a></td></tr>
+ <tr><td><a href="subscription-definitions.html#Subscription.channel">Subscription.channel</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="substance.html">Substance</a></td></tr>
+ <tr><td><a href="substance-definitions.html#Substance.instance">Substance.instance</a></td></tr>
+ <tr><td><a href="substance-definitions.html#Substance.ingredient">Substance.ingredient</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="supplyrequest.html">SupplyRequest</a></td></tr>
+ <tr><td><a href="supplyrequest-definitions.html#SupplyRequest.when">SupplyRequest.when</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="task.html">Task</a></td></tr>
+ <tr><td><a href="task-definitions.html#Task.fulfillment">Task.fulfillment</a></td></tr>
+ <tr><td><a href="task-definitions.html#Task.input">Task.input</a></td></tr>
+ <tr><td><a href="task-definitions.html#Task.output">Task.output</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="testreport.html">TestReport</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.participant">TestReport.participant</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.setup">TestReport.setup</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.setup.action">TestReport.setup.action</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.setup.action.operation">TestReport.setup.action.operation</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.setup.action.assert">TestReport.setup.action.assert</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.test">TestReport.test</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.test.action">TestReport.test.action</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.teardown">TestReport.teardown</a></td></tr>
+ <tr><td><a href="testreport-definitions.html#TestReport.teardown.action">TestReport.teardown.action</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="testscript.html">TestScript</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.origin">TestScript.origin</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.destination">TestScript.destination</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.metadata">TestScript.metadata</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.metadata.link">TestScript.metadata.link</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.metadata.capability">TestScript.metadata.capability</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.fixture">TestScript.fixture</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.variable">TestScript.variable</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.rule">TestScript.rule</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.rule.param">TestScript.rule.param</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.ruleset">TestScript.ruleset</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.ruleset.rule">TestScript.ruleset.rule</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.ruleset.rule.param">TestScript.ruleset.rule.param</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup">TestScript.setup</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action">TestScript.setup.action</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.operation">TestScript.setup.action.operation</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.operation.requestHeader">TestScript.setup.action.operation.requestHeader</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.assert">TestScript.setup.action.assert</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.assert.rule">TestScript.setup.action.assert.rule</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.assert.rule.param">TestScript.setup.action.assert.rule.param</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.assert.ruleset">TestScript.setup.action.assert.ruleset</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.assert.ruleset.rule">TestScript.setup.action.assert.ruleset.rule</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.setup.action.assert.ruleset.rule.param">TestScript.setup.action.assert.ruleset.rule.param</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.test">TestScript.test</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.test.action">TestScript.test.action</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.teardown">TestScript.teardown</a></td></tr>
+ <tr><td><a href="testscript-definitions.html#TestScript.teardown.action">TestScript.teardown.action</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="valueset.html">ValueSet</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.compose">ValueSet.compose</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.compose.include">ValueSet.compose.include</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.compose.include.concept">ValueSet.compose.include.concept</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.compose.include.concept.designation">ValueSet.compose.include.concept.designation</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.compose.include.filter">ValueSet.compose.include.filter</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.expansion">ValueSet.expansion</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.expansion.parameter">ValueSet.expansion.parameter</a></td></tr>
+ <tr><td><a href="valueset-definitions.html#ValueSet.expansion.contains">ValueSet.expansion.contains</a></td></tr>
+ <tr style="background-color: #eeeeee"><td colspan="2"><a href="visionprescription.html">VisionPrescription</a></td></tr>
+ <tr><td><a href="visionprescription-definitions.html#VisionPrescription.dispense">VisionPrescription.dispense</a></td></tr>
+</table>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fbackboneelement.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fbackboneelement.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){ 
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+
+$( '#tabs-BackboneElement' ).tabs({ active: currentTabIndex, activate: function( event, ui ) { store(ui.newTab.index()); } });
+     
+     
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){ 
+  }
+  $( '#tabs-BackboneElement' ).tabs('option', 'active', currentTab);
+}     
+</script>
+  
+</body>
+</html>

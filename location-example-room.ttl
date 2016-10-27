@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Location/2> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Burgers UMC, South Wing, second floor, Neuro Radiology Operation Room 1</div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "B1-S.F2.1.00" ]
+  ];
+  fhir:Location.status [ fhir:value "suspended"];
+  fhir:Location.name [ fhir:value "South Wing Neuro OR 1"];
+  fhir:Location.alias [
+     fhir:value "South Wing OR 5";
+     fhir:index 0
+  ], [
+     fhir:value "Main Wing OR 2";
+     fhir:index 1
+  ];
+  fhir:Location.description [ fhir:value "Old South Wing, Neuro Radiology Operation Room 1 on second floor"];
+  fhir:Location.mode [ fhir:value "instance"];
+  fhir:Location.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/RoleCode" ];
+       fhir:Coding.code [ fhir:value "RNEU" ];
+       fhir:Coding.display [ fhir:value "Neuroradiology unit" ]
+     ]
+  ];
+  fhir:Location.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2329" ]
+  ];
+  fhir:Location.physicalType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/location-physical-type" ];
+       fhir:Coding.code [ fhir:value "ro" ];
+       fhir:Coding.display [ fhir:value "Room" ]
+     ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/f001>;
+     fhir:Reference.reference [ fhir:value "Organization/f001" ]
+  ];
+  fhir:Location.partOf [
+     fhir:link <http://hl7.org/fhir/Location/1>;
+     fhir:Reference.reference [ fhir:value "Location/1" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+<http://hl7.org/fhir/Location/1> a fhir:Location .
+
+# -------------------------------------------------------------------------------------
+

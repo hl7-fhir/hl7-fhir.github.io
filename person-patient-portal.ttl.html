@@ -1,0 +1,277 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Person-patient-portal.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/person-patient-portal.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="person.html">Person</a></li>        <li><b>Example Instance</b></li>        <!-- person-patient-portal.ttl.html / resource-instance:Person / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Person-patient-portal.ttl</h1>
+
+<p>
+<a href="person-patient-portal.ttl">Raw Turtle</a>, 
+<a href="person-patient-portal.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Patient Portal Example</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Person/pp&gt; a fhir:Person;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;pp&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n      &lt;table&gt;\n        &lt;tbody&gt;\n          &lt;tr&gt;\n            &lt;td&gt;Name&lt;/td&gt;\n            &lt;td&gt;Eve Marie &lt;b&gt;Everywoman&lt;/b&gt;&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;Address&lt;/td&gt;\n            &lt;td&gt;2086 College St, Sandusky, OH, 44870&lt;/td&gt;\n          &lt;/tr&gt;\n        &lt;/tbody&gt;\n      &lt;/table&gt;\n    &lt;/div&gt;&quot;
+  ];
+  fhir:Person.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value &quot;official&quot; ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;DL&quot; ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value &quot;Ohio driver license&quot; ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;urn:oid:2.16.840.1.113883.4.3.39&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;TL545786&quot; ];
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value &quot;2041-09-23&quot;^^xsd:date ]
+     ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value &quot;Ohio Bureau of Motor Vehicles&quot; ]
+     ]
+  ];
+  fhir:Person.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Everywoman&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Eve&quot;;
+       fhir:index 0
+     ], [
+       fhir:value &quot;Marie&quot;;
+       fhir:index 1
+     ]
+  ];
+  fhir:Person.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;(621)-479-9743&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;home&quot; ]
+  ];
+  fhir:Person.gender [ fhir:value &quot;female&quot;];
+  fhir:Person.birthDate [ fhir:value &quot;1974-03-07&quot;^^xsd:date];
+  fhir:Person.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;2086 College St&quot;;
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value &quot;Sandusky&quot; ];
+     fhir:Address.state [ fhir:value &quot;OH&quot; ];
+     fhir:Address.postalCode [ fhir:value &quot;44870&quot; ];
+     fhir:Address.country [ fhir:value &quot;USA&quot; ]
+  ];
+  fhir:Person.managingOrganization [
+     fhir:link &lt;http://www.goodhealth.com/Organization/12&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://www.goodhealth.com/Organization/12&quot; ];
+     fhir:Reference.display [ fhir:value &quot;Goodhealth Patient Portal&quot; ]
+  ];
+  fhir:Person.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Person.link [
+     fhir:index 0;
+     fhir:Person.link.target [
+       fhir:link &lt;http://www.goodhealth.com/Patient/98574&gt;;
+       fhir:Reference.reference [ fhir:value &quot;http://www.goodhealth.com/Patient/98574&quot; ];
+       fhir:Reference.display [ fhir:value &quot;Eve Everywoman&quot; ]
+     ];
+     fhir:Person.link.assurance [ fhir:value &quot;level3&quot; ]
+  ], [
+     fhir:index 1;
+     fhir:Person.link.target [
+       fhir:link &lt;http://www.acme-medical.com/Patient/ab34d&gt;;
+       fhir:Reference.reference [ fhir:value &quot;http://www.acme-medical.com/Patient/ab34d&quot; ];
+       fhir:Reference.display [ fhir:value &quot;Eve Marie Everywoman&quot; ]
+     ];
+     fhir:Person.link.assurance [ fhir:value &quot;level2&quot; ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fperson-patient-portal.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fperson-patient-portal.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

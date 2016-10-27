@@ -1,0 +1,193 @@
+{
+  "@context": "http://build.fhir.org/Observation.jsonld",
+  "@context": "http://hl7.org/fhir/Observation/blood-pressure-cancel",
+  "Resource.id": {
+    "id.value": "blood-pressure-cancel"
+  },
+  "Resource.meta": {
+    "Meta.lastUpdated": {
+      "instant.value": "2014-01-30T22:35:23+11:00"
+    }
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: blood-pressure-cancel</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281</p><p><b>status</b>: cancelled</p><p><b>code</b>: Blood pressure systolic &amp; diastolic <span>(Details : {LOINC code '55284-4' = 'Blood pressure systolic and diastolic', given as 'Blood pressure systolic &amp; diastolic'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: Sep 17, 2012</p><p><b>performer</b>: <a>Practitioner/example</a></p><p><b>interpretation</b>: Below low normal <span>(Details : {http://hl7.org/fhir/v2/0078 code 'L' = 'Low', given as 'low'})</span></p><p><b>comment</b>: In this example, the blood pressure measurements are not available due to cancellation of the order.  Data absent reason is present for each component</p><p><b>bodySite</b>: Right arm <span>(Details : {SNOMED CT code '368209003' = 'Right upper arm structure (body structure)', given as 'Right arm'})</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Systolic blood pressure <span>(Details : {LOINC code '8480-6' = 'Systolic blood pressure', given as 'Systolic blood pressure'}; {SNOMED CT code '271649006' = 'Systolic blood pressure (observable entity)', given as 'Systolic blood pressure'}; {http://acme.org/devices/clinical-codes code 'bp-s' = 'bp-s', given as 'Systolic Blood pressure'})</span></p><p><b>dataAbsentReason</b>: Not Asked <span>(Details : {http://hl7.org/fhir/data-absent-reason code 'not-asked' = 'Not Asked', given as 'Not Asked'})</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Diastolic blood pressure <span>(Details : {LOINC code '8462-4' = 'Diastolic blood pressure', given as 'Diastolic blood pressure'})</span></p><p><b>dataAbsentReason</b>: Not Asked <span>(Details : {http://hl7.org/fhir/data-absent-reason code 'not-asked' = 'Not Asked', given as 'Not Asked'})</span></p></blockquote></div>"
+    }
+  },
+  "Observation.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "urn:ietf:rfc:3986"
+      },
+      "Identifier.value": {
+        "string.value": "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"
+      }
+    }
+  ],
+  "Observation.status": {
+    "code.value": "cancelled"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "55284-4"
+        },
+        "Coding.display": {
+          "string.value": "Blood pressure systolic & diastolic"
+        }
+      }
+    ],
+    "Resource.concept": "http://loinc.org/owl#55284-4"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.effectiveDateTime": {
+    "dateTime.value": "2012-09-17"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/example"
+      }
+    }
+  ],
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "code.value": "L"
+        },
+        "Coding.display": {
+          "string.value": "low"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Below low normal"
+    }
+  },
+  "Observation.comment": {
+    "string.value": "In this example, the blood pressure measurements are not available due to cancellation of the order.  Data absent reason is present for each component"
+  },
+  "Observation.bodySite": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "368209003"
+        },
+        "Coding.display": {
+          "string.value": "Right arm"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#368209003"
+  },
+  "Observation.component": [
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "8480-6"
+            },
+            "Coding.display": {
+              "string.value": "Systolic blood pressure"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "271649006"
+            },
+            "Coding.display": {
+              "string.value": "Systolic blood pressure"
+            }
+          },
+          {
+            "Coding.system": {
+              "uri.value": "http://acme.org/devices/clinical-codes"
+            },
+            "Coding.code": {
+              "code.value": "bp-s"
+            },
+            "Coding.display": {
+              "string.value": "Systolic Blood pressure"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#8480-6",
+        "Resource.concept": "http://snomed.info/sct#271649006"
+      },
+      "Observation.component.dataAbsentReason": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/data-absent-reason"
+            },
+            "Coding.code": {
+              "code.value": "not-asked"
+            },
+            "Coding.display": {
+              "string.value": "Not Asked"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "code.value": "8462-4"
+            },
+            "Coding.display": {
+              "string.value": "Diastolic blood pressure"
+            }
+          }
+        ],
+        "Resource.concept": "http://loinc.org/owl#8462-4"
+      },
+      "Observation.component.dataAbsentReason": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/data-absent-reason"
+            },
+            "Coding.code": {
+              "code.value": "not-asked"
+            },
+            "Coding.display": {
+              "string.value": "Not Asked"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

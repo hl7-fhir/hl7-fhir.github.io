@@ -1,0 +1,61 @@
+{
+  "@context": "http://build.fhir.org/Subscription.jsonld",
+  "@context": "http://hl7.org/fhir/Subscription/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"
+    }
+  },
+  "Subscription.criteria": {
+    "string.value": "Observation?code=http://loinc.org|1975-2"
+  },
+  "Subscription.contact": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "ext 4123"
+      }
+    }
+  ],
+  "Subscription.reason": {
+    "string.value": "Monitor new neonatal function"
+  },
+  "Subscription.status": {
+    "code.value": "requested"
+  },
+  "Subscription.channel": {
+    "Subscription.channel.type": {
+      "code.value": "rest-hook"
+    },
+    "Subscription.channel.endpoint": {
+      "uri.value": "https://biliwatch.com/customers/mount-auburn-miu/on-result"
+    },
+    "Subscription.channel.payload": {
+      "string.value": "application/fhir+json"
+    },
+    "Subscription.channel.header": {
+      "string.value": "Authorization: Bearer secret-token-abc-123"
+    }
+  },
+  "Subscription.end": {
+    "instant.value": "2021-01-01T00:00:00Z"
+  },
+  "Subscription.tag": [
+    {
+      "Coding.system": {
+        "uri.value": "http://example.org/fhir/cs/internal"
+      },
+      "Coding.code": {
+        "code.value": "bili-done"
+      }
+    }
+  ]
+}

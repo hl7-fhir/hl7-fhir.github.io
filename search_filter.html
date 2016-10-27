@@ -1,0 +1,496 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Search_filter - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/search_filter.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><a href="http.html">RESTful API</a></li>
+        <li><b>_filter Parameter</b></li>          <!-- search_filter.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="base"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.42.2<a name="2.42.2"> </a></span> _filter Parameter <a href="search_filter.html#2.42.2" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<a name="intro"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.42.2.1</span> Introduction <a href="search_filter.html#intro" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+<code>_filter</code> is a parameter that can be used with the <a href="search.html">Search Operation</a>.
+It uses the same set of standard parameters defined for the resources, and provides a syntax
+for expressing a set of query expressions on the underlying resources. 
+</p>
+
+<p>Examples of filters:</p>
+<ul>
+<li>Patient: name co &quot;pet&quot; - all patients with the characters &quot;pet&quot; in a given or family name</li>
+<li>Patient: given eq &quot;peter&quot; and birthdate ge 2014-10-10 - all patients with a given name of peter, born on or after 10-Oct 2014</li>
+<li>Observation: name eq http://loinc.org|1234-5 - all observations with the loinc code &quot;1234-5&quot;</li>
+<li>Observation: subject.name co &quot;pet&quot; - all observations on a patient with the characters &quot;pet&quot; in a given or family name</li>
+<li>Observation: related[type eq &quot;has-component&quot;].target pr true - all observations that have component observations (note: this uses one of the search parameters defined for this mechanism, see below)</li>
+<li>Observation: related[type eq has-component].target re Observation/4 - all observations that have Observation/v as a component</li>
+</ul>
+
+<p>
+The _filter syntax has the following features:
+</p>
+
+<ul>
+<li>A filter can be a logical one (x or x, or x and x, or not x).</li>
+<li>A filter can contain other filters in a set of parentheses : &quot;()&quot;.</li>
+<li>A filter can be a test - path operation value, where operation is taken from the table below, and value is either a &quot;true&quot;, &quot;false&quot;, a JSON string, or a token (any sequence of non-whitespace characters, excluding &quot;)&quot; and &quot;]&quot;. Values are never case sensitive.</li>
+<li>A 'path' is a name, with chained searches done by name.name etc.as per existing source. There can also be a filter: name[filter].name.</li>
+<li>The name is one of the defined search parameters that are used with the other search mechanism, with some special exemptions defined below.</li>
+</ul>
+<p>
+Note: The only difference between a &quot;string&quot; value and a &quot;token&quot; 
+value is that a string can contain spaces and ) and ]. There is 
+otherwise no significant difference between them.
+</p>
+<p>
+Formal grammar for the syntax:
+</p>
+<pre>
+filter       = paramExp / logExp / (&quot;not&quot;) &quot;(&quot; filter &quot;)&quot;
+logExp       = filter (&quot;and&quot; / &quot;or&quot; filter)+
+paramExp     = paramPath SP compareOp SP compValue
+compareOp    = (see table below)
+compValue    = string / numberOrDate / token
+string       = json string
+token        = any sequence of non-whitespace characters (by Unicode rules) except &quot;]&quot; and &quot;)&quot;
+paramPath    = paramName ((&quot;[&quot; filter &quot;]&quot;) &quot;.&quot; paramPath)
+paramName    = ALPHA (nameChar)*
+nameChar     = &quot;_&quot; / &quot;-&quot; / DIGIT / ALPHA
+numberOrDate = DIGIT (DateChar)*
+dateChar     = DIGIT / &quot;T&quot; / &quot;-&quot; / &quot;.&quot; / &quot;+&quot;
+</pre>
+
+<p>Notes about using the syntax:</p>
+<ul>
+<li>Logical expressions are evaluated left to right, with no precedence between &quot;and&quot; and &quot;or&quot;. If there is ambiguity, use parentheses to be explicit.</li>
+<li>Rhe compareOp is always evaluated against the set of values produced by evaluating the param path.</li>
+<li>Rhe parameter names are those defined by the specification for search parameters, except for those defined below.</li>
+<li>Rhe date format is a standard XML (i.e. XSD) dateTime (including timezone).</li>
+</ul>
+
+<a name="ops"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.42.2.2</span> Operators <a href="search_filter.html#ops" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>This table summarises the comparison operations available:</p>
+
+<table class="grid">
+<tbody>
+<tr>
+<td>Operation</td>
+<td>Definition</td>
+</tr>
+<tr>
+<td>eq</td>
+<td>an item in the set has an equal value</td>
+</tr>
+<tr>
+<td>ne</td>
+<td>An  item in the set has an unequal value</td>
+</tr>
+<tr>
+<td>co</td>
+<td>An item in the set contains this value</td>
+</tr>
+<tr>
+<td>sw</td>
+<td>An item in the set starts with this value</td>
+</tr>
+<tr>
+<td>ew</td>
+<td>An item in the set ends with this value</td>
+</tr>
+<tr>
+<td>gt / lt / ge / le</td>
+<td>A value in the set is (greater than, less than, greater or equal, less or equal)  the given value</td>
+</tr>
+ <tr>
+	<td>ap</td>
+	<td>A value in the set isis approximately the same as this value.<br/> 
+	Note that the recommended value for the approximation is 10% of the stated value (or for a date, 10% of the gap between now and the date), but systems may choose other values where appropriate</td>
+ </tr>
+<tr>
+ <td>sa</td>
+ <td>The value starts after the specified value</td>
+</tr>
+<tr>
+ <td>eb</td>
+ <td>The value ends before the specified value</td>
+</tr>
+<tr>
+ <td>pr</td>
+ <td>The set is empty or not (value is false or true)</td>
+</tr>
+<tr>
+<td>po</td>
+<td>True if a (implied) date period in the set overlaps with the implied period in the value</td>
+</tr>
+<tr>
+<td>ss</td>
+<td>True if the value subsumes a concept in the set</td>
+</tr>
+<tr>
+<td>sb</td>
+<td>True if the value is subsumed by a concept in the set</td>
+</tr>
+<tr>
+<td>in</td>
+<td>True if one of the concepts is in the nominated value set by URI, either a relative, literal or logical vs</td>
+</tr>
+<tr>
+<td>ni</td>
+<td>True if none of the concepts are in the nominated value set by URI, either a relative, literal or logical vs</td>
+</tr>
+<tr>
+<td>re</td>
+<td>True if one of the references in set points to the given URL</td>
+</tr>
+</tbody>
+</table>
+<p>
+For detailed rules about the operators eq, ne, le, ge, lt, gt, sa, and eb see 
+<a href="search.html#prefix">Search Prefixes</a>.
+</p>
+
+<p>The interpretation of the operation depends on the type of the search parameter it is being evaulated against. This table contains those details:</p>
+<table class="grid">
+<tbody>
+<tr>
+<td>Operation</td>
+<td>String</td>
+<td>Number</td>
+<td>Date</td>
+<td>Token</td>
+<td>Reference</td>
+<td>Quantity</td>
+</tr>
+<tr>
+<td>Eq</td>
+<td>Character sequence is the same (case insensitive)</td>
+<td>Number is the same incl same precision</td>
+<td>Date is the same including same precision and timezone if provided</td>
+<td>Token is the same, including namespace if specified (case insensitive)</td>
+<td>n/a</td>
+<td>Unit and value are the same</td>
+</tr>
+<tr>
+<td>Ne</td>
+<td colspan="6">(same)</td>
+</tr>
+<tr>
+<td>Co</td>
+<td>Character sequence matches somewhere (case insensitive)</td>
+<td>An item in the set's implicit imprecision includes the stated value</td>
+<td>An item in the set's implicit period includes the stated value</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a?</td>
+</tr>
+<tr>
+<td>Sw</td>
+<td>Character sequence matches from first digit (left most, when L-&gt;R) (case insensitive)</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>ew</td>
+<td>Character sequence matches up to last digit (right most, when L-&gt;R) (case insensitive)</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>gt / lt / ge / le</td>
+<td>Based on Integer comparison of Unicode code points of starting character (trimmed) (case insensitive)</td>
+<td>Based on numerical comparison</td>
+<td>Based on date period comparison per 2.2.2.3</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Based on numerical comparison if units are the same (or are canonicalised)</td>
+</tr>
+<tr>
+<td>pr</td>
+<td/>
+<td/>
+<td/>
+<td/>
+<td/>
+<td/>
+</tr>
+<tr>
+<td>po</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Based on date period comparison per 2.2.2.3</td>
+<td/>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>ss</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Based on logical subsumption; potentially catering for mapping between tx</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>sb</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Based on logical subsumption; potentially catering for mapping between tx</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>in</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Based on logical subsumption; potentially catering for mapping between tx</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>re</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Relative or absolute url</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note:</p>
+<ul>
+<li>For token, the format is the same as the existing search parameter.</li>
+<li>For convenience, the codes &quot;loinc&quot;, &quot;snomed&quot;, &quot;rxnorm&quot; and &quot;ucum&quot; are predefined and can be used in place of their associated full namespace.</li>
+</ul>
+
+<a name="params"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.42.2.3</span> Additional Parameters <a href="search_filter.html#params" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+
+<p>
+Some additional parameters are defined for the filter parameter (<i>to do: move these into the standard parameters</i>):
+</p>
+
+<table class="list">
+<tbody>
+<tr>
+<td>Resource Type</td>
+<td>Parameter Name</td>
+<td>Children</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>related</td>
+<td><p>target = related-target</p>
+<p>Type = related-type</p></td>
+</tr>
+<tr>
+<td>Group</td>
+<td>characteristic</td>
+<td><p>value = value</p>
+<p>code = characteristic</p></td>
+</tr>
+<tr>
+<td>DocumentReference</td>
+<td>relatesTo</td>
+<td><p>code = relation</p>
+<p>target = relatesTo</p></td>
+</tr>
+<tr>
+<td>DiagnosticRequest</td>
+<td>event</td>
+<td><p>status = event-status<br/>
+date = event-date</p></td>
+</tr>
+<tr>
+<td>DiagnosticRequest</td>
+<td>item</td>
+<td><p>status = item-status</p>
+<p>code = item-code</p>
+<p>site = bodysite</p>
+<p>event = item-event</p></td>
+</tr>
+<tr>
+<td>DiagnosticRequest</td>
+<td>item-event</td>
+<td><p>status = item-past-status<br/>
+date = item-date<br/>
+actor = actor</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>Note:</p>
+<ul>
+<li>Any time these names are used in a parameter, they must have a filter and a chained name under them.</li>
+<li>The first column is the resource type against which this name can be used.</li>
+<li>The second column is the parameter name that is used.</li>
+<li>The third column defines the names that can be used in the chained parameter, and in the filter, and shows which existing search parameters they equate to.</li>
+<li>For example, you could search on Observation for '_filter=related[type eq has-component].target re url'. &quot;type&quot; refers to the 
+search parameter &quot;related-type&quot;, and &quot;target&quot; to the search parameter &quot;related-target&quot;.</li>
+</ul>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fsearch_filter.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fsearch_filter.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

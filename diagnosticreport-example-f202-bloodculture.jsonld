@@ -1,0 +1,182 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticReport.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticReport/f202",
+  "Resource.id": {
+    "id.value": "f202"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>contained</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory test <span>(Details : {SNOMED CT code '15220000' = 'Laboratory test (procedure)', given as 'Laboratory test'}; {http://hl7.org/fhir/v2/0074 code 'LAB' = 'Laboratory)</span></p><p><b>code</b>: Blood culture for bacteria, including anaerobic screen <span>(Details : {SNOMED CT code '104177005' = 'Blood culture for bacteria, including anaerobic screen (procedure)', given as 'Blood culture for bacteria, including anaerobic screen'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>effective</b>: Mar 11, 2013 3:45:00 AM</p><p><b>issued</b>: Mar 11, 2013 10:28:00 AM</p><p><b>performer</b>: <a>AUMC</a></p><p><b>request</b>: id: req; Original Order <span>(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)</span>; Blood culture for bacteria, including anaerobic screen <span>(Details : {SNOMED CT code '104177005' = 'Blood culture for bacteria, including anaerobic screen (procedure)', given as 'Blood culture for bacteria, including anaerobic screen'})</span>; Roel; Roel's encounter on March eleventh 2013; Dokter Bronsig</p><p><b>result</b>: <a>Results for staphylococcus analysis on Roel's blood culture</a></p><p><b>conclusion</b>: Blood culture tested positive on staphylococcus aureus</p><p><b>codedDiagnosis</b>: Bacteremia due to staphylococcus <span>(Details : {SNOMED CT code '428763004' = 'Bacteremia due to Staphylococcus aureus (finding)', given as 'Bacteremia due to staphylococcus'})</span></p></div>"
+    }
+  },
+  "DiagnosticRequest": [
+    {
+      "Resource.id": {
+        "id.value": "req"
+      },
+      "DiagnosticRequest.stage": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/request-stage"
+            },
+            "Coding.code": {
+              "code.value": "original-order"
+            }
+          }
+        ]
+      },
+      "DiagnosticRequest.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "code.value": "104177005"
+            },
+            "Coding.display": {
+              "string.value": "Blood culture for bacteria, including anaerobic screen"
+            }
+          }
+        ],
+        "Resource.concept": "http://snomed.info/sct#104177005"
+      },
+      "DiagnosticRequest.subject": {
+        "Reference.reference": {
+          "string.value": "Patient/f201"
+        },
+        "Reference.display": {
+          "string.value": "Roel"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+      },
+      "DiagnosticRequest.context": {
+        "Reference.reference": {
+          "string.value": "Encounter/f203"
+        },
+        "Reference.display": {
+          "string.value": "Roel's encounter on March eleventh 2013"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Encounter/f203"
+      },
+      "DiagnosticRequest.requester": {
+        "Reference.reference": {
+          "string.value": "Practitioner/f201"
+        },
+        "Reference.display": {
+          "string.value": "Dokter Bronsig"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/f201"
+      }
+    }
+  ],
+  "DiagnosticReport.status": {
+    "code.value": "final"
+  },
+  "DiagnosticReport.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "15220000"
+        },
+        "Coding.display": {
+          "string.value": "Laboratory test"
+        }
+      },
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v2/0074"
+        },
+        "Coding.code": {
+          "code.value": "LAB"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#15220000"
+  },
+  "DiagnosticReport.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "code.value": "104177005"
+        },
+        "Coding.display": {
+          "string.value": "Blood culture for bacteria, including anaerobic screen"
+        }
+      }
+    ],
+    "Resource.concept": "http://snomed.info/sct#104177005"
+  },
+  "DiagnosticReport.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/f201"
+    },
+    "Reference.display": {
+      "string.value": "Roel"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "DiagnosticReport.effectiveDateTime": {
+    "dateTime.value": "2013-03-11T03:45:00+01:00"
+  },
+  "DiagnosticReport.issued": {
+    "instant.value": "2013-03-11T10:28:00+01:00"
+  },
+  "DiagnosticReport.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Organization/f201"
+      },
+      "Reference.display": {
+        "string.value": "AUMC"
+      }
+    }
+  ],
+  "DiagnosticReport.request": [
+    {
+      "Reference.reference": {
+        "string.value": "#req"
+      }
+    }
+  ],
+  "DiagnosticReport.result": [
+    {
+      "Reference.reference": {
+        "string.value": "Observation/f206"
+      },
+      "Reference.display": {
+        "string.value": "Results for staphylococcus analysis on Roel's blood culture"
+      }
+    }
+  ],
+  "DiagnosticReport.conclusion": {
+    "string.value": "Blood culture tested positive on staphylococcus aureus"
+  },
+  "DiagnosticReport.codedDiagnosis": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "code.value": "428763004"
+          },
+          "Coding.display": {
+            "string.value": "Bacteremia due to staphylococcus"
+          }
+        }
+      ]
+    }
+  ]
+}

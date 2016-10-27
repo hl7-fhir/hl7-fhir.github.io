@@ -1,0 +1,64 @@
+{
+  "@context": "http://build.fhir.org/Group.jsonld",
+  "@context": "http://hl7.org/fhir/Group/101",
+  "Resource.id": {
+    "id.value": "101"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "additional"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Herd of 25 horses</p>\n      <p>Gender: mixed</p>\n      <p>Owner: John Smith</p>\n    </div>"
+    }
+  },
+  "Group.type": {
+    "code.value": "animal"
+  },
+  "Group.actual": {
+    "boolean.value": true
+  },
+  "Group.code": {
+    "CodeableConcept.text": {
+      "string.value": "Horse"
+    }
+  },
+  "Group.name": {
+    "string.value": "John's herd"
+  },
+  "Group.quantity": {
+    "unsignedInt.value": 25
+  },
+  "Group.characteristic": [
+    {
+      "Group.characteristic.code": {
+        "CodeableConcept.text": {
+          "string.value": "gender"
+        }
+      },
+      "Group.characteristic.valueCodeableConcept": {
+        "CodeableConcept.text": {
+          "string.value": "mixed"
+        }
+      },
+      "Group.characteristic.exclude": {
+        "boolean.value": false
+      }
+    },
+    {
+      "Group.characteristic.code": {
+        "CodeableConcept.text": {
+          "string.value": "owner"
+        }
+      },
+      "Group.characteristic.valueCodeableConcept": {
+        "CodeableConcept.text": {
+          "string.value": "John Smith"
+        }
+      },
+      "Group.characteristic.exclude": {
+        "boolean.value": false
+      }
+    }
+  ]
+}

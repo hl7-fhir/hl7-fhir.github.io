@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/RelatedPerson/benedicte> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "benedicte"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>Name</td>\n            <td>Bénédicte du Marché</td>\n          </tr>\n          <tr>\n            <td>Address</td>\n            <td>43, Place du Marché Sainte Catherine, 75004 Paris, France</td>\n          </tr>\n          <tr>\n            <td>Contacts</td>\n            <td>Phone: +33 (237) 998327</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+  ];
+  fhir:RelatedPerson.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "INSEE" ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.61" ];
+     fhir:Identifier.value [ fhir:value "272117510400399" ]
+  ];
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean];
+  fhir:RelatedPerson.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/patient-contact-relationship" ];
+       fhir:Coding.code [ fhir:value "partner" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/RoleCode" ];
+       fhir:Coding.code [ fhir:value "WIFE" ]
+     ]
+  ];
+  fhir:RelatedPerson.name [
+     fhir:index 0;
+     fhir:HumanName.family [
+       fhir:value "du";
+       fhir:index 0;
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinitioniso-21090#qualifier" ];
+         fhir:Extension.valueCode [ fhir:value "VV" ]
+       ]
+     ], [
+       fhir:value "Marché";
+       fhir:index 1
+     ];
+     fhir:HumanName.given [
+       fhir:value "Bénédicte";
+       fhir:index 0
+     ]
+  ];
+  fhir:RelatedPerson.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "+33 (237) 998327" ]
+  ];
+  fhir:RelatedPerson.gender [ fhir:value "female"];
+  fhir:RelatedPerson.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "43, Place du Marché Sainte Catherine";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Paris" ];
+     fhir:Address.postalCode [ fhir:value "75004" ];
+     fhir:Address.country [ fhir:value "FRA" ]
+  ];
+  fhir:RelatedPerson.photo [
+     fhir:index 0;
+     fhir:Attachment.contentType [ fhir:value "image/jpeg" ];
+     fhir:Attachment.url [ fhir:value "Binary/f016" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

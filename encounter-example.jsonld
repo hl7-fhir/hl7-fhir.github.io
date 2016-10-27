@@ -1,0 +1,35 @@
+{
+  "@context": "http://build.fhir.org/Encounter.jsonld",
+  "@context": "http://hl7.org/fhir/Encounter/example",
+  "Resource.id": {
+    "id.value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example</div>"
+    }
+  },
+  "Encounter.status": {
+    "code.value": "in-progress"
+  },
+  "Encounter.class": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/v3/ActCode"
+    },
+    "Coding.code": {
+      "code.value": "IMP"
+    },
+    "Coding.display": {
+      "string.value": "inpatient encounter"
+    }
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/example"
+  }
+}

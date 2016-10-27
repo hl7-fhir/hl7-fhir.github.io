@@ -1,0 +1,696 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "family-member-history-genetics-parent",
+  "url": "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent",
+  "name": "Mother(s) & Father(s) - genetic & other",
+  "status": "draft",
+  "publisher": "Health Level Seven International (Clinical Genomics)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://www.hl7.org/Special/committees/clingenomics"
+        }
+      ]
+    }
+  ],
+  "date": "2013-10-02",
+  "description": "Identifies a parent of the relative.",
+  "fhirVersion": "1.7.0",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "contextType": "resource",
+  "context": [
+    "FamilyMemberHistory"
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Extension:mothersfathers-geneticother",
+        "path": "Extension",
+        "short": "Mother(s) & Father(s) - genetic & other",
+        "definition": "Identifies a parent of the relative.",
+        "comments": "Some individuals may have more than two parents (e.g. genetic vs. adoptive parents).  Even non-genetic relationships can be relevant in terms of genetic exposure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+            "source": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "player[classCode<LIV, determinerCode=INSTANCE].scopesRole"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.id",
+        "path": "Extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "id": "61",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type",
+        "path": "Extension.extension",
+        "sliceName": "type",
+        "short": "mother | father | adoptive mother | etc.",
+        "definition": "Distinguishes between different types of parental relationships with varying granularity to support capturing the relationship \"to the degree known\".",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "code"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.extension:extension",
+        "path": "Extension.extension.extension",
+        "sliceName": "extension",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "type",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.valueCodeableConcept",
+        "path": "Extension.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Parental relationship types",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/parent-relationship-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier",
+        "path": "Extension.extension",
+        "sliceName": "identifier",
+        "short": "Link to parent relative(s)",
+        "definition": "Points to the FamilyMemberHistory record of the relation who is the parent of this relation.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "player.id"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.extension:extension",
+        "path": "Extension.extension.extension",
+        "sliceName": "extension",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "identifier",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.valueReference",
+        "path": "Extension.extension.valueReference",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.url",
+        "path": "Extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "code"
+          },
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "decimal"
+          },
+          {
+            "code": "id"
+          },
+          {
+            "code": "instant"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "markdown"
+          },
+          {
+            "code": "oid"
+          },
+          {
+            "code": "positiveInt"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "unsignedInt"
+          },
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Address"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Annotation"
+          },
+          {
+            "code": "Attachment"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "ContactPoint"
+          },
+          {
+            "code": "Count"
+          },
+          {
+            "code": "Distance"
+          },
+          {
+            "code": "Duration"
+          },
+          {
+            "code": "HumanName"
+          },
+          {
+            "code": "Identifier"
+          },
+          {
+            "code": "Money"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "Reference"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "Signature"
+          },
+          {
+            "code": "Timing"
+          },
+          {
+            "code": "Meta"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Extension:mothersfathers-geneticother",
+        "path": "Extension",
+        "short": "Mother(s) & Father(s) - genetic & other",
+        "definition": "Identifies a parent of the relative.",
+        "comments": "Some individuals may have more than two parents (e.g. genetic vs. adoptive parents).  Even non-genetic relationships can be relevant in terms of genetic exposure.",
+        "min": 0,
+        "max": "*",
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "player[classCode<LIV, determinerCode=INSTANCE].scopesRole"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type",
+        "path": "Extension.extension",
+        "sliceName": "type",
+        "short": "mother | father | adoptive mother | etc.",
+        "definition": "Distinguishes between different types of parental relationships with varying granularity to support capturing the relationship \"to the degree known\".",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "code"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.extension:extension",
+        "path": "Extension.extension.extension",
+        "sliceName": "extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.url",
+        "path": "Extension.extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "type"
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:type.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Parental relationship types",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/parent-relationship-codes"
+          }
+        }
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier",
+        "path": "Extension.extension",
+        "sliceName": "identifier",
+        "short": "Link to parent relative(s)",
+        "definition": "Points to the FamilyMemberHistory record of the relation who is the parent of this relation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "player.id"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.extension:extension",
+        "path": "Extension.extension.extension",
+        "sliceName": "extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.url",
+        "path": "Extension.extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "identifier"
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.extension:identifier.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
+          }
+        ]
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"
+      },
+      {
+        "id": "Extension:mothersfathers-geneticother.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0"
+      }
+    ]
+  }
+}

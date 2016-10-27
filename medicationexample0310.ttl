@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Medication/med0310> a fhir:Medication;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "med0310"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0310</p><p><b>contained</b>: </p><p><b>code</b>: Oral Form Oxycodone (product) <span>(Details : {SNOMED CT code '430127000' = 'Oral form oxycodone (product)', given as 'Oral Form Oxycodone (product)'})</span></p><p><b>isBrand</b>: false</p><blockquote><p><b>product</b></p><p><b>form</b>: Tablet dose form (qualifier value) <span>(Details : {SNOMED CT code '385055001' = 'Tablet dose form (qualifier value)', given as 'Tablet dose form (qualifier value)'})</span></p><h3>Ingredients</h3><table><tr><td>-</td><td><b>Item[x]</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>id: sub03; Oxycodone (substance) <span>(Details : {SNOMED CT code '55452001' = 'Oxycodone (substance)', given as 'Oxycodone (substance)'})</span></td><td>5 mg<span> (Details: UCUM code mg = 'mg')</span>/1 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></td></tr></table></blockquote></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Substance;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "sub03" ];
+     fhir:Substance.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:55452001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "55452001" ];
+         fhir:Coding.display [ fhir:value "Oxycodone (substance)" ]
+       ]
+     ]
+  ];
+  fhir:Medication.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:430127000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "430127000" ];
+       fhir:Coding.display [ fhir:value "Oral Form Oxycodone (product)" ]
+     ]
+  ];
+  fhir:Medication.isBrand [ fhir:value "false"^^xsd:boolean];
+  fhir:Medication.product [
+     fhir:Medication.product.form [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:385055001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "385055001" ];
+         fhir:Coding.display [ fhir:value "Tablet dose form (qualifier value)" ]
+       ]
+     ];
+     fhir:Medication.product.ingredient [
+       fhir:index 0;
+       fhir:Medication.product.ingredient.itemReference [
+         fhir:Reference.reference [ fhir:value "#sub03" ]
+       ];
+       fhir:Medication.product.ingredient.amount [
+         fhir:Ratio.numerator [
+           fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "mg" ]
+         ];
+         fhir:Ratio.denominator [
+           fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/v3/orderableDrugForm" ];
+           fhir:Quantity.code [ fhir:value "TAB" ]
+         ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,71 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticRequest.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticRequest/di",
+  "Resource.id": {
+    "id.value": "di"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: di</p><p><b>status</b>: active</p><p><b>stage</b>: Original Order <span>(Details : {http://hl7.org/fhir/request-stage code 'original-order' = 'Original Order)</span></p><p><b>code</b>: Chest CT <span>(Details : {LOINC code '24627-2' = 'Chest CT)</span></p><p><b>subject</b>: <a>Patient/dicom</a></p><p><b>occurrence</b>: May 8, 2013 9:33:27 AM</p><p><b>requester</b>: <a>Dr. Adam Careful</a></p><p><b>reason</b>: Check for metastatic disease <span>(Details )</span></p></div>"
+    }
+  },
+  "DiagnosticRequest.status": {
+    "code.value": "active"
+  },
+  "DiagnosticRequest.stage": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/request-stage"
+        },
+        "Coding.code": {
+          "code.value": "original-order"
+        }
+      }
+    ]
+  },
+  "DiagnosticRequest.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "code.value": "24627-2"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "string.value": "Chest CT"
+    },
+    "Resource.concept": "http://loinc.org/owl#24627-2"
+  },
+  "DiagnosticRequest.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/dicom"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/dicom"
+  },
+  "DiagnosticRequest.occurrenceDateTime": {
+    "dateTime.value": "2013-05-08T09:33:27+07:00"
+  },
+  "DiagnosticRequest.requester": {
+    "Reference.reference": {
+      "string.value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "string.value": "Dr. Adam Careful"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "DiagnosticRequest.reason": [
+    {
+      "CodeableConcept.text": {
+        "string.value": "Check for metastatic disease"
+      }
+    }
+  ]
+}

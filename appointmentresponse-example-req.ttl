@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/AppointmentResponse/exampleresp> a fhir:AppointmentResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "exampleresp"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Accept Brian MRI results discussion</div>"
+  ];
+  fhir:AppointmentResponse.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://example.org/sampleappointmentresponse-identifier" ];
+     fhir:Identifier.value [ fhir:value "response123" ]
+  ];
+  fhir:AppointmentResponse.appointment [
+     fhir:link <http://hl7.org/fhir/Appointment/examplereq>;
+     fhir:Reference.reference [ fhir:value "Appointment/examplereq" ];
+     fhir:Reference.display [ fhir:value "Brian MRI results discussion" ]
+  ];
+  fhir:AppointmentResponse.start [ fhir:value "2013-12-25T13:15:00Z"^^xsd:dateTime];
+  fhir:AppointmentResponse.end [ fhir:value "2013-12-25T13:30:00Z"^^xsd:dateTime];
+  fhir:AppointmentResponse.participantType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+       fhir:Coding.code [ fhir:value "ATND" ]
+     ]
+  ];
+  fhir:AppointmentResponse.actor [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+     fhir:Reference.display [ fhir:value "Dr Adam Careful" ]
+  ];
+  fhir:AppointmentResponse.participantStatus [ fhir:value "tentative"];
+  fhir:AppointmentResponse.comment [ fhir:value "can't we try for this time, can't do mornings"] .
+
+<http://hl7.org/fhir/Appointment/examplereq> a fhir:Appointment .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

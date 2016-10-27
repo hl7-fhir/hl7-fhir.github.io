@@ -1,0 +1,926 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Patient-examples-general.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/patient-examples-general.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="administration-module.html"><img src="administration.jpg"/> Administration</a></li>        <li><a href="patient.html">Patient</a></li>        <li><b>Example Instance</b></li>        <!-- patient-examples-general.ttl.html / resource-instance:Patient / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Patient-examples-general.ttl</h1>
+
+<p>
+<a href="patient-examples-general.ttl">Raw Turtle</a>, 
+<a href="patient-examples-general.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Stock people (defined by HL7 publishing)</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Bundle/b248b1b2-1686-4b94-9936-37d7a5f94b51&gt; a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;b248b1b2-1686-4b94-9936-37d7a5f94b51&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:Bundle.type [ fhir:value &quot;collection&quot;];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/1&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/1&gt;
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/2&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/2&gt;
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/3&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/3&gt;
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/4&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/4&gt;
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/5&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/5&gt;
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/6&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/6&gt;
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/7&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/7&gt;
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/8&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/8&gt;
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/9&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/9&gt;
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/10&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/10&gt;
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/11&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/11&gt;
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value &quot;http://hl7.org/fhir/Patient/12&quot; ];
+     fhir:Bundle.entry.resource &lt;http://hl7.org/fhir/Patient/12&gt;
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/1&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;1&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Everywoman, Eve. SSN:\n            444222222&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444222222&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Everywoman&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Eve&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2003&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;female&quot;];
+  fhir:Patient.birthDate [ fhir:value &quot;1973-05-31&quot;^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;2222 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Organization/hl7&gt; a fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization .
+
+&lt;http://hl7.org/fhir/Patient/2&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;2&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Everyman, Adam. SSN:\n            444333333&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444333333&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Everyman&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Adam&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2004&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;male&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;2222 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/3&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;3&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Kidd, Kari. SSN:\n            444555555&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444555555&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Kidd&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Kari&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2005&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;female&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;2222 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/4&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;4&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Nuclear, Nancy. SSN:\n            444114567&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444114567&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Nuclear&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Nancy&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-5001&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;female&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;6666 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/5&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;5&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Nuclear, Neville. SSN:\n            444111234&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444111234&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Nuclear&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Neville&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-5001&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;male&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;6666 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/6&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;6&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Nuclear, Ned. SSN:\n            444113456&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444113456&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Nuclear&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Ned&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-5001&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;male&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;6666 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/7&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;7&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Nuclear, Nelda. SSN:\n            444112345&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444112345&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Nuclear&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Nelda&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-5001&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;female&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;6666 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/8&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;8&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Mum, Martha. SSN:\n            444666666&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444666666&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Mum&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Martha&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2006&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;female&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;4444 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/9&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;9&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Sons, Stuart. SSN:\n            444777777&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444777777&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Sons&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Stuart&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2007&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [
+     fhir:value &quot;other&quot;;
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value &quot;http://example.org/Profile/administrative-status&quot; ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value &quot;http://example.org/fhir/v2/administrative-status&quot; ];
+           fhir:Coding.code [ fhir:value &quot;FTM&quot; ];
+           fhir:Coding.display [ fhir:value &quot;female-to-male&quot; ]
+         ]
+       ]
+     ]
+  ];
+  fhir:Patient.deceasedDateTime [ fhir:value &quot;2002-08-24&quot;^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;4444 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/10&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;10&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Betterhalf, Boris. SSN:\n            444888888&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444888888&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Betterhalf&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Boris&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2008&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;male&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;2222 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/11&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;11&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Relative, Ralph. SSN:\n            444999999&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;444999999&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Relative&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Ralph&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2009&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;male&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;4444 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/12&gt; a fhir:Patient;
+  fhir:index 0;
+  fhir:Resource.id [ fhir:value &quot;12&quot;];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value &quot;2012-05-29T23:45:32Z&quot;^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Contact, Carrie. SSN:\n            555222222&lt;/div&gt;&quot;
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/v2/0203&quot; ];
+         fhir:Coding.code [ fhir:value &quot;SS&quot; ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value &quot;http://hl7.org/fhir/sid/us-ssn&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;555222222&quot; ]
+  ];
+  fhir:Patient.active [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value &quot;official&quot; ];
+     fhir:HumanName.family [
+       fhir:value &quot;Contact&quot;;
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value &quot;Carrie&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value &quot;phone&quot; ];
+     fhir:ContactPoint.value [ fhir:value &quot;555-555-2010&quot; ];
+     fhir:ContactPoint.use [ fhir:value &quot;work&quot; ]
+  ];
+  fhir:Patient.gender [ fhir:value &quot;female&quot;];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value &quot;home&quot; ];
+     fhir:Address.line [
+       fhir:value &quot;5555 Home Street&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link &lt;http://hl7.org/fhir/Organization/hl7&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Organization/hl7&quot; ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fpatient-examples-general.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fpatient-examples-general.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

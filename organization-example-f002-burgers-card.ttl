@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Organization/f002> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f002"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>active</b>: true</p><p><b>type</b>: Hospital Department <span>(Details : {http://hl7.org/fhir/organization-type code 'dept' = 'Hospital Department', given as 'Hospital Department'})</span></p><p><b>name</b>: Burgers UMC Cardiology unit</p><p><b>telecom</b>: ph: 022-655 2320</p><p><b>address</b>: South Wing, floor 2 </p><p><b>partOf</b>: <a>Organization/f001</a></p><h3>Contacts</h3><table><tr><td>-</td><td><b>Purpose</b></td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td>*</td><td>Administrative <span>(Details : {http://hl7.org/fhir/contactentity-type code 'ADMIN' = 'Administrative)</span></td><td>mevr. D. de Haan</td><td>ph: 022-655 2321</td><td>South Wing, floor 2 </td></tr></table></div>"
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/organization-type" ];
+       fhir:Coding.code [ fhir:value "dept" ];
+       fhir:Coding.display [ fhir:value "Hospital Department" ]
+     ]
+  ];
+  fhir:Organization.name [ fhir:value "Burgers UMC Cardiology unit"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "022-655 2320" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "South Wing, floor 2";
+       fhir:index 0
+     ]
+  ];
+  fhir:Organization.partOf [
+     fhir:link <http://hl7.org/fhir/Organization/f001>;
+     fhir:Reference.reference [ fhir:value "Organization/f001" ]
+  ];
+  fhir:Organization.contact [
+     fhir:index 0;
+     fhir:Organization.contact.purpose [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/contactentity-type" ];
+         fhir:Coding.code [ fhir:value "ADMIN" ]
+       ]
+     ];
+     fhir:Organization.contact.name [
+       fhir:HumanName.text [ fhir:value "mevr. D. de Haan" ]
+     ];
+     fhir:Organization.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "022-655 2321" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cardio@burgersumc.nl" ]
+     ], [
+       fhir:index 2;
+       fhir:ContactPoint.system [ fhir:value "fax" ];
+       fhir:ContactPoint.value [ fhir:value "022-655 2322" ]
+     ];
+     fhir:Organization.contact.address [
+       fhir:Address.line [
+         fhir:value "South Wing, floor 2";
+         fhir:index 0
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Location/ph> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ph"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient's Home</div>"
+  ];
+  fhir:Location.status [ fhir:value "active"];
+  fhir:Location.name [ fhir:value "Patient's Home"];
+  fhir:Location.description [ fhir:value "Patient's Home"];
+  fhir:Location.mode [ fhir:value "kind"];
+  fhir:Location.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/RoleCode" ];
+       fhir:Coding.code [ fhir:value "PTRES" ];
+       fhir:Coding.display [ fhir:value "Patient's Residence" ]
+     ]
+  ];
+  fhir:Location.physicalType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/location-physical-type" ];
+       fhir:Coding.code [ fhir:value "ho" ];
+       fhir:Coding.display [ fhir:value "House" ]
+     ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/f001>;
+     fhir:Reference.reference [ fhir:value "Organization/f001" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

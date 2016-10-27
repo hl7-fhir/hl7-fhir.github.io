@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Appointment/examplereq> a fhir:Appointment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "examplereq"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+  ];
+  fhir:Appointment.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://example.org/sampleappointment-identifier" ];
+     fhir:Identifier.value [ fhir:value "123" ]
+  ];
+  fhir:Appointment.status [ fhir:value "proposed"];
+  fhir:Appointment.serviceCategory [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/service-category" ];
+       fhir:Coding.code [ fhir:value "gp" ];
+       fhir:Coding.display [ fhir:value "General Practice" ]
+     ]
+  ];
+  fhir:Appointment.specialty [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/specialty" ];
+       fhir:Coding.code [ fhir:value "gp" ];
+       fhir:Coding.display [ fhir:value "General Practice" ]
+     ]
+  ];
+  fhir:Appointment.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/appointment-type" ];
+       fhir:Coding.code [ fhir:value "wi" ];
+       fhir:Coding.display [ fhir:value "Walk in" ]
+     ]
+  ];
+  fhir:Appointment.reason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:413095006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "413095006" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Clinical Review" ]
+  ];
+  fhir:Appointment.priority [ fhir:value "5"^^xsd:nonNegativeInteger];
+  fhir:Appointment.description [ fhir:value "Discussion on the results of your recent MRI"];
+  fhir:Appointment.minutesDuration [ fhir:value "15"^^xsd:positiveInteger];
+  fhir:Appointment.slot [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Slot/example>;
+     fhir:Reference.reference [ fhir:value "Slot/example" ]
+  ];
+  fhir:Appointment.created [ fhir:value "2015-12-02"^^xsd:date];
+  fhir:Appointment.comment [ fhir:value "Further expand on the results of the MRI and determine the next actions that may be appropriate."];
+  fhir:Appointment.participant [
+     fhir:index 0;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ];
+       fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+     ];
+     fhir:Appointment.participant.required [ fhir:value "required" ];
+     fhir:Appointment.participant.status [ fhir:value "needs-action" ]
+  ], [
+     fhir:index 1;
+     fhir:Appointment.participant.type [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+         fhir:Coding.code [ fhir:value "ATND" ]
+       ]
+     ];
+     fhir:Appointment.participant.required [ fhir:value "required" ];
+     fhir:Appointment.participant.status [ fhir:value "needs-action" ]
+  ], [
+     fhir:index 2;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://hl7.org/fhir/Location/1>;
+       fhir:Reference.reference [ fhir:value "Location/1" ];
+       fhir:Reference.display [ fhir:value "South Wing, second floor" ]
+     ];
+     fhir:Appointment.participant.required [ fhir:value "required" ];
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ];
+  fhir:Appointment.requestedPeriod [
+     fhir:index 0;
+     fhir:Period.start [ fhir:value "2016-06-02"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2016-06-09"^^xsd:date ]
+  ] .
+
+<http://hl7.org/fhir/Slot/example> a fhir:Slot .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Location/1> a fhir:Location .
+
+# -------------------------------------------------------------------------------------
+

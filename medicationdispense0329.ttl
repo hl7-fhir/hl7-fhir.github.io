@@ -1,0 +1,192 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0329> a fhir:MedicationDispense;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "meddisp0329"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0329</p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: id: med0319; </p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0329</a></p><p><b>type</b>: partial Fill <span>(Details : {http://hl7.org/fhir/v3/ActPharmacySupplyType code 'PF' = 'PF', given as 'partial Fill'})</span></p><p><b>quantity</b>: 30 gm<span> (Details: UCUM code gm = 'gm')</span></p><p><b>daysSupply</b>: 10 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>whenHandedOver</b>: Jan 15, 2015 4:20:00 PM</p><p><b>dosageInstruction</b>: </p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "med0319" ];
+     fhir:Medication.isBrand [ fhir:value "false"^^xsd:boolean ];
+     fhir:Medication.product [
+       fhir:Medication.product.form [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:385101003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "385101003" ];
+           fhir:Coding.display [ fhir:value "Ointment" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Ointment" ]
+       ];
+       fhir:Medication.product.ingredient [
+         fhir:index 0;
+         fhir:Medication.product.ingredient.itemCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:concept sct:387253001;
+             fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+             fhir:Coding.code [ fhir:value "387253001" ];
+             fhir:Coding.display [ fhir:value "Salicyclic Acid (substance)" ]
+           ]
+         ];
+         fhir:Medication.product.ingredient.amount [
+           fhir:Ratio.numerator [
+             fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "g" ]
+           ];
+           fhir:Ratio.denominator [
+             fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "g" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Medication.product.ingredient.itemCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:concept sct:396458002;
+             fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+             fhir:Coding.code [ fhir:value "396458002" ];
+             fhir:Coding.display [ fhir:value "Hydrocortisone (substance)" ]
+           ]
+         ];
+         fhir:Medication.product.ingredient.amount [
+           fhir:Ratio.numerator [
+             fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "g" ]
+           ];
+           fhir:Ratio.denominator [
+             fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "g" ]
+           ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Medication.product.ingredient.itemCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:concept sct:126066007;
+             fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+             fhir:Coding.code [ fhir:value "126066007" ];
+             fhir:Coding.display [ fhir:value "White Petrolatum (substance)" ]
+           ]
+         ];
+         fhir:Medication.product.ingredient.amount [
+           fhir:Ratio.numerator [
+             fhir:Quantity.value [ fhir:value "94"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "g" ]
+           ];
+           fhir:Ratio.denominator [
+             fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ];
+             fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+             fhir:Quantity.code [ fhir:value "g" ]
+           ]
+         ]
+       ]
+     ]
+  ];
+  fhir:MedicationDispense.status [ fhir:value "completed"];
+  fhir:MedicationDispense.medicationReference [
+     fhir:Reference.reference [ fhir:value "#med0319" ]
+  ];
+  fhir:MedicationDispense.patient [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ];
+     fhir:Reference.display [ fhir:value "Donald Duck" ]
+  ];
+  fhir:MedicationDispense.dispenser [
+     fhir:link <http://hl7.org/fhir/Practitioner/f006>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f006" ];
+     fhir:Reference.display [ fhir:value "Rob van den Berk" ]
+  ];
+  fhir:MedicationDispense.authorizingPrescription [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/MedicationRequest/medrx0329>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medrx0329" ]
+  ];
+  fhir:MedicationDispense.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActPharmacySupplyType" ];
+       fhir:Coding.code [ fhir:value "PF" ];
+       fhir:Coding.display [ fhir:value "partial Fill" ]
+     ]
+  ];
+  fhir:MedicationDispense.quantity [
+     fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "gm" ]
+  ];
+  fhir:MedicationDispense.daysSupply [
+     fhir:Quantity.value [ fhir:value "10"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "Day" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "d" ]
+  ];
+  fhir:MedicationDispense.whenPrepared [ fhir:value "2015-01-15T10:20:00Z"^^xsd:dateTime];
+  fhir:MedicationDispense.whenHandedOver [ fhir:value "2015-01-15T16:20:00Z"^^xsd:dateTime];
+  fhir:MedicationDispense.dosageInstruction [
+     fhir:index 0;
+     fhir:DosageInstruction.sequence [ fhir:value "1"^^xsd:int ];
+     fhir:DosageInstruction.text [ fhir:value "Apply twice daily to affected area on left arm" ];
+     fhir:DosageInstruction.additionalInstructions [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Apply sparingly" ]
+     ];
+     fhir:DosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:DosageInstruction.siteCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:72098002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "72098002" ];
+         fhir:Coding.display [ fhir:value "Entire left upper arm (body structure)" ]
+       ]
+     ];
+     fhir:DosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:359540000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "359540000" ];
+         fhir:Coding.display [ fhir:value "Topical (qualifier value)" ]
+       ]
+     ];
+     fhir:DosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "ea" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "ea" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f006> a fhir:Practitioner .
+
+<http://hl7.org/fhir/MedicationRequest/medrx0329> a fhir:MedicationRequest .
+
+# -------------------------------------------------------------------------------------
+

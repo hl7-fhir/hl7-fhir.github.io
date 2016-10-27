@@ -1,0 +1,1117 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Resource - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/resource.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>        <li><b>Resource</b></li>          <!-- resource.html / resource / Resource -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="resource-definitions.html">Detailed Descriptions</a></li><li><a href="resource-operations.html">Operations</a></li></ul>
+
+<h1 class="self-link-parent"><span class="sectioncount">2.27<a name="2.27"> </a></span> Base Resource Definitions <a href="resource.html#2.27" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h1>
+
+
+
+<div>
+<a name="scope"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.27.1</span> Scope and Usage <a href="resource.html#scope" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>
+This specification defines a series of different types of resource that can be used to exchange and/or store data 
+in order to solve a wide range of healthcare related problems, both clinical and administrative. In addition,
+this specification defines several different ways of exchanging the resources.
+</p>
+<p>
+A resource is an entity that:
+</p>
+<ul>
+ <li>has a known identity (a url) by which it can be addressed</li>
+ <li>identifies itself as one of the types of resource defined in this specification</li>
+ <li>contains a set of structured data items as described by the definition of the resource type</li>
+ <li>has an identified version that changes if the contents of the resource change</li>
+</ul>
+<p>
+Resources have <a href="formats.html">multiple representations</a>. 
+</p>
+  <!-- <p>
+Basic definitions:
+</p>
+<table class="grid">
+ <tr> <td>Resource</td> <td>An instance of data that is stored or exchanged</td> </tr>
+ <tr> <td>Resource Definition</td> <td>Defines the data elements that are part of the resource</td> </tr>
+ <tr> <td>Profile</td> <td>Additional rules about the data elements for a particular context of use. There's a specific type of resource - the <a href="structuredefinition.html">StructureDefinition Resource</a> that is used to represent a profile</td> </tr>
+</table> -->
+
+</div>
+
+<div>
+<a name="bnr"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.27.2</span> Boundaries and Relationships <a href="resource.html#bnr" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>
+The following optional elements and properties are defined for all resources:
+</p>
+<ul>
+ <li>An identity</li>
+ <li>Meta data</li>
+ <li>A base language</li>
+ <li>A reference to &quot;Implicit Rules&quot;</li>
+</ul>
+<p>
+Most resources are derived from <a href="domainresource.html">Domain Resources</a> - so they also can contain text, contained resources, extensions,
+and data elements specific to the particular domain of the resource. There is a special type of resource called <a href="bundle.html">Bundle</a> for collections of resources. 
+</p>
+<p>
+Note: there is documentation for the <a href="formats.html">Structure</a>, <a href="formats.html#uml">UML</a>, <a href="xml.html">XML</a>, and <a href="json.html">JSON</a> representations of the resource structure. 
+</p>
+
+</div>
+
+
+
+
+<a name="resource"/>
+<h2 class="self-link-parent"><span class="sectioncount">2.27.3</span> 
+Resource Content
+ <a href="resource.html#resource" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<a name="def"> </a>
+<a name="resource"> </a>
+<a name="Resource"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+    <div id="tbl">
+      <p><b>Structure</b></p>
+      <div id="tbl-inner">
+        <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="resource-definitions.html#Resource" title="Resource : This is the base resource type for everything.">Resource</a><a name="Resource"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">n/a</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Base Resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.id" title="Resource.id : The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.">id</a><a name="Resource.id"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#id">id</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Logical id of this artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.meta" title="Resource.meta : The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.">meta</a><a name="Resource.meta"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="resource.html#Meta">Meta</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Metadata about the resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.implicitRules" title="Resource.implicitRules : A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.">implicitRules</a><a name="Resource.implicitRules"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A set of rules under which this content was created</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.language" title="Resource.language : The base language in which the resource is written.">language</a><a name="Resource.language"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Language of the resource content<br/><a href="valueset-languages.html" title="A human language.">Common Languages</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a> but limited to <a href="valueset-all-languages.html">All Languages</a>)</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+      </div>
+    </div>
+  </div>
+  <div id="tabs-uml"> 
+  
+    <div id="uml">
+      <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+      <div id="uml-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="289.20000000000005" version="1.1" height="102.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="189.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="92.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="189.20000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="94.60000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Resource «Resource»</text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.id"><title>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes</title>id</a> : <a xlink:href="datatypes.html#id">id</a> [0..1]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.meta"><title>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource</title>meta</a> : <a xlink:href="resource.html#Meta">Meta</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.implicitRules"><title>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)</title>implicitRules</a> : <a xlink:href="datatypes.html#uri">uri</a> [0..1]</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.language"><title>The base language in which the resource is written</title>language</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-languages.html"><title>A human language. (Strength=Extensible)</title>Common Languages</a>+ »</text></g></svg>
+      </div>
+    </div>
+  </div>
+  <div id="tabs-xml">
+    <div id="xml">
+      <p><b>XML Template</b></p>
+      <div id="xml-inner">
+        <pre class="spec">
+&lt;<a href="resource-definitions.html#Resource" title="This is the base resource type for everything." class="dict"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="resource-definitions.html#Resource.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." class="dict"><b>id</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Logical id of this artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Resource.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict"><b>meta</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="resource.html#Meta">Meta</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Metadata about the resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/meta&gt;
+ &lt;<a href="resource-definitions.html#Resource.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>implicitRules</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A set of rules under which this content was created</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Resource.language" title="The base language in which the resource is written." class="dict"><b>language</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-languages.html">Language of the resource content</a></span><span style="color: Gray"> --&gt;</span>
+&lt;/[name]&gt;
+</pre>
+
+      </div>
+    </div>
+  </div>
+  <div id="tabs-json">
+    <div id="json">
+      <p><b>JSON Template</b></p>
+      <div id="json-inner">
+        <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="resource-definitions.html#Resource" title="This is the base resource type for everything." class="dict"><b>[name]</b></a>&quot;,
+  &quot;<a href="resource-definitions.html#Resource.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." class="dict">id</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Logical id of this artifact</a></span>
+  &quot;<a href="resource-definitions.html#Resource.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict">meta</a>&quot; : { <span style="color: darkgreen"><a href="resource.html#Meta">Meta</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Metadata about the resource</a></span>
+  &quot;<a href="resource-definitions.html#Resource.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">implicitRules</span></a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A set of rules under which this content was created</a></span>
+  &quot;<a href="resource-definitions.html#Resource.language" title="The base language in which the resource is written." class="dict">language</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot; <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-languages.html">Language of the resource content</a></span>
+}
+</pre>
+
+      </div>
+    </div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="resource-definitions.html#Resource.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." class="dict">Resource.id</a><a name="ttl-id"> </a>[ <a href="datatypes.html#id">id</a> ]; # 0..1 <span style="color: navy">Logical id of this artifact</span>
+  fhir:<a href="resource-definitions.html#Resource.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict">Resource.meta</a><a name="ttl-meta"> </a>[ <a href="resource.html#Meta">Meta</a> ]; # 0..1 <span style="color: navy">Metadata about the resource</span>
+  fhir:<a href="resource-definitions.html#Resource.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Resource.implicitRules</span></a><a name="ttl-implicitRules"> </a>[ <a href="datatypes.html#uri">uri</a> ]; # 0..1 <span style="color: navy">A set of rules under which this content was created</span>
+  fhir:<a href="resource-definitions.html#Resource.language" title="The base language in which the resource is written." class="dict">Resource.language</a><a name="ttl-language"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">Language of the resource content</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+    <div id="tbl">
+      <a name="tbl"> </a>
+      <p><b>Structure</b></p>
+      <div id="tbl-inner">
+        <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="resource-definitions.html#Resource" title="Resource : This is the base resource type for everything.">Resource</a><a name="Resource"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">n/a</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Base Resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.id" title="Resource.id : The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.">id</a><a name="Resource.id"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#id">id</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Logical id of this artifact</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.meta" title="Resource.meta : The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.">meta</a><a name="Resource.meta"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="resource.html#Meta">Meta</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Metadata about the resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.implicitRules" title="Resource.implicitRules : A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.">implicitRules</a><a name="Resource.implicitRules"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is a modifier element">?!</span><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A set of rules under which this content was created</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Resource.language" title="Resource.language : The base language in which the resource is written.">language</a><a name="Resource.language"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Language of the resource content<br/><a href="valueset-languages.html" title="A human language.">Common Languages</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a> but limited to <a href="valueset-all-languages.html">All Languages</a>)</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+      </div>
+    </div>
+
+ 
+    <div id="uml">
+      <a name="uml"> </a>
+      <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+      <div id="uml-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="289.20000000000005" version="1.1" height="102.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="189.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="92.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="189.20000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="94.60000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Resource «Resource»</text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.id"><title>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes</title>id</a> : <a xlink:href="datatypes.html#id">id</a> [0..1]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.meta"><title>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource</title>meta</a> : <a xlink:href="resource.html#Meta">Meta</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.implicitRules"><title>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)</title>implicitRules</a> : <a xlink:href="datatypes.html#uri">uri</a> [0..1]</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="resource-definitions.html#Resource.language"><title>The base language in which the resource is written</title>language</a> : <a xlink:href="datatypes.html#code">code</a> [0..1] « <a xlink:href="valueset-languages.html"><title>A human language. (Strength=Extensible)</title>Common Languages</a>+ »</text></g></svg>
+      </div>
+    </div>
+    <div id="xml">
+      <a name="xml"> </a>
+      <p><b>XML Template</b></p>
+      <div id="xml-inner">
+        <pre class="spec">
+&lt;<a href="resource-definitions.html#Resource" title="This is the base resource type for everything." class="dict"><b>[name]</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="resource-definitions.html#Resource.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." class="dict"><b>id</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Logical id of this artifact</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Resource.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict"><b>meta</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="resource.html#Meta">Meta</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Metadata about the resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/meta&gt;
+ &lt;<a href="resource-definitions.html#Resource.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline"><b>implicitRules</b></span></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A set of rules under which this content was created</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Resource.language" title="The base language in which the resource is written." class="dict"><b>language</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="valueset-languages.html">Language of the resource content</a></span><span style="color: Gray"> --&gt;</span>
+&lt;/[name]&gt;
+</pre>
+
+      </div>
+    </div>
+
+<div id="json2">
+      <a name="json"> </a>
+      <p><b>JSON Template</b></p>
+      <div id="json-inner">
+        <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="resource-definitions.html#Resource" title="This is the base resource type for everything." class="dict"><b>[name]</b></a>&quot;,
+  &quot;<a href="resource-definitions.html#Resource.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." class="dict">id</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Logical id of this artifact</a></span>
+  &quot;<a href="resource-definitions.html#Resource.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict">meta</a>&quot; : { <span style="color: darkgreen"><a href="resource.html#Meta">Meta</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Metadata about the resource</a></span>
+  &quot;<a href="resource-definitions.html#Resource.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">implicitRules</span></a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A set of rules under which this content was created</a></span>
+  &quot;<a href="resource-definitions.html#Resource.language" title="The base language in which the resource is written." class="dict">language</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#code">code</a></span>&gt;&quot; <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-languages.html">Language of the resource content</a></span>
+}
+</pre>
+
+      </div>
+    </div>  
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="resource-definitions.html#Resource.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." class="dict">Resource.id</a><a name="ttl-id"> </a>[ <a href="datatypes.html#id">id</a> ]; # 0..1 <span style="color: navy">Logical id of this artifact</span>
+  fhir:<a href="resource-definitions.html#Resource.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict">Resource.meta</a><a name="ttl-meta"> </a>[ <a href="resource.html#Meta">Meta</a> ]; # 0..1 <span style="color: navy">Metadata about the resource</span>
+  fhir:<a href="resource-definitions.html#Resource.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">Resource.implicitRules</span></a><a name="ttl-implicitRules"> </a>[ <a href="datatypes.html#uri">uri</a> ]; # 0..1 <span style="color: navy">A set of rules under which this content was created</span>
+  fhir:<a href="resource-definitions.html#Resource.language" title="The base language in which the resource is written." class="dict">Resource.language</a><a name="ttl-language"> </a>[ <a href="datatypes.html#code">code</a> ]; # 0..1 <span style="color: navy">Language of the resource content</span>
+]
+</pre>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+
+<a name="tx"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.1</span> 
+Terminology Bindings
+ <a href="resource.html#tx" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="Common Languages">Resource.language </td><td valign="top">A human language.</td><td><a href="terminologies.html#extensible">Extensible</a>, but limited to <a href="valueset-all-languages.html">All Languages</a></td><td valign="top"><a href="valueset-languages.html">Common Languages</a>  <!-- b --></td> </tr>
+</table>
+<p> </p>
+
+
+
+
+
+<a name="id"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.2</span> Resource Identity <a href="resource.html#id" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Each resource has an &quot;id&quot; element which contains the logical identity of the resource 
+assigned by the server responsible for storing it. Resources always have a known identity
+except for the special case when a new resources is being sent to a server to assign
+an identity (<a href="http.html#create">create interaction</a>). 
+The logical identity is unique within the space of all resources of the same type on 
+the same server. Once assigned, the identity is never changed. Note that if the
+resource is copied to another server, the copy might not be able to retain 
+the same logical identity.
+</p>
+
+<p>
+The unique identifier of a resource instance is an absolute URI constructed from the server 
+base address at which the instance is found, the resource type and the Logical ID, such as 
+http://test.fhir.org/rest/Patient/123 (where 123 is the Logical Id).  
+When the literal identity is an HTTP address, this address can generally 
+be used to retrieve or manipulate the resource. Note that 
+implementations SHOULD NOT assume that the identity of a resource is always resolvable 
+to a literal server - it may be temporarily unavailable, or not available by policy (e.g. firewalls) or in some 
+cases, it may not actually exist (e.g. use of resource outside a RESTful environment). 
+Resources reference each other by their identity. These references are allowed to be absolute 
+or relative (see <a href="references.html">Resource References</a> for further discussion).
+Copying or moving resources from one server to another means that resources acquire a new identity. For further details, 
+see <a href="managing.html">Managing Resource Identity</a>.
+</p>
+
+<p>
+Logical ids (and therefore literal identities) are case sensitive. Logical Ids are always 
+opaque, and external systems need not and should not attempt to determine their internal 
+structure. A logical id SHALL always be represented in the same way in resource references 
+and URLs. Ids can be up to 64 characters long, and contain any combination of upper and 
+lowercase ASCII letters, numerals, &quot;-&quot; and &quot;.&quot;. 
+</p>
+
+<a name="identifiers"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.27.3.2.1</span> &quot;Business&quot; Identifiers <a href="resource.html#identifiers" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+In addition to the logical id and literal identity discussed above, many 
+resources contain an element named &quot;identifier&quot;, which, if populated, 
+contains a different kind of identifier. As resources are copied
+from server to server, their literal identity will change, and their
+logical id may change.
+</p>
+<p>
+However, all copies of the resource refer to the same underlying concept,
+and this concept may also be represented in other formats (variously, <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 v2 <img src="external.png" style="text-align: baseline"/></a>,
+<a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDA <img src="external.png" style="text-align: baseline"/></a>, XDS, and many more). Each representation carries the same identifier
+that identifies it consistently across all contexts of use. This is known
+as the business identifier, and is found in the <i>identifier</i> element. 
+In a few resources, there is a <i>url</i> element that serves a similar
+purpose, but is constrained to be a literal URL for implementation reasons.
+</p>
+<p>
+All resources that have an <code>identifier</code> element support searching
+by the identifier, so that records can located by that method. So if 
+an <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 v2 <img src="external.png" style="text-align: baseline"/></a> message has the following OBR:
+</p>
+<pre>
+OBR|1|845439^GHH OE|1045813^GHH LAB|1554-5^GLUCOSE^LN|||200202150730|...
+</pre>
+<p>
+Then the DiagnosticReport it represents can be located using the 
+following query:
+</p>
+<pre>
+ GET [base]/DiagnosticReport?identifier=1045813
+</pre>
+<p>
+If a FHIR server is a stable server that is the canonical master source 
+for the definition of a concept, the business identifier for all 
+systems may be the same as the literal identity of the resource on the 
+master server.
+</p>
+
+
+<a name="metadata"> </a>
+<a name="meta"> </a>
+<a name="Meta"/>
+
+<h3 style="margin-bottom: 1px" class="self-link-parent"><span class="sectioncount">2.27.3.3</span> 
+Resource Metadata
+ <a href="resource.html#Meta" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Each resource contains an element &quot;meta&quot;, of type &quot;Meta&quot;, which is a set of 
+metadata that provides technical and workflow context to the resource. The 
+metadata items are all optional, though some of all of them may be required 
+in particular implementations or contexts of use.
+</p>
+
+<table class="grid">
+  <tr>
+    <th>Metadata Item</th>
+    <th>Type</th>
+    <th>Usage</th>
+  </tr>
+  <tr>
+    <td>versionId (0..1)</td>
+    <td><a href="datatypes.html#id">id</a></td>
+    <td>Changes each time the content of the resource changes. Can be referenced in a <a href="references.html#Resource">resource reference</a>. 
+      Can be used to ensure that updates are based on the latest version of the resource. 
+    <br/>The version can be globally unique, or scoped by the Logical Id of the resource. 
+     Version identifiers are generally either a serially incrementing id scoped by the logical id, or a uuid, though neither of these approaches 
+     is required. There is no fixed order for version ids - clients cannot assume that a versionId that comes after another one either numerically or alphabetically represents a later version. 
+     The same versionId can never be used for more than one version of the same resource.
+    <br/>Note that servers SHOULD support versions, but some are unable to</td>
+  </tr>
+	 
+  <tr>
+   <td>lastUpdated (0..1)</td>
+   <td><a href="datatypes.html#instant">instant</a></td>
+   <td>If populated, this value changes each time the content of the resource 
+    changes. it can be used by a system or a human to judge the currency of the resource content. 
+    Note that <a href="http.html#update">version aware updates</a> do not use this element</td>
+  </tr>
+	
+  <tr>
+   <td>profile (0..*)</td>
+   <td><a href="datatypes.html#uri">uri</a></td>
+   <td>An assertion that the content conforms to a resource profile (a <a href="structuredefinition.html">StructureDefinition</a>). See <a href="profiling.html#resources">Extending and Restricting Resources</a> for further discussion. 
+    Can be changed as profiles and value sets change or the system rechecks conformance</td>
+  </tr>
+	
+  <tr>
+   <td>security (0..*)</td>
+   <td><a href="datatypes.html#Coding">Coding</a></td>
+   <td><a href="security-labels.html">Security labels</a> applied to this resource. These tags connect resources in specific ways to 
+    the overall security policy and infrastructure. Security tags can be updated when the resource changes, or whenever the security sub-system chooses to</td>
+  </tr>
+	
+  <tr>
+   <td>tag (0..*)</td>
+   <td><a href="datatypes.html#Coding">Coding</a></td>
+   <td><a href="resource-definitions.html#Meta.tag">Tags</a> applied to this resource. Tags are used to relate resources to process and workflow. Applications are not required to consider 
+    the tags when interpreting the meaning of a resource.</td>
+  </tr>
+		
+</table>
+  
+<div id="tabs-Meta">
+ <ul>
+  <li><a href="#tabs-Meta-struc">Structure</a></li>
+  <li><a href="#tabs-Meta-uml">UML</a></li>
+  <li><a href="#tabs-Meta-xml">XML</a></li>
+  <li><a href="#tabs-Meta-json">JSON</a></li>
+  <li><a href="#tabs-Meta-ttl">Turtle</a></li>
+  <li><a href="#tabs-Meta-diff">R2 Diff</a></li>
+  <li><a href="#tabs-Meta-all">All</a></li>
+ </ul>
+ <div id="tabs-Meta-struc">
+  <div id="tbl">
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="resource-definitions.html#Meta" title="Meta : The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.">Meta</a><a name="Meta"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Metadata about a resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.versionId" title="Meta.versionId : The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.">versionId</a><a name="Meta.versionId"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#id">id</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Version specific identifier</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.lastUpdated" title="Meta.lastUpdated : When the resource last changed - e.g. when the version changed.">lastUpdated</a><a name="Meta.lastUpdated"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#instant">instant</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When the resource version last changed</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.profile" title="Meta.profile : A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].">profile</a><a name="Meta.profile"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Profiles this resource claims to conform to</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.security" title="Meta.security : Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.">security</a><a name="Meta.security"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Security Labels applied to this resource<br/><a href="valueset-security-labels.html" title="Security Labels from the Healthcare Privacy and Security Classification System.">All Security Labels</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.tag" title="Meta.tag : Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.">tag</a><a name="Meta.tag"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Tags applied to this resource<br/><a href="valueset-common-tags.html" title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;">Common Tags</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Meta-uml">
+  <div id="uml">
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="571.2" version="1.1" height="126.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1)" rx="4" ry="4" x="160.0" width="211.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="106.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="371.20000000000005" style="stroke:dimgrey;stroke-width:1"/><text x="265.6" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#meta">Meta</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.versionId"><title>The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted</title>versionId</a> : <a xlink:href="datatypes.html#id">id</a> [0..1]</text><text x="166.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.lastUpdated"><title>When the resource last changed - e.g. when the version changed</title>lastUpdated</a> : <a xlink:href="datatypes.html#instant">instant</a> [0..1]</text><text x="166.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.profile"><title>A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]</title>profile</a> : <a xlink:href="datatypes.html#uri">uri</a> [0..*]</text><text x="166.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.security"><title>Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure</title>security</a> : <a xlink:href="datatypes.html#Coding">Coding</a> [0..*] « <a xlink:href="valueset-security-labels.html"><title>Security Labels from the Healthcare Privacy and Security Classification System. (Strength=Extensible)</title>All Security Labels</a>+ »</text><text x="166.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.tag"><title>Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource</title>tag</a> : <a xlink:href="datatypes.html#Coding">Coding</a> [0..*] « <a xlink:href="valueset-common-tags.html"><title>Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot; (Strength=Example)</title>Common Tags</a>?? »</text></g></g><line y1="31.2341650671785" x1="114.4" y2="37.79846449136276" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(8.19167759053961 114.4 31.2341650671785)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,31.2341650671785 122.4,37.234165067178495 122.4,25.2341650671785 114.4,31.2341650671785"/></svg>
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Meta-xml">
+  <div id="xml">
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+    <pre class="spec">
+&lt;<a href="resource-definitions.html#Meta" title="The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict"><b>meta</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="resource-definitions.html#Meta.versionId" title="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." class="dict"><b>versionId</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Version specific identifier</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Meta.lastUpdated" title="When the resource last changed - e.g. when the version changed." class="dict"><b>lastUpdated</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When the resource version last changed</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Meta.profile" title="A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]." class="dict"><b>profile</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Profiles this resource claims to conform to</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Meta.security" title="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." class="dict"><b>security</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> <span style="color: navy"><a style="color: navy" href="valueset-security-labels.html">Security Labels applied to this resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/security&gt;
+ &lt;<a href="resource-definitions.html#Meta.tag" title="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." class="dict"><b>tag</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> <span style="color: navy"><a style="color: navy" href="valueset-common-tags.html">Tags applied to this resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/tag&gt;
+&lt;/meta&gt;
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Meta-json">
+  <div id="json">
+   <p><b>JSON Template</b></p>   <div id="json-inner">
+    <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  // from Element: <a href="extensibility.html">extension</a>
+  &quot;<a href="resource-definitions.html#Meta.versionId" title="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." class="dict">versionId</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Version specific identifier</a></span>
+  &quot;<a href="resource-definitions.html#Meta.lastUpdated" title="When the resource last changed - e.g. when the version changed." class="dict">lastUpdated</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When the resource version last changed</a></span>
+  &quot;<a href="resource-definitions.html#Meta.profile" title="A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]." class="dict">profile</a>&quot; : [&quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Profiles this resource claims to conform to</a></span>
+  &quot;<a href="resource-definitions.html#Meta.security" title="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." class="dict">security</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-security-labels.html">Security Labels applied to this resource</a></span>
+  &quot;<a href="resource-definitions.html#Meta.tag" title="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." class="dict">tag</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> }] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-common-tags.html">Tags applied to this resource</a></span>
+}
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Meta-ttl">
+  <div id="json">
+   <p><b>Turtle Template</b></p>   <div id="ttl-inner">
+    <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="resource-definitions.html#Meta.versionId" title="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." class="dict">Meta.versionId</a><a name="ttl-versionId"> </a>[ <a href="datatypes.html#id">id</a> ]; # 0..1 <span style="color: navy">Version specific identifier</span>
+  fhir:<a href="resource-definitions.html#Meta.lastUpdated" title="When the resource last changed - e.g. when the version changed." class="dict">Meta.lastUpdated</a><a name="ttl-lastUpdated"> </a>[ <a href="datatypes.html#instant">instant</a> ]; # 0..1 <span style="color: navy">When the resource version last changed</span>
+  fhir:<a href="resource-definitions.html#Meta.profile" title="A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]." class="dict">Meta.profile</a><a name="ttl-profile"> </a>[ <a href="datatypes.html#uri">uri</a> ], ... ; # 0..* <span style="color: navy">Profiles this resource claims to conform to</span>
+  fhir:<a href="resource-definitions.html#Meta.security" title="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." class="dict">Meta.security</a><a name="ttl-security"> </a>[ <a href="datatypes.html#Coding">Coding</a> ], ... ; # 0..* <span style="color: navy">Security Labels applied to this resource</span>
+  fhir:<a href="resource-definitions.html#Meta.tag" title="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." class="dict">Meta.tag</a><a name="ttl-tag"> </a>[ <a href="datatypes.html#Coding">Coding</a> ], ... ; # 0..* <span style="color: navy">Tags applied to this resource</span>
+]
+</pre>
+
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Meta-diff">
+  <div id="diff">
+   <p><b>Changes since DSTU2</b></p>   <div id="diff-inner">
+    <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Meta</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-Meta-all">
+  <div id="tbla">
+   <a name="tbl-Meta"> </a>
+   <p><b>Structure</b></p>
+   <div id="tbl-inner">
+    <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="resource-definitions.html#Meta" title="Meta : The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.">Meta</a><a name="Meta"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="element.html">Element</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Metadata about a resource</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.versionId" title="Meta.versionId : The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.">versionId</a><a name="Meta.versionId"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#id">id</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Version specific identifier</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.lastUpdated" title="Meta.lastUpdated : When the resource last changed - e.g. when the version changed.">lastUpdated</a><a name="Meta.lastUpdated"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#instant">instant</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When the resource version last changed</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.profile" title="Meta.profile : A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].">profile</a><a name="Meta.profile"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Profiles this resource claims to conform to</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.security" title="Meta.security : Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.">security</a><a name="Meta.security"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Security Labels applied to this resource<br/><a href="valueset-security-labels.html" title="Security Labels from the Healthcare Privacy and Security Classification System.">All Security Labels</a> (<a href="terminologies.html#extensible" title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">Extensible</a>)</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="resource-definitions.html#Meta.tag" title="Meta.tag : Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.">tag</a><a name="Meta.tag"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding: 3px" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Tags applied to this resource<br/><a href="valueset-common-tags.html" title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;">Common Tags</a> (<a href="terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.">Example</a>)</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+   </div>
+  </div>
+
+  <div id="umla">
+   <a name="uml-Meta"> </a>
+   <p><b>UML Diagram</b> (<a href="formats.html#uml">Legend</a>)</p>
+   <div id="uml-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="571.2" version="1.1" height="126.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadow1b" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="0.0" width="114.4" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="46.0"/><text x="57.2" y="20.0" fill="black" class="diagram-class-title">Element</text><line y1="28.0" x1="0.0" y2="28.0" x2="114.4" style="stroke:dimgrey;stroke-width:1"/><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="extensibility.html"><title>Extensions - as described for all elements: additional information that is not part of the basic definition of the resource / type</title>extension</a> : <a xlink:href="extensibility.html">Extension</a> 0..*</text><g><rect filter="url(#shadow1b)" rx="4" ry="4" x="160.0" width="211.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="106.0"/><line y1="28.0" x1="160.0" y2="28.0" x2="371.20000000000005" style="stroke:dimgrey;stroke-width:1"/><text x="265.6" y="20.0" fill="black" class="diagram-class-title"><a xlink:href="#meta">Meta</a></text><text x="166.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.versionId"><title>The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted</title>versionId</a> : <a xlink:href="datatypes.html#id">id</a> [0..1]</text><text x="166.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.lastUpdated"><title>When the resource last changed - e.g. when the version changed</title>lastUpdated</a> : <a xlink:href="datatypes.html#instant">instant</a> [0..1]</text><text x="166.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.profile"><title>A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]</title>profile</a> : <a xlink:href="datatypes.html#uri">uri</a> [0..*]</text><text x="166.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.security"><title>Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure</title>security</a> : <a xlink:href="datatypes.html#Coding">Coding</a> [0..*] « <a xlink:href="valueset-security-labels.html"><title>Security Labels from the Healthcare Privacy and Security Classification System. (Strength=Extensible)</title>All Security Labels</a>+ »</text><text x="166.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="datatypes-definitions.html#Meta.tag"><title>Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource</title>tag</a> : <a xlink:href="datatypes.html#Coding">Coding</a> [0..*] « <a xlink:href="valueset-common-tags.html"><title>Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot; (Strength=Example)</title>Common Tags</a>?? »</text></g></g><line y1="31.2341650671785" x1="114.4" y2="37.79846449136276" x2="160.0" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(8.19167759053961 114.4 31.2341650671785)" style="fill:white;stroke:navy;stroke-width:1" points="114.4,31.2341650671785 122.4,37.234165067178495 122.4,25.2341650671785 114.4,31.2341650671785"/></svg>
+   </div>
+  </div>
+
+  <div id="xmla">
+   <a name="xml-Meta"> </a>
+   <p><b>XML Template</b></p>
+   <div id="xml-inner">
+     <pre class="spec">
+&lt;<a href="resource-definitions.html#Meta" title="The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." class="dict"><b>meta</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from Element: <a href="extensibility.html">extension</a> --&gt;
+ &lt;<a href="resource-definitions.html#Meta.versionId" title="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." class="dict"><b>versionId</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Version specific identifier</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Meta.lastUpdated" title="When the resource last changed - e.g. when the version changed." class="dict"><b>lastUpdated</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When the resource version last changed</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Meta.profile" title="A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]." class="dict"><b>profile</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Profiles this resource claims to conform to</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="resource-definitions.html#Meta.security" title="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." class="dict"><b>security</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> <span style="color: navy"><a style="color: navy" href="valueset-security-labels.html">Security Labels applied to this resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/security&gt;
+ &lt;<a href="resource-definitions.html#Meta.tag" title="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." class="dict"><b>tag</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> <span style="color: navy"><a style="color: navy" href="valueset-common-tags.html">Tags applied to this resource</a></span><span style="color: Gray"> --&gt;</span>&lt;/tag&gt;
+&lt;/meta&gt;
+</pre>
+
+
+   </div>
+  </div>
+
+  <div id="jsona">
+   <a name="json-Meta"> </a>
+   <p><b>JSON Template</b></p>
+   <div id="json-inner">
+     <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  // from Element: <a href="extensibility.html">extension</a>
+  &quot;<a href="resource-definitions.html#Meta.versionId" title="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." class="dict">versionId</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#id">id</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Version specific identifier</a></span>
+  &quot;<a href="resource-definitions.html#Meta.lastUpdated" title="When the resource last changed - e.g. when the version changed." class="dict">lastUpdated</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#instant">instant</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When the resource version last changed</a></span>
+  &quot;<a href="resource-definitions.html#Meta.profile" title="A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]." class="dict">profile</a>&quot; : [&quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#uri">uri</a></span>&gt;&quot;], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Profiles this resource claims to conform to</a></span>
+  &quot;<a href="resource-definitions.html#Meta.security" title="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." class="dict">security</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-security-labels.html">Security Labels applied to this resource</a></span>
+  &quot;<a href="resource-definitions.html#Meta.tag" title="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." class="dict">tag</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Coding">Coding</a></span> }] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="valueset-common-tags.html">Tags applied to this resource</a></span>
+}
+</pre>
+
+
+   </div>
+  </div>
+  <div id="ttla">
+   <a name="ttl-Meta"> </a>
+   <p><b>Turtle Template</b></p>
+   <div id="ttl-inner">
+     <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+
+[
+ # from Element: <a href="extensibility.html">Element.extension</a>
+  fhir:<a href="resource-definitions.html#Meta.versionId" title="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." class="dict">Meta.versionId</a><a name="ttl-versionId"> </a>[ <a href="datatypes.html#id">id</a> ]; # 0..1 <span style="color: navy">Version specific identifier</span>
+  fhir:<a href="resource-definitions.html#Meta.lastUpdated" title="When the resource last changed - e.g. when the version changed." class="dict">Meta.lastUpdated</a><a name="ttl-lastUpdated"> </a>[ <a href="datatypes.html#instant">instant</a> ]; # 0..1 <span style="color: navy">When the resource version last changed</span>
+  fhir:<a href="resource-definitions.html#Meta.profile" title="A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]." class="dict">Meta.profile</a><a name="ttl-profile"> </a>[ <a href="datatypes.html#uri">uri</a> ], ... ; # 0..* <span style="color: navy">Profiles this resource claims to conform to</span>
+  fhir:<a href="resource-definitions.html#Meta.security" title="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." class="dict">Meta.security</a><a name="ttl-security"> </a>[ <a href="datatypes.html#Coding">Coding</a> ], ... ; # 0..* <span style="color: navy">Security Labels applied to this resource</span>
+  fhir:<a href="resource-definitions.html#Meta.tag" title="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." class="dict">Meta.tag</a><a name="ttl-tag"> </a>[ <a href="datatypes.html#Coding">Coding</a> ], ... ; # 0..* <span style="color: navy">Tags applied to this resource</span>
+]
+</pre>
+
+
+   </div>
+  </div>
+  <div id="diffa">
+   <a name="diff-Meta"> </a>
+   <p><b>Changes since DSTU2</b></p>
+   <div id="diff-inner">
+     <table class="grid">
+  <tr class="diff-item">
+    <td class="diff-left">Meta</td>
+    <td class="diff-right"/>
+No Changes
+  </tr>
+</table>
+
+<p>See the <a href="diff.html">Full Difference</a> for further information</p>
+
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<p>
+Note that the RESTful API defines some <a href="operations.html">Operations</a> that provide
+<a href="resource-operations.html#meta">direct read and write access</a> to the <i>meta</i> element.   
+</p>
+
+<a name="versions"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.27.3.3.1</span> Technical vs Business Versions <a href="resource.html#versions" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+All resources are conceptually versioned, and each resource sits at the head of a linear list of past versions. 
+The past versions are superseded by the current version, and only available for audit/integrity purposes. 
+The current version is e.g. http://acme.org/fhir/ResourceType/id123, and a past version would be 
+http://acme.org/fhir/ResourceType/id123/_history/v2.
+</p>
+<p>
+Note that there's no requirement for servers to keep a history. The 
+<a href="http.html#history">history interaction</a> is provided for 
+where this is an appropriate service to provide. However, whether a server keeps them 
+or not, past versions are dead and gone. 
+The current version of the resource is in the <i>Resource.meta.versionId</i>. For a value set this would be:
+</p>
+<pre>
+&lt;ValueSet&gt;
+  &lt;meta&gt;
+    &lt;versionId value=&quot;v2&quot;/&gt;
+  &lt;/meta&gt;
+&lt;/ValueSet&gt;
+</pre>
+<p>
+That version changes every time the server updates the resource and writes a new version over the top of an existing one. 
+</p>
+<p>
+Some resources have another version marker in them. For instance, ValueSet has another version in it:
+</p>
+<pre>
+&lt;ValueSet&gt;
+  &lt;url value=&quot;http://acme.com/fhir/ValueSet/example&quot;/&gt;
+  &lt;version value=&quot;2.0&quot;/&gt;
+&lt;/ValueSet&gt;
+</pre>
+<p>
+This says that this is version 2.0 of the 'example' value set. This is the business version of the value set, the one that humans get involved with.
+These 2 versions elements have quite different lifecycles. To illustrate, take these cases: 
+</p>
+<ol>
+ <li>
+  A value set is posted to a server (POST [base]/ValueSet) with ValueSet.url = &quot;http://acme.com/valuesets/example&quot;. This is identified as the 1st version of the value set (ValueSet.version = 1). 
+  When the server gets it, it assigns an identity e.g. ValueSet.id = x1, and ValueSet.meta.versionId = 1. 
+  Later, another user creates a revised version of the value set, and this is called version 2. It is committed to the server 
+  as an update (PUT [base]/ValueSet/x1). 
+  <br/>
+  Now, ValueSet.url = http://acme.com/valuesets/example, ValueSet.id = x1, ValueSet.version = 2 and ValueSet.meta.versionId = 2
+ </li>
+ <li>
+  A value set is posted to a server (POST [base]/ValueSet) with ValueSet.url = &quot;http://acme.com/valuesets/example&quot;. This is identified as the 1st version of the value set (ValueSet.version = 1). 
+  When the server gets it, it assigns an identity e.g. ValueSet.id = x1, and ValueSet.meta.versionId = 1.   
+  Then a typo is found in the definition, so this is fixed, but it's still v1 of the value set. This is PUT to [base]/ValueSet/x1. 
+  Now, ValueSet.url = http://acme.com/valuesets/example, ValueSet.id = x1, ValueSet.version = 1 and ValueSet.meta.versionId = 2.
+  <br/>
+  Later, another user creates a revised version of the value set, and this is called version 2. It is commmited to the server 
+  as an update (PUT [base]/ValueSet/x1). Now, ValueSet.url = http://acme.com/valuesets/example, ValueSet.id = x1, ValueSet.version = 2 and ValueSet.meta.versionId = 3
+ </li> 
+ <li>
+  A value set is posted to a server (POST [base]/ValueSet) with ValueSet.url = &quot;http://acme.com/valuesets/example&quot;. This is identified as the 1st version of the value set (ValueSet.version = 1). 
+  When the server gets it, it assigns an identity e.g. ValueSet.id = x1, and ValueSet.meta.versionId = 1.  
+  Later, another user creates a revised version of the value set, and this is called version 2.
+This time, as well as supporting this new version 2, there are production systems still using version 1, and both need to be valid on the value set server. 
+So a new value set is created on the server (POST [base]/ValueSet) and is assigned the identiity 'x2'. 
+<br/>
+Now, there are two different value sets, both with URL &quot;http://acme.com/valuesets/example&quot;. One has ValueSet.id = x1, ValueSet.version = 1 and 
+ValueSet.meta.versionId = 1 and the other has ValueSet.id = x2, ValueSet.version = 2 and ValueSet.meta.versionId = 1.
+ </li>
+</ol>
+
+
+<a name="implicitRules"> </a>  
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.4</span> Implicit Rules <a href="resource.html#implicitRules" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+A reference to a custom agreement that describes 
+how the resource is being used (e.g. an <a href="profiling.html#glossary">implementation guide</a>)  
+that was followed when the resource was constructed, where the implemenation guide must be 
+known and understood in order to safely processing the content.
+</p>
+<p>
+Asserting this rule set restricts the content to be only understood by a limited set of 
+trading partners. This inherently limits the usefulness of the data in the long term,
+and should be avoided where possible. However, the existing health 
+eco-system is highly fractured, and not yet ready to define, collect, and exchange 
+data in a generally exchangeable sense. 
+</p>
+<p>
+Note that resources are almost always constructed following some custom agreement.
+Best practice - which is recommended through out the conformance resources - is that 
+such agreements make all knowledge about the content of the resource explicit in 
+the content of the resource (e.g. no default values in profiles); if custom agreements 
+follow this advice, and declare their extensions as required, then it is not necessary 
+to understand the agreement in order to safely process the resource content. For this 
+reason, use of <code>implicitRules</code> is rare.
+</p>
+
+<a name="lang"> </a>
+<a name="language"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.5</span> Language <a href="resource.html#language" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+Each resource may have a language element that specifies the base language of the content using a <a href="http://tools.ietf.org/html/bcp47">code defined in BCP 47 <img src="external.png" style="text-align: baseline"/></a>.
+The language element is provided to support indexing and accessibility (e.g. text-to-speech use the language tag). 
+</p>
+<p>
+There is no default language, though one may be inferred from the context of use.
+Not all of the content of the resource has to be in the specified language. 
+</p>
+<p>
+If a language is specified, it should also be specified on the <a href="narrative.html#Narrative">Narrative Text</a>. 
+The html language tag in the narrative is used when processing the narrative. The language tag on the resource is provided 
+so that applications processing the data in the resource can specify the language of any alternate presentations generated from the data.
+</p>
+
+<a name="tags"> </a>
+<a name="tag"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.6</span> Tags, Profiles, and Security Labels <a href="resource.html#tag" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+These 3 metadata attributes are part of the resource, but are never used to keep information 
+that needs to be understood when interpreting the content of a resource; their 
+function is limited to finding and controlling access to the resource, and connecting 
+resources to technical or clinical workflow.
+</p>
+
+<a name="simple-tags"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.27.3.6.1</span> Tags <a href="resource.html#simple-tags" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Tags are used to associate additional operational information with the Resources, including
+such as workflow management. A typical use of tagging would be to maintain an informal list
+of resources that need review.
+</p>
+<p>
+In a general tag, the <a href="datatypes.html#coding">coded concept</a> may be a reference to a 
+healthcare vocabulary, including ones defined in this specification, or vocabularies such 
+as those defined by HL7 for other purposes (e.g. <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">HL7 v2 <img src="external.png" style="text-align: baseline"/></a> and <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186">HL7 v3 <img src="external.png" style="text-align: baseline"/></a>/<a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDA <img src="external.png" style="text-align: baseline"/></a>), LOINC, or SNOMED CT. 
+Alternatively, the concept may be one defined by the implementation in the local context. 
+</p>
+<p>
+The list of tags on a resource is a set, where each tag is unique based on the 
+<code>system</code>+<code>code</code> combination.
+</p>
+
+<a name="profile-tags"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.27.3.6.2</span> Profile Tags <a href="resource.html#profile-tags" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+A profile assertion represents a claim that the resource conforms to <a href="structuredefinition.html">the identified StructureDefinition</a>,
+which makes rules about what 
+content is allowed to be in a resource. In a profile tag, the term
+is a URL that references an identified <a href="structuredefinition.html">StructureDefinition</a> resource.
+</p>
+<p>
+It's always possible to determine whether a resource conforms to any 
+profile simply by testing it against the profile (the <a href="downloads.html">validation tools</a>
+provide the functionality to perform this test in a variety of contexts). 
+However there are several circumstances where simply examining whether 
+a resource conforms to a particular profile as needed is impractical:
+</p>
+<ul>
+ <li>A server searching a set of resources for ones that conform to a particular profile</li>
+ <li>A receiver that has many profiles to choose when validating resource</li>
+</ul>
+<p>
+Profile Tags serve these use cases - a client/creator of a resource can tag the 
+resource with an assertion that the resource conforms to a particular structure definition. 
+The server/receiver of the resource can choose to take this assertion at face value, or 
+to assist in locating the correct <a href="structuredefinition.html">StructureDefinition</a> 
+against which to validate the resource. 
+</p>
+<p>
+Note: resources can conform to multiple profiles at once. A resource can conform to 
+a profile without ever being labeled that it does, or a resource may falsely claim to conform 
+to a profile. For this reason, applications processing resources SHOULD always 
+depend on the contents of the resource when processing them, and/or check resources
+against the <a href="structuredefinition.html">StructureDefinition</a>s directly rather 
+than relying the existence of profile tags for meaning.
+Profile Tags are provided as a method of finding resources that conform to 
+a particular <a href="structuredefinition.html">StructureDefinition</a>, not statements of meaning about the resource.
+</p>
+<p>
+Many trading partner agreements will make rules about what claims can be made 
+and when they must be tested, which will make the profile assertion more reliable. 
+</p>
+<p>
+The list of profiles on a resource is a set, where each profile is unique based the <code>value</code> of the URI.
+</p>
+
+<a name="security-labels"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">2.27.3.6.3</span> Security Labels <a href="resource.html#security-labels" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+A security label is attached to a resource to provide specific security metadata 
+about the information in the resource. For further information, see 
+<a href="security-labels.html">Security Labels</a>.
+</p>
+<p>
+The list of security on a resource is a set, where each tag is unique based on the 
+<code>system</code>+<code>code</code> combination.
+</p>
+
+<a name="tag-updates"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.7</span> Updates to Tags, Profiles, and Security Labels <a href="resource.html#tag-updates" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+When a resource is updated (e.g. on the RESTful interface), servers generally follow this
+pattern:
+</p>
+<ul>
+ <li>Merge existing and new tags</li>
+ <li>Replace existing profile tags with new profile tags</li>
+ <li>Merge existing and new security labels</li>
+</ul>
+<p>
+However, in some cases, an update may invalidate existing tags.  Servers may update 
+or remove previously existing recognized tags if this is known to be appropriate.
+</p>
+
+<a name="maturity"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.8</span> Maturity Levels <a href="resource.html#maturity" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+All resources in this specification are assigned a &quot;Maturity Level&quot;, known as FMM (after the well known <a href="http://en.wikipedia.org/wiki/Capability_Maturity_Model">CMM <img src="external.png" style="text-align: baseline"/></a> grades).
+The FMM level can be used by implementers to judge how advanced - and therefore stable - a resource is. The following FMM levels are defined:
+</p>
+<ol start="0">
+ <li>the resource or profile (artifact) has been published on the current build.  This level is synonymous with Draft.</li>
+ <li>PLUS the artifact produces no warnings during the build process and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation</li>
+ <li>PLUS the artifact has been tested and successfully exchanged between at least three independently developed systems leveraging at least 80% of the core data elements using semi-realistic data and scenarios based on at least one of the declared scopes of the resource (e.g. at a connectathon).  These interoperability results must have been reported to and accepted by the FMG</li>
+ <li>PLUS the artifact has been verified by the work group as meeting the <a href="http://wiki.hl7.org/index.php?title=DSTU_2_QA_guidelines">DSTU Quality Guidelines <img src="external.png" style="text-align: baseline"/></a> and has been subject to a 
+ round of formal balloting; has at least 10 implementer comments recorded in the tracker drawn from at least 3 organizations resulting in at least one substantive change</li>
+ <li>PLUS the artifact has been tested across its scope (see below), published in a formal publication (e.g. STU), and implemented in multiple prototype projects. As well, the responsible 
+ work group agrees the resource is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.</li>
+ <li>PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. STU level) and has been implemented in at least 5 independent production systems in more than one country</li>
+</ol>
+<p/>
+<p>Tested across scope means:</p>
+<ul>
+  <li>The FMG has signed off on the list of &quot;example contexts&quot; defined for the artifact</li>
+  <li>For each example context, the artifact has either been: reviewed and approved by a domain expert for that scope area, mapped to an existing implemented scope-area-specific standard or tested in an implementation</li>
+</ul>
+<p>
+The Maturity level is strongly related to stability; the higher the maturity level, the more controls are enforced to restrict breaking changes to the resource.
+For further information, and discussion, see the <a href="http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model">FHIR Wiki <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+ 
+<a name="furtherinfo"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.27.3.9</span> Further Information <a href="resource.html#furtherinfo" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<ul>
+  <li><a href="conformance-rules.html">Conformance Rules</a></li>
+  <li><a href="resource.html">Resource Definitions</a></li>
+  <li><a href="references.html">References between Resources</a></li>
+  <li><a href="narrative.html">Narratives</a></li>
+  <li><a href="formats.html">Formats:</a> <a href="xml.html">XML</a>, <a href="json.html">JSON</a> </li>
+  <li><a href="extensibility.html">Extensibility</a> (<a href="extensibility-examples.html">Examples</a>)</li>
+  <li><a href="resource-definitions.html">Detailed Descriptions</a></li>
+  <li><a href="compatibility.html">Inter-version Compatibility</a></li>
+</ul>
+
+  <script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){ 
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+
+$( '#tabs-Meta' ).tabs({ active: currentTabIndex, activate: function( event, ui ) { store(ui.newTab.index()); } });
+    
+     
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){ 
+  }
+  $( '#tabs-Meta' ).tabs('option', 'active', currentTab);
+}     
+</script>
+
+
+
+<a name="search"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.27.4</span> Search Parameters <a href="resource.html#search" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<p>Common search parameters defined by this resource. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>_content</td><td><a href="search.html#string">string</a></td><td>Search on the entire content of the resource</td><td/></tr>
+<tr><td>_id</td><td><a href="search.html#token">token</a></td><td>Logical id of this artifact</td><td>Resource.id</td></tr>
+<tr><td>_lastUpdated</td><td><a href="search.html#date">date</a></td><td>When the resource version last changed</td><td>Resource.meta.lastUpdated</td></tr>
+<tr><td>_profile</td><td><a href="search.html#uri">uri</a></td><td>Profiles this resource claims to conform to</td><td>Resource.meta.profile</td></tr>
+<tr><td>_query</td><td><a href="search.html#token">token</a></td><td>A custom search profile that describes a specific defined query operation</td><td/></tr>
+<tr><td>_security</td><td><a href="search.html#token">token</a></td><td>Security Labels applied to this resource</td><td>Resource.meta.security</td></tr>
+<tr><td>_tag</td><td><a href="search.html#token">token</a></td><td>Tags applied to this resource</td><td>Resource.meta.tag</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fresource.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fresource.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+  <script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+ try {
+   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+ } catch(exception){ 
+ }
+ if (!currentTabIndex)
+   currentTabIndex = '0';
+
+$( '#tabs' ).tabs({ active: currentTabIndex, activate: function( event, ui ) { store(ui.newTab.index()); } });
+$( '#tabs-Meta' ).tabs({ active: currentTabIndex, activate: function( event, ui ) { store(ui.newTab.index()); } });
+     
+     
+function store(currentTab) {
+  document.activeElement.blur();
+  try {
+    sessionStorage.setItem('fhir-resource-tab-index', currentTab);
+  } catch(exception){ 
+  }
+  $( '#tabs' ).tabs('option', 'active', currentTab);
+  $( '#tabs-Meta' ).tabs('option', 'active', currentTab);
+     
+}     
+</script>
+    
+</body>
+</html>

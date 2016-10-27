@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+  <id value="f201"/>
+ <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>identifier</b>: Encounter_Roel_20130404 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = &#39;ambulatory&#39;, stated as &#39;ambulatory&#39;)</p><p><b>type</b>: Consultation <span>(Details : {SNOMED CT code &#39;11429006&#39; = &#39;Consultation (procedure)&#39;, given as &#39;Consultation&#39;})</span></p><p><b>priority</b>: Normal <span>(Details : {SNOMED CT code &#39;17621005&#39; = &#39;Normal (qualifier value)&#39;, given as &#39;Normal&#39;})</span></p><p><b>patient</b>: <a>Roel</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/f201</a></td></tr></table><p><b>reason</b>: The patient had fever peaks over the last couple of days. He is worried about these peaks. <span>(Details )</span></p><p><b>serviceProvider</b>: <a>Organization/f201</a></p></div></text><identifier>
+    <use value="temp"/><!--   0..1 The use of this identifier   -->
+    <value value="Encounter_Roel_20130404"/>
+ </identifier>
+ <status value="finished"/><!--  Encounter has finished  -->
+    <class>
+        <system value="http://hl7.org/fhir/v3/ActCode"/>
+        <code value="AMB"/> <!--   outpatient   -->
+        <display value="ambulatory"/>
+    </class>
+ <type><!--  TODO Why is this merely a CodeableConcept and not Resource (any)?  -->
+    <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="11429006"/>
+       <display value="Consultation"/>
+    </coding>
+ </type>
+ <priority><!--  Normal priority  -->
+    <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="17621005"/>
+       <display value="Normal"/>
+    </coding>
+ </priority>
+ <patient>
+     <reference value="Patient/f201"/>
+     <display value="Roel"/>
+ </patient>
+ <participant>
+     <individual>
+         <reference value="Practitioner/f201"/>
+    </individual>
+ </participant>
+ <reason>
+   <text value="The patient had fever peaks over the last couple of days. He is worried about these peaks."/>
+ </reason>
+ <!--  No indication, because no referral took place  -->
+ <!--  No hospitalization was deemed necessary  -->
+ <serviceProvider>
+     <reference value="Organization/f201"/>
+ </serviceProvider>
+</Encounter>

@@ -1,0 +1,158 @@
+{
+  "@context": "http://build.fhir.org/QuestionnaireResponse.jsonld",
+  "@context": "http://hl7.org/fhir/QuestionnaireResponse/3141",
+  "Resource.id": {
+    "id.value": "3141"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n            Comorbidity? YES\n              Cardial Comorbidity? YES\n                Angina? YES\n                MI? NO\n              Vascular Comorbidity?\n                (no answers)\n              ...\n            Histopathology\n              Abdominal\n                pT category: 1a\n              ...\n          </pre>\n    </div>"
+    }
+  },
+  "Patient": [
+    {
+      "Resource.id": {
+        "id.value": "patsub"
+      },
+      "Patient.identifier": [
+        {
+          "Identifier.system": {
+            "uri.value": "http://cancer.questionnaire.org/systems/id/patientnr"
+          },
+          "Identifier.value": {
+            "string.value": "A34442332"
+          }
+        },
+        {
+          "Identifier.type": {
+            "CodeableConcept.text": {
+              "string.value": "Dutch BSN"
+            }
+          },
+          "Identifier.system": {
+            "uri.value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+          },
+          "Identifier.value": {
+            "string.value": "188912345"
+          }
+        }
+      ],
+      "Patient.gender": {
+        "code.value": "male"
+      },
+      "Patient.birthDate": {
+        "date.value": "1972-11-30"
+      }
+    },
+    {
+      "Resource.id": {
+        "id.value": "questauth"
+      },
+      "Practitioner.identifier": [
+        {
+          "Identifier.type": {
+            "CodeableConcept.text": {
+              "string.value": "AUMC, Den Helder"
+            }
+          },
+          "Identifier.system": {
+            "uri.value": "http://cancer.questionnaire.org/systems/id/org"
+          },
+          "Identifier.value": {
+            "string.value": "AUMC"
+          }
+        }
+      ]
+    }
+  ],
+  "QuestionnaireResponse.status": {
+    "code.value": "completed"
+  },
+  "QuestionnaireResponse.subject": {
+    "Reference.reference": {
+      "string.value": "#patsub"
+    }
+  },
+  "QuestionnaireResponse.author": {
+    "Reference.reference": {
+      "string.value": "#questauth"
+    }
+  },
+  "QuestionnaireResponse.authored": {
+    "dateTime.value": "2013-02-19T14:15:00-05:00"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueCoding": {
+                "Coding.system": {
+                  "uri.value": "http://cancer.questionnaire.org/system/code/yesno"
+                },
+                "Coding.code": {
+                  "code.value": "1"
+                },
+                "Coding.display": {
+                  "string.value": "Yes"
+                }
+              },
+              "QuestionnaireResponse.item.answer.item": [
+                {
+                  "QuestionnaireResponse.item.item": [
+                    {
+                      "QuestionnaireResponse.item.answer": [
+                        {
+                          "QuestionnaireResponse.item.answer.valueCoding": {
+                            "Coding.system": {
+                              "uri.value": "http://cancer.questionnaire.org/system/code/yesno"
+                            },
+                            "Coding.code": {
+                              "code.value": "1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "QuestionnaireResponse.item.answer": [
+                        {
+                          "QuestionnaireResponse.item.answer.valueCoding": {
+                            "Coding.system": {
+                              "uri.value": "http://cancer.questionnaire.org/system/code/yesno"
+                            },
+                            "Coding.code": {
+                              "code.value": "1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "QuestionnaireResponse.item.answer": [
+                        {
+                          "QuestionnaireResponse.item.answer.valueCoding": {
+                            "Coding.system": {
+                              "uri.value": "http://cancer.questionnaire.org/system/code/yesno"
+                            },
+                            "Coding.code": {
+                              "code.value": "0"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

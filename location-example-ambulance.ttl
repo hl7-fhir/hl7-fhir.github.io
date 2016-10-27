@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Location/amb> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "amb"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mobile Clinic</div>"
+  ];
+  fhir:Location.status [ fhir:value "active"];
+  fhir:Location.name [ fhir:value "BUMC Ambulance"];
+  fhir:Location.description [ fhir:value "Ambulance provided by Burgers University Medical Center"];
+  fhir:Location.mode [ fhir:value "kind"];
+  fhir:Location.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/RoleCode" ];
+       fhir:Coding.code [ fhir:value "AMB" ];
+       fhir:Coding.display [ fhir:value "Ambulance" ]
+     ]
+  ];
+  fhir:Location.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "2329" ];
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ];
+  fhir:Location.physicalType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/location-physical-type" ];
+       fhir:Coding.code [ fhir:value "ve" ];
+       fhir:Coding.display [ fhir:value "Vehicle" ]
+     ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/f001>;
+     fhir:Reference.reference [ fhir:value "Organization/f001" ]
+  ] .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

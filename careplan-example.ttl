@@ -1,0 +1,126 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CarePlan/example> a fhir:CarePlan;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.\n            Some Notes: </p>\n      <ul>\n        <li>It would be good to have some way of specifying/coding a goal; e.g. what the target weight is</li>\n        <li>In the codeable concepts I've been lazy and just put the text. There should, of course, be a code behind these</li>\n      </ul>\n    </div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Condition;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "p1" ];
+     fhir:Condition.verificationStatus [ fhir:value "confirmed" ];
+     fhir:Condition.code [
+       fhir:CodeableConcept.text [ fhir:value "Obesity" ]
+     ];
+     fhir:Condition.subject [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ];
+       fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+     ]
+  ], [
+     a fhir:Goal;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "goal" ];
+     fhir:extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/goal-target" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "goal-target.measure" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:concept loinc:29463-7;
+             fhir:Coding.system [ fhir:value "http://loinc.org" ];
+             fhir:Coding.code [ fhir:value "29463-7" ];
+             fhir:Coding.display [ fhir:value "Body weight" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "goal-target.detail" ];
+         fhir:Extension.valueQuantity [
+           fhir:Quantity.value [ fhir:value "80"^^xsd:decimal ];
+           fhir:Quantity.system [ fhir:value "http://units-of-measure.org" ];
+           fhir:Quantity.code [ fhir:value "kg" ]
+         ]
+       ]
+     ];
+     fhir:Goal.status [ fhir:value "planned" ];
+     fhir:Goal.description [
+       fhir:CodeableConcept.text [ fhir:value "Target weight is 80 kg" ]
+     ];
+     fhir:Goal.subject [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ];
+       fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+     ]
+  ];
+  fhir:CarePlan.status [ fhir:value "active"];
+  fhir:CarePlan.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+  ];
+  fhir:CarePlan.period [
+     fhir:Period.end [ fhir:value "2013-01-01"^^xsd:date ]
+  ];
+  fhir:CarePlan.careTeam [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/CareTeam/example>;
+     fhir:Reference.reference [ fhir:value "CareTeam/example" ]
+  ];
+  fhir:CarePlan.addresses [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#p1" ];
+     fhir:Reference.display [ fhir:value "obesity" ]
+  ];
+  fhir:CarePlan.goal [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#goal" ]
+  ];
+  fhir:CarePlan.activity [
+     fhir:index 0;
+     fhir:CarePlan.activity.detail [
+       fhir:CarePlan.activity.detail.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/care-plan-activity-category" ];
+           fhir:Coding.code [ fhir:value "observation" ]
+         ]
+       ];
+       fhir:CarePlan.activity.detail.code [
+         fhir:CodeableConcept.text [ fhir:value "a code for weight measurement" ]
+       ];
+       fhir:CarePlan.activity.detail.prohibited [ fhir:value "false"^^xsd:boolean ];
+       fhir:CarePlan.activity.detail.scheduledTiming [
+         fhir:Timing.repeat [
+           fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:int ];
+           fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+           fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+         ]
+       ];
+       fhir:CarePlan.activity.detail.performer [
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/Patient/example>;
+         fhir:Reference.reference [ fhir:value "Patient/example" ];
+         fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient, fhir:Patient, fhir:Patient, fhir:Patient .
+
+<http://hl7.org/fhir/CareTeam/example> a fhir:CareTeam .
+
+# -------------------------------------------------------------------------------------
+

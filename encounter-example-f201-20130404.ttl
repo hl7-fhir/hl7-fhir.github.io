@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Encounter/f201> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f201"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>identifier</b>: Encounter_Roel_20130404 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>type</b>: Consultation <span>(Details : {SNOMED CT code '11429006' = 'Consultation (procedure)', given as 'Consultation'})</span></p><p><b>priority</b>: Normal <span>(Details : {SNOMED CT code '17621005' = 'Normal (qualifier value)', given as 'Normal'})</span></p><p><b>patient</b>: <a>Roel</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/f201</a></td></tr></table><p><b>reason</b>: The patient had fever peaks over the last couple of days. He is worried about these peaks. <span>(Details )</span></p><p><b>serviceProvider</b>: <a>Organization/f201</a></p></div>"
+  ];
+  fhir:Encounter.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "temp" ];
+     fhir:Identifier.value [ fhir:value "Encounter_Roel_20130404" ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+     fhir:Coding.code [ fhir:value "AMB" ];
+     fhir:Coding.display [ fhir:value "ambulatory" ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:11429006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "11429006" ];
+       fhir:Coding.display [ fhir:value "Consultation" ]
+     ]
+  ];
+  fhir:Encounter.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:17621005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "17621005" ];
+       fhir:Coding.display [ fhir:value "Normal" ]
+     ]
+  ];
+  fhir:Encounter.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.individual [
+       fhir:link <http://hl7.org/fhir/Practitioner/f201>;
+       fhir:Reference.reference [ fhir:value "Practitioner/f201" ]
+     ]
+  ];
+  fhir:Encounter.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "The patient had fever peaks over the last couple of days. He is worried about these peaks." ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://hl7.org/fhir/Organization/f201>;
+     fhir:Reference.reference [ fhir:value "Organization/f201" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Organization/f201> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

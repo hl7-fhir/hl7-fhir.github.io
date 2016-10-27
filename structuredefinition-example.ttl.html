@@ -1,0 +1,682 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Structuredefinition-example.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/structuredefinition-example.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="structuredefinition.html">StructureDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- structuredefinition-example.ttl.html / resource-instance:StructureDefinition / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Structuredefinition-example.ttl</h1>
+
+<p>
+<a href="structuredefinition-example.ttl">Raw Turtle</a>, 
+<a href="structuredefinition-example.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Example of structuredefinition</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/StructureDefinition/example&gt; a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;example&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: example&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a&gt;http://hl7.org/fhir/StructureDefinition/example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: 1.2.36.90146595217.4.2&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 2&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: LipidProfileExample&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Example Lipid Profile&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: draft&lt;/p&gt;&lt;p&gt;&lt;b&gt;experimental&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: Health Intersections Pty Ltd&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: May 12, 2012&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes&lt;/p&gt;&lt;p&gt;&lt;b&gt;jurisdiction&lt;/b&gt;: AU &lt;span&gt;(Details : {urn:iso:std:iso:3166 code 'AU' = 'AU)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;purpose&lt;/b&gt;: Provide an example to demonstrate how to use StructureDefinition&lt;/p&gt;&lt;p&gt;&lt;b&gt;copyright&lt;/b&gt;: Createive Commons 0, per FHIR specification&lt;/p&gt;&lt;p&gt;&lt;b&gt;keyword&lt;/b&gt;: 314079002 (Details: SNOMED CT code 314079002 = 'Hyperlipidemia screening test (procedure)', stated as '314079002')&lt;/p&gt;&lt;p&gt;&lt;b&gt;fhirVersion&lt;/b&gt;: 1.0.0&lt;/p&gt;&lt;h3&gt;Mappings&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Identity&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Uri&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comments&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;m1&lt;/td&gt;&lt;td&gt;&lt;a&gt;https://www.rcpa.edu.au/getattachment/0961c6d1-ec80-4500-8dc0-de516500e05b/Lipid-and-lipoprotein-testing.aspx&lt;/a&gt;&lt;/td&gt;&lt;td&gt;RCPA Lipid Report recommendations&lt;/td&gt;&lt;td&gt;Actual mappings haven't yet been filled out&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;kind&lt;/b&gt;: resource&lt;/p&gt;&lt;p&gt;&lt;b&gt;abstract&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: DiagnosticReport&lt;/p&gt;&lt;p&gt;&lt;b&gt;baseDefinition&lt;/b&gt;: &lt;a&gt;http://hl7.org/fhir/StructureDefinition/DiagnosticReport&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;derivation&lt;/b&gt;: constraint&lt;/p&gt;&lt;h3&gt;Snapshots&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Element&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;todo-bundle&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  fhir:StructureDefinition.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/example&quot;];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value &quot;urn:ietf:rfc:3986&quot; ];
+     fhir:Identifier.value [ fhir:value &quot;1.2.36.90146595217.4.2&quot; ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value &quot;2&quot;];
+  fhir:StructureDefinition.name [ fhir:value &quot;LipidProfileExample&quot;];
+  fhir:StructureDefinition.title [ fhir:value &quot;Example Lipid Profile&quot;];
+  fhir:StructureDefinition.status [ fhir:value &quot;draft&quot;];
+  fhir:StructureDefinition.experimental [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:StructureDefinition.publisher [ fhir:value &quot;Health Intersections Pty Ltd&quot;];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value &quot;Grahame Grieve&quot; ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;email&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;grahame@healthintersections.com.au&quot; ]
+     ]
+  ];
+  fhir:StructureDefinition.date [ fhir:value &quot;2012-05-12&quot;^^xsd:date];
+  fhir:StructureDefinition.description [ fhir:value &quot;Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes&quot;];
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value &quot;urn:iso:std:iso:3166&quot; ];
+       fhir:Coding.code [ fhir:value &quot;AU&quot; ]
+     ]
+  ];
+  fhir:StructureDefinition.purpose [ fhir:value &quot;Provide an example to demonstrate how to use StructureDefinition&quot;];
+  fhir:StructureDefinition.copyright [ fhir:value &quot;Createive Commons 0, per FHIR specification&quot;];
+  fhir:StructureDefinition.keyword [
+     fhir:index 0;
+     fhir:concept sct:314079002;
+     fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+     fhir:Coding.code [ fhir:value &quot;314079002&quot; ];
+     fhir:Coding.display [ fhir:value &quot;314079002&quot; ]
+  ];
+  fhir:StructureDefinition.fhirVersion [ fhir:value &quot;1.0.0&quot;];
+  fhir:StructureDefinition.mapping [
+     fhir:index 0;
+     fhir:StructureDefinition.mapping.identity [ fhir:value &quot;m1&quot; ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value &quot;https://www.rcpa.edu.au/getattachment/0961c6d1-ec80-4500-8dc0-de516500e05b/Lipid-and-lipoprotein-testing.aspx&quot; ];
+     fhir:StructureDefinition.mapping.name [ fhir:value &quot;RCPA Lipid Report recommendations&quot; ];
+     fhir:StructureDefinition.mapping.comments [ fhir:value &quot;Actual mappings haven't yet been filled out&quot; ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value &quot;resource&quot;];
+  fhir:StructureDefinition.abstract [ fhir:value &quot;false&quot;^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value &quot;DiagnosticReport&quot;];
+  fhir:StructureDefinition.baseDefinition [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/DiagnosticReport&quot;];
+  fhir:StructureDefinition.derivation [ fhir:value &quot;constraint&quot;];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Lipid Lab Report&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The findings and interpretation of a general lipd lab profile.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;In this profile, mustSupport means that authoring systems must include the ability to report these elements, and processing systems must cater for them by either displaying them to the user or considering them appropriately in decision support systems.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;1&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.extension&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.extension&quot; ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value &quot;url&quot;;
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value &quot;false&quot;^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value &quot;open&quot; ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Additional Content defined by implementations&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;there can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core simplicity for everyone.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;*&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.extension&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Extension&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.text&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.text&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Text summary of the resource, for human interpretation&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.&quot; ];
+       fhir:ElementDefinition.alias [
+         fhir:value &quot;narrative&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;html&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;xhtml&quot;;
+         fhir:index 2
+       ], [
+         fhir:value &quot;display&quot;;
+         fhir:index 3
+       ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.text&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Narrative&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.contained&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.contained&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Contained, inline Resources&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot; ];
+       fhir:ElementDefinition.alias [
+         fhir:value &quot;inline resources&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;anonymous resources&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;contained resources&quot;;
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;*&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.contained&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Resource&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.status&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.status&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;registered|interim|final|amended|cancelled|withdrawn&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The status of the diagnostic report as a whole.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;This is labeled as \&quot;Is Modifier\&quot; because applications need to take appropriate action if a report is withdrawn.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.status&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;1&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;code&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value &quot;required&quot; ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link &lt;http://hl7.org/fhir/ValueSet/observation-status&gt;;
+           fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/ValueSet/observation-status&quot; ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.issued&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.issued&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Date this version was released&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The date and/or time that this version of the report was released from the source diagnostic service.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.issued&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;1&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;dateTime&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.subject&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.subject&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;The subject of the report&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.subject&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;1&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Group&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Device&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.performer&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.performer&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Responsible Diagnostic Service&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The diagnostic service that is responsible for issuing the report.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;This is not necessarily the source of the atomic data items - it's the entity that takes responsibility for the clinical report.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.performer&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;1&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Observation&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.identifier&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.identifier&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Id for external references to this report&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The local ID assigned to the report by the order filler, usually by the Information System of the diagnostic service provider.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.identifier&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Identifier&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.request&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.request&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;What was requested&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;Details concerning a single pathology test requested.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single Pathology test result resource. Note that there are also cases where one request leads to multiple reports.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;*&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.request&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/DiagnosticRequest&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.category&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.category&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Biochemistry, Haematology etc.&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The section of the diagnostic service that performs the examination e.g. biochemistry, haematology, MRI.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.category&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;CodeableConcept&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value &quot;preferred&quot; ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link &lt;http://hl7.org/fhir/ValueSet/diagnostic-service-sections&gt;;
+           fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/ValueSet/diagnostic-service-sections&quot; ]
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.effectiveDateTime&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.effectiveDateTime&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Diagnostically relevant time of diagnostic report&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;The diagnostically relevant time for this report - that is, the point in time at which the observations that are reported in this diagnostic report relate to the patient.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;If the diagnostic procedure was performed on the patient, this is the time it was performed. If there is specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.effective[x]&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;1&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;dateTime&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.result&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value &quot;reference.code&quot;;
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value &quot;false&quot;^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value &quot;open&quot; ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Lipid Lab Results&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;Lipid Lab Results.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;4&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;4&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Observation&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.result.Cholesterol&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+       fhir:ElementDefinition.sliceName [ fhir:value &quot;Cholesterol&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Cholesterol Result&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;Reference to Cholesterol Result.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/cholesterol&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.result.Triglyceride&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+       fhir:ElementDefinition.sliceName [ fhir:value &quot;Triglyceride&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Triglyceride Result&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;Group of elements for Triglyceride result.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/triglyceride&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.result.HDLCholesterol&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+       fhir:ElementDefinition.sliceName [ fhir:value &quot;HDLCholesterol&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;HDL Cholesterol Result&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;Group of elements for HDL Cholesterol result.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;1&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/hdlcholesterol&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.result.LDLCholesterol&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+       fhir:ElementDefinition.sliceName [ fhir:value &quot;LDLCholesterol&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;LDL Cholesterol result, if reported&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;LDL Cholesterol result, if reported.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.result&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Reference&quot; ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/ldlcholesterol&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.conclusion&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.conclusion&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Clinical Interpretation of Lipid Panel&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;May include diagnosis or suggestions for follow up testing.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;It's not unusual for the lab to make some kind of interpretative comment on the set of results.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;1&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.conclusion&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;1&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;string&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value &quot;DiagnosticReport.representation&quot; ];
+       fhir:ElementDefinition.path [ fhir:value &quot;DiagnosticReport.representation&quot; ];
+       fhir:ElementDefinition.short [ fhir:value &quot;Entire Report as issued&quot; ];
+       fhir:ElementDefinition.definition [ fhir:value &quot;Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.&quot; ];
+       fhir:ElementDefinition.comments [ fhir:value &quot;Possible formats: text/html, text/plain, text/rtf, application/msword, application/pdf, application/rtf, application/vnd.oasis.opendocument.text, application/vnd.openxmlformats-officedocument.wordprocessingml.document. Application/pdf is recommended as the most reliable and interoperable in this context.&quot; ];
+       fhir:ElementDefinition.min [ fhir:value &quot;0&quot;^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value &quot;*&quot; ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value &quot;DiagnosticReport.representation&quot; ];
+         fhir:ElementDefinition.base.min [ fhir:value &quot;0&quot;^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value &quot;*&quot; ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value &quot;Attachment&quot; ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value &quot;false&quot;^^xsd:boolean ]
+     ]
+  ] .
+
+&lt;http://hl7.org/fhir/ValueSet/observation-status&gt; a fhir:ValueSet .
+
+&lt;http://hl7.org/fhir/ValueSet/diagnostic-service-sections&gt; a fhir:ValueSet .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fstructuredefinition-example.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fstructuredefinition-example.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,415 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Consent/consent-example-pkb> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consent-example-pkb"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        This example demonstrates how to encode this screen shot in a consent resource:\n      </p>\n      <p>\n       <img src=\"pkb.png\" alt=\"Screenshot from Patient Knows Best\"/>\n      </p>\n      <p>\n        Thanks to <a href=\"https://www.patientsknowbest.com/\">Patients Know Best</a> for contributing this example\n      </p>\n    </div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.dateTime [ fhir:value "2016-06-16"^^xsd:date];
+  fhir:Consent.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "...example patient..." ]
+  ];
+  fhir:Consent.organization [
+     fhir:link <http://hl7.org/fhir/Organization/pkb>;
+     fhir:Reference.reference [ fhir:value "Organization/pkb" ];
+     fhir:Reference.display [ fhir:value "Patients Know Best" ]
+  ];
+  fhir:Consent.policy [ fhir:value "http://hl7.org/fhir/ConsentPolicy/opt-in"];
+  fhir:Consent.except [
+     fhir:index 0;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-nmt>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-nmt" ];
+         fhir:Reference.display [ fhir:value "Non-migrated Team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/Confidentiality" ];
+       fhir:Coding.code [ fhir:value "N" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-nmt>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-nmt" ];
+         fhir:Reference.display [ fhir:value "Non-migrated Team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "PSY" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-nmt>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-nmt" ];
+         fhir:Reference.display [ fhir:value "Non-migrated Team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "SOC" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-core>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-core" ];
+         fhir:Reference.display [ fhir:value "Core Information Exchange team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/Confidentiality" ];
+       fhir:Coding.code [ fhir:value "N" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-core>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-core" ];
+         fhir:Reference.display [ fhir:value "Core Information Exchange team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "PSY" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-core>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-core" ];
+         fhir:Reference.display [ fhir:value "Core Information Exchange team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "SOC" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-core>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-core" ];
+         fhir:Reference.display [ fhir:value "Core Information Exchange team - Imperial College Healthcare" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "SEX" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/tsd-park>;
+         fhir:Reference.reference [ fhir:value "Organization/tsd-park" ];
+         fhir:Reference.display [ fhir:value "Torbay and Source Devon Trust - Parkinson's Team" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/Confidentiality" ];
+       fhir:Coding.code [ fhir:value "N" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/tsd-park>;
+         fhir:Reference.reference [ fhir:value "Organization/tsd-park" ];
+         fhir:Reference.display [ fhir:value "Torbay and Source Devon Trust - Parkinson's Team" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "PSY" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/tsd-park>;
+         fhir:Reference.reference [ fhir:value "Organization/tsd-park" ];
+         fhir:Reference.display [ fhir:value "Torbay and Source Devon Trust - Parkinson's Team" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "SOC" ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/tsd-park>;
+         fhir:Reference.reference [ fhir:value "Organization/tsd-park" ];
+         fhir:Reference.display [ fhir:value "Torbay and Source Devon Trust - Parkinson's Team" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "SEX" ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.actor [
+       fhir:index 0;
+       fhir:Consent.except.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ParticipationType" ];
+           fhir:Coding.code [ fhir:value "PRCP" ]
+         ]
+       ];
+       fhir:Consent.except.actor.reference [
+         fhir:link <http://hl7.org/fhir/Organization/ich-non>;
+         fhir:Reference.reference [ fhir:value "Organization/ich-non" ];
+         fhir:Reference.display [ fhir:value "Imperial Collage Healthcare - Neuro-oncology" ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ]
+       ]
+     ];
+     fhir:Consent.except.securityLabel [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/Confidentiality" ];
+       fhir:Coding.code [ fhir:value "N" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/pkb> a fhir:Organization .
+
+<http://hl7.org/fhir/Organization/ich-nmt> a fhir:Organization, fhir:Organization, fhir:Organization .
+
+<http://hl7.org/fhir/Organization/ich-core> a fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization .
+
+<http://hl7.org/fhir/Organization/tsd-park> a fhir:Organization, fhir:Organization, fhir:Organization, fhir:Organization .
+
+<http://hl7.org/fhir/Organization/ich-non> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

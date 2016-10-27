@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><Claim xmlns="http://hl7.org/fhir">
+ <id value="760150"/>
+
+ <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the Pharmacy Claim</div>
+  </text>
+
+  <identifier>
+    <system value="http://happypharma.com/claim"/>
+    <value value="7612345"/>
+ </identifier>
+ 
+  <status value="active"/>
+
+  <type>
+    <system value="http://hl7.org/fhir/ex-claimtype"/>
+    <code value="pharmacy"/>
+  </type>
+  
+  <created value="2014-08-16"/>
+
+ <insurer>
+  <reference value="Organization/2"/>
+</insurer>
+
+ <organization>
+    <reference value="Organization/1"/>
+ </organization>
+
+ <use value="complete"/>
+
+ <priority>
+    <code value="stat"/>
+ </priority>
+
+ <payee>
+   <type>
+     <code value="provider"/>
+   </type>
+ </payee>
+ 
+  <diagnosis>
+    <sequence value="1"/>
+	<diagnosis>
+	  <code value="654456"/>
+	  </diagnosis>
+  </diagnosis>
+ 
+ <patient>
+   <reference value="Patient/1"/>
+ </patient>
+ 
+ <coverage>
+   <sequence value="1"/>
+   <focal value="true"/>
+   <coverage>
+     <reference value="Coverage/9876B1"/>
+   </coverage>
+ </coverage>
+  
+ <item>
+   <sequence value="1"/>
+   <careTeam>
+     <provider>
+       <reference value="Practitioner/example"/>
+     </provider>
+   </careTeam>
+   <service>
+     <system value="http://hl7.org/fhir/ex-pharmaservice"/>
+     <code value="smokecess"/> <!--  smoking cessation consult  -->
+   </service>
+   <servicedDate value="2014-08-16"/>
+   <unitPrice>
+      <value value="60.00"/>
+	  <system value="urn:iso:std:iso:4217"/>
+      <code value="USD"/> 
+   </unitPrice> 
+   <net>
+      <value value="60.00"/>
+	  <system value="urn:iso:std:iso:4217"/>
+      <code value="USD"/> 
+   </net> 
+  </item>
+
+</Claim>

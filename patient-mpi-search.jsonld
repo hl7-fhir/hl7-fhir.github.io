@@ -1,0 +1,121 @@
+{
+  "@context": "http://build.fhir.org/OperationDefinition.jsonld",
+  "@context": "http://hl7.org/fhir/OperationDefinition/patient-mpi",
+  "Resource.id": {
+    "id.value": "patient-mpi"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: patient-mpi</p><p><b>url</b>: <a>http://hl7.org/fhir/OperationDefinitino/patient-mpi</a></p><p><b>name</b>: Patient MPI (Multiple Patient Index) search</p><p><b>status</b>: draft</p><p><b>kind</b>: query</p><p><b>experimental</b>: false</p><p><b>date</b>: Aug 18, 2015</p><p><b>publisher</b>: HL7, Inc</p><p><b>contact</b>: </p><p><b>description</b>: An MPI search differs from a normal search because the parameters are interpreted as inputs to an MPI match process, rather than as direct match criteria on the returned resources</p><p><b>purpose</b>: This query is defined to allow an MPI to be integrated in a FHIR server environment, and to allow a client to delegate the matching process to a specialist. MPI algorithms are often highly tailored to a particular patient set</p><p><b>idempotent</b>: true</p><p><b>code</b>: mpi</p><p><b>comment</b>: All the standard search parameters apply, and are interpreted as inputs to the MPI algorithm. The _sort parameter is not used. Matches are returned in order of highest match to lowest match, with both a % in the score, and an asessement of the match using the extension http://hl7.org/fhir/StructureDefinition/patient-mpi-match</p><p><b>resource</b>: Patient</p><p><b>system</b>: false</p><p><b>type</b>: true</p><p><b>instance</b>: false</p><blockquote><p><b>parameter</b></p><p><b>name</b>: userid</p><p><b>use</b>: in</p><p><b>min</b>: 0</p><p><b>max</b>: 1</p><p><b>documentation</b>: User identity for the MPI to consider when creating a return set. This paraemter is defined in the assumption that the MPI ay be a separate module from other FHIR Servers, with a trust relationship to it. Actualy deployment scenarios will determine whether this parameter is used</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>parameter</b></p><p><b>name</b>: result</p><p><b>use</b>: out</p><p><b>min</b>: 0</p><p><b>max</b>: *</p><p><b>documentation</b>: Patients that match this MPI query</p><p><b>type</b>: Patient</p></blockquote></div>"
+    }
+  },
+  "OperationDefinition.url": {
+    "uri.value": "http://hl7.org/fhir/OperationDefinitino/patient-mpi"
+  },
+  "OperationDefinition.name": {
+    "string.value": "Patient MPI (Multiple Patient Index) search"
+  },
+  "OperationDefinition.status": {
+    "code.value": "draft"
+  },
+  "OperationDefinition.kind": {
+    "code.value": "query"
+  },
+  "OperationDefinition.experimental": {
+    "boolean.value": false
+  },
+  "OperationDefinition.date": {
+    "dateTime.value": "2015-08-18"
+  },
+  "OperationDefinition.publisher": {
+    "string.value": "HL7, Inc"
+  },
+  "OperationDefinition.contact": [
+    {
+      "ContactDetail.telecom": [
+        {
+          "ContactPoint.system": {
+            "code.value": "other"
+          },
+          "ContactPoint.value": {
+            "string.value": "http://hl7.org/fhir"
+          }
+        }
+      ]
+    }
+  ],
+  "OperationDefinition.description": {
+    "markdown.value": "An MPI search differs from a normal search because the parameters are interpreted as inputs to an MPI match process, rather than as direct match criteria on the returned resources"
+  },
+  "OperationDefinition.purpose": {
+    "markdown.value": "This query is defined to allow an MPI to be integrated in a FHIR server environment, and to allow a client to delegate the matching process to a specialist. MPI algorithms are often highly tailored to a particular patient set"
+  },
+  "OperationDefinition.idempotent": {
+    "boolean.value": true
+  },
+  "OperationDefinition.code": {
+    "code.value": "mpi"
+  },
+  "OperationDefinition.comment": {
+    "string.value": "All the standard search parameters apply, and are interpreted as inputs to the MPI algorithm. The _sort parameter is not used. Matches are returned in order of highest match to lowest match, with both a % in the score, and an asessement of the match using the extension http://hl7.org/fhir/StructureDefinition/patient-mpi-match"
+  },
+  "OperationDefinition.resource": [
+    {
+      "code.value": "Patient"
+    }
+  ],
+  "OperationDefinition.system": {
+    "boolean.value": false
+  },
+  "OperationDefinition.type": {
+    "boolean.value": true
+  },
+  "OperationDefinition.instance": {
+    "boolean.value": false
+  },
+  "OperationDefinition.parameter": [
+    {
+      "OperationDefinition.parameter.name": {
+        "code.value": "userid"
+      },
+      "OperationDefinition.parameter.use": {
+        "code.value": "in"
+      },
+      "OperationDefinition.parameter.min": {
+        "integer.value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "string.value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "string.value": "User identity for the MPI to consider when creating a return set. This paraemter is defined in the assumption that the MPI ay be a separate module from other FHIR Servers, with a trust relationship to it. Actualy deployment scenarios will determine whether this parameter is used"
+      },
+      "OperationDefinition.parameter.type": {
+        "code.value": "string"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "code.value": "result"
+      },
+      "OperationDefinition.parameter.use": {
+        "code.value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "integer.value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "string.value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "string.value": "Patients that match this MPI query"
+      },
+      "OperationDefinition.parameter.type": {
+        "code.value": "Patient"
+      }
+    }
+  ]
+}

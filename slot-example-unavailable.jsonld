@@ -1,0 +1,45 @@
+{
+  "@context": "http://build.fhir.org/Slot.jsonld",
+  "@context": "http://hl7.org/fhir/Slot/3",
+  "Resource.id": {
+    "id.value": "3"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t25 Dec 2013 9:30am - 9:45am: <b>Unavailable</b> Physiotherapy<br/>\n\t\t\tDr Careful is out of the office\n\t\t</div>"
+    }
+  },
+  "Slot.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "code.value": "17"
+        },
+        "Coding.display": {
+          "string.value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Slot.schedule": {
+    "Reference.reference": {
+      "string.value": "Schedule/example"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Schedule/example"
+  },
+  "Slot.status": {
+    "code.value": "busy-unavailable"
+  },
+  "Slot.start": {
+    "instant.value": "2013-12-25T09:30:00Z"
+  },
+  "Slot.end": {
+    "instant.value": "2013-12-25T09:45:00Z"
+  },
+  "Slot.comment": {
+    "string.value": "Dr Careful is out of the office"
+  }
+}

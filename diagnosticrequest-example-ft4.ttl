@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticRequest/ft4> a fhir:DiagnosticRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ft4"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ft4</p><p><b>status</b>: active</p><p><b>stage</b>: Reflex Order <span>(Details : {http://hl7.org/fhir/request-stage code 'reflex-order' = 'Reflex Order)</span></p><p><b>code</b>: Free T4 <span>(Details : {LOINC code '3024-7' = 'Thyroxine (T4) free [Mass/volume] in Serum or Plasma)</span></p><p><b>subject</b>: <a>Patient/pat2</a></p><p><b>occurrence</b>: Aug 27, 2015 9:33:27 AM</p><p><b>requester</b>: <a>Practitioner/example</a></p></div>"
+  ];
+  fhir:DiagnosticRequest.status [ fhir:value "active"];
+  fhir:DiagnosticRequest.stage [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/request-stage" ];
+       fhir:Coding.code [ fhir:value "reflex-order" ]
+     ]
+  ];
+  fhir:DiagnosticRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:3024-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "3024-7" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Free T4" ]
+  ];
+  fhir:DiagnosticRequest.subject [
+     fhir:link <http://hl7.org/fhir/Patient/pat2>;
+     fhir:Reference.reference [ fhir:value "Patient/pat2" ]
+  ];
+  fhir:DiagnosticRequest.occurrenceDateTime [ fhir:value "2015-08-27T09:33:27+07:00"^^xsd:dateTime];
+  fhir:DiagnosticRequest.requester [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ] .
+
+<http://hl7.org/fhir/Patient/pat2> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

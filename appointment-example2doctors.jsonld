@@ -1,0 +1,160 @@
+{
+  "@context": "http://build.fhir.org/Appointment.jsonld",
+  "@context": "http://hl7.org/fhir/Appointment/2docs",
+  "Resource.id": {
+    "id.value": "2docs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+    }
+  },
+  "Appointment.status": {
+    "code.value": "booked"
+  },
+  "Appointment.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/service-category"
+        },
+        "Coding.code": {
+          "code.value": "gp"
+        },
+        "Coding.display": {
+          "string.value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Appointment.serviceType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "code.value": "52"
+          },
+          "Coding.display": {
+            "string.value": "General Discussion"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "uri.value": "http://example.org/specialty"
+          },
+          "Coding.code": {
+            "code.value": "gp"
+          },
+          "Coding.display": {
+            "string.value": "General Practice"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.appointmentType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://example.org/appointment-type"
+        },
+        "Coding.code": {
+          "code.value": "wi"
+        },
+        "Coding.display": {
+          "string.value": "Walk in"
+        }
+      }
+    ]
+  },
+  "Appointment.priority": {
+    "unsignedInt.value": 5
+  },
+  "Appointment.description": {
+    "string.value": "Discussion about Peter Chalmers MRI results"
+  },
+  "Appointment.start": {
+    "instant.value": "2013-12-09T09:00:00Z"
+  },
+  "Appointment.end": {
+    "instant.value": "2013-12-09T11:00:00Z"
+  },
+  "Appointment.comment": {
+    "string.value": "Clarify the results of the MRI to ensure context of test was correct"
+  },
+  "Appointment.participant": [
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Patient/example"
+        },
+        "Reference.display": {
+          "string.value": "Peter James Chalmers"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Appointment.participant.required": {
+        "code.value": "information-only"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "string.value": "Dr Adam Careful"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/example"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "string.value": "Practitioner/f202"
+        },
+        "Reference.display": {
+          "string.value": "Luigi Maas"
+        },
+        "Resource.reference": "http://hl7.org/fhir//Practitioner/f202"
+      },
+      "Appointment.participant.required": {
+        "code.value": "required"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.display": {
+          "string.value": "Phone Call"
+        }
+      },
+      "Appointment.participant.required": {
+        "code.value": "information-only"
+      },
+      "Appointment.participant.status": {
+        "code.value": "accepted"
+      }
+    }
+  ]
+}

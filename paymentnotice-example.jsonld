@@ -1,0 +1,51 @@
+{
+  "@context": "http://build.fhir.org/PaymentNotice.jsonld",
+  "@context": "http://hl7.org/fhir/PaymentNotice/77654",
+  "Resource.id": {
+    "id.value": "77654"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the PaymentNotice</div>"
+    }
+  },
+  "PaymentNotice.identifier": [
+    {
+      "Identifier.system": {
+        "uri.value": "http://benefitsinc.com/paymentnotice"
+      },
+      "Identifier.value": {
+        "string.value": "776543"
+      }
+    }
+  ],
+  "PaymentNotice.status": {
+    "code.value": "active"
+  },
+  "PaymentNotice.created": {
+    "dateTime.value": "2014-08-16"
+  },
+  "PaymentNotice.organization": {
+    "Reference.reference": {
+      "string.value": "Organization/1"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "PaymentNotice.request": {
+    "Reference.reference": {
+      "string.value": "http://benefitsinc.com/fhir/claim/12345"
+    },
+    "Resource.reference": "http://benefitsinc.com/fhir/claim/12345"
+  },
+  "PaymentNotice.paymentStatus": {
+    "Coding.system": {
+      "uri.value": "http://hl7.org/fhir/paymentstatus"
+    },
+    "Coding.code": {
+      "code.value": "paid"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX fhirvs: <http://hl7.org/fhir/ValueSet/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+
+# An address expressed using postal conventions (as opposed to GPS or other location definition formats)
+<Address> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Address.use @<code> AND
+    	{fhir:value @fhirvs:address-use}?;  # home | work | temp | old - purpose 
+                                            # of this address 
+    fhir:Address.type @<code> AND
+    	{fhir:value @fhirvs:address-type}?;  # postal | physical | both
+    fhir:Address.text @<string>?;           # Text representation of the address
+    fhir:Address.line @<string>*;           # Street name, number, direction & 
+                                            # P.O. Box etc. 
+    fhir:Address.city @<string>?;           # Name of city, town etc.
+    fhir:Address.district @<string>?;       # District name (aka county)
+    fhir:Address.state @<string>?;          # Sub-unit of country (abbreviations 
+                                            # ok) 
+    fhir:Address.postalCode @<string>?;     # Postal code for area
+    fhir:Address.country @<string>?;        # Country (can be ISO 3166 3 letter 
+                                            # code) 
+    fhir:Address.period @<Period>?;         # Time period when address was/is in 
+                                            # use 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Data Types -------------------
+
+<Extension> {fhir:extension @<Extension>*;
+    fhir:index xsd:integer?
+}
+
+# Primitive Type code
+<code> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for code
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type string
+<string> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string MAXLENGTH 1048576?;  # Primitive value for string
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Time range defined by start and end date/time
+<Period> CLOSED {
+    fhir:Element.id @<string>?;             # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:Period.start @<dateTime>?;         # Starting time with inclusive 
+                                            # boundary 
+    fhir:Period.end @<dateTime>?;           # End time with inclusive boundary, 
+                                            # if not ongoing 
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type dateTime
+<dateTime> CLOSED {
+    fhir:Element.id @<id>?;                 # xml:id (or equivalent in JSON)
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;  # Primitive value for dateTime
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+# Primitive Type id
+<id> CLOSED {
+    fhir:extension @<Extension>*;           # Additional Content defined by 
+                                            # implementations 
+    fhir:value xsd:string?;                 # Primitive value for id
+    fhir:index xsd:integer?                 # Relative position in a list
+}
+
+#---------------------- Reference Types -------------------
+
+#---------------------- Value Sets ------------------------
+
+# The type of an address (physical / postal)
+fhirvs:address-type ["postal" "physical" "both"]
+
+# The use of an address
+fhirvs:address-use ["home" "work" "temp" "old"]

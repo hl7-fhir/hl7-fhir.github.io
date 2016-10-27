@@ -1,0 +1,92 @@
+{
+  "@context": "http://build.fhir.org/RelatedPerson.jsonld",
+  "@context": "http://hl7.org/fhir/RelatedPerson/f001",
+  "Resource.id": {
+    "id.value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n     Sarah Abels\n    </div>"
+    }
+  },
+  "RelatedPerson.identifier": [
+    {
+      "Identifier.use": {
+        "code.value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "string.value": "BSN"
+        }
+      },
+      "Identifier.system": {
+        "uri.value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      }
+    }
+  ],
+  "RelatedPerson.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/f001"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "RelatedPerson.relationship": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "code.value": "SIGOTHR"
+        }
+      }
+    ]
+  },
+  "RelatedPerson.name": [
+    {
+      "HumanName.use": {
+        "code.value": "usual"
+      },
+      "HumanName.family": [
+        {
+          "string.value": "Abels"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "string.value": "Sarah"
+        }
+      ]
+    }
+  ],
+  "RelatedPerson.telecom": [
+    {
+      "ContactPoint.system": {
+        "code.value": "phone"
+      },
+      "ContactPoint.value": {
+        "string.value": "0690383372"
+      },
+      "ContactPoint.use": {
+        "code.value": "mobile"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "code.value": "email"
+      },
+      "ContactPoint.value": {
+        "string.value": "s.abels@kpn.nl"
+      },
+      "ContactPoint.use": {
+        "code.value": "home"
+      }
+    }
+  ],
+  "RelatedPerson.gender": {
+    "code.value": "female"
+  }
+}

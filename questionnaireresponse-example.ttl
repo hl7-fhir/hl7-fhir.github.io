@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/QuestionnaireResponse/3141> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3141"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n            Comorbidity? YES\n              Cardial Comorbidity? YES\n                Angina? YES\n                MI? NO\n              Vascular Comorbidity?\n                (no answers)\n              ...\n            Histopathology\n              Abdominal\n                pT category: 1a\n              ...\n          </pre>\n    </div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Patient;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "patsub" ];
+     fhir:Patient.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "http://cancer.questionnaire.org/systems/id/patientnr" ];
+       fhir:Identifier.value [ fhir:value "A34442332" ]
+     ], [
+       fhir:index 1;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.text [ fhir:value "Dutch BSN" ]
+       ];
+       fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.2.4.6.3" ];
+       fhir:Identifier.value [ fhir:value "188912345" ]
+     ];
+     fhir:Patient.gender [ fhir:value "male" ];
+     fhir:Patient.birthDate [ fhir:value "1972-11-30"^^xsd:date ]
+  ], [
+     a fhir:Practitioner;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "questauth" ];
+     fhir:Practitioner.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.text [ fhir:value "AUMC, Den Helder" ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://cancer.questionnaire.org/systems/id/org" ];
+       fhir:Identifier.value [ fhir:value "AUMC" ]
+     ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:Reference.reference [ fhir:value "#patsub" ]
+  ];
+  fhir:QuestionnaireResponse.author [
+     fhir:Reference.reference [ fhir:value "#questauth" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2013-02-19T14:15:00-05:00"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           fhir:Coding.system [ fhir:value "http://cancer.questionnaire.org/system/code/yesno" ];
+           fhir:Coding.code [ fhir:value "1" ];
+           fhir:Coding.display [ fhir:value "Yes" ]
+         ];
+         fhir:QuestionnaireResponse.item.answer.item [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.item [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer [
+               fhir:index 0;
+               fhir:QuestionnaireResponse.item.answer.valueCoding [
+                 fhir:Coding.system [ fhir:value "http://cancer.questionnaire.org/system/code/yesno" ];
+                 fhir:Coding.code [ fhir:value "1" ]
+               ]
+             ]
+           ], [
+             fhir:index 1;
+             fhir:QuestionnaireResponse.item.answer [
+               fhir:index 0;
+               fhir:QuestionnaireResponse.item.answer.valueCoding [
+                 fhir:Coding.system [ fhir:value "http://cancer.questionnaire.org/system/code/yesno" ];
+                 fhir:Coding.code [ fhir:value "1" ]
+               ]
+             ]
+           ], [
+             fhir:index 2;
+             fhir:QuestionnaireResponse.item.answer [
+               fhir:index 0;
+               fhir:QuestionnaireResponse.item.answer.valueCoding [
+                 fhir:Coding.system [ fhir:value "http://cancer.questionnaire.org/system/code/yesno" ];
+                 fhir:Coding.code [ fhir:value "0" ]
+               ]
+             ]
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

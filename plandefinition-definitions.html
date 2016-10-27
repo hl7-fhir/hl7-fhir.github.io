@@ -1,0 +1,550 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>PlanDefinition - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/plandefinition-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="clinicalreasoning-module.html"><img src="reasoning.png"/> Clinical Reasoning</a></li>        <li><a href="plandefinition.html">PlanDefinition</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- plandefinition.html / res-Detailed Descriptions / PlanDefinition -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="plandefinition.html">Content</a></li><li><a href="plandefinition-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="plandefinition-mappings.html">Mappings</a></li><li><a href="plandefinition-profiles.html">Profiles &amp; Extensions</a></li><li><a href="plandefinition-operations.html">Operations</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">14.3.6<a name="14.3.6"> </a></span> Resource PlanDefinition - Detailed Descriptions <a href="plandefinition-definitions.html#14.3.6" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the PlanDefinition resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition"> </a><b>PlanDefinition</b></td></tr>
+  <tr><td>Definition</td><td><p>This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.url"> </a><b>PlanDefinition.url</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URL that is used to identify this plan definition when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this plan definition is (or will be) published. The URL SHOULD include the major version of the plan definition. For more information see <a href="resource.html#versions">Technical and Business Versions</a>.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows the plan definition to be referenced by a single globally unique identifier.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Can be a urn:uuid: or a urn:oid:, but real http: addresses are preferred.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.identifier"> </a><b>PlanDefinition.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>A formal identifier that is used to identify this plan definition when it is represented in other formats, or referenced in a specification, model, design or an instance.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows externally provided and/or useable business identifiers to be easily associated with the module.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Typically, this is used for identifiers that can go in an HL7 v3 II data type - e.g. to identify this plan definition outside of FHIR, where the logical URL is not possible to use.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Add constraint to require an identifier for non-experimental active artifacts.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.version"> </a><b>PlanDefinition.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The identifier that is used to identify this version of the plan definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the plan definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions are orderable. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business versionId, not a resource version id (see <a href="resource.html#versions">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>There may be multiple different instances of a plan definition that have the same identifier but different versions.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Add constraint to require a version for non-experimental active artifacts.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.name"> </a><b>PlanDefinition.name</b></td></tr>
+  <tr><td>Definition</td><td><p>A natural language name identifying the plan definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Support human navigation &amp; code generation.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The name is not expected to be globally unique. The name should be a simple alpha-numeric type name to ensure it is computable friendly.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.title"> </a><b>PlanDefinition.title</b></td></tr>
+  <tr><td>Definition</td><td><p>A short, descriptive, user-friendly title for the plan definition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.type"> </a><b>PlanDefinition.type</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of asset the plan definition represents, e.g. an order set, protocol, or event-condition-action rule.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanDefinitionType: <a href="valueset-plan-definition-type.html">The type of PlanDefinition</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.status"> </a><b>PlanDefinition.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of this plan definition. Enables tracking the life-cycle of the content.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PublicationStatus: <a href="valueset-publication-status.html">The lifecycle status of a Value Set or Concept Map.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Allows filtering of plan definition that are appropriate for use vs. not.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.experimental"> </a><b>PlanDefinition.experimental</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag to indicate that this plan definition is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Enables experimental content to be developed following the same life-cycle as a production-level plan definition would.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Allows filtering of plan definition that are appropriate for use vs. not.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.date"> </a><b>PlanDefinition.date</b></td></tr>
+  <tr><td>Definition</td><td><p>The date  (and optionally time) when the plan definition was published. The date must change when the business version changes, if it does, and it must change if the status code changes. In addition, it should change when the substantive content of the plan definition changes.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the plan definition. Additional specific dates may be added as extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.description"> </a><b>PlanDefinition.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A free text natural language description of the plan definition from the consumer's perspective.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Comments</td><td><p>This description can be used to capture details such as why the plan definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the module as conveyed in the text field of the resource itself. This item SHOULD be populated unless the information is available from context.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.purpose"> </a><b>PlanDefinition.purpose</b></td></tr>
+  <tr><td>Definition</td><td><p>Explains why this plan definition is needed and why it has been designed as it has.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Comments</td><td><p>This element does not describe the usage of the plan definition (See, e.g, the comments element, or relatedArtifacts), rather it's for traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this plan definition.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.usage"> </a><b>PlanDefinition.usage</b></td></tr>
+  <tr><td>Definition</td><td><p>A detailed description of how the asset is used from a clinical perspective.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.approvalDate"> </a><b>PlanDefinition.approvalDate</b></td></tr>
+  <tr><td>Definition</td><td><p>The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#date">date</a></td></tr>
+  <tr><td>Comments</td><td><p>The date may be more recent than the approval date because of minor changes / editorial corrections.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.lastReviewDate"> </a><b>PlanDefinition.lastReviewDate</b></td></tr>
+  <tr><td>Definition</td><td><p>The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#date">date</a></td></tr>
+  <tr><td>Comments</td><td><p>If specified, this is usually after the approval date.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.effectivePeriod"> </a><b>PlanDefinition.effectivePeriod</b></td></tr>
+  <tr><td>Definition</td><td><p>The period during which the plan definition content was or is planned to be effective.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Period">Period</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The effective period for a plan definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 would be published in 2015.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.useContext"> </a><b>PlanDefinition.useContext</b></td></tr>
+  <tr><td>Definition</td><td><p>The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of code system definitions.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="usagecontext.html">UsageContext</a></td></tr>
+  <tr><td>Requirements</td><td><p>Assist in searching for appropriate content.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>When multiple usageContexts are specified, this means that all the contexts are applicable to this context. For example, if a gender and age group is specified, a patient must match the specified gender and age group for the asset to be considered applicable.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.jurisdiction"> </a><b>PlanDefinition.jurisdiction</b></td></tr>
+  <tr><td>Definition</td><td><p>A jurisdiction in which the plan definition is intended to be used.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Jurisdiction ValueSet: <a href="valueset-jurisdiction.html">Countries and regions within which this artifact is targeted for use</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.topic"> </a><b>PlanDefinition.topic</b></td></tr>
+  <tr><td>Definition</td><td><p>Clinical topics related to the content of the asset.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Repositories must be able to determine how to categorize the asset so that it can be found by topical searches.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.contributor"> </a><b>PlanDefinition.contributor</b></td></tr>
+  <tr><td>Definition</td><td><p>A contributor to the content of the asset, including authors, editors, reviewers, and endorsers.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="contributor.html">Contributor</a></td></tr>
+  <tr><td>Requirements</td><td><p>Consumers of the content must be able to quickly determine who contributed to the content of the asset.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.publisher"> </a><b>PlanDefinition.publisher</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the individual or organization that published the plan definition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Helps establish the &quot;authority/credibility&quot; of the plan definition.  May also allow for contact.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Usually an organization, but may be an individual. The publisher (or steward) of the plan definition is the organization or individual primarily responsible for the maintenance and upkeep of the plan definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the plan definition. This item SHOULD be populated unless the information is available from context.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Add constraint to require a publisher for non-experimental active artifacts.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.contact"> </a><b>PlanDefinition.contact</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details to assist a user in finding and communicating with the publisher.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="contactdetail.html">ContactDetail</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May be a web site, an email address, a telephone number, etc.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.copyright"> </a><b>PlanDefinition.copyright</b></td></tr>
+  <tr><td>Definition</td><td><p>A copyright statement relating to the plan definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the plan definition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Requirements</td><td><p>Consumers of the library must be able to determine any legal restrictions on the use of the plan definition and/or its content.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>License; Restrictions</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.relatedArtifact"> </a><b>PlanDefinition.relatedArtifact</b></td></tr>
+  <tr><td>Definition</td><td><p>Related artifacts such as additional documentation, justification, or bibliographic references.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="relatedartifact.html">RelatedArtifact</a></td></tr>
+  <tr><td>Requirements</td><td><p>Assets must be able to provide enough information for consumers of the content (and/or interventions or results produced by the content) to be able to determine and understand the justification for and evidence in support of the content.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Each related artifact is either an attachment, or a reference to another resource, but not both.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.library"> </a><b>PlanDefinition.library</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a Library resource containing any formal logic used by the plan definition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="library.html">Library</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition"> </a><b>PlanDefinition.actionDefinition</b></td></tr>
+  <tr><td>Definition</td><td><p>An action to be taken as part of the plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.actionIdentifier"> </a><b>PlanDefinition.actionDefinition.actionIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>A unique identifier for the action. The identifier SHALL be unique within the container in which it appears, and MAY be universally unique.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.label"> </a><b>PlanDefinition.actionDefinition.label</b></td></tr>
+  <tr><td>Definition</td><td><p>A user-visible label for the action.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.title"> </a><b>PlanDefinition.actionDefinition.title</b></td></tr>
+  <tr><td>Definition</td><td><p>The title of the action displayed to a user.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.description"> </a><b>PlanDefinition.actionDefinition.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A short description of the action used to provide a summary to display to the user.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.textEquivalent"> </a><b>PlanDefinition.actionDefinition.textEquivalent</b></td></tr>
+  <tr><td>Definition</td><td><p>A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that may not be capable of interpreting it dynamically.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.code"> </a><b>PlanDefinition.actionDefinition.code</b></td></tr>
+  <tr><td>Definition</td><td><p>The concept represented by this action or its sub-actions.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.documentation"> </a><b>PlanDefinition.actionDefinition.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="relatedartifact.html">RelatedArtifact</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.triggerDefinition"> </a><b>PlanDefinition.actionDefinition.triggerDefinition</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of when the action should be triggered.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="triggerdefinition.html">TriggerDefinition</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.condition"> </a><b>PlanDefinition.actionDefinition.condition</b></td></tr>
+  <tr><td>Definition</td><td><p>An expression specifying whether or not the action is applicable in a given context.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.condition.description"> </a><b>PlanDefinition.actionDefinition.condition.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A brief, natural language description of the condition that effectively communicates the intended semantics.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.condition.language"> </a><b>PlanDefinition.actionDefinition.condition.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The media type of the language for the expression.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.condition.expression"> </a><b>PlanDefinition.actionDefinition.condition.expression</b></td></tr>
+  <tr><td>Definition</td><td><p>An expression that returns true or false, indicating whether or not the condition is satisfied.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>The expression may be inlined, or may be a reference to a named expression within a logic library referenced by the library element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.relatedAction"> </a><b>PlanDefinition.actionDefinition.relatedAction</b></td></tr>
+  <tr><td>Definition</td><td><p>A relationship to another action such as &quot;before&quot; or &quot;30-60 minutes after start of&quot;.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Comments</td><td><p>When an action depends on multiple actions, the meaning is that all actions are dependencies, rather than that any of the actions are a dependency.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.relatedAction.actionIdentifier"> </a><b>PlanDefinition.actionDefinition.relatedAction.actionIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>The unique identifier of the related action.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.relatedAction.relationship"> </a><b>PlanDefinition.actionDefinition.relatedAction.relationship</b></td></tr>
+  <tr><td>Definition</td><td><p>The relationship of this action to the related action.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionRelationshipType: <a href="valueset-action-relationship-type.html">Defines the types of relationships between actions</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.relatedAction.offset_x_"> </a><b>PlanDefinition.actionDefinition.relatedAction.offset[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Duration">Duration</a>|<a href="datatypes.html#Range">Range</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.timing_x_"> </a><b>PlanDefinition.actionDefinition.timing[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>An optional value describing when the action should be performed.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a>|<a href="datatypes.html#Period">Period</a>|<a href="datatypes.html#Duration">Duration</a>|<a href="datatypes.html#Range">Range</a>|<a href="datatypes.html#Timing">Timing</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.participantType"> </a><b>PlanDefinition.actionDefinition.participantType</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of participant in the action.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionParticipantType: <a href="valueset-action-participant-type.html">The type of participant for the action</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.type"> </a><b>PlanDefinition.actionDefinition.type</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of action to perform (create, update, remove).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionType: <a href="valueset-action-type.html">The type of action to be performed</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.groupingBehavior"> </a><b>PlanDefinition.actionDefinition.groupingBehavior</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines the grouping behavior for the action and its children.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionGroupingBehavior: <a href="valueset-action-grouping-behavior.html">Defines organization behavior of a group</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.selectionBehavior"> </a><b>PlanDefinition.actionDefinition.selectionBehavior</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines the selection behavior for the action and its children.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionSelectionBehavior: <a href="valueset-action-selection-behavior.html">Defines selection behavior of a group</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.requiredBehavior"> </a><b>PlanDefinition.actionDefinition.requiredBehavior</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines the requiredness behavior for the action.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionRequiredBehavior: <a href="valueset-action-required-behavior.html">Defines requiredness behavior for selecting an action or an action group</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.precheckBehavior"> </a><b>PlanDefinition.actionDefinition.precheckBehavior</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines whether the action should usually be preselected.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionPrecheckBehavior: <a href="valueset-action-precheck-behavior.html">Defines selection frequency behavior for an action or group</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.cardinalityBehavior"> </a><b>PlanDefinition.actionDefinition.cardinalityBehavior</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines whether the action can be selected multiple times.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PlanActionCardinalityBehavior: <a href="valueset-action-cardinality-behavior.html">Defines behavior for an action or a group for how many times that item may be repeated</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.activityDefinition"> </a><b>PlanDefinition.actionDefinition.activityDefinition</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to an ActivityDefinition that describes the action to be taken in detail.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="activitydefinition.html">ActivityDefinition</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Note that the resource is optional, and if no resource is specified, a dynamicValue with a root (/) path can be used to define the entire resource dynamically.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.transform"> </a><b>PlanDefinition.actionDefinition.transform</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="structuremap.html">StructureMap</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.dynamicValue"> </a><b>PlanDefinition.actionDefinition.dynamicValue</b></td></tr>
+  <tr><td>Definition</td><td><p>Customizations that should be applied to the statically defined resource. For example, if the dosage of a medication must be computed based on the patient's weight, a customization would be used to specify an expression that calculated the weight, and the path on the resource that would contain the result.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.dynamicValue.description"> </a><b>PlanDefinition.actionDefinition.dynamicValue.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A brief, natural language description of the intended semantics of the dynamic value.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.dynamicValue.path"> </a><b>PlanDefinition.actionDefinition.dynamicValue.path</b></td></tr>
+  <tr><td>Definition</td><td><p>The path to the element to be customized. This is the path on the resource that will hold the result of the calculation defined by the expression.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.dynamicValue.language"> </a><b>PlanDefinition.actionDefinition.dynamicValue.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The media type of the language for the expression.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.dynamicValue.expression"> </a><b>PlanDefinition.actionDefinition.dynamicValue.expression</b></td></tr>
+  <tr><td>Definition</td><td><p>An expression specifying the value of the customized element.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>The expression may be inlined, or may be a reference to a named expression within a logic library referenced by the library element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="PlanDefinition.actionDefinition.actionDefinition"> </a><b>PlanDefinition.actionDefinition.actionDefinition</b></td></tr>
+  <tr><td>Definition</td><td><p>Sub actions that are contained within the action. The behavior of this action determines the functionality of the sub-actions. For example, a selection behavior of at-most-one indicates that of the sub-actions, at most one may be chosen as part of realizing the action definition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#PlanDefinition.actionDefinition">See PlanDefinition.actionDefinition</a></td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fplandefinition-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fplandefinition-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

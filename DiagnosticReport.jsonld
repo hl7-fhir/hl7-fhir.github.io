@@ -1,0 +1,69 @@
+﻿{
+  "@context": {
+    "DiagnosticReport.identifier": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.identifier",
+      "@type": "http://hl7.org/fhir/Identifier"
+    },
+    "DiagnosticReport.status": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.status",
+      "@type": "http://hl7.org/fhir/code"
+    },
+    "DiagnosticReport.category": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.category",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "DiagnosticReport.code": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.code",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "DiagnosticReport.subject": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.subject",
+      "@type": "http://hl7.org/fhir/Reference(Patient|Group|Device|Location)"
+    },
+    "DiagnosticReport.encounter": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.encounter",
+      "@type": "http://hl7.org/fhir/Reference(Encounter)"
+    },
+    "DiagnosticReport.issued": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.issued",
+      "@type": "http://hl7.org/fhir/instant"
+    },
+    "DiagnosticReport.performer": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.performer",
+      "@type": "http://hl7.org/fhir/Reference(Practitioner|Organization)"
+    },
+    "DiagnosticReport.request": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.request",
+      "@type": "http://hl7.org/fhir/Reference(DiagnosticRequest|ProcedureRequest|ReferralRequest)"
+    },
+    "DiagnosticReport.specimen": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.specimen",
+      "@type": "http://hl7.org/fhir/Reference(Specimen)"
+    },
+    "DiagnosticReport.result": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.result",
+      "@type": "http://hl7.org/fhir/Reference(Observation)"
+    },
+    "DiagnosticReport.imagingStudy": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.imagingStudy",
+      "@type": "http://hl7.org/fhir/Reference(ImagingStudy|ImagingManifest)"
+    },
+    "DiagnosticReport.image": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.image",
+      "@type": "http://hl7.org/fhir/"
+    },
+    "DiagnosticReport.conclusion": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.conclusion",
+      "@type": "http://hl7.org/fhir/string"
+    },
+    "DiagnosticReport.codedDiagnosis": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.codedDiagnosis",
+      "@type": "http://hl7.org/fhir/CodeableConcept"
+    },
+    "DiagnosticReport.presentedForm": {
+      "@id": "http://hl7.org/fhir/DiagnosticReport.presentedForm",
+      "@type": "http://hl7.org/fhir/Attachment"
+    }
+  },
+  "@id": "http://hl7.org/fhir/DiagnosticReport"
+}

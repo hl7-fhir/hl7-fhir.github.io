@@ -1,0 +1,796 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>CapabilityStatement - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/capabilitystatement-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="capabilitystatement.html">CapabilityStatement</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- capabilitystatement.html / res-Detailed Descriptions / CapabilityStatement -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="capabilitystatement.html">Content</a></li><li><a href="capabilitystatement-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="capabilitystatement-mappings.html">Mappings</a></li><li><a href="capabilitystatement-profiles.html">Profiles &amp; Extensions</a></li><li><a href="capabilitystatement-operations.html">Operations</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">5.3.7<a name="5.3.7"> </a></span> Resource CapabilityStatement - Detailed Descriptions <a href="capabilitystatement-definitions.html#5.3.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the CapabilityStatement resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement"> </a><b>CapabilityStatement</b></td></tr>
+  <tr><td>Definition</td><td><p>A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-1</b>: A Capability Statement SHALL have at least one of REST, messaging or document (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: rest.exists() or messaging.exists() or document.exists(), xpath: exists(f:rest) or exists(f:messaging) or exists(f:document))<br/><b title="Formal Invariant Identifier">cpb-14</b>: Capability Statements of kind 'requirements' do not have software or implementation elements (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: (software.empty() and implementation.empty()) or kind != 'requirements', xpath: not(exists(f:software) or exists(f:implementation)) or (f:kind/@value != 'requirements'))<br/><b title="Formal Invariant Identifier">cpb-15</b>: Capability Statements of kind 'software' do not have implementation elements (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: implementation.empty() or kind != 'capability', xpath: not(exists(f:implementation)) or (f:kind/@value != 'capability'))<br/><b title="Formal Invariant Identifier">cpb-2</b>: A Capability Statement SHALL have at least one of description, software, or implementation (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: (description.count() + software.count() + implementation.count()) &gt; 0, xpath: count(f:software | f:implementation | f:description) &gt; 0)<br/><b title="Formal Invariant Identifier">cpb-3</b>: Messaging end-point is required (and is only permitted) when statement is for an implementation (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: messaging.endpoint.empty() or kind = 'instance', xpath: not(exists(f:messaging/f:endpoint)) or f:kind/@value = 'instance')<br/><b title="Formal Invariant Identifier">cpb-7</b>: The set of documents must be unique by the combination of profile &amp; mode (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: document.select(profile.reference&amp;mode).isDistinct(), xpath: count(f:document[f:mode/@value='producer'])=count(distinct-values(f:document[f:mode/@value='producer']/f:profile/f:reference/@value)) and count(f:document[f:mode/@value='consumer'])=count(distinct-values(f:document[f:mode/@value='consumer']/f:profile/f:reference/@value)))<br/><b title="Formal Invariant Identifier">cpb-8</b>: There can only be one REST declaration per mode (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: rest.select(mode).isDistinct(), xpath: count(f:rest)=count(distinct-values(f:rest/f:mode/@value)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.url"> </a><b>CapabilityStatement.url</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URL that is used to identify this capability statement when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this capability statement is (or will be) published. The URL SHOULD include the major version of the capability statement. For more information see <a href="resource.html#versions">Technical and Business Versions</a>.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows the capability statement to be referenced by a single globally unique identifier.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Can be a urn:uuid: or a urn:oid:, but real http: addresses are preferred.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.version"> </a><b>CapabilityStatement.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The identifier that is used to identify this version of the capability statement when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the capability statement author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions are orderable.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business versionId, not a resource version id (see <a href="resource.html#versions">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>There may be multiple different instances of a capability statement that have the same identifier but different versions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.name"> </a><b>CapabilityStatement.name</b></td></tr>
+  <tr><td>Definition</td><td><p>A natural language name identifying the capability statement. This name should be usable as an identifier for the module by machine processing applications such as code generation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Support human navigation &amp; code generation.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The name is not expected to be globally unique. The name should be a simple alpha-numeric type name to ensure it is computable friendly.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.title"> </a><b>CapabilityStatement.title</b></td></tr>
+  <tr><td>Definition</td><td><p>A short, descriptive, user-friendly title for the capability statement.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.status"> </a><b>CapabilityStatement.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of this capability statement. Enables tracking the life-cycle of the content.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>PublicationStatus: <a href="valueset-publication-status.html">The lifecycle status of a Value Set or Concept Map.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Allows filtering of capability statement that are appropriate for use vs. not. This is not intended for use with actual capability statements, but where capability statements are used to describe possible or desired systems.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.experimental"> </a><b>CapabilityStatement.experimental</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag to indicate that this capability statement is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Enables experimental content to be developed following the same life-cycle as a production-level capability statement would.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Allows filtering of capability statement that are appropriate for use vs. not.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.date"> </a><b>CapabilityStatement.date</b></td></tr>
+  <tr><td>Definition</td><td><p>The date  (and optionally time) when the capability statement was published. The date must change when the business version changes, if it does, and it must change if the status code changes. In addition, it should change when the substantive content of the capability statement changes.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the capability statement. Additional specific dates may be added as extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.publisher"> </a><b>CapabilityStatement.publisher</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the individual or organization that published the capability statement.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Helps establish the &quot;authority/credibility&quot; of the capability statement.  May also allow for contact.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Usually an organization, but may be an individual. The publisher (or steward) of the capability statement is the organization or individual primarily responsible for the maintenance and upkeep of the capability statement. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the capability statement. This item SHOULD be populated unless the information is available from context.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.contact"> </a><b>CapabilityStatement.contact</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details to assist a user in finding and communicating with the publisher.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="contactdetail.html">ContactDetail</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May be a web site, an email address, a telephone number, etc.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.description"> </a><b>CapabilityStatement.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A free text natural language description of the capability statement from the consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Comments</td><td><p>This description can be used to capture details such as why the capability statement was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the module as conveyed in the text field of the resource itself. This item SHOULD be populated unless the information is available from context. This does not need to be populated if the description is adequately implied by the software or implementation details.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-2</b>: A Capability Statement SHALL have at least one of description, software, or implementation (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: (description.count() + software.count() + implementation.count()) &gt; 0, xpath: count(f:software | f:implementation | f:description) &gt; 0)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.useContext"> </a><b>CapabilityStatement.useContext</b></td></tr>
+  <tr><td>Definition</td><td><p>The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of code system definitions.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="usagecontext.html">UsageContext</a></td></tr>
+  <tr><td>Requirements</td><td><p>Assist in searching for appropriate content.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>When multiple usageContexts are specified, this means that all the contexts are applicable to this context. For example, if a gender and age group is specified, a patient must match the specified gender and age group for the asset to be considered applicable.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.jurisdiction"> </a><b>CapabilityStatement.jurisdiction</b></td></tr>
+  <tr><td>Definition</td><td><p>A jurisdiction in which the capability statement is intended to be used.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Jurisdiction ValueSet: <a href="valueset-jurisdiction.html">Countries and regions within which this artifact is targeted for use</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.purpose"> </a><b>CapabilityStatement.purpose</b></td></tr>
+  <tr><td>Definition</td><td><p>Explains why this capability statement is needed and why it has been designed as it has.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Comments</td><td><p>This element does not describe the usage of the capability statement (See, e.g, the comments element, or relatedArtifacts), rather it's for traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this capability statement.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.copyright"> </a><b>CapabilityStatement.copyright</b></td></tr>
+  <tr><td>Definition</td><td><p>A copyright statement relating to the capability statement and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Requirements</td><td><p>Consumers of the library must be able to determine any legal restrictions on the use of the capability statement and/or its content.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>License; Restrictions</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.kind"> </a><b>CapabilityStatement.kind</b></td></tr>
+  <tr><td>Definition</td><td><p>The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind not instance of software) or a class of implementation (e.g. a desired purchase).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>CapabilityStatementKind: <a href="valueset-capability-statement-kind.html">How a capability statement is intended to be used.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allow searching the 3 modes.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.instantiates"> </a><b>CapabilityStatement.instantiates</b></td></tr>
+  <tr><td>Definition</td><td><p>Reference to a canonical URL of another CapabilityStatement that this software implements or uses. This capability statement is a published API description that corresponds to a business service. The rest of the capability statement does not need to repeat the details of the referenced resource, but can do so.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>HL7 defines the following Services: <a href="terminology-service.html">Terminology Service</a></p>
+<p>Many <a href="http://fhir.org/guides/registry">Implementation Guides <img src="external.png" style="text-align: baseline"/></a> define additional services.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.software"> </a><b>CapabilityStatement.software</b></td></tr>
+  <tr><td>Definition</td><td><p>Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-2</b>: A Capability Statement SHALL have at least one of description, software, or implementation (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: (description.count() + software.count() + implementation.count()) &gt; 0, xpath: count(f:software | f:implementation | f:description) &gt; 0)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.software.name"> </a><b>CapabilityStatement.software.name</b></td></tr>
+  <tr><td>Definition</td><td><p>Name software is known by.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.software.version"> </a><b>CapabilityStatement.software.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The version identifier for the software covered by this statement.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business versionId, not a resource version id (see <a href="resource.html#versions">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If possible, version should be specified, as statements are likely to be different for different versions of software.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.software.releaseDate"> </a><b>CapabilityStatement.software.releaseDate</b></td></tr>
+  <tr><td>Definition</td><td><p>Date this version of the software released.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.implementation"> </a><b>CapabilityStatement.implementation</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-2</b>: A Capability Statement SHALL have at least one of description, software, or implementation (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: (description.count() + software.count() + implementation.count()) &gt; 0, xpath: count(f:software | f:implementation | f:description) &gt; 0)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.implementation.description"> </a><b>CapabilityStatement.implementation.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the specific installation that this capability statement relates to.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.implementation.url"> </a><b>CapabilityStatement.implementation.url</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.fhirVersion"> </a><b>CapabilityStatement.fhirVersion</b></td></tr>
+  <tr><td>Definition</td><td><p>The version of the FHIR specification on which this capability statement is based.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.acceptUnknown"> </a><b>CapabilityStatement.acceptUnknown</b></td></tr>
+  <tr><td>Definition</td><td><p>A code that indicates whether the application accepts unknown elements or extensions when reading resources.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>UnknownContentCode: <a href="valueset-unknown-content-code.html">A code that indicates whether an application accepts unknown elements or extensions when reading resources.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Unknown elements in a resource can only arise as later versions of the specification are published, because this is the only place where such elements can be defined. Hence accepting unknown elements is about inter-version compatibility.</p>
+<p>Applications are recommended to accept unknown extensions and elements ('both'), but this is not always possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.format"> </a><b>CapabilityStatement.format</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of the formats supported by this implementation using their content types.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType <img src="external.png" style="text-align: baseline"/></a>: <a href="terminologies.html#required">Required</a>: <a href="http://www.rfc-editor.org/bcp/bcp13.txt">BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049) <img src="external.png" style="text-align: baseline"/></a> (The mime type of an attachment. Any valid mime type is allowed.)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>&quot;xml&quot; or &quot;json&quot; are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.profile"> </a><b>CapabilityStatement.profile</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of profiles that represent different use cases supported by the system. For a server, &quot;supported by the system&quot; means the system hosts/produces a set of resources that are conformant to a particular profile, and allows clients that use its services to search using this profile and to find appropriate data. For a client, it means the system will search by this profile and process data according to the guidance implicit in the profile. See further discussion in [Using Profiles]{profiling.html#profile-uses}.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="structuredefinition.html">StructureDefinition</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Supported profiles are different to the profiles that apply to a particular resource in rest.resource.profile. The resource profile is a general statement of what features of the resource are supported overall by the system - the sum total of the facilities it supports. A supported profile is a deeper statement about the functionality of the data and services provided by the server (or used by the client). A typical case is a laboratory system that produces a set of different reports - this is the list of types of data that it publishes. A key aspect of declaring profiles here is the question of how the client converts knowledge that the server publishes this data into working with the data; the client can inspect individual resources to determine whether they conform to a particular profile, but how does it find the ones that does? It does so by searching using the <em>profile parameter, so any resources listed here must be valid values for the </em>profile resource (using the identifier in the target profile).  Typical supported profiles cross resource types to describe a network of related resources, so they are listed here rather than by resource. However, they do not need to describe more than one resource.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest"> </a><b>CapabilityStatement.rest</b></td></tr>
+  <tr><td>Definition</td><td><p>A definition of the restful capabilities of the solution, if any.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Multiple repetitions allow definition of both client and / or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-9</b>: A given resource can only be described once per RESTful mode (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: resource.select(type).isDistinct(), xpath: count(f:resource)=count(distinct-values(f:resource/f:type/@value)))<br/><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-1</b>: A Capability Statement SHALL have at least one of REST, messaging or document (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: rest.exists() or messaging.exists() or document.exists(), xpath: exists(f:rest) or exists(f:messaging) or exists(f:document))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.mode"> </a><b>CapabilityStatement.rest.mode</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies whether this portion of the statement is describing ability to initiate or receive restful operations.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>RestfulCapabilityMode: <a href="valueset-restful-capability-mode.html">The mode of a RESTful capability statement.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.documentation"> </a><b>CapabilityStatement.rest.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the system's restful capabilities that apply across all applications, such as security.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security"> </a><b>CapabilityStatement.rest.security</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about security implementation from an interface perspective - what a client needs to know.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security.cors"> </a><b>CapabilityStatement.rest.security.cors</b></td></tr>
+  <tr><td>Definition</td><td><p>Server adds CORS headers when responding to requests - this enables javascript applications to use the server.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The easiest CORS headers to add are Access-Control-Allow-Origin: * &amp; Access-Control-Request-Method: GET, POST, PUT, DELETE. All servers SHOULD support CORS.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security.service"> </a><b>CapabilityStatement.rest.security.service</b></td></tr>
+  <tr><td>Definition</td><td><p>Types of security services are supported/required by the system.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>RestfulSecurityService: <a href="valueset-restful-security-service.html">Types of security services used with FHIR.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security.description"> </a><b>CapabilityStatement.rest.security.description</b></td></tr>
+  <tr><td>Definition</td><td><p>General description of how security works.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security.certificate"> </a><b>CapabilityStatement.rest.security.certificate</b></td></tr>
+  <tr><td>Definition</td><td><p>Certificates associated with security profiles.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security.certificate.type"> </a><b>CapabilityStatement.rest.security.certificate.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Mime type for certificate.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType <img src="external.png" style="text-align: baseline"/></a>: <a href="terminologies.html#required">Required</a>: <a href="http://www.rfc-editor.org/bcp/bcp13.txt">BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049) <img src="external.png" style="text-align: baseline"/></a> (The mime type of an attachment. Any valid mime type is allowed.)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.security.certificate.blob"> </a><b>CapabilityStatement.rest.security.certificate.blob</b></td></tr>
+  <tr><td>Definition</td><td><p>Actual certificate.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource"> </a><b>CapabilityStatement.rest.resource</b></td></tr>
+  <tr><td>Definition</td><td><p>A specification of the restful capabilities of the solution for a specific resource type.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Max of one repetition per resource type.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-12</b>: Search parameter names must be unique in the context of a resource (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: searchParam.select(name).isDistinct(), xpath: count(f:searchParam)=count(distinct-values(f:searchParam/f:name/@value)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.type"> </a><b>CapabilityStatement.rest.resource.type</b></td></tr>
+  <tr><td>Definition</td><td><p>A type of resource exposed via the restful interface.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ResourceType: <a href="valueset-resource-types.html">Any defined Resource Type name</a></td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.profile"> </a><b>CapabilityStatement.rest.resource.profile</b></td></tr>
+  <tr><td>Definition</td><td><p>A specification of the profile that describes the solution's overall support for the resource, including any constraints on cardinality, bindings, lengths or other limitations. See further discussion in [Using Profiles]{profiling.html#profile-uses}.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="structuredefinition.html">StructureDefinition</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The profile applies to all  resources of this type - i.e. it is the superset of what is supported by the system.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.documentation"> </a><b>CapabilityStatement.rest.resource.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional information about the resource type is used by the system.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.interaction"> </a><b>CapabilityStatement.rest.resource.interaction</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a restful operation supported by the solution.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.interaction.code"> </a><b>CapabilityStatement.rest.resource.interaction.code</b></td></tr>
+  <tr><td>Definition</td><td><p>Coded identifier of the operation, supported by the system resource.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>TypeRestfulInteraction: <a href="valueset-type-restful-interaction.html">Operations supported by REST at the type or instance level.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.interaction.documentation"> </a><b>CapabilityStatement.rest.resource.interaction.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>REST allows a degree of variability in the implementation of RESTful solutions that is useful for exchange partners to be aware of.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.versioning"> </a><b>CapabilityStatement.rest.resource.versioning</b></td></tr>
+  <tr><td>Definition</td><td><p>This field is set to no-version to specify that the system does not support (server) or use (client) versioning for this resource type. If this has some other value, the server must at least correctly track and populate the versionId meta-property on resources. If the value is 'versioned-update', then the server supports all the versioning features, including using e-tags for version integrity in the API.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ResourceVersionPolicy: <a href="valueset-versioning-policy.html">How the system supports versioning for a resource.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>If a server supports versionIds correctly, it SHOULD support vread too, but is not required to do so.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.readHistory"> </a><b>CapabilityStatement.rest.resource.readHistory</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag for whether the server is able to return past versions as part of the vRead operation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Comments</td><td><p>It is useful to support the vRead operation for current operations, even if past versions aren't available.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.updateCreate"> </a><b>CapabilityStatement.rest.resource.updateCreate</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag to indicate that the server allows or needs to allow the client to create new identities on the server (e.g. that is, the client PUTs to a location where there is no existing resource). Allowing this operation means that the server allows the client to create new identities on the server.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Comments</td><td><p>Allowing the clients to create new identities on the server means that the system administrator needs to have confidence that the clients do not create clashing identities between them. Obviously, if there is only one client, this won't happen. While creating identities on the client means that the clients need to be managed, it's much more convenient for many scenarios if such management can be put in place.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.conditionalCreate"> </a><b>CapabilityStatement.rest.resource.conditionalCreate</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag that indicates that the server supports conditional create.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Comments</td><td><p>Conditional Create is mainly appropriate for interface engine scripts converting from other formats, such as v2.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.conditionalRead"> </a><b>CapabilityStatement.rest.resource.conditionalRead</b></td></tr>
+  <tr><td>Definition</td><td><p>A code that indicates how the server supports conditional read.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ConditionalReadStatus: <a href="valueset-conditional-read-status.html">A code that indicates how the server supports conditional read.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Conditional Read is mainly appropriate for interface engine scripts converting from other formats, such as v2.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.conditionalUpdate"> </a><b>CapabilityStatement.rest.resource.conditionalUpdate</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag that indicates that the server supports conditional update.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Comments</td><td><p>Conditional Update is mainly appropriate for interface engine scripts converting from other formats, such as v2.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.conditionalDelete"> </a><b>CapabilityStatement.rest.resource.conditionalDelete</b></td></tr>
+  <tr><td>Definition</td><td><p>A code that indicates how the server supports conditional delete.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ConditionalDeleteStatus: <a href="valueset-conditional-delete-status.html">A code that indicates how the server supports conditional delete.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Conditional Delete is mainly appropriate for interface engine scripts converting from other formats, such as v2.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.referencePolicy"> </a><b>CapabilityStatement.rest.resource.referencePolicy</b></td></tr>
+  <tr><td>Definition</td><td><p>A set of flags that defines how references are supported.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ReferenceHandlingPolicy: <a href="valueset-reference-handling-policy.html">A set of flags that defines how references are supported</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchInclude"> </a><b>CapabilityStatement.rest.resource.searchInclude</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of _include values supported by the server.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>If this list is empty, the server does not support includes.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchRevInclude"> </a><b>CapabilityStatement.rest.resource.searchRevInclude</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of _revinclude (reverse include) values supported by the server.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>If this list is empty, the server does not support includes.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam"> </a><b>CapabilityStatement.rest.resource.searchParam</b></td></tr>
+  <tr><td>Definition</td><td><p>Search parameters for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-13</b>: Search parameters can only have chain names when the search parameter type is 'reference' (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: chain.empty() or type = 'reference', xpath: not(exists(f:chain)) or (f:type/@value = 'reference'))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.name"> </a><b>CapabilityStatement.rest.resource.searchParam.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the search parameter used in the interface.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>Parameter names cannot overlap with standard parameter names, and standard parameters cannot be redefined.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.definition"> </a><b>CapabilityStatement.rest.resource.searchParam.definition</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to <a href="searchparameter-definitions.html#SearchParameter.url">SearchParameter.url</a>).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Comments</td><td><p>This SHOULD be present, and matches SearchParameter.url.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.type"> </a><b>CapabilityStatement.rest.resource.searchParam.type</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of value a search parameter refers to, and how the content is interpreted.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>SearchParamType: <a href="valueset-search-param-type.html">Data types allowed to be used for search parameters.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>While this can be looked up from the definition, it is included here as a convenience for systems that autogenerate a query interface based on the server capability statement.  It SHALL be the same as the type in the search parameter definition.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.documentation"> </a><b>CapabilityStatement.rest.resource.searchParam.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.target"> </a><b>CapabilityStatement.rest.resource.searchParam.target</b></td></tr>
+  <tr><td>Definition</td><td><p>Types of resource (if a resource is referenced).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ResourceType: <a href="valueset-resource-types.html">Any defined Resource Type name</a></td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>This SHALL be the same as or a proper subset of the resources listed in the search parameter definition.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.modifier"> </a><b>CapabilityStatement.rest.resource.searchParam.modifier</b></td></tr>
+  <tr><td>Definition</td><td><p>A modifier supported for the search parameter.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>SearchModifierCode: <a href="valueset-search-modifier-code.html">A supported modifier for a search parameter.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.resource.searchParam.chain"> </a><b>CapabilityStatement.rest.resource.searchParam.chain</b></td></tr>
+  <tr><td>Definition</td><td><p>Contains the names of any search parameters which may be chained to the containing search parameter. Chained parameters may be added to search parameters of type reference, and specify that resources will only be returned if they contain a reference to a resource which matches the chained parameter value. Values for this field should be drawn from CapabilityStatement.rest.resource.searchParam.name on the target resource type.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>Systems are not required to list all the chain names they support, but if they don't list them, clients may not know to use them.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.interaction"> </a><b>CapabilityStatement.rest.interaction</b></td></tr>
+  <tr><td>Definition</td><td><p>A specification of restful operations supported by the system.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.interaction.code"> </a><b>CapabilityStatement.rest.interaction.code</b></td></tr>
+  <tr><td>Definition</td><td><p>A coded identifier of the operation, supported by the system.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>SystemRestfulInteraction: <a href="valueset-system-restful-interaction.html">Operations supported by REST at the system level.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.interaction.documentation"> </a><b>CapabilityStatement.rest.interaction.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.searchParam"> </a><b>CapabilityStatement.rest.searchParam</b></td></tr>
+  <tr><td>Definition</td><td><p>Search parameters that are supported for searching all resources for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#CapabilityStatement.rest.resource.searchParam">See CapabilityStatement.rest.resource.searchParam</a></td></tr>
+  <tr><td>Comments</td><td><p>Typically, the only search parameters supported for all parameters are search parameters that apply to all resources - tags, profiles, text search etc.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.operation"> </a><b>CapabilityStatement.rest.operation</b></td></tr>
+  <tr><td>Definition</td><td><p>Definition of an operation or a named query and with its parameters and their meaning and type.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.operation.name"> </a><b>CapabilityStatement.rest.operation.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the operation or query. For an operation, this is the name  prefixed with $ and used in the url. For a query, this is the name used in the _query parameter when the query is called.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>The name here SHOULD be the same as the name in the definition, unless there is a name clash and the name cannot be used. The name does not include the &quot;$&quot; portion that is always included in the URL.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.operation.definition"> </a><b>CapabilityStatement.rest.operation.definition</b></td></tr>
+  <tr><td>Definition</td><td><p>Where the formal definition can be found.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="operationdefinition.html">OperationDefinition</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This can be used to build an HTML form to invoke the operation, for instance.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.rest.compartment"> </a><b>CapabilityStatement.rest.compartment</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by it's canonical URL.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Comments</td><td><p>At present, the only defined compartments are at <a href="compartmentdefinition.html">CompartmentDefinition</a>.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging"> </a><b>CapabilityStatement.messaging</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of the messaging capabilities of the solution.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Multiple repetitions allow the documentation of multiple endpoints per solution.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-1</b>: A Capability Statement SHALL have at least one of REST, messaging or document (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: rest.exists() or messaging.exists() or document.exists(), xpath: exists(f:rest) or exists(f:messaging) or exists(f:document))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.endpoint"> </a><b>CapabilityStatement.messaging.endpoint</b></td></tr>
+  <tr><td>Definition</td><td><p>An endpoint (network accessible address) to which messages and/or replies are to be sent.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>3</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.endpoint.protocol"> </a><b>CapabilityStatement.messaging.endpoint.protocol</b></td></tr>
+  <tr><td>Definition</td><td><p>A list of the messaging transport protocol(s) identifiers, supported by this endpoint.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>MessageTransport: <a href="valueset-message-transport.html">The protocol used for message transport.</a> (<a href="terminologies.html#extensible">Extensible</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.endpoint.address"> </a><b>CapabilityStatement.messaging.endpoint.address</b></td></tr>
+  <tr><td>Definition</td><td><p>The network address of the end-point. For solutions that do not use network addresses for routing, it can be just an identifier.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.reliableCache"> </a><b>CapabilityStatement.messaging.reliableCache</b></td></tr>
+  <tr><td>Definition</td><td><p>Length if the receiver's reliable messaging cache in minutes (if a receiver) or how long the cache length on the receiver should be (if a sender).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#unsignedInt">unsignedInt</a></td></tr>
+  <tr><td>Comments</td><td><p>If this value is missing then the application does not implement (receiver) or depend on (sender) reliable messaging.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.documentation"> </a><b>CapabilityStatement.messaging.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the capability statement.  For example, process for becoming an authorized messaging exchange partner.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event"> </a><b>CapabilityStatement.messaging.event</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of the solution's support for an event at this end-point.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The same event may be listed up to two times - once as sender and once as receiver.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Need to add follow-ups and need to do more to flesh out messaging dynamic model.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.code"> </a><b>CapabilityStatement.messaging.event.code</b></td></tr>
+  <tr><td>Definition</td><td><p>A coded identifier of a supported messaging event.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>MessageEvent: the <a href="valueset-message-events.html">Event List in the messaging framework</a></td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>To Do</td><td>May need a profile id as well if profiles can define message events.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.category"> </a><b>CapabilityStatement.messaging.event.category</b></td></tr>
+  <tr><td>Definition</td><td><p>The impact of the content of the message.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>MessageSignificanceCategory: <a href="valueset-message-significance-category.html">The impact of the content of a message.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.mode"> </a><b>CapabilityStatement.messaging.event.mode</b></td></tr>
+  <tr><td>Definition</td><td><p>The mode of this event declaration - whether application is sender or receiver.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>EventCapabilityMode: <a href="valueset-event-capability-mode.html">The mode of a message capability statement.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.focus"> </a><b>CapabilityStatement.messaging.event.focus</b></td></tr>
+  <tr><td>Definition</td><td><p>A resource associated with the event.  This is the resource that defines the event.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ResourceType: <a href="valueset-resource-types.html">Any defined Resource Type name</a></td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>This SHALL be provided if the event type supports multiple different resource types.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.request"> </a><b>CapabilityStatement.messaging.event.request</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the request for this event.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="structuredefinition.html">StructureDefinition</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.response"> </a><b>CapabilityStatement.messaging.event.response</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the response for this event.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="structuredefinition.html">StructureDefinition</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.messaging.event.documentation"> </a><b>CapabilityStatement.messaging.event.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>Guidance on how this event is handled, such as internal system trigger points, business rules, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.document"> </a><b>CapabilityStatement.document</b></td></tr>
+  <tr><td>Definition</td><td><p>A document definition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">cpb-1</b>: A Capability Statement SHALL have at least one of REST, messaging or document (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: rest.exists() or messaging.exists() or document.exists(), xpath: exists(f:rest) or exists(f:messaging) or exists(f:document))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.document.mode"> </a><b>CapabilityStatement.document.mode</b></td></tr>
+  <tr><td>Definition</td><td><p>Mode of this document declaration - whether application is producer or consumer.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>DocumentMode: <a href="valueset-document-mode.html">Whether the application produces or consumes documents.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.document.documentation"> </a><b>CapabilityStatement.document.documentation</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of how the application supports or uses the specified document profile.  For example, when are documents created, what action is taken with consumed documents, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CapabilityStatement.document.profile"> </a><b>CapabilityStatement.document.profile</b></td></tr>
+  <tr><td>Definition</td><td><p>A constraint on a resource used in the document.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="structuredefinition.html">StructureDefinition</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The first resource is the document resource.</p>
+</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fcapabilitystatement-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fcapabilitystatement-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

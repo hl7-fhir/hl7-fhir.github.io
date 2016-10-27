@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><NutritionRequest xmlns="http://hl7.org/fhir"><!--   id = cardiacdiet  file name = nutritionrequest-example-cardiacdiet.xml  Name= Low Sodium and Fiber Restricted Diet  Description = Nutrition Order Low Sodium and Fiber Restricted Diet Example
+edited by Eric Haas Health eData Inc
+  -->
+<!--  EH  Show all the elements in this examples for preference, and intolerance   --><!--   EH: use oral Diet element   -->
+<id value="cardiacdiet"/>
+	<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: cardiacdiet</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><p><b>allergyIntolerance</b>: <a>Cashew Nuts</a></p><p><b>foodPreferenceModifier</b>: Dairy Free <span>(Details : {http://hl7.org/fhir/diet code &#39;dairy-free&#39; = &#39;Dairy Free)</span></p><p><b>excludeFoodModifier</b>: Cashew Nut <span>(Details : {SNOMED CT code &#39;227493005&#39; = &#39;Cashew nut (substance)&#39;, given as &#39;Cashew Nut&#39;})</span></p><blockquote><p><b>oralDiet</b></p><p><b>type</b>: Low sodium diet <span>(Details : {SNOMED CT code &#39;386619000&#39; = &#39;Low salt diet&#39;, given as &#39;Low sodium diet&#39;}; {http://goodhealthhospital.org/diet-type-codes code &#39;1040&#39; = &#39;1040&#39;, given as &#39;Low Sodium Diet&#39;})</span>, Fluid restricted diet <span>(Details : {SNOMED CT code &#39;226208002&#39; = &#39;Fluid restricted diet (finding)&#39;, given as &#39;Fluid restricted diet&#39;}; {http://goodhealthhospital.org/diet-type-codes code &#39;1040&#39; = &#39;1040&#39;, given as &#39;Fluid restricted diet&#39;})</span></p><blockquote><p><b>nutrient</b></p><p><b>modifier</b>: Sodium <span>(Details : {SNOMED CT code &#39;39972003&#39; = &#39;Sodium (substance)&#39;, given as &#39;Sodium&#39;})</span></p><p><b>amount</b>: 2 grams<span> (Details: UCUM code g = &#39;g&#39;)</span></p></blockquote><blockquote><p><b>nutrient</b></p><p><b>modifier</b>: Fluid <span>(Details : {SNOMED CT code &#39;33463005&#39; = &#39;Liquid substance (substance)&#39;, given as &#39;Fluid&#39;})</span></p><p><b>amount</b>: 1500 milliliter<span> (Details: UCUM code mL = &#39;mL&#39;)</span></p></blockquote><p><b>instruction</b>: Starting on 2/10 breakfast, maximum 400 ml fluids per meal</p></blockquote></div></text><identifier>
+		<system value="http://goodhealthhospital.org/nutrition-requests"/>
+		<value value="123"/>
+	</identifier>
+	<status value="active"/>
+	<patient>
+		<reference value="Patient/example"/>
+		<display value="Peter Chalmers"/>
+	</patient>
+	<encounter>
+		<reference value="Encounter/example"/>
+		<display value="Inpatient"/>
+	</encounter>
+	<dateTime value="2014-09-17"/>
+	<orderer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Adam Careful"/>
+	</orderer>
+	<allergyIntolerance>
+		<reference value="AllergyIntolerance/example"/>
+		<display value="Cashew Nuts"/>
+	</allergyIntolerance>
+	<foodPreferenceModifier>
+		<coding>
+			<system value="http://hl7.org/fhir/diet"/>
+			<code value="dairy-free"/>
+		</coding>
+	</foodPreferenceModifier>
+	<excludeFoodModifier>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="20140730"/>
+			<code value="227493005"/>
+			<display value="Cashew Nut"/>
+		</coding>
+	</excludeFoodModifier>
+	<oralDiet>
+		<!--   EH:  list type of diet showing standard code and local codes   -->
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="386619000"/>
+				<display value="Low sodium diet"/>
+			</coding>
+			<coding>
+				<system value="http://goodhealthhospital.org/diet-type-codes"/>
+				<code value="1040"/>
+				<display value="Low Sodium Diet"/>
+			</coding>
+			<text value="Low sodium diet"/>
+		</type>
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="226208002"/>
+				<display value="Fluid restricted diet"/>
+			</coding>
+			<coding>
+				<system value="http://goodhealthhospital.org/diet-type-codes"/>
+				<code value="1040"/>
+				<display value="Fluid restricted diet"/>
+			</coding>
+			<text value="Fluid restricted diet"/>
+		</type>
+		<!--   list nutrients and amounts here   -->
+		<nutrient>
+			<modifier>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="39972003"/>
+					<display value="Sodium"/>
+				</coding>
+			</modifier>
+			<amount>
+				<value value="2"/>
+				<unit value="grams"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g"/>
+			</amount>
+		</nutrient>
+		<nutrient>
+			<modifier>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="33463005"/>
+					<display value="Fluid"/>
+				</coding>
+			</modifier>
+			<amount>
+				<value value="1500"/>
+				<unit value="milliliter"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="mL"/>
+			</amount>
+		</nutrient>
+		<!--  instructions as free text   -->
+		<instruction value="Starting on 2/10 breakfast, maximum 400 ml fluids per meal"/>
+	</oralDiet>
+</NutritionRequest>

@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/AuditEvent/example-rest> a fhir:AuditEvent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-rest"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-rest</p><p><b>type</b>: Restful Operation (Details: http://hl7.org/fhir/audit-event-type code rest = 'RESTful Operation', stated as 'Restful Operation')</p><p><b>subtype</b>: vread (Details: http://hl7.org/fhir/restful-interaction code vread = 'vread', stated as 'vread')</p><p><b>action</b>: R</p><p><b>recorded</b>: Jun 20, 2013 11:42:24 PM</p><p><b>outcome</b>: 0</p><blockquote><p><b>agent</b></p><p><b>userId</b>: 95</p><p><b>altId</b>: 601847123</p><p><b>name</b>: Grahame Grieve</p><p><b>requestor</b>: true</p></blockquote><blockquote><p><b>agent</b></p><p><b>role</b>: Source Role ID <span>(Details : {DICOM code '110153' = 'Source Role ID', given as 'Source Role ID'})</span></p><p><b>userId</b>: 2.16.840.1.113883.4.2|2.16.840.1.113883.4.2</p><p><b>altId</b>: 6580</p><p><b>requestor</b>: false</p><h3>Networks</h3><table><tr><td>-</td><td><b>Address</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Workstation1.ehr.familyclinic.com</td><td>1</td></tr></table></blockquote><h3>Sources</h3><table><tr><td>-</td><td><b>Site</b></td><td><b>Identifier</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Cloud</td><td>hl7connect.healthintersections.com.au</td><td>Web Server (Details: http://hl7.org/fhir/security-source-type code 3 = 'Web Server', stated as 'Web Server')</td></tr></table><h3>Entities</h3><table><tr><td>-</td><td><b>Reference</b></td><td><b>Type</b></td><td><b>Lifecycle</b></td></tr><tr><td>*</td><td><a>Patient/example/_history/1</a></td><td>System Object (Details: http://hl7.org/fhir/object-type code 2 = 'System Object', stated as 'System Object')</td><td>Access / Use (Details: http://hl7.org/fhir/object-lifecycle code 6 = 'Access / Use', stated as 'Access / Use')</td></tr></table></div>"
+  ];
+  fhir:AuditEvent.type [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/audit-event-type" ];
+     fhir:Coding.code [ fhir:value "rest" ];
+     fhir:Coding.display [ fhir:value "Restful Operation" ]
+  ];
+  fhir:AuditEvent.subtype [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/restful-interaction" ];
+     fhir:Coding.code [ fhir:value "vread" ];
+     fhir:Coding.display [ fhir:value "vread" ]
+  ];
+  fhir:AuditEvent.action [ fhir:value "R"];
+  fhir:AuditEvent.recorded [ fhir:value "2013-06-20T23:42:24Z"^^xsd:dateTime];
+  fhir:AuditEvent.outcome [ fhir:value "0"];
+  fhir:AuditEvent.agent [
+     fhir:index 0;
+     fhir:AuditEvent.agent.userId [
+       fhir:Identifier.value [ fhir:value "95" ]
+     ];
+     fhir:AuditEvent.agent.altId [ fhir:value "601847123" ];
+     fhir:AuditEvent.agent.name [ fhir:value "Grahame Grieve" ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 1;
+     fhir:AuditEvent.agent.role [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://nema.org/dicom/dicm" ];
+         fhir:Coding.code [ fhir:value "110153" ];
+         fhir:Coding.display [ fhir:value "Source Role ID" ]
+       ]
+     ];
+     fhir:AuditEvent.agent.userId [
+       fhir:Identifier.value [ fhir:value "2.16.840.1.113883.4.2|2.16.840.1.113883.4.2" ]
+     ];
+     fhir:AuditEvent.agent.altId [ fhir:value "6580" ];
+     fhir:AuditEvent.agent.requestor [ fhir:value "false"^^xsd:boolean ];
+     fhir:AuditEvent.agent.network [
+       fhir:AuditEvent.agent.network.address [ fhir:value "Workstation1.ehr.familyclinic.com" ];
+       fhir:AuditEvent.agent.network.type [ fhir:value "1" ]
+     ]
+  ];
+  fhir:AuditEvent.source [
+     fhir:AuditEvent.source.site [ fhir:value "Cloud" ];
+     fhir:AuditEvent.source.identifier [
+       fhir:Identifier.value [ fhir:value "hl7connect.healthintersections.com.au" ]
+     ];
+     fhir:AuditEvent.source.type [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/security-source-type" ];
+       fhir:Coding.code [ fhir:value "3" ];
+       fhir:Coding.display [ fhir:value "Web Server" ]
+     ]
+  ];
+  fhir:AuditEvent.entity [
+     fhir:index 0;
+     fhir:AuditEvent.entity.reference [
+       fhir:link <http://hl7.org/fhir/Patient/example/_history/1>;
+       fhir:Reference.reference [ fhir:value "Patient/example/_history/1" ]
+     ];
+     fhir:AuditEvent.entity.type [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-type" ];
+       fhir:Coding.code [ fhir:value "2" ];
+       fhir:Coding.display [ fhir:value "System Object" ]
+     ];
+     fhir:AuditEvent.entity.lifecycle [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/object-lifecycle" ];
+       fhir:Coding.code [ fhir:value "6" ];
+       fhir:Coding.display [ fhir:value "Access / Use" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Patient/example/_history/1> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

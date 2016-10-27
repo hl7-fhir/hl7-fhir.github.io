@@ -1,0 +1,664 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Compartmentdefinition-relatedperson.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/compartmentdefinition-relatedperson.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="compartmentdefinition.html">CompartmentDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- compartmentdefinition-relatedperson.ttl.html / resource-instance:CompartmentDefinition / Compartment Definition for relatedPerson-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Compartmentdefinition-relatedperson.ttl</h1>
+
+<p>
+<a href="compartmentdefinition-relatedperson.ttl">Raw Turtle</a>, 
+<a href="compartmentdefinition-relatedperson.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Compartment Definition for relatedPerson</p>
+<pre class="turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:CompartmentDefinition;
+  fhir:Resource.id [ fhir:value &quot;relatedPerson&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ]
+  ];
+  fhir:CompartmentDefinition.url [ fhir:value &quot;http://hl7.org/fhir/CompartmentDefinition/relatedPerson&quot;];
+  fhir:CompartmentDefinition.name [ fhir:value &quot;Base FHIR compartment definition for RelatedPerson&quot;];
+  fhir:CompartmentDefinition.status [ fhir:value &quot;draft&quot;];
+  fhir:CompartmentDefinition.experimental [ fhir:value &quot;true&quot;];
+  fhir:CompartmentDefinition.publisher [ fhir:value &quot;FHIR Project Team&quot;];
+  fhir:CompartmentDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;other&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;http://hl7.org/fhir&quot; ]
+     ]
+  ];
+  fhir:CompartmentDefinition.date [ fhir:value &quot;2016-10-27T16:23:35+00:00&quot;];
+  fhir:CompartmentDefinition.description [ fhir:value &quot;There is an instance of the relatedPerson compartment for each relatedPerson resource, and the identity of the compartment is the same as the relatedPerson. The set of resources associated with a particular 'related person'&quot;];
+  fhir:CompartmentDefinition.code [ fhir:value &quot;RelatedPerson&quot;];
+  fhir:CompartmentDefinition.search [ fhir:value &quot;true&quot;];
+  fhir:CompartmentDefinition.resource [
+     fhir:index 0;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Account&quot; ]
+  ], [
+     fhir:index 1;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ActivityDefinition&quot; ]
+  ], [
+     fhir:index 2;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ActivityGroup&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;participant&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 3;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;AllergyIntolerance&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;reporter&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 4;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Appointment&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;actor&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 5;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;AppointmentResponse&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;actor&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 6;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;AuditEvent&quot; ]
+  ], [
+     fhir:index 7;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Basic&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;author&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 8;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Binary&quot; ]
+  ], [
+     fhir:index 9;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;BodySite&quot; ]
+  ], [
+     fhir:index 10;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Bundle&quot; ]
+  ], [
+     fhir:index 11;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;CapabilityStatement&quot; ]
+  ], [
+     fhir:index 12;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;CarePlan&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;performer&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 13;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;CareTeam&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;participant&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 14;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Claim&quot; ]
+  ], [
+     fhir:index 15;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ClaimResponse&quot; ]
+  ], [
+     fhir:index 16;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ClinicalImpression&quot; ]
+  ], [
+     fhir:index 17;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;CodeSystem&quot; ]
+  ], [
+     fhir:index 18;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Communication&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;sender&quot;;
+       fhir:index 0
+     ], [
+       fhir:value &quot;recipient&quot;;
+       fhir:index 1
+     ]
+  ], [
+     fhir:index 19;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;CommunicationRequest&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;sender&quot;;
+       fhir:index 0
+     ], [
+       fhir:value &quot;recipient&quot;;
+       fhir:index 1
+     ], [
+       fhir:value &quot;requester&quot;;
+       fhir:index 2
+     ]
+  ], [
+     fhir:index 20;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;CompartmentDefinition&quot; ]
+  ], [
+     fhir:index 21;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Composition&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;author&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 22;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ConceptMap&quot; ]
+  ], [
+     fhir:index 23;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Condition&quot; ]
+  ], [
+     fhir:index 24;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Consent&quot; ]
+  ], [
+     fhir:index 25;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Contract&quot; ]
+  ], [
+     fhir:index 26;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Coverage&quot; ]
+  ], [
+     fhir:index 27;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DataElement&quot; ]
+  ], [
+     fhir:index 28;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DecisionSupportServiceModule&quot; ]
+  ], [
+     fhir:index 29;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DetectedIssue&quot; ]
+  ], [
+     fhir:index 30;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Device&quot; ]
+  ], [
+     fhir:index 31;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DeviceComponent&quot; ]
+  ], [
+     fhir:index 32;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DeviceMetric&quot; ]
+  ], [
+     fhir:index 33;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DeviceUseRequest&quot; ]
+  ], [
+     fhir:index 34;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DeviceUseStatement&quot; ]
+  ], [
+     fhir:index 35;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DiagnosticReport&quot; ]
+  ], [
+     fhir:index 36;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DiagnosticRequest&quot; ]
+  ], [
+     fhir:index 37;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DocumentManifest&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;author&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 38;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;DocumentReference&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;author&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 39;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;EligibilityRequest&quot; ]
+  ], [
+     fhir:index 40;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;EligibilityResponse&quot; ]
+  ], [
+     fhir:index 41;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Encounter&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;participant&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 42;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Endpoint&quot; ]
+  ], [
+     fhir:index 43;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;EnrollmentRequest&quot; ]
+  ], [
+     fhir:index 44;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;EnrollmentResponse&quot; ]
+  ], [
+     fhir:index 45;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;EpisodeOfCare&quot; ]
+  ], [
+     fhir:index 46;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ExpansionProfile&quot; ]
+  ], [
+     fhir:index 47;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ExplanationOfBenefit&quot; ]
+  ], [
+     fhir:index 48;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;FamilyMemberHistory&quot; ]
+  ], [
+     fhir:index 49;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Flag&quot; ]
+  ], [
+     fhir:index 50;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Goal&quot; ]
+  ], [
+     fhir:index 51;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Group&quot; ]
+  ], [
+     fhir:index 52;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;GuidanceResponse&quot; ]
+  ], [
+     fhir:index 53;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;HealthcareService&quot; ]
+  ], [
+     fhir:index 54;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ImagingManifest&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;author&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 55;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ImagingStudy&quot; ]
+  ], [
+     fhir:index 56;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Immunization&quot; ]
+  ], [
+     fhir:index 57;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ImmunizationRecommendation&quot; ]
+  ], [
+     fhir:index 58;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ImplementationGuide&quot; ]
+  ], [
+     fhir:index 59;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Library&quot; ]
+  ], [
+     fhir:index 60;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Linkage&quot; ]
+  ], [
+     fhir:index 61;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;List&quot; ]
+  ], [
+     fhir:index 62;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Location&quot; ]
+  ], [
+     fhir:index 63;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Measure&quot; ]
+  ], [
+     fhir:index 64;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;MeasureReport&quot; ]
+  ], [
+     fhir:index 65;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Media&quot; ]
+  ], [
+     fhir:index 66;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Medication&quot; ]
+  ], [
+     fhir:index 67;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;MedicationAdministration&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;performer&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 68;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;MedicationDispense&quot; ]
+  ], [
+     fhir:index 69;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;MedicationRequest&quot; ]
+  ], [
+     fhir:index 70;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;MedicationStatement&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;source&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 71;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;MessageHeader&quot; ]
+  ], [
+     fhir:index 72;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;NamingSystem&quot; ]
+  ], [
+     fhir:index 73;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;NutritionRequest&quot; ]
+  ], [
+     fhir:index 74;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Observation&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;performer&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 75;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;OperationDefinition&quot; ]
+  ], [
+     fhir:index 76;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;OperationOutcome&quot; ]
+  ], [
+     fhir:index 77;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Organization&quot; ]
+  ], [
+     fhir:index 78;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Patient&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;link&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 79;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;PaymentNotice&quot; ]
+  ], [
+     fhir:index 80;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;PaymentReconciliation&quot; ]
+  ], [
+     fhir:index 81;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Person&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;link&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 82;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;PlanDefinition&quot; ]
+  ], [
+     fhir:index 83;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Practitioner&quot; ]
+  ], [
+     fhir:index 84;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;PractitionerRole&quot; ]
+  ], [
+     fhir:index 85;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Procedure&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;performer&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 86;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ProcedureRequest&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;performer&quot;;
+       fhir:index 0
+     ], [
+       fhir:value &quot;orderer&quot;;
+       fhir:index 1
+     ]
+  ], [
+     fhir:index 87;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ProcessRequest&quot; ]
+  ], [
+     fhir:index 88;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ProcessResponse&quot; ]
+  ], [
+     fhir:index 89;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Provenance&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;agent&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 90;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Questionnaire&quot; ]
+  ], [
+     fhir:index 91;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;QuestionnaireResponse&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;author&quot;;
+       fhir:index 0
+     ], [
+       fhir:value &quot;source&quot;;
+       fhir:index 1
+     ]
+  ], [
+     fhir:index 92;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ReferralRequest&quot; ]
+  ], [
+     fhir:index 93;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;RelatedPerson&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;{def}&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 94;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;RiskAssessment&quot; ]
+  ], [
+     fhir:index 95;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Schedule&quot; ];
+     fhir:CompartmentDefinition.param [
+       fhir:value &quot;actor&quot;;
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 96;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;SearchParameter&quot; ]
+  ], [
+     fhir:index 97;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Sequence&quot; ]
+  ], [
+     fhir:index 98;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ServiceDefinition&quot; ]
+  ], [
+     fhir:index 99;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Slot&quot; ]
+  ], [
+     fhir:index 100;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Specimen&quot; ]
+  ], [
+     fhir:index 101;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;StructureDefinition&quot; ]
+  ], [
+     fhir:index 102;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;StructureMap&quot; ]
+  ], [
+     fhir:index 103;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Subscription&quot; ]
+  ], [
+     fhir:index 104;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Substance&quot; ]
+  ], [
+     fhir:index 105;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;SupplyDelivery&quot; ]
+  ], [
+     fhir:index 106;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;SupplyRequest&quot; ]
+  ], [
+     fhir:index 107;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;Task&quot; ]
+  ], [
+     fhir:index 108;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;TestReport&quot; ]
+  ], [
+     fhir:index 109;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;TestScript&quot; ]
+  ], [
+     fhir:index 110;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;ValueSet&quot; ]
+  ], [
+     fhir:index 111;
+     fhir:CompartmentDefinition.code [ fhir:value &quot;VisionPrescription&quot; ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:24+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fcompartmentdefinition-relatedperson.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fcompartmentdefinition-relatedperson.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

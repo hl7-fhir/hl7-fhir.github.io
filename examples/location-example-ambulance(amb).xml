@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><Location xmlns="http://hl7.org/fhir">
+  <id value="amb"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">Mobile Clinic</div>
+  </text>  
+  <status value="active"/>
+  <name value="BUMC Ambulance"/>
+  <description value="Ambulance provided by Burgers University Medical Center"/>
+	<mode value="kind"/>
+	<type>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <code value="AMB"/>
+      <display value="Ambulance"/>
+    </coding>
+  </type>
+  <telecom>
+    <system value="phone"/>
+    <value value="2329"/>
+		<use value="mobile"/>
+  </telecom>
+  <physicalType>
+    <coding>
+      <system value="http://hl7.org/fhir/location-physical-type"/>
+      <code value="ve"/>
+      <display value="Vehicle"/>
+    </coding>
+  </physicalType>  
+  <managingOrganization>
+    <reference value="Organization/f001"/>
+  </managingOrganization>
+</Location>

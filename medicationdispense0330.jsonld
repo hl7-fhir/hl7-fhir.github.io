@@ -1,0 +1,160 @@
+{
+  "@context": "http://build.fhir.org/MedicationDispense.jsonld",
+  "@context": "http://hl7.org/fhir/MedicationDispense/meddisp0330",
+  "Resource.id": {
+    "id.value": "meddisp0330"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp0330</p><p><b>contained</b>: </p><p><b>status</b>: in-progress</p><p><b>medication</b>: Coumadin 5mg tablet. Generated Summary: id: med0351; Coumadin 5mg tablet <span>(Details : {http://hl7.org/fhir/sid/ndc code '0056-1072-70' = '0056-1072-70', given as 'Coumadin 5mg tablet'})</span></p><p><b>patient</b>: <a>Donald Duck</a></p><p><b>dispenser</b>: <a>Rob van den Berk</a></p><p><b>authorizingPrescription</b>: <a>MedicationRequest/medrx0331</a></p><p><b>type</b>: Daily Fill <span>(Details : {http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType code 'DF' = 'DF', given as 'Daily Fill'})</span></p><p><b>quantity</b>: 1 415818006<span> (Details: SNOMED CT code 415818006 = 'Vial - unit of product usage (qualifier value)')</span></p><p><b>daysSupply</b>: 1 Day<span> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: Jan 15, 2015 10:20:00 AM</p><p><b>dosageInstruction</b>: </p></div>"
+    }
+  },
+  "Medication": [
+    {
+      "Resource.id": {
+        "id.value": "med0351"
+      },
+      "Medication.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "uri.value": "http://hl7.org/fhir/sid/ndc"
+            },
+            "Coding.code": {
+              "code.value": "0056-1072-70"
+            },
+            "Coding.display": {
+              "string.value": "Coumadin 5mg tablet"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "MedicationDispense.status": {
+    "code.value": "in-progress"
+  },
+  "MedicationDispense.medicationReference": {
+    "Reference.reference": {
+      "string.value": "#med0351"
+    },
+    "Reference.display": {
+      "string.value": "Coumadin 5mg tablet"
+    }
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "string.value": "Patient/pat1"
+    },
+    "Reference.display": {
+      "string.value": "Donald Duck"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "string.value": "Practitioner/f006"
+    },
+    "Reference.display": {
+      "string.value": "Rob van den Berk"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Practitioner/f006"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "string.value": "MedicationRequest/medrx0331"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "uri.value": "http://hl7.org/fhir/ValueSet/v3-ActPharmacySupplyType"
+        },
+        "Coding.code": {
+          "code.value": "DF"
+        },
+        "Coding.display": {
+          "string.value": "Daily Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "decimal.value": 1
+    },
+    "Quantity.system": {
+      "uri.value": "http://snomed.info/sct"
+    },
+    "Quantity.code": {
+      "code.value": "415818006"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "decimal.value": 1
+    },
+    "Quantity.unit": {
+      "string.value": "Day"
+    },
+    "Quantity.system": {
+      "uri.value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "code.value": "d"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "dateTime.value": "2015-01-15T10:20:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "DosageInstruction.sequence": {
+        "integer.value": 1
+      },
+      "DosageInstruction.text": {
+        "string.value": "7mg (=one 5mg tablet PLUS one 2mg tablet) once daily"
+      },
+      "DosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.text": {
+            "string.value": "Take along with one 5mg Coumadin tablet for a total daily dose of 7mg as prescribed by physician"
+          }
+        }
+      ],
+      "DosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "integer.value": 1
+          },
+          "Timing.repeat.period": {
+            "decimal.value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "code.value": "d"
+          }
+        }
+      },
+      "DosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "decimal.value": 5
+        },
+        "Quantity.unit": {
+          "string.value": "mg"
+        },
+        "Quantity.system": {
+          "uri.value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "code.value": "mg"
+        }
+      }
+    }
+  ]
+}

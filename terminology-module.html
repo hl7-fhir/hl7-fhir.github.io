@@ -1,0 +1,306 @@
+﻿<!DOCTYPE HTML>
+  <!-- These elements SHALL always appear in this order. These basic elements shared by all resources come first
+in order to support consistent definitions for schema and UML derived code. --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Terminology-module - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/terminology-module.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><b><img src="terminology.png"/> Terminology</b></li>          <!-- terminology-module.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="root"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">4.0<a name="4.0"> </a></span> Terminology Module <a href="terminology-module.html#4.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<a name="intro"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.0.1</span> Introduction <a href="terminology-module.html#intro" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The Terminology Module provides an overview and guide to the FHIR resources, operations, coded data types and externally-defined standard and FHIR-defined terminologies that are used for representing and communicating coded, structured data in the FHIR core specification and profiles.  Collectively, these capabilities are used to provide the terminology service functionality required for supporting the use of coded data in FHIR resources throughout the specification as described in the other modules. 
+
+<p>The terminology resources and their relationships are shown below:</p>
+<table class="none"><tr><td>
+<img src="terminology-module-relationships.png" alt="Image showing the terminology resources and relationships" width="600px"/>
+</td></tr></table>
+<p>The ElementDefinition type (shown with a dotted box) is described elsewhere in the specification in the <a href="foundation-module.html">Foundation</a> and <a href="conformance-module.html">Conformance</a> modules.</p>
+</p>
+
+<a name="index"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.0.2</span> Index <a href="terminology-module.html#index" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+The Terminology Module covers the following:
+</p>
+<p><b>Resources</b></p>
+<table class="none"><tr>
+ <td><ul>
+  <li><a href="codesystem.html" title="A code system resource specifies a set of codes drawn from one or more code systems.">CodeSystem</a></li>
+  <li><a href="valueset.html" title="A value set specifies a set of codes drawn from one or more code systems.">ValueSet</a></li>
+ </ul></td>
+ <td><ul>
+  <li><a href="conceptmap.html" title="A statement of relationships from one set of concepts to one or more other concepts - either code systems or data elements, or classes in class models.">ConceptMap</a></li>
+  <li><a href="namingsystem.html" title="A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a &quot;System&quot; used within the Identifier and Coding data types.">NamingSystem</a></li>
+ </ul></td>
+ <td><ul>
+  <li><a href="expansionprofile.html" title="Resource to define constraints on the Expansion of a FHIR ValueSet.">ExpansionProfile</a></li>
+ </ul></td>
+</tr></table>
+
+<p>
+<b>Terminology Service</b>
+</p>
+<table class="none">
+ <tr>
+ <td><ul> 
+ <li><a href="terminology-service.html">Terminology Service Documentation</a></li>
+ </ul></td>
+ </tr>
+</table>
+<p>
+<b>Operations</b>
+</p>
+<table class="none">
+ <tr>
+ <td><ul style="list-style: none;">
+  <li><b>CodeSystem</b></li>
+ </ul>
+ <ul>
+  <li><a href="codesystem-operations.html#lookup">$lookup</a></li>
+  <li><a href="codesystem-operations.html#subsumes">$subsumes</a></li>
+  <li><a href="codesystem-operations.html#infer">$infer</a></li>
+ </ul></td>
+ <td><ul style="list-style: none;">
+  <li><b>ValueSet</b></li>
+ </ul>
+ <ul>
+  <li><a href="valueset-operations.html#lookup">$expand</a></li>
+  <li><a href="valueset-operations.html#validate-code">$validate-code</a></li>
+ </ul></td>
+ <td><ul style="list-style: none;">
+  <li><b>ConceptMap</b></li>
+ </ul>
+ <ul>
+  <li><a href="conceptmap-operations.html#lookup">$translate</a></li>
+  <li><a href="conceptmap-operations.html#lookup">$closure</a></li>
+ </ul></td>
+</tr></table>
+
+<p>
+<b>Coded Data Types</b>
+</p>
+<table class="none"><tr>
+ <td><ul>
+  <li><a href="datatypes.html#code">code</a></li>
+ </ul></td>
+ <td><ul>
+  <li><a href="datatypes.html#Coding">Coding</a></li>
+ </ul></td>
+ <td><ul>
+  <li><a href="datatypes.html#CodeableConcept">CodeableConcept</a></li>
+ </ul></td>
+</tr></table>
+
+<p>
+<b>Documentation</b>
+</p>
+<table class="none"><tr>
+ <td><ul>
+  <li><a href="terminologies.html">Using Codes in Resources</a></li>
+  <li><a href="terminologies-systems.html">Code Systems Defined/Referenced in FHIR</a></li>
+  <li><a href="terminologies-valuesets.html">Value Sets Defined in FHIR</a></li>
+ </ul></td>
+ <td><ul>
+  <li><a href="terminologies-conceptmaps.html">Mappings (FHIR-defined) Between Related Value Set Concepts</a></li>
+  <li><a href="identifier-registry.html">Known Identifier Systems</a></li>
+ </ul></td>
+</tr></table>
+
+<a name="secpriv"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.0.3</span> Security and Privacy <a href="terminology-module.html#secpriv" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+For security considerations for terminology services, see the <a href="terminology-service.html#4.6.1">Terminology Service page Security section</a>. For more general considerations, see the <a href="secpriv-module.html">Security and Privacy module</a>.
+</p>
+
+<a name="uses"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.0.4</span> Common Use Cases <a href="terminology-module.html#uses" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+<ul>
+<li>Expand a value set</li>
+<li>Validate a code</li>
+<li>Look up a display term for a code</li>
+<li>Translate a code from one value set to another</li>
+<li>Maintain a client-side closure table</li>
+<li>Test subsumption between concepts</li>
+<li>For a set of property/concept pairs return the set of concepts for the requested properties</li>
+</ul>
+</p>
+
+<a name="roadmap"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">4.0.5</span> Developmental Roadmap <a href="terminology-module.html#roadmap" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+    <p>A subset of the terminology resources have been tested and are being used in production tooling, and as
+        such have reached a maturity level where changes become less likely. These are:
+	</p>
+    <ul>
+        <li><a href="valueset.html" title="A value set specifies a set of codes drawn from one or more code systems.">ValueSet</a>&nbsp;<a style="color: maroon; hover: maroon; visited; maroon; opacity: 0.7" href="resource.html#maturity" title="Maturity Level">3</a></li>
+		<li><a href="conceptmap.html" title="A statement of relationships from one set of concepts to one or more other concepts - either code systems or data elements, or classes in class models.">ConceptMap</a>&nbsp;<a style="color: maroon; hover: maroon; visited; maroon; opacity: 0.7" href="resource.html#maturity" title="Maturity Level">2</a></li>
+    </ul>
+
+    <p>Other resources are still under development:</p>
+    <ul>
+		<li><a href="namingsystem.html" title="A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a &quot;System&quot; used within the Identifier and Coding data types.">NamingSystem</a>&nbsp;<a style="color: maroon; hover: maroon; visited; maroon; opacity: 0.7" href="resource.html#maturity" title="Maturity Level">1</a></li>         
+		<li><a href="codesystem.html" title="A code system resource specifies a set of codes drawn from one or more code systems.">CodeSystem</a>&nbsp;<a style="color: maroon; hover: maroon; visited; maroon; opacity: 0.7" href="resource.html#maturity" title="Maturity Level">0</a></li>
+		<li><a href="expansionprofile.html" title="Resource to define constraints on the Expansion of a FHIR ValueSet.">ExpansionProfile</a>&nbsp;<a style="color: maroon; hover: maroon; visited; maroon; opacity: 0.7" href="resource.html#maturity" title="Maturity Level">0</a></li>
+    </ul>
+	<p>
+	Over the next 18 months, we will continue to advance the resources through the <a href="resource.html#maturity">Maturity Levels</a> 
+	through further development and testing. We anticipate more widespread implementation of NamingSystem, CodeSystem and ExpansionProfile and testing in Connectathons and with implementation experience.  
+	</p>
+
+<p>Editor : Rob Hausam</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fterminology-module.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fterminology-module.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

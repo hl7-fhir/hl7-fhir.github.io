@@ -1,0 +1,359 @@
+﻿<!DOCTYPE HTML>
+  <!-- These elements SHALL always appear in this order. These basic elements shared by all resources come first
+in order to support consistent definitions for schema and UML derived code. --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Xml - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/xml.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="foundation-module.html"><img src="foundation.png"/> Foundation</a></li>
+        <li><a href="formats.html">Formats</a></li>
+        <li><b>XML</b></li>          <!-- xml.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="formats.html">Formats</a></li><li class="active"><a href="#">XML</a></li><li><a href="json.html">JSON</a></li><li><a href="rdf.html">RDF</a></li></ul>
+
+
+<a name="root"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">2.21.1<a name="2.21.1"> </a></span> XML Representation of Resources <a href="xml.html#2.21.1" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/special/committees/xml/index.cfm" _target="blank">Implementable Technology Specifications <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: 5</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+The XML representation for a resource is described using this format: 
+</p>
+<pre class="spec">
+ &lt;<b>name</b> xmlns=&quot;http://hl7.org/fhir&quot; (attrA=&quot;value&quot;)&gt;   <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+   &lt;<u><b title="Formal Definition (must be supported or understood)">nameA</b></u>&gt;<font color="Gray">&lt;!-- </font><span style="color: brown" title="Inv-5: Some rule apples to this element"><b><img src="lock.png" alt="??"/> 1..1</b></span> <font color="Darkgreen">type</font> <font color="Navy">description of content</font> <font color="Gray"> --&gt;</font>&lt;nameA&gt;
+   &lt;<b title="Formal Definition">nameB[x]</b>&gt;<font color="Gray">&lt;!-- </font><font color="brown">0..1</font> <font color="darkgreen">type1</font>|<font color="darkgreen">type1</font> <font color="Navy">description</font> <font color="Gray"> --&gt;</font>&lt;/nameB&gt;
+   &lt;<b>nameC</b>&gt; <font color="Brown"><font color="Gray">&lt;!-- </font> <b>1..*</b> --&gt;</font>
+     &lt;<b>nameD</b>&gt;<font color="Gray">&lt;!-- </font><font color="brown">1..1</font> <font color="darkgreen">type</font>&gt;<font color="navy">Relevant elements</font> <font color="Gray"> --&gt;</font>&lt;/nameD&gt;
+   &lt;/nameC&gt;
+ &lt;name&gt;
+</pre>
+<p>
+Using this format:
+</p>
+<ul>
+ <li>To build a valid XML instance of a resource, simply replace the contents of the elements and attributes with valid content 
+   as described by the cardinality, type rules and content description found in the comment in each element</li>
+ <li>Resource and Element names are case-sensitive (though duplicates that differ only in case are never defined)</li>
+ <li>Elements must always appear in the order documented</li>
+ <li>When an element is allowed to repeat, the elements are ordered, and implementations must preserve order (note: the meaning of the order may not be known)</li>
+ <li>A few properties are represented as attributes: values of primitive types in a <code>value</code> attribute, extension URLs in the <code>url</code> attribute on an extension, and the <code>id</code> property on elements (but not on resources, where the resource id is an element)</li>
+ <li>Any of the XML elements may have an id attribute to serve as <a href="references.html#id">the target of an internal reference</a>. The id attribute is not shown in this format</li>
+ <li>FHIR elements are always in the namespace <a href="http://hl7.org/fhir">http://hl7.org/fhir <img src="external.png" style="text-align: baseline"/></a>.  This is usually specified as the default namespace on the root element. 
+   The only other namespace that occurs in FHIR resources is the XHTML namespace (<a href="narrative.html">XHTML is found in most resources</a>)</li>
+ <li>Infrastructural elements that are common to all resources are not shown in the xml representation. These must appear prior to any other defined child elements in the following order:
+	<ul>
+		<li>First, the elements from the <a href="resource.html">base resource</a>, in order</li>
+		<li>Second, the elements from the <a href="domainresource.html">domain resource</a>, in order</li>
+	</ul>
+ </li>
+ <li>FHIR elements are never empty. If an element is present in the resource, it SHALL have either a value attribute, child elements as defined for its type, or 1 or more <a href="extensibility.html">extensions</a></li>
+ <li>Attributes can never be empty. Either they are absent, or they are present with at least one character of non-whitespace content</li>
+ <li>Implementers SHOULD trim leading and trailing whitespace before writing and SHOULD trim leading and trailing whitespace when reading attribute values</li>
+ <li>The lock icon (<img src="lock.png" alt="??"/>) denotes that an element defines or is affected by <a href="conformance-rules.html#constraints">additional rules</a> that control its presence and/or content</li>
+ <li>XML comments, processing instructions and formatting are not part of the contents of a resource</li>
+ <li>XML resources SHALL be exchanged using UTF-8 encoding. Specifying the character encoding using a <code>&lt;?xml encoding=&quot;UTF-8&quot; ?&gt;</code> processing instruction is optional but recommended</li>
+ <li>Other processing instructions SHOULD not be included, and SHALL NOT be required in order to properly understand and/or present the data or narrative of the resource. 
+  Applications MAY preserve processing instructions when handling resources, but are not required to do so</li>
+ <li>The MIME-type for this format is <code>application/fhir+xml</code>.</li>
+</ul>
+
+<a name="schema"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.21.1.1</span> XML Schema and Schematron <a href="xml.html#schema" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+This specification provides schema definitions for all of the content models it describes. 
+</p>
+<p>
+The base schema is called &quot;<a href="fhir-base.xsd">fhir-base.xsd</a>&quot; and defines all of the 
+datatypes and base infrastructure types. In addition, there 
+is a schema for each resource and a common schema <a href="fhir-all.xsd">fhir-all.xsd</a> 
+that includes all the resource schemas. For schema processors that do not like circular
+includes, there is <a href="fhir-single.xsd">a single schema</a> that contains everything.
+</p>
+<p>
+In addition to the w3c schema files, this specification also provides Schematron files that
+enforce the various constraints defined for the datatypes and resources.  These are packaged
+as files for each resource.
+</p>
+<p>
+XML that is exchanged SHALL be valid against the w3c schema and Schematron, though being 
+valid against the schema and Schematron is not sufficient to be a conformant instance: 
+this specification makes several rules that cannot be checked by either mechanism. 
+Operational systems may choose to use schema tools to check validation, but are not 
+required to do so. Exchanged content SHALL NOT specify the schema or even contain the schema 
+instance namespace in the resource itself. 
+</p>
+<p>
+Given the way <a href="extensibility.html">extensions</a> work, applications reading
+XML resources will never encounter unknown elements. However once an application 
+starts trading with other appplications that conform to later versions of this specification,
+unknown XML elements may be encountered. Applications MAY choose to ignore unknown elements
+in order to foster forwards compatibility in this regard, but may also choose not to - which 
+would be the normal behavior for schema generated applications. Applications declare 
+their behavior with regard to unknown elements using <a href="capabilitystatement-definitions.html#CapabilityStatement.acceptUnknown">CapabilityStatement.acceptUnknown</a>.
+</p>
+
+<a name="schema-gen"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">2.21.1.2</span> Code Generation Schema <a href="xml.html#schema-gen" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+
+<p>
+In addition to the validation schema, this specification provides a
+set of schema suitable for code generation. These schema describe
+the same XML syntax, but apply less validation in order to create a 
+schema that works with more code generation tooling. 
+</p>
+<p>
+Specifically, these schemas are generated without any <code>xsd:choice</code> elements, 
+for code generators that don't deal with choices well. Implementers that 
+use these schemas will need to enforce the correct usage of the 
+<a href="formats.html#choice">choice elements</a> without schema
+support.
+</p>
+<p>
+Implementers making use of schema driven code generation tooling need
+to consider how to handle the <a href="datatypes.html#decimal">decimal</a>
+data type. The decimal data type is defined to be precision aware - that 
+is, that implementers need to preserve the difference between &quot;2.0&quot; and
+&quot;2.00&quot; - this is ubiquitiously considered important in handling observed
+data in healthcare. Both schemas map this data type to <code>xsd:decimal</code>, but
+the base <a href="http://www.w3.org/TR/xmlschema-2/#decimal">W3C schema decimal type <img src="external.png" style="text-align: baseline"/></a> is specified not to be precision aware. Schema
+driven implementations vary as to how precision is handled, and implementers
+will need to determine how their generated code handles decimals, and 
+consider changing the type for decimal in the schema from <code>xsd:decimal</code>
+to <code>xsd:string</code>. Specifically, implementers may wish to change 
+</p>
+<pre>
+  &lt;xs:simpleType name=&quot;decimal-primitive&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:decimal&quot;&gt;
+      &lt;xs:pattern value=&quot;-?([0]|([1-9][0-9]*))(\.[0-9]+)?&quot;/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+</pre>
+<p>
+to this:
+</p>
+<pre>
+  &lt;xs:simpleType name=&quot;decimal-primitive&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+      &lt;xs:pattern value=&quot;-?([0]|([1-9][0-9]*))(\.[0-9]+)?&quot;/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+</pre>
+<p>
+Alternatively, if supported, implementers may wish to use the 
+<a href="http://www.w3.org/TR/xsd-precisionDecimal/">precisionDecimal <img src="external.png" style="text-align: baseline"/></a> from the XSD 1.1 framework.
+</p>
+<p>
+Note that most code generation frameworks ignore the pattern restriction.
+</p>
+
+
+<a name="canonical"> </a>
+<a name="digsig"> </a>
+
+<h3 class="self-link-parent"><span class="sectioncount">2.21.1.3</span> Canonical XML <a href="xml.html#digsig" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Resources and/or Bundles may be digitally signed (see <a href="bundle.html">Bundle</a> and <a href="provenance.html">Provenance</a>). 
+</p>
+<p>
+This specification defines the following method for canonicalizing FHIR resources, when represented as 
+xml:
+</p>
+<ul>
+ <li>No whitespace other than single spaces in attribute values and in the xhtml in the <a href="narrative.html">Narrative</a></li>
+ <li>Use default namespaces for the FHIR and XHTML namespaces</li>
+ <li>Omit all elements that have a default value, if a default value is defined</li>
+ <li>Omit all comments</li>
+ <li>Always use the unicode character representation for any XML entities (e.g. <code>&amp;#39;</code> instead of <code>&amp;quot;</code>)</li>
+ <li>Include the XML processing instruction <code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</code></li>
+ <li>Using the XML canonical method <a href="http://www.w3.org/TR/xmldsig-core1/#sec-Canonical">Canonical XML 1.1 <img src="external.png" style="text-align: baseline"/></a> (<code>http://www.w3.org/2006/12/xml-c14n11</code>)</li>
+</ul>
+<p>
+This canonicalization method is identified by the URL <code>http://hl7.org/fhir/canonicalization/xml</code>. The 
+following additional canonicalization URLS are also defined:
+</p>
+<table class="grid">
+ <tr>
+  <td>http://hl7.org/fhir/canonicalization/xml#data</td>
+  <td>The narrative (<code>Resource.text</code>) is omitted prior to signing (note the deletion is at <code>Resource.text</code>, not <code>Resource.text.div</code>)</td>
+ </tr>
+ <tr>
+  <td>http://hl7.org/fhir/canonicalization/xml#static</td>
+  <td>In addition to narrative (Resource.text), the <code>Resource.meta</code> element is removed. This makes the signature robust as the content is moved from server to server, or workflow and access tags are added or removed</td>
+ </tr>
+ <tr>
+  <td>http://hl7.org/fhir/canonicalization/xml#narrative</td>
+  <td>The method only covers the <code>Resource.id</code> and Narrative is retained</td>
+ </tr>
+</table>
+<p>
+These canonicalization methods allow system the flexibility to sign the various portions of 
+the resource that matter for the workflow the signature serves.
+</p>
+
+<p>
+Note: One consequence of signing the document is that URLs, identifiers and internal references are frozen and 
+cannot be changed. This might be a desired feature, but it may also cripple interoperability between closed 
+ecosystems where <a href="managing.html">re-identification</a> frequently occurs. For this reason, it is 
+recommended that systems consider carefully the impact of any signature processes. The impact of signatures
+on <a href="documents.html">Document bundles</a> and their related processes is the most well understood
+use of digital signatures.
+</p>
+
+
+
+
+  <!-- Todo: Relax NG, RDF, eCore -->
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fxml.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fxml.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

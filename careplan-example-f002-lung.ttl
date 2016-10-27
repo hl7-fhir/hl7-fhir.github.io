@@ -1,0 +1,115 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CarePlan/f002> a fhir:CarePlan;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f002"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>contained</b>: , </p><p><b>identifier</b>: CP2934 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>period</b>: Jul 6, 2011 --&gt; Jul 7, 2013</p><p><b>modified</b>: Jul 7, 2011 9:30:10 AM</p><p><b>careTeam</b>: id: careteam</p><p><b>addresses</b>: <a>?????</a></p><p><b>goal</b>: id: goal; status: achieved; succesful surgery on lung of patient <span>(Details )</span>; P. van de Heuvel; Annotation: goal accomplished with minor complications</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td><td><b>Scheduled[x]</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>Procedure <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'procedure' = 'Procedure)</span></td><td>Partial lobectomy of lung <span>(Details : {SNOMED CT code '359615001' = 'Partial lobectomy of lung (procedure)', given as 'Partial lobectomy of lung'})</span></td><td>completed</td><td>true</td><td>2011-07-07T09:30:10+01:00</td><td><a>M.I.M. Versteegh</a></td></tr></table></blockquote></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:CareTeam;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "careteam" ];
+     fhir:CareTeam.participant [
+       fhir:index 0;
+       fhir:CareTeam.participant.member [
+         fhir:link <http://hl7.org/fhir/Practitioner/f003>;
+         fhir:Reference.reference [ fhir:value "Practitioner/f003" ];
+         fhir:Reference.display [ fhir:value "M.I.M. Versteegh" ]
+       ]
+     ]
+  ], [
+     a fhir:Goal;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "goal" ];
+     fhir:Goal.status [ fhir:value "achieved" ];
+     fhir:Goal.description [
+       fhir:CodeableConcept.text [ fhir:value "succesful surgery on lung of patient" ]
+     ];
+     fhir:Goal.subject [
+       fhir:link <http://hl7.org/fhir/Patient/f001>;
+       fhir:Reference.reference [ fhir:value "Patient/f001" ];
+       fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+     ];
+     fhir:Goal.note [
+       fhir:index 0;
+       fhir:Annotation.text [ fhir:value "goal accomplished with minor complications" ]
+     ]
+  ];
+  fhir:CarePlan.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://www.bmc.nl/zorgportal/identifiers/careplans" ];
+     fhir:Identifier.value [ fhir:value "CP2934" ]
+  ];
+  fhir:CarePlan.status [ fhir:value "completed"];
+  fhir:CarePlan.subject [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:CarePlan.period [
+     fhir:Period.start [ fhir:value "2011-07-06"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2013-07-07"^^xsd:date ]
+  ];
+  fhir:CarePlan.modified [ fhir:value "2011-07-07T09:30:10+01:00"^^xsd:dateTime];
+  fhir:CarePlan.careTeam [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#careteam" ]
+  ];
+  fhir:CarePlan.addresses [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Condition/f201>;
+     fhir:Reference.reference [ fhir:value "Condition/f201" ];
+     fhir:Reference.display [ fhir:value "?????" ]
+  ];
+  fhir:CarePlan.goal [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#goal" ]
+  ];
+  fhir:CarePlan.activity [
+     fhir:index 0;
+     fhir:CarePlan.activity.detail [
+       fhir:CarePlan.activity.detail.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/care-plan-activity-category" ];
+           fhir:Coding.code [ fhir:value "procedure" ]
+         ]
+       ];
+       fhir:CarePlan.activity.detail.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:359615001;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "359615001" ];
+           fhir:Coding.display [ fhir:value "Partial lobectomy of lung" ]
+         ]
+       ];
+       fhir:CarePlan.activity.detail.status [ fhir:value "completed" ];
+       fhir:CarePlan.activity.detail.prohibited [ fhir:value "true"^^xsd:boolean ];
+       fhir:CarePlan.activity.detail.scheduledString [ fhir:value "2011-07-07T09:30:10+01:00" ];
+       fhir:CarePlan.activity.detail.performer [
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/Practitioner/f003>;
+         fhir:Reference.reference [ fhir:value "Practitioner/f003" ];
+         fhir:Reference.display [ fhir:value "M.I.M. Versteegh" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/Practitioner/f003> a fhir:Practitioner, fhir:Practitioner .
+
+<http://hl7.org/fhir/Patient/f001> a fhir:Patient, fhir:Patient .
+
+<http://hl7.org/fhir/Condition/f201> a fhir:Condition .
+
+# -------------------------------------------------------------------------------------
+

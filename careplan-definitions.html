@@ -1,0 +1,489 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>CarePlan - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/careplan-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="clinicalsummary-module.html"><img src="clinical.png"/> Clinical Summary</a></li>        <li><a href="careplan.html">CarePlan</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- careplan.html / res-Detailed Descriptions / CarePlan -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="careplan.html">Content</a></li><li><a href="careplan-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="careplan-mappings.html">Mappings</a></li><li><a href="careplan-profiles.html">Profiles &amp; Extensions</a></li></ul>
+
+<h2 class="self-link-parent"><span class="sectioncount">9.3.7<a name="9.3.7"> </a></span> Resource CarePlan - Detailed Descriptions <a href="careplan-definitions.html#9.3.7" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the CarePlan resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="CarePlan"> </a><b>CarePlan</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Care Team</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.identifier"> </a><b>CarePlan.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to allow connection to a wider workflow.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.status"> </a><b>CarePlan.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>CarePlanStatus: <a href="valueset-care-plan-status.html">Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows clinicians to determine whether the plan is actionable or not.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.category"> </a><b>CarePlan.category</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, &quot;wellness plan&quot;, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Care Plan Category: <a href="valueset-care-plan-category.html">Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, etc.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Used for filtering what plan(s) are retrieved and displayed to different types of users.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>There may be multiple axis of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Need a value set for this.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.description"> </a><b>CarePlan.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of the scope and nature of the plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Provides more detail than conveyed by category.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.subject"> </a><b>CarePlan.subject</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the patient or group whose intended care is described by the plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a> | <a href="group.html">Group</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.context"> </a><b>CarePlan.context</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the original context in which this particular CarePlan was created.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="encounter.html">Encounter</a> | <a href="episodeofcare.html">EpisodeOfCare</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Activities conducted as a result of the care plan may well occur as part of other encounters/episodes.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.period"> </a><b>CarePlan.period</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates when the plan did (or is intended to) come into effect and end.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Period">Period</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows tracking what plan(s) are in effect at a particular time.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Any activities scheduled as part of the plan should be constrained to the specified period.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.modified"> </a><b>CarePlan.modified</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the most recent date on which the plan has been revised.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td>Requirements</td><td><p>Indicates how current the plan is.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.author"> </a><b>CarePlan.author</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the individual(s) or ogranization who is responsible for the content of the care plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a> | <a href="practitioner.html">Practitioner</a> | <a href="relatedperson.html">RelatedPerson</a> | <a href="organization.html">Organization</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Collaborative care plans may have multiple authors.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.careTeam"> </a><b>CarePlan.careTeam</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies all people and organizations who are expected to be involved in the care envisioned by this plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="careteam.html">CareTeam</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Allows representation of care teams, helps scope care plan.  In some cases may be a determiner of access permissions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.addresses"> </a><b>CarePlan.addresses</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="condition.html">Condition</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Links plan to the conditions it manages.  Also scopes plans - multiple plans may exist addressing different concerns.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.support"> </a><b>CarePlan.support</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies portions of the patient's record that specifically influenced the formation of the plan.  These might include co-morbidities, recent procedures, limitations, recent assessments, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Identifies barriers and other considerations associated with the care plan.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Use &quot;concern&quot; to identify specific conditions addressed by the care plan.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.relatedPlan"> </a><b>CarePlan.relatedPlan</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies CarePlans with some sort of formal relationship to the current plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Comments</td><td><p>Relationships are uni-directional with the &quot;newer&quot; plan pointing to the older one.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.relatedPlan.code"> </a><b>CarePlan.relatedPlan.code</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the type of relationship this plan has to the target plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>CarePlanRelationship: <a href="valueset-care-plan-relationship.html">Codes identifying the types of relationships between two plans.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Read the relationship as &quot;this plan&quot; [relatedPlan.code] &quot;relatedPlan.plan&quot;; e.g. This plan includes Plan B.</p>
+<p>Additional relationship types can be proposed for future releases or handled as extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.relatedPlan.plan"> </a><b>CarePlan.relatedPlan.plan</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to the plan to which a relationship is asserted.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="careplan.html">CarePlan</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.goal"> </a><b>CarePlan.goal</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the intended objective(s) of carrying out the care plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="goal.html">Goal</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Provides context for plan.  Allows plan effectiveness to be evaluated by clinicians.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Goal can be achieving a particular change or merely maintaining a current state or even slowing a decline.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity"> </a><b>CarePlan.activity</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to perform, self-monitoring, education, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Requirements</td><td><p>Allows systems to prompt for performance of planned activities, and validate plans against best practice.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">ctm-3</b>: Provide a reference or detail, not both (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: detail.empty() or reference.empty(), xpath: not(exists(f:detail)) or not(exists(f:reference)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.actionResulting"> </a><b>CarePlan.activity.actionResulting</b></td></tr>
+  <tr><td>Definition</td><td><p>Resources that describe follow-on actions resulting from the plan, such as drug prescriptions, encounter records, appointments, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Links plan to resulting actions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.outcome"> </a><b>CarePlan.activity.outcome</b></td></tr>
+  <tr><td>Definition</td><td><p>Results of the careplan activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="terminologies.html#unbound">CarePlanActivityOutcome</a>: Identifies the results of the activity</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.progress"> </a><b>CarePlan.activity.progress</b></td></tr>
+  <tr><td>Definition</td><td><p>Notes about the adherence/status/progress of the activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Annotation">Annotation</a></td></tr>
+  <tr><td>Requirements</td><td><p>Can be used to capture information about adherence, progress, concerns, etc.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>This element should NOT be used to describe the activity to be performed - that occurs either within the resource pointed to by activity.detail.reference or in activity.detail.description.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.reference"> </a><b>CarePlan.activity.reference</b></td></tr>
+  <tr><td>Definition</td><td><p>The details of the proposed activity represented in a specific resource.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="appointment.html">Appointment</a> | <a href="communicationrequest.html">CommunicationRequest</a> | <a href="deviceuserequest.html">DeviceUseRequest</a> | <a href="diagnosticrequest.html">DiagnosticRequest</a> | <a href="medicationrequest.html">MedicationRequest</a> | <a href="nutritionrequest.html">NutritionRequest</a> | <a href="procedurerequest.html">ProcedureRequest</a> | <a href="processrequest.html">ProcessRequest</a> | <a href="referralrequest.html">ReferralRequest</a> | <a href="visionprescription.html">VisionPrescription</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Details in a form consistent with other applications and contexts of use.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Standard extension exists (<a href="extension-goal-pertainstogoal.html">goal-pertainstogoal</a>) that allows goals to be referenced from any of the referenced resources in CarePlan.activity.reference
+The goal should be visible when the resource referenced by CarePlan.activity.reference is viewed indepedently from the CarePlan.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">ctm-3</b>: Provide a reference or detail, not both (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: detail.empty() or reference.empty(), xpath: not(exists(f:detail)) or not(exists(f:reference)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail"> </a><b>CarePlan.activity.detail</b></td></tr>
+  <tr><td>Definition</td><td><p>A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td>Requirements</td><td><p>Details in a simple form for generic care plan systems.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">ctm-3</b>: Provide a reference or detail, not both (<a href="http://hl7.org/fluentpath">expression <img src="external.png" style="text-align: baseline"/></a>: detail.empty() or reference.empty(), xpath: not(exists(f:detail)) or not(exists(f:reference)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.category"> </a><b>CarePlan.activity.detail.category</b></td></tr>
+  <tr><td>Definition</td><td><p>High-level categorization of the type of activity in a care plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>CarePlanActivityCategory: <a href="valueset-care-plan-activity-category.html">High-level categorization of the type of activity in a care plan.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>May determine what types of extensions are permitted.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.definition"> </a><b>CarePlan.activity.detail.definition</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the protocol, questionnaire, guideline or other specification the planned activity should be conducted in accordance with.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="plandefinition.html">PlanDefinition</a> | <a href="questionnaire.html">Questionnaire</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.code"> </a><b>CarePlan.activity.detail.code</b></td></tr>
+  <tr><td>Definition</td><td><p>Detailed description of the type of planned activity; e.g. What lab test, what procedure, what kind of encounter.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Care Plan Activity: <a href="valueset-care-plan-activity.html">Detailed description of the type of activity; e.g. What lab test, what procedure, what kind of encounter.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows matching performed to planned as well as validation against protocols.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Tends to be less relevant for activities involving particular products.  Codes should not convey negation - use &quot;prohibited&quot; instead.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.reasonCode"> </a><b>CarePlan.activity.detail.reasonCode</b></td></tr>
+  <tr><td>Definition</td><td><p>Provides the rationale that drove the inclusion of this particular activity as part of the plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Activity Reason: <a href="valueset-activity-reason.html">Identifies why a care plan activity is needed.  Can include any health condition codes as well as such concepts as &quot;general wellness&quot;, prophylaxis, surgical preparation, etc.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Comments</td><td><p>This could be a diagnosis code.  If a full condition record exists or additional detail is needed, use reasonCondition instead.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.reasonReference"> </a><b>CarePlan.activity.detail.reasonReference</b></td></tr>
+  <tr><td>Definition</td><td><p>Provides the health condition(s) that drove the inclusion of this particular activity as part of the plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="condition.html">Condition</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Conditions can be identified at the activity level that are not identified as reasons for the overall plan.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.goal"> </a><b>CarePlan.activity.detail.goal</b></td></tr>
+  <tr><td>Definition</td><td><p>Internal reference that identifies the goals that this activity is intended to contribute towards meeting.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="goal.html">Goal</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>So that participants know the link explicitly.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.status"> </a><b>CarePlan.activity.detail.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies what progress is being made for the specific activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>CarePlanActivityStatus: <a href="valueset-care-plan-activity-status.html">Indicates where the activity is at in its overall life cycle.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Indicates progress against the plan, whether the activity is still relevant for the plan.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Some aspects of status can be inferred based on the resources linked in actionTaken.  Note that &quot;status&quot; is only as current as the plan was most recently updated.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.statusReason"> </a><b>CarePlan.activity.detail.statusReason</b></td></tr>
+  <tr><td>Definition</td><td><p>Provides reason why the activity isn't yet started, is on hold, was cancelled, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>GoalStatusReason: <a href="valueset-goal-status-reason.html">Describes why the current activity has the status it does; e.g. &quot;Recovering from injury&quot; as a reason for non-started or on-hold, &quot;Patient does not enjoy activity&quot; as a reason for cancelling a planned activity.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Comments</td><td><p>Will generally not be present if status is &quot;complete&quot;.  Be sure to prompt to update this (or at least remove the existing value) if the status is changed.</p>
+</td></tr>
+  <tr><td>To Do</td><td>Need a proper value set.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.prohibited"> </a><b>CarePlan.activity.detail.prohibited</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, indicates that the described activity is one that must NOT be engaged in when following the plan.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td>Requirements</td><td><p>Captures intention to not do something that may have been previously typical.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.scheduled_x_"> </a><b>CarePlan.activity.detail.scheduled[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The period, timing or frequency upon which the described activity is to occur.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Timing">Timing</a>|<a href="datatypes.html#Period">Period</a>|<a href="datatypes.html#string">string</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td>Requirements</td><td><p>Allows prompting for activities and detection of missed planned activities.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.location"> </a><b>CarePlan.activity.detail.location</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="location.html">Location</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Helps in planning of activity.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>May reference a specific clinical location or may identify a type of location.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.performer"> </a><b>CarePlan.activity.detail.performer</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies who's expected to be involved in the activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a> | <a href="relatedperson.html">RelatedPerson</a> | <a href="patient.html">Patient</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Helps in planning of activity.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>A performer MAY also be a participant in the care plan.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.product_x_"> </a><b>CarePlan.activity.detail.product[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the food, drug or other product to be consumed or supplied in the activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>SNOMED CT Medication Codes: <a href="valueset-medication-codes.html">A product supplied or administered as part of a care plan activity.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="references.html#Reference">Reference</a>(<a href="medication.html">Medication</a> | <a href="substance.html">Substance</a>)</td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.dailyAmount"> </a><b>CarePlan.activity.detail.dailyAmount</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the quantity expected to be consumed in a given day.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#SimpleQuantity">SimpleQuantity</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows rough dose checking.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>daily dose</td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.quantity"> </a><b>CarePlan.activity.detail.quantity</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the quantity expected to be supplied, administered or consumed by the subject.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#SimpleQuantity">SimpleQuantity</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.activity.detail.description"> </a><b>CarePlan.activity.detail.description</b></td></tr>
+  <tr><td>Definition</td><td><p>This provides a textual description of constraints on the intended activity occurrence, including relation to other activities.  It may also include objectives, pre-conditions and end-conditions.  Finally, it may convey specifics about the activity such as body site, method, route, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="CarePlan.note"> </a><b>CarePlan.note</b></td></tr>
+  <tr><td>Definition</td><td><p>General notes about the care plan not covered elsewhere.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Annotation">Annotation</a></td></tr>
+  <tr><td>Requirements</td><td><p>Used to capture information that applies to the plan as a whole that doesn't fit into discrete elements.</p>
+</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fcareplan-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fcareplan-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

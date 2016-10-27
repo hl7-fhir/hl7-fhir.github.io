@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/EpisodeOfCare/example> a fhir:EpisodeOfCare;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      HACC Program for Peter James Chalmers at HL7 Healthcare 15 Sept 2014 - current<br/>\n			was on leave from 22 Sept - 24 Sept while in respite care\n    </div>"
+  ];
+  fhir:EpisodeOfCare.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://example.org/sampleepisodeofcare-identifier" ];
+     fhir:Identifier.value [ fhir:value "123" ]
+  ];
+  fhir:EpisodeOfCare.status [ fhir:value "active"];
+  fhir:EpisodeOfCare.statusHistory [
+     fhir:index 0;
+     fhir:EpisodeOfCare.statusHistory.status [ fhir:value "planned" ];
+     fhir:EpisodeOfCare.statusHistory.period [
+       fhir:Period.start [ fhir:value "2014-09-01"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2014-09-14"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:EpisodeOfCare.statusHistory.status [ fhir:value "active" ];
+     fhir:EpisodeOfCare.statusHistory.period [
+       fhir:Period.start [ fhir:value "2014-09-15"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2014-09-21"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:EpisodeOfCare.statusHistory.status [ fhir:value "onhold" ];
+     fhir:EpisodeOfCare.statusHistory.period [
+       fhir:Period.start [ fhir:value "2014-09-22"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2014-09-24"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:EpisodeOfCare.statusHistory.status [ fhir:value "active" ];
+     fhir:EpisodeOfCare.statusHistory.period [
+       fhir:Period.start [ fhir:value "2014-09-25"^^xsd:date ]
+     ]
+  ];
+  fhir:EpisodeOfCare.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/EpisodeOfCare/Type" ];
+       fhir:Coding.code [ fhir:value "HACC" ];
+       fhir:Coding.display [ fhir:value "Home and Community Care Package" ]
+     ]
+  ];
+  fhir:EpisodeOfCare.condition [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Condition/example>;
+     fhir:Reference.reference [ fhir:value "Condition/example" ];
+     fhir:Reference.display [ fhir:value "Severe burn of left ear" ]
+  ];
+  fhir:EpisodeOfCare.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:EpisodeOfCare.managingOrganization [
+     fhir:link <http://hl7.org/fhir/Organization/hl7>;
+     fhir:Reference.reference [ fhir:value "Organization/hl7" ]
+  ];
+  fhir:EpisodeOfCare.period [
+     fhir:Period.start [ fhir:value "2014-09-01"^^xsd:date ]
+  ];
+  fhir:EpisodeOfCare.referralRequest [
+     fhir:index 0;
+     fhir:Reference.display [ fhir:value "Referral from Example Aged Care Services" ]
+  ];
+  fhir:EpisodeOfCare.careManager [
+     fhir:link <http://hl7.org/fhir/Practitioner/14>;
+     fhir:Reference.reference [ fhir:value "Practitioner/14" ];
+     fhir:Reference.display [ fhir:value "Amanda Assigned" ]
+  ];
+  fhir:EpisodeOfCare.team [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/CareTeam/example>;
+     fhir:Reference.reference [ fhir:value "CareTeam/example" ];
+     fhir:Reference.display [ fhir:value "example care team" ]
+  ];
+  fhir:EpisodeOfCare.account [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Account/example>;
+     fhir:Reference.reference [ fhir:value "Account/example" ];
+     fhir:Reference.display [ fhir:value "example account" ]
+  ] .
+
+<http://hl7.org/fhir/Condition/example> a fhir:Condition .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/hl7> a fhir:Organization .
+
+<http://hl7.org/fhir/Practitioner/14> a fhir:Practitioner .
+
+<http://hl7.org/fhir/CareTeam/example> a fhir:CareTeam .
+
+<http://hl7.org/fhir/Account/example> a fhir:Account .
+
+# -------------------------------------------------------------------------------------
+

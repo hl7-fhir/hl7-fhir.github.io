@@ -1,0 +1,153 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/ProcedureRequest",
+  "$ref": "#/definitions/ProcedureRequest",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "ProcedureRequest": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json#/definitions/DomainResource"
+        },
+        {
+          "description": "A request for a procedure to be performed. May be a proposal or an order.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a ProcedureRequest resource",
+              "type": "string",
+              "enum": [
+                "ProcedureRequest"
+              ]
+            },
+            "identifier": {
+              "description": "Identifiers assigned to this order by the order or by the receiver.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json#/definitions/Identifier"
+              }
+            },
+            "subject": {
+              "description": "The person, animal or group that should receive the procedure.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "code": {
+              "description": "The specific procedure that is ordered. Use text if the exact nature of the procedure cannot be coded.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "bodySite": {
+              "description": "Indicates the sites on the subject\u0027s body where the procedure should be performed (I.e. the target sites).",
+              "type": "array",
+              "items": {
+                "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+              }
+            },
+            "reasonCodeableConcept": {
+              "description": "The reason why the procedure is being proposed or ordered. This procedure request may be motivated by a Condition for instance.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "reasonReference": {
+              "description": "The reason why the procedure is being proposed or ordered. This procedure request may be motivated by a Condition for instance.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "scheduledDateTime": {
+              "description": "The timing schedule for the proposed or ordered procedure. The Schedule data type allows many different expressions.  E.g. \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?",
+              "type": "string"
+            },
+            "_scheduledDateTime": {
+              "description": "Extensions for scheduledDateTime",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "scheduledPeriod": {
+              "description": "The timing schedule for the proposed or ordered procedure. The Schedule data type allows many different expressions.  E.g. \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".",
+              "$ref": "Period.schema.json#/definitions/Period"
+            },
+            "scheduledTiming": {
+              "description": "The timing schedule for the proposed or ordered procedure. The Schedule data type allows many different expressions.  E.g. \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".",
+              "$ref": "Timing.schema.json#/definitions/Timing"
+            },
+            "encounter": {
+              "description": "The encounter within which the procedure proposal or request was created.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "performer": {
+              "description": "For example, the surgeon, anaethetist, endoscopist, etc.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "status": {
+              "description": "The status of the order.",
+              "enum": [
+                "proposed",
+                "draft",
+                "requested",
+                "received",
+                "accepted",
+                "in-progress",
+                "completed",
+                "suspended",
+                "rejected",
+                "aborted"
+              ],
+              "type": "string"
+            },
+            "_status": {
+              "description": "Extensions for status",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "notes": {
+              "description": "Any other notes associated with this proposal or order - e.g. provider instructions.",
+              "type": "array",
+              "items": {
+                "$ref": "Annotation.schema.json#/definitions/Annotation"
+              }
+            },
+            "asNeededBoolean": {
+              "description": "If a CodeableConcept is present, it indicates the pre-condition for performing the procedure.",
+              "type": "boolean"
+            },
+            "_asNeededBoolean": {
+              "description": "Extensions for asNeededBoolean",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "asNeededCodeableConcept": {
+              "description": "If a CodeableConcept is present, it indicates the pre-condition for performing the procedure.",
+              "$ref": "CodeableConcept.schema.json#/definitions/CodeableConcept"
+            },
+            "orderedOn": {
+              "description": "The time when the request was made.",
+              "type": "string",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            },
+            "_orderedOn": {
+              "description": "Extensions for orderedOn",
+              "$ref": "Element.schema.json#/definitions/Element"
+            },
+            "orderer": {
+              "description": "The healthcare professional responsible for proposing or ordering the procedure.",
+              "$ref": "Reference.schema.json#/definitions/Reference"
+            },
+            "priority": {
+              "description": "The clinical priority associated with this order.",
+              "enum": [
+                "routine",
+                "urgent",
+                "stat",
+                "asap"
+              ],
+              "type": "string"
+            },
+            "_priority": {
+              "description": "Extensions for priority",
+              "$ref": "Element.schema.json#/definitions/Element"
+            }
+          },
+          "required": [
+            "code",
+            "subject",
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

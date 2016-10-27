@@ -1,0 +1,75 @@
+{
+  "@context": "http://build.fhir.org/DiagnosticReport.jsonld",
+  "@context": "http://hl7.org/fhir/DiagnosticReport/hla-1",
+  "Resource.id": {
+    "id.value": "hla-1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "code.value": "generated"
+    },
+    "Narrative.div": {
+      "xhtml.value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: hla-1</p><p><b>status</b>: final</p><p><b>code</b>: HLA genotyping results <span>(Details )</span></p><p><b>subject</b>: <a>Molecular Lab Patient ID: HOSP-23456</a></p><p><b>effective</b>: May 26, 2015 3:30:10 PM</p><p><b>issued</b>: May 26, 2015 3:30:10 PM</p><p><b>performer</b>: <a>Molecular Diagnostic Laboratory</a></p><p><b>specimen</b>: <a>Molecular Specimen ID: MLD45-Z4-1234</a></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "uri.value": "http://hl7.org/fhir/StructureDefinition/hla-genotyping-resultsGlstring"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "uri.value": "text"
+          },
+          "Extension.valueString": {
+            "string.value": "HLA-A*01:01:01+HLA-A*24:02:01"
+          }
+        }
+      ]
+    }
+  ],
+  "DiagnosticReport.status": {
+    "code.value": "final"
+  },
+  "DiagnosticReport.code": {
+    "CodeableConcept.text": {
+      "string.value": "HLA genotyping results"
+    }
+  },
+  "DiagnosticReport.subject": {
+    "Reference.reference": {
+      "string.value": "Patient/genetics-example2"
+    },
+    "Reference.display": {
+      "string.value": "Molecular Lab Patient ID: HOSP-23456"
+    },
+    "Resource.reference": "http://hl7.org/fhir//Patient/genetics-example2"
+  },
+  "DiagnosticReport.effectiveDateTime": {
+    "dateTime.value": "2015-05-26T15:30:10+01:00"
+  },
+  "DiagnosticReport.issued": {
+    "instant.value": "2015-05-26T15:30:10+01:00"
+  },
+  "DiagnosticReport.performer": [
+    {
+      "Reference.reference": {
+        "string.value": "Practitioner/genetics-example2"
+      },
+      "Reference.display": {
+        "string.value": "Molecular Diagnostic Laboratory"
+      }
+    }
+  ],
+  "DiagnosticReport.specimen": [
+    {
+      "Reference.reference": {
+        "string.value": "Specimen/genetics-example2"
+      },
+      "Reference.display": {
+        "string.value": "Molecular Specimen ID: MLD45-Z4-1234"
+      }
+    }
+  ]
+}

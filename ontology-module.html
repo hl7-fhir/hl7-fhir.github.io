@@ -1,0 +1,273 @@
+﻿<!DOCTYPE HTML>
+  <!-- These elements SHALL always appear in this order. These basic elements shared by all resources come first
+in order to support consistent definitions for schema and UML derived code. --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Ontology-module - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/ontology-module.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><b><img src="ontology.png"/> Ontology</b></li>          <!-- ontology-module.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="root"> </a>
+<h2 class="self-link-parent"><span class="sectioncount">3.0<a name="3.0"> </a></span> FHIR Ontology Module <a href="ontology-module.html#3.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+
+<a name="intro"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.0.1</span> Introduction <a href="ontology-module.html#intro" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+This module describes the RDF representation for FHIR resources (FHIR/RDF) and related assets, including an OWL ontology for FHIR/RDF and a ShEx grammar to validate FHIR/RDF.  These materials were created, and are maintained by, a collaboration between HL7 and W3C.  Editor: David Booth
+</p>
+
+<a name="motivation"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.0.1.1</span> Motivation for FHIR/RDF <a href="ontology-module.html#motivation" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+The purpose of defining an RDF representation of FHIR is not only to enable FHIR to be exchanged in an RDF format such as Turtle, it is also to ground the semantics of FHIR data in RDF, for use with ontologies and other RDF data.  Since FHIR data is losslessly round-trippable between XML, JSON and RDF formats, any FHIR data can be used in conjunction with RDF.  The semantics are the same regardless of source format.
+</p>
+
+<p>
+Reasons for using RDF and ontologies with FHIR data include:
+</p>
+
+<ul>
+<li><b>Shared semantics.</b>  RDF's use of URIs as universal identifiers facilitates shared semantics across independently authored data.</li>
+<li><b>Inference.</b>  An ontology specifies relationships between concepts, which can be used to perform computer-based inference and formal reasoning over FHIR data.  For example, using inference a query for heart valve surgeries could automatically include results that were documented as mitral valve surgeries, because a mitral valve is a kind of heart valve.  </li>
+<li><b>Data integration.</b>  FHIR/RDF data can be integrated with other data, using RDF as a common semantic and representation layer -- including data that does not originate in an RDF format.  For example, clinical trials data in XML (see https://clinicaltrials.gov/ ) can be translated to RDF and then combined with FHIR/RDF data.</li>
+<li><b>Data validation.</b>  An ontology provides a vocabulary of uniquely identified concepts, which facilitates data validation. </li>
+<li><b>Error detection.</b>  Computer-based reasoning can be used to help detect errors and inconsistencies in data and ontologies, and potential help repair them.</li>
+<li><b>Compliance.</b>  RDF and ontologies can be used to express compliance constraints, for example to control data projected between two privacy contexts or to encode access restrictions for queries.</li>
+<li><b>Modularity.</b>  RDF was designed to support modularity, such that a specialized ontology can be freely composed of a subset of concepts from a larger ontology.</li>
+<li><b>Combining ontologies.</b>  The FHIR ontology can be linked to other ontologies, through bridge ontologies, and used together to support ontology-enabled applications in overlapping domains.</li>
+<li><b>Query.</b>  SPARQL queries can be performed on FHIR/RDF data, without need for a FHIR-specific query language.  SPARQL is a W3C standard query language for RDF data.  It can be used uniformly to query over both FHIR data and other data -- even in the same query.</li>
+</ul>
+
+<a name="design"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.0.1.2</span> Design of FHIR/RDF <a href="ontology-module.html#design" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+FHIR/RDF was designed to correspond very closely to FHIR/XML and FHIR/JSON in its look and feel, though there are some apparent differences that are necessary to ensure full-fidelity round tripping between all FHIR formats, or to accommodate FHIR's extensibility.  For example, fhir:index is used to retain information about ordering within a FHIR list, and fhir:value is used to indicate the value of an element, while still allowing FHIR extensions to be attached.
+</p>
+
+<a name="using"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.0.1.3</span> Using FHIR/RDF with Other Ontologies <a href="ontology-module.html#using" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+Ontologies that were designed independently almost always have some impedance mismatch when attempting to use them together, and the FHIR ontology is no exception.  
+Many of the ontologies in the medical and life sciences domain are designed to capture facts about the world for research, such as the fact that the mitral valve is a kind of heart valve.  But FHIR was designed to support the day-to-day operations of healthcare providers exchanging electronic health records (EHRs), and in this context the orientation has historically been different.  When using FHIR/RDF with other ontologies this difference is likely to show up in two main ways:
+</p>
+
+<ul>
+<li>
+<b>Records versus facts.</b>  FHIR is oriented toward recording who did what (&quot;Dr. Jones diagnosed patient x with viral pneumonia&quot;) rather than stating absolute medical facts (&quot;patient x has viral pneumonia&quot;).  
+</li>
+<li>
+<b>Non-monotonicity.</b>  RDF was designed to be monotonic, whereas FHIR has a few design aspects that are would be non-monotonic if they were interpreted directly in RDF.  (Monotonicity means that new data cannot invalidate previous conclusions; non-monotonicity means that previous conclusions can be invalidated by new data.)  For example, a modifier extension indicates that the surrounding element's meaning may be misunderstood if the modifier extension is not understood.  Another example: an entered-in-error status on a FHIR resource means that the resource was created accidentally, and should be ignored.  
+</li>
+</ul>
+
+<p>
+For both of these reasons, to maintain monotonicity in RDF, FHIR/RDF should not be directly interpreted as stating facts, at least until any potentially non-monotonic elements have been removed or isolated.  This could be done with a pre-processing step.
+</p>
+
+<a name="formats"> </a>
+<h4 class="self-link-parent"><span class="sectioncount">3.0.1.4</span> FHIR/RDF Data Formats <a href="ontology-module.html#formats" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h4>
+<p>
+FHIR/RDF examples are provided for all FHIR resources in Turtle and JSON-LD formats.     <!-- However, other RDF serializations may be used for FHIR/RDF also. GG: I Don't think this is true. At the least, we need to  discuss the ramifications, and we say something elsewhere. -->
+</p>
+<p>
+The mime type for the Turtle format is <code>text/turtle</code>.
+</p>
+<p>
+TODO: What is the status of the JSON-LD examples?
+</p>
+
+<a name="index"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.0.2</span> Index <a href="ontology-module.html#index" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+Link to key content pages in this module:
+</p>
+<ul>
+<li><a href="rdf.html">FHIR/RDF Introduction</a>  See also:
+<a href="http://w3c.github.io/hcls-fhir-rdf/spec/">Additional FHIR/RDF Introductory materials, not yet edited or merged <img src="external.png" style="text-align: baseline"/></a></li>
+<li><a href="http://w3c.github.io/hcls-fhir-rdf/spec/">
+  FHIR/RDF formal specification (at W3C) <img src="external.png" style="text-align: baseline"/></a></li>
+<li>ShEx Validation Schema for FHIR RDF  (TODO: add link)</li>
+<li><a href="ontology.html">FHIR Ontology</a>  See also: 
+  <a href="http://w3c.github.io/hcls-fhir-rdf/spec/ontology.html">
+Additional FHIR Ontology materials, not yet edited or merged <img src="external.png" style="text-align: baseline"/></a></li>
+<li><a href="http://w3c.github.io/hcls-fhir-rdf/spec/ontology.html">
+  Example of AllergyIntolerance inference using FHIR/RDF with SNOMED CT.  (Rough draft) <img src="external.png" style="text-align: baseline"/></a> </li>
+</ul>
+
+<a name="secpriv"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.0.3</span> Security and Privacy <a href="ontology-module.html#secpriv" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+TODO: In this section: description of key security and privacy issues, or references to pages that deal with this. 
+For the security / privcay module itself, this section does not exist. For other modules, the paragraph/section can end with this boilerplate:
+For more general considerations, see <a href="secpriv-module.html">the Security and Privacy module</a>.
+</p>
+
+<p>
+See also
+<a href="http://wiki.hl7.org/index.php?title=Security_and_Privacy_Ontology">
+HL7 Security and Privacy Ontology <img src="external.png" style="text-align: baseline"/></a>
+</p>
+
+
+<a name="uses"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.0.4</span> Common use Cases <a href="ontology-module.html#uses" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In this section: common problems in the space of the module, ways to go about solving them, or references to additional problem based linkes
+</p>
+
+<a name="roadmap"> </a>
+<h3 class="self-link-parent"><span class="sectioncount">3.0.5</span> Developmental Roadmap <a href="ontology-module.html#roadmap" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h3>
+<p>
+In this section: what the current overall state is, what work is in train, what the goals over the next 18 months or so are
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fontology-module.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fontology-module.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:OperationOutcome;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "break-the-glass"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Additional information may be available using the Break-The-Glass Protocol</p>\n    </div>"
+  ];
+  fhir:OperationOutcome.issue [
+     fhir:index 0;
+     fhir:OperationOutcome.issue.severity [ fhir:value "information" ];
+     fhir:OperationOutcome.issue.code [ fhir:value "suppressed" ];
+     fhir:OperationOutcome.issue.details [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3-ActReason" ];
+         fhir:Coding.code [ fhir:value "ETREAT" ];
+         fhir:Coding.display [ fhir:value "Emergency Treatment" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Additional information may be available using the Break-The-Glass Protocol" ]
+     ]
+  ]] .
+
+# -------------------------------------------------------------------------------------
+

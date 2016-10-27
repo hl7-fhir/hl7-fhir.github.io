@@ -1,0 +1,379 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Operation-decisionsupportservicemodule-evaluate.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/operation-decisionsupportservicemodule-evaluate.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="conformance-module.html"><img src="conformance.jpg"/> Conformance</a></li>        <li><a href="operationdefinition.html">OperationDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- operation-decisionsupportservicemodule-evaluate.ttl.html / resource-instance:OperationDefinition / Operation definition-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Operation-decisionsupportservicemodule-evaluate.ttl</h1>
+
+<p>
+<a href="operation-decisionsupportservicemodule-evaluate.ttl">Raw Turtle</a>, 
+<a href="operation-decisionsupportservicemodule-evaluate.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Operation Definition</p>
+<pre class="turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+[] a fhir:OperationDefinition;
+  fhir:Resource.id [ fhir:value &quot;DecisionSupportServiceModule-evaluate&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ]
+  ];
+  fhir:OperationDefinition.url [ fhir:value &quot;http://hl7.org/fhir/OperationDefinition/DecisionSupportServiceModule-evaluate&quot;];
+  fhir:OperationDefinition.name [ fhir:value &quot;Evaluate&quot;];
+  fhir:OperationDefinition.status [ fhir:value &quot;draft&quot;];
+  fhir:OperationDefinition.kind [ fhir:value &quot;operation&quot;];
+  fhir:OperationDefinition.date [ fhir:value &quot;2016-10-27T16:23:35+00:00&quot;];
+  fhir:OperationDefinition.publisher [ fhir:value &quot;HL7 (FHIR Project)&quot;];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;other&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;http://hl7.org/fhir&quot; ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value &quot;email&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;fhir@lists.hl7.org&quot; ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value &quot;The evaluate operation requests clinical decision support guidance based on a specific decision support module&quot;];
+  fhir:OperationDefinition.code [ fhir:value &quot;evaluate&quot;];
+  fhir:OperationDefinition.resource [
+     fhir:value &quot;DecisionSupportServiceModule&quot;;
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value &quot;false&quot;];
+  fhir:OperationDefinition.type [ fhir:value &quot;false&quot;];
+  fhir:OperationDefinition.instance [ fhir:value &quot;true&quot;];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.name [ fhir:value &quot;requestId&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;An optional client-provided identifier to track the request&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;id&quot; ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.name [ fhir:value &quot;evaluateAtDateTime&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;An optional date and time specifying that the evaluation should be performed as though it was the given date and time. The most direct implication of this is that references to \&quot;Now\&quot; within the evaluation logic of the module should result in this value. In addition, wherever possible, the data accessed by the module should appear as though it was accessed at this time. The evaluateAtDateTime value may be any time in the past or future, enabling both retrospective and prospective scenarios. If no value is provided, the date and time of the request is assumed&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;dateTime&quot; ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.name [ fhir:value &quot;inputParameters&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The input parameters for a request, if any. These parameters are defined by the module that is the target of the evaluation, and typically supply patient-independent information to the module&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Parameters&quot; ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.name [ fhir:value &quot;inputData&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;*&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The input data for the request. These data are defined by the data requirements of the module and typically provide patient-dependent information&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Any&quot; ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.name [ fhir:value &quot;patient&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The patient in context, if any&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Reference&quot; ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot; ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:OperationDefinition.name [ fhir:value &quot;encounter&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The encounter in context, if any&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Reference&quot; ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Encounter&quot; ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.name [ fhir:value &quot;initiatingOrganization&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The organization initiating the request&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Reference&quot; ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot; ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:OperationDefinition.name [ fhir:value &quot;initiatingPerson&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The person initiating the request&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Reference&quot; ]
+  ], [
+     fhir:index 8;
+     fhir:OperationDefinition.name [ fhir:value &quot;userType&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The type of user initiating the request, e.g. patient, healthcare provider, or specific type of healthcare provider (physician, nurse, etc.)&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 9;
+     fhir:OperationDefinition.name [ fhir:value &quot;userLanguage&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;Preferred language of the person using the system&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 10;
+     fhir:OperationDefinition.name [ fhir:value &quot;userTaskContext&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The task the system user is performing, e.g. laboratory results review, medication list review, etc. This information can be used to tailor decision support outputs, such as recommended information resources&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 11;
+     fhir:OperationDefinition.name [ fhir:value &quot;receivingOrganization&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The organization that will receive the response&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Reference&quot; ];
+     fhir:OperationDefinition.profile [
+       fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot; ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:OperationDefinition.name [ fhir:value &quot;receivingPerson&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The person in the receiving organization that will receive the response&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;Reference&quot; ]
+  ], [
+     fhir:index 13;
+     fhir:OperationDefinition.name [ fhir:value &quot;recipientType&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The type of individual that will consume the response content. This may be different from the requesting user type (e.g. if a clinician is getting disease management guidance for provision to a patient). E.g. patient, healthcare provider or specific type of healthcare provider (physician, nurse, etc.)&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 14;
+     fhir:OperationDefinition.name [ fhir:value &quot;recipientLanguage&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;Preferred language of the person that will consume the content&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 15;
+     fhir:OperationDefinition.name [ fhir:value &quot;setting&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The current setting of the request (inpatient, outpatient, etc)&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 16;
+     fhir:OperationDefinition.name [ fhir:value &quot;settingContext&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;in&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;0&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;Additional detail about the setting of the request, if any&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;CodeableConcept&quot; ]
+  ], [
+     fhir:index 17;
+     fhir:OperationDefinition.name [ fhir:value &quot;return&quot; ];
+     fhir:OperationDefinition.use [ fhir:value &quot;out&quot; ];
+     fhir:OperationDefinition.min [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.max [ fhir:value &quot;1&quot; ];
+     fhir:OperationDefinition.documentation [ fhir:value &quot;The result of the request as a GuidanceResponse resource. Output parameters, if any, will be contained in the parameters element of the response&quot; ];
+     fhir:OperationDefinition.type [ fhir:value &quot;GuidanceResponse&quot; ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:26+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Foperation-decisionsupportservicemodule-evaluate.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Foperation-decisionsupportservicemodule-evaluate.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

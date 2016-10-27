@@ -1,0 +1,2960 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Terminologies-systems - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/terminologies-systems.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="terminology-module.html"><img src="terminology.png"/> Terminology</a></li>
+        <li><b>Code Systems</b></li>          <!-- terminologies-systems.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="terminologies.html">Using Codes</a></li><li class="active"><a href="#">Code Systems</a></li><li><a href="terminologies-valuesets.html">Value Sets</a></li><li><a href="terminologies-conceptmaps.html">Concept Maps</a></li><li><a href="identifier-registry.html">Identifier Systems</a></li></ul>
+
+
+<h2 class="self-link-parent"><span class="sectioncount">4.2.0<a name="4.2.0"> </a></span> Code Systems <a href="terminologies-systems.html#4.2.0" title="link to here" class="self-link"><img src="assets/images/link.svg" width="20" class="self-link" height="20"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">Vocabulary <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">STU 3</a></td></tr></table>
+
+<p>
+The following names (URIs) may be used in the <i>system</i> element of the <a href="datatypes.html#Coding">Coding</a> data type.
+If a URI is defined here, it SHALL be used in preference to any other identifying mechanisms. If a code system is not listed
+here, the correct URI may be determined by working through the following list, in order:
+</p>
+<ul>
+ <li>the HL7 OID Registry</li>
+ <li>the documentation associated with the code system</li>
+ <li>consulting the owner of the code system</li>
+ <li>asking on the HL7 vocabulary mailing list</li>
+</ul>
+
+<p>
+See also the <a href="identifier-registry.html">list of known identifier systems</a> that can be used in the <i>system</i> element of the <a href="datatypes.html#Identifier">Identifier</a> data type.
+Additional identifier systems may be registered on the HL7 FHIR registry at <a href="http://hl7.org/fhir/registry">http://hl7.org/fhir/registry <img src="external.png" style="text-align: baseline"/></a>.
+</p>
+<p>
+<b>Important Notes:</b>
+</p>
+<ul>
+ <li>This list of names is incomplete and subject to change. Some values may be dropped and others will likely be added in the coming months as HL7 institutes formal processes around URIs in vocabulary</li>
+<li>Note that some of the URNs in this list follow the URN specification in <a href="http://tools.ietf.org/html/rfc5141">RFC 5141 <img src="external.png" style="text-align: baseline"/></a> for referring to 
+standards published by ISO, such as urn:iso:std:iso:11073:10101. Where ISO standards define codes with meanings, and there is no entry in the list above,
+and they are not registered in the HL7 OID registry, the default URN for the code system is that defined by the RFC 5141.</li>
+<li>For several of the code systems in this list, multiple systems are given. This means that the variants identified are different code systems, not just variants of the same code system</li>
+</ul>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-ext">External</a></li>
+    <li><a href="#tabs-fhir">Internal (FHIR)</a></li>
+    <li><a href="#tabs-v3">HL7 V3</a></li>
+    <li><a href="#tabs-v2">HL7 v2</a></li>
+  </ul>
+  <div id="tabs-ext">
+
+<table class="grid">
+ <tr>
+   <th width="80">URI</th>
+   <th width="80">Source</th>
+   <th width="80">Comment</th>
+   <th width="80">OID (for non-FHIR systems)</th>
+ </tr>
+ <tr>
+   <td colspan="4" style="background: #EFEFEF"><b>Externally Published code systems</b> <a name="external"> </a></td>
+ </tr>  
+
+ <tr>
+   <td width="80">http://snomed.info/sct <a name="http://snomed.info/sct"> </a></td>
+   <td>SNOMED CT (<a href="http://ihtsdo.org">IHTSDO <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>See <a href="snomedct.html">Using SNOMED CT with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.96</td>
+ </tr>
+ <tr>
+   <td>http://www.nlm.nih.gov/research/umls/rxnorm<a name=" http://www.nlm.nih.gov/research/umls/rxnorm"> </a></td>
+   <td>RxNorm (<a href="http://www.nlm.nih.gov/">US NLM <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>See <a href="rxnorm.html">Using RxNorm with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.88</td>
+ </tr>
+ <tr>
+   <td>http://loinc.org <a name="http://loinc.org"> </a></td>
+   <td>LOINC (<a href="http://loinc.org">LOINC.org <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>See <a href="loinc.html">Using LOINC with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.1</td>
+ </tr>
+ <tr>
+   <td>http://unitsofmeasure.org <a name="http://unitsofmeasure.org"> </a></td>
+   <td>UCUM: (<a href="http://unitsofmeasure.org">UnitsOfMeasure.org <img src="external.png" style="text-align: baseline"/></a>) Case Sensitive Codes</td>
+   <td>See <a href="ucum.html">Using UCUM with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.8</td>
+ </tr>
+ <tr>
+   <td>http://ncimeta.nci.nih.gov <a name="http://ncimeta.nci.nih.gov"> </a></td>
+   <td><a href="http://ncimeta.nci.nih.gov">NCI Metathesaurus <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>See <a href="ncimeta.html">Using NCI Metathesaurus with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.3.26.1.2</td>
+ </tr>
+ <tr>
+   <td>http://www.ama-assn.org/go/cpt <a name="http://www.ama-assn.org/go/cpt"> </a></td>
+   <td><a href="http://www.ama-assn.org/go/cpt">AMA CPT codes <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>See <a href="cpt.html">Using CPT with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.12</td>
+ </tr>
+ <tr>
+   <td>http://hl7.org/fhir/ndfrt <a name="http://hl7.org/fhir/ndfrt"> </a></td>
+   <td><a href="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NDFRT/">NDF-RT (National Drug File – Reference Terminology) <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>See <a href="ndfrt.html">Using NDF-RT with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.209</td>
+ </tr>
+ <tr>
+   <td>http://fdasis.nlm.nih.gov <a name="http://fdasis.nlm.nih.gov"> </a></td>
+   <td><a href="http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm">Unique Ingredient Identifier (UNII) <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>See <a href="unii.html">Using UNII with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.4.9</td>
+ </tr>
+ <tr>
+   <td>http://hl7.org/fhir/sid/ndc <a name="http://hl7.org/fhir/sid/ndc"> </a></td>
+   <td><a href="http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm">NDC/NHRIC Codes <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>See <a href="ndc.html">Using NDC with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.69</td>
+ </tr>
+ <tr>
+   <td>http://hl7.org/fhir/sid/cvx <a name="http://hl7.org/fhir/sid/cvx"> </a></td>
+   <td><a href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">CVX (Vaccine Administered) <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>See <a href="cvx.html">Using CVX with FHIR</a></td>
+   <td style="color : DarkGrey">2.16.840.1.113883.12.292</td>
+ </tr>
+ <tr>
+   <td>urn:iso:std:iso:3166 <a name="urn:iso:std:iso:3166"> </a></td>
+   <td><a href="http://www.iso.org/iso/country_codes.htm">ISO 2 letter Country Codes <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>a few country codes have been reused (e.g. CS). If a version is needed, simply use the year of publication e.g. 1998</td>
+   <td>1.0.3166.1.2.2</td>
+ </tr>
+ <tr>
+   <td>http://www.nubc.org/patient-discharge <a name="http://www.nubc.org/patient-discharge"> </a></td>
+   <td><a href="http://www.nubc.org">NUBC <img src="external.png" style="text-align: baseline"/></a> code system for Patient Discharge Status</td>
+   <td>National Uniform Billing Committee, manual UB-04, UB form locator 17</td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.301.5</td>
+ </tr> 
+ <tr>
+   <td>http://www.radlex.org <a name="http://www.radlex.org"> </a></td>
+   <td><a href="http://www.radlex.org">RadLex <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>(includes <a name="http://playbook.radlex.org">play book</a> codes as well)</td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.256 </td>
+ </tr> 
+ <tr>
+   <td>
+     http://hl7.org/fhir/sid/icd-10 <a name="http://hl7.org/fhir/sid/icd-10"> </a><br/>
+     http://hl7.org/fhir/sid/icd-10-de <a name="http://hl7.org/fhir/sid/icd-10-de"> </a><br/>
+     http://hl7.org/fhir/sid/icd-10-nl <a name="http://hl7.org/fhir/sid/icd-10-nl"> </a><br/>
+     http://hl7.org/fhir/sid/icd-10-us <a name="http://hl7.org/fhir/sid/icd-10-us"> </a>
+   </td>
+   <td>ICD-10 International (<a href="http://www.who.int/classifications/icd/en/">WHO <img src="external.png" style="text-align: baseline"/></a>) &amp; Local Variants</td>
+   <td>Note that for dual coding (see section 2, <a href="http://www.who.int/entity/classifications/icd/ICD-10_2nd_ed_volume2.pdf">ICD-10 Manual <img src="external.png" style="text-align: baseline"/></a>), simply use the two ICD-10 codes separated by a space e.g. &quot;J21.8 B95.6&quot;</td>
+   <td>
+     2.16.840.1.113883.6.3 <br/>
+     1.2.276.0.76.5.409 <br/>
+     2.16.840.1.113883.6.3.2 <br/>
+     ?? <br/>
+   </td>
+ </tr>
+  <tr>
+   <td>http://www.icd10data.com/icd10pcs <a name="http://www.icd10data.com/icd10pcs"> </a></td>
+   <td> <a href="http://www.icd10data.com/icd10pcs">ICD-10 PCS Codes <img src="external.png" style="text-align: baseline"/></a> (<a href="http://www.cms.gov/Medicare/Coding/ICD10/">CMS <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.4 </td>
+ </tr>
+ <tr>
+   <td>
+     http://hl7.org/fhir/sid/icd-9-cm <a name="http://hl7.org/fhir/sid/icd-9-cm"> </a><br/>
+     http://hl7.org/fhir/sid/icd-9-cm/diagnosis <a name="http://hl7.org/fhir/sid/icd-9-cm/diagnosis"> </a><br/>
+     http://hl7.org/fhir/sid/icd-9-cm/procedure <a name="http://hl7.org/fhir/sid/icd-9-cm/procedure"> </a>
+   </td>
+   <td>ICD-9 USA (<a href="http://www.cdc.gov/nchs/icd/icd9.htm">CDC <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>Dual Coding also applies for ICD-9 (see note against ICD-10 above)</td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.42 <br/> 2.16.840.1.113883.6.103 <br/> 2.16.840.1.113883.6.104 </td>
+ </tr>
+ <tr>
+   <td>
+     http://hl7.org/fhir/sid/icpc-1 <a name="http://hl7.org/fhir/sid/icpc-1"> </a> <br/>
+     http://hl7.org/fhir/sid/icpc-1-nl <a name="http://hl7.org/fhir/sid/icpc-1-nl"> </a> <br/>
+     http://hl7.org/fhir/sid/icpc-2 <a name="http://hl7.org/fhir/sid/icpc-2"> </a>
+   </td>
+   <td>ICPC (International Classification of Primary Care) (<a href="http://www.ph3c.org/">PH3C <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td/>
+   <td>
+      <br/>
+     2.16.840.1.113883.2.4.4.31.1 <br/>
+     2.16.840.1.113883.6.139
+   </td>
+ </tr>
+ <tr>
+   <td>http://hl7.org/fhir/sid/icf-nl <a name="http://hl7.org/fhir/sid/icf-nl"> </a></td>
+   <td>ICF  (International Classification of Functioning, Disability and Health) (<a href="http://www.who.int/classifications/icf/en/">WHO <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.254</td>
+ </tr>
+ <tr>
+   <td>http://hl7.org/fhir/v2/[X](/v) <a name="http://hl7.org/fhir/v2/[X](/v"> </a></td>
+   <td><a href="terminologies-v2.html">Version 2 tables</a></td>
+   <td>[X] is the 4 digit identifier for a table; e.g. http://hl7.org/fhir/v2/0203<br/>
+     Note: only <a href="terminologies-v2.html">some tables</a> may be treated in this fashion.
+     For some tables, the meaning of the code is version dependent, and so additional information 
+     must be included in the namespace, e.g. http://hl7.org/fhir/v2/0123/2.3+, as defined in the <a href="terminologies-v2.html">v2 table namespace list</a>.
+     Version 2 codes are case sensitive.</td>
+   <td style="color : DarkGrey">2.16.840.1.113883.12.[X]</td>
+ </tr>
+ <tr>
+   <td>http://hl7.org/fhir/v3/[X] <a name="http://hl7.org/fhir/v3/[X"> </a></td>
+   <td><a href="terminologies-v3.html">A <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186">HL7 v3 <img src="external.png" style="text-align: baseline"/></a> code system</a></td>
+   <td>[X] is the code system name; e.g. http://hl7.org/fhir/v3/GenderStatus. HL7 v3 code systems are case sensitive.</td>
+   <td>see <a href="terminologies-v3.html">v3 list</a></td>
+ </tr>
+ <tr>
+   <td>http://www.whocc.no/atc <a name="http://www.whocc.no/atc"> </a></td>
+   <td>Anatomical Therapeutic Chemical Classification System (<a href="http://www.whocc.no/atc/structure_and_principles/">WHO <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.73</td>
+ </tr> 
+ <tr>
+   <td>urn:ietf:bcp:47 <a name="urn:ietf:bcp:47"> </a></td>
+   <td>IETF language (see <a href="http://tools.ietf.org/html/bcp47">Tags for Identifying Languages - BCP 47 <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>This is used for identifying langauge throughout FHIR. Note that usually these codes are in a <code>code</code> and the system is assumed</td>
+   <td/>
+ </tr> 
+ <tr>
+   <td>urn:ietf:bcp:13 <a name="urn:ietf:bcp:47"> </a></td>
+   <td>Mime Types (see <a href="http://tools.ietf.org/html/bcp13">Multipurpose Internet Mail Extensions (MIME) Part Four - BCP 13 <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>This is used for identifying the mime type system throughout FHIR. Note that these codes are in a <code>code</code> (e.g. <a href="datatypes.html#Attachment">Attachment.contentType</a> 
+   and in these elements the system is assumed). This system is defined for when constructing value sets of mime type codes</td>
+   <td/>
+ </tr> 
+ <tr>
+   <td>urn:iso:std:iso:11073:10101 <a name="urn:iso:std:iso:11073:10101"> </a></td>
+   <td>Medical Device Codes defined in ISO 11073-10101 (see <a href="http://hit-testing.nist.gov:13110/rtmms/index.html#rosetta">RTM Management service <img src="external.png" style="text-align: baseline"/></a>)</td>
+   <td>The ISO/IEEE 11073-10201 Terminology Code is used in the <i>code</i> element, and the Terminology Reference ID is 
+     used in the <i>display</i> element (CODE10 and REFID in the reference)</td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.24</td>
+ </tr> 
+ <tr>
+   <td><a href="codesystem-dicom-dcim.html">http://nema.org/dicom/dicm</a> <a name="http://nema.org/dicom/dicm"> </a></td>
+   <td>DICOM Code Definitions</td>
+   <td>The meanings of codes defined in DICOM, either explicitly or by reference to another part of DICOM or an external reference document or standard</td>
+   <td>1.2.840.10008.2.16.4</td>
+ </tr> 
+ <tr> 
+   <td>http://hl7.org/fhir/sid/ca-hc-din <a name="http://hl7.org/fhir/NamingSystem/ca-hc-din"> </a></td>
+   <td><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/activit/fs-fi/dinfs_fd-eng.php">Health Canada Drug Identification Number <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>
+     <p>A computer-generated eight digit number assigned by Health Canada to a drug product prior to being marketed in Canada. 
+     It uniquely identifies all drug products sold in a dosage form in Canada and is located on the label of prescription and 
+     over-the-counter drug products that have been evaluated and authorized for sale in Canada. A DIN uniquely identifies the 
+     following product characteristics: manufacturer; product name; active ingredient(s); strength(s) of active ingredient(s); 
+     pharmaceutical form; route of administration.
+     </p>
+     <p>
+       <a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/databasdon/index-eng.php">Canada Health Drug Product Database <img src="external.png" style="text-align: baseline"/></a> contains 
+       product specific information on drugs approved for use in Canada. The database is managed by Health Canada and includes human 
+       pharmaceutical and biological drugs, veterinary drugs, radiopharmaceutical drugs and disinfectant products. It contains 
+       approximately 47,000 products that are currently approved, marketed or cancelled. Updates to the database are ongoing. 
+       If a <code>version</code> is needed, the correct version is YYYYMMDD for the date of download.
+      </p>
+    </td>
+   <td style="color : DarkGrey">2.16.840.1.113883.5.1105</td>
+ </tr> 
+ <tr> 
+   <td>http://nucc.org/provider-taxonomy <a name="http://nucc.org/provider-taxonomy"> </a></td>
+   <td><a href="http://www.nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/csv-mainmenu-57">NUCC Provider Taxonomy <img src="external.png" style="text-align: baseline"/></a></td>
+   <td>
+     <p>The Health Care Provider Taxonomy code is a unique alphanumeric code, ten characters in length. The code set is structured into 
+     three distinct &quot;Levels&quot; including Provider Type, Classification, and Area of Specialization.</p>
+   </td>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.101</td>
+ </tr> 
+ <tr>
+   <td colspan="4" style="background: #EFEFEF"><b>Code Systems for Genetics</b> <a name="genetics"> </a></td>
+ </tr>  
+ <tr>
+   <td>http://www.genenames.org</td>
+   <td><a name="http://www.genenames.org">HGNC: Human Gene Nomenclature Committee</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.281</td>
+ </tr>
+ <tr>
+   <td>http://www.ensembl.org</td>
+   <td><a name="http://www.ensembl.org">ENSEMBL reference sequence identifiers</a></td>
+   <td>Maintained jointly by the European Bioinformatics Institute and Welcome Trust Sanger Institute</td>
+   <td style="color: #777777"><i>not assigned yet</i></td>
+ </tr>
+ <tr>
+   <td>http://www.ncbi.nlm.nih.gov/nuccore</td>
+   <td><a name="http://www.ncbi.nlm.nih.gov/nuccore">REFSEQ : National Center for Biotechnology Information (NCBI) Reference Sequences</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.280</td>
+ </tr>
+ <tr>
+   <td>http://www.ncbi.nlm.nih.gov/clinvar</td>
+   <td><a name="http://www.ncbi.nlm.nih.gov/clinvar">ClinVar</a></td>
+   <td>NCBI central respository for curating pathogenicity of potentially clinically relevant variants</td>
+   <td style="color: #777777"><i>not assigned yet</i></td>
+ </tr>
+ <tr>
+   <td>http://sequenceontology.org</td>
+   <td><a name="http://sequenceontology.org">Sequence Ontology</a></td>
+   <td/>
+   <td style="color: #777777"><i>not assigned yet</i></td>
+ </tr>
+ <tr>
+   <td>http://www.hgvs.org/mutnomen</td>
+   <td><a name="http://www.hgvs.org/mutnomen">HGVS : Human Genome Variation Society </a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.282</td>
+ </tr>
+ <tr>
+   <td>http://www.ncbi.nlm.nih.gov/projects/SNP</td>
+   <td><a name="http://www.ncbi.nlm.nih.gov/projects/SNP">DBSNP : Single Nucleotide Polymorphism database</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.284</td>
+ </tr>
+ <tr>
+   <td>http://cancer.sanger.ac.uk/<br/>cancergenome/projects/cosmic</td>
+   <td><a name="http://cancer.sanger.ac.uk/cancergenome/projects/cosmic">COSMIC : Catalogue Of Somatic Mutations In Cancer</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.3.912</td>
+ </tr>
+ <tr>
+   <td>http://www.lrg-sequence.org</td>
+   <td><a name="http://www.lrg-sequence.org">LRG : Locus Reference Genomic Sequences</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.283</td>
+ </tr>
+ <tr>
+   <td>http://www.omim.org</td>
+   <td><a name="http://www.omim.org">OMIM : Online Mendelian Inheritance in Man</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.6.174</td>
+ </tr>
+ <tr>
+   <td>http://www.ncbi.nlm.nih.gov/pubmed</td>
+   <td><a name="null">PubMed </a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.13.191</td>
+ </tr>
+ <tr>
+   <td>http://www.pharmgkb.org</td>
+   <td><a name="http://www.pharmgkb.org">PHARMGKB : Pharmacogenomic Knowledge Base</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.3.913</td>
+ </tr>
+ <tr>
+   <td>http://clinicaltrials.gov</td>
+   <td><a name="http://clinicaltrials.gov">ClinicalTrials.gov</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.3.1077</td>
+ </tr>
+ <tr>
+   <td>http://www.ebi.ac.uk/ipd/imgt/hla/ <a name="http://www.ebi.ac.uk/ipd/imgt/hla/"> </a></td>
+   <td><a name="http://www.ebi.ac.uk/ipd/imgt/hla/">European Bioinformatics Institute</a></td>
+   <td/>
+   <td style="color : DarkGrey">2.16.840.1.113883.13.252</td>
+ </tr>
+</table>
+  
+  </div>
+  <div id="tabs-fhir">
+
+<table class="grid">
+ <tr>
+   <th width="80">URI (all prefixed with http://hl7.org/fhir/)</th>
+   <th width="80">Description</th>
+   <th width="80">OID</th>
+ </tr>
+  <tr>
+    <td><a href="codesystem-example.html">CodeSystem/example</a></td>
+    <td>ACME Codes for Cholesterol in Serum/Plasma: This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-surface.html">FDI-surface</a></td>
+    <td>Surface Codes: This value set includes a smattering of FDI tooth surface codes.</td>
+    <td>.1.113883.4.642.1.316</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-LOINC-48002-0-answerlist.html">LOINC-48002-0-answerlist</a></td>
+    <td>LOINC 48002-0 answerlist: LOINC answer list for Genomic source class</td>
+    <td>.1.113883.4.642.1.470</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-LOINC-48019-4-answerlist.html">LOINC-48019-4-answerlist</a></td>
+    <td>LOINC 48019-4 answerlist: LOINC answer list for Type of variation</td>
+    <td>.1.113883.4.642.1.469</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-LOINC-53034-5-answerlist.html">LOINC-53034-5-answerlist</a></td>
+    <td>LOINC 53034-5 answerlist: LOINC answer list for AllelicState</td>
+    <td>.1.113883.4.642.1.472</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-abstract-types.html">abstract-types</a></td>
+    <td>AbstractType: A type defined by FHIR that is an abstract type</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-account-status.html">account-status</a></td>
+    <td>AccountStatus: Indicates whether the account is available to be used.</td>
+    <td>.1.113883.4.642.1.362</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-cardinality-behavior.html">action-cardinality-behavior</a></td>
+    <td>PlanActionCardinalityBehavior: Defines behavior for an action or a group for how many times that item may be repeated</td>
+    <td>.1.113883.4.642.1.992</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-grouping-behavior.html">action-grouping-behavior</a></td>
+    <td>PlanActionGroupingBehavior: Defines organization behavior of a group</td>
+    <td>.1.113883.4.642.1.988</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-participant-type.html">action-participant-type</a></td>
+    <td>PlanActionParticipantType: The type of participant for the action</td>
+    <td>.1.113883.4.642.1.994</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-precheck-behavior.html">action-precheck-behavior</a></td>
+    <td>PlanActionPrecheckBehavior: Defines selection frequency behavior for an action or group</td>
+    <td>.1.113883.4.642.1.991</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-relationship-type.html">action-relationship-type</a></td>
+    <td>PlanActionRelationshipType: Defines the types of relationships between actions</td>
+    <td>.1.113883.4.642.1.995</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-required-behavior.html">action-required-behavior</a></td>
+    <td>PlanActionRequiredBehavior: Defines requiredness behavior for selecting an action or an action group</td>
+    <td>.1.113883.4.642.1.990</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-selection-behavior.html">action-selection-behavior</a></td>
+    <td>PlanActionSelectionBehavior: Defines selection behavior of a group</td>
+    <td>.1.113883.4.642.1.989</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-action-type.html">action-type</a></td>
+    <td>PlanActionType: The type of action to be performed</td>
+    <td>.1.113883.4.642.1.993</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-actionlist.html">actionlist</a></td>
+    <td>ActionList: List of allowable action which this resource can request.</td>
+    <td>.1.113883.4.642.1.351</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-activity-definition-category.html">activity-definition-category</a></td>
+    <td>ActivityDefinitionCategory: High-level categorization of the type of activity in a protocol.</td>
+    <td>.1.113883.4.642.1.546</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-additionalmaterials.html">additionalmaterials</a></td>
+    <td>Additional Material Codes: This value set includes sample additional material type codes.</td>
+    <td>.1.113883.4.642.1.306</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-address-type.html">address-type</a></td>
+    <td>AddressType: The type of an address (physical / postal)</td>
+    <td>.1.113883.4.642.1.38</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-address-use.html">address-use</a></td>
+    <td>AddressUse: The use of an address</td>
+    <td>.1.113883.4.642.1.37</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-adjudication.html">adjudication</a></td>
+    <td>Adjudication Codes: This value set includes a smattering of Adjudication codes.</td>
+    <td>.1.113883.4.642.1.325</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-adjudication-error.html">adjudication-error</a></td>
+    <td>Adjudication Error Codes: This value set includes a smattering of adjudication codes.</td>
+    <td>.1.113883.4.642.1.adjudication-error</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-adjudication-reason.html">adjudication-reason</a></td>
+    <td>Adjudication Reason Codes: This value set includes smattering of Adjudication Reason codes.</td>
+    <td>.1.113883.4.642.1.479</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-administrative-gender.html">administrative-gender</a></td>
+    <td>AdministrativeGender: The gender of a person used for administrative purposes.</td>
+    <td>.1.113883.4.642.1.administrative-gender</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-admit-source.html">admit-source</a></td>
+    <td>AdmitSource: This value set defines a set of codes that can be used to indicate from where the patient came in.</td>
+    <td>.1.113883.4.642.1.144</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-allerg-intol-substance-exp-risk.html">allerg-intol-substance-exp-risk</a></td>
+    <td>AllergyIntoleranceSubstanceExposureRisk: The risk of an adverse reaction (allergy or intolerance) for this patient upon xposure to the substance (including pharmaceutical products).</td>
+    <td>.1.113883.4.642.1.999</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-allergy-intolerance-category.html">allergy-intolerance-category</a></td>
+    <td>AllergyIntoleranceCategory: Category of an identified substance.</td>
+    <td>.1.113883.4.642.1.53</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-allergy-intolerance-criticality.html">allergy-intolerance-criticality</a></td>
+    <td>AllergyIntoleranceCriticality: Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.</td>
+    <td>.1.113883.4.642.1.51</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-allergy-intolerance-status.html">allergy-intolerance-status</a></td>
+    <td>AllergyIntoleranceStatus: Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.</td>
+    <td>.1.113883.4.642.1.50</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-allergy-intolerance-type.html">allergy-intolerance-type</a></td>
+    <td>AllergyIntoleranceType: Identification of the underlying physiological mechanism for a Reaction Risk.</td>
+    <td>.1.113883.4.642.1.52</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-animal-genderstatus.html">animal-genderstatus</a></td>
+    <td>GenderStatus: This example value set defines a set of codes that can be used to indicate the current state of the animal's reproductive organs.</td>
+    <td>.1.113883.4.642.1.230</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-animal-species.html">animal-species</a></td>
+    <td>AnimalSpecies: This example value set defines a set of codes that can be used to indicate species of animal patients.</td>
+    <td>.1.113883.4.642.1.231</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-appointmentstatus.html">appointmentstatus</a></td>
+    <td>AppointmentStatus: The free/busy status of an appointment.</td>
+    <td>.1.113883.4.642.1.284</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-assert-direction-codes.html">assert-direction-codes</a></td>
+    <td>AssertionDirectionType: The type of direction to use for assertion.</td>
+    <td>.1.113883.4.642.1.359</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-assert-operator-codes.html">assert-operator-codes</a></td>
+    <td>AssertionOperatorType: The type of operator to use for assertion.</td>
+    <td>.1.113883.4.642.1.360</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-assert-response-code-types.html">assert-response-code-types</a></td>
+    <td>AssertionResponseTypes: The type of response code to use for assertion.</td>
+    <td>.1.113883.4.642.1.361</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-audit-event-action.html">audit-event-action</a></td>
+    <td>AuditEventAction: Indicator for type of action performed during the event that generated the audit.</td>
+    <td>.1.113883.4.642.1.263</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-audit-event-outcome.html">audit-event-outcome</a></td>
+    <td>AuditEventOutcome: Indicates whether the event succeeded or failed</td>
+    <td>.1.113883.4.642.1.264</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-audit-event-type.html">audit-event-type</a></td>
+    <td>Audit Event ID: Event Types for Audit Events - defined by DICOM with some FHIR specific additions.</td>
+    <td>.1.113883.4.642.1.269</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-basic-resource-type.html">basic-resource-type</a></td>
+    <td>Basic Resource Types: This value set defines codes for resources not yet supported by (or which will never be supported by) FHIR.  Many of the codes listed here will eventually be turned into official resources.  However, there is no guarantee that any particular resource will be created nor that the scope will be exactly as defined by the codes presented here.  Codes in this set will be deprecated if/when formal resources are defined that encompass these concepts.</td>
+    <td>.1.113883.4.642.1.59</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-benefit-category.html">benefit-category</a></td>
+    <td>Benefit Category Codes: This value set includes a smattering of Benefit Category codes.</td>
+    <td>.1.113883.4.642.1.481</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-benefit-network.html">benefit-network</a></td>
+    <td>Network Type Codes: This value set includes a smattering of Network type codes.</td>
+    <td>.1.113883.4.642.1.484</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-benefit-subcategory.html">benefit-subcategory</a></td>
+    <td>Benefit SubCategory Codes: This value set includes a smattering of Benefit SubCategory codes.</td>
+    <td>.1.113883.4.642.1.482</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-benefit-term.html">benefit-term</a></td>
+    <td>Benefit Term Codes: This value set includes a smattering of Benefit Term codes.</td>
+    <td>.1.113883.4.642.1.486</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-benefit-type.html">benefit-type</a></td>
+    <td>Benefit Type Codes: This value set includes a smattering of Benefit type codes.</td>
+    <td>.1.113883.4.642.1.483</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-benefit-unit.html">benefit-unit</a></td>
+    <td>Unit Type Codes: This value set includes a smattering of Unit type codes.</td>
+    <td>.1.113883.4.642.1.485</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-binding-strength.html">binding-strength</a></td>
+    <td>BindingStrength: Indication of the degree of conformance expectations associated with a binding.</td>
+    <td>.1.113883.4.642.1.binding-strength</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-bundle-type.html">bundle-type</a></td>
+    <td>BundleType: Indicates the purpose of a bundle - how it was intended to be used.</td>
+    <td>.1.113883.4.642.1.327</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-capability-statement-kind.html">capability-statement-kind</a></td>
+    <td>CapabilityStatementKind: How a capability statement is intended to be used.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-care-plan-activity-category.html">care-plan-activity-category</a></td>
+    <td>CarePlanActivityCategory: High-level categorization of the type of activity in a care plan.</td>
+    <td>.1.113883.4.642.1.63</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-care-plan-activity-status.html">care-plan-activity-status</a></td>
+    <td>CarePlanActivityStatus: Indicates where the activity is at in its overall life cycle.</td>
+    <td>.1.113883.4.642.1.65</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-care-plan-relationship.html">care-plan-relationship</a></td>
+    <td>CarePlanRelationship: Codes identifying the types of relationships between two plans.</td>
+    <td>.1.113883.4.642.1.406</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-care-plan-status.html">care-plan-status</a></td>
+    <td>CarePlanStatus: Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.</td>
+    <td>.1.113883.4.642.1.60</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-choice-list-orientation.html">choice-list-orientation</a></td>
+    <td>ChoiceListOrientation: Direction in which lists of question options should be displayed</td>
+    <td>.1.113883.4.642.1.429</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-chromosome-human.html">chromosome-human</a></td>
+    <td>chromosome-human: Chromosome number for human</td>
+    <td>.1.113883.4.642.1.523</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-exception.html">claim-exception</a></td>
+    <td>Exception Codes: This value set includes sample Exception codes.</td>
+    <td>.1.113883.4.642.1.889</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-status.html">claim-status</a></td>
+    <td>ClaimStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.961</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-use.html">claim-use</a></td>
+    <td>Use: Complete, proposed, exploratory, other</td>
+    <td>.1.113883.4.642.1.315</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-careteamrole.html">claimcareteamrole</a></td>
+    <td>Claim Care Team Role Codes: This value set includes sample Claim Care Team Role codes.</td>
+    <td>.1.113883.4.642.1.892</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-informationcategory.html">claiminformationcategory</a></td>
+    <td>Claim Information Category Codes: This value set includes sample Information Category codes.</td>
+    <td>.1.113883.4.642.1.890</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claimresponse-status.html">claimresponse-status</a></td>
+    <td>ClaimResponseStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.963</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-classification-or-context.html">classification-or-context</a></td>
+    <td>ClassificationOrContext: Identifies whether a useContext represents a context or classification for the element</td>
+    <td>.1.113883.4.642.1.388</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-clinical-impression-status.html">clinical-impression-status</a></td>
+    <td>ClinicalImpressionStatus: The workflow state of a clinical impression.</td>
+    <td>.1.113883.4.642.1.71</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-codesystem-content-mode.html">codesystem-content-mode</a></td>
+    <td>CodeSystemContentMode: How much of the content of the code system - the concepts and codes it defines - are represented in a code system resource</td>
+    <td>.1.113883.4.642.1.550</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-codesystem-hierarchy-meaning.html">codesystem-hierarchy-meaning</a></td>
+    <td>CodeSystemHierarchyMeaning: The meaning of the hierarchy of concepts in a code system</td>
+    <td>.1.113883.4.642.1.982</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-common-tags.html">common-tags</a></td>
+    <td>Common Tags: Common Tag Codes defined by FHIR project</td>
+    <td>.1.113883.4.642.1.435</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-communication-request-status.html">communication-request-status</a></td>
+    <td>CommunicationRequestStatus: The status of the communication.</td>
+    <td>.1.113883.4.642.1.80</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-communication-status.html">communication-status</a></td>
+    <td>CommunicationStatus: The status of the communication.</td>
+    <td>.1.113883.4.642.1.79</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-compartment-type.html">compartment-type</a></td>
+    <td>CompartmentType: Which compartment a compartmnet definition describes</td>
+    <td>.1.113883.4.642.1.551</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-composition-attestation-mode.html">composition-attestation-mode</a></td>
+    <td>CompositionAttestationMode: The way in which a person authenticated a composition.</td>
+    <td>.1.113883.4.642.1.120</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-composition-status.html">composition-status</a></td>
+    <td>CompositionStatus: The workflow/clinical status of the composition.</td>
+    <td>.1.113883.4.642.1.123</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-concept-map-equivalence.html">concept-map-equivalence</a></td>
+    <td>ConceptMapEquivalence: The degree of equivalence between concepts.</td>
+    <td>.1.113883.4.642.1.concept-map-equivalence</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-concept-properties.html">concept-properties</a></td>
+    <td>FHIR Defined Concept Properties: A set of common concept properties for use on coded systems through out the FHIR eco-system.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-concept-property-type.html">concept-property-type</a></td>
+    <td>PropertyType: The type of a property value</td>
+    <td>.1.113883.4.642.1.549</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-condition-category.html">condition-category</a></td>
+    <td>Condition Category Codes: Preferred value set for Condition Categories.</td>
+    <td>.1.113883.4.642.1.73</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-condition-clinical.html">condition-clinical</a></td>
+    <td>Condition Clinical Status Codes: Preferred value set for Condition Clinical Status.</td>
+    <td>.1.113883.4.642.1.74</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-condition-state.html">condition-state</a></td>
+    <td>ConditionState: Enumeration indicating whether the condition is currently active, inactive, or has been resolved.</td>
+    <td>.1.113883.4.642.1.375</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-condition-ver-status.html">condition-ver-status</a></td>
+    <td>ConditionVerificationStatus: The verification status to support or decline the clinical status of the condition or diagnosis.</td>
+    <td>.1.113883.4.642.1.75</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-conditional-delete-status.html">conditional-delete-status</a></td>
+    <td>ConditionalDeleteStatus: A code that indicates how the server supports conditional delete.</td>
+    <td>.1.113883.4.642.1.91</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-conditional-read-status.html">conditional-read-status</a></td>
+    <td>ConditionalReadStatus: A code that indicates how the server supports conditional read.</td>
+    <td>.1.113883.4.642.1.939</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-conformance-expectation.html">conformance-expectation</a></td>
+    <td>ConformanceExpectation: Indicates the degree of adherence to a specified behavior or capability expected in order for a system to be deemed conformant with a specification.</td>
+    <td>.1.113883.4.642.1.381</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-consent-data-meaning.html">consent-data-meaning</a></td>
+    <td>ConsentDataMeaning: How a resource reference is interpreted when testing consent restrictions</td>
+    <td>.1.113883.4.642.1.974</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-consent-except-type.html">consent-except-type</a></td>
+    <td>ConsentExceptType: How an exception is statement is applied, as adding additional consent, or removing consent</td>
+    <td>.1.113883.4.642.1.900</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-consent-status.html">consent-status</a></td>
+    <td>ConsentStatus: Indicates the status of the consent</td>
+    <td>.1.113883.4.642.1.904</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-consent-action.html">consentaction</a></td>
+    <td>Consent Action Codes: This value set includes sample Consent Action codes.</td>
+    <td>.1.113883.4.642.1.902</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-consent-category.html">consentcategorycodes</a></td>
+    <td>Consent Category Codes: This value set includes sample Consent Category codes.</td>
+    <td>.1.113883.4.642.1.973</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-constraint-severity.html">constraint-severity</a></td>
+    <td>ConstraintSeverity: SHALL applications comply with this constraint?</td>
+    <td>.1.113883.4.642.1.44</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contact-point-system.html">contact-point-system</a></td>
+    <td>ContactPointSystem: Telecommunications form for contact point</td>
+    <td>.1.113883.4.642.1.39</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contact-point-use.html">contact-point-use</a></td>
+    <td>ContactPointUse: Use of contact point</td>
+    <td>.1.113883.4.642.1.40</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contactentity-type.html">contactentity-type</a></td>
+    <td>ContactEntityType: This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.</td>
+    <td>.1.113883.4.642.1.229</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-content-type.html">content-type</a></td>
+    <td>ContentType: The content or mime type.</td>
+    <td>.1.113883.4.642.1.358</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contract-subtype.html">contractsubtypecodes</a></td>
+    <td>Contract Subtype Codes: This value set includes sample Contract Subtype codes.</td>
+    <td>.1.113883.4.642.1.96</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contract-term-subtype.html">contracttermsubtypecodes</a></td>
+    <td>Contract Term Type Codes: This value set includes sample Contract Term SubType codes.</td>
+    <td>.1.113883.4.642.1.98</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contract-term-type.html">contracttermtypecodes</a></td>
+    <td>Contract Term Type Codes: This value set includes sample Contract Term Type codes.</td>
+    <td>.1.113883.4.642.1.97</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contract-type.html">contracttypecodes</a></td>
+    <td>Contract Type Codes: This value set includes sample Contract Type codes.</td>
+    <td>.1.113883.4.642.1.95</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-contributor-type.html">contributor-type</a></td>
+    <td>ContributorType: The type of contributor</td>
+    <td>.1.113883.4.642.1.923</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-copy-number-event.html">copy-number-event</a></td>
+    <td>CopyNumberEvent: Copy Number Event</td>
+    <td>.1.113883.4.642.1.524</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-coverage-exception.html">coverage-exception</a></td>
+    <td>Exception Codes: This value set includes sample Exception codes.</td>
+    <td>.1.113883.4.642.1.307</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-coverage-level.html">coverage-level</a></td>
+    <td>Coverage Level Codes: This value set includes sample Coverage Level codes.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-coverage-status.html">coverage-status</a></td>
+    <td>CoverageStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.960</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-dWebType.html">dWebType</a></td>
+    <td>dWebType: The type of the service endpoint</td>
+    <td>.1.113883.4.642.1.556</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-data-absent-reason.html">data-absent-reason</a></td>
+    <td>DataAbsentReason: Used to specify why the normally expected content of the data element is missing.</td>
+    <td>.1.113883.4.642.1.data-absent-reason</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-data-types.html">data-types</a></td>
+    <td>DataType: The type of an element - one of the FHIR data types.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-dataelement-stringency.html">dataelement-stringency</a></td>
+    <td>DataElementStringency: Indicates the degree of precision of the data element definition.</td>
+    <td>.1.113883.4.642.1.244</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-days-of-week.html">days-of-week</a></td>
+    <td>DaysOfWeek: The days of the week.</td>
+    <td>.1.113883.4.642.1.302</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-definition-status.html">definition-status</a></td>
+    <td>DefinitionStatus: Codes identifying the stage lifecycle stage of a definition</td>
+    <td>.1.113883.4.642.1.926</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-detectedissue-severity.html">detectedissue-severity</a></td>
+    <td>DetectedIssueSeverity: Indicates the potential degree of impact of the identified issue on the patient.</td>
+    <td>.1.113883.4.642.1.105</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-device-action.html">device-action</a></td>
+    <td>Procedure Device Action Codes: Example value set for Procedure Device Action code (what happened to a device during a procedure.</td>
+    <td>.1.113883.4.642.1.236</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-devicestatus.html">devicestatus</a></td>
+    <td>DeviceStatus: The availability status of the device.</td>
+    <td>.1.113883.4.642.1.107</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-diagnostic-report-status.html">diagnostic-report-status</a></td>
+    <td>DiagnosticReportStatus: The status of the diagnostic report as a whole.</td>
+    <td>.1.113883.4.642.1.118</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-diet.html">diet</a></td>
+    <td>Diet: This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.</td>
+    <td>.1.113883.4.642.1.142</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-digital-media-type.html">digital-media-type</a></td>
+    <td>DigitalMediaType: Whether the Media is a photo, video, or audio</td>
+    <td>.1.113883.4.642.1.183</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-discharge-disposition.html">discharge-disposition</a></td>
+    <td>DischargeDisposition: This value set defines a set of codes that can be used to where the patient left the hospital.</td>
+    <td>.1.113883.4.642.1.145</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-document-mode.html">document-mode</a></td>
+    <td>DocumentMode: Whether the application produces or consumes documents.</td>
+    <td>.1.113883.4.642.1.87</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-document-reference-status.html">document-reference-status</a></td>
+    <td>DocumentReferenceStatus: The status of the document reference.</td>
+    <td>.1.113883.4.642.1.document-reference-status</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-document-relationship-type.html">document-relationship-type</a></td>
+    <td>DocumentRelationshipType: The type of relationship between documents.</td>
+    <td>.1.113883.4.642.1.133</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-eligibilityrequest-status.html">eligibilityrequest-status</a></td>
+    <td>EligibilityRequestStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.965</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-eligibilityresponse-status.html">eligibilityresponse-status</a></td>
+    <td>EligibilityResponseStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.966</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-location-status.html">encounter-location-status</a></td>
+    <td>EncounterLocationStatus: The status of the location.</td>
+    <td>.1.113883.4.642.1.147</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-special-arrangements.html">encounter-special-arrangements</a></td>
+    <td>SpecialArrangements: This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.</td>
+    <td>.1.113883.4.642.1.141</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-status.html">encounter-status</a></td>
+    <td>EncounterStatus: Current state of the encounter</td>
+    <td>.1.113883.4.642.1.948</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-type.html">encounter-type</a></td>
+    <td>EncounterType: This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.</td>
+    <td>.1.113883.4.642.1.137</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-endpoint-connection-type.html">endpoint-connection-type</a></td>
+    <td>Endpoint Connection Type: This is an example value set defined by the FHIR project, that could be used to represent possible connection type profile values.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-endpoint-status.html">endpoint-status</a></td>
+    <td>EndpointStatus: The status of the encounter.</td>
+    <td>.1.113883.4.642.1.883</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-enrollmentrequest-status.html">enrollmentrequest-status</a></td>
+    <td>EnrollmentRequestStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.967</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-enrollmentresponse-status.html">enrollmentresponse-status</a></td>
+    <td>EnrollmentResponseStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.968</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-entformula-additive.html">entformula-additive</a></td>
+    <td>Enteral Formula Additive Type Code: EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.</td>
+    <td>.1.113883.4.642.1.213</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-episode-of-care-status.html">episode-of-care-status</a></td>
+    <td>EpisodeOfCareStatus: The status of the episode of care.</td>
+    <td>.1.113883.4.642.1.346</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-event-capability-mode.html">event-capability-mode</a></td>
+    <td>EventCapabilityMode: The mode of a message capability statement.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-event-status.html">event-status</a></td>
+    <td>EventStatus: Codes identifying the stage lifecycle stage of a event</td>
+    <td>.1.113883.4.642.1.929</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-cqif-evidence-quality.html">evidence-quality</a></td>
+    <td>QualityOfEvidenceRating: A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems</td>
+    <td>.1.113883.4.642.1.1001</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-uscls.html">ex-USCLS</a></td>
+    <td>USCLS Codes: This value set includes a smattering of USCLS codes.</td>
+    <td>.1.113883.4.642.1.314</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-fm-itemtype.html">ex-claimitemtype</a></td>
+    <td>Item Type Codes: This value set includes sample Item Type codes.</td>
+    <td>.1.113883.4.642.1.317</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-occurrence-codes.html">ex-claimoccurrance</a></td>
+    <td>Example Occurrance Codes: This value set includes sample Occurrance codes.</td>
+    <td>.1.113883.4.642.1.528</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-occurrence-span-codes.html">ex-claimoccurrancespan</a></td>
+    <td>Example Occurrance Span Codes: This value set includes sample Occurrance Span codes.</td>
+    <td>.1.113883.4.642.1.529</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-subtype.html">ex-claimsubtype</a></td>
+    <td>Example Claim SubType Codes: This value set includes sample Claim SubType codes.</td>
+    <td>.1.113883.4.642.1.526</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-type.html">ex-claimtype</a></td>
+    <td>Example Claim Type Codes: This value set includes sample Claim Type codes.</td>
+    <td>.1.113883.4.642.1.322</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-value-codes.html">ex-claimvalue</a></td>
+    <td>Example Value Codes: This value set includes sample Value codes.</td>
+    <td>.1.113883.4.642.1.530</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-diagnosisrelatedgroup.html">ex-diagnosisrelatedgroup</a></td>
+    <td>Example Diagnosis Related Group Codes: This value set includes example Diagnosis Related Group codes.</td>
+    <td>.1.113883.4.642.1.919</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-diagnosistype.html">ex-diagnosistype</a></td>
+    <td>Example Diagnosis Type Codes: This value set includes example Diagnosis Type codes.</td>
+    <td>.1.113883.4.642.1.920</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-teeth.html">ex-fdi</a></td>
+    <td>Teeth Codes: This value set includes the FDI Teeth codes.</td>
+    <td>.1.113883.4.642.1.318</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-onsettype.html">ex-onsettype</a></td>
+    <td>Example Onset Type (Reason) Codes: This value set includes example Onset Type (Reason) codes.</td>
+    <td>.1.113883.4.642.1.888</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-oral-prosthodontic-material.html">ex-oralprostho</a></td>
+    <td>Oral Prostho Material type Codes: This value set includes sample Oral Prosthodontic Material type codes.</td>
+    <td>.1.113883.4.642.1.312</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-payee-resource-type.html">ex-payee-resource-type</a></td>
+    <td>PayeeResourceType: The type of payee Resource</td>
+    <td>.1.113883.4.642.1.891</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-paymenttype.html">ex-paymenttype</a></td>
+    <td>Example Payment Type Codes: This value set includes example Payment Type codes.</td>
+    <td>.1.113883.4.642.1.333</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-pharmacy.html">ex-pharmaservice</a></td>
+    <td>Example Pharmacy Service Codes: This value set includes a smattering of Pharmacy Service codes.</td>
+    <td>.1.113883.4.642.1.324</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-program-code.html">ex-programcode</a></td>
+    <td>Example Program Reason Codes: This value set includes sample Program Reason Span codes.</td>
+    <td>.1.113883.4.642.1.887</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-provider-qualification.html">ex-providerqualification</a></td>
+    <td>Example Provider Qualification Codes: This value set includes sample Provider Qualification codes.</td>
+    <td>.1.113883.4.642.1.531</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-related-claim-relationship.html">ex-relatedclaimrelationship</a></td>
+    <td>Example Related Claim Relationship Codes: This value set includes sample Related Claim Relationship codes.</td>
+    <td>.1.113883.4.642.1.527</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ex-revenue-center.html">ex-revenue-center</a></td>
+    <td>Example Revenue Center Codes: This value set includes sample Revenue Center codes.</td>
+    <td>.1.113883.4.642.1.962</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-modifiers.html">ex-servicemodifier</a></td>
+    <td>Example Service Modifier Codes: This value set includes sample Service Modifier codes.</td>
+    <td>.1.113883.4.642.1.532</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-place.html">ex-serviceplace</a></td>
+    <td>Example Service Place Codes: This value set includes a smattering of Service Place codes.</td>
+    <td>.1.113883.4.642.1.478</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-product.html">ex-serviceproduct</a></td>
+    <td>Example Service/Product Codes: This value set includes a smattering of Service/Product codes.</td>
+    <td>.1.113883.4.642.1.323</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-tooth.html">ex-tooth</a></td>
+    <td>Oral Site Codes: This value set includes a smattering of FDI oral site codes.</td>
+    <td>.1.113883.4.642.1.313</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-udi.html">ex-udi</a></td>
+    <td>UDI Codes: This value set includes sample UDI codes.</td>
+    <td>.1.113883.4.642.1.320</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-vision-product.html">ex-visionprescriptionproduct</a></td>
+    <td>Example Vision Prescription Product Codes: This value set includes a smattering of Prescription Product codes.</td>
+    <td>.1.113883.4.642.1.343</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-explanationofbenefit-status.html">explanationofbenefit-status</a></td>
+    <td>ExplanationOfBenefitStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.964</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-extension-context.html">extension-context</a></td>
+    <td>ExtensionContext: How an extension context is interpreted.</td>
+    <td>.1.113883.4.642.1.349</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-filter-operator.html">filter-operator</a></td>
+    <td>FilterOperator: The kind of operation to perform as a part of a property based filter.</td>
+    <td>.1.113883.4.642.1.280</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-flag-category.html">flag-category</a></td>
+    <td>Flag Category: Example list of detail codes for flagged issues. (Not complete or necessarily appropriate.)</td>
+    <td>.1.113883.4.642.1.403</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-flag-priority.html">flag-priority-code</a></td>
+    <td>Flag Priority Codes: This value set is provided as an exemplar. The value set is driven by IHE Table B.8-4: Abnormal Flags, Alert Priority.</td>
+    <td>.1.113883.4.642.1.433</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-flag-status.html">flag-status</a></td>
+    <td>FlagStatus: Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or entered in error.</td>
+    <td>.1.113883.4.642.1.49</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-fm-conditions.html">fm-conditions</a></td>
+    <td>Conditions Codes: This value set includes sample Conditions codes.</td>
+    <td>.1.113883.4.642.1.321</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-forms.html">forms-codes</a></td>
+    <td>Form Codes: This value set includes a sample set of Forms codes.</td>
+    <td>.1.113883.4.642.1.forms</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-fundsreserve.html">fundsreserve</a></td>
+    <td>Funds Reservation Codes: This value set includes sample funds reservation type codes.</td>
+    <td>.1.113883.4.642.1.fundsreserve</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-goal-acceptance-status.html">goal-acceptance-status</a></td>
+    <td>GoalAcceptanceStatus: Codes indicating whether the goal has been accepted by a stakeholder</td>
+    <td>.1.113883.4.642.1.431</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-goal-category.html">goal-category</a></td>
+    <td>GoalCategory: Example codes for grouping goals for filtering or presentation.</td>
+    <td>.1.113883.4.642.1.411</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-goal-priority.html">goal-priority</a></td>
+    <td>GoalPriority: Indicates the level of importance associated with reaching or sustaining a goal.</td>
+    <td>.1.113883.4.642.1.151</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-goal-relationship-type.html">goal-relationship-type</a></td>
+    <td>GoalRelationshipType: Types of relationships between two goals</td>
+    <td>.1.113883.4.642.1.390</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-goal-status.html">goal-status</a></td>
+    <td>GoalStatus: Indicates whether the goal has been met and is still being targeted</td>
+    <td>.1.113883.4.642.1.150</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-goal-status-reason.html">goal-status-reason</a></td>
+    <td>GoalStatusReason: Example codes indicating the reason for a current status.  Note that these are in no way complete and may not even be appropriate for some uses.</td>
+    <td>.1.113883.4.642.1.412</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-group-type.html">group-type</a></td>
+    <td>GroupType: Types of resources that are part of group</td>
+    <td>.1.113883.4.642.1.156</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-guidance-response-status.html">guidance-response-status</a></td>
+    <td>GuidanceResponseStatus: The status of a guidance response</td>
+    <td>.1.113883.4.642.1.489</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-guide-dependency-type.html">guide-dependency-type</a></td>
+    <td>GuideDependencyType: How a dependency is represented when the guide is published.</td>
+    <td>.1.113883.4.642.1.170</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-guide-page-kind.html">guide-page-kind</a></td>
+    <td>GuidePageKind: The kind of an included page.</td>
+    <td>.1.113883.4.642.1.171</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-history-status.html">history-status</a></td>
+    <td>FamilyHistoryStatus: A code that identifies the status of the family history record.</td>
+    <td>.1.113883.4.642.1.409</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-http-verb.html">http-verb</a></td>
+    <td>HTTPVerb: HTTP verbs (in the HTTP command line).</td>
+    <td>.1.113883.4.642.1.329</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-identifier-type.html">identifier-type</a></td>
+    <td>Identifier Type Codes: A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.</td>
+    <td>.1.113883.4.642.1.identifier-type</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-identifier-use.html">identifier-use</a></td>
+    <td>IdentifierUse: Identifies the purpose for this identifier, if known .</td>
+    <td>.1.113883.4.642.1.33</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-identity-assuranceLevel.html">identity-assuranceLevel</a></td>
+    <td>IdentityAssuranceLevel: The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.</td>
+    <td>.1.113883.4.642.1.342</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-immunization-recommendation-date-criterion.html">immunization-recommendation-date-criterion</a></td>
+    <td>Immunization Recommendation Date Criterion Codes: The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the medication process, in particular the process and reasons for dispensing. This value set is provided as a suggestive example.</td>
+    <td>.1.113883.4.642.1.169</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-immunization-recommendation-status.html">immunization-recommendation-status</a></td>
+    <td>Immunization Recommendation Status Codes: The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the medication process, in particular the process and reasons for dispensing. This value set is provided as a suggestive example.</td>
+    <td>.1.113883.4.642.1.168</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-intervention.html">intervention</a></td>
+    <td>Intervention Codes: This value set includes sample Intervention codes.</td>
+    <td>.1.113883.4.642.1.309</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-issue-severity.html">issue-severity</a></td>
+    <td>IssueSeverity: How the issue affects the success of the action.</td>
+    <td>.1.113883.4.642.1.223</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-issue-type.html">issue-type</a></td>
+    <td>IssueType: A code that describes the type of issue.</td>
+    <td>.1.113883.4.642.1.224</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-item-type.html">item-type</a></td>
+    <td>QuestionnaireItemType: Distinguishes groups from questions and display text and indicates data type for questions</td>
+    <td>.1.113883.4.642.1.477</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-library-type.html">library-type</a></td>
+    <td>LibraryType: The type of knowledge asset this library contains</td>
+    <td>.1.113883.4.642.1.978</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-link-type.html">link-type</a></td>
+    <td>LinkType: The type of link between this patient resource and another patient resource.</td>
+    <td>.1.113883.4.642.1.234</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-linkage-type.html">linkage-type</a></td>
+    <td>LinkageType: Used to distinguish different roles a resource can play within a set of linked resources</td>
+    <td>.1.113883.4.642.1.525</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-list-empty-reason.html">list-empty-reason</a></td>
+    <td>List Empty Reasons: General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).</td>
+    <td>.1.113883.4.642.1.176</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-list-example-codes.html">list-example-use-codes</a></td>
+    <td>Example Use Codes for List: Example use codes for the List resource - typical kinds of use.</td>
+    <td>.1.113883.4.642.1.173</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-list-mode.html">list-mode</a></td>
+    <td>ListMode: The processing mode that applies to this list</td>
+    <td>.1.113883.4.642.1.174</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-list-order.html">list-order</a></td>
+    <td>List Order Codes: Base values for the order of the items in a list resource.</td>
+    <td>.1.113883.4.642.1.177</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-list-status.html">list-status</a></td>
+    <td>ListStatus: The current state of the list</td>
+    <td>.1.113883.4.642.1.178</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-location-mode.html">location-mode</a></td>
+    <td>LocationMode: Indicates whether a resource instance represents a specific location or a class of locations.</td>
+    <td>.1.113883.4.642.1.181</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-location-physical-type.html">location-physical-type</a></td>
+    <td>LocationType: This example value set defines a set of codes that can be used to indicate the physical form of the Location.</td>
+    <td>.1.113883.4.642.1.179</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-location-status.html">location-status</a></td>
+    <td>LocationStatus: Indicates whether the location is still in use.</td>
+    <td>.1.113883.4.642.1.182</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-map-context-type.html">map-context-type</a></td>
+    <td>StructureMapContextType: How to interpret the context</td>
+    <td>.1.113883.4.642.1.536</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-map-input-mode.html">map-input-mode</a></td>
+    <td>StructureMapInputMode: Mode for this instance of data</td>
+    <td>.1.113883.4.642.1.535</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-map-list-mode.html">map-list-mode</a></td>
+    <td>StructureMapListMode: If field is a list, how to manage the list</td>
+    <td>.1.113883.4.642.1.538</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-map-model-mode.html">map-model-mode</a></td>
+    <td>StructureMapModelMode: How the referenced structure is used in this mapping</td>
+    <td>.1.113883.4.642.1.534</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-map-transform.html">map-transform</a></td>
+    <td>StructureMapTransform: How data is copied / created</td>
+    <td>.1.113883.4.642.1.537</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-marital-status.html">marital-status</a></td>
+    <td>Marital Status Codes: This value set defines the set of codes that can be used to indicate the marital status of a person.</td>
+    <td>.1.113883.4.642.1.marital-status</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-match-grade.html">match-grade</a></td>
+    <td>MatchGrade: A Master Patient Index (MPI) assessment of whether a candidate patient record is a match or not.</td>
+    <td>.1.113883.4.642.1.563</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measure-data-usage.html">measure-data-usage</a></td>
+    <td>MeasureDataUsage: The intended usage for supplemental data elements in the measure</td>
+    <td>.1.113883.4.642.1.905</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measure-population.html">measure-population</a></td>
+    <td>MeasurePopulationType: The type of population</td>
+    <td>.1.113883.4.642.1.508</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measure-report-status.html">measure-report-status</a></td>
+    <td>MeasureReportStatus: The status of the measure report</td>
+    <td>.1.113883.4.642.1.541</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measure-report-type.html">measure-report-type</a></td>
+    <td>MeasureReportType: The type of the measure report</td>
+    <td>.1.113883.4.642.1.559</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measure-scoring.html">measure-scoring</a></td>
+    <td>MeasureScoring: The scoring type of the measure</td>
+    <td>.1.113883.4.642.1.539</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measure-type.html">measure-type</a></td>
+    <td>MeasureType: The type of measure</td>
+    <td>.1.113883.4.642.1.540</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-measurement-principle.html">measurement-principle</a></td>
+    <td>Measmnt-Principle: Different measurement principle supported by the device.</td>
+    <td>.1.113883.4.642.1.331</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-digital-media-subtype.html">media-subtype</a></td>
+    <td>Media SubType: Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.</td>
+    <td>.1.113883.4.642.1.184</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-admin-status.html">medication-admin-status</a></td>
+    <td>MedicationAdministrationStatus: A set of codes indicating the current status of a MedicationAdministration.</td>
+    <td>.1.113883.4.642.1.186</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-dispense-status.html">medication-dispense-status</a></td>
+    <td>MedicationDispenseStatus: A coded concept specifying the state of the dispense event.</td>
+    <td>.1.113883.4.642.1.192</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-request-category.html">medication-request-category</a></td>
+    <td>MedicationRequestCategory: A coded concept identifying where the medication ordered is expected to be consumed or administered</td>
+    <td>.1.113883.4.642.1.951</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-request-status.html">medication-request-status</a></td>
+    <td>MedicationRequestStatus: A coded concept specifying the state of the prescribing event. Describes the lifecycle of the prescription</td>
+    <td>.1.113883.4.642.1.196</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-statement-category.html">medication-statement-category</a></td>
+    <td>MedicationStatementCategory: A coded concept identifying where the medication included in the is expected to be consumed or administered</td>
+    <td>.1.113883.4.642.1.952</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-statement-nottaken.html">medication-statement-nottaken</a></td>
+    <td>MedicationStatementNotTaken: A coded concept identifying level of certainty if patient has taken or has not taken the medication</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-medication-statement-status.html">medication-statement-status</a></td>
+    <td>MedicationStatementStatus: A coded concept indicating the current status of a MedicationStatement.</td>
+    <td>.1.113883.4.642.1.197</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-message-events.html">message-events</a></td>
+    <td>MessageEvent: One of the message events defined as part of FHIR.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-message-reason-encounter.html">message-reasons-encounter</a></td>
+    <td>Example Message Reason Codes: Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.</td>
+    <td>.1.113883.4.642.1.202</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-message-significance-category.html">message-significance-category</a></td>
+    <td>MessageSignificanceCategory: The impact of the content of a message.</td>
+    <td>.1.113883.4.642.1.88</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-message-transport.html">message-transport</a></td>
+    <td>MessageTransport: The protocol used for message transport.</td>
+    <td>.1.113883.4.642.1.86</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-metric-calibration-state.html">metric-calibration-state</a></td>
+    <td>DeviceMetricCalibrationState: Describes the state of a metric calibration.</td>
+    <td>.1.113883.4.642.1.340</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-metric-calibration-type.html">metric-calibration-type</a></td>
+    <td>DeviceMetricCalibrationType: Describes the type of a metric calibration.</td>
+    <td>.1.113883.4.642.1.339</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-metric-category.html">metric-category</a></td>
+    <td>DeviceMetricCategory: Describes the category of the metric.</td>
+    <td>.1.113883.4.642.1.338</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-metric-color.html">metric-color</a></td>
+    <td>DeviceMetricColor: Describes the typical color of representation.</td>
+    <td>.1.113883.4.642.1.341</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-metric-operational-status.html">metric-operational-status</a></td>
+    <td>DeviceMetricOperationalStatus: Describes the operational status of the DeviceMetric.</td>
+    <td>.1.113883.4.642.1.337</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-missing-tooth-reason.html">missingtoothreason</a></td>
+    <td>Missing Tooth Reason Codes: This value set includes sample Missing Tooth Reason codes.</td>
+    <td>.1.113883.4.642.1.893</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-claim-modifiers.html">modifiers</a></td>
+    <td>Modifier type Codes: This value set includes sample Modifier type codes.</td>
+    <td>.1.113883.4.642.1.311</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-name-use.html">name-use</a></td>
+    <td>NameUse: The use of a human name</td>
+    <td>.1.113883.4.642.1.36</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-namingsystem-identifier-type.html">namingsystem-identifier-type</a></td>
+    <td>NamingSystemIdentifierType: Identifies the style of unique identifier used to identify a namespace.</td>
+    <td>.1.113883.4.642.1.293</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-namingsystem-type.html">namingsystem-type</a></td>
+    <td>NamingSystemType: Identifies the purpose of the naming system.</td>
+    <td>.1.113883.4.642.1.290</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-narrative-status.html">narrative-status</a></td>
+    <td>NarrativeStatus: The status of a resource narrative</td>
+    <td>.1.113883.4.642.1.32</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-network-type.html">network-type</a></td>
+    <td>AuditEventAgentNetworkType: The type of network access point of this agent in the audit event</td>
+    <td>.1.113883.4.642.1.955</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-note-type.html">note-type</a></td>
+    <td>NoteType: The presentation types of notes.</td>
+    <td>.1.113883.4.642.1.note-type</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-nutrition-request-status.html">nutrition-request-status</a></td>
+    <td>NutritionOrderStatus: Codes specifying the state of the request. Describes the lifecycle of the nutrition order.</td>
+    <td>.1.113883.4.642.1.204</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-object-lifecycle.html">object-lifecycle</a></td>
+    <td>AuditEventEntityLifecycle: Identifier for the data life-cycle stage for the entity.</td>
+    <td>.1.113883.4.642.1.958</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-object-role.html">object-role</a></td>
+    <td>AuditEventEntityRole: Code representing the role the entity played in the event.</td>
+    <td>.1.113883.4.642.1.957</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-object-type.html">object-type</a></td>
+    <td>AuditEventEntityType: Code for the entity type involved audited.</td>
+    <td>.1.113883.4.642.1.956</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-observation-category.html">observation-category</a></td>
+    <td>Observation Category Codes: Observation Category codes.</td>
+    <td>.1.113883.4.642.1.222</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-observation-paramcode.html">observation-paramcode</a></td>
+    <td>ParamCode: The statistical operation parameter -&quot;params&quot; -  codes</td>
+    <td>.1.113883.4.642.1.877</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-observation-relationshiptypes.html">observation-relationshiptypes</a></td>
+    <td>ObservationRelationshipType: Codes specifying how two observations are related.</td>
+    <td>.1.113883.4.642.1.220</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-observation-status.html">observation-status</a></td>
+    <td>ObservationStatus: Codes providing the status of an observation.</td>
+    <td>.1.113883.4.642.1.219</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-operation-kind.html">operation-kind</a></td>
+    <td>OperationKind: Whether an operation is a normal operation or a query.</td>
+    <td>.1.113883.4.642.1.297</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-operation-outcome.html">operation-outcome</a></td>
+    <td>Operation Outcome Codes: Operation Outcome codes used by FHIR test servers (see Implementation file translations.xml)</td>
+    <td>.1.113883.4.642.1.225</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-operation-parameter-use.html">operation-parameter-use</a></td>
+    <td>OperationParameterUse: Whether an operation parameter is an input or an output parameter.</td>
+    <td>.1.113883.4.642.1.298</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-organization-type.html">organization-type</a></td>
+    <td>OrganizationType: This example value set defines a set of codes that can be used to indicate a type of organization.</td>
+    <td>.1.113883.4.642.1.228</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-encounter-participant-type.html">participant-type</a></td>
+    <td>ParticipantType: This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.</td>
+    <td>.1.113883.4.642.1.139</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-participantrequired.html">participantrequired</a></td>
+    <td>ParticipantRequired: Is the Participant required to attend the appointment.</td>
+    <td>.1.113883.4.642.1.286</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-participationstatus.html">participationstatus</a></td>
+    <td>ParticipationStatus: The Participation status of an appointment.</td>
+    <td>.1.113883.4.642.1.285</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-patient-mpi-match.html">patient-mpi-match</a></td>
+    <td>MPIMatch: A Master Patient Index (MPI) assessment of whether a candidate patient record is a match or not.</td>
+    <td>.1.113883.4.642.1.434</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-payeetype.html">payeetype</a></td>
+    <td>Payee Type Codes: This value set includes sample Payee Type codes.</td>
+    <td>.1.113883.4.642.1.payeetype</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-payment-adjustment-reason.html">payment-adjustment-reason</a></td>
+    <td>Payment Adjustment Reason Codes: This value set includes smattering of Payment Adjustment Reason codes.</td>
+    <td>.1.113883.4.642.1.480</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-payment-type.html">payment-type</a></td>
+    <td>Payment Type Codes: This value set includes sample Payment Type codes.</td>
+    <td>.1.113883.4.642.1.333</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-paymentnotice-status.html">paymentnotice-status</a></td>
+    <td>PaymentNoticeStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.970</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-paymentreconciliation-status.html">paymentreconciliation-status</a></td>
+    <td>PaymentReconciliationStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.969</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-payment-status.html">paymentstatus</a></td>
+    <td>Payment Status Codes: This value set includes a sample set of Payment Status codes.</td>
+    <td>.1.113883.4.642.1.334</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-plan-definition-type.html">plan-definition-type</a></td>
+    <td>PlanDefinitionType: The type of PlanDefinition</td>
+    <td>.1.113883.4.642.1.987</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-policyholder-relationship.html">policyholder-relationship</a></td>
+    <td>Policyholder Relationship Codes: This value set includes codes for the relationship between the Policyholder and the Beneficiary (insured/covered party/patient)..</td>
+    <td>.1.113883.4.642.1.23</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-practitioner-role.html">practitioner-role</a></td>
+    <td>PractitionerRole: This example value set defines a set of codes that can be used to indicate the role of a Practitioner.</td>
+    <td>.1.113883.4.642.1.251</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-practitioner-specialty.html">practitioner-specialty</a></td>
+    <td>PractitionerSpecialty: This example value set defines a set of codes that can be used to indicate the specialty of a Practitioner.</td>
+    <td>.1.113883.4.642.1.252</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-procedure-progress-status-codes.html">procedure-progress-status-code</a></td>
+    <td>Procedure Progress Status Codes: This value set is provided as an exemplar. The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the procedure performance process.</td>
+    <td>.1.113883.4.642.1.430</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-procedure-relationship-type.html">procedure-relationship-type</a></td>
+    <td>ProcedureRelationshipType: The nature of the relationship with this procedure.</td>
+    <td>.1.113883.4.642.1.235</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-procedure-request-priority.html">procedure-request-priority</a></td>
+    <td>ProcedureRequestPriority: The priority of the request.</td>
+    <td>.1.113883.4.642.1.243</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-procedure-request-status.html">procedure-request-status</a></td>
+    <td>ProcedureRequestStatus: The status of the request.</td>
+    <td>.1.113883.4.642.1.242</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-procedure-status.html">procedure-status</a></td>
+    <td>ProcedureStatus: A code specifying the state of the procedure.</td>
+    <td>.1.113883.4.642.1.237</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-process-outcome.html">processoutcomecodes</a></td>
+    <td>Process Outcome Codes: This value set includes sample Process Outcome codes.</td>
+    <td>.1.113883.4.642.1.352</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-process-priority.html">processpriority</a></td>
+    <td>Priority Codes: This value set includes the financial processing priority codes.</td>
+    <td>.1.113883.4.642.1.319</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-processrequest-status.html">processrequest-status</a></td>
+    <td>ProcessRequestStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.971</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-processresponse-status.html">processresponse-status</a></td>
+    <td>ProcessResponseStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.972</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-property-representation.html">property-representation</a></td>
+    <td>PropertyRepresentation: How a property is represented on the wire.</td>
+    <td>.1.113883.4.642.1.47</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-provenance-entity-role.html">provenance-entity-role</a></td>
+    <td>ProvenanceEntityRole: How an entity was used in an activity.</td>
+    <td>.1.113883.4.642.1.247</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-provenance-agent-role.html">provenance-participant-role</a></td>
+    <td>ProvenanceParticipantRole: The role that a provenance participant played</td>
+    <td>.1.113883.4.642.1.245</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-provenance-agent-type.html">provenance-participant-type</a></td>
+    <td>ProvenanceParticipantType: The type of a provenance participant. Use either a defined FHIR resource type, or, if the reference is not to a resource, one of the defined codes, or some other code if none of the defined codes are appropriate.</td>
+    <td>.1.113883.4.642.1.246</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-publication-status.html">publication-status</a></td>
+    <td>PublicationStatus: The lifecycle status of a Value Set or Concept Map.</td>
+    <td>.1.113883.4.642.1.publication-status</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-quantity-comparator.html">quantity-comparator</a></td>
+    <td>QuantityComparator: How the Quantity should be understood and represented.</td>
+    <td>.1.113883.4.642.1.34</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-question-max-occurs.html">question-max-occurs</a></td>
+    <td>MaxOccurs: Flags an element as having unlimited repetitions</td>
+    <td>.1.113883.4.642.1.380</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-questionnaire-answers-status.html">questionnaire-answers-status</a></td>
+    <td>QuestionnaireResponseStatus: Lifecycle status of the questionnaire response.</td>
+    <td>.1.113883.4.642.1.258</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-questionnaire-display-category.html">questionnaire-display-category</a></td>
+    <td>Questionnaire Text Categories: Codes defining the purpose of a Questionnaire item of type 'text'.</td>
+    <td>.1.113883.4.642.1.510</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-questionnaire-item-control.html">questionnaire-item-control</a></td>
+    <td>Questionnaire Item UI Control Codes: Starter set of user interface control/display mechanisms that might be used when rendering an item in a questionnaire.</td>
+    <td>.1.113883.4.642.1.509</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-questionnaire-status.html">questionnaire-status</a></td>
+    <td>QuestionnaireStatus: Lifecycle status of the questionnaire.</td>
+    <td>.1.113883.4.642.1.256</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-questionnaire-usage-mode.html">questionnaire-usage-mode</a></td>
+    <td>QuestionnaireItemUsageMode: Identifies the modes of usage of a questionnaire that should enable a particular questionnaire item</td>
+    <td>.1.113883.4.642.1.998</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-reaction-event-certainty.html">reaction-event-certainty</a></td>
+    <td>AllergyIntoleranceCertainty: Statement about the degree of clinical certainty that a specific substance was the cause of the manifestation in an reaction event.</td>
+    <td>.1.113883.4.642.1.54</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-reaction-event-severity.html">reaction-event-severity</a></td>
+    <td>AllergyIntoleranceSeverity: Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.</td>
+    <td>.1.113883.4.642.1.56</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-reason-medication-given-codes.html">reason-medication-given</a></td>
+    <td>Reason Medication Given Codes: This value set is provided as an exemplar. The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the medication process.</td>
+    <td>.1.113883.4.642.1.188</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-reason-medication-not-given-codes.html">reason-medication-not-given</a></td>
+    <td>SNOMED CT Reason Medication Not Given Codes: This value set includes all medication refused, medication not administered, and non administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar value set.</td>
+    <td>.1.113883.4.642.1.187</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-cqif-recommendation-strength.html">recommendation-strength</a></td>
+    <td>StrengthOfRecommendationRating: A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems</td>
+    <td>.1.113883.4.642.1.1002</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-reference-handling-policy.html">reference-handling-policy</a></td>
+    <td>ReferenceHandlingPolicy: A set of flags that defines how references are supported</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-reference-version-rules.html">reference-version-rules</a></td>
+    <td>ReferenceVersionRules: Whether a reference needs to be version specific or version independent, or whetehr either can be used</td>
+    <td>.1.113883.4.642.1.869</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-referencerange-meaning.html">referencerange-meaning</a></td>
+    <td>Observation Reference Range Meaning Codes: This value set defines a set of codes that can be used to indicate the meaning/use of a reference range.</td>
+    <td>.1.113883.4.642.1.217</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-referralcategory.html">referralcategory</a></td>
+    <td>ReferralCategory: Identifies the degree of intention/authorization associated with the request</td>
+    <td>.1.113883.4.642.1.885</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-referralstatus.html">referralstatus</a></td>
+    <td>ReferralStatus: The status of the referral.</td>
+    <td>.1.113883.4.642.1.300</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-related-artifact-type.html">related-artifact-type</a></td>
+    <td>RelatedArtifactType: The type of relationship to the related artifact</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-relationship.html">relationship</a></td>
+    <td>Beneficiary Relationship Codes: This value set includes the Patient to subscriber relationship codes.</td>
+    <td>.1.113883.4.642.1.relationship</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-remittance-outcome.html">remittance-outcome</a></td>
+    <td>Claim Processing Codes: This value set includes a Claim Processing Outcome codes.</td>
+    <td>.1.113883.4.642.1.7</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-report-participant-type.html">report-participant-type</a></td>
+    <td>TestReportParticipantType: The type of participant.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-report-result-codes.html">report-result-codes</a></td>
+    <td>TestReportResultCodes: The results of executing an action.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-report-status-codes.html">report-status-codes</a></td>
+    <td>TestReportStatus: The execution status of the TestReport.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-request-priority.html">request-priority</a></td>
+    <td>RequestPriority: The clinical priority of an order.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-request-stage.html">request-stage</a></td>
+    <td>RequestStage: The kind of request.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-request-status.html">request-status</a></td>
+    <td>RequestStatus: The status of a request</td>
+    <td>.1.113883.4.642.1.944</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-resource-aggregation-mode.html">resource-aggregation-mode</a></td>
+    <td>AggregationMode: How resource references can be aggregated.</td>
+    <td>.1.113883.4.642.1.46</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-resource-slicing-rules.html">resource-slicing-rules</a></td>
+    <td>SlicingRules: How slices are interpreted when evaluating an instance.</td>
+    <td>.1.113883.4.642.1.45</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-resource-type-link.html">resource-type-link</a></td>
+    <td>PayeeResourceType: The type of payee Resource</td>
+    <td>.1.113883.4.642.1.891</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-resource-types.html">resource-types</a></td>
+    <td>ResourceType: One of the resource types defined as part of FHIR.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-resource-validation-mode.html">resource-validation-mode</a></td>
+    <td>ResourceValidationMode: Codes indicating the type of validation to perform</td>
+    <td>.1.113883.4.642.1.48</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-response-code.html">response-code</a></td>
+    <td>ResponseType: The kind of response to a message</td>
+    <td>.1.113883.4.642.1.203</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-restful-capability-mode.html">restful-capability-mode</a></td>
+    <td>RestfulCapabilityMode: The mode of a RESTful capability statement.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-restful-interaction.html">restful-interaction</a></td>
+    <td>FHIR Restful Interactions: The set of interactions defined by the RESTful part of the FHIR specification.</td>
+    <td/>
+  </tr>
+  <tr>
+    <td><a href="codesystem-restful-security-service.html">restful-security-service</a></td>
+    <td>RestfulSecurityService: Types of security services used with FHIR.</td>
+    <td>.1.113883.4.642.1.82</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-risk-probability.html">risk-probability</a></td>
+    <td>Risk Probability: Codes representing the likelihood of a particular outcome in a risk assessment.</td>
+    <td>.1.113883.4.642.1.262</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-ruleset.html">ruleset</a></td>
+    <td>Ruleset Codes: This value set includes sample ruleset codes.</td>
+    <td>.1.113883.4.642.1.ruleset</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-search-entry-mode.html">search-entry-mode</a></td>
+    <td>SearchEntryMode: Why an entry is in the result set - whether it's included as a match or because of an _include requirement.</td>
+    <td>.1.113883.4.642.1.328</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-search-modifier-code.html">search-modifier-code</a></td>
+    <td>SearchModifierCode: A supported modifier for a search parameter.</td>
+    <td>.1.113883.4.642.1.92</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-search-param-type.html">search-param-type</a></td>
+    <td>SearchParamType: Data types allowed to be used for search parameters.</td>
+    <td>.1.113883.4.642.1.search-param-type</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-search-xpath-usage.html">search-xpath-usage</a></td>
+    <td>XPathUsageType: How a search parameter relates to the set of elements returned by evaluating its xpath query.</td>
+    <td>.1.113883.4.642.1.332</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-audit-source-type.html">security-source-type</a></td>
+    <td>Audit Event Source Type: The type of process where the audit event originated from.</td>
+    <td>.1.113883.4.642.1.272</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-sequence-type.html">sequence-type</a></td>
+    <td>sequenceType: Type if a sequence -- DNA, RNA, or amino acid sequence</td>
+    <td>.1.113883.4.642.1.473</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-category.html">service-category</a></td>
+    <td>ServiceCategory: This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.</td>
+    <td>.1.113883.4.642.1.879</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-provision-conditions.html">service-provision-conditions</a></td>
+    <td>ServiceProvisionConditions: The code(s) that detail the conditions under which the healthcare service is available/offered.</td>
+    <td>.1.113883.4.642.1.303</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-referral-method.html">service-referral-method</a></td>
+    <td>ReferralMethod: The methods of referral can be used when referring to a specific HealthCareService resource.</td>
+    <td>.1.113883.4.642.1.301</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-service-type.html">service-type</a></td>
+    <td>ServiceType: This value set defines an example set of codes of service-types.</td>
+    <td>.1.113883.4.642.1.880</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-icd-10-procedures.html">sid/ex-icd-10-procedures</a></td>
+    <td>ICD-10 Procedure Codes: This value set includes sample ICD-10 Procedure codes.</td>
+    <td>.1.113883.4.642.1.533</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-slotstatus.html">slotstatus</a></td>
+    <td>SlotStatus: The free/busy status of the slot.</td>
+    <td>.1.113883.4.642.1.283</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-special-values.html">special-values</a></td>
+    <td>SpecialValues: A set of generally useful codes defined so they can be included in value sets.</td>
+    <td>.1.113883.4.642.1.special-values</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-specimen-status.html">specimen-status</a></td>
+    <td>SpecimenStatus: Codes providing the status/availability of a specimen.</td>
+    <td>.1.113883.4.642.1.426</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-structure-definition-kind.html">structure-definition-kind</a></td>
+    <td>StructureDefinitionKind: Defines the type of structure that a definition is describing.</td>
+    <td>.1.113883.4.642.1.348</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-subscription-channel-type.html">subscription-channel-type</a></td>
+    <td>SubscriptionChannelType: The type of method used to execute a subscription.</td>
+    <td>.1.113883.4.642.1.294</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-subscription-status.html">subscription-status</a></td>
+    <td>SubscriptionStatus: The status of a subscription.</td>
+    <td>.1.113883.4.642.1.295</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-subscription-tag.html">subscription-tag</a></td>
+    <td>SubscriptionTag: Tags to put on a resource after subscriptions have been sent.</td>
+    <td>.1.113883.4.642.1.296</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-substance-category.html">substance-category</a></td>
+    <td>Substance Category Codes: Substance category codes</td>
+    <td>.1.113883.4.642.1.279</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-supplydelivery-type.html">supply-item-type</a></td>
+    <td>Supply Item Type: This value sets refers to a specific supply item.</td>
+    <td>.1.113883.4.642.1.356</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-supplyrequest-kind.html">supply-kind</a></td>
+    <td>Supply Type: This value sets refers to a Category of supply.</td>
+    <td>.1.113883.4.642.1.353</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-supplydelivery-status.html">supplydelivery-status</a></td>
+    <td>SupplyDeliveryStatus: Status of the supply delivery.</td>
+    <td>.1.113883.4.642.1.355</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-supplyrequest-reason.html">supplyrequest-reason</a></td>
+    <td>SupplyRequestReason: Why the supply item was requested</td>
+    <td>.1.113883.4.642.1.464</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-supplyrequest-status.html">supplyrequest-status</a></td>
+    <td>SupplyRequestStatus: Status of the supply request</td>
+    <td>.1.113883.4.642.1.354</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-system-version-processing-mode.html">system-version-processing-mode</a></td>
+    <td>SystemVersionProcessingMode: How to manage the intersection between a fixed version in a value set, and a fixed version of the system in the expansion profile</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-task-performer-type.html">task-performer-type</a></td>
+    <td>TaskPerformerType: The type(s) of task performers allowed</td>
+    <td>.1.113883.4.642.1.560</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-task-priority.html">task-priority</a></td>
+    <td>TaskPriority: The task's priority</td>
+    <td>.1.113883.4.642.1.561</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-task-stage.html">task-stage</a></td>
+    <td>Task Stage Codes: Task Stage codes.</td>
+    <td>.1.113883.4.642.1.908</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-task-status.html">task-status</a></td>
+    <td>TaskStatus: The current status of the task.</td>
+    <td>.1.113883.4.642.1.562</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-testscript-operation-codes.html">testscript-operation-codes</a></td>
+    <td>TestScriptOperationCode: This value set defines a set of codes that are used to indicate the supported operations of a testing engine or tool.</td>
+    <td>.1.113883.4.642.1.898</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-testscript-profile-destination-types.html">testscript-profile-destination-types</a></td>
+    <td>TestScriptProfileDestinationType: This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the destination within a TestScript.</td>
+    <td>.1.113883.4.642.1.558</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-testscript-profile-origin-types.html">testscript-profile-origin-types</a></td>
+    <td>TestScriptProfileOriginType: This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the origin within a TestScript.</td>
+    <td>.1.113883.4.642.1.557</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-transaction-mode.html">transaction-mode</a></td>
+    <td>TransactionMode: A code that indicates how transactions are supported.</td>
+    <td>.1.113883.4.642.1.90</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-cqif-trigger-type.html">trigger-type</a></td>
+    <td>TriggerType: The type of trigger</td>
+    <td>.1.113883.4.642.1.522</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-type-derivation-rule.html">type-derivation-rule</a></td>
+    <td>TypeDerivationRule: How a type relates to it's baseDefinition.</td>
+    <td>.1.113883.4.642.1.895</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-unknown-content-code.html">unknown-content-code</a></td>
+    <td>UnknownContentCode: A code that indicates whether an application accepts unknown elements or extensions when reading resources.</td>
+    <td>.1.113883.4.642.1.93</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-usage-context-type.html">usage-context-type</a></td>
+    <td>UsageContextType: A code the specifies a type of context being specified by a usage context</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-vaccination-protocol-dose-status.html">vaccination-protocol-dose-status</a></td>
+    <td>Vaccination Protocol Dose Status codes: The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the medication process, in particular the process and reasons for dispensing. This value set is provided as a suggestive example.</td>
+    <td>.1.113883.4.642.1.166</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-vaccination-protocol-dose-status-reason.html">vaccination-protocol-dose-status-reason</a></td>
+    <td>Vaccination Protocol Dose Status Reason codes: The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the medication process, in particular the process and reasons for dispensing. This value set is provided as a suggestive example.</td>
+    <td>.1.113883.4.642.1.167</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-variant-state.html">variant-state</a></td>
+    <td>sequenceStatus: Codes providing the status of the variant test result</td>
+    <td>.1.113883.4.642.1.471</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-versioning-policy.html">versioning-policy</a></td>
+    <td>ResourceVersionPolicy: How the system supports versioning for a resource.</td>
+    <td>.1.113883.4.642.1.89</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-vision-base-codes.html">vision-base-codes</a></td>
+    <td>VisionBase: A coded concept listing the base codes.</td>
+    <td>.1.113883.4.642.1.345</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-vision-eye-codes.html">vision-eye-codes</a></td>
+    <td>VisionEyes: A coded concept listing the eye codes.</td>
+    <td>.1.113883.4.642.1.344</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-vision-status.html">vision-status</a></td>
+    <td>VisionStatus: A code specifying the state of the resource instance.</td>
+    <td>.1.113883.4.642.1.0</td>
+  </tr>
+  <tr>
+    <td><a href="codesystem-xds-relationship-type.html">xds-relationship-type</a></td>
+    <td>XDSRelationshipType: The kind of relationship between two XDS documents.</td>
+    <td>.1.113883.4.642.1.383</td>
+  </tr>
+
+
+</table>
+
+  
+  </div>
+  <div id="tabs-v3">
+  
+<table class="grid">
+ <tr><td><b>Name (URI = http://hl7.org/fhir/v3/...)</b></td><td><b>Description</b></td><td><b>OID</b></td></tr>
+ <tr><td><a href="v3/AcknowledgementCondition/cs.html">AcknowledgementCondition</a></td><td> The codes identify the conditions under which accept acknowledgements are required to be returned in response to this message. Note that accept acknowledgement address two different issues at the same time: reliable transport as well as syntactical correctness</td><td>.1.113883.5.1050</td></tr>
+ <tr><td><a href="v3/AcknowledgementDetailCode/cs.html">AcknowledgementDetailCode</a></td><td>  OpenIssue:
+Missing description.</td><td>.1.113883.5.1100</td></tr>
+ <tr><td><a href="v3/AcknowledgementDetailType/cs.html">AcknowledgementDetailType</a></td><td> A code identifying the specific message to be provided.  Discussion:
+A textual value may be specified as the print name, or for non-coded messages, as the original text.  Examples:
+'Required attribute xxx is missing', 'System will be unavailable March 19 from 0100 to 0300'</td><td>.1.113883.5.1082</td></tr>
+ <tr><td><a href="v3/AcknowledgementType/cs.html">AcknowledgementType</a></td><td> This attribute contains an acknowledgement code as described in the HL7 message processing rules.  OpenIssue:
+Description was copied from attribute and needs to be improved to be appropriate for a code system.</td><td>.1.113883.5.18</td></tr>
+ <tr><td><a href="v3/ActClass/cs.html">ActClass</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.6</td></tr>
+ <tr><td><a href="v3/ActCode/cs.html">ActCode</a></td><td> A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:
+The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code &quot;potassium&quot; together with and Act.classCode for &quot;laboratory observation&quot; to somehow mean &quot;potassium laboratory observation&quot; and then use the same Act.code for &quot;potassium&quot; together with Act.classCode for &quot;medication&quot; to mean &quot;substitution of potassium&quot;. This mutually modifying use of Act.code and Act.classCode is not permitted.</td><td>.1.113883.5.4</td></tr>
+ <tr><td><a href="v3/ActExposureLevelCode/cs.html">ActExposureLevelCode</a></td><td> A qualitative measure of the degree of exposure to the causative agent.  This includes concepts such as &quot;low&quot;, &quot;medium&quot; and &quot;high&quot;.  This quantifies how the quantity that was available to be administered to the target differs from typical or background levels of the substance.</td><td>.1.113883.5.1114</td></tr>
+ <tr><td><a href="v3/ActInvoiceElementModifier/cs.html">ActInvoiceElementModifier</a></td><td> Processing consideration and clarification codes.</td><td>.1.113883.5.1051</td></tr>
+ <tr><td><a href="v3/ActMood/cs.html">ActMood</a></td><td> OpenIssue:  In Ballot 2009May, a strong Negative vote was lodged against several of the concept definitions in the vocabulary used for Act.moodCode. The vote was found &quot;Persuasive With Mod&quot;, with the understanding that M and M would undertake a detailed review of these concept definitions for a future release of the RIM.</td><td>.1.113883.5.1001</td></tr>
+ <tr><td><a href="v3/ActPriority/cs.html">ActPriority</a></td><td> A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.</td><td>.1.113883.5.7</td></tr>
+ <tr><td><a href="v3/ActReason/cs.html">ActReason</a></td><td> A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type &quot;has reason&quot; linking to another Act.  Examples:
+Example reasons that might qualify for being coded in this field might be: &quot;routine requirement&quot;, &quot;infectious disease reporting requirement&quot;, &quot;on patient request&quot;, &quot;required by law&quot;.</td><td>.1.113883.5.8</td></tr>
+ <tr><td><a href="v3/ActRelationshipCheckpoint/cs.html">ActRelationshipCheckpoint</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.10</td></tr>
+ <tr><td><a href="v3/ActRelationshipJoin/cs.html">ActRelationshipJoin</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.12</td></tr>
+ <tr><td><a href="v3/ActRelationshipSplit/cs.html">ActRelationshipSplit</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.13</td></tr>
+ <tr><td><a href="v3/ActRelationshipSubset/cs.html">ActRelationshipSubset</a></td><td> &lt;ns1:p&gt;Used to indicate that the target of the relationship will be a filtered subset of the total related set of targets.&lt;/ns1:p&gt;&lt;ns1:p&gt;Used when there is a need to limit the number of components to the first, the last, the next, the total, the average or some other filtered or calculated subset.&lt;/ns1:p&gt;</td><td>.1.113883.5.1099</td></tr>
+ <tr><td><a href="v3/ActRelationshipType/cs.html">ActRelationshipType</a></td><td> The source is an excerpt from the target.</td><td>.1.113883.5.1002</td></tr>
+ <tr><td><a href="v3/ActSite/cs.html">ActSite</a></td><td> An anatomical location on an organism which can be the focus of an act.</td><td>.1.113883.5.1052</td></tr>
+ <tr><td><a href="v3/ActStatus/cs.html">ActStatus</a></td><td> Codes representing the defined possible states of an Act, as defined by the Act class state machine.</td><td>.1.113883.5.14</td></tr>
+ <tr><td><a href="v3/ActUSPrivacyLaw/cs.html">ActUSPrivacyLaw</a></td><td> A jurisdictional mandate in the US relating to privacy.   Deprecation Comment:
+Content moved to ActCode under _ActPrivacyLaw; use that instead.</td><td>.1.113883.5.1138</td></tr>
+ <tr><td><a href="v3/ActUncertainty/cs.html">ActUncertainty</a></td><td>  OpenIssue:
+Missing Description</td><td>.1.113883.5.1053</td></tr>
+ <tr><td><a href="v3/AddressPartType/cs.html">AddressPartType</a></td><td>  Description:
+Code that specifies whether an address part names the street, city, country, postal code, post box, etc. Discussion: The hierarchical nature of these concepts shows composition.  E.g. &quot;Street Name&quot; is part of &quot;Street Address Line&quot;</td><td>.1.113883.5.16</td></tr>
+ <tr><td><a href="v3/AddressUse/cs.html">AddressUse</a></td><td> Codes that provide guidance around the circumstances in which a given address should be used.</td><td>.1.113883.5.1119</td></tr>
+ <tr><td><a href="v3/AdministrativeGender/cs.html">AdministrativeGender</a></td><td> The gender of a person used for adminstrative purposes (as opposed to clinical gender)</td><td>.1.113883.5.1</td></tr>
+ <tr><td><a href="v3/AmericanIndianAlaskaNativeLanguages/cs.html">AmericanIndianAlaskaNativeLanguages</a></td><td> American Indian and Alaska Native languages currently being used in the United States.</td><td>.1.113883.5.1054</td></tr>
+ <tr><td><a href="v3/Calendar/cs.html">Calendar</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1055</td></tr>
+ <tr><td><a href="v3/CalendarCycle/cs.html">CalendarCycle</a></td><td> Calendar cycle identifiers</td><td>.1.113883.5.9</td></tr>
+ <tr><td><a href="v3/CalendarType/cs.html">CalendarType</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1017</td></tr>
+ <tr><td><a href="v3/Charset/cs.html">Charset</a></td><td> Internet Assigned Numbers Authority (IANA) Charset Types</td><td>.1.113883.5.21</td></tr>
+ <tr><td><a href="v3/CodingRationale/cs.html">CodingRationale</a></td><td> Identifies how to interpret the instance of the code, codeSystem value in a set of translations.  Since HL7 (or a government body) may mandate that codes from certain code systems be sent in conformant messages, other synonyms that are sent in the translation set need to be distinguished among the originally captured source, the HL7 specified code, or some future role.  When this code is NULL, it indicates that the translation is an undefined type.  When valued, this property must contain one of the following values: SRC - Source (or original) code HL7 - HL7 Specified or Mandated SH - both HL7 mandated and the original code (precoordination) There may be additional values added to this value set as we work through the use of codes in messages and determine other Use Cases requiring special interpretation of the translations.</td><td>.1.113883.5.1074</td></tr>
+ <tr><td><a href="v3/CommunicationFunctionType/cs.html">CommunicationFunctionType</a></td><td> Describes the type of communication function that the associated entity plays in the associated transmission.</td><td>.1.113883.5.1056</td></tr>
+ <tr><td><a href="v3/CompressionAlgorithm/cs.html">CompressionAlgorithm</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1009</td></tr>
+ <tr><td><a href="v3/Confidentiality/cs.html">Confidentiality</a></td><td> A set of codes specifying the security classification of acts and roles in accordance with the definition for concept domain &quot;Confidentiality&quot;.</td><td>.1.113883.5.25</td></tr>
+ <tr><td><a href="v3/ContainerCap/cs.html">ContainerCap</a></td><td> The type of cap associated with a container</td><td>.1.113883.5.26</td></tr>
+ <tr><td><a href="v3/ContainerSeparator/cs.html">ContainerSeparator</a></td><td> A material in a blood collection container that facilites the separation of of blood cells from serum or plasma</td><td>.1.113883.5.27</td></tr>
+ <tr><td><a href="v3/ContentProcessingMode/cs.html">ContentProcessingMode</a></td><td>  Description:
+Identifies the order in which content should be processed.</td><td>.1.113883.5.1110</td></tr>
+ <tr><td><a href="v3/ContextControl/cs.html">ContextControl</a></td><td> A code that specifies how an ActRelationship or Participation contributes to the context of an Act, and whether it may be propagated to descendent Acts whose association allows such propagation (see also attributes Participation.contextControlCode, ActRelationship.contextControlCode, ActRelationship.contextConductionInd).</td><td>.1.113883.5.1057</td></tr>
+ <tr><td><a href="v3/DataOperation/cs.html">DataOperation</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1123</td></tr>
+ <tr><td><a href="v3/DeviceAlertLevel/cs.html">DeviceAlertLevel</a></td><td> Domain values for the Device.Alert_levelCode</td><td>.1.113883.5.31</td></tr>
+ <tr><td><a href="v3/DocumentCompletion/cs.html">DocumentCompletion</a></td><td> Identifies the current completion state of a clinical document.</td><td>.1.113883.5.33</td></tr>
+ <tr><td><a href="v3/DocumentStorage/cs.html">DocumentStorage</a></td><td> Identifies the storage status of a document.</td><td>.1.113883.5.34</td></tr>
+ <tr><td><a href="v3/EducationLevel/cs.html">EducationLevel</a></td><td> Years of education that a person has completed</td><td>.1.113883.5.1077</td></tr>
+ <tr><td><a href="v3/EmployeeJobClass/cs.html">EmployeeJobClass</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1059</td></tr>
+ <tr><td><a href="v3/EncounterAdmissionSource/cs.html">EncounterAdmissionSource</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.37</td></tr>
+ <tr><td><a href="v3/EncounterSpecialCourtesy/cs.html">EncounterSpecialCourtesy</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.40</td></tr>
+ <tr><td><a href="v3/EntityClass/cs.html">EntityClass</a></td><td> Classifies the Entity class and all of its subclasses.  The terminology is hierarchical.  At the top is this  HL7-defined domain of high-level categories (such as represented by the Entity subclasses). Each of these terms must be harmonized and is specializable. The value sets beneath are drawn from multiple, frequently external, domains that reflect much more fine-grained typing.</td><td>.1.113883.5.41</td></tr>
+ <tr><td><a href="v3/EntityCode/cs.html">EntityCode</a></td><td>  OpenIssue:
+Missing description.</td><td>.1.113883.5.1060</td></tr>
+ <tr><td><a href="v3/EntityDeterminer/cs.html">EntityDeterminer</a></td><td> EntityDeterminer in natural language grammar is the class of words that comprises articles, demonstrative pronouns, and quantifiers. In the RIM, determiner is a structural code in the Entity class to distinguish whether any given Entity object stands for some, any one, or a specific thing.</td><td>.1.113883.5.30</td></tr>
+ <tr><td><a href="v3/EntityHandling/cs.html">EntityHandling</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.42</td></tr>
+ <tr><td><a href="v3/EntityNamePartQualifier/cs.html">EntityNamePartQualifier</a></td><td>  OpenIssue:
+Needs description</td><td>.1.113883.5.43</td></tr>
+ <tr><td><a href="v3/EntityNamePartQualifierR2/cs.html">EntityNamePartQualifierR2</a></td><td>  Description:
+The qualifier is a set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type. For example, a given name may be flagged as a nickname, a family name may be a pseudonym or a name of public records.</td><td>.1.113883.5.1122</td></tr>
+ <tr><td><a href="v3/EntityNamePartType/cs.html">EntityNamePartType</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.44</td></tr>
+ <tr><td><a href="v3/EntityNamePartTypeR2/cs.html">EntityNamePartTypeR2</a></td><td>  Description:
+Indicates whether the name part is a given name, family name, prefix, suffix, etc.</td><td>.1.113883.5.1121</td></tr>
+ <tr><td><a href="v3/EntityNameUse/cs.html">EntityNameUse</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.45</td></tr>
+ <tr><td><a href="v3/EntityNameUseR2/cs.html">EntityNameUseR2</a></td><td>  Description:
+A set of codes advising a system or user which name in a set of names to select for a given purpose.</td><td>.1.113883.5.1120</td></tr>
+ <tr><td><a href="v3/EntityRisk/cs.html">EntityRisk</a></td><td> Kinds of risks associated with the handling of the material..</td><td>.1.113883.5.46</td></tr>
+ <tr><td><a href="v3/EntityStatus/cs.html">EntityStatus</a></td><td> Codes representing the defined possible states of an Entity, as defined by the Entity class state machine.</td><td>.1.113883.5.1061</td></tr>
+ <tr><td><a href="v3/EquipmentAlertLevel/cs.html">EquipmentAlertLevel</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.49</td></tr>
+ <tr><td><a href="v3/Ethnicity/cs.html">Ethnicity</a></td><td> In the United States, federal standards for classifying data on ethnicity determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define ethnicity, and they recognize the absence of an anthropological or scientific basis for ethnicity classification.  Instead, the federal standards acknowledge that ethnicity is a social-political construct in which an individual's own identification with a particular ethnicity is preferred to observer identification.  The standards specify two minimum ethnicity categories: Hispanic or Latino, and Not Hispanic or Latino.  The standards define a Hispanic or Latino as a person of &quot;Mexican, Puerto Rican, Cuban, South or Central America, or other Spanish culture or origin, regardless of race.&quot; The standards stipulate that ethnicity data need not be limited to the two minimum categories, but any expansion must be collapsible to those categories.  In addition, the standards stipulate that an individual can be Hispanic or Latino or can be Not Hispanic or Latino, but cannot be both.</td><td>.1.113883.5.50</td></tr>
+ <tr><td><a href="v3/ExposureMode/cs.html">ExposureMode</a></td><td> Code for the mechanism by which the exposure agent was exchanged or potentially exchanged by the participants involved in the exposure.</td><td>.1.113883.5.1113</td></tr>
+ <tr><td><a href="v3/GTSAbbreviation/cs.html">GTSAbbreviation</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1022</td></tr>
+ <tr><td><a href="v3/GenderStatus/cs.html">GenderStatus</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.51</td></tr>
+ <tr><td><a href="v3/HL7UpdateMode/cs.html">HL7UpdateMode</a></td><td> The possible modes of updating that occur when an attribute is received by a system that already contains values for that attribute.</td><td>.1.113883.5.57</td></tr>
+ <tr><td><a href="v3/HtmlLinkType/cs.html">HtmlLinkType</a></td><td> HtmlLinkType values are drawn from HTML 4.0 and describe the relationship between the current document and the anchor that is the target of the link</td><td>.1.113883.5.58</td></tr>
+ <tr><td><a href="v3/IdentifierReliability/cs.html">IdentifierReliability</a></td><td> Specifies the reliability with which the identifier is known. This attribute MAY be used to assist with identifier matching algorithms.</td><td>.1.113883.5.1117</td></tr>
+ <tr><td><a href="v3/IdentifierScope/cs.html">IdentifierScope</a></td><td>  Description:
+Codes to specify the scope in which the identifier applies to the object with which it is associated, and used in the datatype property II.</td><td>.1.113883.5.1116</td></tr>
+ <tr><td><a href="v3/IntegrityCheckAlgorithm/cs.html">IntegrityCheckAlgorithm</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1010</td></tr>
+ <tr><td><a href="v3/LanguageAbilityMode/cs.html">LanguageAbilityMode</a></td><td> A value representing the method of expression of the language.  Example:
+Expressed spoken, expressed written, expressed signed, received spoken, received written, received signed.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.</td><td>.1.113883.5.60</td></tr>
+ <tr><td><a href="v3/LanguageAbilityProficiency/cs.html">LanguageAbilityProficiency</a></td><td> A value representing the level of proficiency in a language.  Example:
+Excellent, good, fair, poor.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.</td><td>.1.113883.5.61</td></tr>
+ <tr><td><a href="v3/LivingArrangement/cs.html">LivingArrangement</a></td><td> A code depicting the living arrangements of a person</td><td>.1.113883.5.63</td></tr>
+ <tr><td><a href="v3/LocalMarkupIgnore/cs.html">LocalMarkupIgnore</a></td><td> Tells a receiver to ignore just the local markup tags (local_markup, local_header, local_attr) when value=&quot;markup&quot;, or to ignore the local markup tags and all contained content when value=&quot;all&quot;</td><td>.1.113883.5.65</td></tr>
+ <tr><td><a href="v3/LocalRemoteControlState/cs.html">LocalRemoteControlState</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.66</td></tr>
+ <tr><td><a href="v3/ManagedParticipationStatus/cs.html">ManagedParticipationStatus</a></td><td> Codes representing the defined possible states of a Managed Participation, as defined by the Managed Participation class state machine.</td><td>.1.113883.5.1062</td></tr>
+ <tr><td><a href="v3/MapRelationship/cs.html">MapRelationship</a></td><td> The closeness or quality of the mapping between the HL7 concept (as represented by the HL7 concept identifier) and the source coding system. The values are patterned after the similar relationships used in the UMLS Metathesaurus. Because the HL7 coding sy</td><td>.1.113883.5.67</td></tr>
+ <tr><td><a href="v3/MaritalStatus/cs.html">MaritalStatus</a></td><td> * * * No description supplied * * *  Open Issue:
+The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.</td><td>.1.113883.5.2</td></tr>
+ <tr><td><a href="v3/MessageWaitingPriority/cs.html">MessageWaitingPriority</a></td><td> Indicates that the receiver has messages for the sender  OpenIssue:
+Description does not make sense relative to name of coding system.  Must be reviewed and improved.</td><td>.1.113883.5.1083</td></tr>
+ <tr><td><a href="v3/ModifyIndicator/cs.html">ModifyIndicator</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.81</td></tr>
+ <tr><td><a href="v3/NullFlavor/cs.html">NullFlavor</a></td><td> A collection of codes specifying why a valid value is not present.</td><td>.1.113883.5.1008</td></tr>
+ <tr><td><a href="v3/ObservationInterpretation/cs.html">ObservationInterpretation</a></td><td> One or more codes specifying a rough qualitative interpretation of the observation, such as &quot;normal&quot;, &quot;abnormal&quot;, &quot;below normal&quot;, &quot;change up&quot;, &quot;resistant&quot;, &quot;susceptible&quot;, etc.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.  Note also that this might be identical to the V2 code system of interpretation codes (formerly Abnormal Flags in older versions).</td><td>.1.113883.5.83</td></tr>
+ <tr><td><a href="v3/ObservationMethod/cs.html">ObservationMethod</a></td><td> A code that provides additional detail about the means or technique used to ascertain the observation.  Examples:
+Blood pressure measurement method: arterial puncture vs. sphygmomanometer (Riva-Rocci), sitting vs. supine position, etc.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.  Note that the Domain has a full discussion about use of the attribute and constraining that is not appropriate for the code system description.  Needs to be improved.</td><td>.1.113883.5.84</td></tr>
+ <tr><td><a href="v3/ObservationValue/cs.html">ObservationValue</a></td><td> This domain is the root domain to which all HL7-recognized value sets for the Observation.value attribute will be linked when Observation.value has a coded data type.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be corrected..</td><td>.1.113883.5.1063</td></tr>
+ <tr><td><a href="v3/ParticipationFunction/cs.html">ParticipationFunction</a></td><td> This code is used to specify the exact function an actor had in a service in all necessary detail. This domain may include local extensions (CWE).</td><td>.1.113883.5.88</td></tr>
+ <tr><td><a href="v3/ParticipationMode/cs.html">ParticipationMode</a></td><td> A set of codes specifying the modality by which the Entity playing the Role is participating in the Act.  Examples:
+Physically present, over the telephone, written communication.  Rationale:
+Particularly for author (originator) participants this is used to specify whether the information represented by the act was initially provided verbally, (hand-)written, or electronically.  Open Issue:
+There needs to be a reexamination of the hierarchies as there seems to be some muddling between ELECTRONIC and other concepts that involve electronic communication that are in other hierarchies.</td><td>.1.113883.5.1064</td></tr>
+ <tr><td><a href="v3/ParticipationSignature/cs.html">ParticipationSignature</a></td><td> A set of codes specifying whether and how the participant has attested his participation through a signature and or whether such a signature is needed.  Examples:
+A surgical Procedure act object (representing a procedure report) requires a signature of the performing and responsible surgeon, and possibly other participants. (See also: Participation.signatureText.)</td><td>.1.113883.5.89</td></tr>
+ <tr><td><a href="v3/ParticipationType/cs.html">ParticipationType</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.90</td></tr>
+ <tr><td><a href="v3/PatientImportance/cs.html">PatientImportance</a></td><td> Patient VIP code</td><td>.1.113883.5.1075</td></tr>
+ <tr><td><a href="v3/PaymentTerms/cs.html">PaymentTerms</a></td><td> Describes payment terms for a financial transaction, used in an invoice. This is typically expressed as a responsibility of the acceptor or payor of an invoice.</td><td>.1.113883.5.91</td></tr>
+ <tr><td><a href="v3/PersonDisabilityType/cs.html">PersonDisabilityType</a></td><td> A code identifying a person's disability.</td><td>.1.113883.5.93</td></tr>
+ <tr><td><a href="v3/ProbabilityDistributionType/cs.html">ProbabilityDistributionType</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1020</td></tr>
+ <tr><td><a href="v3/ProcessingID/cs.html">ProcessingID</a></td><td> Codes used to specify whether a message is part of a production, training, or debugging system.</td><td>.1.113883.5.100</td></tr>
+ <tr><td><a href="v3/ProcessingMode/cs.html">ProcessingMode</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.101</td></tr>
+ <tr><td><a href="v3/QueryParameterValue/cs.html">QueryParameterValue</a></td><td> The domain of coded values used as parameters within QueryByParameter queries.</td><td>.1.113883.5.1096</td></tr>
+ <tr><td><a href="v3/QueryPriority/cs.html">QueryPriority</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.102</td></tr>
+ <tr><td><a href="v3/QueryRequestLimit/cs.html">QueryRequestLimit</a></td><td>  Definition:
+Defines the units associated with the magnitude of the maximum size limit of a query response that can be accepted by the requesting application.</td><td>.1.113883.5.1112</td></tr>
+ <tr><td><a href="v3/QueryResponse/cs.html">QueryResponse</a></td><td> A code classifying the general nature of the response to a given query. Includes whether or not data was found, or whether an error occurred.</td><td>.1.113883.5.1067</td></tr>
+ <tr><td><a href="v3/QueryStatusCode/cs.html">QueryStatusCode</a></td><td> A code specifying the state of the Query.</td><td>.1.113883.5.103</td></tr>
+ <tr><td><a href="v3/Race/cs.html">Race</a></td><td> In the United States, federal standards for classifying data on race determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations.  The federal standards do not conceptually define race, and they recognize the absence of an anthropological or scientific basis for racial classification.  Instead, the federal standards acknowledge that race is a social-political construct in which an individual's own identification with one more race categories is preferred to observer identification. The standards use a variety of features to define five minimum race categories. Among these features are descent from &quot;the original peoples&quot; of a specified region or nation.  The minimum race categories are American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White.  The federal standards stipulate that race data need not be limited to the five minimum categories, but any expansion must be collapsible to those categories.</td><td>.1.113883.5.104</td></tr>
+ <tr><td><a href="v3/RelationalOperator/cs.html">RelationalOperator</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.105</td></tr>
+ <tr><td><a href="v3/RelationshipConjunction/cs.html">RelationshipConjunction</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.106</td></tr>
+ <tr><td><a href="v3/ReligiousAffiliation/cs.html">ReligiousAffiliation</a></td><td> Assigment of spiritual faith affiliation</td><td>.1.113883.5.1076</td></tr>
+ <tr><td><a href="v3/ResponseLevel/cs.html">ResponseLevel</a></td><td> Specifies whether a response is expected from the addressee of this interaction and what level of detail that response should include</td><td>.1.113883.5.108</td></tr>
+ <tr><td><a href="v3/ResponseModality/cs.html">ResponseModality</a></td><td> Defines the timing and grouping of the response instances.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.</td><td>.1.113883.5.109</td></tr>
+ <tr><td><a href="v3/ResponseMode/cs.html">ResponseMode</a></td><td> Specifies the mode, immediate versus deferred or queued, by which a receiver should communicate its receiver responsibilities.</td><td>.1.113883.5.1126</td></tr>
+ <tr><td><a href="v3/RoleClass/cs.html">RoleClass</a></td><td> Codes for the Role class hierarchy.  The values in this hierarchy, represent a Role which is an association or relationship between two entities - the entity that plays the role and the entity that scopes the role.  Roles names are derived from the name of the playing entity in that role. The role hierarchy stems from three core concepts, or abstract domains:    RoleClassOntological
+is an abstract domain that collects roles in which the playing entity is defined or specified by the scoping entity.   RoleClassPartitive
+collects roles in which the playing entity is in some sense a &quot;part&quot; of the scoping entity.   RoleClassAssociative
+collects all of the remaining forms of association between the playing entity and the scoping entity. This set of roles is further partitioned between:    RoleClassPassive
+which are roles in which the playing entity is used, known, treated, handled, built, or destroyed, etc. under the auspices of the scoping entity. The playing entity is passive in these roles in that the role exists without an agreement from the playing entity.   RoleClassMutualRelationship
+which are relationships based on mutual behavior of the two entities. The basis of these relationship may be formal agreements or they may bede facto
+behavior.  Thus, this sub-domain is further divided into:    RoleClassRelationshipFormal
+in which the relationship is formally defined, frequently by a contract or agreement.   Personal relationship
+which inks two people in a personal relationship. The hierarchy discussed above is represented In the current vocabulary tables as a set of abstract domains, with the exception of the  &quot;Personal relationship&quot; which is a leaf concept.  OpenIssue:
+Description copied from Concept Domain of same name.  Must be verified.</td><td>.1.113883.5.110</td></tr>
+ <tr><td><a href="v3/RoleCode/cs.html">RoleCode</a></td><td> A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.</td><td>.1.113883.5.111</td></tr>
+ <tr><td><a href="v3/RoleLinkStatus/cs.html">RoleLinkStatus</a></td><td>  Description:
+Codes representing possible states of a RoleLink, as defined by the RoleLink class state machine.</td><td>.1.113883.5.1137</td></tr>
+ <tr><td><a href="v3/RoleLinkType/cs.html">RoleLinkType</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.107</td></tr>
+ <tr><td><a href="v3/RoleStatus/cs.html">RoleStatus</a></td><td> Codes representing the defined possible states of an Role, as defined by the Role class state machine.</td><td>.1.113883.5.1068</td></tr>
+ <tr><td><a href="v3/RouteOfAdministration/cs.html">RouteOfAdministration</a></td><td> The path the administered medication takes to get into the body or into contact with the body.</td><td>.1.113883.5.112</td></tr>
+ <tr><td><a href="v3/Sequencing/cs.html">Sequencing</a></td><td> Specifies sequence of sort order.</td><td>.1.113883.5.113</td></tr>
+ <tr><td><a href="v3/SetOperator/cs.html">SetOperator</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.1069</td></tr>
+ <tr><td><a href="v3/SpecimenType/cs.html">SpecimenType</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.129</td></tr>
+ <tr><td><a href="v3/SubstitutionCondition/cs.html">SubstitutionCondition</a></td><td> Identifies what sort of change is permitted or has occurred between the item that was ordered/requested and the one that was/will be provided.</td><td>.1.113883.5.1071</td></tr>
+ <tr><td><a href="v3/TableCellHorizontalAlign/cs.html">TableCellHorizontalAlign</a></td><td> These values are defined within the XHTML 4.0 Table Model</td><td>.1.113883.5.131</td></tr>
+ <tr><td><a href="v3/TableCellScope/cs.html">TableCellScope</a></td><td> These values are defined within the XHTML 4.0 Table Model</td><td>.1.113883.5.132</td></tr>
+ <tr><td><a href="v3/TableCellVerticalAlign/cs.html">TableCellVerticalAlign</a></td><td> These values are defined within the XHTML 4.0 Table Model</td><td>.1.113883.5.133</td></tr>
+ <tr><td><a href="v3/TableFrame/cs.html">TableFrame</a></td><td> These values are defined within the XHTML 4.0 Table Model</td><td>.1.113883.5.134</td></tr>
+ <tr><td><a href="v3/TableRules/cs.html">TableRules</a></td><td> These values are defined within the XHTML 4.0 Table Model</td><td>.1.113883.5.136</td></tr>
+ <tr><td><a href="v3/TargetAwareness/cs.html">TargetAwareness</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.137</td></tr>
+ <tr><td><a href="v3/TelecommunicationCapabilities/cs.html">TelecommunicationCapabilities</a></td><td>  Description:
+Concepts that define the telecommunication capabilities of a particular device. Used to identify the expected capabilities to be found at a particular telecommunication address.</td><td>.1.113883.5.1118</td></tr>
+ <tr><td><a href="v3/TimingEvent/cs.html">TimingEvent</a></td><td>**** MISSING DEFINITIONS ****</td><td>.1.113883.5.139</td></tr>
+ <tr><td><a href="v3/TransmissionRelationshipTypeCode/cs.html">TransmissionRelationshipTypeCode</a></td><td>  Description:
+A code specifying the meaning and purpose of every TransmissionRelationship instance. Each of its values implies specific constraints to what kinds of Transmission objects can be related and in which way.</td><td>.1.113883.5.1111</td></tr>
+ <tr><td><a href="v3/TribalEntityUS/cs.html">TribalEntityUS</a></td><td> INDIAN ENTITIES RECOGNIZED AND ELIGIBLE TO RECEIVE SERVICES FROM THE UNITED STATES BUREAU OF INDIAN AFFAIRS</td><td>.1.113883.5.140</td></tr>
+ <tr><td><a href="v3/VaccineManufacturer/cs.html">VaccineManufacturer</a></td><td> The manufacturer of a vaccine.</td><td>.1.113883.5.144</td></tr>
+ <tr><td><a href="v3/hl7Realm/cs.html">hl7Realm</a></td><td>  Description:
+Coded concepts representing Binding Realms (used for Context Binding of terminology in HL7 models)  and/or Namespace Realms (used to help ensure unique identification of HL7 artifacts). This code system is partitioned into three sections: Affiliate realms, Binding realms and Namespace realms.  All affiliate realm codes may automatically be used as both binding realms and namespace realms.  Furthermore, affiliate realms are the only realms that have authority over the creation of binding realms.  (Note that 'affiliate' includes the idea of both international affiliates and the HL7 International organization.)  All other codes must be associated with an owning affiliate realm and must appear as a specialization of _BindingRealm or _NamespaceRealm.  For affiliates whose concepts align with nations, the country codes from ISO 3166-1 2-character alpha are used for the code when possible so these codes should not be used for other realm types.  It is recommended that binding realm and namespace codes submitted by affiliates use the realm code as a prefix to avoid possible collisions with ISO codes.  However, tooling does not currently support namepace realm codes greater than 2 characters.  Open Issue:
+The name of the concept property &quot;owningAffiliate&quot; should be changed to better reflect that the property value is the human readable name of the organizational entity that manages the Realm identified by the Realm Code.  Open Issue:
+In spite of the inability of tooling to process codes longer than 2 characters, there is at least one realm codes ('SOA') that was added that is 3 characters in length.</td><td>.1.113883.5.1124</td></tr>
+ <tr><td><a href="v3/hl7V3Conformance/cs.html">hl7V3Conformance</a></td><td>  Description:
+Identifies allowed codes for HL7aTMs v3 conformance property.</td><td>.1.113883.5.1125</td></tr>
+ <tr><td><a href="v3/orderableDrugForm/cs.html">orderableDrugForm</a></td><td>  OpenIssue:
+Missing description.</td><td>.1.113883.5.85</td></tr>
+ <tr><td><a href="v3/substanceAdminSubstitution/cs.html">substanceAdminSubstitution</a></td><td> Identifies what sort of change is permitted or has occurred between the therapy that was ordered and the therapy that was/will be provided.</td><td>.1.113883.5.1070</td></tr>
+</table>
+
+
+  </div>
+  <div id="tabs-v2">
+  
+ <table class="grid">
+ <tr><td><b>URI</b> (all prefixed with http://hl7.org/fhir/v2/)</td><td><b>ID</b></td><td><b>OID</b></td></tr>
+ <tr><td><a href="v2/0001/index.html">0001</a></td><td>Administrative Sex</td><td/></tr>
+ <tr><td><a href="v2/0002/index.html">0002</a></td><td>Marital Status</td><td/></tr>
+ <tr><td><a href="v2/0003/index.html">0003</a></td><td>Event Type</td><td/></tr>
+ <tr><td><a href="v2/0004/index.html">0004</a></td><td>Patient Class</td><td/></tr>
+ <tr><td>0006</td><td>ReligionVersion Dependent. Use one of:<ul> <li><a href="v2/0006/2.1/index.html">2.1+</a></li> <li><a href="v2/0006/2.4/index.html">2.4+</a></li></ul></td><td/></tr>
+ <tr><td><a href="v2/0007/index.html">0007</a></td><td>Admission Type</td><td/></tr>
+ <tr><td><a href="v2/0008/index.html">0008</a></td><td>Acknowledgment code</td><td/></tr>
+ <tr><td><a href="v2/0009/index.html">0009</a></td><td>Ambulatory Status</td><td/></tr>
+ <tr><td><a href="v2/0012/index.html">0012</a></td><td>STOCK LOCATION</td><td/></tr>
+ <tr><td><a href="v2/0017/index.html">0017</a></td><td>Transaction Type</td><td/></tr>
+ <tr><td><a href="v2/0023/index.html">0023</a></td><td>Admit Source</td><td/></tr>
+ <tr><td><a href="v2/0027/index.html">0027</a></td><td>Priority</td><td/></tr>
+ <tr><td><a href="v2/0033/index.html">0033</a></td><td>ROUTE</td><td/></tr>
+ <tr><td><a href="v2/0034/index.html">0034</a></td><td>SITE ADMINISTERED</td><td/></tr>
+ <tr><td><a href="v2/0038/index.html">0038</a></td><td>Order status</td><td/></tr>
+ <tr><td><a href="v2/0043/index.html">0043</a></td><td>Condition Code</td><td/></tr>
+ <tr><td><a href="v2/0048/index.html">0048</a></td><td>What subject filter</td><td/></tr>
+ <tr><td><a href="v2/0052/index.html">0052</a></td><td>Diagnosis Type</td><td/></tr>
+ <tr><td><a href="v2/0061/index.html">0061</a></td><td>Check Digit Scheme</td><td/></tr>
+ <tr><td><a href="v2/0062/index.html">0062</a></td><td>Event Reason</td><td/></tr>
+ <tr><td><a href="v2/0063/index.html">0063</a></td><td>Relationship</td><td/></tr>
+ <tr><td><a href="v2/0065/index.html">0065</a></td><td>Specimen Action Code</td><td/></tr>
+ <tr><td><a href="v2/0066/index.html">0066</a></td><td>Employment Status</td><td/></tr>
+ <tr><td><a href="v2/0069/index.html">0069</a></td><td>Hospital Service</td><td/></tr>
+ <tr><td><a href="v2/0070/index.html">0070</a></td><td>Specimen Source Codes</td><td/></tr>
+ <tr><td><a href="v2/0074/index.html">0074</a></td><td>Diagnostic Service Section ID</td><td/></tr>
+ <tr><td><a href="v2/0076/index.html">0076</a></td><td>Message Type</td><td/></tr>
+ <tr><td><a href="v2/0078/index.html">0078</a></td><td>Interpretation Codes</td><td/></tr>
+ <tr><td><a href="v2/0080/index.html">0080</a></td><td>Nature of Abnormal Testing</td><td/></tr>
+ <tr><td><a href="v2/0083/index.html">0083</a></td><td>Outlier Type</td><td/></tr>
+ <tr><td><a href="v2/0085/index.html">0085</a></td><td>Observation Result Status Codes Interpretation</td><td/></tr>
+ <tr><td><a href="v2/0091/index.html">0091</a></td><td>Query Priority</td><td/></tr>
+ <tr><td><a href="v2/0092/index.html">0092</a></td><td>Re-Admission Indicator</td><td/></tr>
+ <tr><td><a href="v2/0098/index.html">0098</a></td><td>Type of Agreement</td><td/></tr>
+ <tr><td><a href="v2/0100/index.html">0100</a></td><td>Invocation event</td><td/></tr>
+ <tr><td><a href="v2/0102/index.html">0102</a></td><td>Delayed acknowledgment type</td><td/></tr>
+ <tr><td><a href="v2/0103/index.html">0103</a></td><td>Processing ID</td><td/></tr>
+ <tr><td><a href="v2/0104/index.html">0104</a></td><td>Version ID</td><td/></tr>
+ <tr><td><a href="v2/0105/index.html">0105</a></td><td>Source of Comment</td><td/></tr>
+ <tr><td><a href="v2/0106/index.html">0106</a></td><td>Query/response format code</td><td/></tr>
+ <tr><td><a href="v2/0107/index.html">0107</a></td><td>Deferred response type</td><td/></tr>
+ <tr><td><a href="v2/0108/index.html">0108</a></td><td>Query results level</td><td/></tr>
+ <tr><td><a href="v2/0109/index.html">0109</a></td><td>Report priority</td><td/></tr>
+ <tr><td><a href="v2/0116/index.html">0116</a></td><td>Bed Status</td><td/></tr>
+ <tr><td><a href="v2/0119/index.html">0119</a></td><td>Order Control Codes</td><td/></tr>
+ <tr><td><a href="v2/0121/index.html">0121</a></td><td>Response Flag</td><td/></tr>
+ <tr><td><a href="v2/0122/index.html">0122</a></td><td>Charge Type</td><td/></tr>
+ <tr><td><a href="v2/0123/index.html">0123</a></td><td>Result Status</td><td/></tr>
+ <tr><td><a href="v2/0124/index.html">0124</a></td><td>Transportation Mode</td><td/></tr>
+ <tr><td><a href="v2/0126/index.html">0126</a></td><td>Quantity Limited Request</td><td/></tr>
+ <tr><td><a href="v2/0127/index.html">0127</a></td><td>Allergen Type</td><td/></tr>
+ <tr><td><a href="v2/0128/index.html">0128</a></td><td>Allergy Severity</td><td/></tr>
+ <tr><td><a href="v2/0130/index.html">0130</a></td><td>Visit User Code</td><td/></tr>
+ <tr><td><a href="v2/0131/index.html">0131</a></td><td>Contact Role</td><td/></tr>
+ <tr><td><a href="v2/0133/index.html">0133</a></td><td>Procedure Practitioner Identifier Code Type</td><td/></tr>
+ <tr><td><a href="v2/0135/index.html">0135</a></td><td>Assignment of Benefits</td><td/></tr>
+ <tr><td><a href="v2/0136/index.html">0136</a></td><td>Yes/no Indicator</td><td/></tr>
+ <tr><td><a href="v2/0137/index.html">0137</a></td><td>Mail Claim Party</td><td/></tr>
+ <tr><td><a href="v2/0140/index.html">0140</a></td><td>Military Service</td><td/></tr>
+ <tr><td><a href="v2/0141/index.html">0141</a></td><td>Military Rank/Grade</td><td/></tr>
+ <tr><td><a href="v2/0142/index.html">0142</a></td><td>Military Status</td><td/></tr>
+ <tr><td><a href="v2/0144/index.html">0144</a></td><td>Eligibility Source</td><td/></tr>
+ <tr><td><a href="v2/0145/index.html">0145</a></td><td>Room Type</td><td/></tr>
+ <tr><td><a href="v2/0146/index.html">0146</a></td><td>Amount Type</td><td/></tr>
+ <tr><td><a href="v2/0147/index.html">0147</a></td><td>Policy Type</td><td/></tr>
+ <tr><td><a href="v2/0148/index.html">0148</a></td><td>Money or Percentage Indicator</td><td/></tr>
+ <tr><td><a href="v2/0149/index.html">0149</a></td><td>Day Type</td><td/></tr>
+ <tr><td><a href="v2/0150/index.html">0150</a></td><td>Certification Patient Type</td><td/></tr>
+ <tr><td><a href="v2/0153/index.html">0153</a></td><td>Value Code</td><td/></tr>
+ <tr><td><a href="v2/0155/index.html">0155</a></td><td>Accept/Application Acknowledgment Conditions</td><td/></tr>
+ <tr><td><a href="v2/0156/index.html">0156</a></td><td>Which date/time qualifier</td><td/></tr>
+ <tr><td><a href="v2/0157/index.html">0157</a></td><td>Which date/time status qualifier</td><td/></tr>
+ <tr><td><a href="v2/0158/index.html">0158</a></td><td>Date/time selection qualifier</td><td/></tr>
+ <tr><td><a href="v2/0159/index.html">0159</a></td><td>Diet Code Specification Type</td><td/></tr>
+ <tr><td><a href="v2/0160/index.html">0160</a></td><td>Tray Type</td><td/></tr>
+ <tr><td><a href="v2/0161/index.html">0161</a></td><td>Allow Substitution</td><td/></tr>
+ <tr><td><a href="v2/0162/index.html">0162</a></td><td>Route of Administration</td><td/></tr>
+ <tr><td><a href="v2/0163/index.html">0163</a></td><td>Body Site</td><td/></tr>
+ <tr><td><a href="v2/0164/index.html">0164</a></td><td>Administration Device</td><td/></tr>
+ <tr><td><a href="v2/0165/index.html">0165</a></td><td>Administration Method</td><td/></tr>
+ <tr><td><a href="v2/0166/index.html">0166</a></td><td>RX Component Type</td><td/></tr>
+ <tr><td><a href="v2/0167/index.html">0167</a></td><td>Substitution Status</td><td/></tr>
+ <tr><td><a href="v2/0168/index.html">0168</a></td><td>Processing Priority</td><td/></tr>
+ <tr><td><a href="v2/0169/index.html">0169</a></td><td>Reporting Priority</td><td/></tr>
+ <tr><td><a href="v2/0170/index.html">0170</a></td><td>Derived Specimen</td><td/></tr>
+ <tr><td><a href="v2/0173/index.html">0173</a></td><td>Coordination of Benefits</td><td/></tr>
+ <tr><td><a href="v2/0174/index.html">0174</a></td><td>Nature of Service/Test/Observation</td><td/></tr>
+ <tr><td><a href="v2/0175/index.html">0175</a></td><td>Master File Identifier Code</td><td/></tr>
+ <tr><td><a href="v2/0177/index.html">0177</a></td><td>Confidentiality Code</td><td/></tr>
+ <tr><td><a href="v2/0178/index.html">0178</a></td><td>File Level Event Code</td><td/></tr>
+ <tr><td><a href="v2/0179/index.html">0179</a></td><td>Response Level</td><td/></tr>
+ <tr><td><a href="v2/0180/index.html">0180</a></td><td>Record-level Event Code</td><td/></tr>
+ <tr><td><a href="v2/0181/index.html">0181</a></td><td>MFN Record-level Error Return</td><td/></tr>
+ <tr><td><a href="v2/0183/index.html">0183</a></td><td>Active/Inactive</td><td/></tr>
+ <tr><td><a href="v2/0185/index.html">0185</a></td><td>Preferred Method of Contact</td><td/></tr>
+ <tr><td><a href="v2/0187/index.html">0187</a></td><td>Provider Billing</td><td/></tr>
+ <tr><td><a href="v2/0189/index.html">0189</a></td><td>Ethnic Group</td><td/></tr>
+ <tr><td><a href="v2/0190/index.html">0190</a></td><td>Address Type</td><td/></tr>
+ <tr><td><a href="v2/0191/index.html">0191</a></td><td>Type of Referenced Data</td><td/></tr>
+ <tr><td><a href="v2/0193/index.html">0193</a></td><td>Amount Class</td><td/></tr>
+ <tr><td><a href="v2/0200/index.html">0200</a></td><td>Name Type</td><td/></tr>
+ <tr><td><a href="v2/0201/index.html">0201</a></td><td>Telecommunication Use Code</td><td/></tr>
+ <tr><td><a href="v2/0202/index.html">0202</a></td><td>Telecommunication Equipment Type</td><td/></tr>
+ <tr><td><a href="v2/0203/index.html">0203</a></td><td>Identifier Type</td><td/></tr>
+ <tr><td><a href="v2/0204/index.html">0204</a></td><td>Organizational Name Type</td><td/></tr>
+ <tr><td><a href="v2/0205/index.html">0205</a></td><td>Price Type</td><td/></tr>
+ <tr><td><a href="v2/0206/index.html">0206</a></td><td>Segment Action Code</td><td/></tr>
+ <tr><td><a href="v2/0207/index.html">0207</a></td><td>Processing Mode</td><td/></tr>
+ <tr><td><a href="v2/0208/index.html">0208</a></td><td>Query Response Status</td><td/></tr>
+ <tr><td><a href="v2/0209/index.html">0209</a></td><td>Relational Operator</td><td/></tr>
+ <tr><td><a href="v2/0210/index.html">0210</a></td><td>Relational Conjunction</td><td/></tr>
+ <tr><td><a href="v2/0211/index.html">0211</a></td><td>Alternate Character Sets</td><td/></tr>
+ <tr><td><a href="v2/0213/index.html">0213</a></td><td>Purge Status Code</td><td/></tr>
+ <tr><td><a href="v2/0214/index.html">0214</a></td><td>Special Program Code</td><td/></tr>
+ <tr><td><a href="v2/0215/index.html">0215</a></td><td>Publicity Code</td><td/></tr>
+ <tr><td><a href="v2/0216/index.html">0216</a></td><td>Patient Status Code</td><td/></tr>
+ <tr><td><a href="v2/0217/index.html">0217</a></td><td>Visit Priority Code</td><td/></tr>
+ <tr><td><a href="v2/0220/index.html">0220</a></td><td>Living Arrangement</td><td/></tr>
+ <tr><td><a href="v2/0223/index.html">0223</a></td><td>Living Dependency</td><td/></tr>
+ <tr><td><a href="v2/0224/index.html">0224</a></td><td>Transport Arranged</td><td/></tr>
+ <tr><td><a href="v2/0225/index.html">0225</a></td><td>Escort Required</td><td/></tr>
+ <tr><td><a href="v2/0227/index.html">0227</a></td><td>Manufacturers of Vaccines (code=MVX)</td><td/></tr>
+ <tr><td><a href="v2/0228/index.html">0228</a></td><td>Diagnosis Classification</td><td/></tr>
+ <tr><td><a href="v2/0229/index.html">0229</a></td><td>DRG Payor</td><td/></tr>
+ <tr><td><a href="v2/0230/index.html">0230</a></td><td>Procedure Functional Type</td><td/></tr>
+ <tr><td><a href="v2/0231/index.html">0231</a></td><td>Student Status</td><td/></tr>
+ <tr><td><a href="v2/0232/index.html">0232</a></td><td>- Insurance Company Contact Reason</td><td/></tr>
+ <tr><td><a href="v2/0234/index.html">0234</a></td><td>Report Timing</td><td/></tr>
+ <tr><td><a href="v2/0235/index.html">0235</a></td><td>Report Source</td><td/></tr>
+ <tr><td><a href="v2/0236/index.html">0236</a></td><td>Event Reported To</td><td/></tr>
+ <tr><td><a href="v2/0237/index.html">0237</a></td><td>Event Qualification</td><td/></tr>
+ <tr><td><a href="v2/0238/index.html">0238</a></td><td>Event Seriousness</td><td/></tr>
+ <tr><td><a href="v2/0239/index.html">0239</a></td><td>Event Expected</td><td/></tr>
+ <tr><td><a href="v2/0240/index.html">0240</a></td><td>Event Consequence</td><td/></tr>
+ <tr><td><a href="v2/0241/index.html">0241</a></td><td>Patient Outcome</td><td/></tr>
+ <tr><td><a href="v2/0242/index.html">0242</a></td><td>Primary Observer's Qualification</td><td/></tr>
+ <tr><td><a href="v2/0243/index.html">0243</a></td><td>Identity May Be Divulged</td><td/></tr>
+ <tr><td><a href="v2/0247/index.html">0247</a></td><td>Status of Evaluation</td><td/></tr>
+ <tr><td><a href="v2/0248/index.html">0248</a></td><td>Product Source</td><td/></tr>
+ <tr><td><a href="v2/0250/index.html">0250</a></td><td>Relatedness Assessment</td><td/></tr>
+ <tr><td><a href="v2/0251/index.html">0251</a></td><td>Action Taken in Response to the Event</td><td/></tr>
+ <tr><td><a href="v2/0252/index.html">0252</a></td><td>Causality Observations</td><td/></tr>
+ <tr><td><a href="v2/0253/index.html">0253</a></td><td>Indirect Exposure Mechanism</td><td/></tr>
+ <tr><td><a href="v2/0254/index.html">0254</a></td><td>Kind of Quantity</td><td/></tr>
+ <tr><td><a href="v2/0255/index.html">0255</a></td><td>Duration Categories</td><td/></tr>
+ <tr><td><a href="v2/0256/index.html">0256</a></td><td>Time Delay Post Challenge</td><td/></tr>
+ <tr><td><a href="v2/0257/index.html">0257</a></td><td>Nature of Challenge</td><td/></tr>
+ <tr><td><a href="v2/0258/index.html">0258</a></td><td>Relationship Modifier</td><td/></tr>
+ <tr><td><a href="v2/0259/index.html">0259</a></td><td>Modality</td><td/></tr>
+ <tr><td><a href="v2/0260/index.html">0260</a></td><td>Patient Location Type</td><td/></tr>
+ <tr><td><a href="v2/0261/index.html">0261</a></td><td>Location Equipment</td><td/></tr>
+ <tr><td><a href="v2/0262/index.html">0262</a></td><td>Privacy Level</td><td/></tr>
+ <tr><td><a href="v2/0263/index.html">0263</a></td><td>Level of Care</td><td/></tr>
+ <tr><td><a href="v2/0265/index.html">0265</a></td><td>Specialty Type</td><td/></tr>
+ <tr><td><a href="v2/0267/index.html">0267</a></td><td>Days of the Week</td><td/></tr>
+ <tr><td><a href="v2/0268/index.html">0268</a></td><td>Override</td><td/></tr>
+ <tr><td><a href="v2/0269/index.html">0269</a></td><td>Charge On Indicator</td><td/></tr>
+ <tr><td><a href="v2/0270/index.html">0270</a></td><td>Document Type</td><td/></tr>
+ <tr><td><a href="v2/0271/index.html">0271</a></td><td>Document Completion Status</td><td/></tr>
+ <tr><td><a href="v2/0272/index.html">0272</a></td><td>Document Confidentiality Status</td><td/></tr>
+ <tr><td><a href="v2/0273/index.html">0273</a></td><td>Document Availability Status</td><td/></tr>
+ <tr><td><a href="v2/0275/index.html">0275</a></td><td>Document Storage Status</td><td/></tr>
+ <tr><td><a href="v2/0276/index.html">0276</a></td><td>Appointment reason codes</td><td/></tr>
+ <tr><td><a href="v2/0277/index.html">0277</a></td><td>Appointment Type Codes</td><td/></tr>
+ <tr><td><a href="v2/0278/index.html">0278</a></td><td>Filler status codes</td><td/></tr>
+ <tr><td><a href="v2/0279/index.html">0279</a></td><td>Allow Substitution Codes</td><td/></tr>
+ <tr><td><a href="v2/0280/index.html">0280</a></td><td>Referral Priority</td><td/></tr>
+ <tr><td><a href="v2/0281/index.html">0281</a></td><td>Referral Type</td><td/></tr>
+ <tr><td><a href="v2/0282/index.html">0282</a></td><td>Referral Disposition</td><td/></tr>
+ <tr><td><a href="v2/0283/index.html">0283</a></td><td>Referral Status</td><td/></tr>
+ <tr><td><a href="v2/0284/index.html">0284</a></td><td>Referral Category</td><td/></tr>
+ <tr><td><a href="v2/0286/index.html">0286</a></td><td>Provider Role</td><td/></tr>
+ <tr><td><a href="v2/0287/index.html">0287</a></td><td>Problem/Goal Action Code</td><td/></tr>
+ <tr><td><a href="v2/0290/index.html">0290</a></td><td>MIME base64 encoding characters</td><td/></tr>
+ <tr><td><a href="v2/0291/index.html">0291</a></td><td>Subtype of Referenced Data</td><td/></tr>
+ <tr><td><a href="v2/0292/index.html">0292</a></td><td>Vaccines Administered (code = CVX) (parenteral, un</td><td/></tr>
+ <tr><td><a href="v2/0294/index.html">0294</a></td><td>Time Selection Criteria Parameter Class Codes</td><td/></tr>
+ <tr><td><a href="v2/0298/index.html">0298</a></td><td>CP Range Type</td><td/></tr>
+ <tr><td><a href="v2/0299/index.html">0299</a></td><td>Encoding</td><td/></tr>
+ <tr><td><a href="v2/0301/index.html">0301</a></td><td>Universal ID Type</td><td/></tr>
+ <tr><td><a href="v2/0305/index.html">0305</a></td><td>Person Location Type</td><td/></tr>
+ <tr><td><a href="v2/0309/index.html">0309</a></td><td>Coverage Type</td><td/></tr>
+ <tr><td><a href="v2/0311/index.html">0311</a></td><td>Job Status</td><td/></tr>
+ <tr><td><a href="v2/0315/index.html">0315</a></td><td>Living Will Code</td><td/></tr>
+ <tr><td><a href="v2/0316/index.html">0316</a></td><td>Organ Donor Code</td><td/></tr>
+ <tr><td><a href="v2/0317/index.html">0317</a></td><td>Annotations</td><td/></tr>
+ <tr><td><a href="v2/0321/index.html">0321</a></td><td>Dispense Method</td><td/></tr>
+ <tr><td><a href="v2/0322/index.html">0322</a></td><td>Completion Status</td><td/></tr>
+ <tr><td><a href="v2/0323/index.html">0323</a></td><td>Action Code</td><td/></tr>
+ <tr><td><a href="v2/0324/index.html">0324</a></td><td>Location Characteristic ID</td><td/></tr>
+ <tr><td><a href="v2/0325/index.html">0325</a></td><td>Location Relationship ID</td><td/></tr>
+ <tr><td><a href="v2/0326/index.html">0326</a></td><td>Visit Indicator</td><td/></tr>
+ <tr><td><a href="v2/0329/index.html">0329</a></td><td>Quantity Method</td><td/></tr>
+ <tr><td><a href="v2/0330/index.html">0330</a></td><td>Marketing Basis</td><td/></tr>
+ <tr><td><a href="v2/0331/index.html">0331</a></td><td>Facility Type</td><td/></tr>
+ <tr><td><a href="v2/0332/index.html">0332</a></td><td>Source Type</td><td/></tr>
+ <tr><td><a href="v2/0334/index.html">0334</a></td><td>Disabled Person Code</td><td/></tr>
+ <tr><td><a href="v2/0335/index.html">0335</a></td><td>Repeat Pattern</td><td/></tr>
+ <tr><td><a href="v2/0336/index.html">0336</a></td><td>Referral Reason</td><td/></tr>
+ <tr><td><a href="v2/0337/index.html">0337</a></td><td>Certification Status</td><td/></tr>
+ <tr><td><a href="v2/0338/index.html">0338</a></td><td>Practitioner ID Number Type</td><td/></tr>
+ <tr><td><a href="v2/0339/index.html">0339</a></td><td>Advanced Beneficiary Notice Code</td><td/></tr>
+ <tr><td><a href="v2/0344/index.html">0344</a></td><td>Patient's Relationship to Insured</td><td/></tr>
+ <tr><td><a href="v2/0350/index.html">0350</a></td><td>Occurrence Code</td><td/></tr>
+ <tr><td><a href="v2/0351/index.html">0351</a></td><td>Occurrence Span</td><td/></tr>
+ <tr><td><a href="v2/0354/index.html">0354</a></td><td>Message Structure</td><td/></tr>
+ <tr><td><a href="v2/0355/index.html">0355</a></td><td>Primary Key Value Type</td><td/></tr>
+ <tr><td><a href="v2/0356/index.html">0356</a></td><td>Alternate Character Set Handling Scheme</td><td/></tr>
+ <tr><td><a href="v2/0357/index.html">0357</a></td><td>Message Error Condition Codes</td><td/></tr>
+ <tr><td><a href="v2/0359/index.html">0359</a></td><td>Diagnosis Priority</td><td/></tr>
+ <tr><td>0360</td><td>Degree/License/CertificateVersion Dependent. Use one of:<ul> <li><a href="v2/0360/2.3.1/index.html">2.3.1+</a></li> <li><a href="v2/0360/2.7/index.html">2.7+</a></li></ul></td><td/></tr>
+ <tr><td><a href="v2/0363/index.html">0363</a></td><td>Assigning Authority</td><td/></tr>
+ <tr><td><a href="v2/0364/index.html">0364</a></td><td>Comment Type</td><td/></tr>
+ <tr><td><a href="v2/0365/index.html">0365</a></td><td>Equipment State</td><td/></tr>
+ <tr><td><a href="v2/0366/index.html">0366</a></td><td>Local/Remote Control State</td><td/></tr>
+ <tr><td><a href="v2/0367/index.html">0367</a></td><td>Alert Level</td><td/></tr>
+ <tr><td><a href="v2/0368/index.html">0368</a></td><td>Remote Control Command</td><td/></tr>
+ <tr><td><a href="v2/0369/index.html">0369</a></td><td>Specimen Role</td><td/></tr>
+ <tr><td><a href="v2/0370/index.html">0370</a></td><td>Container Status</td><td/></tr>
+ <tr><td><a href="v2/0371/index.html">0371</a></td><td>Additive/Preservative</td><td/></tr>
+ <tr><td><a href="v2/0372/index.html">0372</a></td><td>Specimen Component</td><td/></tr>
+ <tr><td><a href="v2/0373/index.html">0373</a></td><td>Treatment</td><td/></tr>
+ <tr><td><a href="v2/0374/index.html">0374</a></td><td>System Induced Contaminants</td><td/></tr>
+ <tr><td><a href="v2/0375/index.html">0375</a></td><td>Artificial Blood</td><td/></tr>
+ <tr><td><a href="v2/0376/index.html">0376</a></td><td>Special Handling Code</td><td/></tr>
+ <tr><td><a href="v2/0377/index.html">0377</a></td><td>Other Environmental Factors</td><td/></tr>
+ <tr><td><a href="v2/0383/index.html">0383</a></td><td>Substance Status</td><td/></tr>
+ <tr><td><a href="v2/0384/index.html">0384</a></td><td>Substance Type</td><td/></tr>
+ <tr><td><a href="v2/0387/index.html">0387</a></td><td>Command Response</td><td/></tr>
+ <tr><td><a href="v2/0388/index.html">0388</a></td><td>Processing Type</td><td/></tr>
+ <tr><td><a href="v2/0389/index.html">0389</a></td><td>Analyte Repeat Status</td><td/></tr>
+ <tr><td>0391</td><td>Segment GroupVersion Dependent. Use one of:<ul> <li><a href="v2/0391/2.4/index.html">2.4+</a></li> <li><a href="v2/0391/2.6/index.html">2.6+</a></li></ul></td><td/></tr>
+ <tr><td><a href="v2/0392/index.html">0392</a></td><td>Match Reason</td><td/></tr>
+ <tr><td><a href="v2/0393/index.html">0393</a></td><td>Match Algorithms</td><td/></tr>
+ <tr><td><a href="v2/0394/index.html">0394</a></td><td>Response Modality</td><td/></tr>
+ <tr><td><a href="v2/0395/index.html">0395</a></td><td>Modify Indicator</td><td/></tr>
+ <tr><td><a href="v2/0396/index.html">0396</a></td><td>Coding System</td><td/></tr>
+ <tr><td><a href="v2/0397/index.html">0397</a></td><td>Sequencing</td><td/></tr>
+ <tr><td><a href="v2/0398/index.html">0398</a></td><td>Continuation Style Code</td><td/></tr>
+ <tr><td><a href="v2/0401/index.html">0401</a></td><td>Government Reimbursement Program</td><td/></tr>
+ <tr><td><a href="v2/0402/index.html">0402</a></td><td>School Type</td><td/></tr>
+ <tr><td><a href="v2/0403/index.html">0403</a></td><td>Language Ability</td><td/></tr>
+ <tr><td><a href="v2/0404/index.html">0404</a></td><td>Language Proficiency</td><td/></tr>
+ <tr><td><a href="v2/0406/index.html">0406</a></td><td>Organization Unit Type</td><td/></tr>
+ <tr><td><a href="v2/0409/index.html">0409</a></td><td>Application Change Type</td><td/></tr>
+ <tr><td><a href="v2/0411/index.html">0411</a></td><td>Supplemental Service Information Values</td><td/></tr>
+ <tr><td><a href="v2/0415/index.html">0415</a></td><td>Transfer Type</td><td/></tr>
+ <tr><td><a href="v2/0416/index.html">0416</a></td><td>Procedure DRG Type</td><td/></tr>
+ <tr><td><a href="v2/0417/index.html">0417</a></td><td>Tissue Type Code</td><td/></tr>
+ <tr><td><a href="v2/0418/index.html">0418</a></td><td>Procedure Priority</td><td/></tr>
+ <tr><td><a href="v2/0421/index.html">0421</a></td><td>Severity of Illness Code</td><td/></tr>
+ <tr><td><a href="v2/0422/index.html">0422</a></td><td>Triage Code</td><td/></tr>
+ <tr><td><a href="v2/0423/index.html">0423</a></td><td>Case Category Code</td><td/></tr>
+ <tr><td><a href="v2/0424/index.html">0424</a></td><td>Gestation Category Code</td><td/></tr>
+ <tr><td><a href="v2/0425/index.html">0425</a></td><td>Newborn Code</td><td/></tr>
+ <tr><td><a href="v2/0426/index.html">0426</a></td><td>Blood Product Code</td><td/></tr>
+ <tr><td><a href="v2/0427/index.html">0427</a></td><td>Risk Management Incident Code</td><td/></tr>
+ <tr><td><a href="v2/0428/index.html">0428</a></td><td>Incident Type Code</td><td/></tr>
+ <tr><td><a href="v2/0429/index.html">0429</a></td><td>Production Class Code</td><td/></tr>
+ <tr><td><a href="v2/0430/index.html">0430</a></td><td>Mode of Arrival Code</td><td/></tr>
+ <tr><td><a href="v2/0431/index.html">0431</a></td><td>Recreational Drug Use Code</td><td/></tr>
+ <tr><td><a href="v2/0432/index.html">0432</a></td><td>Admission Level of Care Code</td><td/></tr>
+ <tr><td><a href="v2/0433/index.html">0433</a></td><td>Precaution Code</td><td/></tr>
+ <tr><td><a href="v2/0434/index.html">0434</a></td><td>Patient Condition Code</td><td/></tr>
+ <tr><td><a href="v2/0435/index.html">0435</a></td><td>Advance Directive Code</td><td/></tr>
+ <tr><td><a href="v2/0436/index.html">0436</a></td><td>Sensitivity to Causative Agent Code</td><td/></tr>
+ <tr><td><a href="v2/0437/index.html">0437</a></td><td>Alert Device Code</td><td/></tr>
+ <tr><td><a href="v2/0438/index.html">0438</a></td><td>Allergy Clinical Status</td><td/></tr>
+ <tr><td><a href="v2/0440/index.html">0440</a></td><td>Data Types</td><td/></tr>
+ <tr><td><a href="v2/0441/index.html">0441</a></td><td>Immunization Registry Status</td><td/></tr>
+ <tr><td><a href="v2/0442/index.html">0442</a></td><td>Location Service Code</td><td/></tr>
+ <tr><td><a href="v2/0443/index.html">0443</a></td><td>Provider Role</td><td/></tr>
+ <tr><td><a href="v2/0444/index.html">0444</a></td><td>Name Assembly Order</td><td/></tr>
+ <tr><td><a href="v2/0445/index.html">0445</a></td><td>Identity Reliability Code</td><td/></tr>
+ <tr><td><a href="v2/0450/index.html">0450</a></td><td>Event Type</td><td/></tr>
+ <tr><td><a href="v2/0452/index.html">0452</a></td><td>Health Care Provider Type Code</td><td/></tr>
+ <tr><td><a href="v2/0453/index.html">0453</a></td><td>Health Care Provider Classification</td><td/></tr>
+ <tr><td><a href="v2/0454/index.html">0454</a></td><td>Health Care Provider Area of Specialization</td><td/></tr>
+ <tr><td><a href="v2/0455/index.html">0455</a></td><td>Type of Bill Code</td><td/></tr>
+ <tr><td><a href="v2/0456/index.html">0456</a></td><td>Revenue code</td><td/></tr>
+ <tr><td><a href="v2/0457/index.html">0457</a></td><td>Overall Claim Disposition Code</td><td/></tr>
+ <tr><td><a href="v2/0459/index.html">0459</a></td><td>Reimbursement Action Code</td><td/></tr>
+ <tr><td><a href="v2/0460/index.html">0460</a></td><td>Denial or Rejection Code</td><td/></tr>
+ <tr><td><a href="v2/0465/index.html">0465</a></td><td>Name/Address Representation</td><td/></tr>
+ <tr><td><a href="v2/0466/index.html">0466</a></td><td>Ambulatory Payment Classification Code</td><td/></tr>
+ <tr><td><a href="v2/0468/index.html">0468</a></td><td>Payment Adjustment Code</td><td/></tr>
+ <tr><td><a href="v2/0469/index.html">0469</a></td><td>Packaging Status Code</td><td/></tr>
+ <tr><td><a href="v2/0470/index.html">0470</a></td><td>- Reimbursement Type Code</td><td/></tr>
+ <tr><td><a href="v2/0472/index.html">0472</a></td><td>TQ Conjunction ID</td><td/></tr>
+ <tr><td><a href="v2/0473/index.html">0473</a></td><td>Formulary Status</td><td/></tr>
+ <tr><td><a href="v2/0474/index.html">0474</a></td><td>Organization Unit Type</td><td/></tr>
+ <tr><td><a href="v2/0475/index.html">0475</a></td><td>Charge Type Reason</td><td/></tr>
+ <tr><td><a href="v2/0477/index.html">0477</a></td><td>Controlled Substance Schedule</td><td/></tr>
+ <tr><td><a href="v2/0478/index.html">0478</a></td><td>Formulary Status</td><td/></tr>
+ <tr><td><a href="v2/0480/index.html">0480</a></td><td>Pharmacy Order Types</td><td/></tr>
+ <tr><td><a href="v2/0482/index.html">0482</a></td><td>Order Type</td><td/></tr>
+ <tr><td><a href="v2/0483/index.html">0483</a></td><td>Authorization Mode</td><td/></tr>
+ <tr><td><a href="v2/0484/index.html">0484</a></td><td>Dispense Type</td><td/></tr>
+ <tr><td><a href="v2/0485/index.html">0485</a></td><td>Extended Priority Codes</td><td/></tr>
+ <tr><td><a href="v2/0487/index.html">0487</a></td><td>Specimen Type</td><td/></tr>
+ <tr><td><a href="v2/0488/index.html">0488</a></td><td>Specimen Collection Method</td><td/></tr>
+ <tr><td><a href="v2/0489/index.html">0489</a></td><td>Risk Codes</td><td/></tr>
+ <tr><td><a href="v2/0490/index.html">0490</a></td><td>Specimen Reject Reason</td><td/></tr>
+ <tr><td><a href="v2/0491/index.html">0491</a></td><td>Specimen Quality</td><td/></tr>
+ <tr><td><a href="v2/0492/index.html">0492</a></td><td>Specimen Appropriateness</td><td/></tr>
+ <tr><td><a href="v2/0493/index.html">0493</a></td><td>Specimen Condition</td><td/></tr>
+ <tr><td><a href="v2/0494/index.html">0494</a></td><td>Specimen Child Role</td><td/></tr>
+ <tr><td><a href="v2/0495/index.html">0495</a></td><td>Body Site Modifier</td><td/></tr>
+ <tr><td><a href="v2/0496/index.html">0496</a></td><td>Consent Type</td><td/></tr>
+ <tr><td><a href="v2/0497/index.html">0497</a></td><td>Consent Mode</td><td/></tr>
+ <tr><td><a href="v2/0498/index.html">0498</a></td><td>Consent Status</td><td/></tr>
+ <tr><td><a href="v2/0499/index.html">0499</a></td><td>Consent Bypass Reason</td><td/></tr>
+ <tr><td><a href="v2/0500/index.html">0500</a></td><td>Consent Disclosure Level</td><td/></tr>
+ <tr><td><a href="v2/0501/index.html">0501</a></td><td>Consent Non-Disclosure Reason</td><td/></tr>
+ <tr><td><a href="v2/0502/index.html">0502</a></td><td>Non-Subject Consenter Reason</td><td/></tr>
+ <tr><td><a href="v2/0503/index.html">0503</a></td><td>Sequence/Results Flag</td><td/></tr>
+ <tr><td><a href="v2/0504/index.html">0504</a></td><td>Sequence Condition Code</td><td/></tr>
+ <tr><td><a href="v2/0505/index.html">0505</a></td><td>Cyclic Entry/Exit Indicator</td><td/></tr>
+ <tr><td><a href="v2/0506/index.html">0506</a></td><td>Service Request Relationship</td><td/></tr>
+ <tr><td><a href="v2/0507/index.html">0507</a></td><td>Observation Result Handling</td><td/></tr>
+ <tr><td><a href="v2/0508/index.html">0508</a></td><td>Blood Product Processing Requirements</td><td/></tr>
+ <tr><td><a href="v2/0510/index.html">0510</a></td><td>Blood Product Dispense Status</td><td/></tr>
+ <tr><td><a href="v2/0511/index.html">0511</a></td><td>BP Observation Status Codes Interpretation</td><td/></tr>
+ <tr><td><a href="v2/0513/index.html">0513</a></td><td>Blood Product Transfusion/Disposition Status</td><td/></tr>
+ <tr><td><a href="v2/0514/index.html">0514</a></td><td>Transfusion Adverse Reaction</td><td/></tr>
+ <tr><td><a href="v2/0516/index.html">0516</a></td><td>Error Severity</td><td/></tr>
+ <tr><td><a href="v2/0517/index.html">0517</a></td><td>Inform Person Code</td><td/></tr>
+ <tr><td><a href="v2/0518/index.html">0518</a></td><td>Override Type</td><td/></tr>
+ <tr><td><a href="v2/0520/index.html">0520</a></td><td>Message Waiting Priority</td><td/></tr>
+ <tr><td><a href="v2/0523/index.html">0523</a></td><td>Computation Type</td><td/></tr>
+ <tr><td><a href="v2/0524/index.html">0524</a></td><td>Sequence condition</td><td/></tr>
+ <tr><td><a href="v2/0527/index.html">0527</a></td><td>Calendar Alignment</td><td/></tr>
+ <tr><td><a href="v2/0528/index.html">0528</a></td><td>Event Related Period</td><td/></tr>
+ <tr><td><a href="v2/0529/index.html">0529</a></td><td>Precision</td><td/></tr>
+ <tr><td><a href="v2/0530/index.html">0530</a></td><td>Organization, Agency, Department</td><td/></tr>
+ <tr><td><a href="v2/0534/index.html">0534</a></td><td>Notify Clergy Code</td><td/></tr>
+ <tr><td><a href="v2/0535/index.html">0535</a></td><td>Signature Code</td><td/></tr>
+ <tr><td><a href="v2/0536/index.html">0536</a></td><td>Certificate Status</td><td/></tr>
+ <tr><td><a href="v2/0538/index.html">0538</a></td><td>Institution Relationship Type</td><td/></tr>
+ <tr><td><a href="v2/0540/index.html">0540</a></td><td>Inactive Reason Code</td><td/></tr>
+ <tr><td><a href="v2/0544/index.html">0544</a></td><td>Container Condition</td><td/></tr>
+ <tr><td><a href="v2/0547/index.html">0547</a></td><td>Jurisdictional Breadth</td><td/></tr>
+ <tr><td><a href="v2/0548/index.html">0548</a></td><td>Signatory's Relationship to Subject</td><td/></tr>
+ <tr><td><a href="v2/0550/index.html">0550</a></td><td>Body Parts</td><td/></tr>
+ <tr><td><a href="v2/0553/index.html">0553</a></td><td>Invoice Control Code</td><td/></tr>
+ <tr><td><a href="v2/0554/index.html">0554</a></td><td>Invoice Reason Codes</td><td/></tr>
+ <tr><td><a href="v2/0555/index.html">0555</a></td><td>Invoice Type</td><td/></tr>
+ <tr><td><a href="v2/0556/index.html">0556</a></td><td>Benefit Group</td><td/></tr>
+ <tr><td><a href="v2/0557/index.html">0557</a></td><td>Payee Type</td><td/></tr>
+ <tr><td><a href="v2/0558/index.html">0558</a></td><td>Payee Relationship to Invoice</td><td/></tr>
+ <tr><td><a href="v2/0559/index.html">0559</a></td><td>Product/Service Status</td><td/></tr>
+ <tr><td><a href="v2/0561/index.html">0561</a></td><td>Product/Services Clarification Codes</td><td/></tr>
+ <tr><td><a href="v2/0562/index.html">0562</a></td><td>Processing Consideration Codes</td><td/></tr>
+ <tr><td><a href="v2/0564/index.html">0564</a></td><td>Adjustment Category Code</td><td/></tr>
+ <tr><td><a href="v2/0565/index.html">0565</a></td><td>Provider Adjustment Reason Code</td><td/></tr>
+ <tr><td><a href="v2/0566/index.html">0566</a></td><td>Blood Unit Type</td><td/></tr>
+ <tr><td><a href="v2/0569/index.html">0569</a></td><td>Adjustment Action</td><td/></tr>
+ <tr><td><a href="v2/0570/index.html">0570</a></td><td>Payment Method Code</td><td/></tr>
+ <tr><td><a href="v2/0571/index.html">0571</a></td><td>Invoice Processing Results Status</td><td/></tr>
+ <tr><td><a href="v2/0572/index.html">0572</a></td><td>Tax status</td><td/></tr>
+ <tr><td><a href="v2/0615/index.html">0615</a></td><td>User Authentication Credential Type Code</td><td/></tr>
+ <tr><td><a href="v2/0616/index.html">0616</a></td><td>Address Expiration Reason</td><td/></tr>
+ <tr><td><a href="v2/0617/index.html">0617</a></td><td>Address Usage</td><td/></tr>
+ <tr><td><a href="v2/0618/index.html">0618</a></td><td>Protection Code</td><td/></tr>
+ <tr><td><a href="v2/0625/index.html">0625</a></td><td>Item Status Codes</td><td/></tr>
+ <tr><td><a href="v2/0634/index.html">0634</a></td><td>Item Importance Codes</td><td/></tr>
+ <tr><td><a href="v2/0642/index.html">0642</a></td><td>Reorder Theory Codes</td><td/></tr>
+ <tr><td><a href="v2/0651/index.html">0651</a></td><td>Labor Calculation Type</td><td/></tr>
+ <tr><td><a href="v2/0653/index.html">0653</a></td><td>Date Format</td><td/></tr>
+ <tr><td><a href="v2/0657/index.html">0657</a></td><td>Device Type</td><td/></tr>
+ <tr><td><a href="v2/0659/index.html">0659</a></td><td>Lot Control</td><td/></tr>
+ <tr><td><a href="v2/0667/index.html">0667</a></td><td>Device Data State</td><td/></tr>
+ <tr><td><a href="v2/0669/index.html">0669</a></td><td>Load Status</td><td/></tr>
+ <tr><td><a href="v2/0682/index.html">0682</a></td><td>Device Status</td><td/></tr>
+ <tr><td><a href="v2/0702/index.html">0702</a></td><td>Cycle Type</td><td/></tr>
+ <tr><td><a href="v2/0717/index.html">0717</a></td><td>Access Restriction Value</td><td/></tr>
+ <tr><td><a href="v2/0719/index.html">0719</a></td><td>Access Restriction Reason Code</td><td/></tr>
+ <tr><td><a href="v2/0725/index.html">0725</a></td><td>Mood Codes</td><td/></tr>
+ <tr><td><a href="v2/0728/index.html">0728</a></td><td>CCL Value</td><td/></tr>
+ <tr><td><a href="v2/0731/index.html">0731</a></td><td>DRG Diagnosis Determination Status</td><td/></tr>
+ <tr><td><a href="v2/0734/index.html">0734</a></td><td>Grouper Status</td><td/></tr>
+ <tr><td><a href="v2/0739/index.html">0739</a></td><td>DRG Status Patient</td><td/></tr>
+ <tr><td><a href="v2/0742/index.html">0742</a></td><td>DRG Status Financial Calculation</td><td/></tr>
+ <tr><td><a href="v2/0749/index.html">0749</a></td><td>DRG Grouping Status</td><td/></tr>
+ <tr><td><a href="v2/0755/index.html">0755</a></td><td>Status Weight At Birth</td><td/></tr>
+ <tr><td><a href="v2/0757/index.html">0757</a></td><td>DRG Status Respiration Minutes</td><td/></tr>
+ <tr><td><a href="v2/0759/index.html">0759</a></td><td>Status Admission</td><td/></tr>
+ <tr><td><a href="v2/0761/index.html">0761</a></td><td>DRG Procedure Determination Status</td><td/></tr>
+ <tr><td><a href="v2/0763/index.html">0763</a></td><td>DRG Procedure Relevance</td><td/></tr>
+ <tr><td><a href="v2/0776/index.html">0776</a></td><td>Item Status</td><td/></tr>
+ <tr><td><a href="v2/0778/index.html">0778</a></td><td>Item Type</td><td/></tr>
+ <tr><td><a href="v2/0790/index.html">0790</a></td><td>Approving Regulatory Agency</td><td/></tr>
+ <tr><td><a href="v2/0793/index.html">0793</a></td><td>Ruling Act</td><td/></tr>
+ <tr><td><a href="v2/0806/index.html">0806</a></td><td>Sterilization Type</td><td/></tr>
+ <tr><td><a href="v2/0818/index.html">0818</a></td><td>Package</td><td/></tr>
+ <tr><td><a href="v2/0834/index.html">0834</a></td><td>MIME Types</td><td/></tr>
+ <tr><td><a href="v2/0868/index.html">0868</a></td><td>Telecommunication Expiration Reason</td><td/></tr>
+ <tr><td><a href="v2/0871/index.html">0871</a></td><td>Supply Risk Codes</td><td/></tr>
+ <tr><td><a href="v2/0881/index.html">0881</a></td><td>Role Executing Physician</td><td/></tr>
+ <tr><td><a href="v2/0882/index.html">0882</a></td><td>Medical Role Executing Physician</td><td/></tr>
+ <tr><td><a href="v2/0894/index.html">0894</a></td><td>Side of body</td><td/></tr>
+ <tr><td><a href="v2/0895/index.html">0895</a></td><td>Present On Admission (POA) Indicator</td><td/></tr>
+ <tr><td><a href="v2/0904/index.html">0904</a></td><td>Security Check Scheme</td><td/></tr>
+ <tr><td><a href="v2/0905/index.html">0905</a></td><td>Shipment Status</td><td/></tr>
+ <tr><td><a href="v2/0906/index.html">0906</a></td><td>ActPriority</td><td/></tr>
+ <tr><td><a href="v2/0907/index.html">0907</a></td><td>Confidentiality</td><td/></tr>
+ <tr><td><a href="v2/0909/index.html">0909</a></td><td>Patient Results Release Categorization Scheme</td><td/></tr>
+ <tr><td><a href="v2/0912/index.html">0912</a></td><td>Participation</td><td/></tr>
+ <tr><td><a href="v2/0914/index.html">0914</a></td><td>Root Cause</td><td/></tr>
+ <tr><td><a href="v2/0916/index.html">0916</a></td><td>Relevant Clincial Information</td><td/></tr>
+ <tr><td><a href="v2/0917/index.html">0917</a></td><td>Bolus Type</td><td/></tr>
+ <tr><td><a href="v2/0918/index.html">0918</a></td><td>PCA Type</td><td/></tr>
+ <tr><td><a href="v2/0919/index.html">0919</a></td><td>Exclusive Test</td><td/></tr>
+ <tr><td><a href="v2/0920/index.html">0920</a></td><td>Preferred Specimen/Attribute Status</td><td/></tr>
+ <tr><td><a href="v2/0921/index.html">0921</a></td><td>Certification Type Code</td><td/></tr>
+ <tr><td><a href="v2/0922/index.html">0922</a></td><td>Certification Category Code</td><td/></tr>
+ <tr><td><a href="v2/0923/index.html">0923</a></td><td>Process Interruption</td><td/></tr>
+ <tr><td><a href="v2/0924/index.html">0924</a></td><td>Cumulative Dosage Limit UoM</td><td/></tr>
+ <tr><td><a href="v2/0925/index.html">0925</a></td><td>Phlebotomy Issue</td><td/></tr>
+ <tr><td><a href="v2/0926/index.html">0926</a></td><td>Phlebotomy Status</td><td/></tr>
+ <tr><td><a href="v2/0927/index.html">0927</a></td><td>Arm Stick</td><td/></tr>
+ <tr><td><a href="v2/0933/index.html">0933</a></td><td>Intended Procedure Type</td><td/></tr>
+ <tr><td><a href="v2/0935/index.html">0935</a></td><td>Process Interruption Reason</td><td/></tr>
+ <tr><td><a href="v2/4000/index.html">4000</a></td><td>Name/address representation</td><td/></tr>
+</table>
+
+ 
+  </div>
+</div>
+</div>
+
+	
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:28+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fterminologies-systems.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fterminologies-systems.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+    
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-codesystem-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-codesystem-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+
+</body>
+</html>

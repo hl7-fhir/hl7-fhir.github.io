@@ -1,0 +1,286 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Observation-example-genetics-2.ttl - FHIR v1.7.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/observation-example-genetics-2.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./modules.html">Getting Started</a></li>
+              <li><a href="./documentation.html">Documentation</a></li>
+              <li><a href="./resourcelist.html">Resources</a></li>
+              <li><a href="./profilelist.html">Profiles</a></li>
+              <li><a href="./extensibility-registry.html">Extensions</a></li>
+              <li><a href="./operationslist.html">Operations</a></li>
+              <li><a href="./servicelist.html">Services</a></li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="diagnostics-module.html"><img src="diagnostics.jpg"/> Diagnostics</a></li>        <li><a href="observation.html">Observation</a></li>        <li><b>Example Instance</b></li>        <!-- observation-example-genetics-2.ttl.html / resource-instance:Observation / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Observation-example-genetics-2.ttl</h1>
+
+<p>
+<a href="observation-example-genetics-2.ttl">Raw Turtle</a>, 
+<a href="observation-example-genetics-2.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Genetics example 2</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/owl#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Observation/example-genetics-2&gt; a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;example-genetics-2&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: example-genetics-2&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Genetic analysis master panel &lt;span&gt;(Details : {LOINC code '55233-1' = 'Genetic analysis master panel - Blood or Tissue by Molecular genetics method', given as 'Genetic analysis master panel'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a&gt;Molecular Lab Patient ID: HOSP-23456&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;issued&lt;/b&gt;: Apr 3, 2013 3:30:10 PM&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a&gt;Molecular Diagnostics Laboratory&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: Positive &lt;span&gt;(Details : {SNOMED CT code '10828004' = 'Positive (qualifier value)', given as 'Positive'})&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Relateds&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;derived-from&lt;/td&gt;&lt;td&gt;&lt;a&gt;Observation/example-genetics-1&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Genetic disease assessed &lt;span&gt;(Details : {LOINC code '51967-8' = 'Genetic disease assessed [Identifier] in Blood or Tissue by Molecular genetics method', given as 'Genetic disease assessed'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: Lung cancer &lt;span&gt;(Details : {SNOMED CT code '363358000' = 'Malignant tumor of lung (disorder)', given as 'Malignant tumor of lung (disorder)'})&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Genetic disease sequence variation interpretation &lt;span&gt;(Details : {LOINC code '53037-8' = 'Genetic disease sequence variation interpretation [interpretation] in Blood or Tissue by Molecular genetics method', given as 'Genetic disease sequence variation interpretation'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: Pathogenic &lt;span&gt;(Details : {[not stated] code 'LA6669-1' = 'LA6669-1', given as 'Pathogenic'})&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+  ];
+  fhir:Observation.status [ fhir:value &quot;final&quot;];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:55233-1;
+       fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+       fhir:Coding.code [ fhir:value &quot;55233-1&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Genetic analysis master panel&quot; ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ];
+     fhir:Reference.display [ fhir:value &quot;Molecular Lab Patient ID: HOSP-23456&quot; ]
+  ];
+  fhir:Observation.issued [ fhir:value &quot;2013-04-03T15:30:10+01:00&quot;^^xsd:dateTime];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link &lt;http://hl7.org/fhir/Practitioner/example&gt;;
+     fhir:Reference.reference [ fhir:value &quot;Practitioner/example&quot; ];
+     fhir:Reference.display [ fhir:value &quot;Molecular Diagnostics Laboratory&quot; ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:10828004;
+       fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+       fhir:Coding.code [ fhir:value &quot;10828004&quot; ];
+       fhir:Coding.display [ fhir:value &quot;Positive&quot; ]
+     ]
+  ];
+  fhir:Observation.related [
+     fhir:index 0;
+     fhir:Observation.related.type [ fhir:value &quot;derived-from&quot; ];
+     fhir:Observation.related.target [
+       fhir:link &lt;http://hl7.org/fhir/Observation/example-genetics-1&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Observation/example-genetics-1&quot; ]
+     ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:51967-8;
+         fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+         fhir:Coding.code [ fhir:value &quot;51967-8&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Genetic disease assessed&quot; ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:363358000;
+         fhir:Coding.system [ fhir:value &quot;http://snomed.info/sct&quot; ];
+         fhir:Coding.code [ fhir:value &quot;363358000&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Malignant tumor of lung (disorder)&quot; ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value &quot;Lung cancer&quot; ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:53037-8;
+         fhir:Coding.system [ fhir:value &quot;http://loinc.org&quot; ];
+         fhir:Coding.code [ fhir:value &quot;53037-8&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Genetic disease sequence variation interpretation&quot; ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value &quot;LA6669-1&quot; ];
+         fhir:Coding.display [ fhir:value &quot;Pathogenic&quot; ]
+       ]
+     ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/example&gt; a fhir:Patient .
+
+&lt;http://hl7.org/fhir/Practitioner/example&gt; a fhir:Practitioner .
+
+&lt;http://hl7.org/fhir/Observation/example-genetics-1&gt; a fhir:Observation .
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.7.0-10082) generated on Thu, Oct 27, 2016 16:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fobservation-example-genetics-2.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fobservation-example-genetics-2.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>
