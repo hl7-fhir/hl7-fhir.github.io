@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
+    <div id="message">Redirecting to <em>build.fhir.org</em></div>
     <script>
       if (window.location.pathname == "/auto-ig-builder/builds.html") {
-        document.getElementById("message").innerHTML = 'Please update your links to use <a href="https://fhir.github.com/auto-ig-builder/builds.html">https://fhir.github.com/auto-ig-builder/builds.html</a>'      
+        document.getElementById("message").innerHTML = 'Please update your links to use <a href="https://fhir.github.com/auto-ig-builder/builds.html">https://fhir.github.com/auto-ig-builder/builds.html</a>'
       } else {
         window.location = "http://build.fhir.org" + window.location.pathname;
       }
     </script>
-    <div id="message">Redirecting to <em>build.fhir.org</em></div>
   </body>
 </html>
